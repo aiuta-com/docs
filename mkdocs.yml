@@ -17,6 +17,18 @@ nav:
   - Getting started:
     - Overview: index.md
 
+  - Android:
+    - Overview: android/overview.md
+    - Aiuta:
+      - Getting started with Aiuta: android/aiuta/get-started.md
+      - Using the Bill of Materials: android/aiuta/bill-of-materials.md
+
+  - Flutter:
+    - Overview: flutter/overview.md
+
+  - IOS:
+    - Overview: ios/overview.md
+
   # Configuration
 theme:
   name: 'material'
