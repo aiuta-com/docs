@@ -10,7 +10,7 @@ repo_url: https://github.com/aiuta-com/aiuta-sdk-docs
 edit_uri: ""
 
 # Copyright
-copyright: Copyright &copy; 2024 Aiuta Contributors
+copyright: Copyright &copy; 2024 - 2025 Aiuta Contributors
 
 # Page tree
 nav:
@@ -46,8 +46,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: media/logo/circle-2.png
-  logo: media/logo/circle-2.png
+  favicon: media/logo/logo.svg
+  logo: media/logo/logo.svg
   icon:
     logo: logo
 
