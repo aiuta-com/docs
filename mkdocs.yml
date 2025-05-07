@@ -1,55 +1,66 @@
 site_name: Aiuta SDK
 site_url: https://aiuta-com.github.io/aiuta-sdk-docs/
-site_author: Aiuta Contributors
+site_author: Aiuta USA, Inc
 site_description: >-
   Aiuta Virtual Try-On SDK
 
-# Repository
-repo_name: aiuta-com/aiuta-sdk-docs
-repo_url: https://github.com/aiuta-com/aiuta-sdk-docs
-edit_uri: ""
+copyright: Copyright &copy; 2024 - 2025 Aiuta USA, Inc
 
-# Copyright
-copyright: Copyright &copy; 2024 - 2025 Aiuta Contributors
-
-# Page tree
 nav:
-  - Getting started:
+  - About:
     - Overview: index.md
+    - Demo Apps: about/demo-apps.md
+    - Try-On Pages:
+      - Welcome: about/pages/welcome-screen.md
+      - Onboarding:
+        - How It Works: about/pages/onboarding/how-it-works.md
+        - Best Results: about/pages/onboarding/best-results.md
+      - Consent:
+        - Embedded: about/pages/consent/embedded.md
+        - Standalone: about/pages/consent/standalone.md
+      - Image Picker: 
+        - Main: about/pages/image-picker/main.md
+        - Models: about/pages/image-picker/models.md
+      - Loading: about/pages/loading-screen.md
+      - Results: about/pages/results-screen.md
+    - Resources:
+      - Themes: about/resources/themes.md
+      - Icons: about/resources/icons.md
+      - Images: about/resources/images.md
+      - Localization: about/resources/localization.md
+    - Analytics: 
+      - Events: about/analytics/ananlytics.md
+      - Errors: about/analytics/errors.md
 
   - Android:
-    - Overview: android/overview.md
-    - Aiuta:
-      - Getting started with Aiuta: android/aiuta/get-started.md
-      - Using the Bill of Materials: android/aiuta/bill-of-materials.md
+    - Getting started: android/aiuta/get-started.md
+    
+  - iOS:
+    - Overview: ios/overview.md
 
   - Flutter:
     - Overview: flutter/overview.md
 
-  - IOS:
-    - Overview: ios/overview.md
-
-  # Configuration
 theme:
   name: 'material'
-
-  # Don't include MkDocs' JavaScript
+  custom_dir: overrides
   include_search_page: false
   search_index_only: true
 
-  # Default values, taken from mkdocs_theme.yml
   language: en
   features:
     - navigation.tabs
     - navigation.expand
+    - navigation.sections
+    - content.code.copy
   palette:
-    # Palette toggle for light mode
+    # Light mode
     - scheme: default
       primary: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    # Palette toggle for dark mode
+    # Dark mode
     - scheme: slate
       primary: indigo
       toggle:
@@ -63,17 +74,28 @@ theme:
   icon:
     logo: logo
 
-# Plugins
+extra_css:
+  - stylesheets/extra.css
+
 plugins:
   - search
   - minify:
       minify_html: true
 
-# Customization
 extra:
+  # generator: false
   social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aiuta-com
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/aiuta-inc
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/aiutacom
+    # - icon: fontawesome/brands/facebook
+    #   link: https://facebook.com/aiutacom/
+    - icon: aiuta
+      link: https://aiuta.com
 
-# Extensions
 markdown_extensions:
   - admonition
   - abbr
