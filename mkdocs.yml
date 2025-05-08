@@ -10,7 +10,7 @@ nav:
   - About:
     - Overview: index.md
     - Demo Apps: about/demo-apps.md
-    - Try-On Pages:
+    - Pages:
       - Welcome: about/pages/welcome-screen.md
       - Onboarding:
         - How It Works: about/pages/onboarding/how-it-works.md

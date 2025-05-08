@@ -30,3 +30,13 @@ The Welcome Screen is an optional feature that can be displayed when users first
 #### General styles
 - [Icon](../resources/icons.md) and [position](../resources/other.md) of close button
 - [Shape](../resources/shapes.md), [colors](../resources/colors.md) and [text style](../resources/typography.md) of start button
+
+## [Analytics](../analytics/analytics.md)
+
+The following analytics events are tracked on the Welcome Screen:
+
+| Type | Event | Page Id | Description |
+|------|-------|---------|-------------|
+| [`page`](../analytics/analytics.md#event-categories) | :material-minus: | [`welcome`](../analytics/analytics.md#page-identifiers) | Triggered when the welcome screen is displayed |
+| [`onboarding`](../analytics/analytics.md#event-categories) | [`welcomeStartClicked`](../analytics/analytics.md#onboarding-events) | [`welcome`](../analytics/analytics.md#page-identifiers) | Triggered when user clicks the start button<br>to begin the try-on process |
+| [`exit`](../analytics/analytics.md#event-categories) | :material-minus: | [`welcome`](../analytics/analytics.md#page-identifiers) | SDK was closed on the welcome screen |

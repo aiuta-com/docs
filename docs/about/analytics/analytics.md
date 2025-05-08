@@ -6,20 +6,20 @@ This document describes the analytics events that can be tracked within the Aiut
 
 | Type | Parameters | Description | 
 |------|------------|-------------|
-| `page` | [`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Navigation to a specific page in the SDK UI. The page is identified<br>by pageId and may include a list of product identifiers that are active<br>in the current try-on session |
+| `page` | [`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Navigation to a specific page in the SDK UI |
 | `onboarding` | [`event`](#onboarding-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Interactions during the onboarding process, including viewing<br>informational screens and providing necessary consents for<br>data processing |
 | `picker` | [`event`](#picker-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Interactions with the image selection interface, including camera<br>access, gallery selection, and predefined model selection |
-| `tryOn` | [`event`](#try-on-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Interactions during the virtual try-on process, including photo<br>upload, processing status, and completion or error states |
+| `tryOn` | [`event`](#try-on-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Virtual try-on operations reports, including photo upload,<br>processing status, and completion or error states |
 | `results` | [`event`](#results-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Interactions with the generated try-on results, including sharing,<br>saving to wishlist, adding to cart, or requesting new generations |
 | `feedback` | [`event`](#feedback-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Feedback on the generated results, including positive ratings and<br>detailed negative feedback with optional comments |
 | `history` | [`event`](#history-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Interactions with previously generated results, including viewing,<br>sharing, and managing saved generations |
-| `exit` | [`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Exit from a specific page, indicating the final interaction point<br>in the user journey |
+| `exit` | [`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Exit from the SDK on a specific page,<br>indicating the final point in the user's journey |
 
 ### Page Identifiers
 
 | Page | Description |
 |------|-------------|
-| `welcome` | Initial screen that introduces users to the SDK functionality<br>and provides an entry point to start the try-on process |
+| `welcome` | Optional [Welcome Screen](../pages/welcome-screen.md) that introduces users to the SDK functionality<br>and provides an entry point to start the try-on process |
 | `howItWorks` | Informational screen explaining the virtual try-on process,<br>including samples of expected outcomes |
 | `bestResults` | Guide screen showing best practices for achieving optimal<br>try-on results with example images and tips |
 | `consent` | Screen for obtaining user consent for data processing and<br>privacy policy acceptance in standalone mode |
@@ -41,7 +41,7 @@ Event categories, except for `page` and `exit`, contain an `event` parameter tha
 
 | Event | Parameters | Description | 
 |-------|------------|-------------|
-| `welcomeStartClicked` | :material-minus: | Initial interaction with the welcome screen, indicating<br>user's intent to begin the try-on process |
+| `welcomeStartClicked` | :material-minus: | Initial interaction with the [Welcome Screen](../pages/welcome-screen.md), indicating<br>user's intent to begin the try-on process |
 | `onboardingFinished` | :material-minus: | Completion of all onboarding steps |
 | `consentsGiven` | `consentsIds` | Explicit acceptance of required consents, including<br>data processing and privacy policy agreements |
 
