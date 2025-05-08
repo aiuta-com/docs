@@ -5,7 +5,7 @@ This document describes the analytics events that can be tracked within the Aiut
 ## Event Categories
 
 | Type | Parameters | Description | 
-|------|------------|-------------|
+| :--- |  :-------- | :---------- |
 | `page` | [`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Navigation to a specific page in the SDK UI |
 | `onboarding` | [`event`](#onboarding-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Interactions during the onboarding process, including viewing<br>informational screens and providing necessary consents for<br>data processing |
 | `picker` | [`event`](#picker-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Interactions with the image selection interface, including camera<br>access, gallery selection, and predefined model selection |
@@ -18,7 +18,7 @@ This document describes the analytics events that can be tracked within the Aiut
 ### Page Identifiers
 
 | Page | Description |
-|------|-------------|
+| :--- | :---------- |
 | `welcome` | Optional [Welcome Screen](../pages/welcome-screen.md) that introduces users to the SDK functionality<br>and provides an entry point to start the try-on process |
 | `howItWorks` | Informational screen explaining the virtual try-on process,<br>including samples of expected outcomes |
 | `bestResults` | Guide screen showing best practices for achieving optimal<br>try-on results with example images and tips |

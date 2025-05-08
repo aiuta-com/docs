@@ -17,7 +17,7 @@ Aiuta SDK seamlessly integrates into your existing application and offers extens
 
 ## Alternative: Direct API
 
-If you prefer more control over the implementation or have specific requirements, you can use the Aiuta API directly. This approach gives you complete flexibility in building your custom virtual try-on solution. For detailed API documentation and integration guides, visit our [API Portal](https://developer.aiuta.com/products/digital-try-on/documentation).
+If you prefer more control over the implementation or have specific requirements, you can use the Aiuta API directly. This approach gives you complete flexibility in building your custom virtual try-on solution. For detailed API documentation and integration guides, visit our [:octicons-arrow-right-24: API Portal](https://developer.aiuta.com/products/digital-try-on/documentation).
 
 !!! note 
     Aiuta SDK is built on top of the same API, providing a pre-built UI layer and additional convenience features while maintaining the same core functionality.
