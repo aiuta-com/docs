@@ -22,7 +22,7 @@ In the following pages all resources available for configuration are centrally c
 :material-translate: [Localization](localization.md)
 { .card }
 
-:material-button-pointer: [Other styles](other.md)
-{ .card }
+<!-- :material-button-pointer: [Other styles](other.md)
+{ .card } -->
 
 </div>
