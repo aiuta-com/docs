@@ -21,12 +21,12 @@ The table below contains all the text styles used in the SDK:
 | [**ProductBar**](#productbar) | |
 | `product` | Product names | `System 13pt Regular` |
 | `brand` | Brand names | `System 12pt Medium`<br>`kern -0.12` |
-| [**ProductBar :octicons-arrow-right-24: Price**](#productbarprice) | | |
-| `price` | :fontawesome-regular-eye-slash: Price text | `System 14pt Bold`<br>`kern -0.14` |
-| [**Welcome Screen**](#welcome-screen) | |
-| `welcomeTitle` | :fontawesome-regular-eye-slash: Welcome screen title | `System 40pt Heavy`<br>`lhm 0.92` |
-| `welcomeDescription` | :fontawesome-regular-eye-slash: Welcome screen description | `System 16pt Medium`<br>`lhm 1.18` [^1] |
-| [**TryOn :octicons-arrow-right-24: FitDisclaimer**](#tryonfitdisclaimer) | |
-| `disclaimer` | :fontawesome-regular-eye-slash: Fit disclaimer text | `System 12pt Regular`<br>`kern -0.12` |
+| [**ProductBar :octicons-arrow-right-24: Price**](#productbarprice) :fontawesome-regular-eye-slash:{ title="Optional" } | | |
+| `price` | Price text | `System 14pt Bold`<br>`kern -0.14` |
+| [**Welcome Screen**](#welcome-screen) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `welcomeTitle` | Welcome screen title | `System 40pt Heavy`<br>`lhm 0.92` |
+| `welcomeDescription` | Welcome screen description | `System 16pt Medium`<br>`lhm 1.18` [^1] |
+| [**TryOn :octicons-arrow-right-24: FitDisclaimer**](#tryonfitdisclaimer) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `disclaimer` | Fit disclaimer label | `System 12pt Regular`<br>`kern -0.12` |
 
 [^1]: `lhm` is __Line Height Multiple__ relative to the original line height of the font

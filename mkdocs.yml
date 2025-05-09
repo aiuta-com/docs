@@ -57,6 +57,7 @@ theme:
     - navigation.expand
     - navigation.sections
     - content.code.copy
+    - content.tooltips
   palette:
     # Light mode
     - scheme: default

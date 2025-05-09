@@ -23,7 +23,7 @@ Experience Aiuta SDK in action through our demo applications. These applications
 ## Using the Demo
 
 1. Download the appropriate demo app for your platform
-2. Request an access code [from Aiuta](mailto:Partnership@aiuta.com) if you don't have one yet
+2. Request an access code [from Aiuta by email](mailto:Partnership@aiuta.com) if you don't have one yet
 3. Launch the application and enter the code
 4. Select an item from the sample catalog and tap "Try on" 
 5. Experience the SDK and virtual try-on in action

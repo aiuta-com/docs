@@ -12,101 +12,100 @@ The table below contains all the strings that may be localized or changed for th
 
 - :material-link: this field supports links (`a href`)
 
-- :material-shuffle: alternative variant
+- :material-apple-keyboard-option: alternative variant
 
 !!! tip 
     You can select the table content **excluding the header**, copy and paste it into Google Sheets for translation purposes. 
 
-
-| Key                     | Default or sample value                                       |
-| :---------------------- | :------------------------------------------------------------ |
-| [**Welcome Screen**](../pages/welcome-screen.md)                                      | |  
-| `welcomeTitle`          | :material-close: Try on you                                   |
-| `welcomeDescription`    | :material-close: Welcome to our Virtual try-on.<br>Try on the item directly on your photo |
-| `welcomeButtonStart`    | :material-close: Let's start                                  |
-| [**Onboarding**](../pages/onboarding.md)                                              | |
-| `onboardingButtonNext`  | :material-check: Next                                         |
-| `onboardingButtonStart` | :material-check: Start                                        |
-| [**Onboarding :octicons-arrow-right-24: HowItWorks**](../pages/onboarding.md#how-it-works) | |
-| `onboardingHowItWorksPageTitle` | :material-code-tags: :material-close: :fontawesome-regular-eye-slash: How it works<br><br>:material-shuffle: `<b>Step 1/2</b> - How it works` |
-| `onboardingHowItWorksTitle`     | :material-check: Try on before buying                 |
-| `onboardingHowItWorksDescription` | :material-check: Upload a photo and see how items look on you |
-| [**Onboarding :octicons-arrow-right-24: BestResults**](../pages/onboarding.md#best-results) | |
-| `onboardingBestResultsPageTitle` | :material-code-tags: :material-close: :fontawesome-regular-eye-slash: For best results<br><br>:material-shuffle: `<b>Step 2/2</b> - For best results` |
-| `onboardingBestResultsTitle`     | :material-close: For best results                    |
-| `onboardingBestResultsDescription` | :material-close: Use a photo with good lighting,<br>stand straight a plain background |
-| [**Consent :octicons-arrow-right-24: Embedded**](../pages/consent.md#embedded)        | |
-| `consentHtml` | :material-code-tags: :material-link: :material-check: Your photos will be processed by <b><a href='https://aiuta.com/legal/terms-of-service.html'>Terms of Use</a> [^1] |
-| [**Consent :octicons-arrow-right-24: Standalone**](../pages/consent.md#standalone)    | |
-| `consentPageTitle` | :material-code-tags: :material-close: Consent page title           |
-| `consentTitle`          | :material-close: Consent title                                |
-| `consentDescriptionHtml` | :material-code-tags: :material-link: :material-close: Consent description |
-| `consents[].html` | :material-code-tags: :material-link: :material-close: Consents      |
-| `consentFooterHtml` | :material-code-tags: :material-link: :material-close: Consent footer |
-| `consentButtonAccept`   | :material-close: Accept                                       |
-| [**ImagePicker**](../pages/image-picker.md)                                           | |
-| `imagePickerTitle`      | :material-check: Upload a photo of you                        |
-| `imagePickerDescription` | :material-check: Select a photo where you are standing straight and clearly visible |
-| `imagePickerButtonUploadPhoto` | :material-check: Upload a photo                        |
-| [**ImagePicker :octicons-arrow-right-24: Camera**](../pages/image-picker.md#camera)   | |
-| `cameraButtonTakePhoto` | :material-check: Take a photo                                 |
-| `cameraPermissionTitle` | :material-check: Camera permission                            |
-| `cameraPermissionDescription` | :material-check: Please allow access to the camera in the application settings |
-| `cameraPermissionButtonOpenSettings` | :material-check: Settings                        |
+| Key |     | Default or sample value |
+| :-- | :-: | ----------------------- |
+| [**Welcome Screen**](../pages/welcome-screen.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |  
+| `welcomeTitle` | :material-close:{ title="Sample value" } | Try on you |
+| `welcomeDescription` | :material-close:{ title="Sample value" } | Welcome to our Virtual try-on.<br>Try on the item directly on your photo |
+| `welcomeButtonStart` | :material-close:{ title="Sample value" } | Let's start |
+| [**Onboarding**](../pages/onboarding.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `onboardingButtonNext` | :material-check:{ title="Deafult value" } | Next |
+| `onboardingButtonStart` | :material-check:{ title="Deafult value" } | Start |
+| [**Onboarding :octicons-arrow-right-24: HowItWorks**](../pages/onboarding.md#how-it-works) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `onboardingHowItWorksPageTitle` | :material-code-tags:{ title="Supports html tags" } :material-close:{ title="Sample value" } :fontawesome-regular-eye-slash:{ title="Nullable to hide" }<br><br>:material-apple-keyboard-option:{ title="Alternative variant" } | How it works<br><br>`<b>Step 1/2</b> - How it works` |
+| `onboardingHowItWorksTitle` | :material-check:{ title="Deafult value" } | Try on before buying |
+| `onboardingHowItWorksDescription` | :material-check:{ title="Deafult value" } | Upload a photo and see how items look on you |
+| [**Onboarding :octicons-arrow-right-24: BestResults**](../pages/onboarding.md#best-results) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `onboardingBestResultsPageTitle` | :material-code-tags:{ title="Supports html tags" } :material-close:{ title="Sample value" } :fontawesome-regular-eye-slash:{ title="Nullable to hide" }<br><br>:material-apple-keyboard-option:{ title="Alternative variant" } | For best results<br><br>`<b>Step 2/2</b> - For best results` |
+| `onboardingBestResultsTitle` | :material-close:{ title="Sample value" } | For best results |
+| `onboardingBestResultsDescription` | :material-close:{ title="Sample value" } | Use a photo with good lighting,<br>stand straight a plain background |
+| [**Consent :octicons-arrow-right-24: Embedded**](../pages/consent.md#embedded) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `consentHtml` | :material-code-tags:{ title="Supports html tags" } :material-link:{ title="Supports links" } :material-check:{ title="Deafult value" } [^1] | Your photos will be processed by <b><a href='https://aiuta.com/legal/terms-of-service.html'>Terms of Use</a> |
+| [**Consent :octicons-arrow-right-24: Standalone**](../pages/consent.md#standalone) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `consentPageTitle` | :material-code-tags:{ title="Supports html tags" } :material-close:{ title="Sample value" } :fontawesome-regular-eye-slash:{ title="Nullable to hide" } | Consent page title |
+| `consentTitle` | :material-close:{ title="Sample value" } | Consent title |
+| `consentDescriptionHtml` | :material-code-tags:{ title="Supports html tags" } :material-link:{ title="Supports links" } :material-close:{ title="Sample value" } | Consent description |
+| `consents[].html` | :material-code-tags:{ title="Supports html tags" } :material-link:{ title="Supports links" } :material-close:{ title="Sample value" } | Consents |
+| `consentFooterHtml` | :material-code-tags:{ title="Supports html tags" } :material-link:{ title="Supports links" } :material-close:{ title="Sample value" } | Consent footer |
+| `consentButtonAccept` | :material-close:{ title="Sample value" } | Accept |
+| [**ImagePicker**](../pages/image-picker.md) | |
+| `imagePickerTitle` | :material-check:{ title="Deafult value" } | Upload a photo of you |
+| `imagePickerDescription` | :material-check:{ title="Deafult value" } | Select a photo where you are<br>standing straight and clearly visible |
+| `imagePickerButtonUploadPhoto` | :material-check:{ title="Deafult value" } | Upload a photo |
+| [**ImagePicker :octicons-arrow-right-24: Camera**](../pages/image-picker.md#camera) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `cameraButtonTakePhoto` | :material-check:{ title="Deafult value" } | Take a photo |
+| `cameraPermissionTitle` | :material-check:{ title="Deafult value" } | Camera permission |
+| `cameraPermissionDescription` | :material-check:{ title="Deafult value" } | Please allow access to the camera<br>in the application settings |
+| `cameraPermissionButtonOpenSettings` | :material-check:{ title="Deafult value" } | Settings |
 | [**ImagePicker :octicons-arrow-right-24: Gallery**](../pages/image-picker.md#gallery) | |
-| `galleryButtonSelectPhoto` | :material-check: Choose from library                       |
-| [**ImagePicker :octicons-arrow-right-24: PredefinedModel**](../pages/image-picker.md#predefined-model) | |
-| `predefinedModelsTitle` | :material-check: Select your model                            |
-| `predefinedModelsOr`    | :material-check: Or                                           |
-| `predefinedModelsEmptyListError` | :material-check: The models list is empty            |
-| `predefinedModelsCategories` | :material-check: `{"man": "Men", "woman": "Women"}`      |
-| [**ImagePicker :octicons-arrow-right-24: UploadsHistory**](../pages/image-picker.md#uploads-history) | |
-| `uploadsHistoryButtonNewPhoto` | :material-check: + New photo or model<br><br>:material-shuffle: + Upload new photo [^2] |
-| `uploadsHistoryTitle`   | :material-check: Previously used                              |
-| `uploadsHistoryButtonChangePhoto` | :material-check: Change photo                       |
-| [**TryOn**](../pages/try-on.md)                                                       | |
-| `tryOnPageTitle`        | :material-check: Virtual Try-on                               |
-| `tryOn`                 | :material-check: Try on                                       |
-| [**TryOn :octicons-arrow-right-24: Loading**](../pages/try-on.md#loading)             | |
-| `tryOnLoadingStatusUploadingImage` | :material-check: Uploading image                   |
-| `tryOnLoadingStatusScanningBody` | :material-check: Scanning the body                   |
-| `tryOnLoadingStatusGeneratingOutfit` | :material-check: Generating outfit               |
+| `galleryButtonSelectPhoto` | :material-check:{ title="Deafult value" } | Choose from library |
+| [**ImagePicker :octicons-arrow-right-24: PredefinedModel**](../pages/image-picker.md#predefined-model) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `predefinedModelsTitle` | :material-check:{ title="Deafult value" } | Select your model |
+| `predefinedModelsOr` | :material-check:{ title="Deafult value" } | Or |
+| `predefinedModelsEmptyListError` | :material-check:{ title="Deafult value" } | The models list is empty |
+| `predefinedModelsCategories` | :material-check:{ title="Deafult value" } | `{"man": "Men", "woman": "Women"}` |
+| [**ImagePicker :octicons-arrow-right-24: UploadsHistory**](../pages/image-picker.md#uploads-history) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `uploadsHistoryButtonNewPhoto` | :material-check:{ title="Deafult value" }<br><br>:material-apple-keyboard-option:{ title="Alternative variant" } [^2] | + New photo or model<br><br>+ Upload new photo |
+| `uploadsHistoryTitle` | :material-check:{ title="Deafult value" } | Previously used |
+| `uploadsHistoryButtonChangePhoto` | :material-check:{ title="Deafult value" } | Change photo |
+| [**TryOn**](../pages/try-on.md) | |
+| `tryOnPageTitle` | :material-check:{ title="Deafult value" } | Virtual Try-on |
+| `tryOn` | :material-check:{ title="Deafult value" } | Try on |
+| [**TryOn :octicons-arrow-right-24: Loading**](../pages/try-on.md#loading) | |
+| `tryOnLoadingStatusUploadingImage` | :material-check:{ title="Deafult value" } | Uploading image |
+| `tryOnLoadingStatusScanningBody` | :material-check:{ title="Deafult value" } | Scanning the body |
+| `tryOnLoadingStatusGeneratingOutfit` | :material-check:{ title="Deafult value" } | Generating outfit |
 | [**TryOn :octicons-arrow-right-24: InputValidation**](../pages/try-on.md#input-validation) | |
-| `invalidInputImageDescription` | :material-check: We couldn't detect<br>anyone in this photo |
-| `invalidInputImageChangePhotoButton` | :material-check: Change photo                    |
-| [**TryOn :octicons-arrow-right-24: Cart**](../pages/try-on.md#cart)                   | |
-| `addToCart`             | :material-check: Add to cart                                  |
-| [**TryOn :octicons-arrow-right-24: FitDisclaimer**](../pages/try-on.md#fit-disclaimer) | |
-| `fitDisclaimerTitle`    | :material-check: Results may vary from real-life fit          |
-| `fitDisclaimerDescription` | :material-check: Virtual try-on is a visualization tool<br>that shows how items might look and may not perfectly<br>represent how the item will fit in reality |
-| `fitDisclaimerCloseButton` | :material-check: Close                                     |
-| [**TryOn :octicons-arrow-right-24: Feedback**](../pages/try-on.md#feedback)           | |
-| `feedbackTitle`         | :material-check: Can you tell us more?                        |
-| `feedbackOptions`       | :material-check: `["This style isn't for me",`<br>`"The item looks off",`<br>`"I look different"]` |
-| `feedbackButtonSkip`    | :material-check: Skip                                         |
-| `feedbackButtonSend`    | :material-check: Send                                         |
-| `feedbackGratitudeText` | :material-check: Thank you for your feedback                  |
-| [**TryOn :octicons-arrow-right-24: Feedback :octicons-arrow-right-24: Other**](../pages/try-on.md#feedback-other) | |
-| `feedbackOptionOther`   | :material-check: Other                                        |
-| `otherFeedbackTitle`    | :material-check: Tell us what we could improve?               |
-| `otherFeedbackButtonSend` | :material-check: Send feedback                              |
-| `otherFeedbackButtonCancel` | :material-check: :fontawesome-regular-eye-slash: Cancel [^3] |
-| [**TryOn :octicons-arrow-right-24: History**](../pages/try-on.md#history)             | |
-| `generationsHistoryPageTitle` | :material-check: History                                |
-| [**Share**](../pages/share.md)                                                        | |
-| `shareButton`           | :material-check: Share                                        |
-| [**Wishlist**](../pages/wishlist.md)                                                  | |
-| `wishlistButtonAdd`     | :material-check: Wishlist                                     |
-| [**Selection**](../pages/selection.md)                                                | |
-| `select`                | :material-check: Select                                       |
-| `cancel`                | :material-check: Cancel                                       |
-| `selectAll`             | :material-check: Select all                                   |
-| `unselectAll`           | :material-check: Unselect all                                 |
-| [**Error**](../pages/error.md)                                                        | |
-| `defaultErrorMessage`   | :material-check: Something went wrong.<br>Please try again later |
-| `tryAgainButton`        | :material-check: Try again                                    |
-| [**PowerBar**](../pages/power-bar.md)                                                 | |
-| `poweredByAiuta`        | :material-check: Powered by Aiuta                             |
+| `invalidInputImageDescription` | :material-check:{ title="Deafult value" } | We couldn't detect<br>anyone in this photo |
+| `invalidInputImageChangePhotoButton` | :material-check:{ title="Deafult value" } | Change photo |
+| [**TryOn :octicons-arrow-right-24: Cart**](../pages/try-on.md#cart) | |
+| `addToCart` | :material-check:{ title="Deafult value" } | Add to cart |
+| [**TryOn :octicons-arrow-right-24: FitDisclaimer**](../pages/try-on.md#fit-disclaimer) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `fitDisclaimerTitle` | :material-check:{ title="Deafult value" } | Results may vary from real-life fit |
+| `fitDisclaimerDescription` | :material-check:{ title="Deafult value" } | Virtual try-on is a visualization tool<br>that shows how items might look and<br>may not perfectly represent how the item<br>will fit in reality |
+| `fitDisclaimerCloseButton` | :material-check:{ title="Deafult value" } | Close |
+| [**TryOn :octicons-arrow-right-24: Feedback**](../pages/try-on.md#feedback) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `feedbackTitle` | :material-check:{ title="Deafult value" } | Can you tell us more? |
+| `feedbackOptions` | :material-check:{ title="Deafult value" } | `["This style isn't for me",`<br>`"The item looks off",`<br>`"I look different"]` |
+| `feedbackButtonSkip` | :material-check:{ title="Deafult value" } | Skip |
+| `feedbackButtonSend` | :material-check:{ title="Deafult value" } | Send |
+| `feedbackGratitudeText` | :material-check:{ title="Deafult value" } | Thank you for your feedback |
+| [**TryOn :octicons-arrow-right-24: Feedback :octicons-arrow-right-24: Other**](../pages/try-on.md#feedback-other) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `feedbackOptionOther` | :material-check:{ title="Deafult value" } | Other |
+| `otherFeedbackTitle` | :material-check:{ title="Deafult value" } | Tell us what we could improve? |
+| `otherFeedbackButtonSend` | :material-check:{ title="Deafult value" } | Send feedback |
+| `otherFeedbackButtonCancel` | :material-check:{ title="Deafult value" } :fontawesome-regular-eye-slash:{ title="Nullable to hide" } [^3] | Cancel |
+| [**TryOn :octicons-arrow-right-24: History**](../pages/try-on.md#history) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `generationsHistoryPageTitle` | :material-check:{ title="Deafult value" } | History |
+| [**Share**](../pages/share.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `shareButton` | :material-check:{ title="Deafult value" } | Share |
+| [**Wishlist**](../pages/wishlist.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `wishlistButtonAdd` | :material-check:{ title="Deafult value" } | Wishlist |
+| [**Selection**](../pages/selection.md) | |
+| `select` | :material-check:{ title="Deafult value" } | Select |
+| `cancel` | :material-check:{ title="Deafult value" } | Cancel |
+| `selectAll` | :material-check:{ title="Deafult value" } | Select all |
+| `unselectAll` | :material-check:{ title="Deafult value" } | Unselect all |
+| [**Error**](../pages/error.md) | |
+| `defaultErrorMessage` | :material-check:{ title="Deafult value" } | Something went wrong.<br>Please try again later |
+| `tryAgainButton` | :material-check:{ title="Deafult value" } | Try again |
+| [**PowerBar**](../pages/power-bar.md) | |
+| `poweredByAiuta` | :material-check:{ title="Deafult value" } | Powered by Aiuta |
 
 [^1]: `<b><a href='https://aiuta.com/legal/terms-of-service.html'>Terms of Use</a>`
 [^2]: Use this variant if the try-on with models feature is disabled

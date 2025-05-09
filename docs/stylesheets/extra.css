@@ -63,6 +63,16 @@
   color: #4000FF;
 }
 
+.cl-hint {
+  color: var(--md-primary-fg-color);
+}
+
+.cl-primary,
+.cl-aiuta {
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+
 .cl-on-dark,
 .cl-background {
   background-color: hsla(225deg,15%,14%,1);
@@ -88,4 +98,16 @@
 .cl-discounted-price,
 .cl-aiuta {
   border-radius: 4px;
+}
+
+.shape-grabber {
+  background-color: #FFFFFF;
+  color: hsla(225deg,15%,14%,1);
+  border-color: hsla(225deg,15%,14%,1);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  padding-bottom: 4px;
 }
