@@ -10,51 +10,33 @@ The Welcome Screen is an optional feature that can be displayed when users first
 - Use it to introduce users to your virtual try-on experience
 - Set the tone for the user journey
 
-## Customization Options
+## Customization
 
-#### Background
-- Custom background image that fills the entire screen
+#### [Images](../resources/images.md)
+- Custom `welcomeBackground` image that fills the entire screen
 
-#### Central Icon
-- Custom icon displayed above the title
-- Recommended size: 82x82 points
+#### [Icons](../resources/icons.md)
+- Custom central `welcome82` icon displayed above the title (82x82 points)
 
-#### Text Elements
-- **Title**: Main heading that introduces the feature
-- **Description**: Supporting text explaining the virtual try-on experience
-- **Start Button**: Call-to-action button to begin the experience
+#### [Text Elements](../resources/localization.md)
+- Main `welcomeTitle` heading that introduces the feature
+- Supporting `welcomeDescription` explaining the virtual try-on experience
+- Call-to-action `welcomeButtonStart` to begin the experience
 
-#### Typography
-- Custom font styles for the title
-- Custom font styles for the description text
+#### [Typography](../resources/typography.md)
+- Custom `welcomeTitle` text style for the title
+- Custom `welcomeDescription` text style for the description text
 
+#### General styles
+- [Icon](../resources/icons.md) and [position](../resources/other.md) of close button
+- [Shape](../resources/shapes.md), [colors](../resources/colors.md) and [text style](../resources/typography.md) of start button
 
-## Resources Required
+## [Analytics](../analytics/analytics.md)
 
-To implement a custom welcome screen, you'll need to provide:
+The following analytics events are tracked on the Welcome Screen:
 
-1. **Images**:
-
-    - `welcomeBackground` image
-
-2. **Icons**:
-
-    - Central `welcome82` icon (82x82)    
-
-3. **Text Content**:
-
-    - `welcomeTitle`
-    - `welcomeDescription`
-    - `welcomeButtonStart`
-
-4. **Typography Styles**
-    - `welcomeTitle` text style
-    - `welcomeDescription` text style
-
-
-## Best Practices
-
-- Keep the welcome message concise and engaging
-- Use high-quality, optimized images
-- Ensure text is readable against the background
-- Maintain consistent branding with your main application
+| Type | Event | Page Id | Description |
+|------|-------|---------|-------------|
+| [`page`](../analytics/analytics.md#event-categories) | :material-minus: | [`welcome`](../analytics/analytics.md#page-identifiers) | Triggered when the welcome screen is displayed |
+| [`onboarding`](../analytics/analytics.md#event-categories) | [`welcomeStartClicked`](../analytics/analytics.md#onboarding-events) | [`welcome`](../analytics/analytics.md#page-identifiers) | Triggered when user clicks the start button<br>to begin the try-on process |
+| [`exit`](../analytics/analytics.md#event-categories) | :material-minus: | [`welcome`](../analytics/analytics.md#page-identifiers) | SDK was closed on the welcome screen |

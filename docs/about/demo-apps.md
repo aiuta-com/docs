@@ -6,43 +6,41 @@ Experience Aiuta SDK in action through our demo applications. These applications
 
 ## Available Demo Apps
 
-### iOS
+<div class="grid cards" markdown>
 
-[Download from App Store](https://apps.apple.com/app/id6477541220)
+:fontawesome-brands-app-store-ios: [Download on the App Store](https://apps.apple.com/app/id6477541220)
+{ .card }
 
-!!! warning "App Store Availability"
-    The demo app is unlisted on the App Store. Please use the direct link above to access it.
+:fontawesome-brands-google-play: [Get it on Google Play](https://play.google.com/store/apps/details?id=com.aiuta.fashionsdk.demo&hl=en)
+{ .card }
 
-### Android
+</div>
 
-[Download from Google Play](https://play.google.com/store/apps/details?id=com.aiuta.fashionsdk.demo&hl=en)
+!!! info "App Store Availability"
+    The demo app uses unlisted distribution on the App Store, discoverable only with a direct link above.
 
-!!! note "Android Demo Limitations"
-    The Android demo app currently has limited customization capabilities compared to the iOS version. For the most comprehensive demonstration of the SDK's customization features, we recommend trying the iOS demo app. However, please note that both Android and iOS SDKs provide **identical** customization and interaction capabilities for your production applications.
-
-## Features Available in Demo
-
-The demo applications allow you to:
-
-- Experience the complete virtual try-on flow
-- Test different UI customization options
-- Try various garment types and styles
-- Explore the user interface and navigation
-- Test the performance and quality of virtual try-ons
-- Experience the SDK's integration capabilities
 
 ## Using the Demo
 
 1. Download the appropriate demo app for your platform
-2. Request an access code from Aiuta by emailing [Partnership@aiuta.com](mailto:Partnership@aiuta.com) if you don't have one yet
+2. Request an access code [from Aiuta by email](mailto:Partnership@aiuta.com) if you don't have one yet
 3. Launch the application and enter the code
-4. Select an item from the sample catalog and tap "Try on" to experience the SDK and virtual try-on in action
-5. Explore various UI elements and interactions
+4. Select an item from the sample catalog and tap "Try on" 
+5. Experience the SDK and virtual try-on in action
+6. Explore various SDK pages and features
 
-The demo applications are perfect for:
 
-- Evaluating the SDK's capabilities
-- Testing performance on your device
-- Understanding the user experience
-- Planning your implementation
-- Demonstrating the technology to stakeholders
+## Features Available
+
+The demo applications helps you to:
+
+- Experience the complete virtual try-on flow
+- Explore the user interface and navigation
+- Test the performance and quality of virtual try-ons
+- Test different UI customization options
+- Experience the SDK's integration capabilities
+- Demonstrate the technology to stakeholders
+- Plan your implementation
+
+!!! note "Android Demo Limitations"
+    The Android demo app currently has limited customization capabilities compared to the iOS version. For the most comprehensive demonstration of the SDK's customization features, we recommend trying the iOS demo app. However, please note that both Android and iOS SDKs provide **same customization and interaction capabilities** for your production applications.

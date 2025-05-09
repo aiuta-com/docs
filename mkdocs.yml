@@ -10,7 +10,7 @@ nav:
   - About:
     - Overview: index.md
     - Demo Apps: about/demo-apps.md
-    - Try-On Pages:
+    - Pages:
       - Welcome: about/pages/welcome-screen.md
       - Onboarding:
         - How It Works: about/pages/onboarding/how-it-works.md
@@ -24,12 +24,16 @@ nav:
       - Loading: about/pages/loading-screen.md
       - Results: about/pages/results-screen.md
     - Resources:
-      - Themes: about/resources/themes.md
+      - Overview: about/resources/overview.md
       - Icons: about/resources/icons.md
       - Images: about/resources/images.md
+      - Colors: about/resources/colors.md
+      - Shapes: about/resources/shapes.md
+      - Typography: about/resources/typography.md
       - Localization: about/resources/localization.md
+      - Other: about/resources/other.md
     - Analytics: 
-      - Events: about/analytics/ananlytics.md
+      - Events: about/analytics/analytics.md
       - Errors: about/analytics/errors.md
 
   - Android:
@@ -53,6 +57,7 @@ theme:
     - navigation.expand
     - navigation.sections
     - content.code.copy
+    - content.tooltips
   palette:
     # Light mode
     - scheme: default
@@ -69,8 +74,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: media/logo/logo.svg
-  logo: media/logo/logo.svg
+  favicon: media/logo/aiuta.svg
+  logo: media/logo/aiuta.svg
   icon:
     logo: logo
 
