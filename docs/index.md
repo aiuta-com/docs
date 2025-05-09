@@ -55,12 +55,4 @@ If you prefer more control over the implementation or have specific requirements
 
     Coming soon
 
-<!-- :fontawesome-brands-apple: [__iOS__](ios/overview.md)
-{ .card }
-
-:fontawesome-brands-flutter: [__Flutter__](flutter/overview.md) *mobile only*
-{ .card }
-
-> :fontawesome-brands-js: __Web__ *coming soon* -->
-
 </div>
