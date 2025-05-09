@@ -4,7 +4,7 @@
 
 The Welcome Screen is an optional feature that can be displayed when users first open the SDK. It serves as an introduction to your virtual try-on experience and can be customized to match your brand identity.
 
-### When to Use
+## When to Use
 
 - Show the welcome screen on the first launch of the SDK
 - Use it to introduce users to the virtual try-on experience
@@ -17,7 +17,7 @@ The Welcome Screen is an optional feature that can be displayed when users first
     should care of enabling or disabling the Welcome Screen feature in
     the configuration to control the Welcome Screen visibility yourself.
 
-### Customization
+## Customization
 
 #### [Images](../resources/images.md)
 - Custom `welcomeBackground` image that fills the entire screen
@@ -46,7 +46,9 @@ The Welcome Screen is an optional feature that can be displayed when users first
 - General `onDark` color for close button, title, description and start button background
 - General `onLight` color for start button label
 
-### [Analytics](../analytics/analytics.md)
+---
+
+## [Analytics](../analytics/analytics.md)
 
 The following analytics events are tracked on the Welcome Screen:
 
@@ -56,7 +58,7 @@ The following analytics events are tracked on the Welcome Screen:
 | [`onboarding`](../analytics/analytics.md#event-categories) | [`welcomeStartClicked`](../analytics/analytics.md#onboarding-events) | [`welcome`](../analytics/analytics.md#page-identifiers) | Triggered when user clicks the start button<br>to start the journey |
 | [`exit`](../analytics/analytics.md#event-categories) | :material-minus: | [`welcome`](../analytics/analytics.md#page-identifiers) | SDK was closed on the welcome screen |
 
-### How to implement
+## How to implement
 
 <div class="grid cards" markdown>
 

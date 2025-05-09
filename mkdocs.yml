@@ -12,15 +12,9 @@ nav:
     - Demo Apps: about/demo-apps.md
     - Pages:
       - Welcome: about/pages/welcome-screen.md
-      - Onboarding:
-        - How It Works: about/pages/onboarding/how-it-works.md
-        - Best Results: about/pages/onboarding/best-results.md
-      - Consent:
-        - Embedded: about/pages/consent/embedded.md
-        - Standalone: about/pages/consent/standalone.md
-      - Image Picker: 
-        - Main: about/pages/image-picker/main.md
-        - Models: about/pages/image-picker/models.md
+      - Onboarding: about/pages/onboarding.md
+      - Consent: about/pages/consent.md
+      - Image Picker: about/pages/image-picker.md
       - Loading: about/pages/loading-screen.md
       - Results: about/pages/results-screen.md
     - Resources:
@@ -31,7 +25,7 @@ nav:
       - Shapes: about/resources/shapes.md
       - Typography: about/resources/typography.md
       - Localization: about/resources/localization.md
-      - Other: about/resources/other.md
+      # - Other: about/resources/other.md
     - Analytics: 
       - Events: about/analytics/analytics.md
       - Errors: about/analytics/errors.md
