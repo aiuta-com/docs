@@ -1,6 +1,6 @@
 # Preparation
 
-In the following pages all resources available for configuration are centrally collected for preparing complete customization set before development.
+In the following pages all resources available for configuration are centrally collected for preparing complete customization set before starting the technical integration of the SDK:
 
 <div class="grid cards" markdown>
 
