@@ -2,7 +2,8 @@
 
 The table below contains all the colors used in the SDK:
 
-- :fontawesome-regular-eye-slash: This is optional and can be omitted if you are not using the corresponding feature
+!!! abstract ""
+    :fontawesome-regular-eye-slash: &nbsp; This is optional and can be omitted if you are not using the corresponding feature
 
 <!-- If these colors change, don't forget to update the corresponding styles in exta.css -->
 

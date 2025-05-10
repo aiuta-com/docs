@@ -2,17 +2,18 @@
 
 The table below contains all the strings that may be localized or changed for the SDK:
 
-- :material-check: __default__ value is included in the SDK but may be changed or localized
-    
-- :material-close: __sample__ value that needs to be provided explicitly
+!!! abstract ""
+    :material-check: &nbsp; __default__ value is included in the SDK but may be changed or localized
+        
+    :material-close: &nbsp; __sample__ value that needs to be provided explicitly
 
-- :fontawesome-regular-eye-slash: __sample__ value that can be `null` to hide a label/text field
+    :fontawesome-regular-eye-slash: &nbsp; sample value that can be `null` [^5] to __hide__ a label/text field
 
-- :material-code-tags: this field supports subset of `html` tags (e.g., __`b`__, *`i`*, <u>`u`</u>)
+    :material-code-tags: &nbsp; this field supports subset of `html` __tags__ (e.g., __`b`__, *`i`*, <u>`u`</u>)
 
-- :material-link: this field supports links (`a href`)
+    :material-link: &nbsp; this field supports __links__ (`a href`)
 
-- :material-apple-keyboard-option: alternative variant
+    :material-apple-keyboard-option: &nbsp; alternative variant
 
 !!! tip 
     You can select the table content **excluding the header**, copy and paste it into Google Sheets for translation purposes. 
@@ -58,7 +59,7 @@ The table below contains all the strings that may be localized or changed for th
 | `predefinedModelsTitle` | :material-check:{ title="Deafult value" } | Select your model |
 | `predefinedModelsOr` | :material-check:{ title="Deafult value" } | Or |
 | `predefinedModelsEmptyListError` | :material-check:{ title="Deafult value" } | The models list is empty |
-| `predefinedModelsCategories` | :material-check:{ title="Deafult value" } | `{"man": "Men", "woman": "Women"}` |
+| `predefinedModelsCategories` | :material-check:{ title="Deafult value" } [^4] | `{"man": "Men", "woman": "Women"}` |
 | [**ImagePicker :octicons-arrow-right-24: UploadsHistory**](../pages/image-picker.md#uploads-history) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `uploadsHistoryButtonNewPhoto` | :material-check:{ title="Deafult value" }<br><br>:material-apple-keyboard-option:{ title="Alternative variant" } [^2] | + New photo or model<br><br>+ Upload new photo |
 | `uploadsHistoryTitle` | :material-check:{ title="Deafult value" } | Previously used |
@@ -107,6 +108,12 @@ The table below contains all the strings that may be localized or changed for th
 | [**PowerBar**](../pages/power-bar.md) | |
 | `poweredByAiuta` | :material-check:{ title="Deafult value" } | Powered by Aiuta |
 
+[^5]: In most cases an empty string will have the same effect, but the SDK has validation for developers to check the configuration is correct. To clearly distinguish between erroneously empty strings and explicitly hidden ones, we recommend using `null`  to hide and never using empty strings.
 [^1]: `<b><a href='https://aiuta.com/legal/terms-of-service.html'>Terms of Use</a>`
+[^4]: 
+    This is a map from models category identifiers to their names. 
+    The `predefinedModelCategories` are usually should cover 2 categories 
+    with ids `man` and `woman`, but can be extended in the future or by
+    your agreement with Aiuta.
 [^2]: Use this variant if the try-on with models feature is disabled
 [^3]: The Close button with a cross icon will be used if no string is specified

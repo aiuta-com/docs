@@ -2,7 +2,8 @@
 
 The table below contains all the text styles used in the SDK:
 
-- :fontawesome-regular-eye-slash: This is optional and can be omitted if you are not using the corresponding feature
+!!! abstract ""
+    :fontawesome-regular-eye-slash: &nbsp; This is optional and can be omitted if you are not using the corresponding feature
 
 | Key | Description | Default |
 | :-- | :---------- | :------ |
