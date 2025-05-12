@@ -43,8 +43,8 @@ The SDK provides two options for managing the onboarding completion status:
     ## Customization
 
     ##### [Text Elements](../resources/localization.md)
-    - `onboardingButtonNext` - Text for the "Next" button
-    - `onboardingButtonStart` - Text for the "Start" button
+    - Text for the `onboardingButtonNext`
+    - Text for the `onboardingButtonStart`
 
     ##### [Typography](../resources/typography.md)
     - General `buttonM` text style for Next/Start button
@@ -55,6 +55,9 @@ The SDK provides two options for managing the onboarding completion status:
     ##### [Colors](../resources/colors.md)
     - General `brand` color for Next/Start button background
     - General `onDark` color for button label
+    
+    ##### [Styles](../resources/other.md)
+    - Toogle `preferCloseButtonOnTheRight` to reverse pageBar
 
 ## Slides
 
@@ -78,18 +81,25 @@ The SDK provides two options for managing the onboarding completion status:
         #### Customization
 
         ##### [Images](../resources/images.md)
-        - `onboardingHowItWorksItems` - List of 3 items, each containing:
-            - `itemPreview` - Flatlay image of the item for try-on with transparent background
-            - `itemPhoto` - Example image of the try-on result with the person wearing this item
+        - List of 3 `onboardingHowItWorksItems`, each containing:
+            - Flatlay `itemPreview` image of the item for try-on with transparent background
+            - Example `itemPhoto` image of the try-on result with the person wearing this item
 
         ##### [Text Elements](../resources/localization.md)
-        - `onboardingHowItWorksPageTitle` - Optional title for the page
-        - `onboardingHowItWorksTitle` - Title displayed below the interactive section
-        - `onboardingHowItWorksDescription` - Description explaining how the try-on feature works
+        - Optional `onboardingHowItWorksPageTitle`
+        - `onboardingHowItWorksTitle` displayed below the interactive section
+        - `onboardingHowItWorksDescription` explaining how the try-on feature works
+
+        ##### [Typography](../resources/typography.md)
+        - General `titleL` text style for the title
+        - General `regular` text style for the description text
+
+        ##### [Colors](../resources/colors.md)
+        - General `primary` color for title and description
 
         ##### [Shapes](../resources/shapes.md)
-        - `onboardingImageL` - Shape for large image views
-        - `onboardingImageS` - Shape for small image views
+        - `onboardingImageL` shape for large image views
+        - `onboardingImageS` shape for small image views
 
 
 === "Best Results (Deprecated)"
@@ -110,26 +120,36 @@ The SDK provides two options for managing the onboarding completion status:
         #### Customization
 
         ##### [Images](../resources/images.md)
-        - `onboardingBestResultsGood` - List of 2 images representing good examples
-        - `onboardingBestResultsBad` - List of 2 images representing bad examples
+        - List of 2 `onboardingBestResultsGood` images representing good examples
+        - List of 2 `onboardingBestResultsBad`images representing bad examples
 
         ##### [Icons](../resources/icons.md)
-        - `onboardingBestResultsGood24` - Icon for good examples badge
-        - `onboardingBestResultsBad24` - Icon for bad examples badge
+        - `onboardingBestResultsGood24` icon for good examples badge
+        - `onboardingBestResultsBad24` icon for bad examples badge
 
         ##### [Text Elements](../resources/localization.md)
-        - `onboardingBestResultsPageTitle` - Optional title for the page
-        - `onboardingBestResultsTitle` - Title displayed below the best results samples
-        - `onboardingBestResultsDescription` - Description explaining how to achieve the best results
+        - Optional `onboardingBestResultsPageTitle`
+        - `onboardingBestResultsTitle` displayed below the best results samples
+        - `onboardingBestResultsDescription` explaining how to achieve the best results
+
+        ##### [Typography](../resources/typography.md)
+        - General `titleL` text style for the title
+        - General `regular` text style for the description text
+
+        ##### [Colors](../resources/colors.md)
+        - General `primary` color for title and description
 
         ##### [Shapes](../resources/shapes.md)
-        - `onboardingImageS` - Shape for example image views
+        - `onboardingImageS` shape for example image views
+
+        ##### [Styles](../resources/other.md)
+        - Toggle to `reduceOnboardingBestResultsShadows` on the page
 
 === "Consent (Optional)"
 
     ### Consent
 
-    ![Consent](../../media/pages/consent-1.png){ width=300 }
+    ![Consent](../../media/pages/consent-explicit.png){ width=300 }
 
     The Consent page can be integrated into the onboarding flow as a slide to collect user permissions for data processing. This slide explains the terms of service and/or privacy policies to users. For detailed information about configuring the Consent screen, including customization options and implementation details, please refer to the [:octicons-arrow-right-24: Consent](consent.md) page.
 
