@@ -24,7 +24,7 @@ The Consent feature allows you to collect user permissions for data processing o
         ### Customization
 
         ##### [Text Elements](../resources/localization.md)
-        - `consentHtml` - HTML content with concise text and links to privacy policy and/or terms of service
+        - `consentHtml` content with concise text and links to privacy policy and/or terms of service
 
 === "Standalone consent page (extended)"
 
@@ -55,13 +55,13 @@ The Consent feature allows you to collect user permissions for data processing o
         ### Customization
 
         ##### [Text Elements](../resources/localization.md)
-        - `consentPageTitle` - Optional title for the page
-        - `consentTitle` - Main title displayed on the page
-        - `consentDescriptionHtml` - HTML content describing the consent
-        - `consentFooterHtml` - Optional HTML footer
-        - `consentButtonAccept` - Text for the "Accept" button
+        - Optional `consentPageTitle`
+        - Main `consentTitle` displayed on the top
+        - `consentDescriptionHtml` content above the consents list
+        - Optional `consentFooterHtml` below the consents list
+        - Text for the `consentButtonAccept`
 
-        ##### [Other Styles](#)
+        ##### [Styles](../resources/other.md)
         - Optional `drawBordersAroundConsents`
 
         === "Without borders"

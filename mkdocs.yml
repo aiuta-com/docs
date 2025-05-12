@@ -25,7 +25,7 @@ nav:
       - Shapes: about/resources/shapes.md
       - Typography: about/resources/typography.md
       - Localization: about/resources/localization.md
-      # - Other: about/resources/other.md
+      - Other: about/resources/other.md
     - Analytics: 
       - Events: about/analytics/analytics.md
       - Errors: about/analytics/errors.md

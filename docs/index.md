@@ -1,23 +1,29 @@
-# Aiuta Virtual Try-On Solution for Apparel and Fashion Businesses
+# Aiuta Virtual Try-On SDK
 
 ![About Virtual Try-On](media/about.png)
 
-Boost your customer lifetime value and average order value by offering your customers an exceptional virtual try-on experience. Elevate their shopping journey and see your business growth soar.
+Let your customers visualize how clothes look on them — instantly and accurately
+
+- High quality visualisation
+- __7x faster__ than the average competitor
+- Preserve pose and body shape
 
 ## Aiuta SDK Benefits
 
 Aiuta SDK seamlessly integrates into your existing application and offers extensive customization capabilities:
 
-- **Simple Integration**: Quick implementation into your existing application with default settings
-- **Flexible UI Customization**: Fully customizable appearance to match your brand
-- **Extended Functionality**: Rich set of tools for creating a unique user experience
-- **Data Management**: Full control over user data and settings
-- **Analytics**: Detailed usage events on each SDK page and feature
-- **Integrations**: Ready-made solutions for interacting with various parts of your application
+- **Simple integration** into your existing application with default settings
+- **Flexible UI customization** to match your brand
+- **Rich set of tools** for creating a unique user experience
+- **Full control** over user data and settings
+- Detailed usage **analytics** events on each SDK page and feature
+- Ready-made solutions for interacting with your application
 
 ## Alternative: Direct API
 
-If you prefer more control over the implementation or have specific requirements, you can use the Aiuta API directly. This approach gives you complete flexibility in building your custom virtual try-on solution. For detailed API documentation and integration guides, visit our [:octicons-arrow-right-24: API Portal](https://developer.aiuta.com/products/digital-try-on/documentation).
+If you prefer even more control over the implementation or have specific requirements, you can use the Aiuta API directly. This approach gives you complete flexibility in building your custom virtual try-on solution.
+
+For detailed API documentation and integration guides, visit our [__API Portal__ :octicons-link-external-16:](https://developer.aiuta.com/products/digital-try-on/documentation){:target="_blank"}.
 
 !!! note 
     Aiuta SDK is built on top of the same API, providing a pre-built UI layer and additional convenience features while maintaining the same core functionality.
