@@ -8,10 +8,10 @@ Experience Aiuta SDK in action through our demo applications. These applications
 
 <div class="grid cards" markdown>
 
-:fontawesome-brands-app-store-ios: [Download on the App Store](https://apps.apple.com/app/id6477541220)
+:fontawesome-brands-app-store-ios: [Download on the __App Store__](https://apps.apple.com/app/id6477541220)
 { .card }
 
-:fontawesome-brands-google-play: [Get it on Google Play](https://play.google.com/store/apps/details?id=com.aiuta.fashionsdk.demo&hl=en)
+:fontawesome-brands-google-play: [Get it on __Google Play__](https://play.google.com/store/apps/details?id=com.aiuta.fashionsdk.demo&hl=en)
 { .card }
 
 </div>
