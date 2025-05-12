@@ -8,7 +8,7 @@ copyright: Copyright &copy; 2024 - 2025 Aiuta USA, Inc
 
 nav:
   - About:
-    - Overview: index.md
+    - Aiuta SDK: index.md
     - Demo Apps: about/demo-apps.md
     - Pages:
       - Welcome: about/pages/welcome-screen.md

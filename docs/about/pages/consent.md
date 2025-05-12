@@ -1,19 +1,10 @@
-# Consent
+# Consent or Legal information
 
-![Consent](../../media/pages/consent-1.png){width=300}
+The Consent feature allows you to collect user permissions for data processing or simply provide the user with legal information. It can be integrated into onboarding, displayed as a standalone page, or shown in a bottom sheet when specific actions are performed.
 
-The Consent feature allows you to collect user permissions for data processing. It can be integrated into onboarding, displayed as a standalone page, or shown in a bottom sheet when specific actions are performed.
+=== "Embedded legal info (default)"
 
-## When to Use
-
-- Collect user permissions for data processing
-- Present terms of service and privacy policies
-- Ensure compliance with data protection regulations
-- Get explicit user consent for specific features
-
-## Display Options
-
-=== "Embedded"
+    ## Embedded
 
     ![How It Works](../../media/pages/how-it-works-1.png){ width=300 }
 
@@ -22,23 +13,47 @@ The Consent feature allows you to collect user permissions for data processing. 
     !!! info ""
         This is default
 
+    ### When to Use
+
+    - Present terms of service and/or privacy policies
+
+    ---
+
     ??? tip "Customization"
+
+        ### Customization
+
         ##### [Text Elements](../resources/localization.md)
         - `consentHtml` - HTML content with concise text and links to privacy policy and/or terms of service
 
-=== "Standalone (extended)"
+=== "Standalone consent page (extended)"
 
-    ![Consent](../../media/pages/consent-1.png){width=300}
+    ## Standalone
+
+    ![Consent](../../media/pages/consent-explicit.png){width=300}
 
     A dedicated page where users must accept the terms by selecting required checkboxes to continue.
     It can be configured to appear:
 
-      1. When users are about to upload their photo  in the image picker [^1]
+      1. When users are about to upload their photo in the image picker [^1]
       2. As the last slide of the onboarding (if enabled)
       3. After the welcome screen (if enabled)
       4. If 2 and 3 are disabled, as the first screen when opening the SDK
 
+
+    ### When to Use
+
+    - Collect user permissions for data processing
+    - Ensure compliance with data protection regulations
+    - Get explicit user consent for specific features
+    - Present terms of service and privacy policies
+
+    ---
+
     ??? tip "Customization"
+
+        ### Customization
+
         ##### [Text Elements](../resources/localization.md)
         - `consentPageTitle` - Optional title for the page
         - `consentTitle` - Main title displayed on the page
@@ -51,13 +66,15 @@ The Consent feature allows you to collect user permissions for data processing. 
 
         === "Without borders"
 
-            ![Consent](../../media/pages/consent-1.png){width=300}
+            ![Consent](../../media/pages/consent-explicit.png){width=300}
 
         === "With borders"
 
-            ![Consent](../../media/pages/consent-2.png){width=300}    
+            ![Consent](../../media/pages/consent-borders.png){width=300}    
 
-    ## Consent Data
+    ---        
+
+    ### Consent Data
 
     Each consent is defined by the following properties:
 
@@ -65,47 +82,49 @@ The Consent feature allows you to collect user permissions for data processing. 
     - `type` - The method used to obtain the consent
     - `html` - The HTML content describing the consent
 
-    ### Consent Types
+    ??? abstract "Consent Type"
 
-    === "Explicit"
+        === "Explicit"
 
-        Represents consent where the user must actively check a checkbox to provide permission. This is required for cases where consent must be freely given and unambiguous.
+            Represents consent where the user must actively check a checkbox to provide permission. This is required for cases where consent must be freely given and unambiguous.
 
-        - `Required` - Indicates whether the checkbox must be checked to proceed
-        - `Optional` - Indicates additional consent and the user may proceed without checking it
+            - `Required` - Indicates whether the checkbox must be checked to proceed
+            - `Optional` - Indicates additional consent and the user may proceed without checking it
 
-        ![Consent](../../media/pages/consent-1.png){width=300}
+            ![Consent](../../media/pages/consent-explicit.png){width=300}
 
-        !!! info "GDPR Compliance"
-            The checkbox must be explicitly selected by the user as pre-selected checkboxes are not valid under GDPR, even if the user presses an "Accept" button. 
+            !!! info "GDPR Compliance"
+                The checkbox must be explicitly selected by the user as pre-selected checkboxes are not valid under GDPR, even if the user presses an "Accept" button. 
 
-    === "Implicit"
+        === "Implicit"
 
-        Represents consent where the user provides permission by pressing an "Accept" button. This may optionally include a __disabled__ (pre-selected) checkbox for additional clarity.
+            Represents consent where the user provides permission by pressing an "Accept" button. This may optionally include a __disabled__ (pre-selected) checkbox for additional clarity.
 
-        === "Single consent without checkbox"
+            === "Single consent without checkbox"
 
-            ![Consent](../../media/pages/consent-4.png){width=300}
+                ![Consent](../../media/pages/consent-implicit-wo-check.png){width=300}
 
-        === "Necessary and additional consent with cehckboxes"
+            === "Necessary and additional consent with checkboxes"
 
-            ![Consent](../../media/pages/consent-2.png){width=300}   
+                ![Consent](../../media/pages/consent-implicit-w-check.png){width=300}   
 
-        ??? warning "Legal Considerations"
-            It can be just an "Accept" button, but only if it’s very clear exactly
-            what the user is consenting to at that moment and you can’t bundle
-            multiple consents into one "Accept" unless they’re strictly necessary.
-            For example, GDPR says marketing consent should always be separate if possible.
+            ??? warning "Legal Considerations"
+                It can be just an "Accept" button, but only if it’s very clear exactly
+                what the user is consenting to at that moment and you can’t bundle
+                multiple consents into one "Accept" unless they’re strictly necessary.
+                For example, GDPR says marketing consent should always be separate if possible.
 
-            This can be used only for the consent that is necessary for the service,
-            as it’s not really “consent” under GDPR and it’s processing based on
-            contract necessity (Article 6(1)(b)) or legal obligation, not based on
-            “freely given consent” (Article 6(1)(a)), so, it is just informing the users,
-            not asking them for an additional permission.
-        
-            Please consider that this option at all (with or w/o checkbox)
-            is not valid for all cases, and it should be used with caution.
-            Consult with a legal department if in doubt.
+                This can be used only for the consent that is necessary for the service,
+                as it’s not really “consent” under GDPR and it’s processing based on
+                contract necessity (Article 6(1)(b)) or legal obligation, not based on
+                “freely given consent” (Article 6(1)(a)), so, it is just informing the users,
+                not asking them for an additional permission.
+            
+                Please consider that this option at all (with or w/o checkbox)
+                is not valid for all cases, and it should be used with caution.
+                Consult with a legal department if in doubt.
+
+    ---
 
     ### Data Management
 
@@ -129,8 +148,7 @@ The Consent feature allows you to collect user permissions for data processing. 
             See the [How to implement](#how-to-implement) section at the bottom for information on the relevant platform.
 
     !!! question "How does the SDK decide when to request consent?"
-        SDK will match the identifiers with the ones already obtained from the user and will show the consent
-        page only if there are missing explicit required or any implicit consents.
+        SDK will match the consents identifiers with the ones already obtained from the user (e.g., `obtainedConsentsIds`) and will show the consent page only if there are missing explicit required or any implicit consents.
 
     ---
 
@@ -142,7 +160,7 @@ The Consent feature allows you to collect user permissions for data processing. 
     |------|-------|---------|-------------|
     | [`page`](../analytics/analytics.md#event-categories) | :material-minus: | [`consent`](../analytics/analytics.md#page-identifiers) | Consent page opened |
     | [`onboarding`](../analytics/analytics.md#event-categories) | [`consentsGiven`](../analytics/analytics.md#onboarding-events) | [`consent`](../analytics/analytics.md#page-identifiers) | User has given all required consents |
-    | [`exit`](../analytics/analytics.md#event-categories) | :material-minus: | [`consent`](../analytics/analytics.md#page-identifiers) | SDK was closed on the consent screen |
+    | [`exit`](../analytics/analytics.md#event-categories) | :material-minus: | [`consent`](../analytics/analytics.md#page-identifiers) | SDK was closed on the consent page |
 
 ---
 
