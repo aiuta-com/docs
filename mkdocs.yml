@@ -1,5 +1,5 @@
 site_name: Aiuta SDK
-site_url: https://aiuta-com.github.io/aiuta-sdk-docs/
+site_url: https://aiuta-com.github.io/docs/
 site_author: Aiuta USA, Inc
 site_description: >-
   Aiuta Virtual Try-On SDK
@@ -50,8 +50,12 @@ theme:
     - navigation.tabs
     - navigation.expand
     - navigation.sections
+    # It may be convenient to have Prev/Next buttons, 
+    # but they are so ugly big, mb tweak them later
+    # - navigation.footer
     - content.code.copy
     - content.tooltips
+    - content.tabs.link
   palette:
     # Light mode
     - scheme: default
@@ -82,7 +86,6 @@ plugins:
       minify_html: true
 
 extra:
-  # generator: false
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/aiuta-com
@@ -90,8 +93,8 @@ extra:
       link: https://linkedin.com/company/aiuta-inc
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/aiutacom
-    # - icon: fontawesome/brands/facebook
-    #   link: https://facebook.com/aiutacom/
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/aiutacom/
     - icon: aiuta
       link: https://aiuta.com
 
