@@ -30,7 +30,7 @@ The Consent feature allows you to collect user permissions for data processing o
 
     ## Standalone
 
-    ![Consent](../../media/pages/consent-1.png){width=300}
+    ![Consent](../../media/pages/consent-explicit.png){width=300}
 
     A dedicated page where users must accept the terms by selecting required checkboxes to continue.
     It can be configured to appear:
@@ -66,11 +66,11 @@ The Consent feature allows you to collect user permissions for data processing o
 
         === "Without borders"
 
-            ![Consent](../../media/pages/consent-1.png){width=300}
+            ![Consent](../../media/pages/consent-explicit.png){width=300}
 
         === "With borders"
 
-            ![Consent](../../media/pages/consent-2.png){width=300}    
+            ![Consent](../../media/pages/consent-borders.png){width=300}    
 
     ---        
 
@@ -91,7 +91,7 @@ The Consent feature allows you to collect user permissions for data processing o
             - `Required` - Indicates whether the checkbox must be checked to proceed
             - `Optional` - Indicates additional consent and the user may proceed without checking it
 
-            ![Consent](../../media/pages/consent-1.png){width=300}
+            ![Consent](../../media/pages/consent-explicit.png){width=300}
 
             !!! info "GDPR Compliance"
                 The checkbox must be explicitly selected by the user as pre-selected checkboxes are not valid under GDPR, even if the user presses an "Accept" button. 
@@ -102,11 +102,11 @@ The Consent feature allows you to collect user permissions for data processing o
 
             === "Single consent without checkbox"
 
-                ![Consent](../../media/pages/consent-4.png){width=300}
+                ![Consent](../../media/pages/consent-implicit-wo-check.png){width=300}
 
-            === "Necessary and additional consent with cehckboxes"
+            === "Necessary and additional consent with checkboxes"
 
-                ![Consent](../../media/pages/consent-3.png){width=300}   
+                ![Consent](../../media/pages/consent-implicit-w-check.png){width=300}   
 
             ??? warning "Legal Considerations"
                 It can be just an "Accept" button, but only if it’s very clear exactly
