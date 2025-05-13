@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Shapes
 
 The table below contains all the shapes used in the SDK:

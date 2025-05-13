@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Providing localized text content
 
 The table below contains all the strings that may be localized or changed for the SDK:
@@ -34,7 +39,7 @@ The table below contains all the strings that may be localized or changed for th
 | [**Onboarding :octicons-arrow-right-24: BestResults**](../pages/onboarding.md#best-results) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `onboardingBestResultsPageTitle` | :material-code-tags:{ title="Supports html tags" } :material-close:{ title="Sample value" } :fontawesome-regular-eye-slash:{ title="Nullable to hide" }<br><br>:material-apple-keyboard-option:{ title="Alternative variant" } | For best results<br><br>`<b>Step 2/2</b> - For best results` |
 | `onboardingBestResultsTitle` | :material-close:{ title="Sample value" } | For best results |
-| `onboardingBestResultsDescription` | :material-close:{ title="Sample value" } | Use a photo with good lighting,<br>stand straight a plain background |
+| `onboardingBestResultsDescription` | :material-close:{ title="Sample value" } | Use a photo with good lighting, stand straight a plain background |
 | [**Consent :octicons-arrow-right-24: Embedded**](../pages/consent.md#embedded) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `consentHtml` | :material-code-tags:{ title="Supports html tags" } :material-link:{ title="Supports links" } :material-check:{ title="Deafult value" } [^1] | Your photos will be processed by <b><a href='https://aiuta.com/legal/terms-of-service.html'>Terms of Use</a> |
 | [**Consent :octicons-arrow-right-24: Standalone**](../pages/consent.md#standalone) :fontawesome-regular-eye-slash:{ title="Optional" } | |
@@ -46,12 +51,12 @@ The table below contains all the strings that may be localized or changed for th
 | `consentButtonAccept` | :material-close:{ title="Sample value" } | Accept |
 | [**ImagePicker**](../pages/image-picker.md) | |
 | `imagePickerTitle` | :material-check:{ title="Deafult value" } | Upload a photo of you |
-| `imagePickerDescription` | :material-check:{ title="Deafult value" } | Select a photo where you are<br>standing straight and clearly visible |
+| `imagePickerDescription` | :material-check:{ title="Deafult value" } | Select a photo where you are standing straight and clearly visible |
 | `imagePickerButtonUploadPhoto` | :material-check:{ title="Deafult value" } | Upload a photo |
 | [**ImagePicker :octicons-arrow-right-24: Camera**](../pages/image-picker.md#camera) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `cameraButtonTakePhoto` | :material-check:{ title="Deafult value" } | Take a photo |
 | `cameraPermissionTitle` | :material-check:{ title="Deafult value" } | Camera permission |
-| `cameraPermissionDescription` | :material-check:{ title="Deafult value" } | Please allow access to the camera<br>in the application settings |
+| `cameraPermissionDescription` | :material-check:{ title="Deafult value" } | Please allow access to the camera in the application settings |
 | `cameraPermissionButtonOpenSettings` | :material-check:{ title="Deafult value" } | Settings |
 | [**ImagePicker :octicons-arrow-right-24: Gallery**](../pages/image-picker.md#gallery) | |
 | `galleryButtonSelectPhoto` | :material-check:{ title="Deafult value" } | Choose from library |
@@ -72,13 +77,13 @@ The table below contains all the strings that may be localized or changed for th
 | `tryOnLoadingStatusScanningBody` | :material-check:{ title="Deafult value" } | Scanning the body |
 | `tryOnLoadingStatusGeneratingOutfit` | :material-check:{ title="Deafult value" } | Generating outfit |
 | [**TryOn :octicons-arrow-right-24: InputValidation**](../pages/try-on.md#input-validation) | |
-| `invalidInputImageDescription` | :material-check:{ title="Deafult value" } | We couldn't detect<br>anyone in this photo |
+| `invalidInputImageDescription` | :material-check:{ title="Deafult value" } | We couldn't detect anyone in this photo |
 | `invalidInputImageChangePhotoButton` | :material-check:{ title="Deafult value" } | Change photo |
 | [**TryOn :octicons-arrow-right-24: Cart**](../pages/try-on.md#cart) | |
 | `addToCart` | :material-check:{ title="Deafult value" } | Add to cart |
 | [**TryOn :octicons-arrow-right-24: FitDisclaimer**](../pages/try-on.md#fit-disclaimer) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `fitDisclaimerTitle` | :material-check:{ title="Deafult value" } | Results may vary from real-life fit |
-| `fitDisclaimerDescription` | :material-check:{ title="Deafult value" } | Virtual try-on is a visualization tool<br>that shows how items might look and<br>may not perfectly represent how the item<br>will fit in reality |
+| `fitDisclaimerDescription` | :material-check:{ title="Deafult value" } | Virtual try-on is a visualization tool that shows how items might look<br>and may not perfectly represent how the item will fit in reality |
 | `fitDisclaimerCloseButton` | :material-check:{ title="Deafult value" } | Close |
 | [**TryOn :octicons-arrow-right-24: Feedback**](../pages/try-on.md#feedback) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `feedbackTitle` | :material-check:{ title="Deafult value" } | Can you tell us more? |

@@ -4,16 +4,22 @@
 
 ## Overview
 
-This repository contains the official documentation for the Aiuta Virtual Try-On SDK, a comprehensive solution for apparel and fashion businesses looking to enhance their customer experience with virtual try-on capabilities.
+This repository contains the official documentation for the Aiuta Virtual Try-On SDK, a comprehensive solution to let your customers visualize how clothes look on them — instantly and accurately
 
-## Key Features
+- High quality visualisation
+- __7x faster__ than the average competitor
+- Preserve pose and body shape
 
-- **Simple Integration**: Quick implementation into your existing application
-- **Flexible UI Customization**: Fully customizable appearance to match your brand
-- **Extended Functionality**: Rich set of tools for creating a unique user experience
-- **Data Management**: Full control over user data and settings
-- **Analytics**: Detailed usage events on each SDK page and feature
-- **Integrations**: Ready-made solutions for interacting with various parts of your application
+## Aiuta SDK Benefits
+
+Aiuta SDK seamlessly integrates into your existing application and offers extensive customization capabilities:
+
+- **Simple integration** into your existing application with default settings
+- **Flexible UI customization** to match your brand
+- **Rich set of tools** for creating a unique user experience
+- **Full control** over user data and settings
+- Detailed usage **analytics** events on each SDK page and feature
+- Ready-made solutions for interacting with your application
 
 ## Platform Support
 

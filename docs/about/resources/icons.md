@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Icons
 
 The table below contains all the icons used in the SDK:

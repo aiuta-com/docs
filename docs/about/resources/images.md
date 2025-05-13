@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Images
 
 The table below contains all the images used in the SDK:
@@ -8,7 +13,7 @@ The table below contains all the images used in the SDK:
 | Key | Description |    | Default |
 | :-- | :---------- | -: | :------ |
 | [**Welcome Screen**](#welcome-screen) :fontawesome-regular-eye-slash:{ title="Optional" } | |
-| `welcomeBackground` | Background image to fill<br>the welcome screen |  | :material-minus:{ title="Not included" } |
+| `welcomeBackground` | Background image to fill the welcome screen |  | :material-minus:{ title="Not included" } |
 | [**Onboarding :octicons-arrow-right-24: How It Works**](#onboardinghow-it-works) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `onboardingHowItWorksItems[0]`<br>`(itemPreview, itemPhoto)` | First pair of samples | ![preview](../../media/images/onboardingHowItWorks1S.png){ width=50 } | ![preview](../../media/images/onboardingHowItWorks1L.png){ width=80 } |
 | `onboardingHowItWorksItems[1]`<br>`(itemPreview, itemPhoto)` | Second pair of samples | ![preview](../../media/images/onboardingHowItWorks2S.png){ width=50 } | ![preview](../../media/images/onboardingHowItWorks2L.png){ width=80 } | 
