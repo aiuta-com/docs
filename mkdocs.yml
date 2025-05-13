@@ -1,5 +1,5 @@
 site_name: Aiuta SDK
-site_url: https://aiuta-com.github.io/docs/
+site_url: https://sdk.aiuta.com/
 site_author: Aiuta USA, Inc
 site_description: >-
   Aiuta Virtual Try-On SDK
@@ -9,6 +9,8 @@ copyright: Copyright &copy; 2024 - 2025 Aiuta USA, Inc
 nav:
   - About:
     - Aiuta SDK: index.md
+    
+  - Explore:
     - Demo Apps: about/demo-apps.md
     - Pages:
       - Welcome: about/pages/welcome-screen.md
@@ -18,7 +20,7 @@ nav:
       - Loading: about/pages/loading-screen.md
       - Results: about/pages/results-screen.md
     - Resources:
-      - Overview: about/resources/overview.md
+      - Prepare: about/resources/overview.md
       - Icons: about/resources/icons.md
       - Images: about/resources/images.md
       - Colors: about/resources/colors.md
@@ -38,6 +40,10 @@ nav:
 
   - Flutter:
     - Overview: flutter/overview.md
+    - Quick Start:
+      - Installation: flutter/installation.md
+      - Configuration: flutter/configuration.md
+      - Basic Usage: flutter/basic-usage.md
 
 theme:
   name: 'material'
@@ -56,6 +62,7 @@ theme:
     - content.code.copy
     - content.tooltips
     - content.tabs.link
+    - content.code.annotate
   palette:
     # Light mode
     - scheme: default
@@ -95,6 +102,8 @@ extra:
       link: https://instagram.com/aiutacom
     - icon: fontawesome/brands/facebook
       link: https://facebook.com/aiutacom/
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/AiutaCom
     - icon: aiuta
       link: https://aiuta.com
 

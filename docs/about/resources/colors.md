@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Colors
 
 The table below contains all the colors used in the SDK:

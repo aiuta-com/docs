@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Typography
 
 The table below contains all the text styles used in the SDK:

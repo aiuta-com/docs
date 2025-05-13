@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Other styles, toggles and settings
 
 This page contains descriptions of additional unclassified settings for various user interface components that provide more configuration flexibility.
