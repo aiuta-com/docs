@@ -48,30 +48,6 @@ The Consent feature allows you to collect user permissions for data processing o
     - Get explicit user consent for specific features
     - Present terms of service and privacy policies
 
-    ---
-
-    ??? tip "Customization"
-
-        ### Customization
-
-        ##### [Text Elements](../resources/localization.md)
-        - Optional `consentPageTitle`
-        - Main `consentTitle` displayed on the top
-        - `consentDescriptionHtml` content above the consents list
-        - Optional `consentFooterHtml` below the consents list
-        - Text for the `consentButtonAccept`
-
-        ##### [Styles](../resources/other.md)
-        - Optional `drawBordersAroundConsents`
-
-        === "Without borders"
-
-            ![Consent](../../media/pages/consent-explicit.png){width=300}
-
-        === "With borders"
-
-            ![Consent](../../media/pages/consent-borders.png){width=300}    
-
     ---        
 
     ### Consent Data
@@ -84,19 +60,19 @@ The Consent feature allows you to collect user permissions for data processing o
 
     ??? abstract "Consent Type"
 
-        === "Explicit"
+        === "`explicit`"
 
             Represents consent where the user must actively check a checkbox to provide permission. This is required for cases where consent must be freely given and unambiguous.
 
-            - `Required` - Indicates whether the checkbox must be checked to proceed
-            - `Optional` - Indicates additional consent and the user may proceed without checking it
+            - `required` - Indicates whether the checkbox must be checked to proceed
+            - `optional` - Indicates additional consent and the user may proceed without checking it
 
             ![Consent](../../media/pages/consent-explicit.png){width=300}
 
             !!! info "GDPR Compliance"
                 The checkbox must be explicitly selected by the user as pre-selected checkboxes are not valid under GDPR, even if the user presses an "Accept" button. 
 
-        === "Implicit"
+        === "`implicit`"
 
             Represents consent where the user provides permission by pressing an "Accept" button. This may optionally include a __disabled__ (pre-selected) checkbox for additional clarity.
 
@@ -147,8 +123,43 @@ The Consent feature allows you to collect user permissions for data processing o
         !!! question ""
             See the [How to implement](#how-to-implement) section at the bottom for information on the relevant platform.
 
-    !!! question "How does the SDK decide when to request consent?"
-        SDK will match the consents identifiers with the ones already obtained from the user (e.g., `obtainedConsentsIds`) and will show the consent page only if there are missing explicit required or any implicit consents.
+    ??? question "How does the SDK decide when to request consent?"
+        SDK will match the consents identifiers with the ones already obtained from the user (e.g., `obtainedConsentsIds`) and will show the consent page only if there are missing `explicit` `required` or any `implicit` consents.
+
+    ??? question "What happens if the consent data changes?"
+        Overall, the logic behind the answer to the previous question seems to be consistent:
+        
+        - If a new `explicit` `required` or `implicit` consent is added, the SDK will request the user's consent again, since it is not in the list of accepted consents. None of the old checkboxes will be pre-selected, and the user will need to accept all the necessary ones again.
+
+        - A new `optional` consent will be ignored so as not to disturb users who have already accepted the mandatory ones.
+
+        - If any of the mandatory ones have changed their terms... Well, that's bad practice, please don't do that. The SDK does not monitor the content of consents, only their identifiers. If you need to change the terms, delete the old consent and create a new one with a different `id`.
+
+        - When changing the consent `type`, the logic is preserved. If it becomes `optional`, no reaction will follow. If an `optional` consent becomes any of mandatory type, the SDK will request everything again.
+
+    ---
+
+    ??? tip "Customization"
+
+        ### Customization
+
+        ##### [Text Elements](../resources/localization.md)
+        - Optional `consentPageTitle`
+        - Main `consentTitle` displayed on the top
+        - `consentDescriptionHtml` content above the consents list
+        - Optional `consentFooterHtml` below the consents list
+        - Text for the `consentButtonAccept`
+
+        ##### [Styles](../resources/other.md)
+        - Optional `drawBordersAroundConsents`
+
+        === "Without borders"
+
+            ![Consent](../../media/pages/consent-explicit.png){width=300}
+
+        === "With borders"
+
+            ![Consent](../../media/pages/consent-borders.png){width=300}    
 
     ---
 

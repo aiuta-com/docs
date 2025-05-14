@@ -3,14 +3,14 @@
 ![Image Picker](../../media/pages/image-picker-w-models.png){width=300}
 ![Image Picker](../../media/pages/image-picker-history-last.png){width=300}
 
-The Image Picker feature in the main page allows users to select images for virtual try-on from various sources.
+The Image Picker feature represents the main page and allows users to select images for virtual try-on from various sources.
 
 ## When to Use
 
 - Let users select photos from their device
 - Allow users to take new photos with the camera
-- Provide predefined model images for try-on
-- Enable users to reuse previously uploaded images
+- :material-new-box:{ .cl-aiuta } Provide predefined models images for try-on
+- Enable users to reuse and manage previous images
 
 ## Sources
 
@@ -20,7 +20,9 @@ The Image Picker feature in the main page allows users to select images for virt
 
     ![Camera](../../media/pages/image-picker-bottom-sheet.png){width=300}
 
-    Allows users to take new photos using their device's camera.
+    Allows users to take new photos using their device's camera.<br>Uses the platform's standard camera tools for applications.
+
+    ---
 
     ??? tip "Customization"
 
@@ -41,7 +43,9 @@ The Image Picker feature in the main page allows users to select images for virt
 
     ![Gallery](../../media/pages/image-picker-bottom-sheet.png){width=300}
 
-    Enables users to select photos from their device's photo library.
+    Enables users to select photos from their device's photo library.<br>Uses the platform's standard photo picker.
+
+    ---
 
     ??? tip "Customization"
 
@@ -62,7 +66,25 @@ The Image Picker feature in the main page allows users to select images for virt
         ![Image Picker](../../media/pages/image-picker-w-models.png){width=300}
         ![Predefined Models](../../media/pages/image-picker-models.png){width=300}
 
-        Provides a selection of predefined model images for virtual try-on.
+        Provides a selection of predefined models images for virtual try-on. Models are divided into categories, each containing a set of model images with different body shapes. This allows users to select models that best match their preferences and needs, offering a personalized virtual try-on experience, while allowing them not to use their own photos.
+
+        #### Models data
+
+        The SDK gets categories and the corresponding model lists from the Aiuta backend.
+        Apps don't need to provide any data for this.
+
+        !!! info ""
+            By __default__, there two categories: `woman` and `man` in that order.<br>
+            If necessary, categories can be fully customized in agreement with Aiuta.
+
+        ??? warning "Predefined models, History and User data"
+            If you use your __own__ history `data provider` and __manage__ image files when they are added to or deleted from the user's history, please note:
+
+            - The link to the image used with the model can be saved in the user's history
+            - The file with the model image should not be moved to the user's storage, it is a shared file and does not belong to a specific user
+            - When deleting from the user's history, the link to the image must be deleted, but the file with the model image itself cannot be deleted
+
+        ---
 
         ??? tip "Customization"
 
@@ -91,19 +113,25 @@ The Image Picker feature in the main page allows users to select images for virt
     Allows users to access and reuse their previously used images.<br>
     The last image used will be preselected in the image picker for subsequent try-ons.
 
-    ??? tip "Customization"
+    ---
 
-        #### Customization
+    #### History Data
 
-        ##### [Text Elements](../resources/localization.md)
-        - `uploadsHistoryButtonNewPhoto` - Text for the new photo button
-        - `uploadsHistoryTitle` - Title for the uploads history screen
-        - `uploadsHistoryButtonChangePhoto` - Text for the change photo button
+    Each image in the history is defined by the following properties:
 
-        ##### [Styles](#)
-        - `changePhotoButtonStyle` - Style for the "Change Photo" button:
-            - `blurred` - Default blurred style with optional outline
-            - `primary` - Solid button with primary background color
+    - `id` - A unique identifier for the image
+    - `url` - The address of an image resource
+    - `type` - The type of the image. 
+    
+    ??? abstract "Image Type"
+        Is this context of images used as input it is:
+
+        === "`uploaded`"
+            Image uploaded by the user (taken from the camera or gallery). This image belongs to the user. When the user removes the image from the history, it should be deleted from the storage as well.
+
+        === "`inputModel`"
+            Image of the model, provided by the Aiuta. This image could be linked to the user history, but it is not owned by the user, and should not be deleted, only unlinked from the user's history in case of removing.
+
 
     #### Data Management
 
@@ -119,12 +147,12 @@ The Image Picker feature in the main page allows users to select images for virt
 
     === "Data Provider"
 
-        You can implement your own custom data provider that:
+        You can implement your own custom history data provider that:
 
         - Provides the `uploadedImages` list of images previously used by the user
-        - React to the `addUploadedImages` callback to store new images
-        - React to the `deleteUploadedImages` callback to remove images by the user choise
-        - React to the `selectUploadedImage` callback to reorder images when reused
+        - Reacts to the `addUploadedImages` callback to store new images
+        - Reacts to the `deleteUploadedImages` callback to remove images by the user choise
+        - Reacts to the `selectUploadedImage` callback to reorder images when reused
 
         !!! info "This allows you to"
             - Integrate with your existing user management system
@@ -132,6 +160,21 @@ The Image Picker feature in the main page allows users to select images for virt
             - Implement custom business logic for history management
             - Control how images are stored and accessed
 
+    ---
+
+    ??? tip "Customization"
+
+        #### Customization
+
+        ##### [Text Elements](../resources/localization.md)
+        - `uploadsHistoryButtonNewPhoto` - Text for the new photo button
+        - `uploadsHistoryTitle` - Title for the uploads history screen
+        - `uploadsHistoryButtonChangePhoto` - Text for the change photo button
+
+        ##### [Styles](#)
+        - `changePhotoButtonStyle` - Style for the "Change Photo" button:
+            - `blurred` - Default blurred style with optional outline
+            - `primary` - Solid button with primary background color
 ---
 
 ## [Analytics](../analytics/analytics.md)
