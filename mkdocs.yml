@@ -32,6 +32,11 @@ nav:
       - Events: about/analytics/analytics.md
       - Errors: about/analytics/errors.md
 
+  - Developer:
+    - Overview: developer/overview.md
+    - API Reference:
+      - Configuration: developer/scheme/configuration.md
+
   - Android:
     - Getting started: android/aiuta/get-started.md
     
@@ -54,11 +59,9 @@ theme:
   language: en
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.expand
     - navigation.sections
-    # It may be convenient to have Prev/Next buttons, 
-    # but they are so ugly big, mb tweak them later
-    # - navigation.footer
     - content.code.copy
     - content.tooltips
     - content.tabs.link

@@ -59,6 +59,8 @@ The SDK provides two options for managing the onboarding completion status:
     ##### [Styles](../resources/other.md)
     - Toogle `preferCloseButtonOnTheRight` to reverse pageBar
 
+---
+
 ## Slides
 
 === "How It Works (Interactive)"
@@ -75,6 +77,8 @@ The SDK provides two options for managing the onboarding completion status:
 
     !!! info "Default"
         By default, this is the only slide of the onboarding with embedded [terms of service](consent.md) instead of a separate consent
+    
+    ---
 
     ??? tip "Customization"
 
@@ -115,6 +119,8 @@ The SDK provides two options for managing the onboarding completion status:
 
     !!! question "Why is it deprecated?"
         Examples of good source photos are now included into the Image Picker, so we recommend disabling this slide to avoid overwhelming the user with onboarding
+
+    ---
 
     ??? tip "Customization"
         #### Customization
