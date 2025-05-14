@@ -3,6 +3,23 @@
   --md-footer-bg-color--dark: var(--md-primary-fg-color);
 }
 
+.md-tabs__item--divider {
+  width: 1.5px;
+  margin: 0.08rem 0.75rem 0;
+  background-color: var(--md-primary-bg-color);
+  cursor: default;
+  pointer-events: none;
+  align-self: center;
+  height: 0.5rem;
+  padding: 0;
+  opacity: 0.5;
+  border-radius: 1px;
+}
+
+.md-tabs__item--divider .md-tabs__link {
+  display: none;
+}
+
 .cl-brand {
   color: #4000FF;
 }

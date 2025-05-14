@@ -56,9 +56,6 @@ theme:
     - navigation.tabs
     - navigation.expand
     - navigation.sections
-    # It may be convenient to have Prev/Next buttons, 
-    # but they are so ugly big, mb tweak them later
-    # - navigation.footer
     - content.code.copy
     - content.tooltips
     - content.tabs.link

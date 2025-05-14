@@ -12,22 +12,22 @@ This repository contains the official documentation for the Aiuta Virtual Try-On
 
 ## Aiuta SDK Benefits
 
-Aiuta SDK seamlessly integrates into your existing application and offers extensive customization capabilities:
-
 - **Simple integration** into your existing application with default settings
-- **Flexible UI customization** to match your brand
-- **Rich set of tools** for creating a unique user experience
+- Flexible **UI customization** to match your brand
+- **Rich set of features** for creating a unique user experience
 - **Full control** over user data and settings
-- Detailed usage **analytics** events on each SDK page and feature
+- Detailed usage **analytics** on every SDK page and feature
 - Ready-made solutions for interacting with your application
+
+[Explore Documentation, Demo apps, SDK pages, customizations and more...](https://sdk.aiuta.com)
 
 ## Platform Support
 
 - **Android**: minSdk 23
 - **iOS**: iOS 13+, Swift 5.10, Xcode 15.3+
-- **Flutter**: Android & iOS only
+- **Flutter**: sdk: 3.1.0+, flutter: 3.19.6+
 
-## Alternative: Direct API
+## Alternative – Direct API
 
 For developers who prefer more control over implementation, we also offer direct API access. Visit our [API Portal](https://developer.aiuta.com/products/digital-try-on/documentation) for detailed documentation.
 
