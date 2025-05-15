@@ -16,17 +16,17 @@ Configuration {
 }
 ```
 
-1.  Required to [authenticate  :octicons-link-external-24:](#auth) Aiuta SDK to use [API :octicons-link-external-24:](https://developer.aiuta.com/products/digital-try-on/documentation){:target="_blank"} with your credentials. Supported authentication methods are `ApiKey` or `Jwt` + `subscriptionId`. 
+1.  [:octicons-arrow-down-24:](#auth) Required to authenticate Aiuta SDK to use [API :octicons-link-external-24:](https://developer.aiuta.com/products/digital-try-on/documentation){:target="_blank"} with your credentials. Supported authentication methods are `ApiKey` or `Jwt` + `subscriptionId`. 
 
     Please see [API documentation :octicons-link-external-24:](https://developer.aiuta.com/docs/start){:target="_blank"} Obtaining credentials section for instructions on how to get your credentials.
 
-2. Configuration of the [user interface :octicons-arrow-down-24:](#userinterface) presentation style, swipe-to-dismiss policy, and UI components themes for the Aiuta SDK.
+2. [:octicons-arrow-down-24:](#userinterface) Configuration of the user interface presentation style, swipe-to-dismiss policy, and UI components themes for the Aiuta SDK.
 
-3. Describes the set of [features :octicons-arrow-down-24:](#features) enabled in the SDK for the user and thier interaction with the app.
+3. [:octicons-arrow-down-24:](#features) Describes the set of features enabled in the SDK for the user and thier interaction with the app.
 
-4. Allows to receive [analytics :octicons-arrow-down-24:](#analytics) events from the SDK and send them to your analytics provider.
+4. [:octicons-arrow-down-24:](#analytics) Allows to receive analytics events from the SDK and send them to your analytics provider.
 
-5. Controls the [logging :octicons-arrow-down-24:](#debugsettings) settings and [validation policies :octicons-arrow-down-24:](#debugsettings) for various parameters.
+5. [:octicons-arrow-down-24:](#debugsettings) Controls the logging settings and validation policies for various parameters.
 
 ### Auth
 
@@ -91,11 +91,15 @@ enum SwipeToDismissPolicy {
 }
 ```
 
-1.  __`iOS only`__ Specifies the manner in which the SDK's UI overlays the application's existing UI. This setting determines the visual presentation style, such as whether the SDK UI appears as a full-screen overlay, or covers the application with a bottom sheet.
+1.  !!! note "iOS and Flutter only"
+        
+        Specifies the manner in which the SDK's UI overlays the application's existing UI. This setting determines the visual presentation style, such as whether the SDK UI appears as a full-screen overlay, or covers the application with a bottom sheet.
 
-2.  __`iOS only`__ This property specifies the policy for dismissing the SDK's user interface through a swipe gesture. It determines how and when the swipe-to-dismiss action can be performed by the user. The policy can vary, allowing for different levels of interaction, such as always allowing a swipe to dismiss, restricting it to certain conditions, or permitting it only when swiping from specific areas of the interface.
+2.  !!! note "iOS only"
+        
+        This property specifies the policy for dismissing the SDK's user interface through a swipe gesture. It determines how and when the swipe-to-dismiss action can be performed by the user. The policy can vary, allowing for different levels of interaction, such as always allowing a swipe to dismiss, restricting it to certain conditions, or permitting it only when swiping from specific areas of the interface.
 
-3.  Specifies the theme configuration settings that determine the appearance and style of the UI components within the SDK. This includes defining color schemes, typography, and other visual elements to ensure a cohesive and customizable user interface experience.
+3.  [:octicons-arrow-down-24:](#theme) Specifies the theme configuration settings that determine the appearance and style of the UI components within the SDK. This includes defining color schemes, typography, and other visual elements to ensure a cohesive and customizable user interface experience.
 
 4.  Presents the SDK in full-screen mode. This style occupies the entire screen, hiding the parent view completely.
 
@@ -138,51 +142,86 @@ Theme {
 }
 ```
 
-1. Defines the color scheme, brand colors, and various color states for UI elements.
+1. [:octicons-arrow-down-24:](#color) Defines the color scheme, brand colors, and various color states for UI elements.
 
-2. Controls typography and text styling for different label types across the interface.
+2. [:octicons-arrow-down-24:](#label) Controls typography and text styling for different label types across the interface.
 
-3. Manages image shapes, sizes, and error state icons for visual elements.
+3. [:octicons-arrow-down-24:](#image) Manages image shapes, sizes, and error state icons for visual elements.
 
-4. Defines button styles, including typography and shape configurations for different button sizes.
+4. [:octicons-arrow-down-24:](#button) Defines button styles, including typography and shape configurations for different button sizes.
 
-5. Controls navigation bar appearance, including title styling and navigation button icons.
+5. [:octicons-arrow-down-24:](#pagebar) Controls navigation bar appearance, including title styling and navigation button icons.
 
-6. Manages bottom sheet presentation, including grabber appearance and sheet shape for both main SDK and internal sheets.
+6. [:octicons-arrow-down-24:](#bottom-sheet) Manages bottom sheet presentation, including grabber appearance and sheet shape for both main SDK and internal sheets.
 
-7. Defines the multi-selection interface for list views, including selection controls and action buttons.
+7. [:octicons-arrow-down-24:](#selection) Defines the multi-selection interface for list views, including selection controls and action buttons.
 
-8. Controls error message presentation, including error icons and retry button styling.
+8. [:octicons-arrow-down-24:](#error) Controls error message presentation, including error icons and retry button styling.
 
-9. Manages product information display, including typography for product details and optional price styling.
+9. [:octicons-arrow-down-24:](#product) Manages product information display, including typography for product details and optional price styling.
 
-10. Controls the "Powered By Aiuta" branding element appearance within the interface.
+10. [:octicons-arrow-down-24:](#powered-by) Controls the "Powered By Aiuta" branding element appearance within the interface.
 
 ###### Color
 ```typescript
 ColorTheme {
-  scheme: ColorScheme,
-  brand: Color,
-  primary: Color,
-  secondary: Color,
-  onDark: Color,
-  onLight: Color,
-  background: Color,
-  screen: Color,
-  neutral: Color,
-  border: Color,
-  outline: Color
+  scheme: ColorScheme,// (1)!
+  brand: Color,// (2)!
+  primary: Color,// (3)!
+  secondary: Color,// (4)!
+  onDark: Color,// (5)!
+  onLight: Color,// (6)!
+  background: Color,// (7)!
+  screen: Color,// (8)!
+  neutral: Color,// (9)!
+  border: Color,// (10)!
+  outline: Color// (11)!
 }
 
 enum ColorScheme {
-  light,
-  dark
+  light,// (12)!
+  dark// (13)!
 }
 
-type Color // (1)!
+type Color // (14)!
 ```
 
-1. Hereafter, depending of the platform it could be some of the native type, or a string representing ARGB like `#FFE5E5EA`.
+1.  Defines whether the SDK uses a light or dark theme.
+    Provided colors should match the scheme.
+
+    !!! note ""
+        On __`iOS only`__ it affects the appearance of system screens (e.g., photo gallery, share activity, etc.) and ensures that their `UIUserInterfaceStyle` matches the selected style. For example, if the SDK is set to a light theme but the system theme on the device is dark, the system windows invoked by the SDK will still use the light theme. Additionally, this setting influences the style of blur components and the tint applied to recolored icons within the SDK.
+
+2. Main accent color for primary actions and highlights throughout the interface.
+
+3. Primary text color used for main content and important information.
+
+4. Secondary text color used for supporting content and less prominent information.
+
+5. Preferably light color __in any scheme__ optimized for use on dark, brand, and neutral backgrounds.
+
+6. Preferably dark color __in any scheme__ optimized for use on light backgrounds.
+
+7. Main background color used throughout the SDK interface.
+
+8.  Zero-elevation background color.
+
+    For full-screen mode in dark scheme, this color is used as a background color, while bottom sheets inside the SDK will still use the background color. In any scheme it will be used for full-screen image galleries.
+
+    !!! note ""
+        It's actually supposed to be `black` or close to black in any scheme.
+
+9. Neutral background color used for various UI components.
+
+10. Color used for component borders and dividers.
+
+11. Color used for blur outlines and checkmark borders.
+
+12. Light theme with predominantly light colors in the design.
+
+13. Dark theme with predominantly dark colors in the design.
+
+14. Platform-specific color type or `#ARGB` string representation<br>e.g. :material-square-rounded:{ .cl-error-background } `"#FFEF5754"`
 
 ###### Label
 ```typescript
