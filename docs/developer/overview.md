@@ -1,8 +1,8 @@
-# General SDK documentation and API reference for developers
+# General SDK documentation and schemes
 
-This area covers the common configuration schemes and public models used across our SDKs for [Android](android/overview.md), [iOS](ios/overview.md), and [Flutter](flutter/overview.md). While the implementation details and naming conventions may vary depending on the specific platform, the core concepts and overall structure remain consistent across all platforms.
+This area covers the common public models used across our SDKs for [Android](android/overview.md), [iOS](ios/overview.md), and [Flutter](flutter/overview.md). While the implementation and naming details may vary depending on the specific platform, the core concepts and overall structure remain consistent across all platforms.
 
-!!! example ""
+!!! example "Naming convention"
     For example type names, described in the schemes, like: 
 
     - `Configuration`

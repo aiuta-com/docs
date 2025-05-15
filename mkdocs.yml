@@ -34,7 +34,7 @@ nav:
 
   - Developer:
     - Overview: developer/overview.md
-    - API Reference:
+    - Scheme:
       - Configuration: developer/scheme/configuration.md
 
   - Android:
@@ -86,6 +86,7 @@ theme:
   logo: media/logo/aiuta.svg
   icon:
     logo: logo
+    annotation: material/information-symbol
 
 extra_css:
   - stylesheets/extra.css
