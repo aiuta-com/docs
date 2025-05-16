@@ -4,7 +4,10 @@ The configuration is structured as a hierarchical object that controls various a
 
 While the implementation details may vary, the core structure and naming conventions remain consistent across platforms to maintain a unified developer experience.
 
-## Scheme
+!!! not "Type Definitions"
+    Please, refer to the [:octicons-arrow-right-24: platform specific types](platform-types.md) used in this scheme and the [:octicons-arrow-right-24: History Image](history-images.md) description.
+
+## Configuration
 
 ```typescript
 Configuration {
@@ -16,19 +19,19 @@ Configuration {
 }
 ```
 
-1.  [:octicons-arrow-down-24:](#auth) Required to authenticate Aiuta SDK to use [API :octicons-link-external-24:](https://developer.aiuta.com/products/digital-try-on/documentation){:target="_blank"} with your credentials. Supported authentication methods are `ApiKey` or `Jwt` + `subscriptionId`. 
+1.  [:material-arrow-down-left:](#auth) Required to authenticate Aiuta SDK to use [API :octicons-link-external-24:](https://developer.aiuta.com/products/digital-try-on/documentation){:target="_blank"} with your credentials. Supported authentication methods are `ApiKey` or `Jwt` + `subscriptionId`. 
 
     Please see [API documentation :octicons-link-external-24:](https://developer.aiuta.com/docs/start){:target="_blank"} Obtaining credentials section for instructions on how to get your credentials.
 
-2. [:octicons-arrow-down-24:](#userinterface) Configuration of the user interface presentation style, swipe-to-dismiss policy, and UI components themes for the Aiuta SDK.
+2. [:material-arrow-down-left:](#userinterface) Configuration of the user interface presentation style, swipe-to-dismiss policy, and UI components themes for the Aiuta SDK.
 
-3. [:octicons-arrow-down-24:](#features) Describes the set of features enabled in the SDK for the user and thier interaction with the app.
+3. [:material-arrow-down-left:](#features) Describes the set of features enabled in the SDK for the user and thier interaction with the app.
 
-4. [:octicons-arrow-down-24:](#analytics) Allows to receive analytics events from the SDK and send them to your analytics provider.
+4. [:material-arrow-down-left:](#analytics) Allows to receive analytics events from the SDK and send them to your analytics provider.
 
-5. [:octicons-arrow-down-24:](#debugsettings) Controls the logging settings and validation policies for various parameters.
+5. [:material-arrow-down-left:](#debugsettings) Controls the logging settings and validation policies for various parameters.
 
-### Auth
+### [:material-arrow-up-left:](#configuration) Auth
 
 === "ApiKey"
     ```typescript
@@ -45,7 +48,7 @@ Configuration {
     ```typescript
     JwtAuth {
       subscriptionId: string,// (1)!
-      getJwt: Callback([string: string]) => string,// (2)!
+      getJwt: Callback(Map<string: string>) => string,// (2)!
     }
     ```
 
@@ -70,7 +73,7 @@ Configuration {
 
         See [JWT server-side auth example :octicons-link-external-24:](https://developer.aiuta.com/docs/server-side-auth-component){:target="_blank"} for more details on securely generating JWTs.
 
-### UserInterface
+### [:material-arrow-up-left:](#configuration) User Interface
 ```typescript
 UserInterface {
   presentationStyle: PresentationStyle,// (1)!
@@ -99,7 +102,7 @@ enum SwipeToDismissPolicy {
         
         This property specifies the policy for dismissing the SDK's user interface through a swipe gesture. It determines how and when the swipe-to-dismiss action can be performed by the user. The policy can vary, allowing for different levels of interaction, such as always allowing a swipe to dismiss, restricting it to certain conditions, or permitting it only when swiping from specific areas of the interface.
 
-3.  [:octicons-arrow-down-24:](#theme) Specifies the theme configuration settings that determine the appearance and style of the UI components within the SDK. This includes defining color schemes, typography, and other visual elements to ensure a cohesive and customizable user interface experience.
+3.  [:material-arrow-down-left:](#theme) Specifies the theme configuration settings that determine the appearance and style of the UI components within the SDK. This includes defining color schemes, typography, and other visual elements to ensure a cohesive and customizable user interface experience.
 
 4.  Presents the SDK in full-screen mode. This style occupies the entire screen, hiding the parent view completely.
 
@@ -126,43 +129,49 @@ enum SwipeToDismissPolicy {
     
     This policy provides a balance between user convenience and protecting critical workflows, ensuring that users can dismiss the SDK when appropriate while safeguarding important pages.    
 
-#### Theme
+#### [:material-arrow-up-left:](#user-interface) Theme
 ```typescript
 Theme {
   color: ColorTheme,// (1)!
   label: LabelTheme,// (2)!
   image: ImageTheme,// (3)!
   button: ButtonTheme,// (4)!
+  activityIndicator: ActivityIndicatorTheme,// (11)!
   pageBar: PageBarTheme,// (5)!
   bottomSheet: BottomSheetTheme,// (6)!
   selectionSnackbar: SelectionSnackbarTheme,// (7)!
   errorSnackbar: ErrorSnackbarTheme,// (8)!
   productBar: ProductBarTheme,// (9)!
-  powerBar: PowerBarTheme// (10)!
+  powerBar: PowerBarTheme,// (10)!
 }
 ```
 
-1. [:octicons-arrow-down-24:](#color) Defines the color scheme, brand colors, and various color states for UI elements.
+1. [:material-arrow-down-left:](#color) Defines the color scheme, brand colors, and various color states for UI elements.
+    
+    !!! note ""
+        [:octicons-arrow-right-24: Explore all colors :material-invert-colors:](../../about/resources/colors.md)
 
-2. [:octicons-arrow-down-24:](#label) Controls typography and text styling for different label types across the interface.
+2. [:material-arrow-down-left:](#label) Typography and text styling for different label types across the interface.
 
-3. [:octicons-arrow-down-24:](#image) Manages image shapes, sizes, and error state icons for visual elements.
+3. [:material-arrow-down-left:](#image) Shapes, sizes, and error state icon for image views.
 
-4. [:octicons-arrow-down-24:](#button) Defines button styles, including typography and shape configurations for different button sizes.
+4. [:material-arrow-down-left:](#button) Buttons styles, including typography and shape configurations for different button sizes.
 
-5. [:octicons-arrow-down-24:](#pagebar) Controls navigation bar appearance, including title styling and navigation button icons.
+5. [:material-arrow-down-left:](#pagebar) Navigation bar appearance, including title styling and navigation button icons.
 
-6. [:octicons-arrow-down-24:](#bottom-sheet) Manages bottom sheet presentation, including grabber appearance and sheet shape for both main SDK and internal sheets.
+6. [:material-arrow-down-left:](#bottom-sheet) Bottom sheet presentation, including grabber appearance and sheet shape for both main SDK and internal sheets.
 
-7. [:octicons-arrow-down-24:](#selection) Defines the multi-selection interface for list views, including selection controls and action buttons.
+7. [:material-arrow-down-left:](#selection) Multi-selection interface for list views, including selection controls and action buttons.
 
-8. [:octicons-arrow-down-24:](#error) Controls error message presentation, including error icons and retry button styling.
+8. [:material-arrow-down-left:](#error) Error message presentation, including error icons and retry button styling.
 
-9. [:octicons-arrow-down-24:](#product) Manages product information display, including typography for product details and optional price styling.
+9. [:material-arrow-down-left:](#product) Product information display, including typography for product details and optional price styling.
 
-10. [:octicons-arrow-down-24:](#powered-by) Controls the "Powered By Aiuta" branding element appearance within the interface.
+10. [:material-arrow-down-left:](#powered-by) "Powered By Aiuta" branding element appearance within the interface.
 
-###### Color
+11. [:material-arrow-down-left:](#activity-indicator) Appearance and customization of loading indicators.
+
+###### [:material-arrow-up-left:](#theme) Color
 ```typescript
 ColorTheme {
   scheme: ColorScheme,// (1)!
@@ -175,15 +184,13 @@ ColorTheme {
   screen: Color,// (8)!
   neutral: Color,// (9)!
   border: Color,// (10)!
-  outline: Color// (11)!
+  outline: Color,// (11)!
 }
 
 enum ColorScheme {
   light,// (12)!
-  dark// (13)!
+  dark,// (13)!
 }
-
-type Color // (14)!
 ```
 
 1.  Defines whether the SDK uses a light or dark theme.
@@ -221,9 +228,7 @@ type Color // (14)!
 
 13. Dark theme with predominantly dark colors in the design.
 
-14. Platform-specific color type or `#ARGB` string representation<br>e.g. :material-square-rounded:{ .cl-error-background } `"#FFEF5754"`
-
-###### Label
+###### [:material-arrow-up-left:](#theme) Label
 ```typescript
 LabelTheme {
   typography: {
@@ -235,7 +240,7 @@ LabelTheme {
 }
 ```
 
-###### Image
+###### [:material-arrow-up-left:](#theme) Image
 ```typescript
 ImageTheme {
   shapes: {
@@ -249,7 +254,7 @@ ImageTheme {
 
 ```
 
-###### Button
+###### [:material-arrow-up-left:](#theme) Button
 ```typescript
 ButtonTheme {
   typography: {
@@ -264,7 +269,40 @@ ButtonTheme {
 
 ```
 
-###### PageBar
+###### [:material-arrow-up-left:](#theme) Activity Indicator
+```typescript
+ActivityIndicatorTheme {
+  icons: {
+    loading14: Icon | null,// (1)!
+  },
+  colors: {
+    overlay: Color,// (4)!
+  }
+  settings: {
+    indicationDelay: Number,// (2)!
+    spinDuration: Number,// (3)!
+  }
+}
+
+```
+
+1. Optional icon for the activity indicator. If not provided, the system's default indicator will be used.
+
+    !!! example ""
+        System activity indicator by default
+
+        ![Activity Indicator](../../media/components/activity-indicator.png){ width=36}
+
+2. The time in milliseconds before the activity indicator appears. If the task completes before this delay, the indicator will not be shown. Otherwise, the indicator will appear.
+
+3. The duration in milliseconds for one complete rotation of the activity indicator. This setting controls how fast the indicator spins, providing a visual cue of activity progress.
+    
+    !!! note ""
+        The spin duration only applies when a custom icon is used for the activity indicator. If the system's default indicator is used, this setting will be ignored and the indicator will spin with the system default speed.
+
+4. Overlay color used to cover any view when it needs to be locked for an activity. The activity indicator will be placed at the center of this overlay.
+
+###### [:material-arrow-up-left:](#theme) PageBar
 ```typescript
 PageBarTheme {
   typography: {
@@ -274,14 +312,14 @@ PageBarTheme {
     back24: Icon,
     close24: Icon
   },
-  toggles: {
+  settings: {
     preferCloseButtonOnTheRight: boolean
   }
 }
 
 ```
 
-###### Bottom Sheet
+###### [:material-arrow-up-left:](#theme) Bottom Sheet
 ```typescript
 BottomSheetTheme {
   typography: {
@@ -293,10 +331,11 @@ BottomSheetTheme {
     chipsButton: Shape
   },
   grabber: {
-    width: Dp,
-    topPadding: Dp
+    width: number,
+    height: number,
+    topPadding: number
   },
-  toggles: {
+  settings: {
     extendDelimitersToTheRight: boolean,
     extendDelimitersToTheLeft: boolean
   }
@@ -304,7 +343,7 @@ BottomSheetTheme {
 
 ```
 
-###### Selection
+###### [:material-arrow-up-left:](#theme) Selection
 ```typescript
 SelectionSnackbarTheme {
   strings: {
@@ -324,7 +363,7 @@ SelectionSnackbarTheme {
 
 ```
 
-###### Error
+###### [:material-arrow-up-left:](#theme) Error
 ```typescript
 ErrorSnackbarTheme {
   strings: {
@@ -342,7 +381,7 @@ ErrorSnackbarTheme {
 
 ```
 
-###### Product
+###### [:material-arrow-up-left:](#theme) Product
 ```typescript
 ProductBarTheme {
   prices: ProductBarPricesTheme | null,
@@ -353,7 +392,7 @@ ProductBarTheme {
   icons: {
     arrow16: Icon
   },
-  toggles: {
+  settings: {
     applyProductFirstImageExtraPadding: boolean
   }
 }
@@ -368,7 +407,7 @@ ProductBarPricesTheme {
 }
 ```
 
-###### Powered By
+###### [:material-arrow-up-left:](#theme) Powered By
 ```typescript
 
 PowerBarTheme {
@@ -387,7 +426,7 @@ enum PowerBarColorScheme {
 
 ```
 
-### Features
+### [:material-arrow-up-left:](#configuration) Features
 ```typescript
 Features {
   welcomeScreen: WelcomeScreenFeature | null,
@@ -398,7 +437,10 @@ Features {
   share: ShareFeature | null,
   wishlist: WishlistFeature | null
 }
+```
 
+#### [:material-arrow-up-left:](#features) Welcome Screen
+```typescript
 WelcomeScreenFeature {
   images: {
     welcomeBackground: Image
@@ -417,6 +459,10 @@ WelcomeScreenFeature {
   }
 }
 
+```
+
+#### [:material-arrow-up-left:](#features) Onboarding
+```typescript
 OnboardingFeature {
   howItWorksPage: OnboardingHowItWorksPageFeature,
   bestResultsPage: OnboardingBestResultsPageFeature | null,
@@ -428,12 +474,135 @@ OnboardingFeature {
     onboardingImageL: Shape,
     onboardingImageS: Shape
   },
-  dataProvider: {
+  dataProvider: BuiltIn | Custom {
     isOnboardingCompleted: Flow<boolean>,
     completeOnboarding: Callback()
   }
 }
 
+```
+
+###### [:material-arrow-up-left:](#onboarding) How It Works
+```typescript
+OnboardingHowItWorksPageFeature {
+  images: {
+    onboardingHowItWorksItems: {
+      itemPhoto: Image,
+      itemPreview: Image
+    }[]
+  },
+  strings: {
+    onboardingHowItWorksPageTitle: string | null,
+    onboardingHowItWorksTitle: string,
+    onboardingHowItWorksDescription: string
+  }
+}
+
+```
+
+###### [:material-arrow-up-left:](#onboarding) Best Results
+```typescript
+OnboardingBestResultsPageFeature {
+  images: {
+    onboardingBestResultsGood: Image[],
+    onboardingBestResultsBad: Image[]
+  },
+  icons: {
+    onboardingBestResultsGood24: Icon,
+    onboardingBestResultsBad24: Icon
+  },
+  strings: {
+    onboardingBestResultsPageTitle: string | null,
+    onboardingBestResultsTitle: string,
+    onboardingBestResultsDescription: string
+  },
+  styles: {
+    reduceOnboardingBestResultsShadows: boolean
+  }
+}
+```
+
+
+#### [:material-arrow-up-left:](#features) Consent
+
+=== "Embedded Into Onboarding"
+    ```typescript
+    ConsentEmbeddedIntoOnboardingFeature {
+      strings: {
+        consentHtml: string
+      }
+    }
+    ```
+
+=== "Standalone Onboarding Page"
+    ```typescript
+    ConsentStandaloneOnboardingPageFeature {
+      strings: {
+        consentPageTitle: string | null,
+        consentTitle: string,
+        consentDescriptionHtml: string,
+        consentFooterHtml: string | null,
+        consentButtonAccept: string
+      },
+      icons: {
+        consentTitle24: Icon
+      },
+      styles: {
+        drawBordersAroundConsents: boolean
+      },
+      data: {
+        consents: Consent[]
+      },
+      dataProvider: BuiltIn | Custom {
+        obtainedConsentsIds: Flow<string[]>,
+        obtainConsentsIds: Callback(string[])
+      }
+    }
+    ```
+
+=== "Standalone Image Picker Page"
+    ```typescript
+    ConsentStandaloneImagePickerPageFeature {
+      strings: {
+        consentPageTitle: string | null,
+        consentTitle: string,
+        consentDescriptionHtml: string,
+        consentFooterHtml: string | null,
+        consentButtonAccept: string
+      },
+      icons: {
+        consentTitle24: Icon
+      },
+      styles: {
+        drawBordersAroundConsents: boolean
+      },
+      data: {
+        consents: Consent[]
+      },
+      dataProvider: BuiltIn | Custom {
+        obtainedConsentsIds: Flow<string[]>,
+        obtainConsentsIds: Callback(string[])
+      }
+    }
+    ```
+
+```typescript
+Consent {
+  id: string,
+  type: ConsentType,
+  html: string,
+}
+
+enum ConsentType {
+  implicitWithoutCheckbox,
+  implicitWithCheckbox,
+  explicitRequired,
+  explicitOptional,
+}
+```
+
+#### [:material-arrow-up-left:](#features) Image Picker
+```typescript
 ImagePickerFeature {
   camera: ImagePickerCameraFeature | null,
   photoGallery: ImagePickerPhotoGalleryFeature,
@@ -449,6 +618,77 @@ ImagePickerFeature {
   }
 }
 
+```
+
+###### [:material-arrow-up-left:](#image-picker) Camera
+```typescript
+ImagePickerCameraFeature {
+  icons: {
+    camera24: Icon
+  },
+  strings: {
+    cameraButtonTakePhoto: string,
+    cameraPermissionTitle: string,
+    cameraPermissionDescription: string,
+    cameraPermissionButtonOpenSettings: string
+  }
+}
+```
+
+###### [:material-arrow-up-left:](#image-picker) Photo Gallery
+```typescript
+ImagePickerPhotoGalleryFeature {
+  icons: {
+    gallery24: Icon
+  },
+  strings: {
+    galleryButtonSelectPhoto: string
+  }
+}
+```
+
+###### [:material-arrow-up-left:](#image-picker) Predefined Models
+```typescript
+ImagePickerPredefinedModelFeature {
+  icons: {
+    selectModels24: Icon
+  },
+  data: {
+    preferredCategoryId: string
+  }
+  strings: {
+    predefinedModelPageTitle: string,
+    predefinedModelOr: string,
+    predefinedModelErrorEmptyModelsList: string,
+    predefinedModelCategories: {
+      [categoryId: string]: string
+    }
+  }
+}
+```
+
+###### [:material-arrow-up-left:](#image-picker) Uploads History
+```typescript
+ImagePickerUploadsHistoryFeature {
+  strings: {
+    uploadsHistoryButtonNewPhoto: string,
+    uploadsHistoryTitle: string,
+    uploadsHistoryButtonChangePhoto: string
+  },
+  styles: {
+    changePhotoButtonStyle: primary | blurred
+  },
+  dataProvider: BuiltIn | Custom {
+    uploadedImages: Flow<HistoryImage>,
+    addUploadedImagesAction: Callback(HistoryImage[]),
+    deleteUploadedImagesAction: Callback(HistoryImage[]),
+    selectUploadedImageAction: Callback(HistoryImage)
+  }
+}
+```
+
+#### [:material-arrow-up-left:](#features) Try On
+```typescript
 TryOnFeature {
   tryOn: {
     loadingPage: TryOnLoadingPageFeature,
@@ -459,7 +699,7 @@ TryOnFeature {
     generationsHistory: TryOnGenerationsHistoryFeature | null,
     multiItem: TryOnMultiItemFeature | null,
     otherPhoto: TryOnWithOtherPhotoFeature | null,
-    toggles: {
+    settings: {
       isBackgroundExecutionAllowed: boolean
     },
     icons: {
@@ -475,6 +715,139 @@ TryOnFeature {
   }
 }
 
+```
+
+##### [:material-arrow-up-left:](#try-on) Input Image Validation
+```typescript
+TryOnInputImageValidationFeature {
+  strings: {
+    invalidInputImageDescription: string,
+    invalidInputImageChangePhotoButton: string
+  }
+}
+```
+
+##### [:material-arrow-up-left:](#try-on) Cart
+```typescript
+TryOnCartFeature {
+  strings: {
+    addToCart: string
+  },
+  handler: {
+    addToCartAction: Callback(string)
+  }
+}
+```
+
+##### [:material-arrow-up-left:](#try-on) Multi Item
+```typescript
+TryOnMultiItemFeature {
+  cart: TryOnMultiItemCartFeature,
+  strings: {}
+}
+```
+
+###### [:material-arrow-up-left:](#multi-item) Cart
+```typescript
+TryOnMultiItemCartFeature {
+  strings: {
+    shopTheLook: string
+  },
+  handler: {
+    shopTheLook: Callback(string[])
+  }
+}
+```
+
+##### [:material-arrow-up-left:](#try-on) Loading Page
+```typescript
+TryOnLoadingPageFeature {
+  strings: {
+    tryOnLoadingStatusUploadingImage: string,
+    tryOnLoadingStatusScanningBody: string,
+    tryOnLoadingStatusGeneratingOutfit: string
+  },
+  styles: {
+    loadingStatusBackgroundGradient: Color[] | null,
+    loadingStatusStyle: "primary" | "blurred" | "blurredWithOutline"
+  }
+}
+```
+
+##### [:material-arrow-up-left:](#try-on) Fit Disclaimer
+```typescript
+TryOnFitDisclaimerFeature {
+  icons: {
+    info20: Icon | null
+  },
+  strings: {
+    fitDisclaimerTitle: string,
+    fitDisclaimerDescription: string,
+    fitDisclaimerButtonClose: string
+  }
+}
+```
+
+##### [:material-arrow-up-left:](#try-on) Feedback
+```typescript
+TryOnFeedbackFeature {
+  otherFeedback: TryOnFeedbackOtherFeature | null,
+  icons: {
+    like36: Icon,
+    dislike36: Icon,
+    gratitude40: Icon
+  },
+  strings: {
+    feedbackOptions: string[],
+    feedbackTitle: string,
+    feedbackButtonSkip: string,
+    feedbackButtonSend: string,
+    feedbackGratitudeText: string
+  }
+}
+```
+
+###### [:material-arrow-up-left:](#feedback) Other
+```typescript
+TryOnFeedbackOtherFeature {
+  strings: {
+    otherFeedbackTitle: string,
+    otherFeedbackButtonSend: string,
+    otherFeedbackButtonCancel: string,
+    otherFeedbackOptionOther: string
+  }
+}
+```
+
+##### [:material-arrow-up-left:](#try-on) Generations History
+```typescript
+TryOnGenerationsHistoryFeature {
+  icons: {
+    history24: Icon
+  },
+  strings: {
+    generationsHistoryPageTitle: string
+  },
+  dataProvider: BuiltIn | Custom {
+    generatedImages: Flow<HistoryImage>,
+    addGeneratedImages: Callback(HistoryImage[], string[]),
+    deleteGeneratedImages: Callback(HistoryImage[])
+  }
+}
+```
+
+##### [:material-arrow-up-left:](#try-on) Other Photo
+```typescript
+TryOnWithOtherPhotoFeature {
+  icons: {
+    changePhoto24: Icon
+  }
+}
+```
+
+#### [:material-arrow-up-left:](#features) Share
+```typescript
+
 ShareFeature {
   watermark: ShareWatermarkFeature | null,
   icons: {
@@ -483,10 +856,25 @@ ShareFeature {
   strings: {
     shareButton: string
   },
-  dataProvider: {
+  dataProvider: null | Custom {
     getShareText: Callback(productIds: string[]) => string
-  } | null
+  }
 }
+
+```
+
+###### [:material-arrow-up-left:](#share) Watermark
+```typescript
+
+ShareWatermarkFeature {
+  images: {
+    logo: Image
+  }
+}
+```
+
+#### [:material-arrow-up-left:](#features) Wishlist
+```typescript
 
 WishlistFeature {
   icons: {
@@ -497,13 +885,13 @@ WishlistFeature {
     wishlistButtonAdd: string
   },
   dataProvider: {
-    wishlistProductsIds: Flow<string[]>,
+    wishlistProductIds: Flow<string[]>,
     setProductInWishlist: Callback(productId: string, inWishlist: boolean)
   }
 }
 ```
 
-### Analytics
+### [:material-arrow-up-left:](#configuration) Analytics
 ```typescript
 Analytics {
   handler: {
@@ -512,13 +900,13 @@ Analytics {
 }
 ```
 
-### DebugSettings
+### [:material-arrow-up-left:](#configuration) DebugSettings
 ```typescript
 DebugSettings {
   isLoggingEnabled: boolean,
   emptyStringsPolicy: ValidationPolicy,
-  unavailableResourcesPolicy: ValidationPolicy, // Flutter only
-  infoPlistDescriptionsPolicy: ValidationPolicy, // iOS only
+  unavailableResourcesPolicy: ValidationPolicy,
+  infoPlistDescriptionsPolicy: ValidationPolicy,
   listSizePolicy: ValidationPolicy
 }
 

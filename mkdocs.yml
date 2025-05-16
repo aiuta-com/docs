@@ -36,6 +36,8 @@ nav:
     - Overview: developer/overview.md
     - Scheme:
       - Configuration: developer/scheme/configuration.md
+      - History Images: developer/scheme/history-images.md
+      - Platform Types: developer/scheme/platform-types.md
 
   - Android:
     - Getting started: android/aiuta/get-started.md
