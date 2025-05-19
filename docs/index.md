@@ -75,19 +75,20 @@ If you prefer even more control over the implementation or have specific require
 
     ---
 
-    Mobile platforms only
-
     ```
     sdk: >=3.1.0 <4.0.0
     flutter: >= 3.19.6
     ```
+
+    !!! quote ""
+        For :fontawesome-brands-android: Android and :fontawesome-brands-apple: iOS
     
     [:octicons-arrow-right-24: Overview](flutter/overview.md)  
 
-<!-- -   :fontawesome-brands-js:{ .lg } &nbsp; __Web__ 
+-   :fontawesome-brands-js:{ .lg } &nbsp; __Web__ 
 
     ---
 
-    Coming soon -->
+    Coming soon
 
 </div>

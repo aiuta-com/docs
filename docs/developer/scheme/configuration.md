@@ -5,7 +5,7 @@ The configuration is structured as a hierarchical object that controls various a
 While the implementation details may vary, the core structure and naming conventions remain consistent across platforms to maintain a unified developer experience.
 
 !!! not "Type Definitions"
-    Please, refer to the [:octicons-arrow-right-24: platform specific types](platform-types.md) used in this scheme and the [:octicons-arrow-right-24: History Image](history-images.md) description.
+    Please, refer to the [:octicons-arrow-right-24: platform specific types](platform-types.md) used in this scheme and the [:octicons-arrow-right-24: History Images](history-images.md) description.
 
 ## Configuration
 
@@ -232,42 +232,56 @@ enum ColorScheme {
 ```typescript
 LabelTheme {
   typography: {
-    titleL: TextStyle,
-    titleM: TextStyle,
-    regular: TextStyle,
-    subtle: TextStyle
+    titleL: TextStyle,// (1)!
+    titleM: TextStyle,// (2)!
+    regular: TextStyle,// (3)!
+    subtle: TextStyle// (4)!
   }
 }
 ```
+
+1. Defines the text style for large titles, typically used for main headings and prominent text elements.
+2. Specifies the text style for medium titles, commonly used for section headers and secondary headings.
+3. Sets the text style for regular body text and standard content throughout the interface.
+4. Determines the text style for subtle or less prominent text, often used for secondary information and supporting content.
 
 ###### [:material-arrow-up-left:](#theme) Image
 ```typescript
 ImageTheme {
   shapes: {
-    imageL: Shape,
-    imageS: Shape
+    imageL: Shape,// (1)!
+    imageS: Shape,// (2)!
   },
   icons: {
-    imageError36: Icon
+    imageError36: Icon,// (3)!
   }
 }
 
 ```
+
+1. Defines the shape configuration for large image views, allowing customization of the visual appearance for prominent images.
+2. Specifies the shape configuration for small image views, enabling consistent styling for secondary or thumbnail images.
+3. Sets the icon to be displayed when an image fails to load, providing visual feedback for error states.
 
 ###### [:material-arrow-up-left:](#theme) Button
 ```typescript
 ButtonTheme {
   typography: {
-    buttonM: TextStyle,
-    buttonS: TextStyle
+    buttonM: TextStyle,// (1)!
+    buttonS: TextStyle,// (2)!
   },
   shapes: {
-    buttonM: Shape,
-    buttonS: Shape
+    buttonM: Shape,// (3)!
+    buttonS: Shape,// (4)!
   }
 }
 
 ```
+
+1. Defines the text style for a regular medium-sized buttons.
+2. Specifies the text style for small buttons.
+3. Sets the shape configuration for medium buttons.
+4. Configures the shape for small buttons.
 
 ###### [:material-arrow-up-left:](#theme) Activity Indicator
 ```typescript
@@ -306,125 +320,168 @@ ActivityIndicatorTheme {
 ```typescript
 PageBarTheme {
   typography: {
-    pageTitle: TextStyle
+    pageTitle: TextStyle,// (1)!
   },
   icons: {
-    back24: Icon,
-    close24: Icon
+    back24: Icon,// (2)!
+    close24: Icon,// (3)!
   },
   settings: {
-    preferCloseButtonOnTheRight: boolean
+    preferCloseButtonOnTheRight: boolean,// (4)!
   }
 }
 
 ```
+
+1. Defines the text style for page titles in the navigation bar, controlling the appearance of header text.
+2. Specifies the icon used for the back navigation button.
+3. Sets the icon for the close button.
+4.  Controls the position of the close button, determining whether it appears on the right side of the navigation bar.
+
+    !!! example ""
+        `false` by default
 
 ###### [:material-arrow-up-left:](#theme) Bottom Sheet
 ```typescript
 BottomSheetTheme {
   typography: {
-    iconButton: TextStyle,
-    chipsButton: TextStyle
+    iconButton: TextStyle,// (1)!
+    chipsButton: TextStyle,// (2)!
   },
   shapes: {
-    bottomSheet: Shape,
-    chipsButton: Shape
+    bottomSheet: Shape,// (3)!
+    chipsButton: Shape,// (4)!
   },
   grabber: {
-    width: number,
-    height: number,
-    topPadding: number
+    width: number,// (5)!
+    height: number,// (6)!
+    topPadding: number,// (7)!
   },
   settings: {
-    extendDelimitersToTheRight: boolean,
-    extendDelimitersToTheLeft: boolean
+    extendDelimitersToTheRight: boolean,// (8)!
+    extendDelimitersToTheLeft: boolean,// (9)!
   }
 }
 
 ```
+
+1. Defines the text style for icon buttons within the bottom sheet.
+2. Specifies the text style for chips-style buttons in the bottom sheet interface.
+3. Sets the shape configuration for the bottom sheet container, controlling its visual appearance.
+4. Configures the shape for chips-style buttons, determining their visual style.
+5. Controls the width of the grabber handle used for dragging the bottom sheet.
+6. Determines the height of the grabber handle for bottom sheet interaction.
+7. Sets the vertical padding between the grabber and the top of the bottom sheet.
+8. Controls whether the bottom sheet delimiters extend to the right edge.
+9. Determines whether the bottom sheet delimiters extend to the left edge.
 
 ###### [:material-arrow-up-left:](#theme) Selection
 ```typescript
 SelectionSnackbarTheme {
   strings: {
-    select: string,
-    cancel: string,
-    selectAll: string,
-    unselectAll: string
+    select: string,// (1)!
+    cancel: string,// (2)!
+    selectAll: string,// (3)!
+    unselectAll: string,// (4)!
   },
   icons: {
-    trash24: Icon,
-    check20: Icon
+    trash24: Icon,// (5)!
+    check20: Icon,// (6)!
   },
   colors: {
-    selectionBackground: Color
+    selectionBackground: Color,// (7)!
   }
 }
 
 ```
+
+1. Defines the text label for the select action button in the selection interface.
+2. Specifies the text label for the cancel action button to dismiss the selection mode.
+3. Sets the text label for the select all action to choose all available items.
+4. Configures the text label for the unselect all action to deselect all chosen items.
+5. Specifies the icon used for the delete action in the selection interface.
+6. Sets the icon displayed to indicate selected items in the interface.
+7. Controls the background color of the selection snackbar component.
 
 ###### [:material-arrow-up-left:](#theme) Error
 ```typescript
 ErrorSnackbarTheme {
   strings: {
-    defaultErrorMessage: string,
-    tryAgainButton: string
+    defaultErrorMessage: string,// (1)!
+    tryAgainButton: string,// (2)!
   },
   icons: {
-    error36: Icon
+    error36: Icon,// (3)!
   },
   colors: {
-    errorBackground: Color,
-    errorPrimary: Color
+    errorBackground: Color,// (4)!
+    errorPrimary: Color,// (5)!
   }
 }
 
 ```
 
+1. Defines the default text message displayed when an error occurs in the interface.
+2. Specifies the text label for the retry action button in the error snackbar.
+3. Sets the icon displayed to indicate the error state in the snackbar.
+4. Controls the background color of the error snackbar component.
+5. Defines the primary color used for error-related elements in the snackbar.
+
 ###### [:material-arrow-up-left:](#theme) Product
 ```typescript
 ProductBarTheme {
-  prices: ProductBarPricesTheme | null,
+  prices: ProductBarPricesTheme | null,// (1)!
   typography: {
-    product: TextStyle,
-    brand: TextStyle
+    product: TextStyle,// (2)!
+    brand: TextStyle,// (3)!
   },
   icons: {
-    arrow16: Icon
+    arrow16: Icon,// (4)!
   },
   settings: {
-    applyProductFirstImageExtraPadding: boolean
+    applyProductFirstImageExtraPadding: boolean,// (5)!
   }
 }
 
 ProductBarPricesTheme {
   typography: {
-    price: TextStyle
+    price: TextStyle,// (6)!
   },
   colors: {
-    discountedPrice: Color
+    discountedPrice: Color,// (7)!
   }
 }
 ```
 
+1. Configures the price display settings for the product bar, including typography and colors for price elements.
+2. Defines the text style for product names in the product bar.
+3. Specifies the text style for brand names displayed in the product bar.
+4. Sets the icon used to indicate expandable product details in the compact view.
+5. Controls whether additional padding is applied to the first product image in the list.
+6. Configures the text style specifically for price displays in the product bar.
+7. Defines the color used to highlight discounted prices in the product bar.
+
 ###### [:material-arrow-up-left:](#theme) Powered By
 ```typescript
-
 PowerBarTheme {
   strings: {
-      poweredByAiuta: string,
-   },
-   colors: {
-      aiuta: PowerBarColorScheme
-   }
+    poweredByAiuta: string,// (1)!
+  },
+  colors: {
+    aiuta: PowerBarColorScheme,// (2)!
+  }
 }
 
 enum PowerBarColorScheme {
-  default,
-  primary
+  standard,// (3)!
+  primary,// (4)!
 }
-
 ```
+
+1. Defines the text label for the "Powered By Aiuta" branding element in the interface.
+2. Controls the color scheme used to highlight the "Aiuta" in the "Powered By Aiuta" label.
+3. Uses the default Aiuta-brand color to highlighting "Aiuta" in the "Powered By Aiuta" label, which is :material-square-rounded:{ .cl-aiuta } `#FF4000FF`
+4. Applies the `primary` color to the entire label without highlighting "Aiuta".
 
 ### [:material-arrow-up-left:](#configuration) Features
 ```typescript
