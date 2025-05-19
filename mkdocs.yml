@@ -90,7 +90,7 @@ theme:
   logo: media/logo/aiuta.svg
   icon:
     logo: logo
-    annotation: material/information-symbol
+    annotation: material/information-outline
 
 extra_css:
   - stylesheets/extra.css

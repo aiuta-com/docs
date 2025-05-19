@@ -6,9 +6,9 @@ The History Images represent a user's interaction history in the Aiuta SDK, incl
 
 ```typescript
 InputImage {
-    id: string,// (1)!
-    url: string,// (2)!
-    ownerType: OwnerType,// (3)!
+    id: String // (1)!
+    url: String // (2)!
+    ownerType: OwnerType // (3)!
 }
 ```
 
@@ -25,10 +25,10 @@ Input images used in the Aiuta SDK for try-on sessions can either be uploaded by
 
 ```typescript
 GenegaredImage {
-    id: string,// (1)!
-    url: string,// (2)!
-    ownerType: OwnerType,// (3)!
-    productIds: List<string>,// (4)!
+    id: String // (1)!
+    url: String // (2)!
+    ownerType: OwnerType // (3)!
+    productIds: List<String> // (4)!
 }
 ```
 
@@ -47,8 +47,8 @@ Generated images represent the results of try-on sessions. These images are gene
 
 ```typescript
 enum OwnerType {
-    user,// (1)!
-    aiuta,// (2)!
+    user // (1)!
+    aiuta // (2)!
 }
 ```
 

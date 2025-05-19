@@ -1,12 +1,14 @@
-# Consent
+# Consent Scheme
 
 The Consent type defines how user consent is managed within the SDK, specifying the interaction required from the user and the conditions under which consent is considered given.
 
+## Consent
+
 ```typescript
 Consent {
-  id: string,// (1)!
-  type: ConsentType,// (2)!
-  html: string,// (3)!
+  id: String // (1)!
+  type: ConsentType // (2)!
+  html: String // (3)!
 }
 
 ```
@@ -15,14 +17,14 @@ Consent {
 2. Type of consent determining how it should be presented and handled.
 3. HTML content containing the consent terms and conditions.
 
-## Type
+### Type
 
 ```typescript
 enum ConsentType {
-  implicitWithoutCheckbox,// (1)!
-  implicitWithCheckbox,// (2)!
-  explicitRequired,// (3)!
-  explicitOptional,// (4)!
+  implicitWithoutCheckbox // (1)!
+  implicitWithCheckbox // (2)!
+  explicitRequired // (3)!
+  explicitOptional // (4)!
 }
 ```
 
@@ -52,4 +54,6 @@ enum ConsentType {
 Defines the methods for obtaining consent to process user photos.
 
 !!! warning "GDPR Compliance"
-    Be careful when using implicit consent types. Ensure to review annotations :material-information-symbol: for clarity and compliance.
+    Be careful when using implicit consent types. 
+    
+    Ensure to review annotations :material-information-outline: for clarity and compliance.

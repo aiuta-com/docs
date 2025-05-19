@@ -2,20 +2,23 @@
 
 The configuration is structured as a hierarchical object that controls various aspects of the SDK's behavior, appearance, and functionality. The configuration is designed to be flexible and extensible, allowing for customization of features, UI elements, and behavior.
 
+!!! not "Type Definitions"
+    Please, refer to the [:octicons-arrow-right-24: platform specific types](platform-types.md) used in this scheme and the [:octicons-arrow-right-24: History Images](history-images.md) description
+
 While the implementation details may vary, the core structure and naming conventions remain consistent across platforms to maintain a unified developer experience.
 
-!!! not "Type Definitions"
-    Please, refer to the [:octicons-arrow-right-24: platform specific types](platform-types.md) used in this scheme and the [:octicons-arrow-right-24: History Images](history-images.md) description.
+!!! tip "Annotations"
+    Don't miss them - click :material-information-outline: for more details
 
 ## Configuration
 
 ```typescript
 Configuration {
-  auth: Auth,// (1)!
-  userInterface: UserInterface,// (2)!
-  features: Features,// (3)!
-  analytics: Analytics | null,// (4)!
-  debugSettings: DebugSettings,// (5)!
+  auth: Auth // (1)!
+  userInterface: UserInterface // (2)!
+  features: Features // (3)!
+  analytics: Analytics | null // (4)!
+  debugSettings: DebugSettings // (5)!
 }
 ```
 
@@ -36,7 +39,7 @@ Configuration {
 === "ApiKey"
     ```typescript
     ApiKeyAuth {
-      apiKey: string,// (1)!
+      apiKey: String // (1)!
     }
     ```
 
@@ -47,8 +50,8 @@ Configuration {
 === "Jwt"
     ```typescript
     JwtAuth {
-      subscriptionId: string,// (1)!
-      getJwt: Callback(Map<string: string>) => string,// (2)!
+      subscriptionId: String // (1)!
+      getJwt: Callback(Map<String: String>) => String // (2)!
     }
     ```
 
@@ -65,32 +68,34 @@ Configuration {
         for associating the JWT with the specific image and product involved in the tryOn request. 
         This ensures that the generated token is tailored specifically to the request being processed, enhancing security and relevance.
 
-        - __Returns__ a string representing the generated JSON Web Token.
+        !!! success "Returns"
+            Non-empty string representing the generated JWT
 
-        - __Throws__ an error if the JWT cannot be generated. If an error is thrown,
-          the SDK will be unable to complete the tryOn request and will display
-          an error message to the user.
+        !!! failure "Throws"
+            An error if the JWT cannot be generated. 
+            
+            If an error is thrown, the SDK will be unable to complete the tryOn request and will display an error message to the user
 
         See [JWT server-side auth example :octicons-link-external-24:](https://developer.aiuta.com/docs/server-side-auth-component){:target="_blank"} for more details on securely generating JWTs.
 
 ### [:material-arrow-up-left:](#configuration) User Interface
 ```typescript
 UserInterface {
-  presentationStyle: PresentationStyle,// (1)!
-  swipeToDismiss: SwipeToDismissPolicy,// (2)!
-  theme: Theme,// (3)!
+  presentationStyle: PresentationStyle // (1)!
+  swipeToDismiss: SwipeToDismissPolicy // (2)!
+  theme: Theme // (3)!
 }
 
 enum PresentationStyle {
-  fullScreen,// (4)!
-  bottomSheet,// (5)!
-  pageSheet,// (6)!
+  fullScreen // (4)!
+  bottomSheet // (5)!
+  pageSheet // (6)!
 }
 
 enum SwipeToDismissPolicy {
-  allowAlways,// (7)!
-  allowHeaderSwipeOnly,// (8)!
-  protectTheNecessaryPages,// (9)!
+  allowAlways // (7)!
+  allowHeaderSwipeOnly // (8)!
+  protectTheNecessaryPages // (9)!
 }
 ```
 
@@ -132,17 +137,17 @@ enum SwipeToDismissPolicy {
 #### [:material-arrow-up-left:](#user-interface) Theme
 ```typescript
 Theme {
-  color: ColorTheme,// (1)!
-  label: LabelTheme,// (2)!
-  image: ImageTheme,// (3)!
-  button: ButtonTheme,// (4)!
-  activityIndicator: ActivityIndicatorTheme,// (11)!
-  pageBar: PageBarTheme,// (5)!
-  bottomSheet: BottomSheetTheme,// (6)!
-  selectionSnackbar: SelectionSnackbarTheme,// (7)!
-  errorSnackbar: ErrorSnackbarTheme,// (8)!
-  productBar: ProductBarTheme,// (9)!
-  powerBar: PowerBarTheme,// (10)!
+  color: ColorTheme // (1)!
+  label: LabelTheme // (2)!
+  image: ImageTheme // (3)!
+  button: ButtonTheme // (4)!
+  activityIndicator: ActivityIndicatorTheme // (11)!
+  pageBar: PageBarTheme // (5)!
+  bottomSheet: BottomSheetTheme // (6)!
+  selectionSnackbar: SelectionSnackbarTheme // (7)!
+  errorSnackbar: ErrorSnackbarTheme // (8)!
+  productBar: ProductBarTheme // (9)!
+  powerBar: PowerBarTheme // (10)!
 }
 ```
 
@@ -174,22 +179,22 @@ Theme {
 ###### [:material-arrow-up-left:](#theme) Color
 ```typescript
 ColorTheme {
-  scheme: ColorScheme,// (1)!
-  brand: Color,// (2)!
-  primary: Color,// (3)!
-  secondary: Color,// (4)!
-  onDark: Color,// (5)!
-  onLight: Color,// (6)!
-  background: Color,// (7)!
-  screen: Color,// (8)!
-  neutral: Color,// (9)!
-  border: Color,// (10)!
-  outline: Color,// (11)!
+  scheme: ColorScheme // (1)!
+  brand: Color // (2)!
+  primary: Color // (3)!
+  secondary: Color // (4)!
+  onDark: Color // (5)!
+  onLight: Color // (6)!
+  background: Color // (7)!
+  screen: Color // (8)!
+  neutral: Color // (9)!
+  border: Color // (10)!
+  outline: Color // (11)!
 }
 
 enum ColorScheme {
-  light,// (12)!
-  dark,// (13)!
+  light // (12)!
+  dark // (13)!
 }
 ```
 
@@ -232,10 +237,10 @@ enum ColorScheme {
 ```typescript
 LabelTheme {
   typography: {
-    titleL: TextStyle,// (1)!
-    titleM: TextStyle,// (2)!
-    regular: TextStyle,// (3)!
-    subtle: TextStyle// (4)!
+    titleL: TextStyle // (1)!
+    titleM: TextStyle // (2)!
+    regular: TextStyle // (3)!
+    subtle: TextStyle // (4)!
   }
 }
 ```
@@ -249,11 +254,11 @@ LabelTheme {
 ```typescript
 ImageTheme {
   shapes: {
-    imageL: Shape,// (1)!
-    imageS: Shape,// (2)!
+    imageL: Shape // (1)!
+    imageS: Shape // (2)!
   },
   icons: {
-    imageError36: Icon,// (3)!
+    imageError36: Icon // (3)!
   }
 }
 
@@ -267,12 +272,12 @@ ImageTheme {
 ```typescript
 ButtonTheme {
   typography: {
-    buttonM: TextStyle,// (1)!
-    buttonS: TextStyle,// (2)!
+    buttonM: TextStyle // (1)!
+    buttonS: TextStyle // (2)!
   },
   shapes: {
-    buttonM: Shape,// (3)!
-    buttonS: Shape,// (4)!
+    buttonM: Shape // (3)!
+    buttonS: Shape // (4)!
   }
 }
 
@@ -287,14 +292,14 @@ ButtonTheme {
 ```typescript
 ActivityIndicatorTheme {
   icons: {
-    loading14: Icon | null,// (1)!
+    loading14: Icon | null // (1)!
   },
   colors: {
-    overlay: Color,// (4)!
+    overlay: Color // (4)!
   }
   settings: {
-    indicationDelay: Number,// (2)!
-    spinDuration: Number,// (3)!
+    indicationDelay: Number // (2)!
+    spinDuration: Number // (3)!
   }
 }
 
@@ -320,14 +325,14 @@ ActivityIndicatorTheme {
 ```typescript
 PageBarTheme {
   typography: {
-    pageTitle: TextStyle,// (1)!
+    pageTitle: TextStyle // (1)!
   },
   icons: {
-    back24: Icon,// (2)!
-    close24: Icon,// (3)!
+    back24: Icon // (2)!
+    close24: Icon // (3)!
   },
   settings: {
-    preferCloseButtonOnTheRight: boolean,// (4)!
+    preferCloseButtonOnTheRight: Bool // (4)!
   }
 }
 
@@ -345,21 +350,21 @@ PageBarTheme {
 ```typescript
 BottomSheetTheme {
   typography: {
-    iconButton: TextStyle,// (1)!
-    chipsButton: TextStyle,// (2)!
+    iconButton: TextStyle // (1)!
+    chipsButton: TextStyle // (2)!
   },
   shapes: {
-    bottomSheet: Shape,// (3)!
-    chipsButton: Shape,// (4)!
+    bottomSheet: Shape // (3)!
+    chipsButton: Shape // (4)!
   },
   grabber: {
-    width: number,// (5)!
-    height: number,// (6)!
-    topPadding: number,// (7)!
+    width: Number // (5)!
+    height: Number // (6)!
+    topPadding: Number // (7)!
   },
   settings: {
-    extendDelimitersToTheRight: boolean,// (8)!
-    extendDelimitersToTheLeft: boolean,// (9)!
+    extendDelimitersToTheRight: Bool // (8)!
+    extendDelimitersToTheLeft: Bool // (9)!
   }
 }
 
@@ -379,17 +384,17 @@ BottomSheetTheme {
 ```typescript
 SelectionSnackbarTheme {
   strings: {
-    select: string,// (1)!
-    cancel: string,// (2)!
-    selectAll: string,// (3)!
-    unselectAll: string,// (4)!
+    select: String // (1)!
+    cancel: String // (2)!
+    selectAll: String // (3)!
+    unselectAll: String // (4)!
   },
   icons: {
-    trash24: Icon,// (5)!
-    check20: Icon,// (6)!
+    trash24: Icon // (5)!
+    check20: Icon // (6)!
   },
   colors: {
-    selectionBackground: Color,// (7)!
+    selectionBackground: Color // (7)!
   }
 }
 
@@ -407,15 +412,15 @@ SelectionSnackbarTheme {
 ```typescript
 ErrorSnackbarTheme {
   strings: {
-    defaultErrorMessage: string,// (1)!
-    tryAgainButton: string,// (2)!
+    defaultErrorMessage: String // (1)!
+    tryAgainButton: String // (2)!
   },
   icons: {
-    error36: Icon,// (3)!
+    error36: Icon // (3)!
   },
   colors: {
-    errorBackground: Color,// (4)!
-    errorPrimary: Color,// (5)!
+    errorBackground: Color // (4)!
+    errorPrimary: Color // (5)!
   }
 }
 
@@ -430,25 +435,25 @@ ErrorSnackbarTheme {
 ###### [:material-arrow-up-left:](#theme) Product
 ```typescript
 ProductBarTheme {
-  prices: ProductBarPricesTheme | null,// (1)!
+  prices: ProductBarPricesTheme | null // (1)!
   typography: {
-    product: TextStyle,// (2)!
-    brand: TextStyle,// (3)!
+    product: TextStyle // (2)!
+    brand: TextStyle // (3)!
   },
   icons: {
-    arrow16: Icon,// (4)!
+    arrow16: Icon // (4)!
   },
   settings: {
-    applyProductFirstImageExtraPadding: boolean,// (5)!
+    applyProductFirstImageExtraPadding: Bool // (5)!
   }
 }
 
 ProductBarPricesTheme {
   typography: {
-    price: TextStyle,// (6)!
+    price: TextStyle // (6)!
   },
   colors: {
-    discountedPrice: Color,// (7)!
+    discountedPrice: Color // (7)!
   }
 }
 ```
@@ -465,16 +470,16 @@ ProductBarPricesTheme {
 ```typescript
 PowerBarTheme {
   strings: {
-    poweredByAiuta: string,// (1)!
+    poweredByAiuta: String // (1)!
   },
   colors: {
-    aiuta: PowerBarColorScheme,// (2)!
+    aiuta: PowerBarColorScheme // (2)!
   }
 }
 
 enum PowerBarColorScheme {
-  standard,// (3)!
-  primary,// (4)!
+  standard // (3)!
+  primary // (4)!
 }
 ```
 
@@ -486,41 +491,41 @@ enum PowerBarColorScheme {
 ### [:material-arrow-up-left:](#configuration) Features
 ```typescript
 Features {
-  welcomeScreen: WelcomeScreenFeature | null,// (1)!
-  onboarding: OnboardingFeature | null,// (2)!
-  consent: ConsentFeature | null,// (3)!
-  imagePicker: ImagePickerFeature,// (4)!
-  tryOn: TryOnFeature,// (5)!
-  share: ShareFeature | null,// (6)!
-  wishlist: WishlistFeature | null,// (7)!
+  welcomeScreen: WelcomeScreenFeature | null // (1)!
+  onboarding: OnboardingFeature | null // (2)!
+  consent: ConsentFeature | null // (3)!
+  imagePicker: ImagePickerFeature // (4)!
+  tryOn: TryOnFeature // (5)!
+  share: ShareFeature | null // (6)!
+  wishlist: WishlistFeature | null // (7)!
 }
 ```
 
-1. Configures an optional welcome screen that introduces users to the SDK's functionality.
-2. Sets up the onboarding process to guide users through the SDK's features and capabilities.
-3. Manages user consent options for data processing, which can be integrated with onboarding or used independently.
-4. Controls the image selection interface, allowing users to pick photos, take new ones, use predefined models, or access previous uploads.
-5. Configures the core virtual try-on functionality for trying products virtually.
-6. Enables sharing capabilities for generated try-on images with customizable options.
-7. Integrates with the host app's wishlist functionality for product management.
+1. [:material-arrow-down-left:](#welcome-screen) Configures an optional welcome screen that introduces users to the SDK's functionality.
+2. [:material-arrow-down-left:](#oboarding) Sets up the onboarding process to guide users through the SDK's features and capabilities.
+3. [:material-arrow-down-left:](#consent) Manages user consent options for data processing, which can be integrated with onboarding or used independently.
+4. [:material-arrow-down-left:](#image-picker) Controls the image selection interface, allowing users to pick photos, take new ones, use predefined models, or access previous uploads.
+5. [:material-arrow-down-left:](#try-on) Configures the core virtual try-on functionality for trying products virtually.
+6. [:material-arrow-down-left:](#share) Enables sharing capabilities for generated try-on images with customizable options.
+7. [:material-arrow-down-left:](#wishlist) Integrates with the host app's wishlist functionality for product management.
 
 #### [:material-arrow-up-left:](#features) Welcome Screen
 ```typescript
 WelcomeScreenFeature {
   images: {
-    welcomeBackground: Image,// (1)!
+    welcomeBackground: Image // (1)!
   },
   icons: {
-    welcome82: Icon,// (2)!
+    welcome82: Icon // (2)!
   },
   strings: {
-    welcomeTitle: string,// (3)!
-    welcomeDescription: string,// (4)!
-    welcomeButtonStart: string,// (5)!
+    welcomeTitle: String // (3)!
+    welcomeDescription: String // (4)!
+    welcomeButtonStart: String // (5)!
   },
   typography: {
-    welcomeTitle: TextStyle,// (6)!
-    welcomeDescription: TextStyle,// (7)!
+    welcomeTitle: TextStyle // (6)!
+    welcomeDescription: TextStyle // (7)!
   }
 }
 
@@ -537,26 +542,26 @@ WelcomeScreenFeature {
 #### [:material-arrow-up-left:](#features) Onboarding
 ```typescript
 OnboardingFeature {
-  howItWorksPage: OnboardingHowItWorksPageFeature,// (1)!
-  bestResultsPage: OnboardingBestResultsPageFeature | null,// (2)!
+  howItWorksPage: OnboardingHowItWorksPageFeature // (1)!
+  bestResultsPage: OnboardingBestResultsPageFeature | null // (2)!
   strings: {
-    onboardingButtonNext: string,// (3)!
-    onboardingButtonStart: string,// (4)!
+    onboardingButtonNext: String // (3)!
+    onboardingButtonStart: String // (4)!
   },
   shapes: {
-    onboardingImageL: Shape,// (5)!
-    onboardingImageS: Shape,// (6)!
+    onboardingImageL: Shape // (5)!
+    onboardingImageS: Shape // (6)!
   },
   dataProvider: BuiltIn | Custom {
-    isOnboardingCompleted: Observable<boolean>,// (7)!
-    completeOnboarding: Callback(),// (8)!
+    isOnboardingCompleted: Observable<Bool> // (7)!
+    completeOnboarding: Callback() // (8)!
   }
 }
 
 ```
 
-1. Configures the first page of onboarding that demonstrates how virtual try-on works through interactive examples.
-2. Sets up an optional page showing examples of photos that yield the best try-on results.
+1. [:material-arrow-down-left:](#how-it-works) Configures the first page of onboarding that demonstrates how virtual try-on works through interactive examples.
+2. [:material-arrow-down-left:](#best-results) Sets up an optional page showing examples of photos that yield the best try-on results.
 3. Defines the text label for the navigation button to proceed to the next onboarding page.
 4. Specifies the text label for the button that completes onboarding and starts the main interface.
 5. Controls the shape configuration for large images displayed in the onboarding process.
@@ -568,15 +573,15 @@ OnboardingFeature {
 ```typescript
 OnboardingHowItWorksPageFeature {
   images: {
-    onboardingHowItWorksItems: List<{// (6)!
-      itemPhoto: Image,// (1)!
-      itemPreview: Image,// (2)!
+    onboardingHowItWorksItems: List<{ // (6)!
+      itemPhoto: Image // (1)!
+      itemPreview: Image // (2)!
     }>
   },
   strings: {
-    onboardingHowItWorksPageTitle: string | null,// (3)!
-    onboardingHowItWorksTitle: string,// (4)!
-    onboardingHowItWorksDescription: string,// (5)!
+    onboardingHowItWorksPageTitle: String | null // (3)!
+    onboardingHowItWorksTitle: String // (4)!
+    onboardingHowItWorksDescription: String // (5)!
   }
 }
 
@@ -593,20 +598,20 @@ OnboardingHowItWorksPageFeature {
 ```typescript
 OnboardingBestResultsPageFeature {
   images: {
-    onboardingBestResultsGood: Image[],// (1)!
-    onboardingBestResultsBad: Image[],// (2)!
+    onboardingBestResultsGood: List<Image> // (1)!
+    onboardingBestResultsBad: List<Image> // (2)!
   },
   icons: {
-    onboardingBestResultsGood24: Icon,// (3)!
-    onboardingBestResultsBad24: Icon,// (4)!
+    onboardingBestResultsGood24: Icon // (3)!
+    onboardingBestResultsBad24: Icon // (4)!
   },
   strings: {
-    onboardingBestResultsPageTitle: string | null,// (5)!
-    onboardingBestResultsTitle: string,// (6)!
-    onboardingBestResultsDescription: string,// (7)!
+    onboardingBestResultsPageTitle: String | null // (5)!
+    onboardingBestResultsTitle: String // (6)!
+    onboardingBestResultsDescription: String // (7)!
   },
   styles: {
-    reduceOnboardingBestResultsShadows: boolean,// (8)!
+    reduceOnboardingBestResultsShadows: Bool // (8)!
   }
 }
 ```
@@ -626,7 +631,7 @@ OnboardingBestResultsPageFeature {
     ```typescript
     ConsentEmbeddedIntoOnboardingFeature {
       strings: {
-        consentHtml: string,// (1)!
+        consentHtml: String // (1)!
       }
     }
     ```
@@ -637,24 +642,24 @@ OnboardingBestResultsPageFeature {
     ```typescript
     ConsentStandaloneOnboardingPageFeature {
       strings: {
-        consentPageTitle: string | null,// (1)!
-        consentTitle: string,// (2)!
-        consentDescriptionHtml: string,// (3)!
-        consentFooterHtml: string | null,// (4)!
-        consentButtonAccept: string,// (5)!
+        consentPageTitle: String | null // (1)!
+        consentTitle: String // (2)!
+        consentDescriptionHtml: String // (3)!
+        consentFooterHtml: String | null // (4)!
+        consentButtonAccept: String // (5)!
       },
       icons: {
-        consentTitle24: Icon,// (6)!
+        consentTitle24: Icon // (6)!
       },
       styles: {
-        drawBordersAroundConsents: boolean,// (7)!
+        drawBordersAroundConsents: Bool // (7)!
       },
       data: {
-        consents: List<Consent>,// (8)!
+        consents: List<Consent> // (8)!
       },
       dataProvider: BuiltIn | Custom {
-        obtainedConsentsIds: Observable<List<string>>,// (9)!
-        obtainConsentsIds: Callback(List<string>),// (10)!
+        obtainedConsentsIds: Observable<List<string>> // (9)!
+        obtainConsentsIds: Callback(List<string>) // (10)!
       }
     }
     ```
@@ -681,24 +686,24 @@ OnboardingBestResultsPageFeature {
     ```typescript
     ConsentStandaloneImagePickerPageFeature {
       strings: {
-        consentPageTitle: string | null,// (1)!
-        consentTitle: string,// (2)!
-        consentDescriptionHtml: string,// (3)!
-        consentFooterHtml: string | null,// (4)!
-        consentButtonAccept: string,// (5)!
+        consentPageTitle: String | null // (1)!
+        consentTitle: String // (2)!
+        consentDescriptionHtml: String // (3)!
+        consentFooterHtml: String | null // (4)!
+        consentButtonAccept: String // (5)!
       },
       icons: {
-        consentTitle24: Icon,// (6)!
+        consentTitle24: Icon // (6)!
       },
       styles: {
-        drawBordersAroundConsents: boolean,// (7)!
+        drawBordersAroundConsents: Bool // (7)!
       },
       data: {
-        consents: List<Consent>,// (8)!
+        consents: List<Consent> // (8)!
       },
       dataProvider: BuiltIn | Custom {
-        obtainedConsentsIds: Observable<List<string>>,// (9)!
-        obtainConsentsIds: Callback(List<string>),// (10)!
+        obtainedConsentsIds: Observable<List<string>> // (9)!
+        obtainConsentsIds: Callback(List<string>) // (10)!
       }
     }
     ```
@@ -724,315 +729,400 @@ OnboardingBestResultsPageFeature {
 #### [:material-arrow-up-left:](#features) Image Picker
 ```typescript
 ImagePickerFeature {
-  camera: ImagePickerCameraFeature | null,
-  photoGallery: ImagePickerPhotoGalleryFeature,
-  predefinedModels: ImagePickerPredefinedModelFeature | null,
-  uploadsHistory: ImagePickerUploadsHistoryFeature | null,
+  camera: ImagePickerCameraFeature | null // (1)!
+  photoGallery: ImagePickerPhotoGalleryFeature // (2)!
+  predefinedModels: ImagePickerPredefinedModelFeature | null // (3)!
+  uploadsHistory: ImagePickerUploadsHistoryFeature | null // (4)!
   images: {
-    examples: Image[]
-  },
+    examples: List<Image> // (5)!
+  }
   strings: {
-    imagePickerTitleEmpty: string,
-    imagePickerDescriptionEmpty: string,
-    imagePickerButtonUploadImage: string
+    imagePickerTitleEmpty: String // (6)!
+    imagePickerDescriptionEmpty: String // (7)!
+    imagePickerButtonUploadImage: String // (8)!
   }
 }
-
 ```
+
+1.  [:material-arrow-down-left:](#camera) Configuration for camera functionality, allowing users to take new photos directly within the SDK.
+2.  [:material-arrow-down-left:](#photo-gallery) Configuration for accessing and selecting images from the device's photo library.
+3.  [:material-arrow-down-left:](#predefined-models) Configuration for using predefined model images as an alternative to user photos.
+4.  [:material-arrow-down-left:](uploads-history) Configuration for managing and reusing previously uploaded images.
+5.  List of exactly 2 example of input images to display in the image picker interface.
+6.  Title text displayed above images when the image picker is empty.
+7.  Description text shown when the image picker is empty.
+8.  Label text for the button used to upload new photos.
 
 ###### [:material-arrow-up-left:](#image-picker) Camera
 ```typescript
 ImagePickerCameraFeature {
   icons: {
-    camera24: Icon
-  },
+    camera24: Icon // (1)!
+  }
   strings: {
-    cameraButtonTakePhoto: string,
-    cameraPermissionTitle: string,
-    cameraPermissionDescription: string,
-    cameraPermissionButtonOpenSettings: string
+    cameraButtonTakePhoto: String // (2)!
+    cameraPermissionTitle: String // (3)!
+    cameraPermissionDescription: String // (4)!
+    cameraPermissionButtonOpenSettings: String // (5)!
   }
 }
 ```
+
+1.  Icon displayed for the camera button in the bottom sheet list.
+2.  Label text for the button used to take a photo.
+3.  Title text displayed in the alert when camera permissions are denied.
+4.  Description text shown in the alert when camera permissions are denied.
+5.  Label text for the button that opens app settings to change camera permissions.
 
 ###### [:material-arrow-up-left:](#image-picker) Photo Gallery
 ```typescript
 ImagePickerPhotoGalleryFeature {
   icons: {
-    gallery24: Icon
-  },
+    gallery24: Icon // (1)!
+  }
   strings: {
-    galleryButtonSelectPhoto: string
+    galleryButtonSelectPhoto: String // (2)!
   }
 }
 ```
+
+1.  Icon displayed for the gallery button in the bottom sheet list.
+2.  Label text for the button used to select a photo from the gallery.
 
 ###### [:material-arrow-up-left:](#image-picker) Predefined Models
 ```typescript
 ImagePickerPredefinedModelFeature {
   icons: {
-    selectModels24: Icon
-  },
+    selectModels24: Icon // (1)!
+  }
   data: {
-    preferredCategoryId: string
+    preferredCategoryId: String // (2)!
   }
   strings: {
-    predefinedModelPageTitle: string,
-    predefinedModelOr: string,
-    predefinedModelErrorEmptyModelsList: string,
-    predefinedModelCategories: {
-      [categoryId: string]: string
-    }
+    predefinedModelPageTitle: String // (3)!
+    predefinedModelOr: String // (4)!
+    predefinedModelErrorEmptyModelsList: String // (5)!
+    predefinedModelCategories: Map<String: String> // (6)!
   }
 }
 ```
+
+1.  Icon displayed for the predefined models button in the bottom sheet list.
+2.  Identifier of the preferred category to show by default when user opens models page.
+3.  Title text for the predefined models page and button in the bottom sheet list.
+4.  Label text displayed before the predefined models button in the image picker.
+5.  Error message shown when the list of predefined models is empty.
+6.  Mapping of category identifiers to their display titles, typically covering `man` and `woman` categories.
 
 ###### [:material-arrow-up-left:](#image-picker) Uploads History
 ```typescript
 ImagePickerUploadsHistoryFeature {
   strings: {
-    uploadsHistoryButtonNewPhoto: string,
-    uploadsHistoryTitle: string,
-    uploadsHistoryButtonChangePhoto: string
-  },
+    uploadsHistoryButtonNewPhoto: String // (1)!
+    uploadsHistoryTitle: String // (2)!
+    uploadsHistoryButtonChangePhoto: String // (3)!
+  }
   styles: {
-    changePhotoButtonStyle: primary | blurred
-  },
+    changePhotoButtonStyle: primary | blurred // (4)!
+  }
   dataProvider: BuiltIn | Custom {
-    uploadedImages: Flow<InputImage>,
-    addUploadedImagesAction: Callback(InputImage[]),
-    deleteUploadedImagesAction: Callback(InputImage[]),
-    selectUploadedImageAction: Callback(InputImage)
+    uploadedImages: Observable<List<InputImage>> // (5)!
+    addUploadedImagesAction: Callback(List<InputImage>) // (6)!
+    deleteUploadedImagesAction: Callback(List<InputImage>) // (7)!
+    selectUploadedImageAction: Callback(InputImage) // (8)!
   }
 }
 ```
+
+1.  Text label for the button to upload a new photo.
+2.  Title text displayed at the top of the uploads history bottom sheet.
+3.  Text label for the button to change the currently selected photo.
+4.  Visual style for the change photo button, either primary (solid) or blurred (with optional outline).
+5.  Observable collection of images previously uploaded by the user, with most recent first.
+6.  Callback to add new images to the uploads history.
+7.  Callback to remove images from the uploads history.
+8.  Callback to move a selected image to the top of the history when reused.
 
 #### [:material-arrow-up-left:](#features) Try On
 ```typescript
 TryOnFeature {
   tryOn: {
-    loadingPage: TryOnLoadingPageFeature,
-    inputImageValidation: TryOnInputImageValidationFeature,
-    cart: TryOnCartFeature,
-    fitDisclaimer: TryOnFitDisclaimerFeature | null,
-    feedback: TryOnFeedbackFeature | null,
-    generationsHistory: TryOnGenerationsHistoryFeature | null,
-    multiItem: TryOnMultiItemFeature | null,
-    otherPhoto: TryOnWithOtherPhotoFeature | null,
+    loadingPage: TryOnLoadingPageFeature // (1)!
+    inputImageValidation: TryOnInputImageValidationFeature // (2)!
+    cart: TryOnCartFeature // (3)!
+    fitDisclaimer: TryOnFitDisclaimerFeature | null // (4)!
+    feedback: TryOnFeedbackFeature | null // (5)!
+    generationsHistory: TryOnGenerationsHistoryFeature | null // (6)!
+    otherPhoto: TryOnWithOtherPhotoFeature | null // (7)!
     settings: {
-      isBackgroundExecutionAllowed: boolean
-    },
+      isBackgroundExecutionAllowed: Bool // (8)!
+      tryGeneratePersonSegmentation: Bool // (9)!
+    }
     icons: {
-      tryOn20: Icon
-    },
+      tryOn20: Icon // (10)!
+    }
     strings: {
-      tryOnPageTitle: string,
-      tryOn: string
-    },
+      tryOnPageTitle: String // (11)!
+      tryOn: String // (12)!
+    }
     styles: {
-      tryOnButtonGradient: Color[] | null
+      tryOnButtonGradient: List<Color> | null // (13)!
     }
   }
 }
-
 ```
 
-##### [:material-arrow-up-left:](#try-on) Input Image Validation
-```typescript
-TryOnInputImageValidationFeature {
-  strings: {
-    invalidInputImageDescription: string,
-    invalidInputImageChangePhotoButton: string
-  }
-}
-```
-
-##### [:material-arrow-up-left:](#try-on) Cart
-```typescript
-TryOnCartFeature {
-  strings: {
-    addToCart: string
-  },
-  handler: {
-    addToCartAction: Callback(string)
-  }
-}
-```
-
-##### [:material-arrow-up-left:](#try-on) Multi Item
-```typescript
-TryOnMultiItemFeature {
-  cart: TryOnMultiItemCartFeature,
-  strings: {}
-}
-```
-
-###### [:material-arrow-up-left:](#multi-item) Cart
-```typescript
-TryOnMultiItemCartFeature {
-  strings: {
-    shopTheLook: string
-  },
-  handler: {
-    shopTheLook: Callback(string[])
-  }
-}
-```
+1.  [:material-arrow-down-left:](#loading-page) Configuration for the loading page displayed during the TryOn process.
+2.  [:material-arrow-down-left:](#inout-image-validation) Configuration for validating input images before processing.
+3.  [:material-arrow-down-left:](#cart) Configuration for cart-related functionality in the TryOn interface.
+4.  [:material-arrow-down-left:](fit-disclaimer) Optional configuration for displaying fit disclaimers to users.
+5.  [:material-arrow-down-left:](#feedback) Optional configuration for collecting user feedback on TryOn results.
+6.  [:material-arrow-down-left:](#generations-history) Optional configuration for managing the history of generated TryOn results.
+7.  [:material-arrow-down-left:](#other-photo) Optional configuration for allowing users to continue with a different photo.
+8.  Determines whether the SDK should wait for the generation results in the background when closed.
+9.  Enables local person segmentation highlighting during loading on iOS 15+.
+10.  Icon displayed for the TryOn magic button in the interface.
+11.  Title text displayed at the top of the TryOn page.
+12.  Label text used for the "Try On" buttons throughout the interface.
+13.  Optional gradient colors for styling the TryOn button.
 
 ##### [:material-arrow-up-left:](#try-on) Loading Page
 ```typescript
 TryOnLoadingPageFeature {
   strings: {
-    tryOnLoadingStatusUploadingImage: string,
-    tryOnLoadingStatusScanningBody: string,
-    tryOnLoadingStatusGeneratingOutfit: string
-  },
+    tryOnLoadingStatusUploadingImage: String // (1)!
+    tryOnLoadingStatusScanningBody: String // (2)!
+    tryOnLoadingStatusGeneratingOutfit: String // (3)!
+  }
   styles: {
-    loadingStatusBackgroundGradient: Color[] | null,
-    loadingStatusStyle: "primary" | "blurred" | "blurredWithOutline"
+    loadingStatusBackgroundGradient: List<Color> | null // (4)!
+    loadingStatusStyle: primary | blurred | blurredWithOutline // (5)!
   }
 }
 ```
+
+1.  Text displayed while uploading the user's image to the server.
+2.  Text displayed while scanning and analyzing the body in the image.
+3.  Text displayed while generating the virtual try-on outfit.
+4.  Optional gradient colors for the loading status background.
+5.  Visual style for the loading status indicator, either primary (solid) or blurred (with optional outline).
+
+##### [:material-arrow-up-left:](#try-on) Input Image Validation
+```typescript
+TryOnInputImageValidationFeature {
+  strings: {
+    invalidInputImageDescription: String // (1)!
+    invalidInputImageChangePhotoButton: String // (2)!
+  }
+}
+```
+
+1.  Message displayed to users when their uploaded image fails validation.
+2.  Label text for the button that allows users to select a different photo.
+
+##### [:material-arrow-up-left:](#try-on) Cart
+```typescript
+TryOnCartFeature {
+  strings: {
+    addToCart: String // (1)!
+  }
+  handler: {
+    addToCartAction: Callback(String) // (2)!
+  }
+}
+```
+
+1.  Label text for the button that adds the current product to the cart.
+2.  Callback function that handles adding a product to the cart using its identifier.
 
 ##### [:material-arrow-up-left:](#try-on) Fit Disclaimer
 ```typescript
 TryOnFitDisclaimerFeature {
   icons: {
-    info20: Icon | null
-  },
+    info20: Icon | null // (1)!
+  }
   strings: {
-    fitDisclaimerTitle: string,
-    fitDisclaimerDescription: string,
-    fitDisclaimerButtonClose: string
+    fitDisclaimerTitle: String // (2)!
+    fitDisclaimerDescription: String // (3)!
+    fitDisclaimerButtonClose: String // (4)!
   }
 }
 ```
 
+1.  Optional icon displayed in the fit disclaimer to provide visual context.
+2.  Title text displayed in the fit disclaimer message.
+3.  Detailed description text explaining the fit disclaimer information.
+4.  Label text for the button that dismisses the fit disclaimer.
+
 ##### [:material-arrow-up-left:](#try-on) Feedback
 ```typescript
 TryOnFeedbackFeature {
-  otherFeedback: TryOnFeedbackOtherFeature | null,
+  otherFeedback: TryOnFeedbackOtherFeature | null // (1)!
   icons: {
-    like36: Icon,
-    dislike36: Icon,
-    gratitude40: Icon
-  },
+    like36: Icon // (2)!
+    dislike36: Icon // (3)!
+    gratitude40: Icon // (4)!
+  }
   strings: {
-    feedbackOptions: string[],
-    feedbackTitle: string,
-    feedbackButtonSkip: string,
-    feedbackButtonSend: string,
-    feedbackGratitudeText: string
+    feedbackOptions: List<String> // (5)!
+    feedbackTitle: String // (6)!
+    feedbackButtonSkip: String // (7)!
+    feedbackButtonSend: String // (8)!
+    feedbackGratitudeText: String // (9)!
   }
 }
 ```
+
+1.  [:material-arrow-down-left:](#other) Optional configuration for allowing users to provide custom feedback on try-on results.
+2.  Icon displayed for the "Like" feedback option.
+3.  Icon displayed for the "Dislike" feedback option.
+4.  Icon shown after feedback is submitted to express gratitude.
+5.  List of available feedback options presented to users.
+6.  Title text displayed in the feedback section.
+7.  Label text for the button that allows users to skip providing feedback.
+8.  Label text for the button that submits the user's feedback.
+9.  Message displayed to users after they submit their feedback.
 
 ###### [:material-arrow-up-left:](#feedback) Other
 ```typescript
 TryOnFeedbackOtherFeature {
   strings: {
-    otherFeedbackTitle: string,
-    otherFeedbackButtonSend: string,
-    otherFeedbackButtonCancel: string,
-    otherFeedbackOptionOther: string
+    otherFeedbackTitle: String // (1)!
+    otherFeedbackButtonSend: String // (2)!
+    otherFeedbackButtonCancel: String // (3)!
+    otherFeedbackOptionOther: String // (4)!
   }
 }
 ```
+
+1.  Title text displayed in the custom feedback section.
+2.  Label text for the button that submits the custom feedback.
+3.  Label text for the button that cancels the custom feedback.
+4.  Text label for the option to provide custom feedback.
 
 ##### [:material-arrow-up-left:](#try-on) Generations History
 ```typescript
 TryOnGenerationsHistoryFeature {
   icons: {
-    history24: Icon
-  },
+    history24: Icon // (1)!
+  }
   strings: {
-    generationsHistoryPageTitle: string
-  },
+    generationsHistoryPageTitle: String // (2)!
+  }
   dataProvider: BuiltIn | Custom {
-    generatedImages: Flow<GenegaredImage>,
-    addGeneratedImages: Callback(GenegaredImage[]),
-    deleteGeneratedImages: Callback(GenegaredImage[])
+    generatedImages: Flow<GenegaredImage> // (3)!
+    addGeneratedImages: Callback(GenegaredImage[]) // (4)!
+    deleteGeneratedImages: Callback(GenegaredImage[]) // (5)!
   }
 }
 ```
+
+1.  Icon displayed for the History button in the page bar.
+2.  Title text displayed at the top of the generations history page.
+3.  Observable collection of previously generated try-on images.
+4.  Callback function to add new generated images to the history.
+5.  Callback function to remove images from the generations history.
 
 ##### [:material-arrow-up-left:](#try-on) Other Photo
 ```typescript
 TryOnWithOtherPhotoFeature {
   icons: {
-    changePhoto24: Icon
+    changePhoto24: Icon // (1)!
   }
 }
 ```
+
+1.  Icon displayed for the "Change Photo" action, allowing users to continue with a different photo.
 
 #### [:material-arrow-up-left:](#features) Share
 ```typescript
-
 ShareFeature {
-  watermark: ShareWatermarkFeature | null,
+  watermark: ShareWatermarkFeature | null // (1)!
   icons: {
-    share24: Icon
-  },
+    share24: Icon // (2)!
+  }
   strings: {
-    shareButton: string
-  },
+    shareButton: String // (3)!
+  }
   dataProvider: null | Custom {
-    getShareText: Callback(productIds: string[]) => string
+    getShareText: Callback(productIds: List<String>) => String // (4)!
   }
 }
 
 ```
+
+1.  [:material-arrow-down-left:](#watermark) Optional configuration for adding a watermark to shared content.
+2.  Icon displayed for the share button in the interface.
+3.  Label text for the share button in the fullscreen gallery.
+4.  Optional `dataProvider` callback function that generates additional text to be shared along with the image.
 
 ###### [:material-arrow-up-left:](#share) Watermark
 ```typescript
-
 ShareWatermarkFeature {
   images: {
-    logo: Image
+    logo: Image // (1)!
   }
 }
 ```
+
+1.  Logo image to be used as a watermark on shared content.
 
 #### [:material-arrow-up-left:](#features) Wishlist
 ```typescript
-
 WishlistFeature {
   icons: {
-    wishlist24: Icon,
-    wishlistFill24: Icon
-  },
+    wishlist24: Icon // (1)!
+    wishlistFill24: Icon // (2)!
+  }
   strings: {
-    wishlistButtonAdd: string
-  },
+    wishlistButtonAdd: String // (3)!
+  }
   dataProvider: {
-    wishlistProductIds: Flow<string[]>,
-    setProductInWishlist: Callback(productId: string, inWishlist: boolean)
+    wishlistProductIds: Observable<List<String>> // (4)!
+    setProductInWishlist: Callback(productId: String, inWishlist: Bool) // (5)!
   }
 }
 ```
+
+1.  Icon displayed for the Wishlist button in its default state.
+2.  Icon displayed for the Wishlist button when the product is in the wishlist.
+3.  Label text for the "Add to Wishlist" button.
+4.  Observable collection of product IDs currently in the wishlist.
+5.  Callback function to add or remove a product from the wishlist.
 
 ### [:material-arrow-up-left:](#configuration) Analytics
 ```typescript
 Analytics {
   handler: {
-    onAnalyticsEvent: Callback(AnalyticEvent)
+    onAnalyticsEvent: Callback(AnalyticEvent) // (1)!
   }
 }
 ```
 
+1.  Callback function that processes analytics events generated by the SDK, allowing integration with external analytics services or custom event handling.
+
 ### [:material-arrow-up-left:](#configuration) DebugSettings
 ```typescript
 DebugSettings {
-  isLoggingEnabled: boolean,
-  emptyStringsPolicy: ValidationPolicy,
-  unavailableResourcesPolicy: ValidationPolicy,
-  infoPlistDescriptionsPolicy: ValidationPolicy,
-  listSizePolicy: ValidationPolicy
+  isLoggingEnabled: Bool // (1)!
+  emptyStringsPolicy: ValidationPolicy // (2)!
+  unavailableResourcesPolicy: ValidationPolicy // (3)!
+  infoPlistDescriptionsPolicy: ValidationPolicy // (4)!
+  listSizePolicy: ValidationPolicy // (5)!
 }
 
 enum ValidationPolicy {
-  ignore,
-  warning,
-  fatal
+  ignore // (6)!
+  warning // (7)!
+  fatal // (8)!
 }
 ```
+
+1.  Controls whether the SDK should log debug information, providing detailed logs to help developers understand its behavior.
+2.  Validation policy for checking whether required strings in the SDK configuration are not empty, preventing runtime issues.
+3.  Validation policy for checking whether required resources are available and properly configured.
+4.  Validation policy for checking whether the `info.plist` file contains all required descriptions for enabled features.
+5.  Validation policy for checking whether lists required by the SDK are of the correct size.
+6.  Ignores all validation errors, allowing the SDK to proceed without taking any action.
+7.  Logs validation errors to the console for debugging purposes without interrupting execution.
+8.  Stops the application's execution with a fatal error when validation errors occur.
