@@ -679,10 +679,10 @@ ImagePickerUploadsHistoryFeature {
     changePhotoButtonStyle: primary | blurred
   },
   dataProvider: BuiltIn | Custom {
-    uploadedImages: Flow<HistoryImage>,
-    addUploadedImagesAction: Callback(HistoryImage[]),
-    deleteUploadedImagesAction: Callback(HistoryImage[]),
-    selectUploadedImageAction: Callback(HistoryImage)
+    uploadedImages: Flow<InputImage>,
+    addUploadedImagesAction: Callback(InputImage[]),
+    deleteUploadedImagesAction: Callback(InputImage[]),
+    selectUploadedImageAction: Callback(InputImage)
   }
 }
 ```
@@ -829,9 +829,9 @@ TryOnGenerationsHistoryFeature {
     generationsHistoryPageTitle: string
   },
   dataProvider: BuiltIn | Custom {
-    generatedImages: Flow<HistoryImage>,
-    addGeneratedImages: Callback(HistoryImage[], string[]),
-    deleteGeneratedImages: Callback(HistoryImage[])
+    generatedImages: Flow<GenegaredImage>,
+    addGeneratedImages: Callback(GenegaredImage[]),
+    deleteGeneratedImages: Callback(GenegaredImage[])
   }
 }
 ```
