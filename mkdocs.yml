@@ -36,8 +36,10 @@ nav:
     - Overview: developer/overview.md
     - Scheme:
       - Configuration: developer/scheme/configuration.md
-      - History Images: developer/scheme/history-images.md
       - Platform Types: developer/scheme/platform-types.md
+      - History Images: developer/scheme/history-images.md
+      - Consent: developer/scheme/consent.md
+      - Product: developer/scheme/product.md
 
   - Android:
     - Getting started: android/aiuta/get-started.md
@@ -88,7 +90,7 @@ theme:
   logo: media/logo/aiuta.svg
   icon:
     logo: logo
-    annotation: material/information-symbol
+    annotation: material/information-outline
 
 extra_css:
   - stylesheets/extra.css

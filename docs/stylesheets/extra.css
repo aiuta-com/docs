@@ -1,8 +1,27 @@
+/* Make footer color same as header */
 :root > * {
   --md-footer-bg-color: var(--md-primary-fg-color);
   --md-footer-bg-color--dark: var(--md-primary-fg-color);
 }
 
+
+/* Force grid cards to be max 2 columns */
+.grid.cards {
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)) !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Force grid cards to be 1 column if screen is too small */
+@media (max-width: 650px) {
+  .grid.cards {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* Divider between tab groups */
 .md-tabs__item--divider {
   width: 1.5px;
   margin: 0.08rem 0.75rem 0;
@@ -16,10 +35,49 @@
   border-radius: 1px;
 }
 
+
+/* Make divider not clickable */
 .md-tabs__item--divider .md-tabs__link {
   display: none;
 }
 
+
+/* Annotation styles */
+.md-annotation {
+  margin-left: -8px !important;
+}
+
+.md-annotation__index:after {
+  transform: scale(0.5) !important;
+  -webkit-transform: scale(0.5) !important;
+  transition: all 0.2s ease !important;
+  -webkit-transition: all 0.2s ease !important;
+  position: absolute !important;
+  top: -0.25em !important;
+  left: -0.25em !important;
+}
+
+.md-tooltip--active + .md-annotation__index:after,
+.md-annotation:hover .md-annotation__index:after {
+  transform: scale(1) translate(0.275em, 0.2em) !important;
+  -webkit-transform: scale(1) translate(0.275em, 0.2em) !important;
+}
+
+.md-annotation__index:before {
+  opacity: 0;
+  transition: opacity 0.2s ease !important;
+  -webkit-transition: opacity 0.2s ease !important;
+}
+
+.md-tooltip--active + .md-annotation__index:before,
+.md-annotation:hover .md-annotation__index:before {
+  opacity: 1;
+  transition: opacity 0.2s ease !important;
+  -webkit-transition: opacity 0.2s ease !important;
+}
+
+
+/* Colors */
 .cl-brand {
   color: #4000FF;
 }
@@ -84,24 +142,32 @@
   color: var(--md-primary-fg-color);
 }
 
+
+/* Aiuta brand color */
 .cl-primary,
 .cl-aiuta {
   background-color: #FFFFFF;
   border-radius: 6px;
 }
 
+
+/* Dark background for light colors to contrast */
 .cl-on-dark,
 .cl-background {
   background-color: hsla(225deg,15%,14%,1);
   border-radius: 6px;
 }
 
+
+/* Error color on error background */
 .cl-error-primary {
   background-color: #EF5754;
   border-radius: 4px;
   padding-top: 2px;
 }
 
+
+/* Border radius for all colors */
 .cl-brand,
 .cl-primary,
 .cl-secondary,
@@ -117,6 +183,8 @@
   border-radius: 4px;
 }
 
+
+/* Bottom sheet grabber */
 .shape-grabber {
   background-color: #FFFFFF;
   color: hsla(225deg,15%,14%,1);
