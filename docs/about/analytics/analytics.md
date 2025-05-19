@@ -6,14 +6,14 @@ This document describes the analytics events that can be tracked within the Aiut
 
 | Type | Parameters | Description | 
 | :--- |  :-------- | :---------- |
-| `page` | [`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Navigation to a specific page in the SDK UI |
-| `onboarding` | [`event`](#onboarding-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Interactions during the onboarding process, including viewing<br>informational screens and providing necessary consents for<br>data processing |
-| `picker` | [`event`](#picker-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Interactions with the image selection interface, including camera<br>access, gallery selection, and predefined model selection |
-| `tryOn` | [`event`](#try-on-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Virtual try-on operations reports, including photo upload,<br>processing status, and completion or error states |
-| `results` | [`event`](#results-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Interactions with the generated try-on results, including sharing,<br>saving to wishlist, adding to cart, or requesting new generations |
-| `feedback` | [`event`](#feedback-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Feedback on the generated results, including positive ratings and<br>detailed negative feedback with optional comments |
-| `history` | [`event`](#history-events)<br>[`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Interactions with previously generated results, including viewing,<br>sharing, and managing saved generations |
-| `exit` | [`pageId`](#page-identifiers)<br>[`productsIds`](#products-identifiers) | Exit from the SDK on a specific page,<br>indicating the final point in the user's journey |
+| `page` | [`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Navigation to a specific page in the SDK UI |
+| `onboarding` | [`event`](#onboarding-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Interactions during the onboarding process, including viewing<br>informational screens and providing necessary consents for<br>data processing |
+| `picker` | [`event`](#picker-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Interactions with the image selection interface, including camera<br>access, gallery selection, and predefined model selection |
+| `tryOn` | [`event`](#try-on-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Virtual try-on operations reports, including photo upload,<br>processing status, and completion or error states |
+| `results` | [`event`](#results-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Interactions with the generated try-on results, including sharing,<br>saving to wishlist, adding to cart, or requesting new generations |
+| `feedback` | [`event`](#feedback-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Feedback on the generated results, including positive ratings and<br>detailed negative feedback with optional comments |
+| `history` | [`event`](#history-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Interactions with previously generated results, including viewing,<br>sharing, and managing saved generations |
+| `exit` | [`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Exit from the SDK on a specific page,<br>indicating the final point in the user's journey |
 
 ### Page Identifiers
 
