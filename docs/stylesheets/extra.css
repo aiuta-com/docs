@@ -37,6 +37,13 @@
   display: none;
 }
 
+/* Prevent annotation index rotation */
+.md-tooltip--active + .md-annotation__index:after,
+.md-annotation__index:after {
+  transform: none !important;
+  -webkit-transform: none !important;
+}
+
 /* Colors */
 .cl-brand {
   color: #4000FF;

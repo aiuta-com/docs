@@ -157,7 +157,7 @@ Theme {
 
 4. [:material-arrow-down-left:](#button) Buttons styles, including typography and shape configurations for different button sizes.
 
-5. [:material-arrow-down-left:](#pagebar) Navigation bar appearance, including title styling and navigation button icons.
+5. [:material-arrow-down-left:](#page-bar) Navigation bar appearance, including title styling and navigation button icons.
 
 6. [:material-arrow-down-left:](#bottom-sheet) Bottom sheet presentation, including grabber appearance and sheet shape for both main SDK and internal sheets.
 
@@ -316,7 +316,7 @@ ActivityIndicatorTheme {
 
 4. Overlay color used to cover any view when it needs to be locked for an activity. The activity indicator will be placed at the center of this overlay.
 
-###### [:material-arrow-up-left:](#theme) PageBar
+###### [:material-arrow-up-left:](#theme) Page Bar
 ```typescript
 PageBarTheme {
   typography: {
@@ -479,9 +479,9 @@ enum PowerBarColorScheme {
 ```
 
 1. Defines the text label for the "Powered By Aiuta" branding element in the interface.
-2. Controls the color scheme used to highlight the "Aiuta" in the "Powered By Aiuta" label.
-3. Uses the default Aiuta-brand color to highlighting "Aiuta" in the "Powered By Aiuta" label, which is :material-square-rounded:{ .cl-aiuta } `#FF4000FF`
-4. Applies the `primary` color to the entire label without highlighting "Aiuta".
+2. Controls the color scheme used to highlight "Aiuta" in the `poweredByAiuta` label.
+3. Uses the default Aiuta-brand color to highlight "Aiuta" in the `poweredByAiuta` label, which is :material-square-rounded:{ .cl-aiuta } `#FF4000FF`
+4. Applies the [`primary` color](#color) to the entire label without highlighting "Aiuta".
 
 ### [:material-arrow-up-left:](#configuration) Features
 ```typescript
@@ -593,24 +593,32 @@ OnboardingHowItWorksPageFeature {
 ```typescript
 OnboardingBestResultsPageFeature {
   images: {
-    onboardingBestResultsGood: Image[],
-    onboardingBestResultsBad: Image[]
+    onboardingBestResultsGood: Image[],// (1)!
+    onboardingBestResultsBad: Image[],// (2)!
   },
   icons: {
-    onboardingBestResultsGood24: Icon,
-    onboardingBestResultsBad24: Icon
+    onboardingBestResultsGood24: Icon,// (3)!
+    onboardingBestResultsBad24: Icon,// (4)!
   },
   strings: {
-    onboardingBestResultsPageTitle: string | null,
-    onboardingBestResultsTitle: string,
-    onboardingBestResultsDescription: string
+    onboardingBestResultsPageTitle: string | null,// (5)!
+    onboardingBestResultsTitle: string,// (6)!
+    onboardingBestResultsDescription: string,// (7)!
   },
   styles: {
-    reduceOnboardingBestResultsShadows: boolean
+    reduceOnboardingBestResultsShadows: boolean,// (8)!
   }
 }
 ```
 
+1. List of exactly 2 example photos that demonstrate optimal conditions for virtual try-on results.
+2. List of exactly 2 of example photos showing conditions that may lead to suboptimal try-on results.
+3. Icon displayed next to good example photos to indicate positive results.
+4. Icon displayed next to bad example photos to indicate potential issues.
+5. Optional title for the "Best Results" page at the top of the screen.
+6. Main title displayed above the example photos section.
+7. Descriptive text explaining what makes a good photo for virtual try-on.
+8. Controls whether to reduce shadow effects on example photos for better visibility.
 
 #### [:material-arrow-up-left:](#features) Consent
 
@@ -618,77 +626,100 @@ OnboardingBestResultsPageFeature {
     ```typescript
     ConsentEmbeddedIntoOnboardingFeature {
       strings: {
-        consentHtml: string
+        consentHtml: string,// (1)!
       }
     }
     ```
+    
+    1. HTML content displayed at the bottom of the onboarding screen for embedded consent.
 
 === "Standalone Onboarding Page"
     ```typescript
     ConsentStandaloneOnboardingPageFeature {
       strings: {
-        consentPageTitle: string | null,
-        consentTitle: string,
-        consentDescriptionHtml: string,
-        consentFooterHtml: string | null,
-        consentButtonAccept: string
+        consentPageTitle: string | null,// (1)!
+        consentTitle: string,// (2)!
+        consentDescriptionHtml: string,// (3)!
+        consentFooterHtml: string | null,// (4)!
+        consentButtonAccept: string,// (5)!
       },
       icons: {
-        consentTitle24: Icon
+        consentTitle24: Icon,// (6)!
       },
       styles: {
-        drawBordersAroundConsents: boolean
+        drawBordersAroundConsents: boolean,// (7)!
       },
       data: {
-        consents: Consent[]
+        consents: List<Consent>,// (8)!
       },
       dataProvider: BuiltIn | Custom {
-        obtainedConsentsIds: Flow<string[]>,
-        obtainConsentsIds: Callback(string[])
+        obtainedConsentsIds: Observable<List<string>>,// (9)!
+        obtainConsentsIds: Callback(List<string>),// (10)!
       }
     }
     ```
+
+    1. Optional title for the standalone consent page at the top of the screen.
+    2. Main title displayed on the standalone consent page.
+    3. HTML content describing the consent terms and conditions.
+    4. Optional HTML footer content for additional information.
+    5. Text label for the button that accepts the consent terms.
+    6. Icon displayed next to the consent title in the standalone page.
+    7. Controls whether to display borders around consent sections.
+    8. List of consent options that users must and may accept.
+
+        !!! info ""
+            See [consent :octicons-arrow-right-24:](consent.md) scheme for more deatils
+
+    9. Observable property tracking which consent options have been already accepted.
+    10. Callback function triggered when user accepts consents.
+
+        !!! info ""
+            You should save the consent IDs that are passed and  provide them in the `obtainedConsentsIds` property for future use. If not stored, the SDK will show the consent screen again during the next Try-On session.
 
 === "Standalone Image Picker Page"
     ```typescript
     ConsentStandaloneImagePickerPageFeature {
       strings: {
-        consentPageTitle: string | null,
-        consentTitle: string,
-        consentDescriptionHtml: string,
-        consentFooterHtml: string | null,
-        consentButtonAccept: string
+        consentPageTitle: string | null,// (1)!
+        consentTitle: string,// (2)!
+        consentDescriptionHtml: string,// (3)!
+        consentFooterHtml: string | null,// (4)!
+        consentButtonAccept: string,// (5)!
       },
       icons: {
-        consentTitle24: Icon
+        consentTitle24: Icon,// (6)!
       },
       styles: {
-        drawBordersAroundConsents: boolean
+        drawBordersAroundConsents: boolean,// (7)!
       },
       data: {
-        consents: Consent[]
+        consents: List<Consent>,// (8)!
       },
       dataProvider: BuiltIn | Custom {
-        obtainedConsentsIds: Flow<string[]>,
-        obtainConsentsIds: Callback(string[])
+        obtainedConsentsIds: Observable<List<string>>,// (9)!
+        obtainConsentsIds: Callback(List<string>),// (10)!
       }
     }
     ```
 
-```typescript
-Consent {
-  id: string,
-  type: ConsentType,
-  html: string,
-}
+    1. Optional title for the standalone consent page at the top of the screen.
+    2. Main title displayed on the standalone consent page.
+    3. HTML content describing the consent terms and conditions.
+    4. Optional HTML footer content for additional information.
+    5. Text label for the button that accepts the consent terms.
+    6. Icon displayed next to the consent title in the standalone page.
+    7. Controls whether to display borders around consent sections.
+    8. List of consent options that users must and may accept.
 
-enum ConsentType {
-  implicitWithoutCheckbox,
-  implicitWithCheckbox,
-  explicitRequired,
-  explicitOptional,
-}
-```
+        !!! info ""
+            See [consent :octicons-arrow-right-24:](consent.md) scheme for more deatils
+
+    9. Observable property tracking which consent options have been already accepted.
+    10. Callback function triggered when user accepts consents.
+
+        !!! info ""
+            You should save the consent IDs that are passed and  provide them in the `obtainedConsentsIds` property for future use. If not stored, the SDK will show the consent screen again during the next Try-On session.
 
 #### [:material-arrow-up-left:](#features) Image Picker
 ```typescript
