@@ -486,76 +486,108 @@ enum PowerBarColorScheme {
 ### [:material-arrow-up-left:](#configuration) Features
 ```typescript
 Features {
-  welcomeScreen: WelcomeScreenFeature | null,
-  onboarding: OnboardingFeature | null,
-  consent: ConsentFeature | null,
-  imagePicker: ImagePickerFeature,
-  tryOn: TryOnFeature,
-  share: ShareFeature | null,
-  wishlist: WishlistFeature | null
+  welcomeScreen: WelcomeScreenFeature | null,// (1)!
+  onboarding: OnboardingFeature | null,// (2)!
+  consent: ConsentFeature | null,// (3)!
+  imagePicker: ImagePickerFeature,// (4)!
+  tryOn: TryOnFeature,// (5)!
+  share: ShareFeature | null,// (6)!
+  wishlist: WishlistFeature | null,// (7)!
 }
 ```
+
+1. Configures an optional welcome screen that introduces users to the SDK's functionality.
+2. Sets up the onboarding process to guide users through the SDK's features and capabilities.
+3. Manages user consent options for data processing, which can be integrated with onboarding or used independently.
+4. Controls the image selection interface, allowing users to pick photos, take new ones, use predefined models, or access previous uploads.
+5. Configures the core virtual try-on functionality for trying products virtually.
+6. Enables sharing capabilities for generated try-on images with customizable options.
+7. Integrates with the host app's wishlist functionality for product management.
 
 #### [:material-arrow-up-left:](#features) Welcome Screen
 ```typescript
 WelcomeScreenFeature {
   images: {
-    welcomeBackground: Image
+    welcomeBackground: Image,// (1)!
   },
   icons: {
-    welcome82: Icon
+    welcome82: Icon,// (2)!
   },
   strings: {
-    welcomeTitle: string,
-    welcomeDescription: string,
-    welcomeButtonStart: string
+    welcomeTitle: string,// (3)!
+    welcomeDescription: string,// (4)!
+    welcomeButtonStart: string,// (5)!
   },
   typography: {
-    welcomeTitle: TextStyle,
-    welcomeDescription: TextStyle
+    welcomeTitle: TextStyle,// (6)!
+    welcomeDescription: TextStyle,// (7)!
   }
 }
 
 ```
+
+1. Sets the background image that covers the entire welcome screen.
+2. Defines the main icon displayed in the center of the welcome screen above the title.
+3. Specifies the main title text displayed on the welcome screen.
+4. Configures the descriptive text that appears below the title on the welcome screen.
+5. Sets the text label for the button that initiates the onboarding process or main interface.
+6. Controls the text style for the welcome screen's main title.
+7. Defines the text style for the welcome screen's description text.
 
 #### [:material-arrow-up-left:](#features) Onboarding
 ```typescript
 OnboardingFeature {
-  howItWorksPage: OnboardingHowItWorksPageFeature,
-  bestResultsPage: OnboardingBestResultsPageFeature | null,
+  howItWorksPage: OnboardingHowItWorksPageFeature,// (1)!
+  bestResultsPage: OnboardingBestResultsPageFeature | null,// (2)!
   strings: {
-    onboardingButtonNext: string,
-    onboardingButtonStart: string
+    onboardingButtonNext: string,// (3)!
+    onboardingButtonStart: string,// (4)!
   },
   shapes: {
-    onboardingImageL: Shape,
-    onboardingImageS: Shape
+    onboardingImageL: Shape,// (5)!
+    onboardingImageS: Shape,// (6)!
   },
   dataProvider: BuiltIn | Custom {
-    isOnboardingCompleted: Flow<boolean>,
-    completeOnboarding: Callback()
+    isOnboardingCompleted: Observable<boolean>,// (7)!
+    completeOnboarding: Callback(),// (8)!
   }
 }
 
 ```
+
+1. Configures the first page of onboarding that demonstrates how virtual try-on works through interactive examples.
+2. Sets up an optional page showing examples of photos that yield the best try-on results.
+3. Defines the text label for the navigation button to proceed to the next onboarding page.
+4. Specifies the text label for the button that completes onboarding and starts the main interface.
+5. Controls the shape configuration for large images displayed in the onboarding process.
+6. Sets the shape configuration for small images used in the onboarding interface.
+7. Provides an observable property that tracks whether the user has completed the onboarding process.
+8. Defines the callback function to mark onboarding as completed when the user finishes the process.
 
 ###### [:material-arrow-up-left:](#onboarding) How It Works
 ```typescript
 OnboardingHowItWorksPageFeature {
   images: {
-    onboardingHowItWorksItems: {
-      itemPhoto: Image,
-      itemPreview: Image
-    }[]
+    onboardingHowItWorksItems: List<{// (6)!
+      itemPhoto: Image,// (1)!
+      itemPreview: Image,// (2)!
+    }>
   },
   strings: {
-    onboardingHowItWorksPageTitle: string | null,
-    onboardingHowItWorksTitle: string,
-    onboardingHowItWorksDescription: string
+    onboardingHowItWorksPageTitle: string | null,// (3)!
+    onboardingHowItWorksTitle: string,// (4)!
+    onboardingHowItWorksDescription: string,// (5)!
   }
 }
 
 ```
+
+1. Defines the example photo showing a person wearing the item for the try-on demonstration.
+2. Specifies the flatlay image of the item with a transparent background for the try-on preview.
+3. Sets an optional title for the "How It Works" page at the top of the screen.
+4. Defines the main title displayed below the interactive try-on demonstration section.
+5. Configures the descriptive text explaining how the virtual try-on feature works.
+6. List of exactly 3 objects, each containing images for the interactive onboarding.
 
 ###### [:material-arrow-up-left:](#onboarding) Best Results
 ```typescript
