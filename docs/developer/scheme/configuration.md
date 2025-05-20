@@ -10,6 +10,8 @@ While the implementation details may vary, the core structure and naming convent
 !!! tip "Annotations"
     Don't miss them - click :material-information-outline: for more details
 
+
+
 ## Configuration
 
 ```typescript
@@ -33,6 +35,8 @@ Configuration {
 4. [:material-arrow-down-left:](#analytics) Allows to receive analytics events from the SDK and send them to your analytics provider.
 
 5. [:material-arrow-down-left:](#debugsettings) Controls the logging settings and validation policies for various parameters.
+
+
 
 ### [:material-arrow-up-left:](#configuration) Auth
 
@@ -77,6 +81,8 @@ Configuration {
             If an error is thrown, the SDK will be unable to complete the tryOn request and will display an error message to the user
 
         See [JWT server-side auth example :octicons-link-external-24:](https://developer.aiuta.com/docs/server-side-auth-component){:target="_blank"} for more details on securely generating JWTs.
+
+
 
 ### [:material-arrow-up-left:](#configuration) User Interface
 ```typescript
@@ -141,6 +147,8 @@ enum SwipeToDismissPolicy {
     
     This policy provides a balance between user convenience and protecting critical workflows, ensuring that users can dismiss the SDK when appropriate while safeguarding important pages.    
 
+
+
 #### [:material-arrow-up-left:](#user-interface) Theme
 ```typescript
 Theme {
@@ -159,59 +167,42 @@ Theme {
 ```
 
 1. [:material-arrow-down-left:](#color) Defines the color scheme, brand colors, and various color states for UI elements.
-    
-    !!! note ""
-        [:octicons-arrow-right-24: Explore all colors :material-invert-colors:](../../about/resources/colors.md)
-
 2. [:material-arrow-down-left:](#label) Typography and text styling for different label types across the interface.
-
-    !!! note ""
-        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
-
 3. [:material-arrow-down-left:](#image) Shapes, sizes, and error state icon for image views.
-
-    !!! note ""
-        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
 
 4. [:material-arrow-down-left:](#button) Buttons styles, including typography and shape configurations for different button sizes.
 
-    !!! note ""
-        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
+    ![component](../../media/components/button-brand.png){ width=172 } ![component](../../media/components/button-contrast-inverted.png){ width=200 }
 
 5. [:material-arrow-down-left:](#page-bar) Navigation bar appearance, including title styling and navigation button icons.
 
-    !!! note ""
-        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
+    ![component](../../media/components/pagebar-std.png){ width=400 }
 
 6. [:material-arrow-down-left:](#bottom-sheet) Bottom sheet presentation, including grabber appearance and sheet shape for both main SDK and internal sheets.
 
-    !!! note ""
-        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
+    ![component](../../media/components/bottom-sheet-std.png){ width=400 }
 
 7. [:material-arrow-down-left:](#selection) Multi-selection interface for list views, including selection controls and action buttons.
 
-    !!! note ""
-        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
+    ![component](../../media/components/snack-selection.png){ width=400 }
 
 8. [:material-arrow-down-left:](#error) Error message presentation, including error icons and retry button styling.
 
-    !!! note ""
-        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
+    ![component](../../media/components/snack-error.png){ width=400 }
 
 9. [:material-arrow-down-left:](#product) Product information display, including typography for product details and optional price styling.
-
-    !!! note ""
-        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
+ 
+    ![component](../../media/components/product-bar.png){ width=400 }
 
 10. [:material-arrow-down-left:](#powered-by) "Powered By Aiuta" branding element appearance within the interface.
 
-    !!! note ""
-        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
+    ![component](../../media/components/power-bar.png){ width=150 }
 
 11. [:material-arrow-down-left:](#activity-indicator) Appearance and customization of loading indicators.
 
-    !!! note ""
-        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
+    ![component](../../media/components/activity-indicator.png){ width=36}
+
+
 
 ###### [:material-arrow-up-left:](#theme) Color
 ```typescript
@@ -239,41 +230,84 @@ enum ColorScheme {
     Provided colors should match the scheme.
 
     !!! note ""
-        On __`iOS only`__ it affects the appearance of system screens (e.g., photo gallery, share activity, etc.) and ensures that their `UIUserInterfaceStyle` matches the selected style. For example, if the SDK is set to a light theme but the system theme on the device is dark, the system windows invoked by the SDK will still use the light theme. Additionally, this setting influences the style of blur components and the tint applied to recolored icons within the SDK.
+        Affects the style of blur components
+
+    !!! note ""
+        On __`iOS only`__ it affects the appearance of system screens (e.g., photo gallery, share activity, etc.) and ensures that their `UIUserInterfaceStyle` matches the selected style. For example, if the SDK is set to a light theme but the system theme on the device is dark, the system windows invoked by the SDK will still use the light theme.
 
 2. Main accent color for primary actions and highlights throughout the interface.
 
-    ![primary](../../media/components/colors-brand.png){ width=300 }
+    ![color](../../media/components/colors-brand.png){ width=400 }
 
     !!! example ""
         Default ARGB :material-square-rounded:{ .cl-brand } `#FF4000FF`
 
-3. Primary color used for main content, important information, and optionally for secondary button backgrounds.
+3. Primary color used for main content labels and icons, and important information.
+
+    ![color](../../media/components/pagebar-std.png){ width=300 }
+
+    !!! example ""
+        Default ARGB :material-square-rounded:{ .cl-primary } `#FF000000`
+
 
 4. Secondary color used for supporting content and less prominent information.
 
+    ![color](../../media/components/colors-secondary.png){ width=300 }
+
+    !!! example ""
+        Default ARGB :material-square-rounded:{ .cl-secondary } `#FF9F9F9F`
+
 5. Preferably light color __in any scheme__ optimized for use on dark, brand, and neutral backgrounds.
+
+    ![color](../../media/components/button-contrast.png){ width=200 }
+
+    !!! example ""
+        Default ARGB :material-square-rounded:{ .cl-on-dark } `#FFFFFFFF`
 
 6. Preferably dark color __in any scheme__ optimized for use on light backgrounds.
 
+    ![color](../../media/components/button-contrast-inverted.png){ width=200 }
+
+    !!! example ""
+        Default ARGB :material-square-rounded:{ .cl-on-light } `#FF000000`
+
 7. Main background color used throughout the SDK interface.
+
+    !!! example ""
+        Default ARGB :material-square-rounded:{ .cl-background } `#FFFFFFFF`
 
 8.  Zero-elevation background color.
 
-    For full-screen mode in `dark` scheme, this color is used as a background color, while bottom sheets inside the SDK will still use the `background` color. In any scheme it will be used for full-screen image galleries.
+    For the full-screen mode in the `dark` scheme, this color is used as a page background color, while bottom sheets inside the SDK will still use the `background` color. In any scheme, it will be used for full-screen image galleries.
 
     !!! note ""
-        It's actually supposed to be `black` or close to black in any scheme.
+        It's actually supposed to be black or close to black in any scheme.
+
+    !!! example ""
+        Default ARGB :material-square-rounded:{ .cl-screen } `#FF000000`
 
 9. Neutral background color used for various UI components.
 
+    ![color](../../media/components/colors-neutral.png){ width=200 }
+
+    !!! example ""
+        Default ARGB :material-square-rounded:{ .cl-neutral } `#FFF2F2F7`
+
 10. Color used for component borders and dividers.
 
+    !!! example ""
+        Default ARGB :material-square-rounded:{ .cl-border } `#FFE5E5EA`
+
 11. Color used for blur outlines and checkmark borders.
+
+    !!! example ""
+        Default ARGB :material-square-rounded:{ .cl-outline } `#FFC7C7CC`
 
 12. Light theme with predominantly light colors in the design.
 
 13. Dark theme with predominantly dark colors in the design.
+
+
 
 ###### [:material-arrow-up-left:](#theme) Label
 ```typescript
@@ -292,6 +326,8 @@ LabelTheme {
 3. Sets the text style for regular body text and standard content throughout the interface.
 4. Determines the text style for subtle or less prominent text, often used for secondary information and supporting content.
 
+
+
 ###### [:material-arrow-up-left:](#theme) Image
 ```typescript
 ImageTheme {
@@ -309,6 +345,8 @@ ImageTheme {
 1. Defines the shape configuration for large image views, allowing customization of the visual appearance for prominent images.
 2. Specifies the shape configuration for small image views, enabling consistent styling for secondary or thumbnail images.
 3. Sets the icon to be displayed when an image fails to load, providing visual feedback for error states.
+
+
 
 ###### [:material-arrow-up-left:](#theme) Button
 ```typescript
@@ -330,38 +368,7 @@ ButtonTheme {
 3. Sets the shape configuration for medium buttons.
 4. Configures the shape for small buttons.
 
-###### [:material-arrow-up-left:](#theme) Activity Indicator
-```typescript
-ActivityIndicatorTheme {
-  icons: {
-    loading14: Icon | null // (1)!
-  },
-  colors: {
-    overlay: Color // (4)!
-  }
-  settings: {
-    indicationDelay: Number // (2)!
-    spinDuration: Number // (3)!
-  }
-}
 
-```
-
-1. Optional icon for the activity indicator. If not provided, the system's default indicator will be used.
-
-    !!! example ""
-        System activity indicator by default
-
-        ![Activity Indicator](../../media/components/activity-indicator.png){ width=36}
-
-2. The time in milliseconds before the activity indicator appears. If the task completes before this delay, the indicator will not be shown. Otherwise, the indicator will appear.
-
-3. The duration in milliseconds for one complete rotation of the activity indicator. This setting controls how fast the indicator spins, providing a visual cue of activity progress.
-    
-    !!! note ""
-        The spin duration only applies when a custom icon is used for the activity indicator. If the system's default indicator is used, this setting will be ignored and the indicator will spin with the system default speed.
-
-4. Overlay color used to cover any view when it needs to be locked for an activity. The activity indicator will be placed at the center of this overlay.
 
 ###### [:material-arrow-up-left:](#theme) Page Bar
 ```typescript
@@ -386,7 +393,16 @@ PageBarTheme {
 4.  Controls the position of the close button, determining whether it appears on the right side of the navigation bar.
 
     !!! example ""
-        `false` by default
+
+        === "Default &nbsp; `false`"
+
+            ![PageBar](../../media/components/pagebar-std.png){ width=450 }
+
+        === "`true`"
+
+            ![PageBar](../../media/components/pagebar-rev.png){ width=450 }   
+
+
 
 ###### [:material-arrow-up-left:](#theme) Bottom Sheet
 ```typescript
@@ -422,6 +438,43 @@ BottomSheetTheme {
 8. Controls whether the bottom sheet delimiters extend to the right edge.
 9. Determines whether the bottom sheet delimiters extend to the left edge.
 
+
+
+###### [:material-arrow-up-left:](#theme) Activity Indicator
+```typescript
+ActivityIndicatorTheme {
+  icons: {
+    loading14: Icon | null // (1)!
+  },
+  colors: {
+    overlay: Color // (4)!
+  }
+  settings: {
+    indicationDelay: Number // (2)!
+    spinDuration: Number // (3)!
+  }
+}
+
+```
+
+1. Optional icon for the activity indicator. If not provided, the system's default indicator will be used.
+
+    !!! example ""
+        System activity indicator by default
+
+        ![Activity Indicator](../../media/components/activity-indicator.png){ width=36}
+
+2. The time in milliseconds before the activity indicator appears. If the task completes before this delay, the indicator will not be shown. Otherwise, the indicator will appear.
+
+3. The duration in milliseconds for one complete rotation of the activity indicator. This setting controls how fast the indicator spins, providing a visual cue of activity progress.
+    
+    !!! note ""
+        The spin duration only applies when a custom icon is used for the activity indicator. If the system's default indicator is used, this setting will be ignored and the indicator will spin with the system default speed.
+
+4. Overlay color used to cover any view when it needs to be locked for an activity. The activity indicator will be placed at the center of this overlay.
+
+
+
 ###### [:material-arrow-up-left:](#theme) Selection
 ```typescript
 SelectionSnackbarTheme {
@@ -450,6 +503,8 @@ SelectionSnackbarTheme {
 6. Sets the icon displayed to indicate selected items in the interface.
 7. Controls the background color of the selection snackbar component.
 
+
+
 ###### [:material-arrow-up-left:](#theme) Error
 ```typescript
 ErrorSnackbarTheme {
@@ -473,6 +528,8 @@ ErrorSnackbarTheme {
 3. Sets the icon displayed to indicate the error state in the snackbar.
 4. Controls the background color of the error snackbar component.
 5. Defines the primary color used for error-related elements in the snackbar.
+
+
 
 ###### [:material-arrow-up-left:](#theme) Product
 ```typescript
@@ -508,6 +565,8 @@ ProductBarPricesTheme {
 6. Configures the text style specifically for price displays in the product bar.
 7. Defines the color used to highlight discounted prices in the product bar.
 
+
+
 ###### [:material-arrow-up-left:](#theme) Powered By
 ```typescript
 PowerBarTheme {
@@ -530,6 +589,8 @@ enum PowerBarColorScheme {
 3. Uses the default Aiuta-brand color to highlight "Aiuta" in the `poweredByAiuta` label, which is :material-square-rounded:{ .cl-aiuta } `#FF4000FF`
 4. Applies the [`primary` color](#color) to the entire label without highlighting "Aiuta".
 
+
+
 ### [:material-arrow-up-left:](#configuration) Features
 ```typescript
 Features {
@@ -550,6 +611,8 @@ Features {
 5. [:material-arrow-down-left:](#try-on) Configures the core virtual try-on functionality for trying products virtually.
 6. [:material-arrow-down-left:](#share) Enables sharing capabilities for generated try-on images with customizable options.
 7. [:material-arrow-down-left:](#wishlist) Integrates with the host app's wishlist functionality for product management.
+
+
 
 #### [:material-arrow-up-left:](#features) Welcome Screen
 ```typescript
@@ -581,6 +644,8 @@ WelcomeScreenFeature {
 6. Controls the text style for the welcome screen's main title.
 7. Defines the text style for the welcome screen's description text.
 
+
+
 #### [:material-arrow-up-left:](#features) Onboarding
 ```typescript
 OnboardingFeature {
@@ -611,6 +676,8 @@ OnboardingFeature {
 7. Provides an observable property that tracks whether the user has completed the onboarding process.
 8. Defines the callback function to mark onboarding as completed when the user finishes the process.
 
+
+
 ###### [:material-arrow-up-left:](#onboarding) How It Works
 ```typescript
 OnboardingHowItWorksPageFeature {
@@ -635,6 +702,8 @@ OnboardingHowItWorksPageFeature {
 4. Defines the main title displayed below the interactive try-on demonstration section.
 5. Configures the descriptive text explaining how the virtual try-on feature works.
 6. List of exactly 3 objects, each containing images for the interactive onboarding.
+
+
 
 ###### [:material-arrow-up-left:](#onboarding) Best Results
 ```typescript
@@ -666,6 +735,8 @@ OnboardingBestResultsPageFeature {
 6. Main title displayed above the example photos section.
 7. Descriptive text explaining what makes a good photo for virtual try-on.
 8. Controls whether to reduce shadow effects on example photos for better visibility.
+
+
 
 #### [:material-arrow-up-left:](#features) Consent
 
@@ -768,6 +839,8 @@ OnboardingBestResultsPageFeature {
         !!! info ""
             You should save the consent IDs that are passed and  provide them in the `obtainedConsentsIds` property for future use. If not stored, the SDK will show the consent screen again during the next Try-On session.
 
+
+
 #### [:material-arrow-up-left:](#features) Image Picker
 ```typescript
 ImagePickerFeature {
@@ -795,6 +868,8 @@ ImagePickerFeature {
 7.  Description text shown when the image picker is empty.
 8.  Label text for the button used to upload new photos.
 
+
+
 ###### [:material-arrow-up-left:](#image-picker) Camera
 ```typescript
 ImagePickerCameraFeature {
@@ -816,6 +891,8 @@ ImagePickerCameraFeature {
 4.  Description text shown in the alert when camera permissions are denied.
 5.  Label text for the button that opens app settings to change camera permissions.
 
+
+
 ###### [:material-arrow-up-left:](#image-picker) Photo Gallery
 ```typescript
 ImagePickerPhotoGalleryFeature {
@@ -830,6 +907,8 @@ ImagePickerPhotoGalleryFeature {
 
 1.  Icon displayed for the gallery button in the bottom sheet list.
 2.  Label text for the button used to select a photo from the gallery.
+
+
 
 ###### [:material-arrow-up-left:](#image-picker) Predefined Models
 ```typescript
@@ -855,6 +934,8 @@ ImagePickerPredefinedModelFeature {
 4.  Label text displayed before the predefined models button in the image picker.
 5.  Error message shown when the list of predefined models is empty.
 6.  Mapping of category identifiers to their display titles, typically covering `man` and `woman` categories.
+
+
 
 ###### [:material-arrow-up-left:](#image-picker) Uploads History
 ```typescript
@@ -884,6 +965,8 @@ ImagePickerUploadsHistoryFeature {
 6.  Callback to add new images to the uploads history.
 7.  Callback to remove images from the uploads history.
 8.  Callback to move a selected image to the top of the history when reused.
+
+
 
 #### [:material-arrow-up-left:](#features) Try On
 ```typescript
@@ -928,6 +1011,8 @@ TryOnFeature {
 12.  Label text used for the "Try On" buttons throughout the interface.
 13.  Optional gradient colors for styling the TryOn button.
 
+
+
 ##### [:material-arrow-up-left:](#try-on) Loading Page
 ```typescript
 TryOnLoadingPageFeature {
@@ -949,6 +1034,8 @@ TryOnLoadingPageFeature {
 4.  Optional gradient colors for the loading status background.
 5.  Visual style for the loading status indicator, either primary (solid) or blurred (with optional outline).
 
+
+
 ##### [:material-arrow-up-left:](#try-on) Input Image Validation
 ```typescript
 TryOnInputImageValidationFeature {
@@ -961,6 +1048,8 @@ TryOnInputImageValidationFeature {
 
 1.  Message displayed to users when their uploaded image fails validation.
 2.  Label text for the button that allows users to select a different photo.
+
+
 
 ##### [:material-arrow-up-left:](#try-on) Cart
 ```typescript
@@ -976,6 +1065,8 @@ TryOnCartFeature {
 
 1.  Label text for the button that adds the current product to the cart.
 2.  Callback function that handles adding a product to the cart using its identifier.
+
+
 
 ##### [:material-arrow-up-left:](#try-on) Fit Disclaimer
 ```typescript
@@ -995,6 +1086,8 @@ TryOnFitDisclaimerFeature {
 2.  Title text displayed in the fit disclaimer message.
 3.  Detailed description text explaining the fit disclaimer information.
 4.  Label text for the button that dismisses the fit disclaimer.
+
+
 
 ##### [:material-arrow-up-left:](#try-on) Feedback
 ```typescript
@@ -1025,6 +1118,8 @@ TryOnFeedbackFeature {
 8.  Label text for the button that submits the user's feedback.
 9.  Message displayed to users after they submit their feedback.
 
+
+
 ###### [:material-arrow-up-left:](#feedback) Other
 ```typescript
 TryOnFeedbackOtherFeature {
@@ -1041,6 +1136,8 @@ TryOnFeedbackOtherFeature {
 2.  Label text for the button that submits the custom feedback.
 3.  Label text for the button that cancels the custom feedback.
 4.  Text label for the option to provide custom feedback.
+
+
 
 ##### [:material-arrow-up-left:](#try-on) Generations History
 ```typescript
@@ -1065,6 +1162,8 @@ TryOnGenerationsHistoryFeature {
 4.  Callback function to add new generated images to the history.
 5.  Callback function to remove images from the generations history.
 
+
+
 ##### [:material-arrow-up-left:](#try-on) Other Photo
 ```typescript
 TryOnWithOtherPhotoFeature {
@@ -1075,6 +1174,8 @@ TryOnWithOtherPhotoFeature {
 ```
 
 1.  Icon displayed for the "Change Photo" action, allowing users to continue with a different photo.
+
+
 
 #### [:material-arrow-up-left:](#features) Share
 ```typescript
@@ -1098,6 +1199,8 @@ ShareFeature {
 3.  Label text for the share button in the fullscreen gallery.
 4.  Optional `dataProvider` callback function that generates additional text to be shared along with the image.
 
+
+
 ###### [:material-arrow-up-left:](#share) Watermark
 ```typescript
 ShareWatermarkFeature {
@@ -1108,6 +1211,8 @@ ShareWatermarkFeature {
 ```
 
 1.  Logo image to be used as a watermark on shared content.
+
+
 
 #### [:material-arrow-up-left:](#features) Wishlist
 ```typescript
@@ -1132,6 +1237,8 @@ WishlistFeature {
 4.  Observable collection of product IDs currently in the wishlist.
 5.  Callback function to add or remove a product from the wishlist.
 
+
+
 ### [:material-arrow-up-left:](#configuration) Analytics
 ```typescript
 Analytics {
@@ -1142,6 +1249,8 @@ Analytics {
 ```
 
 1.  Callback function that processes analytics events generated by the SDK, allowing integration with external analytics services or custom event handling.
+
+
 
 ### [:material-arrow-up-left:](#configuration) DebugSettings
 ```typescript
