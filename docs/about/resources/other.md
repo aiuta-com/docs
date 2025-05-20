@@ -36,6 +36,49 @@ This page contains descriptions of additional unclassified settings for various 
 
     ![BottomSheet](../../media/components/bottom-sheet-lre.png){ width=450 }
 
+## Component Style
+
+- Adjusting colors on some buttons and status views, where explicitly available
+
+!!! note ""
+    Refer to the [:octicons-arrow-right-24: colors :material-invert-colors:](colors.md)
+
+=== "`brand`"
+
+    ![Button](../../media/components/button-brand.png){ width=200 }
+
+    - `brand` background color
+    - `onDark` foreground color for labels and icons
+
+=== "`contrast`"
+
+    ![Button](../../media/components/button-contrast.png){ width=200 }
+
+    - `onLight` background color
+    - `onDark` foreground color for labels and icons
+
+=== "`contrastInverted`"
+
+    ![Button](../../media/components/button-contrast-inverted.png){ width=200 }
+
+    - `onDark` background color
+    - `onLight` foreground color for labels and icons
+
+=== "`blurred`"
+
+    ![Button](../../media/components/button-blurred.png){ width=200 }
+
+    - apply a blurred background that matches the color `scheme` (`light` or `dark`)
+    - `primary` foreground color for labels and icons
+
+=== "`blurredWithOutline`"
+
+    ![Button](../../media/components/button-blurred-outline.png){ width=200 }
+
+    - apply a blurred background that matches the color `scheme` (`light` or `dark`)
+    - `primary` foreground color for labels and icons
+    - `outline` color for the border
+
 <!-- ## Various pages    
 
 - Optinal `reduceShadows` toggle to reduce shadows on the page where it is possible

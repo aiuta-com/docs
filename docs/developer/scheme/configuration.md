@@ -111,26 +111,33 @@ enum SwipeToDismissPolicy {
 
 4.  Presents the SDK in full-screen mode. This style occupies the entire screen, hiding the parent view completely.
 
-5.  Opens the SDK in a bottom sheet. This mode is supported on iOS from version `16` onwards. For older versions, it defaults to `pageSheet`. Unlike `pageSheet`, the parent view remains fullscreen but is covered by the sheet, rather than being stacked behind it.
+5.  Opens the SDK in a bottom sheet. 
 
-6.  The SDK will be presented in a page sheet. 
+    !!! note "Partial iOS support"
+        This mode is supported on iOS from version `16` onwards. For older versions, it defaults to `pageSheet`. Unlike `pageSheet`, the parent view remains fullscreen but is covered by the sheet, rather than being stacked behind it.
 
-    - This mode is recommended starting from __iOS__ 13, as it introduces a new modal presentation style that allows part of the parent view to remain visible. This helps users maintain their original context while interacting with the sheet. For more information, refer to [Best practices from Apple's HIG :octicons-link-external-24:](https://developer.apple.com/design/human-interface-guidelines/sheets#Best-practices){:target="_blank"}. In this mode, the parent view is stacked behind the sheet, slightly shrinking and moving away from the screen edges. 
-    
-    - On __Android__, this mode behaves as a `bottomSheet`.
+6.  The SDK appears in a page sheet, which partially covers the parent view, allowing users to see some of the underlying content while interacting with the SDK. Unlike a `bottomSheet`, which keeps parent view fullscreen, a page sheet stacking the parent view behind, slightly shrinking and moving it away from the screen edges.
+
+    !!! tip ""
+        - This mode is recommended starting from __iOS__ 13. For more information, refer to [Best practices from Apple's HIG :octicons-link-external-24:](https://developer.apple.com/design/human-interface-guidelines/sheets#Best-practices){:target="_blank"}.
+        - On __Android__, this mode behaves as a `bottomSheet`.
 
 7.  Allows the SDK to be dismissed at any time by swiping down anywhere on the screen.
-
-    This policy provides the most flexibility for users, enabling them to close the SDK from any page or context.    
+    
+    !!! tip ""
+        This policy provides the most flexibility for users, enabling them to close the SDK from any page or context.    
 
 8.  Restricts dismissal to swiping down on the header area only.
-
-    This policy limits the swipe-to-dismiss gesture to the header area, reducing the likelihood of accidental dismissals.
+    
+    !!! tip ""
+        This policy limits the swipe-to-dismiss gesture to the header area, reducing the likelihood of accidental dismissals.
 
 9.  Applies different swipe-to-dismiss policies based on the page context.
     
-    - On pages that are safe to close, such as onboarding or photo picker pages, the `allowAlways` policy is applied, allowing dismissal from anywhere on the screen.
-    - On critical pages, such as those waiting for generation or displaying results, the `allowHeaderSwipeOnly` policy is applied to prevent accidental dismissals.
+    !!! tip ""
+        
+        - On pages that are safe to close, such as onboarding or photo picker pages, the `allowAlways` policy is applied, allowing dismissal from anywhere on the screen.
+        - On critical pages, such as those waiting for generation or displaying results, the `allowHeaderSwipeOnly` policy is applied to prevent accidental dismissals.
     
     This policy provides a balance between user convenience and protecting critical workflows, ensuring that users can dismiss the SDK when appropriate while safeguarding important pages.    
 
@@ -141,9 +148,9 @@ Theme {
   label: LabelTheme // (2)!
   image: ImageTheme // (3)!
   button: ButtonTheme // (4)!
-  activityIndicator: ActivityIndicatorTheme // (11)!
   pageBar: PageBarTheme // (5)!
   bottomSheet: BottomSheetTheme // (6)!
+  activityIndicator: ActivityIndicatorTheme // (11)!
   selectionSnackbar: SelectionSnackbarTheme // (7)!
   errorSnackbar: ErrorSnackbarTheme // (8)!
   productBar: ProductBarTheme // (9)!
@@ -158,23 +165,53 @@ Theme {
 
 2. [:material-arrow-down-left:](#label) Typography and text styling for different label types across the interface.
 
+    !!! note ""
+        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
+
 3. [:material-arrow-down-left:](#image) Shapes, sizes, and error state icon for image views.
+
+    !!! note ""
+        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
 
 4. [:material-arrow-down-left:](#button) Buttons styles, including typography and shape configurations for different button sizes.
 
+    !!! note ""
+        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
+
 5. [:material-arrow-down-left:](#page-bar) Navigation bar appearance, including title styling and navigation button icons.
+
+    !!! note ""
+        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
 
 6. [:material-arrow-down-left:](#bottom-sheet) Bottom sheet presentation, including grabber appearance and sheet shape for both main SDK and internal sheets.
 
+    !!! note ""
+        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
+
 7. [:material-arrow-down-left:](#selection) Multi-selection interface for list views, including selection controls and action buttons.
+
+    !!! note ""
+        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
 
 8. [:material-arrow-down-left:](#error) Error message presentation, including error icons and retry button styling.
 
+    !!! note ""
+        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
+
 9. [:material-arrow-down-left:](#product) Product information display, including typography for product details and optional price styling.
+
+    !!! note ""
+        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
 
 10. [:material-arrow-down-left:](#powered-by) "Powered By Aiuta" branding element appearance within the interface.
 
+    !!! note ""
+        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
+
 11. [:material-arrow-down-left:](#activity-indicator) Appearance and customization of loading indicators.
+
+    !!! note ""
+        [:octicons-arrow-right-24: Explore all resources :material-format-font: :fontawesome-regular-images:](../../about/resources/overview.md)
 
 ###### [:material-arrow-up-left:](#theme) Color
 ```typescript
@@ -206,9 +243,14 @@ enum ColorScheme {
 
 2. Main accent color for primary actions and highlights throughout the interface.
 
-3. Primary text color used for main content and important information.
+    ![primary](../../media/components/colors-brand.png){ width=300 }
 
-4. Secondary text color used for supporting content and less prominent information.
+    !!! example ""
+        Default ARGB :material-square-rounded:{ .cl-brand } `#FF4000FF`
+
+3. Primary color used for main content, important information, and optionally for secondary button backgrounds.
+
+4. Secondary color used for supporting content and less prominent information.
 
 5. Preferably light color __in any scheme__ optimized for use on dark, brand, and neutral backgrounds.
 
@@ -218,7 +260,7 @@ enum ColorScheme {
 
 8.  Zero-elevation background color.
 
-    For full-screen mode in dark scheme, this color is used as a background color, while bottom sheets inside the SDK will still use the background color. In any scheme it will be used for full-screen image galleries.
+    For full-screen mode in `dark` scheme, this color is used as a background color, while bottom sheets inside the SDK will still use the `background` color. In any scheme it will be used for full-screen image galleries.
 
     !!! note ""
         It's actually supposed to be `black` or close to black in any scheme.
@@ -502,7 +544,7 @@ Features {
 ```
 
 1. [:material-arrow-down-left:](#welcome-screen) Configures an optional welcome screen that introduces users to the SDK's functionality.
-2. [:material-arrow-down-left:](#oboarding) Sets up the onboarding process to guide users through the SDK's features and capabilities.
+2. [:material-arrow-down-left:](#onboarding) Sets up the onboarding process to guide users through the SDK's features and capabilities.
 3. [:material-arrow-down-left:](#consent) Manages user consent options for data processing, which can be integrated with onboarding or used independently.
 4. [:material-arrow-down-left:](#image-picker) Controls the image selection interface, allowing users to pick photos, take new ones, use predefined models, or access previous uploads.
 5. [:material-arrow-down-left:](#try-on) Configures the core virtual try-on functionality for trying products virtually.
@@ -1010,9 +1052,9 @@ TryOnGenerationsHistoryFeature {
     generationsHistoryPageTitle: String // (2)!
   }
   dataProvider: BuiltIn | Custom {
-    generatedImages: Flow<GenegaredImage> // (3)!
-    addGeneratedImages: Callback(GenegaredImage[]) // (4)!
-    deleteGeneratedImages: Callback(GenegaredImage[]) // (5)!
+    generatedImages: Observable<List<GenegaredImage>> // (3)!
+    addGeneratedImages: Callback(List<GenegaredImage>) // (4)!
+    deleteGeneratedImages: Callback(List<GenegaredImage>) // (5)!
   }
 }
 ```
