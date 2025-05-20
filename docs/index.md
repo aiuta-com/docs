@@ -91,4 +91,10 @@ If you prefer even more control over the implementation or have specific require
 
     Coming soon
 
+-   :fontawesome-brands-shopify:{ .lg } &nbsp; __Shopify__ 
+
+    ---
+
+    [:octicons-arrow-right-24: Overview](shopify/overview.md)  
+
 </div>

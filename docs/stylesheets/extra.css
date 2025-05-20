@@ -6,19 +6,19 @@
 
 
 /* Force grid cards to be max 2 columns */
-.grid.cards {
+/* .grid.cards {
   grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)) !important;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 
 /* Force grid cards to be 1 column if screen is too small */
-@media (max-width: 650px) {
+/* @media (max-width: 650px) {
   .grid.cards {
     grid-template-columns: 1fr !important;
   }
-}
+} */
 
 
 /* Divider between tab groups */
@@ -195,4 +195,9 @@
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
   padding-bottom: 4px;
+}
+
+/* Make construction icon extra large */
+.md-construction {
+  font-size: var(--md-construction-icon-size) !important;
 }

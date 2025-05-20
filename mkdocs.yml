@@ -12,6 +12,7 @@ nav:
     
   - Explore:
     - Demo Apps: about/demo-apps.md
+    - Shopify App: about/shopify-app.md
     - Pages:
       - Welcome: about/pages/welcome-screen.md
       - Onboarding: about/pages/onboarding.md
@@ -53,6 +54,12 @@ nav:
       - Installation: flutter/installation.md
       - Configuration: flutter/configuration.md
       - Basic Usage: flutter/basic-usage.md
+
+  - Web:
+    - Overview: web/overview.md
+
+  - Shopify:
+    - Overview: shopify/overview.md
 
 theme:
   name: 'material'
