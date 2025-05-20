@@ -3,8 +3,6 @@
 ![Shopify App](../media/shopify-app.png){width=540}
 
 !!! info
-    :construction:{ .xl } &nbsp; :construction:{ .xl } &nbsp; :construction:{ .xl } &nbsp; :construction:{ .xl } &nbsp; :construction:{ .xl }
-
     Integration docs under construction
 
 ## Links

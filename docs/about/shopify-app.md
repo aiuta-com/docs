@@ -13,7 +13,7 @@ Aiuta Try-On allows shoppers to see how clothes fit and look on them in real tim
 </div>
 <div class="grid cards" markdown>
 
-- :material-book-open-variant: &nbsp; [Explore the integration guide and additional resources...](../shopify/overview.md)
+- :material-book-open-variant: &nbsp; [Read the integration guide and review additional resources...](../shopify/overview.md)
 
 </div>
 

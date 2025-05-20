@@ -1,14 +1,14 @@
-site_name: Aiuta SDK
+site_name: Aiuta
 site_url: https://sdk.aiuta.com/
 site_author: Aiuta USA, Inc
 site_description: >-
-  Aiuta Virtual Try-On SDK
+  Aiuta Virtual Try-On Solutions
 
 copyright: Copyright &copy; 2024 - 2025 Aiuta USA, Inc
 
 nav:
   - About:
-    - Aiuta SDK: index.md
+    - Aiuta Virtual Try-On Solutions: index.md
     
   - Explore:
     - Demo Apps: about/demo-apps.md
@@ -33,17 +33,20 @@ nav:
       - Events: about/analytics/analytics.md
       - Errors: about/analytics/errors.md
 
-  - Developer:
+  - SDK:
     - Overview: developer/overview.md
     - Scheme:
-      - Configuration: developer/scheme/configuration.md
+      - Setup:
+        - Configuration: developer/scheme/configuration.md
+        - User Interface: developer/scheme/user-interface.md
+        - Features: developer/scheme/features.md
       - Platform Types: developer/scheme/platform-types.md
       - History Images: developer/scheme/history-images.md
       - Consent: developer/scheme/consent.md
       - Product: developer/scheme/product.md
 
   - Android:
-    - Getting started: android/aiuta/get-started.md
+    - Overview: android/overview.md
     
   - iOS:
     - Overview: ios/overview.md

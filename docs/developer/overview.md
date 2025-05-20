@@ -1,8 +1,28 @@
 # General SDK documentation and schemes
 
-This area covers the common public models used across our SDKs for [Android](../android/overview.md), [iOS](../ios/overview.md), and [Flutter](../flutter/overview.md). While the implementation and naming details may vary depending on the specific platform, the core concepts and overall structure remain consistent across all platforms.
+This area covers the common approach across our SDKs for [Android](../android/overview.md), [iOS](../ios/overview.md), and [Flutter](../flutter/overview.md). 
 
-!!! example "Naming"
+## Implementation Overview
+
+<div class="annotate" markdown>
+1. Add dependency to your project&nbsp; (1)
+2. Set up the SDK with a [configuration](scheme/configuration.md)
+3. Start the virtual try-on by passing a [product](scheme/product.md) to the SDK
+</div>
+
+1.  <div class="grid cards" markdown>
+
+    - :fontawesome-brands-android: &nbsp; Android
+    - :fontawesome-brands-apple: &nbsp; iOS
+    - :fontawesome-brands-flutter: &nbsp; [Flutter](../flutter/installation.md)
+
+    </div>
+
+## Naming convention
+
+Implementation and naming details may vary depending on the specific platform, but the core concepts and overall structure remain consistent across all platforms.
+
+!!! example "Same same but different"
     For example type names, described in the schemes, like: 
 
     - `Configuration`
