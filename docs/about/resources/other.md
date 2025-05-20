@@ -1,15 +1,10 @@
----
-hide:
-  - toc
----
-
 # Other styles, toggles and settings
 
 This page contains descriptions of additional unclassified settings for various user interface components that provide more configuration flexibility.
 
 ## Page Bar
 
-- A toggle to specify whether the close button should be positioned on the right side.
+A toggle to specify whether the close button should be positioned on the right side.
 
 === "Default"
 
@@ -22,7 +17,7 @@ This page contains descriptions of additional unclassified settings for various 
 
 ## Bottom Sheet
 
-- Adjusting delimiters in the bottom sheet icon buttons
+Adjusting delimiters in the bottom sheet icon buttons
 
 === "Default"
 
@@ -38,14 +33,14 @@ This page contains descriptions of additional unclassified settings for various 
 
 ## Component Style
 
-- Adjusting colors on some buttons and status views, where explicitly available
+Adjusting colors on some buttons and status views, where explicitly available
 
-!!! note ""
-    Refer to the [:octicons-arrow-right-24: colors :material-invert-colors:](colors.md)
+!!! info ""
+    Shapes are independent and are not affected by this styles
 
 === "`brand`"
 
-    ![Button](../../media/components/button-brand.png){ width=200 }
+    ![Button](../../media/components/button-brand.png){ width=172 }
 
     - `brand` background color
     - `onDark` foreground color for labels and icons
@@ -66,18 +61,21 @@ This page contains descriptions of additional unclassified settings for various 
 
 === "`blurred`"
 
-    ![Button](../../media/components/button-blurred.png){ width=200 }
+    ![Button](../../media/components/button-blurred.png){ width=164 }
 
     - apply a blurred background that matches the color `scheme` (`light` or `dark`)
     - `primary` foreground color for labels and icons
 
 === "`blurredWithOutline`"
 
-    ![Button](../../media/components/button-blurred-outline.png){ width=200 }
+    ![Button](../../media/components/button-blurred-outline.png){ width=164 }
 
     - apply a blurred background that matches the color `scheme` (`light` or `dark`)
     - `primary` foreground color for labels and icons
     - `outline` color for the border
+
+!!! note ""
+    Refer to the [:octicons-arrow-right-24: colors :material-invert-colors:](colors.md)
 
 <!-- ## Various pages    
 

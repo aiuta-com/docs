@@ -13,6 +13,10 @@
         {% if nav_item.title == "Explore" %}
           <li class="md-tabs__item md-tabs__item--divider"></li>
         {% endif %}
+        <!-- Add divider after the Web tab -->
+        {% if nav_item.title == "Web" %}
+          <li class="md-tabs__item md-tabs__item--divider"></li>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>

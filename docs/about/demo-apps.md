@@ -1,4 +1,4 @@
-# Demo Applications
+# SDK Demo Apps
 
 ![Demo App](../media/demo-app.png){width=200}
 
@@ -8,8 +8,8 @@ Experience Aiuta SDK in action through our demo applications. These applications
 
 <div class="grid cards" markdown>
 
-- :fontawesome-brands-app-store-ios: [Download on the __App Store__](https://apps.apple.com/app/id6477541220){:target="_blank"}
-- :fontawesome-brands-google-play: [Get it on __Google Play__](https://play.google.com/store/apps/details?id=com.aiuta.fashionsdk.demo&hl=en){:target="_blank"}
+- :fontawesome-brands-app-store-ios: &nbsp; [Download on the __App Store__](https://apps.apple.com/app/id6477541220){:target="_blank"}
+- :fontawesome-brands-google-play: &nbsp; [Get it on __Google Play__](https://play.google.com/store/apps/details?id=com.aiuta.fashionsdk.demo&hl=en){:target="_blank"}
 
 </div>
 

@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# Aiuta Virtual Try-On SDK
+# Aiuta Virtual Try-On Solutions
 
 ![About Virtual Try-On](media/about.png)
 
@@ -57,7 +57,7 @@ If you prefer even more control over the implementation or have specific require
     ndkVersion: 26.1.10909125
     ```
 
-    [:octicons-arrow-right-24: Get started](android/aiuta/get-started.md)
+    [:octicons-arrow-right-24: Overview](android/overview.md)
 
 -   :fontawesome-brands-apple:{ .lg } &nbsp; __iOS__
 
@@ -79,9 +79,7 @@ If you prefer even more control over the implementation or have specific require
     sdk: >=3.1.0 <4.0.0
     flutter: >= 3.19.6
     ```
-
-    !!! quote ""
-        For :fontawesome-brands-android: Android and :fontawesome-brands-apple: iOS
+    <sup class="cl-secondary">:fontawesome-brands-android:&nbsp; Android &nbsp; :fontawesome-brands-apple: iOS</sup>
     
     [:octicons-arrow-right-24: Overview](flutter/overview.md)  
 
@@ -90,5 +88,11 @@ If you prefer even more control over the implementation or have specific require
     ---
 
     Coming soon
+
+-   :fontawesome-brands-shopify:{ .lg } &nbsp; __Shopify__ 
+
+    ---
+
+    [:octicons-arrow-right-24: Overview](shopify/overview.md)  
 
 </div>
