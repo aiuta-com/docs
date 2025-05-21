@@ -93,7 +93,7 @@ Configuration {
 
 ### [:material-arrow-up-left:](#configuration) Features
 <div class="grid cards" markdown>
-- :material-book-open-variant: &nbsp; continue on [features configuration page](features.md)
+- :material-book-open-variant: &nbsp; continue on [features configuration page...](features.md)
 </div>
 
 ### [:material-arrow-up-left:](#configuration) Analytics
