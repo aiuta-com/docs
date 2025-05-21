@@ -564,9 +564,9 @@ TryOnGenerationsHistoryFeature {
     generationsHistoryPageTitle: String // (2)!
   }
   dataProvider: BuiltIn | Custom {
-    generatedImages: Observable<List<GenegaredImage>> // (3)!
-    addGeneratedImages: Callback(List<GenegaredImage>) // (4)!
-    deleteGeneratedImages: Callback(List<GenegaredImage>) // (5)!
+    generatedImages: Observable<List<GeneratedImage>> // (3)!
+    addGeneratedImages: Callback(List<GeneratedImage>) // (4)!
+    deleteGeneratedImages: Callback(List<GeneratedImage>) // (5)!
   }
 }
 ```

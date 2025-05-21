@@ -24,7 +24,7 @@ Input images used in the Aiuta SDK for try-on sessions can either be uploaded by
 ## Generated Image
 
 ```typescript
-GenegaredImage {
+GeneratedImage {
     id: String // (1)!
     url: String // (2)!
     ownerType: OwnerType // (3)!
