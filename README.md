@@ -19,7 +19,7 @@ This repository contains the official documentation for the Aiuta Virtual Try-On
 - Detailed usage **analytics** on every SDK page and feature
 - Ready-made solutions for interacting with your application
 
-[Explore Documentation, Demo apps, SDK pages, customizations and more...](https://sdk.aiuta.com)
+[Explore Documentation, Demo apps, SDK pages, customizations and more...](https://docs.aiuta.com)
 
 ## Platform Support
 
