@@ -1,6 +1,6 @@
 # Results Screen
 
-![Results Screen](../../media/pages/results.png){width=300}
+![Results Screen](../../../media/pages/results.png){width=300}
 
 The Results Screen displays the generated virtual try-on results and provides various interaction options for users to engage with the results, such as:
 
@@ -15,7 +15,7 @@ The Results Screen displays the generated virtual try-on results and provides va
 
     ### Cart Integration
 
-    ![Cart Integration](../../media/pages/results-cart.png){width=300}
+    ![Cart Integration](../../../media/pages/results-cart.png){width=300}
 
     Allows users to add products from the try-on results directly to their shopping cart.
 
@@ -69,8 +69,8 @@ The Results Screen displays the generated virtual try-on results and provides va
 
         ### Feedback
 
-        ![Feedback](../../media/pages/results-feedback.png){width=300}
-        ![Feedback](../../media/pages/results-feedback-gratitude.png){width=300}
+        ![Feedback](../../../media/pages/results-feedback.png){width=300}
+        ![Feedback](../../../media/pages/results-feedback-gratitude.png){width=300}
 
         Enables users to provide feedback on the try-on results quality.
 
@@ -98,8 +98,8 @@ The Results Screen displays the generated virtual try-on results and provides va
 
         ### Other Feedback
 
-        ![Feedback](../../media/pages/results-feedback-other.png){width=300}
-        ![Feedback](../../media/pages/results-feedback-gratitude.png){width=300}
+        ![Feedback](../../../media/pages/results-feedback-other.png){width=300}
+        ![Feedback](../../../media/pages/results-feedback-gratitude.png){width=300}
 
         Enables users to provide custom comment on the try-on results quality.
 
@@ -117,7 +117,7 @@ The Results Screen displays the generated virtual try-on results and provides va
 
     ### Continue with Other Photo
 
-    ![Continue with Other Photo](../../media/pages/results-continue.png){width=300}
+    ![Continue with Other Photo](../../../media/pages/results-continue.png){width=300}
 
     Allows users to start a new try-on with a different photo.
 
@@ -174,7 +174,7 @@ The Results Screen displays the generated virtual try-on results and provides va
 
     ### Fit Disclaimer
 
-    ![Fit Disclaimer](../../media/pages/results-fit.png){width=300}
+    ![Fit Disclaimer](../../../media/pages/results-fit.png){width=300}
 
     Displays important information about the virtual try-on fit.
 

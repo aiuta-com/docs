@@ -14,11 +14,6 @@ Let your customers visualize how clothes look on them — instantly and accurate
 - __7x faster__ than the average competitor
 - Preserve pose and body shape
 
-<!-- <div class="grid cards" markdown>
-- :material-book-open-variant:{ .lg } [Explore SDKs and Apps ](./about/demo-apps.md)
-- :aiuta-logo:{ .lg } [Discover more services at __aiuta__.com :octicons-link-external-24:](https://aiuta.com){:target="_blank"}
-</div> -->
-
 ## Available as
 
 <div class="grid cards" markdown>
@@ -34,7 +29,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     ndkVersion: 26.1.10909125
     ```
 
-    [:octicons-arrow-right-24: Overview](sdk/overview.md) &nbsp; [:octicons-arrow-right-24: Quick Start](android/overview.md)
+    [:octicons-arrow-right-24: Overview](sdk/overview.md) &nbsp; • &nbsp; [Quick Start](sdk/android/quick-start.md)
 
 -   :fontawesome-brands-apple:{ .lg } __iOS__ <span class="cl-secondary">SDK</span>
 
@@ -46,7 +41,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     Xcode: 15.3+
     ```
     
-    [:octicons-arrow-right-24: Overview](sdk/overview.md) &nbsp; [:octicons-arrow-right-24: Quick Start](ios/overview.md)
+    [:octicons-arrow-right-24: Overview](sdk/overview.md) &nbsp; • &nbsp; [Quick Start](sdk/ios/quick-start.md)
 
 -   :fontawesome-brands-flutter:{ .lg } __Flutter__ <span class="cl-secondary">SDK</span>
 
@@ -58,7 +53,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     ```
     <sup class="cl-secondary">:fontawesome-brands-android:&nbsp; Android &nbsp; :fontawesome-brands-apple: iOS</sup>
     
-    [:octicons-arrow-right-24: Overview](sdk/overview.md) &nbsp; [:octicons-arrow-right-24: Quick Start](flutter/overview.md)
+    [:octicons-arrow-right-24: Overview](sdk/overview.md) &nbsp; • &nbsp; [Quick Start](sdk/flutter/quick-start.md)
 
 -   :fontawesome-brands-js:{ .lg } __Web__ <span class="cl-secondary">SDK</span>
 
@@ -76,6 +71,12 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
     ---
 
-    [:octicons-arrow-right-24: Overview](api/overview.md)  
+    [:octicons-arrow-right-24: Overview](api/overview.md) &nbsp; • &nbsp; [Getting Started](api/getting-started.md)
+
+</div>
+
+<div class="grid cards" markdown>
+
+- :aiuta-logo:{ .lg } [Discover more fashion services at __aiuta.com__ :octicons-link-external-24:](https://aiuta.com){:target="_blank"}
 
 </div>

@@ -6,7 +6,7 @@ The Consent feature allows you to collect user permissions for data processing o
 
     ## Embedded
 
-    ![How It Works](../../media/pages/how-it-works-1.png){ width=300 }
+    ![How It Works](../../../media/pages/how-it-works-1.png){ width=300 }
 
     The legal information is displayed at the bottom of the onboarding screen. Users are not required to explicitly accept the terms to proceed.
 
@@ -30,7 +30,7 @@ The Consent feature allows you to collect user permissions for data processing o
 
     ## Standalone
 
-    ![Consent](../../media/pages/consent-explicit.png){width=300}
+    ![Consent](../../../media/pages/consent-explicit.png){width=300}
 
     A dedicated page where users must accept the terms by selecting required checkboxes to continue.
     It can be configured to appear:
@@ -67,7 +67,7 @@ The Consent feature allows you to collect user permissions for data processing o
             - `required` - Indicates whether the checkbox must be checked to proceed
             - `optional` - Indicates additional consent and the user may proceed without checking it
 
-            ![Consent](../../media/pages/consent-explicit.png){width=300}
+            ![Consent](../../../media/pages/consent-explicit.png){width=300}
 
             !!! info "GDPR Compliance"
                 The checkbox must be explicitly selected by the user as pre-selected checkboxes are not valid under GDPR, even if the user presses an "Accept" button. 
@@ -78,11 +78,11 @@ The Consent feature allows you to collect user permissions for data processing o
 
             === "Single consent without checkbox"
 
-                ![Consent](../../media/pages/consent-implicit-wo-check.png){width=300}
+                ![Consent](../../../media/pages/consent-implicit-wo-check.png){width=300}
 
             === "Necessary and additional consent with checkboxes"
 
-                ![Consent](../../media/pages/consent-implicit-w-check.png){width=300}   
+                ![Consent](../../../media/pages/consent-implicit-w-check.png){width=300}   
 
             ??? warning "Legal Considerations"
                 It can be just an "Accept" button, but only if it’s very clear exactly
@@ -155,11 +155,11 @@ The Consent feature allows you to collect user permissions for data processing o
 
         === "Without borders"
 
-            ![Consent](../../media/pages/consent-explicit.png){width=300}
+            ![Consent](../../../media/pages/consent-explicit.png){width=300}
 
         === "With borders"
 
-            ![Consent](../../media/pages/consent-borders.png){width=300}    
+            ![Consent](../../../media/pages/consent-borders.png){width=300}    
 
     ---
 

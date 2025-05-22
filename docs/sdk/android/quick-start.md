@@ -1,5 +1,8 @@
-# Getting started with Aiuta
+# Android SDK
 
+!!! info
+    Docs under construction
+    
 In this tutorial, you will learn how to initialize the SDK and figure out how to create
 your own application using all the features of [Aiuta](https://aiuta.com/)
 

@@ -14,45 +14,45 @@ nav:
     - Overview: sdk/overview.md
     - Demo Apps: sdk/demo-apps.md
     - Pages:
-      - Welcome: about/pages/welcome-screen.md
-      - Onboarding: about/pages/onboarding.md
-      - Consent: about/pages/consent.md
-      - Image Picker: about/pages/image-picker.md
-      - Loading: about/pages/loading-screen.md
-      - Results: about/pages/results-screen.md
+      - Welcome: sdk/about/pages/welcome-screen.md
+      - Onboarding: sdk/about/pages/onboarding.md
+      - Consent: sdk/about/pages/consent.md
+      - Image Picker: sdk/about/pages/image-picker.md
+      - Loading: sdk/about/pages/loading-screen.md
+      - Results: sdk/about/pages/results-screen.md
     - Resources:
-      - Icons: about/resources/icons.md
-      - Images: about/resources/images.md
-      - Colors: about/resources/colors.md
-      - Shapes: about/resources/shapes.md
-      - Typography: about/resources/typography.md
-      - Localization: about/resources/localization.md
-      - Other: about/resources/other.md
+      - Icons: sdk/about/resources/icons.md
+      - Images: sdk/about/resources/images.md
+      - Colors: sdk/about/resources/colors.md
+      - Shapes: sdk/about/resources/shapes.md
+      - Typography: sdk/about/resources/typography.md
+      - Localization: sdk/about/resources/localization.md
+      - Other: sdk/about/resources/other.md
     - Analytics: 
-      - Events: about/analytics/analytics.md
-      - Errors: about/analytics/errors.md
+      - Events: sdk/about/analytics/analytics.md
+      - Errors: sdk/about/analytics/errors.md
 
     - Developer:
-      - Configuration: developer/scheme/configuration.md
-      - User Interface: developer/scheme/user-interface.md
-      - Features: developer/scheme/features.md
-      - Common Models: developer/scheme/common-models.md
-      - Platform Types: developer/scheme/platform-types.md
+      - Configuration: sdk/about/developer/configuration.md
+      - User Interface: sdk/about/developer/user-interface.md
+      - Features: sdk/about/developer/features.md
+      - Common Models: sdk/about/developer/common-models.md
+      - Platform Types: sdk/about/developer/platform-types.md
 
   - Android:
-    - Overview: android/overview.md
+    - Quick Start: sdk/android/quick-start.md
     
   - iOS:
-    - Overview: ios/overview.md
+    - Quick Start: sdk/ios/quick-start.md
 
   - Flutter:
-    - Quick Start: flutter/overview.md
-    - Installation: flutter/installation.md
-    - Configuration: flutter/configuration.md
-    - Basic Usage: flutter/basic-usage.md
+    - Quick Start: sdk/flutter/quick-start.md
+    - Installation: sdk/flutter/installation.md
+    - Configuration: sdk/flutter/configuration.md
+    - Basic Usage: sdk/flutter/basic-usage.md
 
   - Web:
-    - Overview: web/overview.md
+    - Quick Start: sdk/web/quick-start.md
 
   - Shopify:
     - Overview: shopify/overview.md

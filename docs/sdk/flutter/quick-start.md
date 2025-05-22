@@ -1,6 +1,6 @@
 # Flutter SDK
 
-The Aiuta Flutter SDK provides a virtual try-on solution as a [plug-in package :octicons-link-external-24:](https://flutter.dev/developing-packages/){:target="_blank"}, a specialized package that includes platform-specific implementation code and depends of native SDKs for [Android](../android/overview.md) and [iOS](../ios/overview.md) that uses [Aiuta Digital Try On API :octicons-link-external-24:](https://developer.aiuta.com/products/digital-try-on/Documentation){:target="_blank"}.
+The Aiuta Flutter SDK provides a virtual try-on solution as a [plug-in package :octicons-link-external-24:](https://flutter.dev/developing-packages/){:target="_blank"} that includes platform-specific implementation code and depends of native SDKs for [Android](../android/quick-start.md) and [iOS](../ios/quick-start.md) that uses [Aiuta Digital Try On API](../../api/overview.md).
 
 ## Requirements
 

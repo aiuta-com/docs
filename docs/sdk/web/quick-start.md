@@ -1,4 +1,4 @@
-# Web SDK Overview
+# Web SDK
 
 !!! info
     Coming soon

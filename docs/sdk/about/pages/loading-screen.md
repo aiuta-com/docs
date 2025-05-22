@@ -1,6 +1,6 @@
 # Loading Screen
 
-![Loading Screen](../../media/pages/loading-screen.png){width=300}
+![Loading Screen](../../../media/pages/loading-screen.png){width=300}
 
 The Loading Screen is displayed during the virtual try-on process to keep users informed about the current status of their request. It shows different status messages as the system processes the image and generates the try-on result:
 
@@ -39,7 +39,7 @@ The Loading Screen is displayed during the virtual try-on process to keep users 
 
     ### Invalid Input Image
 
-    ![Loading Screen](../../media/pages/loading-invalid.png){width=300}
+    ![Loading Screen](../../../media/pages/loading-invalid.png){width=300}
 
     When the system detects that the uploaded image doesn't meet the requirements for virtual try-on (e.g., no person detected), it displays an error message with an option to try again with a different photo.
 
@@ -55,7 +55,7 @@ The Loading Screen is displayed during the virtual try-on process to keep users 
 
     ### Other Errors
 
-    ![Loading Screen](../../media/pages/loading-error.png){width=300}
+    ![Loading Screen](../../../media/pages/loading-error.png){width=300}
 
     When other errors occur during the try-on process (such as network issues or server errors), the SDK displays an error snackbar with a message and retry option.
 

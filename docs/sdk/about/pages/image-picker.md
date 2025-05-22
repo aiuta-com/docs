@@ -1,7 +1,7 @@
 # Image Picker
 
-![Image Picker](../../media/pages/image-picker-w-models.png){width=300}
-![Image Picker](../../media/pages/image-picker-history-last.png){width=300}
+![Image Picker](../../../media/pages/image-picker-w-models.png){width=300}
+![Image Picker](../../../media/pages/image-picker-history-last.png){width=300}
 
 The Image Picker feature represents the main page and allows users to select images for virtual try-on from various sources.
 
@@ -18,7 +18,7 @@ The Image Picker feature represents the main page and allows users to select ima
 
     ### Camera
 
-    ![Camera](../../media/pages/image-picker-bottom-sheet.png){width=300}
+    ![Camera](../../../media/pages/image-picker-bottom-sheet.png){width=300}
 
     Allows users to take new photos using their device's camera.<br>Uses the platform's standard camera tools for applications.
 
@@ -41,7 +41,7 @@ The Image Picker feature represents the main page and allows users to select ima
 
     ### Photo library
 
-    ![Gallery](../../media/pages/image-picker-bottom-sheet.png){width=300}
+    ![Gallery](../../../media/pages/image-picker-bottom-sheet.png){width=300}
 
     Enables users to select photos from their device's photo library.<br>Uses the platform's standard photo picker.
 
@@ -63,8 +63,8 @@ The Image Picker feature represents the main page and allows users to select ima
 
     === "Enabled (default)"
         
-        ![Image Picker](../../media/pages/image-picker-w-models.png){width=300}
-        ![Predefined Models](../../media/pages/image-picker-models.png){width=300}
+        ![Image Picker](../../../media/pages/image-picker-w-models.png){width=300}
+        ![Predefined Models](../../../media/pages/image-picker-models.png){width=300}
 
         Provides a selection of predefined models images for virtual try-on. Models are divided into categories, each containing a set of model images with different body shapes. This allows users to select models that best match their preferences and needs, offering a personalized virtual try-on experience, while allowing them not to use their own photos.
 
@@ -101,14 +101,14 @@ The Image Picker feature represents the main page and allows users to select ima
 
     === "Disabled"
         
-        ![Image Picker](../../media/pages/image-picker-wo-models.png){width=300}
+        ![Image Picker](../../../media/pages/image-picker-wo-models.png){width=300}
 
 === "Uploads History"
 
     ### Uploads History
 
-    ![Uploads History](../../media/pages/image-picker-history.png){width=300}
-    ![Image Picker](../../media/pages/image-picker-history-last.png){width=300}
+    ![Uploads History](../../../media/pages/image-picker-history.png){width=300}
+    ![Image Picker](../../../media/pages/image-picker-history-last.png){width=300}
 
     Allows users to access and reuse their previously used images.<br>
     The last image used will be preselected in the image picker for subsequent try-ons.

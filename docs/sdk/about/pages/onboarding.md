@@ -1,6 +1,6 @@
 # Onboarding
 
-![How It Works](../../media/pages/how-it-works-1.png){ width=300 }
+![How It Works](../../../media/pages/how-it-works-1.png){ width=300 }
 
 The Onboarding feature guides users through the SDK's functionality, helping them understand how to use the virtual try-on experience effectively.
 
@@ -67,7 +67,7 @@ The SDK provides two options for managing the onboarding completion status:
 
     ### How It Works
 
-    ![How It Works](../../media/pages/how-it-works.png){ width=558 }
+    ![How It Works](../../../media/pages/how-it-works.png){ width=558 }
 
     The "How It Works" page provides an interactive demonstration of the virtual try-on feature:
 
@@ -110,7 +110,7 @@ The SDK provides two options for managing the onboarding completion status:
 
     ### Best Results
 
-    ![Best Results](../../media/pages/best-results.png){ width=300 }
+    ![Best Results](../../../media/pages/best-results.png){ width=300 }
 
     The "Best Results" page helps users achieve optimal results:
 
@@ -155,7 +155,7 @@ The SDK provides two options for managing the onboarding completion status:
 
     ### Consent
 
-    ![Consent](../../media/pages/consent-explicit.png){ width=300 }
+    ![Consent](../../../media/pages/consent-explicit.png){ width=300 }
 
     The Consent page can be integrated into the onboarding flow as a slide to collect user permissions for data processing. This slide explains the terms of service and/or privacy policies to users. For detailed information about configuring the Consent screen, including customization options and implementation details, please refer to the [:octicons-arrow-right-24: Consent](consent.md) page.
 

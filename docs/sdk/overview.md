@@ -29,7 +29,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     ndkVersion: 26.1.10909125
     ```
 
-    [:octicons-arrow-right-24: Quick Start](android/overview.md)
+    [:octicons-arrow-right-24: Quick Start](./android/quick-start.md)
 
 -   :fontawesome-brands-apple:{ .lg } __iOS__
 
@@ -41,7 +41,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     Xcode: 15.3+
     ```
     
-    [:octicons-arrow-right-24: Quick Start](ios/overview.md)
+    [:octicons-arrow-right-24: Quick Start](./ios/quick-start.md)
 
 -   :fontawesome-brands-flutter:{ .lg } __Flutter__
 
@@ -53,7 +53,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     ```
     <sup class="cl-secondary">:fontawesome-brands-android:&nbsp; Android &nbsp; :fontawesome-brands-apple: iOS</sup>
     
-    [:octicons-arrow-right-24: Quick Start](flutter/overview.md)
+    [:octicons-arrow-right-24: Quick Start](./flutter/quick-start.md)
 
 -   :fontawesome-brands-js:{ .lg } __Web__ <span class="cl-secondary">SDK</span>
 

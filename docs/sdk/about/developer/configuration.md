@@ -2,10 +2,32 @@
 
 The configuration is structured as a hierarchical object that controls various aspects of the SDK's behavior, appearance, and functionality. The configuration is designed to be flexible and extensible, allowing for customization of features, UI elements, and behavior.
 
-!!! not "Type Definitions"
-    Please, refer to the [:octicons-arrow-right-24: platform specific types](platform-types.md) used in this scheme and the [:octicons-arrow-right-24: History Images](history-images.md) description
+??? info "Type Definitions"
+    Please, refer to the [:octicons-arrow-right-24: platform specific types](platform-types.md) used in this scheme and the [:octicons-arrow-right-24: common models](common-models.md) schemes
 
-While the implementation details may vary, the core structure and naming conventions remain consistent across platforms to maintain a unified developer experience.
+??? info "Naming Convention"
+    
+    Implementation and naming details may vary depending on the specific platform, but the core concepts and overall structure remain consistent across all platforms.
+    For example type names, described in the schemes, like: 
+
+    - `Configuration`
+
+        - in Swift it will be `Aiuta.Configuration`
+        - in Kotlin and Dart - `AiutaConfiguration`
+
+    - `UserInterface`
+
+        - in Swift it will be `Aiuta.Configuration.UserInterface`
+        - in Kotlin and Dart - `AiutaUserInterfaceConfiguration`
+
+    - `Product`
+
+        - in Swift it will be `Aiuta.Product`
+        - in Kotlin and Dart - `AiutaProduct`
+
+    and so on - the key part of the name is the same.
+
+    A scheme-based approach in the documentation applies core concepts and structures uniformly, unifying the SDK's understanding and implementation. By following this strategy, we achieve consistency in our SDK's implementations and minimize redundancy in our documentation for each platform. We use this documentation ourselves for development.
 
 !!! tip "Annotations"
     Don't miss them - click :material-information-outline: for more details

@@ -1,6 +1,6 @@
 # Welcome Screen
 
-![Welcome Screen](../../media/pages/welcome-screen.png){width=300}
+![Welcome Screen](../../../media/pages/welcome-screen.png){width=300}
 
 The Welcome Screen is an optional feature that can be displayed when users first open the SDK. It serves as an introduction to your virtual try-on experience and can be customized to match your brand identity.
 
