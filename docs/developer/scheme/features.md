@@ -1,4 +1,4 @@
-# Features Configuration
+# Features Configuration Scheme
 
 <div class="grid cards" markdown>
 - :material-book-open-variant: &nbsp; ... part of [configuration page](configuration.md)

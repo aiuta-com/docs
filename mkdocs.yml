@@ -1,5 +1,5 @@
-site_name: Aiuta
-site_url: https://sdk.aiuta.com/
+site_name: Aiuta Docs
+site_url: https://docs.aiuta.com/
 site_author: Aiuta USA, Inc
 site_description: >-
   Aiuta Virtual Try-On Solutions
@@ -8,11 +8,11 @@ copyright: Copyright &copy; 2024 - 2025 Aiuta USA, Inc
 
 nav:
   - About:
-    - Aiuta Virtual Try-On Solutions: index.md
+    - index.md
     
-  - Explore:
-    - Demo Apps: about/demo-apps.md
-    - Shopify App: about/shopify-app.md
+  - SDK:
+    - Overview: sdk/overview.md
+    - Demo Apps: sdk/demo-apps.md
     - Pages:
       - Welcome: about/pages/welcome-screen.md
       - Onboarding: about/pages/onboarding.md
@@ -21,7 +21,6 @@ nav:
       - Loading: about/pages/loading-screen.md
       - Results: about/pages/results-screen.md
     - Resources:
-      - Prepare: about/resources/overview.md
       - Icons: about/resources/icons.md
       - Images: about/resources/images.md
       - Colors: about/resources/colors.md
@@ -33,17 +32,12 @@ nav:
       - Events: about/analytics/analytics.md
       - Errors: about/analytics/errors.md
 
-  - SDK:
-    - Overview: developer/overview.md
-    - Scheme:
-      - Setup:
-        - Configuration: developer/scheme/configuration.md
-        - User Interface: developer/scheme/user-interface.md
-        - Features: developer/scheme/features.md
+    - Developer:
+      - Configuration: developer/scheme/configuration.md
+      - User Interface: developer/scheme/user-interface.md
+      - Features: developer/scheme/features.md
+      - Common Models: developer/scheme/common-models.md
       - Platform Types: developer/scheme/platform-types.md
-      - History Images: developer/scheme/history-images.md
-      - Consent: developer/scheme/consent.md
-      - Product: developer/scheme/product.md
 
   - Android:
     - Overview: android/overview.md
@@ -52,11 +46,10 @@ nav:
     - Overview: ios/overview.md
 
   - Flutter:
-    - Overview: flutter/overview.md
-    - Quick Start:
-      - Installation: flutter/installation.md
-      - Configuration: flutter/configuration.md
-      - Basic Usage: flutter/basic-usage.md
+    - Quick Start: flutter/overview.md
+    - Installation: flutter/installation.md
+    - Configuration: flutter/configuration.md
+    - Basic Usage: flutter/basic-usage.md
 
   - Web:
     - Overview: web/overview.md
@@ -64,11 +57,38 @@ nav:
   - Shopify:
     - Overview: shopify/overview.md
 
+  - API:
+    - Overview: api/overview.md
+    - Introduction: 
+      - Getting Started: api/getting-started.md
+      - Server-side Auth: api/server-side-auth-component.md
+
+extra:
+  # Still unsure whether to add separators or not
+  # nav_divider_after:
+  #   - About
+  #   - Web
+  #   - Shopify
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aiuta-com
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/aiuta-inc
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/aiutacom
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/aiutacom/
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/AiutaCom
+    - icon: aiuta/logo-sq
+      link: https://aiuta.com
+
 theme:
   name: 'material'
   custom_dir: overrides
   include_search_page: false
   search_index_only: true
+
 
   language: en
   features:
@@ -76,6 +96,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.expand
     - navigation.sections
+    - navigation.indexes
     - content.code.copy
     - content.tooltips
     - content.tabs.link
@@ -96,34 +117,20 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: media/logo/aiuta.svg
-  logo: media/logo/aiuta.svg
+  favicon: media/site/favicon.svg
+  logo: media/site/logo.svg
   icon:
-    logo: logo
+    logo: aiuta/logo
     annotation: material/information-outline
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/aiuta.css
 
 plugins:
   - search
   - minify:
       minify_html: true
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/aiuta-com
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/company/aiuta-inc
-    - icon: fontawesome/brands/instagram
-      link: https://instagram.com/aiutacom
-    - icon: fontawesome/brands/facebook
-      link: https://facebook.com/aiutacom/
-    - icon: fontawesome/brands/x-twitter
-      link: https://x.com/AiutaCom
-    - icon: aiuta
-      link: https://aiuta.com
 
 markdown_extensions:
   - admonition
@@ -145,6 +152,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys

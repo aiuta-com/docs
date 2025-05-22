@@ -9,12 +9,8 @@
     <ul class="md-tabs__list">
       {% for nav_item in nav %}
         {{ item.render(nav_item) }}
-        <!-- Add divider after the Explore tab -->
-        {% if nav_item.title == "Explore" %}
-          <li class="md-tabs__item md-tabs__item--divider"></li>
-        {% endif %}
-        <!-- Add divider after the Web tab -->
-        {% if nav_item.title == "Web" %}
+        <!-- Add dividers after configured tabs -->
+        {% if nav_item.title in config.extra.nav_divider_after %}
           <li class="md-tabs__item md-tabs__item--divider"></li>
         {% endif %}
       {% endfor %}
