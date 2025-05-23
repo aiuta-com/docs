@@ -33,8 +33,8 @@ The SDK provides two options for managing the onboarding completion status:
         - Sync the status across devices
         - Reset `isOnboardingCompleted` whenever you want to show the onboarding again
 
-    !!! question ""
-        See the [How to implement](#how-to-implement) section at the bottom for information on the relevant platform.
+    <!-- !!! question ""
+        See the [How to implement](#how-to-implement) section at the bottom for information on the relevant platform. -->
 
 ---
 
