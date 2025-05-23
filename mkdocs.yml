@@ -50,6 +50,8 @@ nav:
     - Installation: sdk/flutter/installation.md
     - Configuration: sdk/flutter/configuration.md
     - Basic Usage: sdk/flutter/basic-usage.md
+    - Migration: 
+      - From v1 to v4: sdk/flutter/migration/v4.md
 
   - Web:
     - Quick Start: sdk/web/quick-start.md

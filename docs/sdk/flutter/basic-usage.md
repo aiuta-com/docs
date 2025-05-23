@@ -7,7 +7,6 @@ This guide covers the fundamental usage of the Aiuta Flutter SDK in your applica
 ```dart
 import 'package:aiuta_flutter/aiuta_flutter.dart';
 
-// Check if Aiuta SDK is available to use
 final isAvailable = await Aiuta.isAvailable;
  
 ```    
@@ -33,12 +32,15 @@ First, make sure you've configured the SDK as described in the [Configuration](c
 import 'package:aiuta_flutter/aiuta_flutter.dart';
 
 final aiuta = Aiuta(
-  configuration: AiutaConfiguration(
-    // ... Your configuration
-  ),
+  configuration: AiutaConfiguration(...) // (1)!
 );
 
 ```
+
+1. Your configuration for Aiuta
+
+    !!! note ""
+        :material-book-open-variant: Please refer to the [configuration scheme](../about/developer/configuration.md)
 
 ## Virtual Try-On
 
@@ -50,9 +52,9 @@ class ProductScreen extends StatelessWidget {
 
   Future<void> startTryOn() async {
     try {
-      await aiuta.startTryonFlow(product: AiutaProduct(
-        // ... Your product info for Aiuta
-      ));
+      await aiuta.startTryonFlow(
+        product: AiutaProduct(...) // (1)!
+      );
     } catch (e) {
       // Handle errors
     }
@@ -61,6 +63,11 @@ class ProductScreen extends StatelessWidget {
   // ... rest of your widget
 }
 ```
+
+1. Your product info for Aiuta
+
+    !!! note ""
+        :material-book-open-variant: Please refer to the [product scheme](../about/developer/common-models.md#product)
 
 ??? question "When does startTryonFlow Future completes?"
 
@@ -108,6 +115,5 @@ try {
 You can check at any time whether the SDK UI is currently displayed:
 
 ```dart
-// Check if SDK is currently displayed
 final isDisplayed = await Aiuta.isForeground;
 ```
