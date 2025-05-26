@@ -21,39 +21,27 @@ Let your customers visualize how clothes look on them — instantly and accurate
 -   :fontawesome-brands-android:{ .lg } __Android__
 
     ---
-
     {% include-markdown "sdk/templates/android/requirements-base.md" %}
-
-    [:octicons-arrow-right-24: Quick Start](./android/setup/installation.md)
+    :octicons-arrow-right-24: [Quick Start](./android/setup/installation.md)
 
 -   :fontawesome-brands-apple:{ .lg } __iOS__
 
     ---
+    {% include-markdown "sdk/templates/ios/requirements.md" %}
+    :octicons-arrow-right-24: [Quick Start](./ios/quick-start.md)
 
-    ```
-    iOS: 13+
-    swift: 5.10
-    Xcode: 15.3+
-    ```
-    
-    [:octicons-arrow-right-24: Quick Start](./ios/quick-start.md)
-
--   :fontawesome-brands-flutter:{ .lg } __Flutter__
+-   :fontawesome-brands-flutter:{ .lg } __Flutter__ <span class="md-platfroms">:fontawesome-brands-android: Android :fontawesome-brands-apple: iOS</span>
 
     ---
-
     ```
     sdk: >=3.1.0 <4.0.0
     flutter: >= 3.19.6
     ```
-    <sup class="cl-secondary">:fontawesome-brands-android:&nbsp; Android &nbsp; :fontawesome-brands-apple: iOS</sup>
-    
-    [:octicons-arrow-right-24: Quick Start](./flutter/quick-start.md)
+    :octicons-arrow-right-24: [Quick Start](./flutter/quick-start.md)
 
--   :fontawesome-brands-js:{ .lg } __Web__ <span class="cl-secondary">SDK</span>
+-   :fontawesome-brands-js:{ .lg } __Web__
 
     ---
-
     Coming soon
 
 </div>
@@ -62,11 +50,6 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
 If you prefer even more control over the implementation or have specific requirements, you can use the Aiuta API directly. This approach gives you complete flexibility in building your custom virtual try-on solution.
 
-<div class="grid cards" markdown>
+!!! doc "Learn more about [Aiuta Virtual Try-On API](../api/overview.md)"
 
-- :material-book-open-variant:{ .lg } [Learn more about Aiuta Virtual Try-On API](../api/overview.md)
-
-</div>
-
-!!! note ""
     Aiuta SDK is built on top of the same API, providing a pre-built UI layer and additional convenience features while maintaining the same core functionality.

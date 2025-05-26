@@ -18,60 +18,69 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
 <div class="grid cards" markdown>
 
--   :fontawesome-brands-android:{ .lg } __Android__ <span class="cl-secondary">SDK</span>
+-   :fontawesome-brands-android:{ .lg } __Android__ <span class="md-platfroms">SDK</span>
 
     ---
 
     {% include-markdown "sdk/templates/android/requirements-base.md" %}
+    :octicons-arrow-right-24: 
+    <span class="md-cards-links">
+    [Overview](sdk/overview.md) :octicons-dot-fill-16:{ .xs } [Quick Start](sdk/android/setup/installation.md)
+    </span>
 
-    [:octicons-arrow-right-24: Overview](sdk/overview.md) &nbsp; • &nbsp; [Quick Start](sdk/android/setup/installation.md)
-
--   :fontawesome-brands-apple:{ .lg } __iOS__ <span class="cl-secondary">SDK</span>
-
-    ---
-
-    ```
-    iOS: 13+
-    swift: 5.10
-    Xcode: 15.3+
-    ```
-    
-    [:octicons-arrow-right-24: Overview](sdk/overview.md) &nbsp; • &nbsp; [Quick Start](sdk/ios/quick-start.md)
-
--   :fontawesome-brands-flutter:{ .lg } __Flutter__ <span class="cl-secondary">SDK</span>
+-   :fontawesome-brands-apple:{ .lg } __iOS__ <span class="md-platfroms">SDK</span>
 
     ---
 
-    ```
-    sdk: >=3.1.0 <4.0.0
-    flutter: >= 3.19.6
-    ```
-    <sup class="cl-secondary">:fontawesome-brands-android:&nbsp; Android &nbsp; :fontawesome-brands-apple: iOS</sup>
-    
-    [:octicons-arrow-right-24: Overview](sdk/overview.md) &nbsp; • &nbsp; [Quick Start](sdk/flutter/quick-start.md)
+    {% include-markdown "sdk/templates/ios/requirements.md" %}
+    :octicons-arrow-right-24: 
+    <span class="md-cards-links">
+    [Overview](sdk/overview.md) :octicons-dot-fill-16:{ .xs } [Quick Start](sdk/ios/quick-start.md)
+    </span>
 
--   :fontawesome-brands-js:{ .lg } __Web__ <span class="cl-secondary">SDK</span>
+-   :fontawesome-brands-flutter:{ .lg } __Flutter__ <span class="md-platfroms">SDK :fontawesome-brands-android: Android :fontawesome-brands-apple: iOS</span>
+
+    ---
+
+    {% include-markdown "sdk/templates/flutter/requirements.md" %}
+    :octicons-arrow-right-24: 
+    <span class="md-cards-links">
+    [Overview](sdk/overview.md) :octicons-dot-fill-16:{ .xs } [Quick Start](sdk/flutter/quick-start.md)
+    </span>
+
+-   :fontawesome-brands-js:{ .lg } __Web__ <span class="md-platfroms">SDK</span>
 
     ---
 
     Coming soon
 
--   :fontawesome-brands-shopify:{ .lg } __Shopify__ <span class="cl-secondary">App</span>
+-   :fontawesome-brands-shopify:{ .lg } __Shopify__ <span class="md-platfroms">APP</span>
 
     ---
 
-    [:octicons-arrow-right-24: Overview](shopify/overview.md)  
+    :octicons-arrow-right-24: 
+    <span class="md-cards-links">
+    [Overview](shopify/overview.md)
+    </span>
 
--   :aiuta-api:{ .lg } __API__
+-   :aiuta-favicon:{ .lg } __API__
 
     ---
 
-    [:octicons-arrow-right-24: Overview](api/overview.md) &nbsp; • &nbsp; [Getting Started](api/getting-started.md)
+    :octicons-arrow-right-24: 
+    <span class="md-cards-links">
+    [Overview](api/overview.md) :octicons-dot-fill-16:{ .xs } [Getting Started](api/getting-started.md)
+    </span>
 
 </div>
 
+## More products for Fashion Commerce
+
+- AI models of diverse body types, ethnicities, and so on — all tailored to your brand.
+- High-quality product placement images in seconds. No production. No studio. Just speed and scale.
+
 <div class="grid cards" markdown>
 
-- :aiuta-logo:{ .lg } [Discover more fashion services at __aiuta.com__ :octicons-link-external-24:](https://aiuta.com){:target="_blank"}
+- :aiuta-logo:{ .lg } [Discover __Aiuta Studio__ AI Fashion models and Flat lays :octicons-link-external-24:](https://aiuta.com){:target="_blank"}
 
 </div>

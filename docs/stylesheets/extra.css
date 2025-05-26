@@ -4,6 +4,33 @@
   --md-footer-bg-color--dark: var(--md-primary-fg-color);
 }
 
+/* Doc reference admonition */
+
+:root {
+  --md-admonition-icon--doc: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"></path></svg>');
+}
+.md-typeset .admonition.doc,
+.md-typeset details.doc {
+  border-color: color-mix(in srgb, var(--md-admonition-fg-color) 70%, transparent);
+}
+.md-typeset .doc > .admonition-title,
+.md-typeset .doc > summary {
+  background-color: transparent;
+}
+.md-typeset .doc > .admonition-title::before,
+.md-typeset .doc > summary::before {
+  background-color: var(--md-admonition-fg-color);
+  -webkit-mask-image: var(--md-admonition-icon--doc);
+          mask-image: var(--md-admonition-icon--doc);
+}
+
+.md-typeset .doc > .admonition-title:not([title]),
+.md-typeset .doc > summary:not([title]) {
+  font-weight: normal;
+  padding-top: 0.5rem;
+  /* padding-bottom: 0; */
+}
+
 /* Fix background color, to fix ugly footer white line */
 body {
   background: var(--md-primary-fg-color) !important;
@@ -21,8 +48,17 @@ body {
 /* Icon and emoji spacing */
 .md-nav__link .md-icon.lg,
 .md-content__inner .md-icon.lg,
-.md-content__inner .twemoji.lg {
+.md-content__inner .twemoji.lg,
+.grid.cards .twemoji,
+.grid.cards .md-icon {
   margin-right: 0.4rem;
+}
+
+/* Add icons xs size */
+.twemoji.xs,
+.md-icon.xs {
+  font-size: 0.3rem;
+  margin-top: 0.27rem;
 }
 
 /* Divider between tab groups */
@@ -81,4 +117,25 @@ body {
   opacity: 1;
   transition: opacity 0.2s ease !important;
   -webkit-transition: opacity 0.2s ease !important;
+}
+
+/* Decoration for platform cards */
+.md-platfroms {
+  font-size: 0.62rem;
+  width: 100%;
+  padding: 0.2rem 0rem;
+  border-radius: 0.1rem !important;
+  margin-left: 0rem !important;
+  color: color-mix(in srgb, var(--md-code-fg-color) 60%, transparent);
+}
+
+.md-platfroms .twemoji,
+.md-platfroms .md-icon {
+  margin-left: 0.6rem;
+  margin-right: 0.05rem !important;
+}
+
+.md-cards-links .twemoji,
+.md-cards-links .md-icon {
+  margin-left: 0.4rem;
 }

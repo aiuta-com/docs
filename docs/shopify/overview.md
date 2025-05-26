@@ -7,8 +7,8 @@ Aiuta Try-On allows shoppers to see how clothes fit and look on them in real tim
 
 <div class="grid cards" markdown>
 
-- :fontawesome-brands-shopify: &nbsp; [View in the __Shopify__ app store](https://shopify.aiuta.com){:target="_blank"}
-- :material-web: &nbsp; [Open demo store](https://aiuta-demo-store.myshopify.com){:target="_blank"}
+- :fontawesome-brands-shopify: [View in the __Shopify__ app store](https://shopify.aiuta.com){:target="_blank"}
+- :material-web: [Open demo store](https://aiuta-demo-store.myshopify.com){:target="_blank"}
 
 </div>
 

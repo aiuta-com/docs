@@ -42,6 +42,6 @@ The Aiuta SDK for Flutter employs a standardized configuration scheme consistent
 
 <div class="grid cards" markdown>
 
-- :octicons-arrow-right-24: &nbsp; Learn how to [initialize and use](basic-usage.md) the SDK
+- :octicons-arrow-right-24: Learn how to [initialize and use](basic-usage.md) the SDK
 
 </div>
