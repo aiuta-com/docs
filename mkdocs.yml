@@ -53,13 +53,11 @@ nav:
       - UI Integration:
         - Making Try-Ons with UI: sdk/android/tryon/ui/making-try-ons-with-ui.md
         - Configuration:
-          - Features: sdk/android/tryon/ui/features.md
-          - User Interface: sdk/android/tryon/ui/user-interface.md
-          - Default configurations: sdk/android/tryon/ui/default-configurations.md
+          - Features: sdk/android/tryon/ui/configuration/features.md
+          - User Interface: sdk/android/tryon/ui/configuration/user-interface.md
+          - Default configurations: sdk/android/tryon/ui/configuration/default-configurations.md
     - Analytic:
-      - Overview: sdk/android/analytic/overview.md
-    - Kotlin Multiplatform:
-      - Overview: sdk/android/kmp/overview.md
+      - Getting started with Aiuta Analytic: sdk/android/analytic/overview.md
     - FAQ: sdk/android/faq.md
     - API Reference: https://aiuta-com.github.io/aiuta-android-sdk/
 
