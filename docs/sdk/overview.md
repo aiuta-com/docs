@@ -27,11 +27,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
 -   :fontawesome-brands-apple:{ .lg } __iOS__
 
     ---
-    ```
-    iOS: 13+
-    swift: 5.10
-    Xcode: 15.3+
-    ```
+    {% include-markdown "sdk/templates/ios/requirements.md" %}
     :octicons-arrow-right-24: [Quick Start](./ios/quick-start.md)
 
 -   :fontawesome-brands-flutter:{ .lg } __Flutter__ <span class="md-platfroms">:fontawesome-brands-android: Android :fontawesome-brands-apple: iOS</span>

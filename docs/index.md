@@ -31,10 +31,8 @@ Let your customers visualize how clothes look on them — instantly and accurate
 -   :fontawesome-brands-apple:{ .lg } __iOS__ <span class="md-platfroms">SDK</span>
 
     ---
-    ```
-    iOS: 13+
-    swift: 5.10
-    ```
+
+    {% include-markdown "sdk/templates/ios/requirements.md" %}
     :octicons-arrow-right-24: 
     <span class="md-cards-links">
     [Overview](sdk/overview.md) :octicons-dot-fill-16:{ .xs } [Quick Start](sdk/ios/quick-start.md)
@@ -43,10 +41,8 @@ Let your customers visualize how clothes look on them — instantly and accurate
 -   :fontawesome-brands-flutter:{ .lg } __Flutter__ <span class="md-platfroms">SDK :fontawesome-brands-android: Android :fontawesome-brands-apple: iOS</span>
 
     ---
-    ```
-    sdk: >=3.1.0 <4.0.0
-    flutter: >= 3.19.6
-    ```
+
+    {% include-markdown "sdk/templates/flutter/requirements.md" %}
     :octicons-arrow-right-24: 
     <span class="md-cards-links">
     [Overview](sdk/overview.md) :octicons-dot-fill-16:{ .xs } [Quick Start](sdk/flutter/quick-start.md)
@@ -55,19 +51,22 @@ Let your customers visualize how clothes look on them — instantly and accurate
 -   :fontawesome-brands-js:{ .lg } __Web__ <span class="md-platfroms">SDK</span>
 
     ---
+
     Coming soon
 
 -   :fontawesome-brands-shopify:{ .lg } __Shopify__ <span class="md-platfroms">APP</span>
 
     ---
+
     :octicons-arrow-right-24: 
     <span class="md-cards-links">
-    [Overview](shopify/overview.md)  
+    [Overview](shopify/overview.md)
     </span>
 
 -   :aiuta-favicon:{ .lg } __API__
 
     ---
+
     :octicons-arrow-right-24: 
     <span class="md-cards-links">
     [Overview](api/overview.md) :octicons-dot-fill-16:{ .xs } [Getting Started](api/getting-started.md)

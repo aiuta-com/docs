@@ -4,10 +4,7 @@ The Aiuta Flutter SDK provides a virtual try-on solution as a [plug-in package :
 
 ## Requirements
 
-```
-sdk: >=3.1.0 <4.0.0
-flutter: >= 3.19.6
-```
+{% include-markdown "sdk/templates/flutter/requirements.md" %}
 
 === "Android"
 
@@ -15,11 +12,7 @@ flutter: >= 3.19.6
 
 === "iOS"
 
-    ```
-    iOS: 13+
-    swift: 5.10
-    Xcode: 15.3+
-    ```
+    {% include-markdown "sdk/templates/ios/requirements.md" %}
 
     !!! tip ""
         Can be compiled for iOS `12+`, but the SDK will not be available for use<br>
