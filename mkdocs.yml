@@ -40,8 +40,16 @@ nav:
       - Platform Types: sdk/about/developer/platform-types.md
 
   - Android:
-    - Quick Start: sdk/android/quick-start.md
-    
+    - Overview: sdk/android/overview.md
+    - Setup: 
+      - Installation: sdk/android/setup/installation.md
+      - Using the Bill of Materials: sdk/android/setup/bom.md
+      - Getting started with Aiuta: sdk/android/setup/aiuta-getting-started.md
+    - Kotlin Multiplatform:
+      - Overview: sdk/android/kmp/overview.md
+    - FAQ: sdk/android/faq.md
+    - API Reference: https://aiuta-com.github.io/aiuta-android-sdk/
+
   - iOS:
     - Quick Start: sdk/ios/quick-start.md
 
@@ -131,6 +139,7 @@ plugins:
   - search
   - minify:
       minify_html: true
+  - include-markdown
 
 markdown_extensions:
   - admonition
