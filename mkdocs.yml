@@ -40,8 +40,27 @@ nav:
       - Platform Types: sdk/about/developer/platform-types.md
 
   - Android:
-    - Quick Start: sdk/android/quick-start.md
-    
+    - Overview: sdk/android/overview.md
+    - Setup: 
+      - Installation: sdk/android/setup/installation.md
+      - Getting started with Aiuta: sdk/android/setup/aiuta-getting-started.md
+      - Using the Bill of Materials: sdk/android/setup/bom.md
+    - Try on:
+      - Overview: sdk/android/tryon/overview.md
+      - Core:
+        - Making Try-Ons: sdk/android/tryon/core/making-try-ons.md
+        - Paging: sdk/android/tryon/core/paging.md
+      - UI Integration:
+        - Making Try-Ons with UI: sdk/android/tryon/ui/making-try-ons-with-ui.md
+        - Configuration:
+          - Features: sdk/android/tryon/ui/configuration/features.md
+          - User Interface: sdk/android/tryon/ui/configuration/user-interface.md
+          - Default configurations: sdk/android/tryon/ui/configuration/default-configurations.md
+    - Analytic:
+      - Getting started with Aiuta Analytic: sdk/android/analytic/overview.md
+    - FAQ: sdk/android/faq.md
+    - API Reference: https://aiuta-com.github.io/aiuta-android-sdk/
+
   - iOS:
     - Quick Start: sdk/ios/quick-start.md
 
@@ -133,6 +152,7 @@ plugins:
   - search
   - minify:
       minify_html: true
+  - include-markdown
 
 markdown_extensions:
   - admonition

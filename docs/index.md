@@ -22,14 +22,9 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
     ---
 
-    ```
-    minSdkVersion: 23
-    targetSdkVersion: 35
-    com.android.application: 8.6.0
-    ndkVersion: 26.1.10909125
-    ```
+    {% include-markdown "sdk/templates/android/requirements-base.md" %}
 
-    [:octicons-arrow-right-24: Overview](sdk/overview.md) &nbsp; • &nbsp; [Quick Start](sdk/android/quick-start.md)
+    [:octicons-arrow-right-24: Overview](sdk/overview.md) &nbsp; • &nbsp; [Quick Start](sdk/android/setup/installation.md)
 
 -   :fontawesome-brands-apple:{ .lg } __iOS__ <span class="cl-secondary">SDK</span>
 
