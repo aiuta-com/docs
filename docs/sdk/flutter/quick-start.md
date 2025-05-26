@@ -35,9 +35,9 @@ flutter: >= 3.19.6
 
 <div class="grid cards" markdown>
 
-- :fontawesome-brands-flutter: &nbsp; [Pub.dev package :octicons-link-external-24:](https://pub.dev/packages/aiuta_flutter){:target="_blank"}
-- :fontawesome-brands-github: &nbsp; [Plugin sources :octicons-link-external-24:](https://github.com/aiuta-com/flutter-sdk){:target="_blank"}
-- :fontawesome-brands-github: &nbsp; [Android layer sources :octicons-link-external-24:](https://github.com/aiuta-com/android-sdk){:target="_blank"}
-- :fontawesome-brands-github: &nbsp; [iOS layer sources :octicons-link-external-24:](https://github.com/aiuta-com/aiuta-ios-sdk){:target="_blank"}
+- :fontawesome-brands-flutter: [Pub.dev package :octicons-link-external-24:](https://pub.dev/packages/aiuta_flutter){:target="_blank"}
+- :fontawesome-brands-github: [Plugin sources :octicons-link-external-24:](https://github.com/aiuta-com/flutter-sdk){:target="_blank"}
+- :fontawesome-brands-github: [Android layer sources :octicons-link-external-24:](https://github.com/aiuta-com/android-sdk){:target="_blank"}
+- :fontawesome-brands-github: [iOS layer sources :octicons-link-external-24:](https://github.com/aiuta-com/aiuta-ios-sdk){:target="_blank"}
 
 </div>
