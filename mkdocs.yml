@@ -43,8 +43,21 @@ nav:
     - Overview: sdk/android/overview.md
     - Setup: 
       - Installation: sdk/android/setup/installation.md
-      - Using the Bill of Materials: sdk/android/setup/bom.md
       - Getting started with Aiuta: sdk/android/setup/aiuta-getting-started.md
+      - Using the Bill of Materials: sdk/android/setup/bom.md
+    - Try on:
+      - Overview: sdk/android/tryon/overview.md
+      - Core:
+        - Making Try-Ons: sdk/android/tryon/core/making-try-ons.md
+        - Paging: sdk/android/tryon/core/paging.md
+      - UI Integration:
+        - Making Try-Ons with UI: sdk/android/tryon/ui/making-try-ons-with-ui.md
+        - Configuration:
+          - Features: sdk/android/tryon/ui/features.md
+          - User Interface: sdk/android/tryon/ui/user-interface.md
+          - Default configurations: sdk/android/tryon/ui/default-configurations.md
+    - Analytic:
+      - Overview: sdk/android/analytic/overview.md
     - Kotlin Multiplatform:
       - Overview: sdk/android/kmp/overview.md
     - FAQ: sdk/android/faq.md

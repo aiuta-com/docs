@@ -11,12 +11,7 @@ flutter: >= 3.19.6
 
 === "Android"
 
-    ```
-    minSdkVersion: 23
-    targetSdkVersion: 35
-    com.android.application: 8.6.0
-    ndkVersion: 26.1.10909125
-    ```
+    {% include-markdown "sdk/templates/android/requirements-flutter.md" %}
 
 === "iOS"
 
