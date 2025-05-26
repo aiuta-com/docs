@@ -15,7 +15,9 @@ dependencies {
 }
 ```
 
+
 ## Implementation
+
 
 ### Getting Started
 
@@ -58,6 +60,7 @@ val products = aiutaTryOn.getProductItems(catalogName = "Your catalog name")
     
     You can use your own implementation of pagination or pay attention to the default implementation with the help of the Paging 3 library. Please, check [paging guide](paging.md)
 
+
 ## Start Generation
 
 To start generation, you need the following:
@@ -75,6 +78,7 @@ val receivingFlow = aiutaTryOn.startProductGeneration(
     container = // ProductGenerationUriContainer or ProductGenerationUrlContainer
 )
 ```
+
 
 ## Observing Result
 
