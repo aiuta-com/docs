@@ -90,47 +90,47 @@ Theme {
 
 1. [:material-arrow-down-left:](#color) Defines the color scheme, brand colors, and various color states for UI elements.
 
-    ![component](../../media/components/colors-brand.png){ width=400 }
+    ![component](../../../media/components/colors-brand.png){ width=400 }
 
 2. [:material-arrow-down-left:](#label) Typography and text styling for different label types across the interface.
 
-    ![component](../../media/components/labels.png){ width=400 }
+    ![component](../../../media/components/labels.png){ width=400 }
 
 3. [:material-arrow-down-left:](#image) Shapes, sizes, and error state icon for image views.
 
-    ![component](../../media/components/images.png){ width=400 }
+    ![component](../../../media/components/images.png){ width=400 }
 
 4. [:material-arrow-down-left:](#button) Buttons styles, including typography and shape configurations for different button sizes.
 
-    ![component](../../media/components/button-brand.png){ width=172 } ![component](../../media/components/button-contrast-inverted.png){ width=200 }
+    ![component](../../../media/components/button-brand.png){ width=172 } ![component](../../../media/components/button-contrast-inverted.png){ width=200 }
 
 5. [:material-arrow-down-left:](#page-bar) Navigation bar appearance, including title styling and navigation button icons.
 
-    ![component](../../media/components/pagebar-std.png){ width=400 }
+    ![component](../../../media/components/pagebar-std.png){ width=400 }
 
 6. [:material-arrow-down-left:](#bottom-sheet) Bottom sheet presentation, including grabber appearance and sheet shape for both main SDK and internal sheets.
 
-    ![component](../../media/components/bottom-sheet-std.png){ width=400 }
+    ![component](../../../media/components/bottom-sheet-std.png){ width=400 }
 
 7. [:material-arrow-down-left:](#selection) Multi-selection interface for list views, including selection controls and action buttons.
 
-    ![component](../../media/components/snack-selection.png){ width=400 }
+    ![component](../../../media/components/snack-selection.png){ width=400 }
 
 8. [:material-arrow-down-left:](#error) Error message presentation, including error icons and retry button styling.
 
-    ![component](../../media/components/snack-error.png){ width=400 }
+    ![component](../../../media/components/snack-error.png){ width=400 }
 
 9. [:material-arrow-down-left:](#product) Product information display, including typography for product details and optional price styling.
  
-    ![component](../../media/components/product-bar.png){ width=400 }
+    ![component](../../../media/components/product-bar.png){ width=400 }
 
 10. [:material-arrow-down-left:](#powered-by) "Powered By Aiuta" branding element appearance.
 
-    ![component](../../media/components/power-bar.png){ width=150 }
+    ![component](../../../media/components/power-bar.png){ width=150 }
 
 11. [:material-arrow-down-left:](#activity-indicator) Appearance and customization of loading indicators.
 
-    ![component](../../media/components/activity-indicator.png){ width=36}
+    ![component](../../../media/components/activity-indicator.png){ width=36}
 
 
 
@@ -167,14 +167,14 @@ enum ColorScheme {
 
 2. Main accent color for primary actions and highlights throughout the interface.
 
-    ![color](../../media/components/colors-brand.png){ width=400 }
+    ![color](../../../media/components/colors-brand.png){ width=400 }
 
     !!! example ""
         Default ARGB :material-square-rounded:{ .cl-brand } `#FF4000FF`
 
 3. Primary color used for main content labels and icons, and important information.
 
-    ![color](../../media/components/pagebar-std.png){ width=300 }
+    ![color](../../../media/components/pagebar-std.png){ width=300 }
 
     !!! example ""
         Default ARGB :material-square-rounded:{ .cl-primary } `#FF000000`
@@ -182,21 +182,21 @@ enum ColorScheme {
 
 4. Secondary color used for supporting content and less prominent information.
 
-    ![color](../../media/components/colors-secondary.png){ width=300 }
+    ![color](../../../media/components/colors-secondary.png){ width=300 }
 
     !!! example ""
         Default ARGB :material-square-rounded:{ .cl-secondary } `#FF9F9F9F`
 
 5. Preferably light color __in any scheme__ optimized for use on dark, brand, and neutral backgrounds.
 
-    ![color](../../media/components/button-contrast.png){ width=200 }
+    ![color](../../../media/components/button-contrast.png){ width=200 }
 
     !!! example ""
         Default ARGB :material-square-rounded:{ .cl-on-dark } `#FFFFFFFF`
 
 6. Preferably dark color __in any scheme__ optimized for use on light backgrounds.
 
-    ![color](../../media/components/button-contrast-inverted.png){ width=200 }
+    ![color](../../../media/components/button-contrast-inverted.png){ width=200 }
 
     !!! example ""
         Default ARGB :material-square-rounded:{ .cl-on-light } `#FF000000`
@@ -324,11 +324,11 @@ PageBarTheme {
 
         === "Default &nbsp; `false`"
 
-            ![PageBar](../../media/components/pagebar-std.png){ width=450 }
+            ![PageBar](../../../media/components/pagebar-std.png){ width=450 }
 
         === "`true`"
 
-            ![PageBar](../../media/components/pagebar-rev.png){ width=450 }   
+            ![PageBar](../../../media/components/pagebar-rev.png){ width=450 }   
 
 
 
@@ -388,7 +388,7 @@ ActivityIndicatorTheme {
 1. Optional icon for the activity indicator. If not provided, the system's default indicator will be used.
 
     !!! example ""
-        <sub>![Activity Indicator](../../media/components/activity-indicator.png){ width=30}</sub> <sup>System activity indicator by default</sup>
+        <sub>![Activity Indicator](../../../media/components/activity-indicator.png){ width=30}</sub> <sup>System activity indicator by default</sup>
 
 2. The time in milliseconds before the activity indicator appears. If the task completes before this delay, the indicator will not be shown. Otherwise, the indicator will appear.
 
