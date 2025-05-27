@@ -22,8 +22,8 @@ val aiuta: Aiuta = aiuta {
 
 The `aiuta` builder function allows you to configure the following components:
 
-- `authenticationStrategy`: Required. Defines how the SDK authenticates with the Aiuta backend.
-- `platformContext`: Required. Provides platform-specific information and context.
+- `authenticationStrategy`: **Required**. Defines how the SDK authenticates with the Aiuta backend.
+- `platformContext`: **Required**. Provides platform-specific information and context.
 - `logger`: Optional. Customizes logging behavior of the SDK.
 
 Each of these components is described in detail in the sections below.

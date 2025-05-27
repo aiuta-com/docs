@@ -6,18 +6,26 @@ In this tutorial, you will learn how to use default implementation of paging wit
 
 Before starting this tutorial:
 
-- [Initialize Aiuta Try On](making-try-ons.md)
+- [Initialize Aiuta Try On](/sdk/android/tryon/core/making-try-ons/)
 
 
 ## Add dependencies
 
 Let's add dependencies required for default paging implementation:
 
-```gradle
-dependencies {
-    implementation("com.aiuta:fashionsdk-tryon-paging:<version>")
-}
-```
+=== "Kotlin"
+    ```kotlin
+    dependencies {
+        implementation("com.aiuta:fashionsdk-tryon-paging:<version>")
+    }
+    ```
+
+=== "Groovy"
+    ```groovy
+    dependencies {
+        implementation "com.aiuta:fashionsdk-tryon-paging:<version>"
+    }
+    ```
 
 ## Paging usage
 

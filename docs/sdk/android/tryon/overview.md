@@ -7,8 +7,8 @@ Aiuta Try On is a powerful feature that enables digital try-on capabilities in y
 
 Before implementing Aiuta Try On, ensure you have:
 
-- [Initialized the Aiuta SDK](../setup/installation.md)
-- [Set up your development environment according to the base SDK requirements](../overview.md)
+- [Initialized the Aiuta SDK](/sdk/android/setup/installation/)
+- [Set up your development environment according to the base SDK requirements](/sdk/android/overview/)
 
 
 ## Implementation Approaches

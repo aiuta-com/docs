@@ -17,6 +17,6 @@ The following table shows the current platform support status for Aiuta SDK via 
 
 ## Next Steps
 
-- [Installation Guide](setup/installation.md)
+- [Installation Guide](/sdk/android/setup/installation/)
 - [API Reference](https://aiuta-com.github.io/aiuta-android-sdk/)
-- [FAQ](faq.md)
+- [FAQ](/sdk/android/faq/)

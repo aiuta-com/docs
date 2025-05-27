@@ -8,40 +8,35 @@ The UI integration approach is ideal for developers who want to quickly implemen
 
 To use Aiuta Try On with UI components, you need to add the following dependencies to your project:
 
-```gradle
-dependencies {
-    implementation("com.aiuta:fashionsdk-tryon-compose:<version>")
-}
-```
+=== "Kotlin"
+    ```kotlin
+    dependencies {
+        implementation("com.aiuta:fashionsdk-tryon-compose:<version>")
+    }
+    ```
+
+=== "Groovy"
+    ```groovy
+    dependencies {
+        implementation "com.aiuta:fashionsdk-tryon-compose:<version>"
+    }
+    ```
 
 !!! tip "Dependencies tip"
 
     The `fashionsdk-tryon-compose` artifact already includes `fashionsdk-tryon-core` and `fashionsdk-configuration` dependencies, so you don't need to explicitly declare them in your dependencies.
 
+
 ## Configuration
 
-Before using the UI components, you need to configure `AiutaConfiguration`. This configuration object allows you to customize various aspects of the try-on experience.
+Before using the UI components, you need to configure `AiutaConfiguration`. For detailed information about configuration options and setup, see [Getting Started with Aiuta Configuration](/sdk/android/tryon/ui/configuration/getting-started-configuration/).
 
-The configuration includes several key components:
+The configuration allows you to customize various aspects of the try-on experience through:
 
-- **Features Configuration**: Control which features are enabled in your try-on experience. See [Features Configuration](configuration/features.md) for details.
+- **Features Configuration**: Control which features are enabled in your try-on experience
+- **User Interface Configuration**: Customize the look and feel of the UI components
 
-- **User Interface Configuration**: Customize the look and feel of the UI components. See [User Interface Configuration](configuration/user-interface.md) for details.
-
-!!! tip "Default configuration"
-    
-    You can use pre-built configurations for common use cases. See [Default Configurations](configuration/default-configurations.md) for details.
-
-To create a configuration, use the `AiutaConfiguration.Builder`:
-
-```kotlin
-val aiutaConfiguration =  aiutaConfiguration {
-    aiuta = ... // Add Aiuta instance
-    features = ... // Add AiutaFeatures instance
-    userInterface = ... // Add AiutaUserInterfaceConfiguration instance
-}
-```
-
+{% include-markdown "sdk/templates/android/default-configuration-tip.md" %}
 
 
 ## UI Entry Points

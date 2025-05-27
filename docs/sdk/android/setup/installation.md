@@ -9,7 +9,7 @@ your own application using all the features of [Aiuta](https://aiuta.com/)
 {% include-markdown "sdk/templates/android/latest-version-tip.md" %}
 
 ??? tip "Using the Bill of Materials"
-    For better dependency management and version compatibility, consider using the [Bill of Materials (BOM)](bom.md). BOM helps ensure all SDK components use compatible versions.
+    For better dependency management and version compatibility, consider using the [Bill of Materials (BOM)](/sdk/android/setup/bom/). BOM helps ensure all SDK components use compatible versions.
 
 Open the **app/build.gradle.kts** file and add Aiuta artifacts to the dependencies block:
 
@@ -47,6 +47,6 @@ val aiuta: Aiuta = aiuta {
 
 !!! tip "Detailed description of setup Aiuta instance"
 
-    For more detailed explanation of configuration `Aiuta` class, please check [getting started guide](aiuta-getting-started.md)
+    For more detailed explanation of configuration `Aiuta` class, please check [getting started guide](/sdk/android/setup/aiuta-getting-started/)
 
 - That's it! You are ready to explore all Aiuta possibilities
