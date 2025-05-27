@@ -7,8 +7,7 @@ site_description: >-
 copyright: Copyright &copy; 2024 - 2025 Aiuta USA, Inc
 
 nav:
-  - About:
-    - index.md
+  - About: index.md
     
   - SDK:
     - Overview: sdk/overview.md
@@ -85,12 +84,19 @@ nav:
       - Getting Started: api/getting-started.md
       - Server-side Auth: api/server-side-auth-component.md
 
+  - Team:
+    - team/index.md
+    - SDK:
+      - Analytics: team/sdk/analytics.md
+      
 extra:
-  # Still unsure whether to add separators or not
-  # nav_divider_after:
-  #   - About
-  #   - Web
-  #   - Shopify
+  nav:
+    # divider_after:
+    #   - About
+    #   - Web
+    #   - Shopify
+    unlisted_items:
+      - Team
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/aiuta-com
