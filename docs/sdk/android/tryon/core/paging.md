@@ -13,11 +13,19 @@ Before starting this tutorial:
 
 Let's add dependencies required for default paging implementation:
 
-```gradle
-dependencies {
-    implementation("com.aiuta:fashionsdk-tryon-paging:<version>")
-}
-```
+=== "Kotlin"
+    ```kotlin
+    dependencies {
+        implementation("com.aiuta:fashionsdk-tryon-paging:<version>")
+    }
+    ```
+
+=== "Groovy"
+    ```groovy
+    dependencies {
+        implementation "com.aiuta:fashionsdk-tryon-paging:<version>"
+    }
+    ```
 
 ## Paging usage
 

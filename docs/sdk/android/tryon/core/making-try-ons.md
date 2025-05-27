@@ -9,11 +9,19 @@ The core implementation gives you direct access to try-on generation capabilitie
 
 To use Aiuta Try On, you need to add the following dependencies to your project:
 
-```gradle
-dependencies {
-    implementation("com.aiuta:fashionsdk-tryon-core:<version>")
-}
-```
+=== "Kotlin"
+    ```kotlin
+    dependencies {
+        implementation("com.aiuta:fashionsdk-tryon-core:<version>")
+    }
+    ```
+
+=== "Groovy"
+    ```groovy
+    dependencies {
+        implementation "com.aiuta:fashionsdk-tryon-core:<version>"
+    }
+    ```
 
 
 ## Implementation

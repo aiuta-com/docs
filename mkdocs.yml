@@ -53,6 +53,7 @@ nav:
       - UI Integration:
         - Making Try-Ons with UI: sdk/android/tryon/ui/making-try-ons-with-ui.md
         - Configuration:
+          - Getting started with Aiuta Configuration: sdk/android/tryon/ui/configuration/getting-started-configuration.md
           - Features: sdk/android/tryon/ui/configuration/features.md
           - User Interface: sdk/android/tryon/ui/configuration/user-interface.md
           - Default configurations: sdk/android/tryon/ui/configuration/default-configurations.md
