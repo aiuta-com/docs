@@ -139,3 +139,10 @@ body {
 .md-cards-links .md-icon {
   margin-left: 0.4rem;
 }
+
+/* Hide unlisted items in mobile */
+@media screen and (max-width: 1219px) {
+  .md-nav__unlisted {
+    display: none !important;
+  }
+}
