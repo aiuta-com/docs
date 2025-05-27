@@ -29,7 +29,7 @@ To use Aiuta Try On with UI components, you need to add the following dependenci
 
 ## Configuration
 
-Before using the UI components, you need to configure `AiutaConfiguration`. For detailed information about configuration options and setup, see [Getting Started with Aiuta Configuration](configuration/getting-started-configuration.md).
+Before using the UI components, you need to configure `AiutaConfiguration`. For detailed information about configuration options and setup, see [Getting Started with Aiuta Configuration](/sdk/android/tryon/ui/configuration/getting-started-configuration/).
 
 The configuration allows you to customize various aspects of the try-on experience through:
 

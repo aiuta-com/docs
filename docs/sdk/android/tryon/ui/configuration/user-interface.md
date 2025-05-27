@@ -29,7 +29,7 @@ val aiutaUserInterface = aiutaUserInterface {
 }
 ```
 
-The `aiutaUserInterface` builder function allows you to customize various aspects of the user interface. For a complete list of available configuration options, please refer to the [general configuration scheme](../../../../about/developer/user-interface.md).
+The `aiutaUserInterface` builder function allows you to customize various aspects of the user interface. For a complete list of available configuration options, please refer to the [general configuration scheme](/sdk/android/tryon/ui/configuration/user-interface/).
 
 {% include-markdown "sdk/templates/android/default-configuration-tip.md" %}
 

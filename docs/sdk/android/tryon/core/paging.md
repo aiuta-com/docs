@@ -6,7 +6,7 @@ In this tutorial, you will learn how to use default implementation of paging wit
 
 Before starting this tutorial:
 
-- [Initialize Aiuta Try On](making-try-ons.md)
+- [Initialize Aiuta Try On](/sdk/android/tryon/core/making-try-ons/)
 
 
 ## Add dependencies

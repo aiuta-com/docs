@@ -24,13 +24,12 @@ To use Aiuta Try On, you need to add the following dependencies to your project:
     ```
 
 
-## Implementation
+## Using Aiuta Try-Ons
 
 
-### Getting Started
+### Initialization
 
-1. Ensure you have [initialized the Aiuta SDK](../../setup/installation.md) and have an instance of the `Aiuta` class
-2. Create an instance of `AiutaTryOn` using the extension function:
+Create an instance of `AiutaTryOn` using the extension function:
 
 ```kotlin
 import com.aiuta.fashionsdk.Aiuta
@@ -44,7 +43,7 @@ val aiutaTryOn: AiutaTryOn = aiuta.tryon
 Once you have created the `AiutaTryOn` instance, you're ready to implement digital try-on functionality in your application.
 
 
-## Product Catalog Items
+### Retrieving Products from Catalog
 
 To implement generation with Aiuta Try On, you should have a `productId` of the item, which determines which fitting needs to be done for the photo.
 
@@ -69,7 +68,7 @@ val products = aiutaTryOn.getProductItems(catalogName = "Your catalog name")
     You can use your own implementation of pagination or pay attention to the default implementation with the help of the Paging 3 library. Please, check [paging guide](paging.md)
 
 
-## Start Generation
+### Start Generation
 
 To start generation, you need the following:
 
@@ -88,7 +87,7 @@ val receivingFlow = aiutaTryOn.startProductGeneration(
 ```
 
 
-## Observing Result
+### Observing Result
 
 After the generation starts, you need to wait for some time until the entire result is ready. You can track the current status and get the result by collecting the returned flow from `startProductGeneration()`. As the result is ready, the necessary `productGenerationStatus.SuccessGenerationStatus` will be emitted.
 

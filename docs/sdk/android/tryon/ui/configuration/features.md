@@ -26,7 +26,7 @@ val aiutaFeatures = aiutaFeatures {
 }
 ```
 
-The `aiutaFeatures` builder function allows you to configure various features that will be available in your try-on experience. For a complete list of available features and their configuration options, please refer to the [general configuration scheme](../../../../about/developer/features.md).
+The `aiutaFeatures` builder function allows you to configure various features that will be available in your try-on experience. For a complete list of available features and their configuration options, please refer to the [general configuration scheme](/sdk/about/developer/features/).
 
 {% include-markdown "sdk/templates/android/default-configuration-tip.md" %}
 
