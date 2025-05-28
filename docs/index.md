@@ -23,7 +23,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     ---
 
     {% include-markdown "sdk/templates/android/requirements-base.md" %}
-    :octicons-arrow-right-24: 
+    :material-book-open-variant: 
     <span class="md-cards-links">
     [Overview](sdk/overview.md) :octicons-dot-fill-16:{ .xs } [Quick Start](sdk/android/setup/installation.md)
     </span>
@@ -33,7 +33,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     ---
 
     {% include-markdown "sdk/templates/ios/requirements.md" %}
-    :octicons-arrow-right-24: 
+    :material-book-open-variant:
     <span class="md-cards-links">
     [Overview](sdk/overview.md) :octicons-dot-fill-16:{ .xs } [Quick Start](sdk/ios/quick-start.md)
     </span>
@@ -43,7 +43,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     ---
 
     {% include-markdown "sdk/templates/flutter/requirements.md" %}
-    :octicons-arrow-right-24: 
+    :material-book-open-variant:
     <span class="md-cards-links">
     [Overview](sdk/overview.md) :octicons-dot-fill-16:{ .xs } [Quick Start](sdk/flutter/quick-start.md)
     </span>
@@ -58,7 +58,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
     ---
 
-    :octicons-arrow-right-24: 
+    :material-book-open-variant:
     <span class="md-cards-links">
     [Overview](shopify/overview.md)
     </span>
@@ -67,7 +67,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
     ---
 
-    :octicons-arrow-right-24: 
+    :material-book-open-variant:
     <span class="md-cards-links">
     [Overview](api/overview.md) :octicons-dot-fill-16:{ .xs } [Getting Started](api/getting-started.md)
     </span>
@@ -81,6 +81,6 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
 <div class="grid cards" markdown>
 
-- :aiuta-logo:{ .lg } [Discover __Aiuta Studio__ AI Fashion models and Flat lays :octicons-link-external-24:](https://aiuta.com){:target="_blank"}
+- :aiuta-favicon:{ .lg .cl-aiuta } [Discover __Aiuta Studio__ AI Fashion models and Flat lays :octicons-link-external-24:](https://aiuta.com){:target="_blank"}
 
 </div>

@@ -146,3 +146,20 @@ body {
     display: none !important;
   }
 }
+
+/* Code block result container */
+.result {
+  padding: 0.6rem 0.8rem;
+  margin-top: calc(-1em - 2px);
+  overflow: visible;
+  border: 1px solid var(--md-code-bg-color);
+  border-top-width: px2rem(2px);
+  border-bottom-right-radius: px2rem(2px);
+  border-bottom-left-radius: px2rem(2px);
+
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
