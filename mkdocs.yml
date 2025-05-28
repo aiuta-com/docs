@@ -86,7 +86,11 @@ nav:
 
   - Team:
     - team/index.md
+    - Docs:
+      - Convention: team/docs/convention.md
     - SDK:
+      - Subscription Details: team/sdk/subscription-details.md
+      - Predefined Models: team/sdk/predefined-models.md
       - Analytics: team/sdk/analytics.md
       
 extra:

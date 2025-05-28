@@ -1,7 +1,7 @@
 # User Interface Configuration Scheme
 
 <div class="grid cards" markdown>
-- :material-book-open-variant: &nbsp; ... part of [configuration page](configuration.md)
+- :material-book-open-variant: ... part of [configuration page](configuration.md)
 </div>
 
 Configuration of the user interface presentation style, swipe-to-dismiss policy, and UI components themes for the Aiuta SDK.

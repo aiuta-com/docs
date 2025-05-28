@@ -22,13 +22,13 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
     ---
     {% include-markdown "sdk/templates/android/requirements-base.md" %}
-    :octicons-arrow-right-24: [Quick Start](./android/setup/installation.md)
+    :material-book-open-variant: [Quick Start](./android/setup/installation.md)
 
 -   :fontawesome-brands-apple:{ .lg } __iOS__
 
     ---
     {% include-markdown "sdk/templates/ios/requirements.md" %}
-    :octicons-arrow-right-24: [Quick Start](./ios/quick-start.md)
+    :material-book-open-variant: [Quick Start](./ios/quick-start.md)
 
 -   :fontawesome-brands-flutter:{ .lg } __Flutter__ <span class="md-platfroms">:fontawesome-brands-android: Android :fontawesome-brands-apple: iOS</span>
 
@@ -37,7 +37,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     sdk: >=3.1.0 <4.0.0
     flutter: >= 3.19.6
     ```
-    :octicons-arrow-right-24: [Quick Start](./flutter/quick-start.md)
+    :material-book-open-variant: [Quick Start](./flutter/quick-start.md)
 
 -   :fontawesome-brands-js:{ .lg } __Web__
 

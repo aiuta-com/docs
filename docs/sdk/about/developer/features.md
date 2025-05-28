@@ -1,7 +1,7 @@
 # Features Configuration Scheme
 
 <div class="grid cards" markdown>
-- :material-book-open-variant: &nbsp; ... part of [configuration page](configuration.md)
+- :material-book-open-variant: ... part of [configuration page](configuration.md)
 </div>
 
 Describes the set of features enabled in the SDK for the user and thier interaction with the app.
@@ -277,7 +277,7 @@ ImagePickerFeature {
 1.  [:material-arrow-down-left:](#camera) Configuration for camera functionality, allowing users to take new photos directly within the SDK.
 2.  [:material-arrow-down-left:](#photo-gallery) Configuration for accessing and selecting images from the device's photo library.
 3.  [:material-arrow-down-left:](#predefined-models) Configuration for using predefined model images as an alternative to user photos.
-4.  [:material-arrow-down-left:](uploads-history) Configuration for managing and reusing previously uploaded images.
+4.  [:material-arrow-down-left:](#uploads-history) Configuration for managing and reusing previously uploaded images.
 5.  List of exactly 2 example of input images to display in the image picker interface.
 6.  Title text displayed above images when the image picker is empty.
 7.  Description text shown when the image picker is empty.
