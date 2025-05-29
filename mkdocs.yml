@@ -33,8 +33,6 @@ nav:
 
     - Developer:
       - Configuration: sdk/about/developer/configuration.md
-      - User Interface: sdk/about/developer/user-interface.md
-      - Features: sdk/about/developer/features.md
       - Common Models: sdk/about/developer/common-models.md
       - Platform Types: sdk/about/developer/platform-types.md
 
