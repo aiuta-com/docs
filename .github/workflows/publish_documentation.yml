@@ -29,4 +29,5 @@ jobs:
       - run: pip install mkdocs-material
       - run: pip install mkdocs-minify-plugin
       - run: pip install mkdocs-include-markdown-plugin
+      - run: pip install mkdocs-swagger-ui-tag
       - run: mkdocs gh-deploy --force

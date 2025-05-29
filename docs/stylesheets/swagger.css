@@ -1,0 +1,41 @@
+/* Fix extra body offset in iframe */
+body {
+    margin-top: -2.5rem !important;
+    margin-left: 0rem !important;
+    margin-right: 0rem !important;
+    margin-bottom: 0rem !important;
+}
+
+/* Fix too large title height */
+.swagger-ui .info {
+    margin-bottom: 0 !important;
+}
+
+/* Remove extra padding from wrapper to match doc page */
+.swagger-ui .wrapper {
+    padding: 0 !important;
+}
+
+/* Fix too large authorize container */
+.swagger-ui .scheme-container {
+    padding: 1rem !important;
+    margin: 0 0.04rem !important;
+}
+
+/* Slightly lighter background for code blocks */
+.swagger-ui .microlight {
+    background-color: rgba(30, 33, 41, 0.88) !important;
+}
+
+/* Remove backdrop background cause it not covers the whole page */
+.swagger-ui .dialog-ux .backdrop-ux {
+    background: none !important;
+    background-color: transparent !important;
+}
+
+/* Fix ugly background in schemas expands */
+.swagger-ui .json-schema-2020-12-expand-deep-button,
+.swagger-ui .json-schema-2020-12-accordion {
+  background: none !important;
+  background-color: transparent !important;
+}

@@ -164,6 +164,9 @@ plugins:
   - minify:
       minify_html: true
   - include-markdown
+  - swagger-ui-tag:
+      extra_css: 
+        - stylesheets/swagger.css
 
 markdown_extensions:
   - admonition
