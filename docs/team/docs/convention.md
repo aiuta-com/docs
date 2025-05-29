@@ -326,7 +326,7 @@ Let's respect people who prefer dark themes
 
 ### Custom icons
 
-If you need a special icon, you couldn't find a suitable one among the huge number [available icons :octicons-link-external-24:](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/){:target="_blank"}, and want to export yours from Figma and place it in the `overrides/.icons` directory, please edit the exported `svg` file manually, replacing the fill color (usually `white`) with the `currentColor` to match current typeface color.
+If you need a special icon, you couldn't find a suitable one among the huge number [available icons :octicons-link-external-24:](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/){:target="_blank"}, and want to export yours from Figma and place it in the `overrides/.icons` directory, please edit the exported `svg` file manually, replacing the fill color (usually `white` or `black` for icons) with the `currentColor` to match current typeface color.
 
 !!! example
     === "Original Figma export"

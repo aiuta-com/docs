@@ -10,7 +10,7 @@ nav:
   - About: index.md
     
   - SDK:
-    - Overview: sdk/overview.md
+    - sdk/index.md
     - Demo Apps: sdk/demo-apps.md
     - Pages:
       - Welcome: sdk/about/pages/welcome-screen.md
@@ -37,7 +37,7 @@ nav:
       - Platform Types: sdk/about/developer/platform-types.md
 
   - Android:
-    - Overview: sdk/android/overview.md
+    - sdk/android/index.md
     - Setup: 
       - Installation: sdk/android/setup/installation.md
       - Getting started with Aiuta: sdk/android/setup/aiuta-getting-started.md
@@ -60,10 +60,10 @@ nav:
     - API Reference: https://aiuta-com.github.io/aiuta-android-sdk/
 
   - iOS:
-    - Quick Start: sdk/ios/quick-start.md
+    - sdk/ios/index.md
 
   - Flutter:
-    - Quick Start: sdk/flutter/quick-start.md
+    - sdk/flutter/index.md
     - Installation: sdk/flutter/installation.md
     - Configuration: sdk/flutter/configuration.md
     - Basic Usage: sdk/flutter/basic-usage.md
@@ -71,16 +71,15 @@ nav:
       - From v1 to v4: sdk/flutter/migration/v4.md
 
   - Web:
-    - Quick Start: sdk/web/quick-start.md
+    - sdk/web/index.md
 
   - Shopify:
-    - Overview: shopify/overview.md
+    - shopify/index.md
 
   - API:
-    - Overview: api/overview.md
-    - Introduction: 
-      - Getting Started: api/getting-started.md
-      - Server-side Auth: api/server-side-auth-component.md
+    - api/index.md
+    - Getting Started: api/getting-started.md
+    - Server-side Auth: api/server-side-auth-component.md
 
   - Insights:
     - team/index.md
