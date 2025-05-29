@@ -82,7 +82,7 @@ nav:
       - Getting Started: api/getting-started.md
       - Server-side Auth: api/server-side-auth-component.md
 
-  - Team:
+  - Insights:
     - team/index.md
     - Docs:
       - Convention: team/docs/convention.md
@@ -93,10 +93,13 @@ nav:
       
 extra:
   nav:
-    # divider_after:
-    #   - About
-    #   - Web
-    #   - Shopify
+    divider_after:
+      - Aiuta
+      - About
+      # - Web
+    divider_before:
+      - Insights
+      # - API
     unlisted_items:
       - Team
   social:
