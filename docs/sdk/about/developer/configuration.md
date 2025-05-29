@@ -2,11 +2,7 @@
 
 The configuration is structured as a hierarchical object that controls various aspects of the SDK's behavior, appearance, and functionality. The configuration is designed to be flexible and extensible, allowing for customization of features, UI elements, and behavior.
 
-??? info "Type Definitions"
-    Please, refer to the [:octicons-arrow-right-24: platform specific types](platform-types.md) used in this scheme and the [:octicons-arrow-right-24: common models](common-models.md) schemes
-
 ??? info "Naming Convention"
-    
     Implementation and naming details may vary depending on the specific platform, but the core concepts and overall structure remain consistent across all platforms.
     For example type names, described in the schemes, like: 
 
@@ -32,6 +28,9 @@ The configuration is structured as a hierarchical object that controls various a
 !!! tip "Annotations"
     Don't miss them - click :material-information-outline: for more details
 
+!!! doc "Type Definitions"
+    [:octicons-arrow-right-24: platform specific types](platform-types.md)<br>
+    [:octicons-arrow-right-24: common models](common-models.md) schemes
 
 
 ## Configuration
@@ -50,14 +49,13 @@ Configuration {
 
     Please see [API documentation :octicons-link-external-24:](https://developer.aiuta.com/docs/start){:target="_blank"} Obtaining credentials section for instructions on how to get your credentials.
 
-2. [:material-arrow-down-left:](user-interface.md#user-interface) Configuration of the user interface presentation style, swipe-to-dismiss policy, and UI components themes for the Aiuta SDK.
+2. [:material-arrow-down-left:](#user-interface) Configuration of the user interface presentation style, swipe-to-dismiss policy, and UI components themes for the Aiuta SDK.
 
-3. [:material-arrow-down-left:](features.md#features) Describes the set of features enabled in the SDK for the user and thier interaction with the app.
+3. [:material-arrow-down-left:](#features) Describes the set of features enabled in the SDK for the user and thier interaction with the app.
 
 4. [:material-arrow-down-left:](#analytics) Allows to receive analytics events from the SDK and send them to your analytics provider.
 
 5. [:material-arrow-down-left:](#debugsettings) Controls the logging settings and validation policies for various parameters.
-
 
 
 ### [:material-arrow-up-left:](#configuration) Auth
@@ -71,7 +69,8 @@ Configuration {
 
     1.  The `apiKey` is used to authenticate all outgoing requests from the Aiuta SDK to the Aiuta API. This key ensures that the requests are linked to your account, allowing the SDK to access the necessary resources and services provided by Aiuta. 
     
-        Please see [API documentation :octicons-link-external-24:](https://developer.aiuta.com/docs/start){:target="_blank"} obtaining credentials section for instructions on how to get your `apiKey`.
+        !!! doc "Please see [API documentation obtaining credentials](../../../api/getting-started.md#obtaining-credentials) section for instructions on how to get your `apiKey`"
+    
   
 === "Jwt"
     ```typescript
@@ -83,7 +82,7 @@ Configuration {
 
     1.  The `subscriptionId` is used to authenticate requests that do not require secure transmission. It acts as a key to ensure that the requests are properly linked to your subscription and account.
 
-        Please see [API documentation :octicons-link-external-24:](https://developer.aiuta.com/docs/start){:target="_blank"} obtaining credentials section for instructions on how to find your `subscriptionId`.
+        !!! doc "Please see [API documentation obtaining credentials](../../../api/getting-started.md#obtaining-credentials) section for instructions on how to find your `subscriptionId`"
         
     2.  This method is invoked by the SDK each time a tryOn request necessitates authentication
         through a JSON Web Token. The implementation of this method should securely
@@ -102,21 +101,19 @@ Configuration {
             
             If an error is thrown, the SDK will be unable to complete the tryOn request and will display an error message to the user
 
-        See [JWT server-side auth example :octicons-link-external-24:](https://developer.aiuta.com/docs/server-side-auth-component){:target="_blank"} for more details on securely generating JWTs.
+        !!! doc "See [JWT server-side auth example](../../../api/server-side-auth-component.md) for more details on securely generating JWTs."
 
 
 
-### [:material-arrow-up-left:](#configuration) User Interface
-<div class="grid cards" markdown>
-- :material-book-open-variant: continue on [user interface configuration page...](user-interface.md)
-</div>
+<!-- User Interface -->
+{% include-markdown "sdk/about/developer/user-interface.md" %}
 
 
 
-### [:material-arrow-up-left:](#configuration) Features
-<div class="grid cards" markdown>
-- :material-book-open-variant: continue on [features configuration page...](features.md)
-</div>
+<!-- Feature -->
+{% include-markdown "sdk/about/developer/features.md" %}
+
+
 
 ### [:material-arrow-up-left:](#configuration) Analytics
 ```typescript

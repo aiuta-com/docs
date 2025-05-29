@@ -80,14 +80,9 @@ body {
   display: none;
 }
 
-/* Align navigation icons to the left */
-[dir=ltr] .md-nav__link .md-icon:last-child {
-  margin-left: 0;
-}
-
 /* Annotation styles */
 .md-annotation {
-  margin-left: -8px !important;
+  margin-left: -0.5em !important;
 }
 
 .md-annotation__index:after {

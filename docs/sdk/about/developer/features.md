@@ -1,10 +1,4 @@
-# Features Configuration Scheme
-
-<div class="grid cards" markdown>
-- :material-book-open-variant: ... part of [configuration page](configuration.md)
-</div>
-
-Describes the set of features enabled in the SDK for the user and thier interaction with the app.
+<!-- part of `configuration.md` -->
 
 ### [:material-arrow-up-left:](configuration.md#configuration) Features
 ```typescript
@@ -32,18 +26,21 @@ Features {
 #### [:material-arrow-up-left:](#features) Welcome Screen
 ```typescript
 WelcomeScreenFeature {
-  images: {
+  images {
     welcomeBackground: Image // (1)!
-  },
-  icons: {
+  }
+
+  icons {
     welcome82: Icon // (2)!
-  },
-  strings: {
+  }
+
+  strings {
     welcomeTitle: String // (3)!
     welcomeDescription: String // (4)!
     welcomeButtonStart: String // (5)!
-  },
-  typography: {
+  }
+
+  typography {
     welcomeTitle: TextStyle // (6)!
     welcomeDescription: TextStyle // (7)!
   }
@@ -66,14 +63,17 @@ WelcomeScreenFeature {
 OnboardingFeature {
   howItWorksPage: OnboardingHowItWorksPageFeature // (1)!
   bestResultsPage: OnboardingBestResultsPageFeature | null // (2)!
-  strings: {
+
+  strings {
     onboardingButtonNext: String // (3)!
     onboardingButtonStart: String // (4)!
-  },
-  shapes: {
+  }
+
+  shapes {
     onboardingImageL: Shape // (5)!
     onboardingImageS: Shape // (6)!
-  },
+  }
+
   dataProvider: BuiltIn | Custom {
     isOnboardingCompleted: Observable<Bool> // (7)!
     completeOnboarding: Callback() // (8)!
@@ -96,13 +96,14 @@ OnboardingFeature {
 ###### [:material-arrow-up-left:](#onboarding) How It Works
 ```typescript
 OnboardingHowItWorksPageFeature {
-  images: {
+  images {
     onboardingHowItWorksItems: List<{ // (6)!
       itemPhoto: Image // (1)!
       itemPreview: Image // (2)!
     }>
-  },
-  strings: {
+  }
+
+  strings {
     onboardingHowItWorksPageTitle: String | null // (3)!
     onboardingHowItWorksTitle: String // (4)!
     onboardingHowItWorksDescription: String // (5)!
@@ -123,20 +124,23 @@ OnboardingHowItWorksPageFeature {
 ###### [:material-arrow-up-left:](#onboarding) Best Results
 ```typescript
 OnboardingBestResultsPageFeature {
-  images: {
+  images {
     onboardingBestResultsGood: List<Image> // (1)!
     onboardingBestResultsBad: List<Image> // (2)!
-  },
-  icons: {
+  }
+
+  icons {
     onboardingBestResultsGood24: Icon // (3)!
     onboardingBestResultsBad24: Icon // (4)!
-  },
-  strings: {
+  }
+
+  strings {
     onboardingBestResultsPageTitle: String | null // (5)!
     onboardingBestResultsTitle: String // (6)!
     onboardingBestResultsDescription: String // (7)!
-  },
-  styles: {
+  }
+
+  styles {
     reduceOnboardingBestResultsShadows: Bool // (8)!
   }
 }
@@ -158,7 +162,7 @@ OnboardingBestResultsPageFeature {
 === "Embedded Into Onboarding"
     ```typescript
     ConsentEmbeddedIntoOnboardingFeature {
-      strings: {
+      strings {
         consentHtml: String // (1)!
       }
     }
@@ -169,22 +173,26 @@ OnboardingBestResultsPageFeature {
 === "Standalone Onboarding Page"
     ```typescript
     ConsentStandaloneOnboardingPageFeature {
-      strings: {
+      strings {
         consentPageTitle: String | null // (1)!
         consentTitle: String // (2)!
         consentDescriptionHtml: String // (3)!
         consentFooterHtml: String | null // (4)!
         consentButtonAccept: String // (5)!
-      },
-      icons: {
+      }
+
+      icons {
         consentTitle24: Icon // (6)!
-      },
-      styles: {
+      }
+
+      styles {
         drawBordersAroundConsents: Bool // (7)!
-      },
-      data: {
+      }
+
+      data {
         consents: List<Consent> // (8)!
-      },
+      }
+
       dataProvider: BuiltIn | Custom {
         obtainedConsentsIds: Observable<List<string>> // (9)!
         obtainConsentsIds: Callback(List<string>) // (10)!
@@ -213,22 +221,26 @@ OnboardingBestResultsPageFeature {
 === "Standalone Image Picker Page"
     ```typescript
     ConsentStandaloneImagePickerPageFeature {
-      strings: {
+      strings {
         consentPageTitle: String | null // (1)!
         consentTitle: String // (2)!
         consentDescriptionHtml: String // (3)!
         consentFooterHtml: String | null // (4)!
         consentButtonAccept: String // (5)!
-      },
-      icons: {
+      }
+
+      icons {
         consentTitle24: Icon // (6)!
-      },
-      styles: {
+      }
+
+      styles {
         drawBordersAroundConsents: Bool // (7)!
-      },
-      data: {
+      }
+
+      data {
         consents: List<Consent> // (8)!
-      },
+      }
+
       dataProvider: BuiltIn | Custom {
         obtainedConsentsIds: Observable<List<string>> // (9)!
         obtainConsentsIds: Callback(List<string>) // (10)!
@@ -263,10 +275,12 @@ ImagePickerFeature {
   photoGallery: ImagePickerPhotoGalleryFeature // (2)!
   predefinedModels: ImagePickerPredefinedModelFeature | null // (3)!
   uploadsHistory: ImagePickerUploadsHistoryFeature | null // (4)!
-  images: {
+
+  images {
     examples: List<Image> // (5)!
   }
-  strings: {
+
+  strings {
     imagePickerTitleEmpty: String // (6)!
     imagePickerDescriptionEmpty: String // (7)!
     imagePickerButtonUploadImage: String // (8)!
@@ -288,10 +302,11 @@ ImagePickerFeature {
 ###### [:material-arrow-up-left:](#image-picker) Camera
 ```typescript
 ImagePickerCameraFeature {
-  icons: {
+  icons {
     camera24: Icon // (1)!
   }
-  strings: {
+
+  strings {
     cameraButtonTakePhoto: String // (2)!
     cameraPermissionTitle: String // (3)!
     cameraPermissionDescription: String // (4)!
@@ -311,10 +326,11 @@ ImagePickerCameraFeature {
 ###### [:material-arrow-up-left:](#image-picker) Photo Gallery
 ```typescript
 ImagePickerPhotoGalleryFeature {
-  icons: {
+  icons {
     gallery24: Icon // (1)!
   }
-  strings: {
+
+  strings {
     galleryButtonSelectPhoto: String // (2)!
   }
 }
@@ -328,13 +344,15 @@ ImagePickerPhotoGalleryFeature {
 ###### [:material-arrow-up-left:](#image-picker) Predefined Models
 ```typescript
 ImagePickerPredefinedModelFeature {
-  icons: {
+  icons {
     selectModels24: Icon // (1)!
   }
-  data: {
+
+  data {
     preferredCategoryId: String // (2)!
   }
-  strings: {
+
+  strings {
     predefinedModelPageTitle: String // (3)!
     predefinedModelOr: String // (4)!
     predefinedModelErrorEmptyModelsList: String // (5)!
@@ -355,14 +373,16 @@ ImagePickerPredefinedModelFeature {
 ###### [:material-arrow-up-left:](#image-picker) Uploads History
 ```typescript
 ImagePickerUploadsHistoryFeature {
-  strings: {
+  strings {
     uploadsHistoryButtonNewPhoto: String // (1)!
     uploadsHistoryTitle: String // (2)!
     uploadsHistoryButtonChangePhoto: String // (3)!
   }
-  styles: {
+
+  styles {
     changePhotoButtonStyle: primary | blurred // (4)!
   }
+
   dataProvider: BuiltIn | Custom {
     uploadedImages: Observable<List<InputImage>> // (5)!
     addUploadedImagesAction: Callback(List<InputImage>) // (6)!
@@ -386,7 +406,7 @@ ImagePickerUploadsHistoryFeature {
 #### [:material-arrow-up-left:](#features) Try On
 ```typescript
 TryOnFeature {
-  tryOn: {
+  tryOn {
     loadingPage: TryOnLoadingPageFeature // (1)!
     inputImageValidation: TryOnInputImageValidationFeature // (2)!
     cart: TryOnCartFeature // (3)!
@@ -394,18 +414,22 @@ TryOnFeature {
     feedback: TryOnFeedbackFeature | null // (5)!
     generationsHistory: TryOnGenerationsHistoryFeature | null // (6)!
     otherPhoto: TryOnWithOtherPhotoFeature | null // (7)!
-    settings: {
+    
+    settings {
       isBackgroundExecutionAllowed: Bool // (8)!
       tryGeneratePersonSegmentation: Bool // (9)!
     }
-    icons: {
+
+    icons {
       tryOn20: Icon // (10)!
     }
-    strings: {
+
+    strings {
       tryOnPageTitle: String // (11)!
       tryOn: String // (12)!
     }
-    styles: {
+
+    styles {
       tryOnButtonGradient: List<Color> | null // (13)!
     }
   }
@@ -431,12 +455,13 @@ TryOnFeature {
 ##### [:material-arrow-up-left:](#try-on) Loading Page
 ```typescript
 TryOnLoadingPageFeature {
-  strings: {
+  strings {
     tryOnLoadingStatusUploadingImage: String // (1)!
     tryOnLoadingStatusScanningBody: String // (2)!
     tryOnLoadingStatusGeneratingOutfit: String // (3)!
   }
-  styles: {
+
+  styles {
     loadingStatusBackgroundGradient: List<Color> | null // (4)!
     loadingStatusStyle: primary | blurred | blurredWithOutline // (5)!
   }
@@ -454,7 +479,7 @@ TryOnLoadingPageFeature {
 ##### [:material-arrow-up-left:](#try-on) Input Image Validation
 ```typescript
 TryOnInputImageValidationFeature {
-  strings: {
+  strings {
     invalidInputImageDescription: String // (1)!
     invalidInputImageChangePhotoButton: String // (2)!
   }
@@ -469,10 +494,11 @@ TryOnInputImageValidationFeature {
 ##### [:material-arrow-up-left:](#try-on) Cart
 ```typescript
 TryOnCartFeature {
-  strings: {
+  strings {
     addToCart: String // (1)!
   }
-  handler: {
+
+  handler {
     addToCartAction: Callback(String) // (2)!
   }
 }
@@ -486,10 +512,11 @@ TryOnCartFeature {
 ##### [:material-arrow-up-left:](#try-on) Fit Disclaimer
 ```typescript
 TryOnFitDisclaimerFeature {
-  icons: {
+  icons {
     info20: Icon | null // (1)!
   }
-  strings: {
+
+  strings {
     fitDisclaimerTitle: String // (2)!
     fitDisclaimerDescription: String // (3)!
     fitDisclaimerButtonClose: String // (4)!
@@ -508,12 +535,14 @@ TryOnFitDisclaimerFeature {
 ```typescript
 TryOnFeedbackFeature {
   otherFeedback: TryOnFeedbackOtherFeature | null // (1)!
-  icons: {
+
+  icons {
     like36: Icon // (2)!
     dislike36: Icon // (3)!
     gratitude40: Icon // (4)!
   }
-  strings: {
+
+  strings {
     feedbackOptions: List<String> // (5)!
     feedbackTitle: String // (6)!
     feedbackButtonSkip: String // (7)!
@@ -538,7 +567,7 @@ TryOnFeedbackFeature {
 ###### [:material-arrow-up-left:](#feedback) Other
 ```typescript
 TryOnFeedbackOtherFeature {
-  strings: {
+  strings {
     otherFeedbackTitle: String // (1)!
     otherFeedbackButtonSend: String // (2)!
     otherFeedbackButtonCancel: String // (3)!
@@ -557,12 +586,14 @@ TryOnFeedbackOtherFeature {
 ##### [:material-arrow-up-left:](#try-on) Generations History
 ```typescript
 TryOnGenerationsHistoryFeature {
-  icons: {
+  icons {
     history24: Icon // (1)!
   }
-  strings: {
+
+  strings {
     generationsHistoryPageTitle: String // (2)!
   }
+
   dataProvider: BuiltIn | Custom {
     generatedImages: Observable<List<GeneratedImage>> // (3)!
     addGeneratedImages: Callback(List<GeneratedImage>) // (4)!
@@ -582,7 +613,7 @@ TryOnGenerationsHistoryFeature {
 ##### [:material-arrow-up-left:](#try-on) Other Photo
 ```typescript
 TryOnWithOtherPhotoFeature {
-  icons: {
+  icons {
     changePhoto24: Icon // (1)!
   }
 }
@@ -596,12 +627,15 @@ TryOnWithOtherPhotoFeature {
 ```typescript
 ShareFeature {
   watermark: ShareWatermarkFeature | null // (1)!
-  icons: {
+
+  icons {
     share24: Icon // (2)!
   }
-  strings: {
+
+  strings {
     shareButton: String // (3)!
   }
+
   dataProvider: null | Custom {
     getShareText: Callback(productIds: List<String>) => String // (4)!
   }
@@ -619,7 +653,7 @@ ShareFeature {
 ###### [:material-arrow-up-left:](#share) Watermark
 ```typescript
 ShareWatermarkFeature {
-  images: {
+  images {
     logo: Image // (1)!
   }
 }
@@ -632,14 +666,16 @@ ShareWatermarkFeature {
 #### [:material-arrow-up-left:](#features) Wishlist
 ```typescript
 WishlistFeature {
-  icons: {
+  icons {
     wishlist24: Icon // (1)!
     wishlistFill24: Icon // (2)!
   }
-  strings: {
+
+  strings {
     wishlistButtonAdd: String // (3)!
   }
-  dataProvider: {
+  
+  dataProvider {
     wishlistProductIds: Observable<List<String>> // (4)!
     setProductInWishlist: Callback(productId: String, inWishlist: Bool) // (5)!
   }

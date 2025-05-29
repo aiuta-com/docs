@@ -1,10 +1,4 @@
-# User Interface Configuration Scheme
-
-<div class="grid cards" markdown>
-- :material-book-open-variant: ... part of [configuration page](configuration.md)
-</div>
-
-Configuration of the user interface presentation style, swipe-to-dismiss policy, and UI components themes for the Aiuta SDK.
+<!-- part of `configuration.md` -->
 
 ### [:material-arrow-up-left:](configuration.md#configuration) User Interface
 ```typescript
@@ -240,7 +234,7 @@ enum ColorScheme {
 ###### [:material-arrow-up-left:](#theme) Label
 ```typescript
 LabelTheme {
-  typography: {
+  typography {
     titleL: TextStyle // (1)!
     titleM: TextStyle // (2)!
     regular: TextStyle // (3)!
@@ -259,11 +253,12 @@ LabelTheme {
 ###### [:material-arrow-up-left:](#theme) Image
 ```typescript
 ImageTheme {
-  shapes: {
+  shapes {
     imageL: Shape // (1)!
     imageS: Shape // (2)!
-  },
-  icons: {
+  }
+
+  icons {
     imageError36: Icon // (3)!
   }
 }
@@ -279,11 +274,12 @@ ImageTheme {
 ###### [:material-arrow-up-left:](#theme) Button
 ```typescript
 ButtonTheme {
-  typography: {
+  typography {
     buttonM: TextStyle // (1)!
     buttonS: TextStyle // (2)!
-  },
-  shapes: {
+  }
+
+  shapes {
     buttonM: Shape // (3)!
     buttonS: Shape // (4)!
   }
@@ -301,14 +297,16 @@ ButtonTheme {
 ###### [:material-arrow-up-left:](#theme) Page Bar
 ```typescript
 PageBarTheme {
-  typography: {
+  typography {
     pageTitle: TextStyle // (1)!
-  },
-  icons: {
+  }
+
+  icons {
     back24: Icon // (2)!
     close24: Icon // (3)!
-  },
-  settings: {
+  }
+
+  settings {
     preferCloseButtonOnTheRight: Bool // (4)!
   }
 }
@@ -335,20 +333,23 @@ PageBarTheme {
 ###### [:material-arrow-up-left:](#theme) Bottom Sheet
 ```typescript
 BottomSheetTheme {
-  typography: {
+  typography {
     iconButton: TextStyle // (1)!
     chipsButton: TextStyle // (2)!
-  },
-  shapes: {
+  }
+
+  shapes {
     bottomSheet: Shape // (3)!
     chipsButton: Shape // (4)!
-  },
-  grabber: {
+  }
+
+  grabber {
     width: Number // (5)!
     height: Number // (6)!
     topPadding: Number // (7)!
-  },
-  settings: {
+  }
+
+  settings {
     extendDelimitersToTheRight: Bool // (8)!
     extendDelimitersToTheLeft: Bool // (9)!
   }
@@ -371,13 +372,14 @@ BottomSheetTheme {
 ###### [:material-arrow-up-left:](#theme) Activity Indicator
 ```typescript
 ActivityIndicatorTheme {
-  icons: {
+  icons {
     loading14: Icon | null // (1)!
-  },
-  colors: {
+  }
+
+  colors {
     overlay: Color // (4)!
   }
-  settings: {
+  settings {
     indicationDelay: Number // (2)!
     spinDuration: Number // (3)!
   }
@@ -404,17 +406,19 @@ ActivityIndicatorTheme {
 ###### [:material-arrow-up-left:](#theme) Selection
 ```typescript
 SelectionSnackbarTheme {
-  strings: {
+  strings {
     select: String // (1)!
     cancel: String // (2)!
     selectAll: String // (3)!
     unselectAll: String // (4)!
-  },
-  icons: {
+  }
+
+  icons {
     trash24: Icon // (5)!
     check20: Icon // (6)!
-  },
-  colors: {
+  }
+
+  colors {
     selectionBackground: Color // (7)!
   }
 }
@@ -434,14 +438,16 @@ SelectionSnackbarTheme {
 ###### [:material-arrow-up-left:](#theme) Error
 ```typescript
 ErrorSnackbarTheme {
-  strings: {
+  strings {
     defaultErrorMessage: String // (1)!
     tryAgainButton: String // (2)!
-  },
-  icons: {
+  }
+
+  icons {
     error36: Icon // (3)!
-  },
-  colors: {
+  }
+
+  colors {
     errorBackground: Color // (4)!
     errorPrimary: Color // (5)!
   }
@@ -461,23 +467,26 @@ ErrorSnackbarTheme {
 ```typescript
 ProductBarTheme {
   prices: ProductBarPricesTheme | null // (1)!
-  typography: {
+  typography {
     product: TextStyle // (2)!
     brand: TextStyle // (3)!
-  },
-  icons: {
+  }
+
+  icons {
     arrow16: Icon // (4)!
-  },
-  settings: {
+  }
+
+  settings {
     applyProductFirstImageExtraPadding: Bool // (5)!
   }
 }
 
 ProductBarPricesTheme {
-  typography: {
+  typography {
     price: TextStyle // (6)!
-  },
-  colors: {
+  }
+
+  colors {
     discountedPrice: Color // (7)!
   }
 }
@@ -496,10 +505,11 @@ ProductBarPricesTheme {
 ###### [:material-arrow-up-left:](#theme) Powered By
 ```typescript
 PowerBarTheme {
-  strings: {
+  strings {
     poweredByAiuta: String // (1)!
-  },
-  colors: {
+  }
+
+  colors {
     aiuta: PowerBarColorScheme // (2)!
   }
 }
