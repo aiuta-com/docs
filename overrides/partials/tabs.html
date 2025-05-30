@@ -9,14 +9,14 @@
     <ul class="md-tabs__list">
       {% for nav_item in nav %}
         {% if config.extra.nav is defined %}
-          {% if nav_item.title in config.extra.nav.divider_before %}
-            <li class="md-tabs__item md-tabs__item--divider"></li>
-          {% endif %}
           {% if nav_item.title not in config.extra.nav.unlisted_items %}
+            {% if nav_item.title in config.extra.nav.divider_before %}
+              <li class="md-tabs__item md-tabs__item--divider"></li>
+            {% endif %}
             {{ item.render(nav_item) }}
-          {% endif %}
-          {% if nav_item.title in config.extra.nav.divider_after %}
-            <li class="md-tabs__item md-tabs__item--divider"></li>
+            {% if nav_item.title in config.extra.nav.divider_after %}
+              <li class="md-tabs__item md-tabs__item--divider"></li>
+            {% endif %}
           {% endif %}
         {% else %}
           {{ item.render(nav_item) }}

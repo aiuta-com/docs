@@ -93,13 +93,14 @@ extra:
   nav:
     divider_after:
       - Aiuta
-      - About
+      # - About
       # - Web
     divider_before:
       - Insights
       # - API
     unlisted_items:
-      - Team
+      - Insights
+      # - Team
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/aiuta-com
