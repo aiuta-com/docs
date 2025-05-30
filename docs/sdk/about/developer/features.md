@@ -194,8 +194,8 @@ OnboardingBestResultsPageFeature {
       }
 
       dataProvider: BuiltIn | Custom {
-        obtainedConsentsIds: Observable<List<string>> // (9)!
-        obtainConsentsIds: Callback(List<string>) // (10)!
+        obtainedConsentIds: Observable<List<string>> // (9)!
+        obtainConsentIds: Callback(List<string>) // (10)!
       }
     }
     ```

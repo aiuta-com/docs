@@ -2,7 +2,7 @@
 
 This document describes the analytics events that can be tracked within the Aiuta SDK. These events are triggered in response to user actions or state changes and can be used to track user interactions or system behaviors in your analytics system.
 
-## Event Categories
+## Event Types
 
 | Type | Parameters | Description | 
 | :--- |  :-------- | :---------- |
@@ -43,7 +43,7 @@ Event categories, except for `page` and `exit`, contain an `event` parameter tha
 |-------|------------|-------------|
 | `welcomeStartClicked` | :material-minus: | Initial interaction with the [Welcome Screen](../pages/welcome-screen.md), indicating<br>user's intent to begin the try-on process |
 | `onboardingFinished` | :material-minus: | Completion of all onboarding steps |
-| `consentsGiven` | `consentsIds` | Explicit acceptance of required consents, including<br>data processing and privacy policy agreements |
+| `consentsGiven` | `consentIds` | Explicit acceptance of required consents, including<br>data processing and privacy policy agreements |
 
 ### Picker Events
 
@@ -63,11 +63,12 @@ Event categories, except for `page` and `exit`, contain an `event` parameter tha
 
 | Event | Parameters |  Description |
 |-------|------------|-------------|
+| `initiated` | :material-minus: | Start processing photo |
 | `photoUploaded` | :material-minus: | Successful upload of a selected or captured<br>photo for processing |
 | `tryOnStarted` | :material-minus: | Initiation of the virtual try-on process with<br>the selected image |
 | `tryOnFinished` | :material-minus: | Successful completion of the virtual try-on<br>process with generated results |
-| `tryOnAborted` | :material-minus: | Cancellation of the try-on process before<br>completion |
-| `tryOnError` | [`errorType`](errors.md)<br>`errorMessage` | Occurrence of an error during the try-on process, requiring user attention<br>Message contains information for developers and is not for users |
+| `tryOnAborted` | [`abortReason`](errors.md#aborts) | Cancellation of the try-on process before<br>completion |
+| `tryOnError` | [`errorType`](errors.md#errors)<br>`errorMessage` | Occurrence of an error during the try-on process,<br>requiring user attention. `errorMessage` contains<br>information for developers and is not for users |
 
 ### Results Events
 

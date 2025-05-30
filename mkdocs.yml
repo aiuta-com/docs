@@ -87,20 +87,20 @@ nav:
       - Convention: team/docs/convention.md
     - SDK:
       - Subscription Details: team/sdk/subscription-details.md
-      - Predefined Models: team/sdk/predefined-models.md
-      - Analytics: team/sdk/analytics.md
+      - Internal Analytics: team/sdk/analytics.md
       
 extra:
   nav:
     divider_after:
       - Aiuta
-      - About
+      # - About
       # - Web
     divider_before:
       - Insights
       # - API
     unlisted_items:
-      - Team
+      - Insights
+      # - Team
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/aiuta-com

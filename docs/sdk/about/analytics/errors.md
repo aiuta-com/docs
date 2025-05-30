@@ -1,7 +1,11 @@
-# Try-On Errors
+# Try-On Errors & Aborts
 
-This document describes all possible errors that can occur during the try-on process.<br>
-Errors are sent via the analytics event [`tryOn.tryOnError`](analytics.md#try-on-events) in the `errorType` field.
+This document describes all possible errors and cancelation reasons that can occur during the try-on process.
+
+- Errors are sent via the analytics event [`tryOn.tryOnError`](analytics.md#try-on-events) in the `errorType` field.
+- Aborts are sent via the analytics event [`tryOn.tryOnAborted`](analytics.md#try-on-events) in the `abortReason` field.
+
+# Errors
 
 | Error Type | Description |
 |------------|-------------|
@@ -11,8 +15,14 @@ Errors are sent via the analytics event [`tryOn.tryOnError`](analytics.md#try-on
 | `requestOperationFailed` | SDK failed to make a request to the server to start the try-on process.<br>This may be caused by network issues, server issues, or any other reason. |
 | `startOperationFailed` | SDK successfully made a request to the server to start the try-on process,<br>but the server returned an error. |
 | `operationFailed` | SDK successfully made a request to the server to start the try-on process,<br>operation was started, but the server returned an error while processing<br>the operation, and it was failed. SDK stopped waiting for the result. |
-| `operationAborted` | SDK successfully made a request to the server to start the try-on process,<br>operation was started, but the server aborted the operation,<br>because of the invalid user input photo. |
 | `operationTimeout` | SDK successfully made a request to the server to start the try-on process,<br>operation was started, but the status of the operation was not changed<br>for a long time, and the SDK stopped waiting for the result. |
 | `operationEmptyResults` | Try-on operation was completed, but the empty result was returned. |
 | `downloadResultFailed` | Try-on operation was completed, but the result was not downloaded.<br>This may be caused by network issues, server issues, or any other reason. |
 | `internalSdkError` | Unexpected error occurred during the try-on process.<br>Those should be reported to the SDK developers, as it is not<br>supposed to happen. |
+
+# Aborts
+
+| Abort Type | Description |
+|------------|-------------|
+| `operationAborted` | SDK successfully made a request to the server to start the try-on process,<br>operation was started, but the server aborted the operation,<br>because of the [invalid user input photo](../pages/loading-screen.md#__tabbed_1_1). |
+| `userCancelled` | Operation was in progress, but user closes the SDK<br>and [background execution](../developer/configuration.md#try-on) was disabled |
