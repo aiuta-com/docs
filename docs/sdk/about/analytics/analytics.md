@@ -6,13 +6,16 @@ This document describes the analytics events that can be tracked within the Aiut
 
 | Type | Parameters | Description | 
 | :--- |  :-------- | :---------- |
+| `configure` | [`*`](#configuration-parameters) | SDK was configured with a features set |
+| `session`   | [`flow`](#session-flows) | Start of a new session, SDK about to present it's UI<br>The page event is expected to be the following |
 | `page` | [`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Navigation to a specific page in the SDK UI |
 | `onboarding` | [`event`](#onboarding-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Interactions during the onboarding process, including viewing<br>informational screens and providing necessary consents for<br>data processing |
 | `picker` | [`event`](#picker-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Interactions with the image selection interface, including camera<br>access, gallery selection, and predefined model selection |
 | `tryOn` | [`event`](#try-on-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Virtual try-on operations reports, including photo upload,<br>processing status, and completion or error states |
 | `results` | [`event`](#results-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Interactions with the generated try-on results, including sharing,<br>saving to wishlist, adding to cart, or requesting new generations |
 | `feedback` | [`event`](#feedback-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Feedback on the generated results, including positive ratings and<br>detailed negative feedback with optional comments |
-| `history` | [`event`](#history-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Interactions with previously generated results, including viewing,<br>sharing, and managing saved generations |
+| `history` | [`event`](#history-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Interactions with previously generated results<br>and managing saved generations |
+| `share` | [`event`](#share-events)<br>[`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Events related to the user's desire to share/save generated images |
 | `exit` | [`pageId`](#page-identifiers)<br>[`productIds`](#products-identifiers) | Exit from the SDK on a specific page,<br>indicating the final point in the user's journey |
 
 ### Page Identifiers
@@ -32,6 +35,10 @@ This document describes the analytics events that can be tracked within the Aiut
 ### Products Identifiers
 
 This is a list of product identifiers in the context of the current try-on session or other SDK interaction. It can be empty, for example, when opening a separate screen to view the user's generation history, where there is no try-on context. In the case of a single try-on, the list will contain one identifier. Accordingly, when using multi-try-on, the list will contain identifiers of all products from the outfit.
+
+### App Identifiers
+
+A string representing 3rd party app/package/bundle id that was used to receive data from the SDK directly or through system APIs.
 
 ## Specific Events
 
@@ -66,7 +73,7 @@ Event categories, except for `page` and `exit`, contain an `event` parameter tha
 | `initiated` | :material-minus: | Start processing photo |
 | `photoUploaded` | :material-minus: | Successful upload of a selected or captured<br>photo for processing |
 | `tryOnStarted` | :material-minus: | Initiation of the virtual try-on process with<br>the selected image |
-| `tryOnFinished` | :material-minus: | Successful completion of the virtual try-on<br>process with generated results |
+| `tryOnFinished` | `uploadDuration`<br>`tryOnDuration`<br>`downloadDuration`<br>`totalDuration` | Successful completion of the virtual try-on<br>process with generated results<br><br>`Duration` of each step in seconds (floating-point) |
 | `tryOnAborted` | [`abortReason`](errors.md#aborts) | Cancellation of the try-on process before<br>completion |
 | `tryOnError` | [`errorType`](errors.md#errors)<br>`errorMessage` | Occurrence of an error during the try-on process,<br>requiring user attention. `errorMessage` contains<br>information for developers and is not for users |
 
@@ -74,7 +81,6 @@ Event categories, except for `page` and `exit`, contain an `event` parameter tha
 
 | Event | Description |
 |-------|-------------|
-| `resultShared` | Sharing of generated try-on results through<br>available sharing channels |
 | `productAddToWishlist` | Adding of a product from the try-on results<br>to the user's wishlist |
 | `productAddToCart` | Adding of a product from the try-on results<br>to the shopping cart |
 | `pickOtherPhoto` | Request to start a new try-on process with<br>a different photo |
@@ -90,5 +96,44 @@ Event categories, except for `page` and `exit`, contain an `event` parameter tha
 
 | Event | Description |
 |-------|-------------|
-| `generatedImageShared` | Sharing of a previously generated try-on<br>result from the history |
 | `generatedImageDeleted` | Removal of a previously generated try-on<br>result from the history |
+
+### Share Events
+
+| Event | Parameters | Description |
+|-------|------------|-------------|
+| `initiated` | :material-minus: | The user clicked the share button<br> a system dialog will be displayed |
+| `succeeded` | [`targetId`](#app-identifiers) | The images were successfully share to the 3rd party application |
+| `canceled` [^1] | [`targetId?`](#app-identifiers) | The user canceled the share process |
+| `failed` [^1] | [`targetId?`](#app-identifiers) | A system error occurred while sharing images |
+| `screenshot` | :material-minus: | The user took a screenshot of the SDK [page](#page-identifiers) |
+
+### Configuration Parameters
+
+| Parameter |
+|-----------|
+| [`authenticationType`](../developer/configuration.md#auth) |
+| [`welcomeScreenFeatureEnabled`](../developer/features.md#welcome-screen) |
+| [`onboardingFeatureEnabled`](../developer/features.md#onboarding) |
+| [`consentFeatureType`](../developer/features.md#consent) |
+| [`imagePickerCameraFeatureEnabled`](../developer/features.md#camera) |
+| [`imagePickerPredefinedModelFeatureEnabled`](../developer/features.md#predefined-models) |
+| [`imagePickerUploadsHistoryFeatureEnabled`](../developer/features.md#uploads-history) |
+| [`tryOnFitDisclaimerFeatureEnabled`](../developer/features.md#fit-disclaimer) |
+| [`tryOnFeedbackFeatureEnabled`](../developer/features.md#feedback) |
+| [`tryOnFeedbackOtherFeatureEnabled`](../developer/features.md#other) |
+| [`tryOnGenerationsHistoryFeatureEnabled`](../developer/features.md#generations-history) |
+| [`tryOnWithOtherPhotoFeatureEnabled`](../developer/features.md#other-photo) |
+| [`shareFeatureEnabled`](../developer/features.md#share) |
+| [`shareWatermarkFeatureEnabled`](../developer/features.md#watermark) |
+| [`wishlistFeatureEnabled`](../developer/features.md#wishlist) |
+
+
+### Session Flows
+
+| Flow | Description |
+|-------|-------------|
+| `tryOn` | Starting the SDK with tryOn flow to upload photo and generate results |
+| `history` | Starting the SDK to show previously generated gallery |
+
+[^1]: Available only on iOS

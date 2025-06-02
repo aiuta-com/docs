@@ -36,11 +36,4 @@
 
 ## Event Types
 
-| Type | Parameters | Description | 
-| :--- |  :-------- | :---------- |
-| `configure` | `*FeatureEnabled: true | false`<br>`*FeatureType: ConcreteType` | Configure SDK with features set |
-| `session`   | `flow: tryOn | history` | Start of a new SDK session |
-| `timing`    | `upload: Double`<br>`tryOn: Double`<br>`download: Double`<br>`total: Double` | Successfull try-on durations in seconds |
-| `share`     | `result: succeeded | canceled | failed`<br>`target: String` | Result of share to `target` app id |
-
-!!! doc "See also all [events tracked to the host app](../../sdk/about/analytics/analytics.md#event-types)"
+!!! doc "See all [events tracked](../../sdk/about/analytics/analytics.md#event-types)"
