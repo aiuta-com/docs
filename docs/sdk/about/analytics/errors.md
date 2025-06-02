@@ -2,10 +2,9 @@
 
 This document describes all possible errors and cancelation reasons that can occur during the try-on process.
 
-- Errors are sent via the analytics event [`tryOn.tryOnError`](analytics.md#try-on-events) in the `errorType` field.
-- Aborts are sent via the analytics event [`tryOn.tryOnAborted`](analytics.md#try-on-events) in the `abortReason` field.
+## Try-On Errors
 
-# Errors
+!!! doc "Sent in the analytics event [`tryOn.tryOnError`](analytics.md#try-on-events) in the `errorType` field"
 
 | Error Type | Description |
 |------------|-------------|
@@ -20,7 +19,9 @@ This document describes all possible errors and cancelation reasons that can occ
 | `downloadResultFailed` | Try-on operation was completed, but the result was not downloaded.<br>This may be caused by network issues, server issues, or any other reason. |
 | `internalSdkError` | Unexpected error occurred during the try-on process.<br>Those should be reported to the SDK developers, as it is not<br>supposed to happen. |
 
-# Aborts
+## Try-On Aborts
+
+!!! doc "Sent in the analytics event [`tryOn.tryOnAborted`](analytics.md#try-on-events) in the `abortReason` field"
 
 | Abort Type | Description |
 |------------|-------------|

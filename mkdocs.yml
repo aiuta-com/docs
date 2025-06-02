@@ -92,15 +92,10 @@ nav:
 extra:
   nav:
     divider_after:
-      - Aiuta
-      # - About
-      # - Web
+      - About
+      - Web
     divider_before:
       - Insights
-      # - API
-    unlisted_items:
-      - Insights
-      # - Team
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/aiuta-com

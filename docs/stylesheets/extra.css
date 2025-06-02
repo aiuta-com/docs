@@ -63,15 +63,15 @@ body {
 
 /* Divider between tab groups */
 .md-tabs__item--divider {
-  width: 1.5px;
-  margin: 0.08rem 0.75rem 0;
+  width: 2px;
+  height: 2px;
+  margin: 0.15rem 0.75rem 0;
   background-color: var(--md-primary-bg-color);
   cursor: default;
   pointer-events: none;
   align-self: center;
-  height: 0.5rem;
   padding: 0;
-  opacity: 0.5;
+  opacity: 0.35;
   border-radius: 1px;
 }
 
