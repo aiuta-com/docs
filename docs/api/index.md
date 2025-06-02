@@ -3,7 +3,7 @@
 For those seeking more control over the implementation or having specific requirements, the Aiuta API can be used directly. This method provides complete flexibility in building a custom virtual try-on solution.
 
 !!! note ""
-    [Aiuta SDKs](../sdk/overview.md) is built on top of this API, providing a pre-built UI layer and additional convenience features while maintaining the same core functionality.
+    [Aiuta SDKs](/sdk/) is built on top of this API, providing a pre-built UI layer and additional convenience features while maintaining the same core functionality.
 
 ## Links
 
