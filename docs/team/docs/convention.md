@@ -13,33 +13,18 @@ Documentation is published automatically when merged into the `main` branch. The
 - you like it
 
 ??? question "How to set up a local preview?"
-    You'll need to install [Material for MKDocs :octicons-link-external-24:](https://squidfunk.github.io/mkdocs-material/getting-started/){:target="_blank"} and some plugins:
-
-    ```sh
-    pip install mkdocs-material
-    pip install mkdocs-minify-plugin
-    pip install mkdocs-include-markdown-plugin
-    pip install mkdocs-swagger-ui-tag
-    ```
-
-    After that, in the root of your repository clone, simply run
-
-    ```sh
-    mkdocs serve
-    ```
-
-    In the console you will see something like
-    ```
-    INFO    -  [10:46:26] Serving on http://127.0.0.1:8000/
-    ```
-    Open this link and check it out.
+    {% include-markdown "team/docs/local-build.md" %}
 
 ## Links
 
 ### External
 
+#### New tab/window
+
 !!! warning "Always add `{:target="_blank"}`"
     for an external link to open it in a new tab or window
+
+#### Visual mark    
 
 Always visually mark links that lead outside the documentation site. There are two options:
 
@@ -83,7 +68,43 @@ Always visually mark links that lead outside the documentation site. There are t
 
 ### Internal
 
-There are no special requirements for internal links, except for the following recommendation: if you want to specifically highlight them as references to other parts of the documentation, use a custom `doc` [admonition :octicons-link-external-24:](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){:target="_blank"} that has some special style settings
+#### Use root-relative links 
+
+This leads to the same result but is easier to maintain in the future.
+
+!!! note ""
+    Root is `/docs`
+
+=== ":material-check: Root-relative"
+
+    ``` markdown
+    [About SDK](/sdk/)
+
+    ![img](/media/about.png){ width=100 }
+    ```
+    <div class="result" markdown>
+    [About SDK](/sdk/)
+
+    ![img](/media/about.png){ width=100 }
+    </div>        
+
+
+=== ":material-close: Relative"
+
+    ``` markdown
+    [About SDK](../../sdk/index.md)
+
+    ![img](../../media/about.png){ width=100 }
+    ```
+    <div class="result" markdown>
+    [About SDK](../../sdk/index.md)
+
+    ![img](../../media/about.png){ width=100 }
+    </div>        
+    
+#### Custom `doc` admonition
+
+If you want to specifically highlight links as references to other parts of the documentation, use a custom `doc` [admonition :octicons-link-external-24:](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){:target="_blank"} that has some special style settings
 
 === "Single link"
 
@@ -152,7 +173,7 @@ Instead of comments, give preference to [annotations :octicons-link-external-24:
 
     1.  Here is annotaion with [link](#), image
     
-        ![image](../../media/images/imagePickerSample1.png){ width=50 }
+        ![image](/media/images/imagePickerSample1.png){ width=50 }
 
         !!! example ""
             and default value
@@ -168,7 +189,7 @@ Instead of comments, give preference to [annotations :octicons-link-external-24:
 
     1.  Here is annotaion with [link](#), image
         
-        ![image](../../media/images/imagePickerSample1.png){ width=50 }
+        ![image](/media/images/imagePickerSample1.png){ width=50 }
 
         !!! example ""
             and default value
@@ -182,7 +203,7 @@ To describe a language-independent scheme or data model use a code block with `t
 - omit key constructs such as `class`, `new`, etc., that are redundant for the description
 - avoid traling commas and semicolons, as well as colons between property definitions and opening brackets, cluttering up the scheme
 - prefer `PascalCase` for types and `camelCase` for properties (1)
-- define collections as `List<>` and `Map<:>`
+- define collections as `List<>` and `Map<>`
 - denote enumerated / sealed types with  `|`, combined with tabs for their schemes
 - indicate optional fields with `| null`
 - indent with 2 spaces
@@ -198,8 +219,8 @@ To describe a language-independent scheme or data model use a code block with `t
       fooProperty2: Number | null
       fooProperty3: Bar1 | Bar2 | null
 
-      fooEmbeddedeDefinition {
-        property4: String
+      fooEmbeddedeType {
+        fooEmbeddedeTypeProperty1: String
       }
     }
     ```
@@ -214,7 +235,7 @@ To describe a language-independent scheme or data model use a code block with `t
     === "Bar2"
         ``` typescript
         Bar2 {
-          bar2Property1: Map<String: Bool>
+          bar2Property1: Map<String, Bool>
         }
         ```    
     ````
@@ -225,8 +246,8 @@ To describe a language-independent scheme or data model use a code block with `t
       fooProperty2: Number | null
       fooProperty3: Bar1 | Bar2 | null
 
-      fooEmbeddedeDefinition {
-        property4: String
+      fooEmbeddedeType {
+        fooEmbeddedeTypeProperty1: String
       }
     }
     ```
@@ -241,7 +262,7 @@ To describe a language-independent scheme or data model use a code block with `t
     === "Bar2"
         ``` typescript
         Bar2 {
-          bar2Property1: Map<String: Bool>
+          bar2Property1: Map<String, Bool>
         }
         ```  
     </div>
@@ -280,16 +301,16 @@ Let's respect people who prefer dark themes
         <!-- good in both themes -->
 
         :material-format-color-text:{ .cl-aiuta }
-        ![back24](../../media/icons/back24.png#only-light){ width=12 } 
-        ![back24](../../media/icons/on-dark/back24.png#only-dark){ width=12 }
-        ![close24](../../media/icons/close24.png#only-light){ width=12 } 
-        ![close24](../../media/icons/on-dark/close24.png#only-dark){ width=12 }
+        ![back24](/media/icons/back24.png#only-light){ width=12 } 
+        ![back24](/media/icons/on-dark/back24.png#only-dark){ width=12 }
+        ![close24](/media/icons/close24.png#only-light){ width=12 } 
+        ![close24](/media/icons/on-dark/close24.png#only-dark){ width=12 }
 
         <!-- bad in a dark theme  -->
 
         :material-format-color-text:{ .cl-selection-background }
-        ![back24](../../media/icons/back24.png){ width=12 }
-        ![close24](../../media/icons/close24.png){ width=12 }
+        ![back24](/media/icons/back24.png){ width=12 }
+        ![close24](/media/icons/close24.png){ width=12 }
         ```
 
     === "`stylesheets/aiuta.css`"
@@ -310,16 +331,16 @@ Let's respect people who prefer dark themes
     <!-- good in both themes -->
 
     :material-format-color-text:{ .cl-aiuta }
-    ![back24](../../media/icons/back24.png#only-light){ width=12 } 
-    ![back24](../../media/icons/on-dark/back24.png#only-dark){ width=12 }
-    ![close24](../../media/icons/close24.png#only-light){ width=12 } 
-    ![close24](../../media/icons/on-dark/close24.png#only-dark){ width=12 }
+    ![back24](/media/icons/back24.png#only-light){ width=12 } 
+    ![back24](/media/icons/on-dark/back24.png#only-dark){ width=12 }
+    ![close24](/media/icons/close24.png#only-light){ width=12 } 
+    ![close24](/media/icons/on-dark/close24.png#only-dark){ width=12 }
 
     <!-- bad in a dark theme  -->
 
     :material-format-color-text:{ .cl-selection-background }
-    ![back24](../../media/icons/back24.png){ width=12 }
-    ![close24](../../media/icons/close24.png){ width=12 }
+    ![back24](/media/icons/back24.png){ width=12 }
+    ![close24](/media/icons/close24.png){ width=12 }
     </div>
 
     !!! info ""
@@ -330,13 +351,13 @@ Let's respect people who prefer dark themes
 If you need a special icon, you couldn't find a suitable one among the huge number [available icons :octicons-link-external-24:](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/){:target="_blank"}, and want to export yours from Figma and place it in the `overrides/.icons` directory, please edit the exported `svg` file manually, replacing the fill color (usually `white` or `black` for icons) with the `currentColor` to match current typeface color.
 
 !!! example
-    === "Original Figma export"
+    === ":material-close: Original Figma export"
         ``` xml
         <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="29" height="29" rx="4" fill="white"/>
         </svg>
         ```
-    === "Your fix"
+    === ":material-check: Your fix"
         ``` xml
         <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="29" height="29" rx="4" fill="currentColor"/>

@@ -1,6 +1,6 @@
 # Welcome Screen
 
-![Welcome Screen](../../../media/pages/welcome-screen.png){width=300}
+![Welcome Screen](/media/pages/welcome.png){width=300}
 
 The Welcome Screen is an optional feature that can be displayed when users first open the SDK. It serves as an introduction to your virtual try-on experience and can be customized to match your brand identity.
 
@@ -11,7 +11,7 @@ The Welcome Screen is an optional feature that can be displayed when users first
 - Set the tone for the user journey
 
 !!! info "Behavior"
-    The Welcome Screen is displayed only if the user has not completed the [Onboarding](onboarding.md).
+    The Welcome Screen is displayed only if the user has not completed the [Onboarding](/sdk/about/pages/onboarding/).
     Thus, it is bound to the Onboarding feature. If the Onboarding is not provided,
     the Welcome Screen will be displayed every time the SDK is opened and you
     should care of enabling or disabling the Welcome Screen feature in
@@ -23,44 +23,44 @@ The Welcome Screen is an optional feature that can be displayed when users first
 
     ## Customization
 
-    ##### [Images](../resources/images.md)
+    ##### [Images](/sdk/about/resources/images/)
     - Custom `welcomeBackground` image that fills the entire screen
 
     !!! note ""
         Make sure image itself is dimmed to be contrast enough with `onDark` color
 
-    ##### [Icons](../resources/icons.md)
+    ##### [Icons](/sdk/about/resources/icons/)
     - Custom central `welcome82` icon displayed above the title (82x82 points)
     - General `close24` icon for close button
 
-    ##### [Text Elements](../resources/localization.md)
+    ##### [Text Elements](/sdk/about/resources/localization/)
     - Main `welcomeTitle` heading that introduces the feature
     - Supporting `welcomeDescription` explaining the virtual try-on experience
     - Call-to-action `welcomeButtonStart` to begin the experience
 
-    ##### [Typography](../resources/typography.md)
+    ##### [Typography](/sdk/about/resources/typography/)
     - Custom `welcomeTitle` text style for the title
     - Custom `welcomeDescription` text style for the description text
     - General `buttonM` text style for the start button
 
-    ##### [Shapes](../resources/shapes.md)
+    ##### [Shapes](/sdk/about/resources/shapes/)
     - General `buttonM` shape of start button
 
-    ##### [Colors](../resources/colors.md)
+    ##### [Colors](/sdk/about/resources/colors/)
     - General `onDark` color for close button, title, description and start button background
     - General `onLight` color for start button label
 
 ---
 
-## [Analytics](../analytics/analytics.md)
+## [Analytics](/sdk/about/analytics/analytics/)
 
 The following analytics events are tracked on the Welcome Screen:
 
 | Type | Event | Page Id | Description |
 |------|-------|---------|-------------|
-| [`page`](../analytics/analytics.md#event-categories) | :material-minus: | [`welcome`](../analytics/analytics.md#page-identifiers) | Triggered when the welcome screen is displayed |
-| [`onboarding`](../analytics/analytics.md#event-categories) | [`welcomeStartClicked`](../analytics/analytics.md#onboarding-events) | [`welcome`](../analytics/analytics.md#page-identifiers) | Triggered when user clicks the start button<br>to start the journey |
-| [`exit`](../analytics/analytics.md#event-categories) | :material-minus: | [`welcome`](../analytics/analytics.md#page-identifiers) | SDK was closed on the welcome screen |
+| [`page`](/sdk/about/analytics/analytics/#event-types) | :material-minus: | [`welcome`](/sdk/about/analytics/analytics/#page) | Triggered when the welcome screen is displayed |
+| [`onboarding`](/sdk/about/analytics/analytics/#event-types) | [`welcomeStartClicked`](/sdk/about/analytics/analytics/#onboarding) | [`welcome`](/sdk/about/analytics/analytics/#page) | Triggered when user clicks the start button<br>to start the journey |
+| [`exit`](/sdk/about/analytics/analytics/#event-types) | :material-minus: | [`welcome`](/sdk/about/analytics/analytics/#page) | SDK was closed on the welcome screen |
 
 ---
 

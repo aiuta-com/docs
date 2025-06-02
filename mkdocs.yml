@@ -80,11 +80,15 @@ nav:
     - api/index.md
     - Getting Started: api/getting-started.md
     - Server-side Auth: api/server-side-auth-component.md
+    - Try-On:
+      - Workflow: api/workflow.md
+      - Reference: api/reference.md
 
   - Insights:
     - team/index.md
     - Docs:
       - Convention: team/docs/convention.md
+      - Local Build: team/docs/local-build.md
     - SDK:
       - API Endpoints: team/sdk/api-endpoints.md
       - Subscription Details: team/sdk/subscription-details.md
@@ -160,9 +164,6 @@ plugins:
   - minify:
       minify_html: true
   - include-markdown
-  - swagger-ui-tag:
-      extra_css: 
-        - stylesheets/swagger.css
 
 markdown_extensions:
   - admonition

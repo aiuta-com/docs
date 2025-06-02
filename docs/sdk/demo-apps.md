@@ -1,6 +1,6 @@
 # SDK Demo Apps
 
-![Demo App](../media/demo-app.png){width=200}
+![Demo App](/media/demo-app.png){width=200}
 
 Experience Aiuta SDK in action through our demo applications. These applications showcase the full range of virtual try-on capabilities and customization options available in the SDK.
 

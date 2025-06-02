@@ -356,7 +356,7 @@ ImagePickerPredefinedModelFeature {
     predefinedModelPageTitle: String // (3)!
     predefinedModelOr: String // (4)!
     predefinedModelErrorEmptyModelsList: String // (5)!
-    predefinedModelCategories: Map<String: String> // (6)!
+    predefinedModelCategories: Map<String, String> // (6)!
   }
 }
 ```

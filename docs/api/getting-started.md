@@ -50,6 +50,6 @@ Authentication is mandatory for some calls such as starting the image generation
 ## Making an API Request
 <div class="grid cards" markdown>
 
-- :material-book-open-variant:{ .lg } [See examples of requests in the API reference :octicons-link-external-24:](https://developer.aiuta.com/products/digital-try-on/documentation){:target="_blank"}
+- :material-book-open-variant:{ .lg } [See examples of requests in the API reference](/api/reference/)
 
 </div>

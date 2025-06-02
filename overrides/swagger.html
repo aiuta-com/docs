@@ -10,17 +10,13 @@
 {% endblock %}
 
 {% block content %}
-    {% if "material/tags" in config.plugins and tags %}
-    {% include "partials/tags.html" %}
-    {% endif %}
-    {% include "partials/actions.html" %}
-    {{ page.content }}
-    {% include "partials/source-file.html" %}
-    {% include "partials/feedback.html" %}
-    {% include "partials/comments.html" %}
-{% endblock %}
-
-{% block extrahead %}
-    <style>.md-content__button {display:none !important}; </style>
-    <style>.md-header__topic {font-weight:700 !important}</style>
+    <div class="md-content" data-md-component="content">
+        <article class="md-content__inner md-typeset">
+            <link rel="stylesheet" type="text/css" href="/stylesheets/swagger-ui.css" />
+            <link rel="stylesheet" type="text/css" href="/stylesheets/swagger-extra.css" />
+            <div id="swagger-ui"></div>
+            <script src="/js/swagger-ui-bundle.js" charset="UTF-8"> </script>
+            {{ page.content }}
+        </article>
+    </div>
 {% endblock %}
