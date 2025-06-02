@@ -6,7 +6,7 @@ hide:
 
 # Aiuta Virtual Try-On Solutions
 
-![About Virtual Try-On](media/about.png)
+![About Virtual Try-On](/media/about.png)
 
 Let your customers visualize how clothes look on them — instantly and accurately
 
@@ -25,7 +25,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     {% include-markdown "sdk/templates/android/requirements-base.md" %}
     :material-book-open-variant: 
     <span class="md-cards-links">
-    [Overview](sdk/index.md) :octicons-dot-fill-16:{ .xs } [Quick Start](sdk/android/index.md)
+    [Overview](/sdk/) :octicons-dot-fill-16:{ .xs } [Quick Start](/sdk/android/)
     </span>
 
 -   :fontawesome-brands-apple:{ .lg } __iOS__ <span class="md-platfroms">SDK</span>
@@ -35,7 +35,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     {% include-markdown "sdk/templates/ios/requirements.md" %}
     :material-book-open-variant:
     <span class="md-cards-links">
-    [Overview](sdk/index.md) :octicons-dot-fill-16:{ .xs } [Quick Start](sdk/ios/index.md)
+    [Overview](/sdk/) :octicons-dot-fill-16:{ .xs } [Quick Start](/sdk/ios/)
     </span>
 
 -   :fontawesome-brands-flutter:{ .lg } __Flutter__ <span class="md-platfroms">SDK :fontawesome-brands-android: Android :fontawesome-brands-apple: iOS</span>
@@ -45,7 +45,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     {% include-markdown "sdk/templates/flutter/requirements.md" %}
     :material-book-open-variant:
     <span class="md-cards-links">
-    [Overview](sdk/index.md) :octicons-dot-fill-16:{ .xs } [Quick Start](sdk/flutter/index.md)
+    [Overview](/sdk/) :octicons-dot-fill-16:{ .xs } [Quick Start](/sdk/flutter/)
     </span>
 
 -   :fontawesome-brands-js:{ .lg } __Web__ <span class="md-platfroms">SDK</span>
@@ -60,7 +60,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
     :material-book-open-variant:
     <span class="md-cards-links">
-    [Overview](shopify/index.md)
+    [Overview](/shopify/)
     </span>
 
 -   :aiuta-favicon:{ .lg } __API__
@@ -69,7 +69,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
     :material-book-open-variant:
     <span class="md-cards-links">
-    [Overview](api/index.md) :octicons-dot-fill-16:{ .xs } [Getting Started](api/getting-started.md)
+    [Overview](/api/) :octicons-dot-fill-16:{ .xs } [Getting Started](/api/getting-started/)
     </span>
 
 </div>

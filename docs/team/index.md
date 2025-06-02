@@ -9,4 +9,4 @@ This section contains documentation conventions and maintenance tips.
 
 ## SDK
 This section contains schemes and descriptions of the SDK's internal workings.
-For example, besides receiving configuration from the host application (described [here](../sdk/about/developer/configuration.md)), the SDK receives configuration [details](./sdk/subscription-details.md) from the Aiuta backend. This configuration specifies the number of retries in case of failures, intervals when generation results are expected, etc.  
+For example, besides receiving configuration from the host application (described [here](/sdk/about/developer/configuration)), the SDK receives configuration [details](sdk/subscription-details) from the Aiuta backend. This configuration specifies the number of retries in case of failures, intervals when generation results are expected, etc.  
