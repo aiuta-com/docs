@@ -86,6 +86,7 @@ nav:
     - Docs:
       - Convention: team/docs/convention.md
     - SDK:
+      - API Endpoints: team/sdk/api-endpoints.md
       - Subscription Details: team/sdk/subscription-details.md
       - Internal Analytics: team/sdk/analytics.md
       
