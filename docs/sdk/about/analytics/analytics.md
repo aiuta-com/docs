@@ -125,7 +125,7 @@ Types, except for `page`, `exit`, `configure` and `session`, contain an `event` 
 
 | Parameter |
 |-----------|
-| [`authenticationType`](../developer/configuration.md#auth) |
+| [`authType`](../developer/configuration.md#auth) |
 | [`welcomeScreenFeatureEnabled`](../developer/features.md#welcome-screen) |
 | [`onboardingFeatureEnabled`](../developer/features.md#onboarding) |
 | [`consentFeatureType`](../developer/features.md#consent) |
