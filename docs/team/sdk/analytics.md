@@ -3,7 +3,7 @@
 ## API Endpoint
 
 ```
-{% include-markdown "team/sdk/templates/url-analytics.md" %}
+{% include-markdown "api/templates/endpoint-analytics.md" %}
 ```
 
 ## Event Scheme

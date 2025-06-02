@@ -6,4 +6,4 @@ hide:
   - toc
 ---
 <!-- https://blueswen.github.io/mkdocs-swagger-ui-tag/ -->
-<swagger-ui src="https://api.aiuta.com/digital-try-on/v1/openapi.json"/>
+<swagger-ui src="{% include-markdown 'api/templates/endpoint-try-on.md' %}/openapi.json"/>

@@ -85,6 +85,7 @@ nav:
     - team/index.md
     - Docs:
       - Convention: team/docs/convention.md
+      - Local Build: team/docs/local-build.md
     - SDK:
       - API Endpoints: team/sdk/api-endpoints.md
       - Subscription Details: team/sdk/subscription-details.md
