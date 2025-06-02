@@ -1,5 +1,11 @@
 # SDK Analytics
 
+## API Endpoint
+
+```
+{% include-markdown "team/sdk/templates/url-analytics.md" %}
+```
+
 ## Event Scheme
 
 ``` typescript

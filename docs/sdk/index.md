@@ -1,6 +1,6 @@
 # Aiuta Virtual Try-On SDK
 
-![About Virtual Try-On](../media/about.png)
+![About Virtual Try-On](/media/about.png)
 
 Let your customers visualize how clothes look on them — instantly and accurately
 
@@ -22,13 +22,13 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
     ---
     {% include-markdown "sdk/templates/android/requirements-base.md" %}
-    :material-book-open-variant: [Quick Start](./android/index.md)
+    :material-book-open-variant: [Quick Start](/sdk/android/)
 
 -   :fontawesome-brands-apple:{ .lg } __iOS__
 
     ---
     {% include-markdown "sdk/templates/ios/requirements.md" %}
-    :material-book-open-variant: [Quick Start](./ios/index.md)
+    :material-book-open-variant: [Quick Start](/sdk/ios/)
 
 -   :fontawesome-brands-flutter:{ .lg } __Flutter__ <span class="md-platfroms">:fontawesome-brands-android: Android :fontawesome-brands-apple: iOS</span>
 
@@ -37,7 +37,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     sdk: >=3.1.0 <4.0.0
     flutter: >= 3.19.6
     ```
-    :material-book-open-variant: [Quick Start](./flutter/index.md)
+    :material-book-open-variant: [Quick Start](/sdk/flutter/)
 
 -   :fontawesome-brands-js:{ .lg } __Web__
 
@@ -50,6 +50,6 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
 If you prefer even more control over the implementation or have specific requirements, you can use the Aiuta API directly. This approach gives you complete flexibility in building your custom virtual try-on solution.
 
-!!! doc "Learn more about [Aiuta Virtual Try-On API](../api/overview.md)"
+!!! doc "Learn more about [Aiuta Virtual Try-On API](/api/)"
 
     Aiuta SDK is built on top of the same API, providing a pre-built UI layer and additional convenience features while maintaining the same core functionality.
