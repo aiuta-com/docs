@@ -12,7 +12,7 @@
 
 
 === "Use predefined model"
-    Alternatively, you can use predefined models. Use the [list of predefined models](/api/reference/#/default/get_predefined_try_on_models_predefined_try_on_models_get) API endpoint to retrieve the available models. Each predefined model’s image has an ID that should be used during the generation step.
+    Use the [list of predefined models](/api/reference/#/default/get_predefined_try_on_models_predefined_try_on_models_get) API endpoint to retrieve the available models. Each predefined model’s image has an ID that should be used during the generation step.
 
 ## 2. Create a generation operation request
 Provide input image id received on the previous step as well as SKU identifiers: `sku_id` and `sku_catalog_name` (catalog name is optional, `"main"` is used by default).

@@ -4,7 +4,6 @@ You'll need to install [Material for MKDocs :octicons-link-external-24:](https:/
 pip install mkdocs-material
 pip install mkdocs-minify-plugin
 pip install mkdocs-include-markdown-plugin
-pip install mkdocs-swagger-ui-tag
 ```
 
 After that, in the root of your repository clone, simply run
