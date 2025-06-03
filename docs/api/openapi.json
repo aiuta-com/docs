@@ -1329,6 +1329,12 @@
         "description": "Static API key",
         "in": "header",
         "name": "x-api-key"
+      },
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Json Web Token",
+        "bearerFormat": "JWT"
       }
     }
   }
