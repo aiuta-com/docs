@@ -49,16 +49,15 @@ Here's how to use them:
 
 
 ```kotlin
-import com.aiuta.fashionsdk.configuration.AiutaConfiguration
-import com.aiuta.fashionsdk.configuration.aiutaConfiguration
-import com.aiuta.fashionsdk.configuration.defaultAiutaFeatures
-import com.aiuta.fashionsdk.configuration.ui.defaultAiutaUserInterfaceConfiguration
+import com.aiuta.fashionsdk.tryon.compose.aiutaConfiguration
+import com.aiuta.fashionsdk.configuration.defaults.features.defaultAiutaFeatures
+import com.aiuta.fashionsdk.configuration.defaults.theme.defaultAiutaUserInterfaceConfiguration
 
 val aiutaConfiguration = aiutaConfiguration {
     aiuta = ... // Your initialized Aiuta instance
     
     // Configure default features
-    defaultAiutaUserInterfaceConfiguration(
+    defaultAiutaFeatures(
         // Initialization params
     )
     
@@ -67,5 +66,4 @@ val aiutaConfiguration = aiutaConfiguration {
         // Initialization params
     )
 }
-
 ```

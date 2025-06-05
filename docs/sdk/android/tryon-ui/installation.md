@@ -1,6 +1,6 @@
-# Making Try-Ons with UI
+# Installation of Try-On with UI
 
-Aiuta Try On provides pre-built UI components and screens for implementing virtual try-on functionality in your application. This guide will walk you through implementing try-on features using the UI integration approach, which offers a complete out-of-the-box experience.
+Aiuta Try-On provides pre-built UI components and screens for implementing virtual try-on functionality in your application. This guide will walk you through implementing try-on features using the UI integration approach, which offers a complete out-of-the-box experience.
 
 The UI integration approach is ideal for developers who want to quickly implement try-on functionality with minimal custom code while maintaining a consistent look and feel with other Aiuta features.
 
@@ -22,14 +22,14 @@ To use Aiuta Try On with UI components, you need to add the following dependenci
     }
     ```
 
-!!! tip "Dependencies tip"
+{% include-markdown "sdk/templates/android/latest-version-tip.md" %}
 
-    The `fashionsdk-tryon-compose` artifact already includes `fashionsdk-tryon-core` and `fashionsdk-configuration` dependencies, so you don't need to explicitly declare them in your dependencies.
+{% include-markdown "sdk/templates/android/using-bom.md" %}
 
 
 ## Configuration
 
-Before using the UI components, you need to configure `AiutaConfiguration`. For detailed information about configuration options and setup, see [Getting Started with Aiuta Configuration](/sdk/android/tryon/ui/configuration/getting-started-configuration/).
+Before using the UI components, you need to configure `AiutaConfiguration`. For detailed information about configuration options and setup, see [Configuration of Try-On with UI](/sdk/android/tryon-ui/configuration/).
 
 The configuration allows you to customize various aspects of the try-on experience through:
 

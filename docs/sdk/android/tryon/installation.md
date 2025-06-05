@@ -1,4 +1,4 @@
-# Making Try-Ons
+# Installation of Try-On
 
 Aiuta Try On provides a powerful API for implementing virtual try-on functionality in your Android application. This guide will walk you through the core implementation of digital try-on features using the Aiuta SDK.
 
@@ -23,6 +23,9 @@ To use Aiuta Try On, you need to add the following dependencies to your project:
     }
     ```
 
+{% include-markdown "sdk/templates/android/latest-version-tip.md" %}
+
+{% include-markdown "sdk/templates/android/using-bom.md" %}
 
 ## Using Aiuta Try-Ons
 
@@ -42,30 +45,6 @@ val aiutaTryOn: AiutaTryOn = aiuta.tryon
 
 Once you have created the `AiutaTryOn` instance, you're ready to implement digital try-on functionality in your application.
 
-
-### Retrieving Products from Catalog
-
-To implement generation with Aiuta Try On, you should have a `productId` of the item, which determines which fitting needs to be done for the photo.
-
-If you already have a set of products with all the necessary meta information, you can proceed to the next section. Otherwise, you can get a list of products from the `getProductItems()` method by passing the `categoryName`.
-
-`getProductItems()` is a paging method, therefore it has additional `paginationOffset` and `paginationLimit` input parameters, which help the backend determine the new page.
-
-```kotlin
-val products = aiutaTryOn.getProductItems(catalogName = "Your catalog name")
-```
-
-??? info "Receive list of available catalogs"
-
-    You can also get list of all available for you catalogs via `getProductCatalogs` method of `AiutaTryOn` class
-
-    ```kotlin
-    val catalogs = aiutaTryOn.getProductCatalogs()
-    ```
-
-??? tip "Paging 3 integration"
-    
-    You can use your own implementation of pagination or pay attention to the default implementation with the help of the Paging 3 library. Please, check [paging guide](paging.md)
 
 
 ### Start Generation

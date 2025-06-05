@@ -10,23 +10,22 @@ import com.aiuta.fashionsdk.aiuta
 
 val aiuta: Aiuta = aiuta {
     // Configure authentication strategy
-    authenticationStrategy = ...
+    authenticationStrategy = ... // (1)!
     
     // Configure platform context
-    platformContext = ...
+    platformContext = ... // (2)!
     
     // Configure logger (optional)
-    logger = ...
+    logger = ... // (3)!
 }
 ```
 
-The `aiuta` builder function allows you to configure the following components:
-
-- `authenticationStrategy`: **Required**. Defines how the SDK authenticates with the Aiuta backend.
-- `platformContext`: **Required**. Provides platform-specific information and context.
-- `logger`: Optional. Customizes logging behavior of the SDK.
-
-Each of these components is described in detail in the sections below.
+1. __Required__:  Defines how the SDK authenticates with the Aiuta backend.  
+See [Authentication section](#authentication) for details.
+2. __Required__: Provides platform-specific information and context.  
+See [Platform context section](#platform-context) for details.
+3. Optional: Customizes logging behavior of the SDK.
+See [Logger section](#logger) for details.
 
 
 ## Authentication
