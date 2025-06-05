@@ -1,6 +1,6 @@
 ---
 title: Fashion External API
-template: swagger.html
+template: swagger-ui.html
 hide:
   - navigation
   - toc
@@ -9,7 +9,7 @@ hide:
 <script>
     window.onload = function() {
         const ui = SwaggerUIBundle({
-            url: "/api/openapi.json",
+            url: "https://api.aiuta.com/digital-try-on/v1/openapi.json",
             dom_id: '#swagger-ui',
             deepLinking: true,
             defaultModelsExpandDepth: 0,

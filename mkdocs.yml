@@ -80,9 +80,9 @@ nav:
     - api/index.md
     - Getting Started: api/getting-started.md
     - Server-side Auth: api/server-side-auth-component.md
-    - Try-On:
-      - Workflow: api/workflow.md
-      - Reference: api/reference.md
+    - Digital Try-On:
+      - Workflow: api/try-on/workflow.md
+      - Reference: api/try-on/reference.md
 
   - Insights:
     - team/index.md

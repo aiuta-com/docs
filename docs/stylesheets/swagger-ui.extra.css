@@ -1,31 +1,14 @@
-.md-main__inner {
-    max-width: 100% !important;
-}
-
-.md-main__inner {
-    margin-top: 0 !important;
-}
-
-.md-content__inner {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.swagger-ui .information-container {
-    max-width: 61rem !important;
-}
-
-.swagger-ui .wrapper {
-    max-width: 61rem !important;
-}
-
-.swagger-ui .info {
-    margin: 1.7rem 0 !important;
+.md-content__inner-swagger-spacer {
+    padding: 1rem;
 }
 
 .swagger-ui {
     font-family: var(--md-text-font-family) !important;
     color: var(--md-typeset-color) !important;
+}
+
+.swagger-ui .info {
+    margin: -1.2rem 0.35em 0.5rem !important;
 }
 
 .swagger-ui .info .title {
