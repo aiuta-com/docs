@@ -158,3 +158,9 @@ body {
     content: "";
   }
 }
+
+/* Joint header */
+.md-joint-header {
+  margin-top: -0.8rem !important;
+  font-weight: 400 !important;
+}

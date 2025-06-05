@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block container %}
+<div class="md-content" data-md-component="content">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/swagger-ui.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/swagger-ui.extra.css" />
+    <script src="/js/swagger-ui-bundle.js" charset="UTF-8"> </script> 
+    
+    <article class="md-content__inner md-typeset">
+    {% block content %}
+        {% include "partials/tags.html" %}
+        {% include "partials/actions.html" %}
+        {{ page.content }}
+        {% include "partials/source-file.html" %}
+        {% include "partials/feedback.html" %}
+        {% include "partials/comments.html" %}
+    {% endblock %}
+    </article>
+
+    {% if "\x3ch1" in page.content %}
+    <div class="md-content__inner-swagger-spacer"></div>
+    {% endif %}
+
+    <div id="swagger-ui" class="md-typeset"></div>
+</div>       
+{% endblock %}
