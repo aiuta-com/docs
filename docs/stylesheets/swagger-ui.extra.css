@@ -132,3 +132,12 @@
     mask: url("data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>") 50% no-repeat;
     background-color: var(--md-typeset-color);
 }
+
+.swagger-ui .markdown code, 
+.swagger-ui .renderedMarkdown code {
+    background-color: var(--md-code-bg-color) !important;
+    padding: 0 .3em !important;
+    font-size: .85em !important;
+    font-weight: 500 !important;
+    border-radius: .1rem !important;
+}
