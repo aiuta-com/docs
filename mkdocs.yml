@@ -32,6 +32,7 @@ nav:
       - Errors: sdk/about/analytics/errors.md
 
     - Developer:
+      - Diagrams: sdk/about/developer/diagrams.md
       - Configuration: sdk/about/developer/configuration.md
       - Common Models: sdk/about/developer/common-models.md
       - Platform Types: sdk/about/developer/platform-types.md
