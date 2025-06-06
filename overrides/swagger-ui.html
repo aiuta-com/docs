@@ -5,6 +5,43 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/swagger-ui.extra.css" />
     <script src="/js/swagger-ui-bundle.js" charset="UTF-8"> </script> 
     
+    <script>
+        // `SwaggerUI` is defined directly in this template 
+        // to be available before page content may reference it.
+        // It will handle cases where `SwaggerUIBundle` is not yet
+        // available and initializes it when possible. 
+        // It also shadows original `SwaggerUI` function as it is 
+        // not compatible with the documentation environment.
+        // Always use this function instead of `SwaggerUIBundle`.
+        function SwaggerUI(config) {
+            if (config.dom_id == null) {
+                config.dom_id = '#swagger-ui';
+            }
+            if (config.deepLinking == null) {
+                config.deepLinking = true;
+            }
+            if (config.defaultModelsExpandDepth == null) {
+                config.defaultModelsExpandDepth = 0;
+            }
+
+            function initSwaggerUIBundle() {
+                if (typeof SwaggerUIBundle === 'undefined') {
+                    setTimeout(initSwaggerUIBundle, 100);
+                    return;
+                }
+                try {
+                    SwaggerUIBundle(config);
+                } catch (error) {
+                    window.addEventListener('load', function() {
+                        SwaggerUIBundle(config);
+                    });
+                }
+            }
+
+            initSwaggerUIBundle();
+        }
+    </script>
+    
     <article class="md-content__inner md-typeset">
     {% block content %}
         {% include "partials/tags.html" %}

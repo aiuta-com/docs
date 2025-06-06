@@ -123,6 +123,7 @@ theme:
     - navigation.expand
     - navigation.sections
     - navigation.indexes
+    - navigation.instant
     - content.code.copy
     - content.tooltips
     - content.tabs.link

@@ -29,8 +29,9 @@ The configuration is structured as a hierarchical object that controls various a
     Don't miss them - click :material-information-outline: for more details
 
 !!! doc "Type Definitions"
-    [:octicons-arrow-right-24: platform specific types](platform-types.md)<br>
-    [:octicons-arrow-right-24: common models](common-models.md) schemes
+    
+    - [Platform-specific types](platform-types.md)
+    - [Common Models schemes](common-models.md)
 
 
 ## Configuration

@@ -7,14 +7,5 @@ hide:
 ---
 
 <script>
-    window.onload = function() {
-        const ui = SwaggerUIBundle({
-            url: "/api/try-on/openapi.json",
-            dom_id: '#swagger-ui',
-            deepLinking: true,
-            defaultModelsExpandDepth: 0,
-        });
-
-        window.ui = ui;
-    };
+  SwaggerUI({ url: "/api/try-on/openapi.json" });
 </script>
