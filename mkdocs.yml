@@ -30,9 +30,11 @@ nav:
     - Analytics: 
       - Events: sdk/about/analytics/analytics.md
       - Errors: sdk/about/analytics/errors.md
-
+    - Diagrams:
+      - Data Flow: sdk/about/diagrams/data-flow.md
+      - Authentication: sdk/about/diagrams/authentication.md
+      - Full interaction: sdk/about/diagrams/interaction-sequence.md
     - Developer:
-      - Diagrams: sdk/about/developer/diagrams.md
       - Configuration: sdk/about/developer/configuration.md
       - Common Models: sdk/about/developer/common-models.md
       - Platform Types: sdk/about/developer/platform-types.md

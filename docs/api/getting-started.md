@@ -39,8 +39,11 @@ Authentication is mandatory for some calls such as starting the image generation
     The flow is as follows:
     
     - The client requests a token from your backend service using your internal client-server communication. The client can provide an arbitrary set of arguments to be included in the payload to be signed.
-    - Your application backend validates the parameters provided by the client (e.g., input image to generate, SKU ID, etc.) and issues a JWT using the private key configured during the [Obtaining credentials](#obtaining-credentials) step. All parameters significant to security and cost efficiency should be included in the JWT payload. You can also control the token’s expiration time. Refer to the documentation for detailed instructions on [implementing the backend component](./server-side-auth-component.md).
+    - Your application backend validates the parameters provided by the client (e.g., input image to generate, SKU ID, etc.) and issues a JWT using the private key configured during the [Obtaining credentials](#obtaining-credentials) step. All parameters significant to security and cost efficiency should be included in the JWT payload. You can also control the token’s expiration time.
     - The JWT can then be used by your application client to access the Aiuta API until it expires.
+
+    !!! doc "Refer to the documentation for detailed instructions on [implementing the backend component](./server-side-auth-component.md)"
+        As an example, see the sequence diagram showing how [Aiuta SDK uses the JWT flow](/sdk/about/diagrams/authentication/#__tabbed_1_1) to authenticate requests
 
     To make requests to the Aiuta API, use the Bearer Authentication HTTP scheme with the issued token:
     ```
