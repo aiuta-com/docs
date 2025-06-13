@@ -2,7 +2,7 @@
 hide:
   - toc
 ---
-# Request authentication
+# Request Authentication
 
 Authentication sequences for requests made by the SDK to the Aiuta API. Authentication is mandatory for some calls, such as starting image generation, and optional for other trivial calls, such as checking the status of an operation.
 
@@ -27,6 +27,14 @@ Authentication sequences for requests made by the SDK to the Aiuta API. Authenti
         SDK->>API: Make request
         Note over SDK,API: Authorization: Bearer <token>
         API->>API: Validate JWT
+
+        break JWT is invalid
+        rect
+            API-->>SDK: Retun 401 Unauthorized
+            SDK-->>USR: Show something went wrong
+        end
+        end
+
         API-->>SDK: Return response
         SDK-->>USR: Provide UI feedback / result
         deactivate SDK
@@ -41,9 +49,9 @@ Authentication sequences for requests made by the SDK to the Aiuta API. Authenti
         
         USR->>SDK: Start some action
         activate SDK
-        SDK->>SDK: Use Subscription ID to sign request
+        SDK->>SDK: Add Subscription ID<br>to the request Headers
         SDK->>API: Make request
-        Note over SDK,API: x-user-id: <subscription id>
+        Note over SDK,API: x-user-id: <subscription_id>
         API->>API: Match Subscription ID
         API-->>SDK: Return response
         SDK-->>USR: Provide UI feedback / result
@@ -59,9 +67,9 @@ Authentication sequences for requests made by the SDK to the Aiuta API. Authenti
         
         USR->>SDK: Start some action
         activate SDK
-        SDK->>SDK: Use Api Key to sign request
+        SDK->>SDK: Add Api Key<br>to the request Headers
         SDK->>API: Make request
-        Note over SDK,API: x-api-key: <api key>
+        Note over SDK,API: x-api-key: <api_key>
         API->>API: Check Api Key
         API-->>SDK: Return response
         SDK-->>USR: Provide UI feedback / result

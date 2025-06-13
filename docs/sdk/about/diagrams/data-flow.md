@@ -2,18 +2,16 @@
 hide:
   - toc
 ---
-# Data flow
+# Data Flow
 
 Overview sequence diagram covers the handling of user data. It shows a simplified process from obtaining user consent to uploading and displaying images, highlighting the roles of the user, your app, backend services, Aiuta SDK and API. You can view also [the complete interaction sequence](/sdk/about/diagrams/interaction-sequence/) diagrams.
 
 !!! info "Anonymous photos" 
-    We do not process any user data other than photos, do not request your user IDs, and all uploaded images remain anonymous to us
+    We do not process any user data other than photos, do not request your user IDs, and all uploaded images remain anonymous to us.
 
 ```mermaid
 sequenceDiagram
     {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
-
-    note over GS: Aiuta or Yours
 
     opt consent feature
         USR->>SDK: Accept Terms Of Use
@@ -33,7 +31,7 @@ sequenceDiagram
     API-->>SDK: Return the ID and<br>URL of images
     deactivate API
 
-    SDK->>APP: Provide the ID and URL of images
+    SDK->>APP: Provide the ID and URL of images (input and generated)
     note over APP: May link this images to the user's identity for the<br>further use in accordance with the user's consent
     SDK-->>USR: Display generated images
     deactivate SDK

@@ -2,7 +2,7 @@
 hide:
   - toc
 ---
-# Complete interaction sequences
+# Complete Interaction Sequences
 
 The detailed sequence diagrams below cover all stages of interaction with the Aiuta SDK. The diagrams help visualize the flow of operations, such as initialization and the try-on process, highlighting the roles of the user, your app, backend services, Aiuta SDK and API. Authentication of requests from the SDK to the Aiuta API/Backend based on the configuration provided is described [here](/sdk/about/diagrams/authentication/).
 
@@ -70,12 +70,14 @@ Sequence diagram of the virtual try-on.
             API->>API: Generate image ID, form URL
             API-->>SDK: Return image ID, URL
             deactivate API
-            SDK->>SDK: Add image to the history
         else Predefined model / Uploads history
             USR->>SDK: Select model / previously used photo
             SDK->>SDK: Add/Reorder image in the history
-            Note over SDK: Using the image ID
+            Note right of SDK: Using the image ID
         end
+
+        SDK->>SDK: Start Try-on (Image)
+        deactivate SDK
     ```
 
     !!! doc "Details to store <span class="md-sequence-number">5-6, 8</span> History Images described in the [Common Models](/sdk/about/developer/common-models/#history-images)"
@@ -86,10 +88,15 @@ Sequence diagram of the virtual try-on.
     sequenceDiagram
         {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
 
-        USR->>SDK: Start Try-on (Image)
-        Note over USR,SDK: Automatically after picking a new photo or by the<br>explicit button tap when last used photo is available
-
         activate SDK
+        alt 
+            SDK->>SDK: Start Try-on
+            Note over USR,SDK: Automatically after Pick a photo
+        else
+            USR->>SDK: Tap Try-on button
+            Note over USR,SDK: when last used photo is available
+        end
+
         SDK->>API: Create operation<br>(image ID, product ID)
         activate API
         Note over SDK,API: Secure authenticated request
@@ -100,30 +107,42 @@ Sequence diagram of the virtual try-on.
             API-->>SDK: Operation details
             Note over API,SDK: status, error | generated images
             SDK-->>SDK: Check operation status
-            Note over SDK: Repeat while IN_PROGRESS
+            Note over SDK: Repeat while<br>CREATED | IN_PROGRESS | PAUSED
 
         end
-            critical Check operation status
 
-            option SUCCESS
-                API->>GS: Save generated image
-                deactivate API
-                Note over API,GS: Anonymous.<br>The photo is associated with the<br>app entry, not the user entry
+        critical Check operation status
+        option SUCCESS
+            API->>GS: Save generated image
+            deactivate API
+            Note over API,GS: Anonymous.<br>The photo is associated with the<br>app entry, not the user entry
 
-                SDK->>SDK: Add generation<br>result to the history
-                SDK->>GS: Get result image by the URL
-                GS-->>SDK: Image data
-                SDK-->>USR: Present results
+            SDK->>SDK: Add input and generated<br>images to the history
+            SDK->>GS: Get result image by the URL
+            activate GS
+            GS-->>SDK: Image data
+            deactivate GS
+            SDK-->>USR: Present results
 
-            option FAILED
-                SDK-->>USR: Show something whent wrong error
-
-            option ABORTED
-                SDK-->>USR: Report couldn't detect anyone
-                deactivate SDK
-                Note over SDK,USR: User may select other photo and start over
-                
+            opt
+                USR->>SDK: Add to cart
+                SDK->>SDK: Close
+                SDK->>APP: Call addToCart (product ID)
             end
+
+        option ABORTED
+            rect
+                SDK-->>USR: Report couldn't detect anyone
+            end
+            Note over SDK,USR: User may select other photo and start over
+
+        option FAILED | CANCELLED
+            rect
+                SDK-->>USR: Show something whent wrong error
+                deactivate SDK
+            end
+            Note over SDK,USR: User may try again to start over
+        end
     ```
 
     !!! doc "Details about <span class="md-sequence-number">2</span> Product and <span class="md-sequence-number">4, 12</span> Images described in the [Common Models](/sdk/about/developer/common-models/)"
@@ -133,5 +152,3 @@ Sequence diagram of the virtual try-on.
         
     !!! note ""
         :octicons-dot-fill-16: Custom data providers :octicons-dot-fill-16: All features including wishlist :octicons-dot-fill-16: Standalone consent when upload a photo
-
-

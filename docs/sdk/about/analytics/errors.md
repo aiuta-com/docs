@@ -4,7 +4,7 @@ This document describes all possible errors and cancelation reasons that can occ
 
 ## Try-On Errors
 
-!!! doc "Sent in the analytics event [`tryOn.tryOnError`](analytics.md#try-on-events) in the `errorType` field"
+!!! info "Sent in the `errorType` field of [`tryOn.tryOnError`](analytics.md#try-on-events)"
 
 | Error Type | Description |
 |------------|-------------|
@@ -21,7 +21,7 @@ This document describes all possible errors and cancelation reasons that can occ
 
 ## Try-On Aborts
 
-!!! doc "Sent in the analytics event [`tryOn.tryOnAborted`](analytics.md#try-on-events) in the `abortReason` field"
+!!! info "Sent in the `abortReason` field of [`tryOn.tryOnAborted`](analytics.md#try-on-events)"
 
 | Abort Type | Description |
 |------------|-------------|

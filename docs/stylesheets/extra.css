@@ -173,3 +173,7 @@ body {
   color: white;
   font-size: 0.5rem !important;
 }
+
+.mermaid {
+  --md-mermaid-sequence-box-bg-color: #ff000011;
+}
