@@ -4,151 +4,65 @@ hide:
 ---
 # Complete Interaction Sequences
 
-The detailed sequence diagrams below cover all stages of interaction with the Aiuta SDK. The diagrams help visualize the flow of operations, such as initialization and the try-on process, highlighting the roles of the user, your app, backend services, Aiuta SDK and API. Authentication of requests from the SDK to the Aiuta API/Backend based on the configuration provided is described [here](/sdk/about/diagrams/authentication/).
+The detailed sequence diagrams below cover all stages of interaction with the Aiuta SDK. The diagrams help visualize the flow of operations, such as initialization and the try-on process, highlighting the roles of the user, your app, backend services and Aiuta SDK. 
 
-## Initialization
+Authentication of requests from the SDK to the Aiuta API/Backend based on the configuration provided is described [here](/sdk/about/diagrams/authentication/).
 
-The next diagram illustrates the initialization process from launching the app to displaying products, including configuration and model requests.
+## Configuration
 
-``` mermaid
-sequenceDiagram
-    {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
+{% include-markdown "sdk/about/diagrams/interaction/initialization.md" %}
 
-    USR->>APP: Launch the App
-    APP->>SDK: Initialize with Configuration
+## Usage
 
-    activate SDK
-    Note over APP,SDK: Includes auth, UI, features, analytics
-    SDK->>API: Request internal configuration
-    API-->>SDK: Internal configuration
-    opt predefined models feature
-        SDK->>API: Request predefined models
-        API-->>SDK: Predefined models collection
-    end
-    deactivate SDK
+!!! tip "Configuration examples"
+    You can switch the example configuration presets for the diagrams below to see the differences when using built-in or custom data providers, as well as some differences when using additional functionality.
 
-    APP->>BE: Load products
-    BE-->>APP: Products
-    Note over APP,BE: Including a flag whether<br>a virtual try-on is available
+    === "Default configuration"
 
-    APP-->>USR: Show products
-    Note over APP,USR: Including a try-on button for<br>products with try-on feature
-```
+        - BuiltIn data providers 
+        - Default features set 
+        - Embedded legal info
 
-!!! doc "Find more about Aiuta [Configuration](/sdk/about/developer/configuration/) in <span class="md-sequence-number">2</span>"
+    === "Custom configuration"
 
-    Please note in <span class="md-sequence-number">8 – 9</span> that you should obtain information about the availability of the virtual try-on feature for each of your products from __your__ backend, as the SDK does not receive information about product availability and will attempt to launch a virtual try-on with any product you provide, which may result in an error if that product has not been trained by Aiuta.
+        - Custom data providers 
+        - All features including wishlist 
+        - Standalone consent when upload a photo
 
-## Try-On
+### Try-On
 
-Sequence diagram of the virtual try-on.
+The following sequence diagrams illustrate the process of a virtual try-on using the Aiuta SDK. They cover the entire workflow from the moment a user initiates a try-on request to the final rendering of the virtual try-on result, highlighting key actions such as image selection, authentication, and data processing.
+
+#### Pick a Photo
 
 === "Default configuration"
-        
-    !!! note ""
-        :octicons-dot-fill-16: BuiltIn data providers :octicons-dot-fill-16: Default features set :octicons-dot-fill-16: Embedded legal info
 
-    ### Pick a photo
+    {% include-markdown "sdk/about/diagrams/interaction/pick-a-photo-default.md" %}
 
-    Detailed sequence of the user selecting the source image for the virtual try-on.
+=== "Custom configuration" 
 
-    ``` mermaid
-    sequenceDiagram
-        {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
+    {% include-markdown "sdk/about/diagrams/interaction/pick-a-photo-custom.md" %}
 
-        USR->>APP: Tap Try-on Button
-        APP->>SDK: Start Try-on (Product)
-        activate SDK
-        SDK-->>USR: Present SDK UI
-        
-        alt New user photo
-            USR->>SDK: Select/take a new photo
-            SDK->>API: Upload a photo
-            activate API
-            API->>GS: Save input image
-            Note over API,GS: Anonymous.<br>The photo is associated with the<br>app entry, not the user entry
-            API->>API: Generate image ID, form URL
-            API-->>SDK: Return image ID, URL
-            deactivate API
-        else Predefined model / Uploads history
-            USR->>SDK: Select model / previously used photo
-            SDK->>SDK: Add/Reorder image in the history
-            Note right of SDK: Using the image ID
-        end
+#### Making Try-On
 
-        SDK->>SDK: Start Try-on (Image)
-        deactivate SDK
-    ```
+=== "Default configuration"
 
-    !!! doc "Details to store <span class="md-sequence-number">5-6, 8</span> History Images described in the [Common Models](/sdk/about/developer/common-models/#history-images)"
+    {% include-markdown "sdk/about/diagrams/interaction/try-on-default.md" %}
 
-    ### Making Try-On
+=== "Custom configuration" 
 
-    ``` mermaid
-    sequenceDiagram
-        {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
+    {% include-markdown "sdk/about/diagrams/interaction/try-on-custom.md" %}
 
-        activate SDK
-        alt 
-            SDK->>SDK: Start Try-on
-            Note over USR,SDK: Automatically after Pick a photo
-        else
-            USR->>SDK: Tap Try-on button
-            Note over USR,SDK: when last used photo is available
-        end
+#### Viewing Results
 
-        SDK->>API: Create operation<br>(image ID, product ID)
-        activate API
-        Note over SDK,API: Secure authenticated request
-        API-->>SDK: Operation ID
+=== "Default configuration"
 
-        loop internal configuration delay
-            SDK->>API: Request operaion status
-            API-->>SDK: Operation details
-            Note over API,SDK: status, error | generated images
-            SDK-->>SDK: Check operation status
-            Note over SDK: Repeat while<br>CREATED | IN_PROGRESS | PAUSED
+    {% include-markdown "sdk/about/diagrams/interaction/results-default.md" %}
 
-        end
+=== "Custom configuration" 
 
-        critical Check operation status
-        option SUCCESS
-            API->>GS: Save generated image
-            deactivate API
-            Note over API,GS: Anonymous.<br>The photo is associated with the<br>app entry, not the user entry
+    {% include-markdown "sdk/about/diagrams/interaction/results-custom.md" %}
 
-            SDK->>SDK: Add input and generated<br>images to the history
-            SDK->>GS: Get result image by the URL
-            activate GS
-            GS-->>SDK: Image data
-            deactivate GS
-            SDK-->>USR: Present results
+### Managing History
 
-            opt
-                USR->>SDK: Add to cart
-                SDK->>SDK: Close
-                SDK->>APP: Call addToCart (product ID)
-            end
-
-        option ABORTED
-            rect
-                SDK-->>USR: Report couldn't detect anyone
-            end
-            Note over SDK,USR: User may select other photo and start over
-
-        option FAILED | CANCELLED
-            rect
-                SDK-->>USR: Show something whent wrong error
-                deactivate SDK
-            end
-            Note over SDK,USR: User may try again to start over
-        end
-    ```
-
-    !!! doc "Details about <span class="md-sequence-number">2</span> Product and <span class="md-sequence-number">4, 12</span> Images described in the [Common Models](/sdk/about/developer/common-models/)"
-        See diagrams of [<span class="md-sequence-number">4</span> piking a photo](#pick-a-photo) and [<span class="md-sequence-number">5</span> authenticating secured requests](#authenticate-request) below
-
-=== "Custom configuration"
-        
-    !!! note ""
-        :octicons-dot-fill-16: Custom data providers :octicons-dot-fill-16: All features including wishlist :octicons-dot-fill-16: Standalone consent when upload a photo
+{% include-markdown "sdk/about/diagrams/interaction/history.md" %}

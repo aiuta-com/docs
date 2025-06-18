@@ -31,6 +31,11 @@ sequenceDiagram
     API-->>SDK: Return the ID and<br>URL of images
     deactivate API
 
+    SDK->>GS: Get result image by the URL
+    activate GS
+    GS-->>SDK: Image data
+    deactivate GS
+
     SDK->>APP: Provide the ID and URL of images (input and generated)
     note over APP: May link this images to the user's identity for the<br>further use in accordance with the user's consent
     SDK-->>USR: Display generated images
@@ -38,4 +43,4 @@ sequenceDiagram
 ```
 
 !!! info "Access tokens"
-    Depending on the storage type and access levels set, the URL in the Aiuta API response <span class="md-sequence-number">8</span> may contain a temporary access token so that the SDK has time to download the results and <span class="md-sequence-number">10</span> show them to the user before access to that URL is expired. For further use <span class="md-sequence-number">9</span> under the control of your app and to provide historical data for display in the SDK when using data providers ([uploaded](/sdk/about/developer/configuration/#uploads-history) and [generated](/sdk/about/developer/configuration/#generations-history)), your application must ensure access by refreshing the tokens in the URL.
+    Depending on the storage type and access levels set, the URL in the Aiuta API response <span class="md-sequence-number">8</span> may contain a temporary access token so that the SDK has time to download <span class="md-sequence-number">9</span> the results and <span class="md-sequence-number">12</span> show them to the user before access to that URL is expired. For further use <span class="md-sequence-number">11</span> under the control of your app and to provide historical data for display in the SDK when using data providers ([uploaded](/sdk/about/developer/configuration/#uploads-history) and [generated](/sdk/about/developer/configuration/#generations-history)), your application must ensure access by refreshing the tokens in the URLs so that the image will be accessible to the SDK without additional authentication.
