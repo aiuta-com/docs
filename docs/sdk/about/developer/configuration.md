@@ -33,6 +33,7 @@ The configuration is structured as a hierarchical object that controls various a
     - [Platform-specific types](platform-types.md)
     - [Common Models schemes](common-models.md)
 
+See also [the diagrams](/sdk/about/diagrams/interaction-sequence/) showing the sequence of configuration application and what it may affect.
 
 ## Configuration
 

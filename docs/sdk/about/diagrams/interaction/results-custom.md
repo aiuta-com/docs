@@ -4,7 +4,7 @@ The sequence diagram of executing a virtual try-on operation.
 sequenceDiagram
     {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
 
-    Note over SDK: After successful try-on generation
+    Note over SDK,API: After successful try-on generation
 
     opt Cart
         USR->>SDK: Tap Add to cart
@@ -26,7 +26,7 @@ sequenceDiagram
         SDK->>APP: Call getShareText (product IDs)
         APP-->>SDK: Return share text
         SDK-->>USR: Show system share dialog
-        Note over SDK: Generated image and optional text to share
+        Note over SDK,USR: Generated image and optional text to share
         USR->>SDK: Complete sharing
     end
 
@@ -34,5 +34,5 @@ sequenceDiagram
 
 !!! doc "See details about" 
     
-    - [<span class="md-sequence-number">6-7</span> Wishlist integration](/sdk/about/developer/configuration/#wishlist)
-    - [<span class="md-sequence-number">8-9</span> Share functionality](/sdk/about/developer/configuration/#share) 
+    - [<span class="md-sequence-number">6-8</span> Wishlist integration](/sdk/about/developer/configuration/#wishlist)
+    - [<span class="md-sequence-number">11</span> Share functionality](/sdk/about/developer/configuration/#share) 

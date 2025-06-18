@@ -385,9 +385,9 @@ ImagePickerUploadsHistoryFeature {
 
   dataProvider: BuiltIn | Custom {
     uploadedImages: Observable<List<InputImage>> // (5)!
-    addUploadedImagesAction: Callback(List<InputImage>) // (6)!
-    deleteUploadedImagesAction: Callback(List<InputImage>) // (7)!
-    selectUploadedImageAction: Callback(InputImage) // (8)!
+    addUploadedImages: Callback(List<InputImage>) // (6)!
+    deleteUploadedImages: Callback(List<InputImage>) // (7)!
+    selectUploadedImage: Callback(InputImage) // (8)!
   }
 }
 ```

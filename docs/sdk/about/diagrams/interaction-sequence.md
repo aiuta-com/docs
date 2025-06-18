@@ -45,13 +45,7 @@ The following sequence diagrams illustrate the process of a virtual try-on using
 
 #### Making Try-On
 
-=== "Default configuration"
-
-    {% include-markdown "sdk/about/diagrams/interaction/try-on-default.md" %}
-
-=== "Custom configuration" 
-
-    {% include-markdown "sdk/about/diagrams/interaction/try-on-custom.md" %}
+{% include-markdown "sdk/about/diagrams/interaction/try-on.md" %}
 
 #### Viewing Results
 
@@ -65,4 +59,24 @@ The following sequence diagrams illustrate the process of a virtual try-on using
 
 ### Managing History
 
-{% include-markdown "sdk/about/diagrams/interaction/history.md" %}
+The following sequence diagram illustrates the process of managing images history using the Aiuta SDK. It covers the workflow from adding and viewing the history to deleting existing ones. The diagrams are the same for the uploaded and generated history, as the processes are identical and only differ in the UI.
+
+#### Adding/Viewing Images in the History
+
+=== "Default configuration"
+
+    {% include-markdown "sdk/about/diagrams/interaction/history-add-default.md" %}
+
+=== "Custom configuration" 
+
+    {% include-markdown "sdk/about/diagrams/interaction/history-add-custom.md" %}
+
+#### Deleting Images from the History
+
+=== "Default configuration"
+
+    {% include-markdown "sdk/about/diagrams/interaction/history-delete-default.md" %}
+
+=== "Custom configuration" 
+
+    {% include-markdown "sdk/about/diagrams/interaction/history-delete-custom.md" %}
