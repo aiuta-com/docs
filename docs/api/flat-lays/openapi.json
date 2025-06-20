@@ -2,7 +2,6 @@
   "openapi": "3.0.2",
   "info": {
     "title": "Flat Lays",
-    "description": "<h2>Workflow</h2><ol><li><b>Upload input images</b><p>Upload images of your product for which you want to generate a Flat Lay.</p><p>For each uploaded image, you will receive an object containing the image ID and URL. Use these IDs in the next step to specify input images for Flat Lay generation.</p><a href=\"#/endpoint/untagged/POST/uploaded_images?scroll\">Try uploading an image</a><br><br><li><b>Create a generation operation request</b><p>Provide the image IDs received in the previous step, along with some basic product information: <code>product_category</code>, <code>product_title</code>, and <code>product_description</code>.</p><p>You will receive an object containing the ID of the created Flat Lay generation operation if the request is successful, or an error message otherwise.</p><a href=\"#/endpoint/untagged/POST/flat_lay_operations?scroll\">Try creating a generation operation request</a></li><br><li><b>Get the operation results</b><p>Use the operation ID from the previous step to retrieve the status of the operation. The operation is considered complete when its status becomes <code>SUCCESS</code> or <code>FAILED</code>.</p><p>If the operation completes successfully, the response will contain the generated image URL(s). If an error occurred, the <code>error</code> field will contain details.</p><a href=\"#/endpoint/untagged/GET/flat_lay_operations_-operation_id-?scroll\">Try getting the operation results</a></li></ol>",
     "version": "1.0.0"
   },
   "servers": [
