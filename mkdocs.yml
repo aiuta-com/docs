@@ -76,6 +76,9 @@ nav:
     - Digital Try-On:
       - Workflow: api/try-on/workflow.md
       - Reference: api/try-on/reference.md
+    - Flat Lays:
+      - Workflow: api/flat-lays/workflow.md
+      - Reference: api/flat-lays/reference.md
 
   - Insights:
     - team/index.md

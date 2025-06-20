@@ -1,0 +1,509 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Flat Lays",
+    "description": "<h2>Workflow</h2><ol><li><b>Upload input images</b><p>Upload images of your product for which you want to generate a Flat Lay.</p><p>For each uploaded image, you will receive an object containing the image ID and URL. Use these IDs in the next step to specify input images for Flat Lay generation.</p><a href=\"#/endpoint/untagged/POST/uploaded_images?scroll\">Try uploading an image</a><br><br><li><b>Create a generation operation request</b><p>Provide the image IDs received in the previous step, along with some basic product information: <code>product_category</code>, <code>product_title</code>, and <code>product_description</code>.</p><p>You will receive an object containing the ID of the created Flat Lay generation operation if the request is successful, or an error message otherwise.</p><a href=\"#/endpoint/untagged/POST/flat_lay_operations?scroll\">Try creating a generation operation request</a></li><br><li><b>Get the operation results</b><p>Use the operation ID from the previous step to retrieve the status of the operation. The operation is considered complete when its status becomes <code>SUCCESS</code> or <code>FAILED</code>.</p><p>If the operation completes successfully, the response will contain the generated image URL(s). If an error occurred, the <code>error</code> field will contain details.</p><a href=\"#/endpoint/untagged/GET/flat_lay_operations_-operation_id-?scroll\">Try getting the operation results</a></li></ol>",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aiuta.com/flat-lays/v1"
+    }
+  ],
+  "paths": {
+    "/uploaded_images": {
+      "post": {
+        "summary": "Upload an image as bytes",
+        "description": "Upload an image and save it with unique ID. By default mime-type is 'image/png' and extension is '.png'.",
+        "operationId": "upload_user_image_uploaded_images_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_user_image_uploaded_images_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AiutaImage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/uploaded_images/{image_id}": {
+      "get": {
+        "summary": "Get an uploaded image",
+        "description": "Get user's uploaded image",
+        "operationId": "get_user_uploaded_image_uploaded_images__image_id__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Image Id"
+            },
+            "name": "image_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AiutaImage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete an uploaded image",
+        "description": "You can delete images uploaded by the same API user. It is not possible to delete images with the 'aiuta' owner (such as try-on model images).",
+        "operationId": "delete_uploaded_image_uploaded_images__image_id__delete",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Image Id"
+            },
+            "name": "image_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/generated_images/{image_id}": {
+      "delete": {
+        "summary": "Delete a generated image",
+        "description": "This method deletes a generated image. Only images of type 'user' (derived from user-uploaded images) can be deleted.",
+        "operationId": "delete_generated_image_generated_images__image_id__delete",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Image Id"
+            },
+            "name": "image_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/flat_lay_operations": {
+      "post": {
+        "summary": "Run a flat lay generation operation.",
+        "operationId": "create_flat_lay_operation_flat_lay_operations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateFlatLayRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOperationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/flat_lay_operations/{operation_id}": {
+      "get": {
+        "summary": "Get generate flat lay operation.",
+        "description": "Handler for getting generation of flat lay operation details.",
+        "operationId": "get_flat_lay_operation_flat_lay_operations__operation_id__get",
+        "parameters": [
+          {
+            "name": "operation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Operation Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ImagesGenerationOperation"
+                    }, {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Response Get Flat Lay Operation Flat Lay Operations  Operation Id  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AiutaImage": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Image ID"
+          },
+          "owner_type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OwnerType"
+              }
+            ],
+            "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+          },
+          "url": {
+            "type": "string",
+            "title": "Url",
+            "description": "Image URL"
+          }
+        },
+        "type": "object",
+        "required": ["id", "owner_type", "url"],
+        "title": "AiutaImage"
+      },
+      "Body_upload_user_image_uploaded_images_post": {
+        "properties": {
+          "image_data": {
+            "type": "string",
+            "format": "binary",
+            "title": "Image Data"
+          }
+        },
+        "type": "object",
+        "required": ["image_data"],
+        "title": "Body_upload_user_image_uploaded_images_post"
+      },
+      "CreateOperationResponse": {
+        "properties": {
+          "operation_id": {
+            "type": "string",
+            "title": "Operation Id",
+            "description": "ID of the created operation."
+          }
+        },
+        "type": "object",
+        "required": ["operation_id"],
+        "title": "CreateOperationResponse",
+        "description": "Response returned after successfully creating an operation."
+      },
+      "GenerateFlatLayRequest": {
+        "properties": {
+          "uploaded_product_image_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 20,
+            "minItems": 1,
+            "title": "Uploaded Product Image Ids",
+            "description": "List of 1 to 20 uploaded image IDs. These images show the item for which the Flat Lay will be generated."
+          },
+          "product_category": {
+            "anyOf": [
+              {
+                "type": "string"
+              }, {
+                "type": "null"
+              }
+            ],
+            "title": "Product Category",
+            "description": "Category of the item. Preferably use a structured taxonomy such as 'Apparel & Accessories > Clothing > Dresses' or 'Home > Women > Dresses > Maxi Dresses'. Refer to the Google product category list as a good example of clear, structured categorization: https://support.google.com/merchants/answer/6324436"
+          },
+          "product_title": {
+            "anyOf": [
+              {
+                "type": "string"
+              }, {
+                "type": "null"
+              }
+            ],
+            "title": "Product Title",
+            "description": "Title of the item (if available)."
+          },
+          "product_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              }, {
+                "type": "null"
+              }
+            ],
+            "title": "Product Description",
+            "description": "Description of the item (if available)."
+          },
+          "operation_priority": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationPriority"
+              }
+            ],
+            "description": "Specifies whether the operation should be processed online (real-time) or offline (batch). Only offline priority is currently supported. If set to online, the operation will still be processed as offline.",
+            "default": "offline"
+          },
+          "output_resolution": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ImageResolution"
+              }
+            ],
+            "description": "The standard option produces images with 960 pixels on the longest side. The high option produces larger images but may incur higher cost. Only standard resolution is currently supported. If set to high, the image will still be generated in standard resolution.",
+            "default": "standard"
+          }
+        },
+        "type": "object",
+        "required": ["uploaded_product_image_ids"],
+        "title": "GenerateFlatLayRequest",
+        "description": "Request to generate a Flat Lay image for a given item."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ImageResolution": {
+        "type": "string",
+        "enum": ["standard", "high"],
+        "title": "ImageResolution",
+        "description": "Defines the intended resolution of the generated images.\nSpecific resolution values are determined per operation."
+      },
+      "ImagesGenerationOperation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Operation's ID"
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationStatus"
+              }
+            ],
+            "description": "Current status of the operation"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              }, {
+                "type": "null"
+              }
+            ],
+            "title": "Error",
+            "description": "Error details if the operation was failed. None means that there were no errors."
+          },
+          "generated_images": {
+            "items": {
+              "$ref": "#/components/schemas/AiutaImage"
+            },
+            "type": "array",
+            "title": "Generated Images",
+            "description": "List of generated images. May be empty if the operation is not finished yet or there was an error during generation."
+          }
+        },
+        "type": "object",
+        "required": ["id", "status", "error", "generated_images"],
+        "title": "ImagesGenerationOperation",
+        "description": "Generic model for images generation operations."
+      },
+      "OperationPriority": {
+        "type": "string",
+        "enum": ["online", "offline"],
+        "title": "OperationPriority",
+        "description": "Defines the priority of the operation.\n- ONLINE operations are performed as quickly as possible and are intended for end-user requests where a human is waiting for the result.\n- OFFLINE operations are suited for batch processing where cost-efficiency is more important than immediate response."
+      },
+      "OperationStatus": {
+        "type": "string",
+        "enum": ["CREATED", "IN_PROGRESS", "PAUSED", "SUCCESS", "FAILED", "CANCELLED", "ABORTED"],
+        "title": "OperationStatus",
+        "description": "Status for an operation"
+      },
+      "OwnerType": {
+        "type": "string",
+        "enum": ["user", "aiuta"],
+        "title": "OwnerType",
+        "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                }, {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": ["loc", "msg", "type"],
+        "title": "ValidationError"
+      }
+    },
+    "securitySchemes": {
+      "x-api-key": {
+        "type": "apiKey",
+        "description": "Static API key",
+        "in": "header",
+        "name": "x-api-key"
+      }
+    }
+  }
+}
