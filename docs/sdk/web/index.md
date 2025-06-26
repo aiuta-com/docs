@@ -2,8 +2,6 @@
 
 ![About Virtual Try-On](/media/about.png)
 
-# Aiuta Web SDK
-
 The **Aiuta Web SDK** brings powerful virtual try-on functionality to any online fashion store. With just a few lines of code, you can let your shoppers see how your product would look on them—using their own photos and AI-powered fitting technology.
 
 ## What Is Aiuta Web SDK?

@@ -10,7 +10,7 @@ To integrate the Web SDK, include the following `<script>` tag on your website. 
 <script src="" async id="aiuta-web-sdk-base" api-key=""></script>
 ```
 
-### 🔑 How to Obtain an `api-key`
+### How to Obtain an `api-key`
 
 To generate your `api-key`, sign up at the [Aiuta Developer Portal](https://developer.aiuta.com) and follow the provided instructions.
 
