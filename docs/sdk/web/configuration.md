@@ -1,58 +1,75 @@
 # Configuration Guide
 
-The Aiuta Web SDK is highly configurable to meet your specific needs.
+The **Aiuta Web SDK** is highly configurable and designed to seamlessly integrate with your platform.
 
 ## Basic Configuration
 
-The Web SDK is configured using the `<script></script>`, which contains several keys:
+To integrate the Web SDK, include the following `<script>` tag on your website. Replace the placeholder with your actual `api-key`:
 
-```dart
-<script src="" async="true" id="aiuta-web-sdk-base" api-key=""></script>
-```
-??? question "How create `api-key` ?"
-    To be create `api-key` you must sign up bellow Aiuta Portal Website and follow documentation.
-    https://developer.aiuta.com
-    
-### Configuration Scheme for Try-on button
-
-The Aiuta SDK for Web employs a standardized configuration scheme.
-Where you want to see Try-On button you need to put the `div` element passing necessary elements.
-Those keys you can find after generation products.
-
-1. data-sku-id
-   - After generation Aiuta is providing `sku_id`
-2. data-sku-catalog-name
-   - After generation Aiuta is providing `sku_catalog_name`
-
-### Configuration Scheme for Try-on button styles
-
-```dart
-const aiutaTryOn = new WebSdkButtonStyles()
-
-aiutaTryOn.configs = {
-   bt_bg_color: '', // Background color for Try On buttons
-   bt_tx_color: '', // Text color for Try On buttons
-   bt_fontFamily: "" // Text font for Try On buttons
-   bt_borderRadius: "" // Border radius for Try On buttons
-}
+```html
+<script src="" async id="aiuta-web-sdk-base" api-key=""></script>
 ```
 
-### Configuration Scheme for Try-on button action
+### 🔑 How to Obtain an `api-key`
 
-```dart
-const aiutaTryOnButton = new AiutaWebSdkButtonAction()
+To generate your `api-key`, sign up at the [Aiuta Developer Portal](https://developer.aiuta.com) and follow the provided instructions.
 
-aiutaTryOnButton.tryOnButtonAction = {
-   onTryOnButtonClick: () => {} // Your Function here
-}
-```
+---
 
-### General cases
+## Try-On Button Configuration
 
-When make sure that have necessary keys we can add HTML `div` tag in your dom where you want to see Try-on button.
-Mainaly this tag you need to use in product page.
-After opening product page you need to replace `data-sku-id` and `data-sku-catalog-name` values respective your generated product `sku_id` and `sku_catalog_name`
+The Aiuta Web SDK uses a standardized configuration scheme to render Try-On buttons.
 
-```dart
+To display the Try-On button, include a `<div>` element with the required attributes:
+
+- `data-sku-id` – Use your product's unique identifier as the value.
+- `data-sku-catalog-name` _(optional)_ – If you provide this value, it will be used to generate the product. If omitted, a **default** catalog name will be used.
+
+```html
 <div class="aiuta-web-sdk" data-sku-id="" data-sku-catalog-name=""></div>
 ```
+
+> ⚠️ Ensure this `<div>` is placed on your product page and populated with the correct `sku_id` and, optionally, `sku_catalog_name`.
+
+---
+
+## Button Style Configuration
+
+Customize the appearance of the Try-On button using the style configuration below:
+
+```js
+const aiutaTryOn = new WebSdkButtonStyles();
+
+aiutaTryOn.configs = {
+  bt_bg_color: "", // Background color of the button
+  bt_tx_color: "", // Text color of the button
+  bt_fontFamily: "", // Font family for the button text
+  bt_borderRadius: "", // Border radius of the button
+};
+```
+
+---
+
+## Button Action Configuration
+
+You can define custom behavior for when the Try-On button is clicked:
+
+```js
+const aiutaTryOnButton = new AiutaWebSdkButtonAction();
+
+aiutaTryOnButton.tryOnButtonAction = {
+  onTryOnButtonClick: () => {
+    // Your custom logic here
+  },
+};
+```
+
+---
+
+## Summary
+
+1. Add the SDK `<script>` tag with your `api-key`.
+2. Insert the Try-On `<div>` with your `data-sku-id` and optionally `data-sku-catalog-name` on the product page.
+3. Optionally, configure the button styles and click behavior as needed.
+
+For more information, visit the [Aiuta Developer Portal](https://developer.aiuta.com).
