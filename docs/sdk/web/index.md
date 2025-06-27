@@ -8,7 +8,7 @@ The **Aiuta Web SDK** brings powerful virtual try-on functionality to any online
 
 Aiuta enables store visitors to **try on product virtually** before buying. Once integrated into your product pages, a **Try-On button** appears next to each supported item. Shoppers can click the button to open a modal, where they can upload or take a photo. Aiuta’s AI will then render the product directly on their body—helping them feel confident in their purchase.
 
-## �� Aiuta SDK Benefits
+## Aiuta SDK Benefits
 
 - High quality visualisation, preserve pose and body shape
 - **Simple integration** into your existing application with default settings
