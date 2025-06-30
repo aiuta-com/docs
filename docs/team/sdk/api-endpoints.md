@@ -9,7 +9,7 @@ Use the following base URLs to make SDK or direct API calls:
 
 Append paths like `/uploaded_images`, `/sku_images_operations`, etc.
 
-## SDK Analytics URL
+## Analytics URL
 ```
 {% include-markdown "api/templates/endpoint-analytics.md" %}
 ```

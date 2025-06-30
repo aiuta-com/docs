@@ -164,3 +164,16 @@ body {
   margin-top: -0.8rem !important;
   font-weight: 400 !important;
 }
+
+/* Reference to the sequence diagram step */
+.md-sequence-number {
+  background-color: var(--md-mermaid-sequence-actorman-line-color);
+  padding: 0.15em 0.4em 0.05em 0.45em;
+  border-radius: 32px;
+  color: white;
+  font-size: 0.5rem !important;
+}
+
+.mermaid {
+  --md-mermaid-sequence-box-bg-color: #ff000011;
+}
