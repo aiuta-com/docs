@@ -52,7 +52,7 @@ nav:
     - Analytics:
       - Installation: sdk/android/analytics/overview.md
     - Migrations:
-      - Migrate to v4: sdk/android/migrations/migrate-v4.2.md
+      - Migrate to v4: sdk/android/migrations/migrate-v4.md
     - FAQ: sdk/android/faq.md
     - API Reference: https://aiuta-com.github.io/aiuta-android-sdk/
 
