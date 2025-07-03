@@ -51,6 +51,8 @@ nav:
       - Getting started with Aiuta: sdk/android/base/aiuta-getting-started.md
     - Analytics:
       - Installation: sdk/android/analytics/overview.md
+    - Migrations:
+      - Migrate to v4: sdk/android/migrations/migrate-v4.2.md
     - FAQ: sdk/android/faq.md
     - API Reference: https://aiuta-com.github.io/aiuta-android-sdk/
 
