@@ -2,7 +2,6 @@
 
 This guide outlines the key changes and migration steps required for upgrading to **Aiuta Android SDK v4**. Please review all sections carefully to ensure a smooth transition.
 
----
 
 ## Platform & Build Requirements
 
