@@ -2,7 +2,7 @@ The sequence diagram of removing images from the user's history using custom dat
 
 ``` mermaid
 sequenceDiagram
-    {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
+    {% include-markdown "sdk/templates/diagrams/common-sd-participants.md" %}
 
     USR->>SDK: Select image(s) to delete
     activate SDK
@@ -41,7 +41,7 @@ sequenceDiagram
 
 !!! warning "Important: Owner Type Handling"
     
-    When deleting images from the history, the behavior depends on the [`ownerType`](/sdk/about/developer/common-models/#owner-type)
+    When deleting images from the history, the behavior depends on the `ownerType`
     
     - **`user`** images can be deleted from storage and removed from history
     - **`aiuta`** images should only be unlinked from user history, not deleted from storage

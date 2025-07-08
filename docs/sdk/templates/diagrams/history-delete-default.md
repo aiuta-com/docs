@@ -2,7 +2,7 @@ The sequence diagram of removing images from the user's history.
 
 ``` mermaid
 sequenceDiagram
-    {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
+    {% include-markdown "sdk/templates/diagrams/common-sd-participants.md" %}
 
     USR->>SDK: Select image(s) to delete
     activate SDK

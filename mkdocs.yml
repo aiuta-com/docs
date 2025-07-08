@@ -19,6 +19,10 @@ nav:
       - Image Picker: sdk/about/pages/image-picker.md
       - Loading: sdk/about/pages/loading-screen.md
       - Results: sdk/about/pages/results-screen.md
+    - Diagrams:
+      - Data Flow: sdk/about/diagrams/data-flow.md
+      - Authentication: sdk/about/diagrams/authentication.md
+      - Full Interaction: sdk/about/diagrams/interaction-sequence.md
     - Resources:
       - Icons: sdk/about/resources/icons.md
       - Images: sdk/about/resources/images.md
@@ -30,14 +34,38 @@ nav:
     - Analytics: 
       - Events: sdk/about/analytics/analytics.md
       - Errors: sdk/about/analytics/errors.md
-    - Diagrams:
-      - Data Flow: sdk/about/diagrams/data-flow.md
-      - Authentication: sdk/about/diagrams/authentication.md
-      - Full Interaction: sdk/about/diagrams/interaction-sequence.md
-    - Developer:
-      - Configuration: sdk/about/developer/configuration.md
-      - Common Models: sdk/about/developer/common-models.md
-      - Platform Types: sdk/about/developer/platform-types.md
+
+  - Developer:
+    - sdk/developer/index.md
+    - Product: sdk/developer/common/product.md
+    - Configuration:
+      - sdk/developer/configuration/index.md
+      - Auth: sdk/developer/configuration/auth.md
+      - Analytics: sdk/developer/configuration/analytics.md
+    - User Interface:
+      - sdk/developer/configuration/ui/index.md
+      - Theme: sdk/developer/configuration/ui/theme/index.md
+      - Color: sdk/developer/configuration/ui/theme/color.md
+      - Label: sdk/developer/configuration/ui/theme/label.md
+      - Image: sdk/developer/configuration/ui/theme/image.md
+      - Button: sdk/developer/configuration/ui/theme/button.md
+      - Page Bar: sdk/developer/configuration/ui/theme/page-bar.md
+      - Bottom Sheet: sdk/developer/configuration/ui/theme/bottom-sheet.md
+      - Activity Indicator: sdk/developer/configuration/ui/theme/activity-indicator.md
+      - Selection: sdk/developer/configuration/ui/theme/selection.md
+      - Error: sdk/developer/configuration/ui/theme/error.md
+      - Product Bar: sdk/developer/configuration/ui/theme/product-bar.md
+      - Powered By: sdk/developer/configuration/ui/theme/powered-by.md
+    - Features:
+      - sdk/developer/configuration/features/index.md
+      - Welcome Screen: sdk/developer/configuration/features/welcome-screen.md
+      - Onboarding: sdk/developer/configuration/features/onboarding.md
+      - Consent: sdk/developer/configuration/features/consent.md
+      - Image Picker: sdk/developer/configuration/features/image-picker.md
+      - Try On: sdk/developer/configuration/features/try-on.md
+      - Share: sdk/developer/configuration/features/share.md
+      - Wishlist: sdk/developer/configuration/features/wishlist.md
+    - Debug Settings: sdk/developer/configuration/debug-settings.md
 
   - Android:
     - sdk/android/index.md

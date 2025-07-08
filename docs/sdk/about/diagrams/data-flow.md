@@ -11,7 +11,7 @@ Overview sequence diagram covers the handling of user data. It shows a simplifie
 
 ```mermaid
 sequenceDiagram
-    {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
+    {% include-markdown "sdk/templates/diagrams/common-sd-participants.md" %}
 
     opt consent feature
         USR->>SDK: Accept Terms Of Use

@@ -2,7 +2,7 @@ Initialization process from launching the app to displaying products, including 
 
 ``` mermaid
 sequenceDiagram
-    {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
+    {% include-markdown "sdk/templates/diagrams/common-sd-participants.md" %}
 
     USR->>APP: Launch the App
     par
@@ -26,6 +26,4 @@ sequenceDiagram
     end
 ```
 
-!!! doc "Find more about [<span class="md-sequence-number">2</span> Aiuta Configuration here](/sdk/about/developer/configuration/)"
-
-    Please note in <span class="md-sequence-number">8 – 9</span> that you should obtain information about the availability of the virtual try-on feature for each of your products from __your__ backend, as the SDK does not receive information about product availability and will attempt to launch a virtual try-on with any product you provide, which may result in an error if that product has not been trained by Aiuta.
+!!! doc "Please note in <span class="md-sequence-number">8 – 9</span> that you should obtain information about the availability of the virtual try-on feature for each of your products from __your__ backend, as the SDK does not receive information about product availability and will attempt to launch a virtual try-on with any product you provide, which may result in an error if that product has not been trained by Aiuta."

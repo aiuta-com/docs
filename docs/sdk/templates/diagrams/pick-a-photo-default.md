@@ -4,7 +4,7 @@ Detailed sequence of the user selecting the source image for the virtual try-on.
 
     ``` mermaid
     sequenceDiagram
-        {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
+        {% include-markdown "sdk/templates/diagrams/common-sd-participants.md" %}
 
         USR->>APP: Tap Try-on Button
         APP->>SDK: Start Try-on (Product)
@@ -28,7 +28,7 @@ Detailed sequence of the user selecting the source image for the virtual try-on.
 
     ``` mermaid
     sequenceDiagram
-        {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
+        {% include-markdown "sdk/templates/diagrams/common-sd-participants.md" %}
 
         USR->>APP: Tap Try-on Button
         APP->>SDK: Start Try-on (Product)

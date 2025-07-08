@@ -10,7 +10,7 @@ Authentication of requests from the SDK to the Aiuta API/Backend based on the co
 
 ## Configuration
 
-{% include-markdown "sdk/about/diagrams/interaction/initialization.md" %}
+{% include-markdown "sdk/templates/diagrams/initialization.md" %}
 
 ## Usage
 
@@ -37,25 +37,25 @@ The following sequence diagrams illustrate the process of a virtual try-on using
 
 === "Default configuration"
 
-    {% include-markdown "sdk/about/diagrams/interaction/pick-a-photo-default.md" %}
+    {% include-markdown "sdk/templates/diagrams/pick-a-photo-default.md" %}
 
 === "Custom configuration" 
 
-    {% include-markdown "sdk/about/diagrams/interaction/pick-a-photo-custom.md" %}
+    {% include-markdown "sdk/templates/diagrams/pick-a-photo-custom.md" %}
 
 #### Making Try-On
 
-{% include-markdown "sdk/about/diagrams/interaction/try-on.md" %}
+{% include-markdown "sdk/templates/diagrams/try-on.md" %}
 
 #### Viewing Results
 
 === "Default configuration"
 
-    {% include-markdown "sdk/about/diagrams/interaction/results-default.md" %}
+    {% include-markdown "sdk/templates/diagrams/results-default.md" %}
 
 === "Custom configuration" 
 
-    {% include-markdown "sdk/about/diagrams/interaction/results-custom.md" %}
+    {% include-markdown "sdk/templates/diagrams/results-custom.md" %}
 
 ### Managing History
 
@@ -65,18 +65,18 @@ The following sequence diagram illustrates the process of managing images histor
 
 === "Default configuration"
 
-    {% include-markdown "sdk/about/diagrams/interaction/history-add-default.md" %}
+    {% include-markdown "sdk/templates/diagrams/history-add-default.md" %}
 
 === "Custom configuration" 
 
-    {% include-markdown "sdk/about/diagrams/interaction/history-add-custom.md" %}
+    {% include-markdown "sdk/templates/diagrams/history-add-custom.md" %}
 
 #### Deleting Images from the History
 
 === "Default configuration"
 
-    {% include-markdown "sdk/about/diagrams/interaction/history-delete-default.md" %}
+    {% include-markdown "sdk/templates/diagrams/history-delete-default.md" %}
 
 === "Custom configuration" 
 
-    {% include-markdown "sdk/about/diagrams/interaction/history-delete-custom.md" %}
+    {% include-markdown "sdk/templates/diagrams/history-delete-custom.md" %}

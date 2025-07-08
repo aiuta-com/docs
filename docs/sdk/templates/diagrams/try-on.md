@@ -2,7 +2,7 @@ The sequence diagram of executing a virtual try-on operation.
 
 ``` mermaid
 sequenceDiagram
-    {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
+    {% include-markdown "sdk/templates/diagrams/common-sd-participants.md" %}
 
     USR->>SDK: Pick a Photo / Tap Try-on button in the SDK UI
     activate SDK

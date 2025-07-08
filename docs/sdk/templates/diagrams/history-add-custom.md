@@ -2,7 +2,7 @@ The sequence diagram of adding newly uploaded and generated images to the user's
 
 ``` mermaid
 sequenceDiagram
-    {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
+    {% include-markdown "sdk/templates/diagrams/common-sd-participants.md" %}
 
     APP->>SDK: Provide configuration with observable data providers
     activate SDK

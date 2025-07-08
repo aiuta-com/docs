@@ -20,33 +20,7 @@ Authentication is mandatory for some calls, such as starting image generation, a
 Here are all authentication sequence options for requests sent by the SDK to the Aiuta API.
 
 === "`JwtAuth` • `JWT`"
-    ``` mermaid
-    sequenceDiagram
-        {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
-        
-        USR->>SDK: Start some action
-        activate SDK
-        SDK->>APP: Request JWT (params)
-        APP->>BE: Request new JWT (params)
-        BE->>BE: Generate JWT
-        Note over BE: Validating the request parameters
-        BE-->>APP: Return generated JWT
-        APP-->>SDK: Provide JWT
-        SDK->>API: Make request
-        Note over SDK,API: Authorization: Bearer <token>
-        API->>API: Validate JWT
-
-        break JWT is invalid
-        rect
-            API-->>SDK: Retun 401 Unauthorized
-            SDK-->>USR: Show something went wrong
-        end
-        end
-
-        API-->>SDK: Return response
-        SDK-->>USR: Provide UI feedback / result
-        deactivate SDK
-    ```
+    {% include-markdown "sdk/templates/diagrams/auth-jwt.md" %}
 
     !!! doc "See also" 
 
@@ -54,20 +28,7 @@ Here are all authentication sequence options for requests sent by the SDK to the
         - [JWT server-side auth example](/api/server-side-auth-component/) for more details on securely generating JWTs
 
 === "`JwtAuth` • `subscriptionId`"
-    ``` mermaid
-    sequenceDiagram
-        {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
-        
-        USR->>SDK: Start some action
-        activate SDK
-        SDK->>SDK: Add Subscription ID<br>to the request Headers
-        SDK->>API: Make request
-        Note over SDK,API: x-user-id: <subscription_id>
-        API->>API: Match Subscription ID
-        API-->>SDK: Return response
-        SDK-->>USR: Provide UI feedback / result
-        deactivate SDK
-    ```
+    {% include-markdown "sdk/templates/diagrams/auth-subscription-id.md" %}
 
     !!! doc "See also"
         - [the JwtAuth configuration scheme](/sdk/about/developer/configuration/#__tabbed_1_2) in the SDK 
@@ -75,20 +36,7 @@ Here are all authentication sequence options for requests sent by the SDK to the
 
 
 === "`ApiKeyAuth` • `apiKey`"
-    ``` mermaid
-    sequenceDiagram
-        {% include-markdown "sdk/templates/about/common-sd-participants.md" %}
-        
-        USR->>SDK: Start some action
-        activate SDK
-        SDK->>SDK: Add Api Key<br>to the request Headers
-        SDK->>API: Make request
-        Note over SDK,API: x-api-key: <api_key>
-        API->>API: Check Api Key
-        API-->>SDK: Return response
-        SDK-->>USR: Provide UI feedback / result
-        deactivate SDK
-    ```
+    {% include-markdown "sdk/templates/diagrams/auth-api-key.md" %}
 
     !!! doc "See also"
     
