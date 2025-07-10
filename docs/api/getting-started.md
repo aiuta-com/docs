@@ -19,7 +19,37 @@ To complete the sign-up process, simply follow the on-screen instructions, and y
 
 === "Already subscribed"
     
-    To retrieve the credentials for a product you have previously subscribed to, navigate to the [`My Subscriptions` :octicons-link-external-24:](https://developer.aiuta.com/subscriptions){:target="_blank"} section at the top of the page, and select the product for which you want to view the key.
+    To retrieve the credentials for a product you have previously subscribed to, navigate to the [`My Subscriptions` :octicons-link-external-24:](https://developer.aiuta.com/subscriptions){:target="_blank"} section at the top of the page, and select the product for which you want to view the credentials.
+
+    ![subscriptions](/media/api/credentials/subscriptions.png){ width=450 }
+
+There you will be able to find
+
+=== "API key"
+
+    On the subcription Details tab, under the Overview section
+
+    ![apikey](/media/api/credentials/api-key.png){ width=450 }
+
+=== "Subscription ID"
+
+    In the URL address of the subscription details page
+
+    ```
+    https://developer.aiuta.com/subscriptions/{SUBSCRIPTION_ID}/Details
+    ```
+
+=== "JWT"
+
+    On the subcription Details tab, under the Overview section
+
+    ![jwt](/media/api/credentials/jwt.png){ width=450 }
+
+    To be used on your implementation of the sedver side auth component
+
+    !!! doc "Refer to the documentation for detailed instructions on [implementing the backend component](./server-side-auth-component.md)"
+        As an example, see the sequence diagram showing how [Aiuta SDK uses the JWT flow](/sdk/about/diagrams/authentication/#__tabbed_1_1) to authenticate requests
+
 
 ## Authentication
 
