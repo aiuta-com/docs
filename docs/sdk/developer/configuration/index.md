@@ -9,6 +9,9 @@ The configuration is structured as a hierarchical object that controls various a
 ??? abstract "Type Definitions & Naming Convention"
     {% include-markdown "sdk/templates/developer/type-definitions.md" %}
 
+!!! tip "Annotations"
+    Don't miss them - click :material-information-outline: for more details
+
 ## Configuration
 
 ```typescript

@@ -21,7 +21,7 @@ Auth is used to authenticate requests from Aiuta SDK to [API](/api/try-on/workfl
 
     1. Should be provided for the SDK to make unsecured requests related to your account.
 
-        !!! doc "Please see [Obtaining credentials](/api/getting-started/#obtaining-credentials/) for instructions on how to get your `subscriptionId`"
+        !!! doc "Please see [Obtaining credentials](/api/getting-started/#obtaining-credentials) for instructions on how to get your `subscriptionId`"
 
     2. The implementation of this method should securely generate the JWT [on the server side](/api/server-side-auth-component/) and subsequently return it to the SDK.
 
@@ -37,7 +37,7 @@ Auth is used to authenticate requests from Aiuta SDK to [API](/api/try-on/workfl
 
     !!! doc "Please see"
 
-        - [Obtaining credentials](/api/getting-started/#obtaining-credentials/)
+        - [Obtaining credentials](/api/getting-started/#obtaining-credentials)
         - [Implementing the backend component](/api/server-side-auth-component/)
 
     === "`getJwt`"

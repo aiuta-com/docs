@@ -6,9 +6,6 @@ hide:
 
 The User Interface Scheme defines the configuration options for the presentation style, swipe-to-dismiss policy, and theme settings of the SDK's UI components.
 
-??? abstract "Type Definitions & Naming Convention"
-    {% include-markdown "sdk/templates/developer/type-definitions.md" %}
-
 ## [:material-arrow-up-left:](/sdk/developer/configuration/#configuration) User Interface
 
 ```typescript

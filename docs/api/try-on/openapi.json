@@ -2,7 +2,7 @@
   "openapi": "3.0.2",
   "info": {
     "title": "Digital Try On",
-    "description": "<h2>Brief workflow</h2><ol><li>Upload an image to get its `id` or choose predefined model `id` to use as `uploaded_image_id`</li><li>Create a generation operation with `uploaded_image_id` and `sku_id` to get `operation_id`</li><li>Check status with `operation_id` and get generated images `url` when status becomes `SUCCESS`</li></ol>Check out the <a href='/api/try-on/workflow/'>full workflow description</a> for more details",
+    "description": "Check out the <a href='/api/try-on/workflow/'>workflow description</a> for more details",
     "version": "1.0.0"
   },
   "servers": [

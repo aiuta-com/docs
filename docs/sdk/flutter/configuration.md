@@ -6,7 +6,6 @@ The Aiuta Flutter SDK is highly configurable to meet your specific needs.
 
 The SDK is configured using the `AiutaConfiguration` class, which contains several key components:
 
-
 ```dart
 import 'package:aiuta_flutter/aiuta_flutter.dart';
 
@@ -32,11 +31,7 @@ final aiuta = Aiuta(configuration: configuration);
 
 The Aiuta SDK for Flutter employs a standardized configuration scheme consistent with our other SDKs. Just as the primary `AiutaConfiguration` and its associated property class names have been modified to adhere to the naming conventions, all other internal classes will be updated similarly.
 
-<div class="grid cards" markdown>
-
-- :material-book-open-variant:{ .lg } Please refer to the [configuration scheme](../about/developer/configuration.md)
-
-</div>
+!!! doc "Please refer to the [configuration scheme](/sdk/developer/configuration/)"
 
 ## Next Step
 

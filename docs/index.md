@@ -11,7 +11,7 @@ hide:
 Let your customers visualize how clothes look on them — instantly and accurately
 
 - High quality visualisation
-- __7x faster__ than the average competitor
+- Up to __7x faster__ than the average competitor
 - Preserve pose and body shape
 
 ## Available as

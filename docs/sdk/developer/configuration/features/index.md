@@ -5,9 +5,6 @@ hide:
 # Features Scheme
 
 Describes the set of features enabled in the SDK for the users and thier interaction with the app.
-
-??? abstract "Type Definitions & Naming Convention"
-    {% include-markdown "sdk/templates/developer/type-definitions.md" %}
     
 ## [:material-arrow-up-left:](/sdk/developer/configuration/#configuration) Features
 

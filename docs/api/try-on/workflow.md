@@ -1,4 +1,4 @@
-# Workflow
+# Virtual Try-On Workflow
 
 ??? example "Sequence Diagram"
     ``` mermaid

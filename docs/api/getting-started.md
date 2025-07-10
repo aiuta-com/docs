@@ -1,7 +1,8 @@
 # Getting Started
+<h1 class="md-joint-h1">with <a href='https://developer.aiuta.com/' target='_blank'>Aiuta <b>API Portal</b></a></h1>
 
 ## Creating an Account
-To create an account, start by selecting either the [`Sign Up` or `Login` :octicons-link-external-24:](https://developer.aiuta.com/products/digital-try-on/documentation){:target="_blank"} option from the top header . A pop-up window will appear with tabbed options, allowing you to either log in with an existing account or sign up for a new one. If you choose the "Sign Up" link, the pop-up will automatically display the corresponding tab.
+To create an account, start by selecting either the [`Sign Up` or `Login` :octicons-link-external-24:](https://developer.aiuta.com/products/digital-try-on/documentation){:target="_blank"} option from the top header. A pop-up window will appear with tabbed options, allowing you to either log in with an existing account or sign up for a new one. If you choose the "Sign Up" link, the pop-up will automatically display the corresponding tab.
 
 To complete the sign-up process, simply follow the on-screen instructions, and your account will be ready in no time. 
 

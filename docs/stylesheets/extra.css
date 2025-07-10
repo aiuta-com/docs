@@ -1,3 +1,9 @@
+/* Disable ligatures */
+body {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0;
+}
+
 /* Make footer color same as header */
 :root > * {
   --md-footer-bg-color: var(--md-primary-fg-color);
@@ -159,9 +165,14 @@ body {
   }
 }
 
-/* Joint header */
-.md-joint-header {
+/* Joint headers */
+.md-joint-h2 {
   margin-top: -0.8rem !important;
+  font-weight: 400 !important;
+}
+
+.md-joint-h1 {
+  margin-top: -2.0rem !important;
   font-weight: 400 !important;
 }
 

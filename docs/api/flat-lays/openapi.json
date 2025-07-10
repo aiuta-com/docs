@@ -2,6 +2,7 @@
   "openapi": "3.0.2",
   "info": {
     "title": "Flat Lays",
+    "description": "Check out the <a href='/api/flat-lays/workflow/'>workflow description</a> for more details",
     "version": "1.0.0"
   },
   "servers": [

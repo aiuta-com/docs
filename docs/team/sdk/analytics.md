@@ -3,8 +3,9 @@
 ## API Endpoint
 
 ```
-{% include-markdown "api/templates/endpoint-analytics.md" %}
+{% include-markdown "team/api/templates/endpoint-analytics.md" %}
 ```
+Append paths `/ios-sdk-analytics`, `/android-sdk-analytics`, etc.
 
 ## Event Scheme
 

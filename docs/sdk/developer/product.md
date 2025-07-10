@@ -6,9 +6,6 @@ hide:
 
 The product scheme defines the structure and properties of products within the Aiuta platform. This scheme is essential for displaying product information in the SDK's user interface and managing product-related functionality.
 
-??? abstract "Type Definitions & Naming Convention"
-    {% include-markdown "sdk/templates/developer/type-definitions.md" %}
-
 ## Product
 
 ```typescript

@@ -37,7 +37,7 @@ nav:
 
   - Developer:
     - sdk/developer/index.md
-    - Product: sdk/developer/common/product.md
+    - Product: sdk/developer/product.md
     - Configuration:
       - sdk/developer/configuration/index.md
       - Auth: sdk/developer/configuration/auth.md
@@ -106,10 +106,12 @@ nav:
     - api/index.md
     - Getting Started: api/getting-started.md
     - Server-side Auth: api/server-side-auth-component.md
-    - Digital Try-On:
+    - Try-On:
+      - api/try-on/index.md
       - Workflow: api/try-on/workflow.md
       - Reference: api/try-on/reference.md
     - Flat Lays:
+      - api/flat-lays/index.md
       - Workflow: api/flat-lays/workflow.md
       - Reference: api/flat-lays/reference.md
 
@@ -192,6 +194,11 @@ extra_css:
 
 plugins:
   - search
+  - exclude-search:
+      exclude:
+        - sdk/templates/*  
+        - api/templates/*
+        - team/sdk/templates/*
   - minify:
       minify_html: true
   - include-markdown
