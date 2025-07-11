@@ -19,7 +19,7 @@ This will add a line like this to your package's `pubspec.yaml` (and run an impl
 
 ```yaml
 dependencies:
-  aiuta_flutter: ^4.0.0
+  aiuta_flutter: ^{{ latest_flutter() }}
 ```
 
 !!! tip ""

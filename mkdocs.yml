@@ -86,6 +86,7 @@ nav:
 
   - iOS:
     - sdk/ios/index.md
+    - Installation: sdk/ios/installation.md
 
   - Flutter:
     - sdk/flutter/index.md
@@ -146,6 +147,7 @@ extra:
       link: https://x.com/AiutaCom
     - icon: aiuta/logo-sq
       link: https://aiuta.com
+  demo_api_key: AIUTADEMO
 
 theme:
   name: 'material'
@@ -202,6 +204,7 @@ plugins:
   - minify:
       minify_html: true
   - include-markdown
+  - macros
 
 markdown_extensions:
   - admonition

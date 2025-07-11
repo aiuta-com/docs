@@ -30,4 +30,10 @@ jobs:
       - run: pip install mkdocs-minify-plugin
       - run: pip install mkdocs-include-markdown-plugin
       - run: pip install mkdocs-exclude-search
-      - run: mkdocs gh-deploy --force
+      - run: pip install mkdocs-macros-plugin
+      - run: pip install requests
+
+      - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GHAPI_TOKEN }}
+        run: mkdocs gh-deploy --force
