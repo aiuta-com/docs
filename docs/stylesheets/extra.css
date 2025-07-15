@@ -141,6 +141,13 @@ body {
   margin-left: 0.4rem;
 }
 
+/* Force grid cards to be 3-4 columns */
+.grid.cards.small {
+  grid-template-columns: repeat(auto-fit, minmax(15%, 1fr)) !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Hide unlisted items in mobile */
 @media screen and (max-width: 1219px) {
   .md-nav__unlisted {

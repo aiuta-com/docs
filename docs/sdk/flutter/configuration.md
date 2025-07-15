@@ -2,7 +2,7 @@
 
 The Aiuta Flutter SDK is highly configurable to meet your specific needs.
 
-## Basic Configuration
+## Custom Configuration
 
 The SDK is configured using the `AiutaConfiguration` class, which contains several key components:
 

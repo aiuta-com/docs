@@ -37,6 +37,18 @@ Configuration {
 !!! example "Customization depth"
     The configuration itself, as well as all themes and most features, have __built-in defaults__ on each platform. You decide how much detail you want to customize the behavior and appearance of the SDK. Starting with a few necessary parameters, ending with every aspect that is provided in the described schemes.
 
+## Platform specifics
+
+Check out the details and nuances of the configuration in the implementation of the platform you need:
+
+<div class="grid cards small" markdown>
+
+- [:fontawesome-brands-android:{ .lg } Android](/sdk/android/tryon-ui/configuration.md)
+- [:fontawesome-brands-apple:{ .lg } iOS](/sdk/ios/configuration.md)
+- [:fontawesome-brands-flutter:{ .lg } Flutter](/sdk/flutter/configuration.md)
+
+</div>
+
 ## Sequence Diagram
 
 {% include-markdown "sdk/templates/diagrams/initialization.md" %}
