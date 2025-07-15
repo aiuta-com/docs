@@ -269,20 +269,23 @@ To describe a language-independent scheme or data model use a code block with `t
 
 ## Templates
 
-If several pages of your documentation contain identical sections regarding repetitive reminders, a list of some questions, or system requirements, please create templates and include them with the `include-markdown`
+If several pages of your documentation contain identical sections regarding repetitive reminders, a list of some questions, or system requirements, please create templates and include them with the `include-markdown` plugin
 
 !!! example
 
     !!! warning ""
-        `%` instead of `#`. Careful, it works even inside code blocks.
+        Remove spaces in `{ %` `% }`. Careful, it works inside code blocks also.
         
     ```` markdown
-    {# include-markdown "sdk/templates/flutter/requirements.md" %}
+    { % include-markdown "sdk/templates/flutter/requirements.md" % }
     ````
 
     <div class="result" markdown>
     {% include-markdown "sdk/templates/flutter/requirements.md" %}
     </div>
+
+!!! warning "`include` macros"
+    The `macros` plugin also provides its own `include` with the same syntax, but in the case of complex pages and nested indents, it often breaks the page layout, whereas `include-markdown` does not have this issue.
 
 ## Appearance
 

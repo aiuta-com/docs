@@ -1,6 +1,8 @@
 # Flutter SDK
 
-The Aiuta Flutter SDK provides a virtual try-on solution as a [plug-in package :octicons-link-external-24:](https://flutter.dev/developing-packages/){:target="_blank"} that includes platform-specific implementation code and depends of native SDKs for [Android](../android/quick-start.md) and [iOS](../ios/quick-start.md) that uses [Aiuta Digital Try On API](../../api/overview.md).
+The Aiuta Flutter SDK provides a virtual try-on solution as a [plug-in package :octicons-link-external-24:](https://flutter.dev/developing-packages/){:target="_blank"} that includes platform-specific implementation code and depends of native SDKs for [Android](/sdk/android/) and [iOS](/sdk/ios/) that uses [Aiuta Virtual Try On API](/api/try-on/).
+
+{% include-markdown "sdk/templates/intro-links.md" %}
 
 ## Requirements
 
@@ -20,17 +22,17 @@ The Aiuta Flutter SDK provides a virtual try-on solution as a [plug-in package :
 
 ## Quick Start
 
-1. [Installation](installation.md)
-2. [Configuration](configuration.md)
-3. [Basic Usage](basic-usage.md)
+1. [Installation](installation/)
+2. [Configuration](configuration/)
+3. [Basic Usage](basic-usage/)
 
 ## Package and Sources
 
 <div class="grid cards" markdown>
 
 - :fontawesome-brands-flutter: [Pub.dev package :octicons-link-external-24:](https://pub.dev/packages/aiuta_flutter){:target="_blank"}
-- :fontawesome-brands-github: [Plugin sources :octicons-link-external-24:](https://github.com/aiuta-com/flutter-sdk){:target="_blank"}
-- :fontawesome-brands-github: [Android layer sources :octicons-link-external-24:](https://github.com/aiuta-com/android-sdk){:target="_blank"}
-- :fontawesome-brands-github: [iOS layer sources :octicons-link-external-24:](https://github.com/aiuta-com/aiuta-ios-sdk){:target="_blank"}
+- :fontawesome-brands-github: [Plugin sources :octicons-link-external-24:]({{ repo_flutter() }}){:target="_blank"}
+- :fontawesome-brands-github: [Android layer sources :octicons-link-external-24:]({{ repo_android() }}){:target="_blank"}
+- :fontawesome-brands-github: [iOS layer sources :octicons-link-external-24:]({{ repo_ios() }}){:target="_blank"}
 
 </div>

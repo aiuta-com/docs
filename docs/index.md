@@ -11,7 +11,7 @@ hide:
 Let your customers visualize how clothes look on them — instantly and accurately
 
 - High quality visualisation
-- __7x faster__ than the average competitor
+- Up to __7x faster__ than the average competitor
 - Preserve pose and body shape
 
 ## Available as
@@ -25,7 +25,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     {% include-markdown "sdk/templates/android/requirements-base.md" %}
     :material-book-open-variant: 
     <span class="md-cards-links">
-    [Overview](/sdk/) :octicons-dot-fill-16:{ .xs } [Quick Start](/sdk/android/)
+    [Overview](/sdk/index.md) :octicons-dot-fill-16:{ .xs } [Quick Start](/sdk/android/index.md)
     </span>
 
 -   :fontawesome-brands-apple:{ .lg } __iOS__ <span class="md-platfroms">SDK</span>
@@ -35,7 +35,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     {% include-markdown "sdk/templates/ios/requirements.md" %}
     :material-book-open-variant:
     <span class="md-cards-links">
-    [Overview](/sdk/) :octicons-dot-fill-16:{ .xs } [Quick Start](/sdk/ios/)
+    [Overview](/sdk/index.md) :octicons-dot-fill-16:{ .xs } [Quick Start](/sdk/ios/index.md)
     </span>
 
 -   :fontawesome-brands-flutter:{ .lg } __Flutter__ <span class="md-platfroms">SDK :fontawesome-brands-android: Android :fontawesome-brands-apple: iOS</span>
@@ -45,7 +45,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
     {% include-markdown "sdk/templates/flutter/requirements.md" %}
     :material-book-open-variant:
     <span class="md-cards-links">
-    [Overview](/sdk/) :octicons-dot-fill-16:{ .xs } [Quick Start](/sdk/flutter/)
+    [Overview](/sdk/index.md) :octicons-dot-fill-16:{ .xs } [Quick Start](/sdk/flutter/index.md)
     </span>
 
 -   :fontawesome-brands-js:{ .lg } __Web__ <span class="md-platfroms">SDK</span>
@@ -60,7 +60,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
     :material-book-open-variant:
     <span class="md-cards-links">
-    [Overview](/shopify/)
+    [Overview](/shopify/index.md)
     </span>
 
 -   :aiuta-favicon:{ .lg } __API__
@@ -69,7 +69,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
     :material-book-open-variant:
     <span class="md-cards-links">
-    [Overview](/api/) :octicons-dot-fill-16:{ .xs } [Getting Started](/api/getting-started/)
+    [Overview](/api/index.md) :octicons-dot-fill-16:{ .xs } [Getting Started](/api/getting-started.md)
     </span>
 
 </div>

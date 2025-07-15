@@ -1,7 +1,8 @@
 # Getting Started
+<h1 class="md-joint-h1">with <a href='https://developer.aiuta.com/' target='_blank'>Aiuta <b>API Portal</b></a></h1>
 
 ## Creating an Account
-To create an account, start by selecting either the [`Sign Up` or `Login` :octicons-link-external-24:](https://developer.aiuta.com/products/digital-try-on/documentation){:target="_blank"} option from the top header . A pop-up window will appear with tabbed options, allowing you to either log in with an existing account or sign up for a new one. If you choose the "Sign Up" link, the pop-up will automatically display the corresponding tab.
+To create an account, start by selecting either the [`Sign Up` or `Login` :octicons-link-external-24:](https://developer.aiuta.com/products/digital-try-on/documentation){:target="_blank"} option from the top header. A pop-up window will appear with tabbed options, allowing you to either log in with an existing account or sign up for a new one. If you choose the "Sign Up" link, the pop-up will automatically display the corresponding tab.
 
 To complete the sign-up process, simply follow the on-screen instructions, and your account will be ready in no time. 
 
@@ -18,7 +19,34 @@ To complete the sign-up process, simply follow the on-screen instructions, and y
 
 === "Already subscribed"
     
-    To retrieve the credentials for a product you have previously subscribed to, navigate to the [`My Subscriptions` :octicons-link-external-24:](https://developer.aiuta.com/subscriptions){:target="_blank"} section at the top of the page, and select the product for which you want to view the key.
+    To retrieve the credentials for a product you have previously subscribed to, navigate to the [`My Subscriptions` :octicons-link-external-24:](https://developer.aiuta.com/subscriptions){:target="_blank"} section at the top of the page, and select the product for which you want to view the credentials.
+
+    ![subscriptions](/media/api/credentials/subscriptions.png){ width=450 }
+
+There you will be able to find
+
+=== "API key"
+
+    On the subcription Details tab, under the Overview section
+
+    ![apikey](/media/api/credentials/api-key.png){ width=450 }
+
+=== "Subscription ID"
+
+    In the URL address of the subscription details page
+
+    ```
+    https://developer.aiuta.com/subscriptions/{SUBSCRIPTION_ID}/Details
+    ```
+
+=== "JWT"
+
+    On the subcription Details tab, under the Overview section
+
+    ![jwt](/media/api/credentials/jwt.png){ width=450 }
+
+    To be used on your implementation of [the server side auth component](./server-side-auth-component.md)
+
 
 ## Authentication
 
@@ -43,7 +71,6 @@ Authentication is mandatory for some calls such as starting the image generation
     - The JWT can then be used by your application client to access the Aiuta API until it expires.
 
     !!! doc "Refer to the documentation for detailed instructions on [implementing the backend component](./server-side-auth-component.md)"
-        As an example, see the sequence diagram showing how [Aiuta SDK uses the JWT flow](/sdk/about/diagrams/authentication/#__tabbed_1_1) to authenticate requests
 
     To make requests to the Aiuta API, use the Bearer Authentication HTTP scheme with the issued token:
     ```

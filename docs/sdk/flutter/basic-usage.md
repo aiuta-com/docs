@@ -40,7 +40,7 @@ final aiuta = Aiuta(
 1. Your configuration for Aiuta
 
     !!! note ""
-        :material-book-open-variant: Please refer to the [configuration scheme](../about/developer/configuration.md)
+        :material-book-open-variant: Please refer to the [configuration scheme](/sdk/developer/configuration/)
 
 ## Virtual Try-On
 
@@ -66,8 +66,7 @@ class ProductScreen extends StatelessWidget {
 
 1. Your product info for Aiuta
 
-    !!! note ""
-        :material-book-open-variant: Please refer to the [product scheme](../about/developer/common-models.md#product)
+    !!! doc "Please refer to the [product scheme](/sdk/developer/product)"
 
 ??? question "When does startTryonFlow Future completes?"
 

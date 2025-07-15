@@ -1,3 +1,9 @@
+/* Disable ligatures */
+body {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0;
+}
+
 /* Make footer color same as header */
 :root > * {
   --md-footer-bg-color: var(--md-primary-fg-color);
@@ -135,6 +141,13 @@ body {
   margin-left: 0.4rem;
 }
 
+/* Force grid cards to be 3-4 columns */
+.grid.cards.small {
+  grid-template-columns: repeat(auto-fit, minmax(15%, 1fr)) !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Hide unlisted items in mobile */
 @media screen and (max-width: 1219px) {
   .md-nav__unlisted {
@@ -159,9 +172,14 @@ body {
   }
 }
 
-/* Joint header */
-.md-joint-header {
+/* Joint headers */
+.md-joint-h2 {
   margin-top: -0.8rem !important;
+  font-weight: 400 !important;
+}
+
+.md-joint-h1 {
+  margin-top: -2.0rem !important;
   font-weight: 400 !important;
 }
 

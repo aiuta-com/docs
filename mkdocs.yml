@@ -19,6 +19,10 @@ nav:
       - Image Picker: sdk/about/pages/image-picker.md
       - Loading: sdk/about/pages/loading-screen.md
       - Results: sdk/about/pages/results-screen.md
+    - Diagrams:
+      - Data Flow: sdk/about/diagrams/data-flow.md
+      - Authentication: sdk/about/diagrams/authentication.md
+      - Full Interaction: sdk/about/diagrams/interaction-sequence.md
     - Resources:
       - Icons: sdk/about/resources/icons.md
       - Images: sdk/about/resources/images.md
@@ -30,14 +34,38 @@ nav:
     - Analytics: 
       - Events: sdk/about/analytics/analytics.md
       - Errors: sdk/about/analytics/errors.md
-    - Diagrams:
-      - Data Flow: sdk/about/diagrams/data-flow.md
-      - Authentication: sdk/about/diagrams/authentication.md
-      - Full Interaction: sdk/about/diagrams/interaction-sequence.md
-    - Developer:
-      - Configuration: sdk/about/developer/configuration.md
-      - Common Models: sdk/about/developer/common-models.md
-      - Platform Types: sdk/about/developer/platform-types.md
+
+  - Developer:
+    - sdk/developer/index.md
+    - Product: sdk/developer/product.md
+    - Configuration:
+      - sdk/developer/configuration/index.md
+      - Auth: sdk/developer/configuration/auth.md
+      - Analytics: sdk/developer/configuration/analytics.md
+      - Debug Settings: sdk/developer/configuration/debug-settings.md
+    - User Interface:
+      - sdk/developer/configuration/ui/index.md
+      - Theme: sdk/developer/configuration/ui/theme/index.md
+      - Color: sdk/developer/configuration/ui/theme/color.md
+      - Label: sdk/developer/configuration/ui/theme/label.md
+      - Image: sdk/developer/configuration/ui/theme/image.md
+      - Button: sdk/developer/configuration/ui/theme/button.md
+      - Page Bar: sdk/developer/configuration/ui/theme/page-bar.md
+      - Bottom Sheet: sdk/developer/configuration/ui/theme/bottom-sheet.md
+      - Activity Indicator: sdk/developer/configuration/ui/theme/activity-indicator.md
+      - Selection: sdk/developer/configuration/ui/theme/selection.md
+      - Error: sdk/developer/configuration/ui/theme/error.md
+      - Product Bar: sdk/developer/configuration/ui/theme/product-bar.md
+      - Powered By: sdk/developer/configuration/ui/theme/powered-by.md
+    - Features:
+      - sdk/developer/configuration/features/index.md
+      - Welcome Screen: sdk/developer/configuration/features/welcome-screen.md
+      - Onboarding: sdk/developer/configuration/features/onboarding.md
+      - Consent: sdk/developer/configuration/features/consent.md
+      - Image Picker: sdk/developer/configuration/features/image-picker.md
+      - Try On: sdk/developer/configuration/features/try-on.md
+      - Share: sdk/developer/configuration/features/share.md
+      - Wishlist: sdk/developer/configuration/features/wishlist.md
 
   - Android:
     - sdk/android/index.md
@@ -58,6 +86,10 @@ nav:
 
   - iOS:
     - sdk/ios/index.md
+    - Installation: sdk/ios/installation.md
+    - Configuration: sdk/ios/configuration.md
+    - Basic Usage: sdk/ios/basic-usage.md
+    - Quick Test: sdk/ios/quick-test.md
 
   - Flutter:
     - sdk/flutter/index.md
@@ -65,7 +97,7 @@ nav:
     - Configuration: sdk/flutter/configuration.md
     - Basic Usage: sdk/flutter/basic-usage.md
     - Migration: 
-      - From v1 to v4: sdk/flutter/migration/v4.md
+      - Migrate to v4: sdk/flutter/migration/v4.md
 
   - Web:
     - sdk/web/index.md
@@ -78,10 +110,12 @@ nav:
     - api/index.md
     - Getting Started: api/getting-started.md
     - Server-side Auth: api/server-side-auth-component.md
-    - Digital Try-On:
+    - Try-On:
+      - api/try-on/index.md
       - Workflow: api/try-on/workflow.md
       - Reference: api/try-on/reference.md
     - Flat Lays:
+      - api/flat-lays/index.md
       - Workflow: api/flat-lays/workflow.md
       - Reference: api/flat-lays/reference.md
 
@@ -116,13 +150,29 @@ extra:
       link: https://x.com/AiutaCom
     - icon: aiuta/logo-sq
       link: https://aiuta.com
+  aiuta:
+    github:
+      url: https://github.com
+      api: https://api.github.com/repos
+      team: aiuta-com
+      repos:
+        android: aiuta-android-sdk # macro: repo_android(), latest_android()
+        ios: aiuta-ios-sdk # macro: repo_ios(), latest_ios()
+        flutter: aiuta-flutter-sdk # macro: repo_flutter(), latest_flutter()
+        web: aiuta-web-sdk # macro: repo_web(), latest_web()
+    api:
+      base_url: https://api.aiuta.com
+      demo_key: AIUTADEMO
+      path:
+        try_on: digital-try-on/v1 # macro: api_try_on()
+        flat_lays: flat-lays/v1 # macro: api_flat_lays()
+        analytics: analytics/v1 # macro: api_analytics()
 
 theme:
   name: 'material'
   custom_dir: overrides
   include_search_page: false
   search_index_only: true
-
 
   language: en
   features:
@@ -164,9 +214,15 @@ extra_css:
 
 plugins:
   - search
+  - exclude-search:
+      exclude:
+        - sdk/templates/*  
+        - api/templates/*
+        - team/sdk/templates/*
   - minify:
       minify_html: true
   - include-markdown
+  - macros
 
 markdown_extensions:
   - admonition
@@ -212,3 +268,11 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+validation:
+  nav:
+    omitted_files: ignore
+  links:
+    absolute_links: relative_to_docs
+    unrecognized_links: warn
+    anchors: warn

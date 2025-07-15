@@ -2,29 +2,6 @@
 
 The Consent feature allows you to collect user permissions for data processing or simply provide the user with legal information. It can be integrated into onboarding, displayed as a standalone page, or shown in a bottom sheet when specific actions are performed.
 
-=== "Embedded legal info (default)"
-
-    ## Embedded
-
-    ![How It Works](../../../media/pages/how-it-works-1.png){ width=300 }
-
-    The legal information is displayed at the bottom of the onboarding screen. Users are not required to explicitly accept the terms to proceed.
-
-    !!! info ""
-        This is default
-
-    ### When to Use
-
-    - Present terms of service and/or privacy policies
-
-    ---
-
-    ??? tip "Customization"
-
-        ### Customization
-
-        ##### [Text Elements](../resources/localization.md)
-        - `consentHtml` content with concise text and links to privacy policy and/or terms of service
 
 === "Standalone consent page (extended)"
 
@@ -172,6 +149,31 @@ The Consent feature allows you to collect user permissions for data processing o
     | [`page`](../analytics/analytics.md#event-categories) | :material-minus: | [`consent`](../analytics/analytics.md#page-identifiers) | Consent page opened |
     | [`onboarding`](../analytics/analytics.md#event-categories) | [`consentsGiven`](../analytics/analytics.md#onboarding-events) | [`consent`](../analytics/analytics.md#page-identifiers) | User has given all required consents |
     | [`exit`](../analytics/analytics.md#event-categories) | :material-minus: | [`consent`](../analytics/analytics.md#page-identifiers) | SDK was closed on the consent page |
+
+
+=== "Embedded legal info (default)"
+
+    ## Embedded
+
+    ![How It Works](../../../media/pages/how-it-works-1.png){ width=300 }
+
+    The legal information is displayed at the bottom of the onboarding screen. Users are not required to explicitly accept the terms to proceed.
+
+    !!! info ""
+        This is default
+
+    ### When to Use
+
+    - Present terms of service and/or privacy policies
+
+    ---
+
+    ??? tip "Customization"
+
+        ### Customization
+
+        ##### [Text Elements](../resources/localization.md)
+        - `consentHtml` content with concise text and links to privacy policy and/or terms of service
 
 ---
 

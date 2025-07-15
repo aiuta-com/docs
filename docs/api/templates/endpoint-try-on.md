@@ -1,1 +1,0 @@
-https://api.aiuta.com/digital-try-on/v1

@@ -1,6 +1,6 @@
 # Results Screen
 
-![Results Screen](../../../media/pages/results.png){width=300}
+![Results Screen](/media/pages/results.png){width=300}
 
 The Results Screen displays the generated virtual try-on results and provides various interaction options for users to engage with the results, such as:
 

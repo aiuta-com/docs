@@ -1,6 +1,6 @@
 # Loading Screen
 
-![Loading Screen](../../../media/pages/loading-screen.png){width=300}
+![Loading Screen](/media/pages/loading-screen.png){width=300}
 
 The Loading Screen is displayed during the virtual try-on process to keep users informed about the current status of their request. It shows different status messages as the system processes the image and generates the try-on result:
 
