@@ -97,7 +97,7 @@ nav:
     - Configuration: sdk/flutter/configuration.md
     - Basic Usage: sdk/flutter/basic-usage.md
     - Migration: 
-      - From v1 to v4: sdk/flutter/migration/v4.md
+      - Migrate to v4: sdk/flutter/migration/v4.md
 
   - Web:
     - sdk/web/index.md

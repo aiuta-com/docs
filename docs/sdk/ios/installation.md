@@ -64,6 +64,6 @@ import AiutaSdk
 <div class="grid cards" markdown>
 
 - :octicons-arrow-right-24: [Quick Test](/sdk/ios/quick-test.md) SDK Propely Integrated
-- :octicons-arrow-right-24: Initialize with [Configuration](/sdk/ios/configuration.md)
+- :octicons-arrow-right-24: Setup with [Configuration](/sdk/ios/configuration.md)
 
 </div>

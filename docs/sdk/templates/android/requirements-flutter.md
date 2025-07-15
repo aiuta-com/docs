@@ -1,4 +1,4 @@
-```
+```yaml
 minSdk: 23
 targetSdk: 35
 ndkVersion: 26.1.10909125

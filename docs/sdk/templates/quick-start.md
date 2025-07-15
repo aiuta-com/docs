@@ -15,10 +15,7 @@
 -   :fontawesome-brands-flutter:{ .lg } __Flutter__ <span class="md-platfroms">:fontawesome-brands-android: Android :fontawesome-brands-apple: iOS</span>
 
     ---
-    ```
-    sdk: >=3.1.0 <4.0.0
-    flutter: >= 3.19.6
-    ```
+    {% include-markdown "sdk/templates/flutter/requirements.md" %}
     :material-book-open-variant: [Quick Start](/sdk/flutter/)
 
 -   :fontawesome-brands-js:{ .lg } __Web__

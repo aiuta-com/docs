@@ -24,15 +24,18 @@ Configuration {
 }
 ```
 
-1.  [:material-arrow-down-left:](/sdk/developer/configuration/auth/) Required to authenticate Aiuta SDK to use [API](https://developer.aiuta.com/products/digital-try-on/documentation){:target="_blank"} with your credentials. Supported authentication methods are `ApiKey` or `Jwt` + `subscriptionId`.
+1.  [:material-arrow-down-left:](/sdk/developer/configuration/auth.md) Required to authenticate Aiuta SDK to use [API](/api/try-on/index.md) with your credentials. Supported authentication methods are `ApiKey` or `Jwt` + `subscriptionId`.
 
-2. [:material-arrow-down-left:](/sdk/developer/configuration/ui/) Configuration of the user interface presentation style, swipe-to-dismiss policy, and UI components themes for the Aiuta SDK.
+2. [:material-arrow-down-left:](/sdk/developer/configuration/ui/index.md) Configuration of the user interface presentation style, swipe-to-dismiss policy, and UI components themes for the Aiuta SDK.
 
-3. [:material-arrow-down-left:](/sdk/developer/configuration/features/) Describes the set of features enabled in the SDK for the user and thier interaction with the app.
+3. [:material-arrow-down-left:](/sdk/developer/configuration/features/index.md) Describes the set of features enabled in the SDK for the user and thier interaction with the app.
 
-4. [:material-arrow-down-left:](/sdk/developer/configuration/analytics/) Allows to receive analytics events from the SDK and send them to your analytics provider.
+4. [:material-arrow-down-left:](/sdk/developer/configuration/analytics.md) Allows to receive analytics events from the SDK and send them to your analytics provider.
 
-5. [:material-arrow-down-left:](/sdk/developer/configuration/debug-settings/) Controls the logging settings and validation policies for various parameters.
+5. [:material-arrow-down-left:](/sdk/developer/configuration/debug-settings.md) Controls the logging settings and validation policies for various parameters.
+
+!!! example "Customization depth"
+    The configuration itself, as well as all themes and most features, have __built-in defaults__ on each platform. You decide how much detail you want to customize the behavior and appearance of the SDK. Starting with a few necessary parameters, ending with every aspect that is provided in the described schemes.
 
 ## Sequence Diagram
 

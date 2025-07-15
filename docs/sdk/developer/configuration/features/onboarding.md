@@ -106,3 +106,6 @@ OnboardingBestResultsPageFeature {
 6. Main title displayed above the example photos section.
 7. Descriptive text explaining what makes a good photo for virtual try-on.
 8. Controls whether to reduce shadow effects on example photos for better visibility. 
+
+!!! warning "Deprecated"
+    Examples of good source photos are now included into the [Image Picker](/sdk/developer/configuration/features/image-picker.md), so we recommend disabling this slide to avoid overwhelming the user with onboarding
