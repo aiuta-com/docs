@@ -23,5 +23,3 @@ sequenceDiagram
         deactivate SDK
     end
 ```
-
-!!! doc "See details about [Try-on generation process here](/sdk/about/diagrams/interaction-sequence/#making-try-on)"

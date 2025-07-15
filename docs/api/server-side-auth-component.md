@@ -4,6 +4,8 @@ Here is the example of the required backend logic that needs to be implemented t
 
 Using this scheme, you can issue an authentication token for your client using your private key after properly validating the request parameters. This allows you to decide whether the client still has the ability to use the Aiuta product, enabling you to enforce any per-client limits. Additionally, you can include specific parameters in the JWT payload to ensure that the client uses these exact values when making requests to Aiuta. For example, you can include parameters required for image generation to ensure that the issued token will be used for this generation only.
 
+!!! doc "See the sequence diagram showing how [Aiuta SDK uses the JWT](/sdk/about/diagrams/authentication.md#__tabbed_1_1) to authenticate requests"
+
 You need to install the following dependencies:
 
 ```sh

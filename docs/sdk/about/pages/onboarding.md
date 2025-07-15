@@ -1,6 +1,6 @@
 # Onboarding
 
-![How It Works](../../../media/pages/how-it-works-1.png){ width=300 }
+![How It Works](/media/pages/how-it-works-1.png){ width=300 }
 
 The Onboarding feature guides users through the SDK's functionality, helping them understand how to use the virtual try-on experience effectively.
 
@@ -67,7 +67,7 @@ The SDK provides two options for managing the onboarding completion status:
 
     ### How It Works
 
-    ![How It Works](../../../media/pages/how-it-works.png){ width=558 }
+    ![How It Works](/media/pages/how-it-works.png){ width=558 }
 
     The "How It Works" page provides an interactive demonstration of the virtual try-on feature:
 
@@ -110,7 +110,7 @@ The SDK provides two options for managing the onboarding completion status:
 
     ### Best Results
 
-    ![Best Results](../../../media/pages/best-results.png){ width=300 }
+    ![Best Results](/media/pages/best-results.png){ width=300 }
 
     The "Best Results" page helps users achieve optimal results:
 

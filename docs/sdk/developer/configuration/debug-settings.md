@@ -24,7 +24,7 @@ DebugSettings {
 4.  Validation policy for checking whether the `info.plist` file contains all required descriptions for enabled features.
 5.  Validation policy for checking whether lists required by the SDK are of the correct size.
 
-## Validation Policy
+### [:material-arrow-up-left:](#debug-settings) Validation Policy
 
 ``` typescript
 enum ValidationPolicy {

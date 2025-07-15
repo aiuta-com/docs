@@ -1,1 +1,0 @@
-https://api.aiuta.com/analytics/v1

@@ -21,8 +21,11 @@ Product {
 1.  Unique identifier for the product, used to distinguish it across the platform. Must match the identifiers provided to Aiuta for training try-on models.
 2.  The name or title of the product, displayed prominently in the user interface.
 3.  The brand associated with the product, identifying the manufacturer or provider.
-4.  Collection of URLs pointing to product images. Should contain at least one URL. Flatlay image must be first if `ProductBarTheme` has enabled `applyProductFirstImageExtraPadding`.
+4.  Collection of URLs pointing to product images. Should contain at least one URL.
 5.  Optional pricing details for the product, including current and old prices.
+
+!!! warning "`imageUrls` and `applyProductFirstImageExtraPadding`"
+    The flat lay image without paddings should be the first in the list of `imageUrls` if `applyProductFirstImageExtraPadding` is set in [`ProductBarTheme`](/sdk/developer/configuration/ui/theme/product-bar.md)
 
 ### Price
 
@@ -35,3 +38,6 @@ Price {
 
 1.  Current price of the product, formatted as a localized string including currency symbol and amount.
 2.  Optional old price of the product, formatted as a localized string. If provided, will be displayed as strikethrough near the current price.
+
+!!! info "Prices Theme"
+    You only need to pass product prices if you set up [`PricesTheme`](/sdk/developer/configuration/ui/theme/product-bar.md#prices)

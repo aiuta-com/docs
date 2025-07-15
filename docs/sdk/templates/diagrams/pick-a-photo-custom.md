@@ -34,7 +34,7 @@ Detailed sequence of the user selecting the source image for the virtual try-on 
         deactivate SDK
     ```
 
-    !!! doc "See [custom <span class="md-sequence-number">6 – 8</span> Consent configuration](/sdk/about/developer/configuration/#consent)" 
+    !!! doc "See [custom <span class="md-sequence-number">6 – 8</span> Consent configuration](/sdk/developer/configuration/features/consent.md)" 
 
 === "Predefined model / Uploads history"
 

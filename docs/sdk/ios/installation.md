@@ -4,45 +4,52 @@ Integrate [Aiuta iOS SDK :octicons-link-external-24:](https://github.com/aiuta-c
 
 ## Depend on it
 
-### Swift Package Manager
+=== "Swift Package Manager"
 
-=== "`Package.swift`"
+    [SwiftPM :octicons-link-external-24:](https://www.swift.org/documentation/package-manager/){:target="_blank"} distribution of the Aiuta iOS SDK supports minimum deployment `iOS 13`
 
-    Add AiutaSdk as a `dependencies` value of your `Package.swift`.
+    ??? question "Need a lower minimum deployment?"
+        If you need support of minimum deployment `iOS 12`, you are probably using some kind of cross-platform solution. In this case, please take a look at [CocoaPods distribution](/sdk/ios/installation.md#__tabbed_1_2), and also note that Aiuta provides a plugin-wrapper for [Flutter](/sdk/flutter/index.md). You can also use the Kotlin MultiPlatform version of the [Android SDK](/sdk/android/index.md).
 
-    ```swift
-    dependencies: [
-      .package(url: "https://github.com/aiuta-com/aiuta-ios-sdk.git", from: "{{ latest_ios() }}")
-    ]
+    === "Xcode"
+
+        - File > Add Package Dependencies...
+        - Enter Package URL:
+        ```
+        {{ repo_ios() }}
+        ```
+        - Select Dependency Rule `Up to Next Major` with `{{ latest_ios() }}`
+        - Add Package to your project
+
+        ![xcode](/media/sdk/ios-xcode.png){ width=550 }
+        
+    === "`Package.swift`"
+
+        Add AiutaSdk `package` to the `dependencies` value of your `package`
+
+        ```swift
+        .package(url: "{{ repo_ios() }}", from: "{{ latest_ios() }}")
+        ```
+
+        Add AiutaSdk `product` to the `dependencies` value of your `target`
+
+        ```swift
+        .product(name: "AiutaSdk", package: "aiuta-ios-sdk")
+        ```
+
+=== "CocoaPods"
+
+    [CocoaPods :octicons-link-external-24:](https://cocoapods.org){:target="_blank"} distribution of the Aiuta iOS SDK supports minimum deployment `iOS 12`, but it still available to operate only with `if #available(iOS 13.0.0, *)`
+
+    ```ruby
+    source 'https://github.com/CocoaPods/Specs.git'
+    platform :ios, '12.0'
+    use_frameworks!
+
+    target 'MyApp' do
+      pod 'AiutaSdk', '~> {{ latest_ios() }}'
+    end
     ```
-
-    Add dependency to your target
-    ```swift
-    .product(name: "AiutaSdk", package: "aiuta-ios-sdk")
-    ```
-
-=== "Xcode"
-
-    - File > Add Package Dependencies...
-    - Search `https://github.com/aiuta-com/aiuta-ios-sdk.git`
-    - Select Dependency Rule "Up to Next Major" with `{{ latest_ios() }}`
-    - Add Package to your project
-
-    ![xcode](/media/sdk/ios-xcode.png){ width=550 }
-
-### CocoaPods
-
-[CocoaPods :octicons-link-external-24:](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Aiuta SDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '13.0'
-use_frameworks!
-
-target 'MyApp' do
-  pod 'AiutaSdk', '~> {{ latest_ios() }}'
-end
-```
 
 ## Import it
 
@@ -56,6 +63,7 @@ import AiutaSdk
 
 <div class="grid cards" markdown>
 
-- :octicons-arrow-right-24: &nbsp; Initialize with [Configuration](configuration.md)
+- :octicons-arrow-right-24: [Quick Test](/sdk/ios/quick-test.md) SDK Propely Integrated
+- :octicons-arrow-right-24: Initialize with [Configuration](/sdk/ios/configuration.md)
 
 </div>

@@ -29,8 +29,3 @@ sequenceDiagram
         deactivate SDK
     end
 ```
-
-!!! doc "See details about" 
-    
-    - <span class="md-sequence-number">2 – 5</span> History images structure in the [Common Models](/sdk/about/developer/common-models/#history-images)
-    - [Try-on generation process here](/sdk/about/diagrams/interaction-sequence/#making-try-on)

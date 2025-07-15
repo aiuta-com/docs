@@ -24,21 +24,10 @@ ColorTheme {
   border: Color // (10)!
   outline: Color // (11)!
 }
-
-enum ColorScheme {
-  light // (12)!
-  dark // (13)!
-}
 ```
 
 1.  Defines whether the SDK uses a light or dark theme.
     Provided colors should match the scheme.
-
-    !!! note ""
-        Affects the style of blur components
-
-    !!! note ""
-        On __`iOS only`__ it affects the appearance of system screens (e.g., photo gallery, share activity, etc.) and ensures that their `UIUserInterfaceStyle` matches the selected style. For example, if the SDK is set to a light theme but the system theme on the device is dark, the system windows invoked by the SDK will still use the light theme.
 
 2. Main accent color for primary actions and highlights throughout the interface.
 
@@ -106,6 +95,23 @@ enum ColorScheme {
     !!! example ""
         Default ARGB :material-square-rounded:{ .cl-outline } `#FFC7C7CC`
 
-12. Light theme with predominantly light colors in the design.
 
-13. Dark theme with predominantly dark colors in the design. 
+### [:material-arrow-up-left:](#color-theme) Color Scheme
+
+```typescript
+enum ColorScheme {
+  light // (1)!
+  dark // (2)!
+}
+```
+
+1. Light theme with predominantly light colors in the design.
+
+2. Dark theme with predominantly dark colors in the design. 
+
+!!! note ""
+    Affects the style of blur components
+
+!!! note ""
+    On __`iOS only`__ it affects the appearance of system screens (e.g., photo gallery, share activity, etc.) and ensures that their `UIUserInterfaceStyle` matches the selected style. For example, if the SDK is set to a light theme but the system theme on the device is dark, the system windows invoked by the SDK will still use the light theme.
+    

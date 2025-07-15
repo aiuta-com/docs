@@ -1,8 +1,10 @@
 # Onboarding Scheme
 
-Sets up the onboarding process to guide users through the SDK's features and capabilities.
+Sets up [:material-window-open: the onboarding](/sdk/about/pages/onboarding.md) process to guide users through the SDK's features and capabilities.
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/#features) Onboarding Feature
+![How It Works](/media/pages/how-it-works.png){ width=220 }
+
+## [:material-arrow-up-left:](/sdk/developer/configuration/features.md#features) Onboarding Feature
 ```typescript
 OnboardingFeature {
   howItWorksPage: OnboardingHowItWorksPageFeature // (1)!
@@ -35,9 +37,14 @@ OnboardingFeature {
 7. Provides an observable property that tracks whether the user has completed the onboarding process.
 8. Defines the callback function to mark onboarding as completed when the user finishes the process.
 
+## Slides
 
+---
 
 ### [:material-arrow-up-left:](#onboarding) How It Works
+
+![How It Works](/media/pages/how-it-works-1.png){ width=120 }
+
 ```typescript
 OnboardingHowItWorksPageFeature {
   images {
@@ -63,9 +70,10 @@ OnboardingHowItWorksPageFeature {
 5. Configures the descriptive text explaining how the virtual try-on feature works.
 6. List of exactly 3 objects, each containing images for the interactive onboarding.
 
-
-
 ### [:material-arrow-up-left:](#onboarding) Best Results
+
+![Best Results](/media/pages/best-results.png){ width=120 }
+
 ```typescript
 OnboardingBestResultsPageFeature {
   images {

@@ -9,7 +9,7 @@ The Developer Section provides an overview of the configuration and model scheme
 ??? abstract "Type Definitions & Naming Convention"
     {% include-markdown "sdk/templates/developer/type-definitions.md" %}
 
-!!! tip "Annotations"
+!!! tip "Annotations in schemes"
     Don't miss them - click :material-information-outline: for more details
 
 ## SDK integration

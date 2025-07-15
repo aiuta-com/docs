@@ -45,10 +45,7 @@ There you will be able to find
 
     ![jwt](/media/api/credentials/jwt.png){ width=450 }
 
-    To be used on your implementation of the sedver side auth component
-
-    !!! doc "Refer to the documentation for detailed instructions on [implementing the backend component](./server-side-auth-component.md)"
-        As an example, see the sequence diagram showing how [Aiuta SDK uses the JWT flow](/sdk/about/diagrams/authentication/#__tabbed_1_1) to authenticate requests
+    To be used on your implementation of [the server side auth component](./server-side-auth-component.md)
 
 
 ## Authentication
@@ -74,7 +71,6 @@ Authentication is mandatory for some calls such as starting the image generation
     - The JWT can then be used by your application client to access the Aiuta API until it expires.
 
     !!! doc "Refer to the documentation for detailed instructions on [implementing the backend component](./server-side-auth-component.md)"
-        As an example, see the sequence diagram showing how [Aiuta SDK uses the JWT flow](/sdk/about/diagrams/authentication/#__tabbed_1_1) to authenticate requests
 
     To make requests to the Aiuta API, use the Bearer Authentication HTTP scheme with the issued token:
     ```

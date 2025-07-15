@@ -2,6 +2,9 @@
 
 Configures the core virtual try-on functionality for trying products virtually.
 
+![Loading Screen](/media/pages/loading-screen.png){width=120}
+![Results Screen](/media/pages/results.png){width=120}
+
 ## [:material-arrow-up-left:](/sdk/developer/configuration/features/#features) Try On Feature
 
 ```typescript
@@ -37,9 +40,9 @@ TryOnFeature {
 ```
 
 1.  [:material-arrow-down-left:](#loading-page) Configuration for the loading page displayed during the TryOn process.
-2.  [:material-arrow-down-left:](#inout-image-validation) Configuration for validating input images before processing.
+2.  [:material-arrow-down-left:](#input-image-validation) Configuration for validating input images before processing.
 3.  [:material-arrow-down-left:](#cart) Configuration for cart-related functionality in the TryOn interface.
-4.  [:material-arrow-down-left:](fit-disclaimer) Optional configuration for displaying fit disclaimers to users.
+4.  [:material-arrow-down-left:](#fit-disclaimer) Optional configuration for displaying fit disclaimers to users.
 5.  [:material-arrow-down-left:](#feedback) Optional configuration for collecting user feedback on TryOn results.
 6.  [:material-arrow-down-left:](#generations-history) Optional configuration for managing the history of generated TryOn results.
 7.  [:material-arrow-down-left:](#other-photo) Optional configuration for allowing users to continue with a different photo.
@@ -51,6 +54,13 @@ TryOnFeature {
 13.  Optional gradient colors for styling the TryOn button.
 
 
+## Sequence diagram
+
+{% include-markdown "sdk/templates/diagrams/try-on.md" %}
+
+## Sub Features
+
+---
 
 ### [:material-arrow-up-left:](#try-on-feature) Loading Page
 ```typescript
@@ -73,7 +83,6 @@ TryOnLoadingPageFeature {
 3.  Text displayed while generating the virtual try-on outfit.
 4.  Optional gradient colors for the loading status background.
 5.  Visual style for the loading status indicator, either primary (solid) or blurred (with optional outline).
-
 
 
 ### [:material-arrow-up-left:](#try-on-feature) Input Image Validation
@@ -196,7 +205,7 @@ TryOnWithOtherPhotoFeature {
 
 
 
-### [:material-arrow-up-left:](#try-on) Generations History
+### [:material-arrow-up-left:](#try-on-feature) Generations History
 ```typescript
 TryOnGenerationsHistoryFeature {
   icons {

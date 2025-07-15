@@ -4,9 +4,11 @@ hide:
 ---
 # Welcome Screen Scheme
 
-Configures an optional welcome screen that introduces users to the SDK's functionality.
+Configures an optional [:material-window-open: welcome screen](/sdk/about/pages/welcome-screen.md) that introduces users to the SDK's functionality.
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/#features) Welcome Screen Feature
+![Welcome Screen](/media/pages/welcome.png){width=120}
+
+## [:material-arrow-up-left:](/sdk/developer/configuration/features.md#features) Welcome Screen Feature
 ```typescript
 WelcomeScreenFeature {
   images {

@@ -52,8 +52,3 @@ sequenceDiagram
             Note over SDK,USR: User may try again to start over
     end
 ```
-
-!!! doc "See details about" 
-    
-    - [<span class="md-sequence-number">2</span> Authenticating secured requests](/sdk/about/diagrams/authentication/)
-    - [<span class="md-sequence-number">9</span> Adding Images to the History](/sdk/about/diagrams/interaction-sequence/#addingviewing-images-in-the-history)

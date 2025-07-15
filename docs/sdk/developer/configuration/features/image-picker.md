@@ -1,6 +1,10 @@
 # Image Picker Scheme
 
-Controls the image selection interface, allowing users to pick photos, take new ones, use predefined models, or access previous uploads.
+Controls [:material-window-open: the image selection interface](/sdk/about/pages/image-picker.md), allowing users to pick photos, take new ones, use predefined models, or access previous uploads.
+
+![Image Picker](/media/pages/image-picker-w-models.png){width=120}
+![Image Picker](/media/pages/image-picker-bottom-sheet.png){width=120}
+![Image Picker](/media/pages/image-picker-history-last.png){width=120}
 
 ## [:material-arrow-up-left:](/sdk/developer/configuration/features/#features) Image Picker Feature
 
@@ -32,7 +36,19 @@ ImagePickerFeature {
 7.  Description text shown when the image picker is empty.
 8.  Label text for the button used to upload new photos.
 
+## Sequence Diagrams
 
+=== "Default configuration"
+
+    {% include-markdown "sdk/templates/diagrams/pick-a-photo-default.md" %}
+
+=== "Custom configuration" 
+
+    {% include-markdown "sdk/templates/diagrams/pick-a-photo-custom.md" %}
+
+## Sub Features
+
+---
 
 ### [:material-arrow-up-left:](#image-picker-feature) Camera
 ```typescript
@@ -136,6 +152,7 @@ ImagePickerUploadsHistoryFeature {
 7.  Callback to remove images from the uploads history.
 8.  Callback to move a selected image to the top of the history when reused. 
 
+---
 
 #### Input Image
 

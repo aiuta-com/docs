@@ -42,6 +42,7 @@ nav:
       - sdk/developer/configuration/index.md
       - Auth: sdk/developer/configuration/auth.md
       - Analytics: sdk/developer/configuration/analytics.md
+      - Debug Settings: sdk/developer/configuration/debug-settings.md
     - User Interface:
       - sdk/developer/configuration/ui/index.md
       - Theme: sdk/developer/configuration/ui/theme/index.md
@@ -65,7 +66,6 @@ nav:
       - Try On: sdk/developer/configuration/features/try-on.md
       - Share: sdk/developer/configuration/features/share.md
       - Wishlist: sdk/developer/configuration/features/wishlist.md
-    - Debug Settings: sdk/developer/configuration/debug-settings.md
 
   - Android:
     - sdk/android/index.md
@@ -87,6 +87,9 @@ nav:
   - iOS:
     - sdk/ios/index.md
     - Installation: sdk/ios/installation.md
+    - Configuration: sdk/ios/configuration.md
+    - Basic Usage: sdk/ios/basic-usage.md
+    - Quick Test: sdk/ios/quick-test.md
 
   - Flutter:
     - sdk/flutter/index.md
@@ -147,14 +150,29 @@ extra:
       link: https://x.com/AiutaCom
     - icon: aiuta/logo-sq
       link: https://aiuta.com
-  demo_api_key: AIUTADEMO
+  aiuta:
+    github:
+      url: https://github.com
+      api: https://api.github.com/repos
+      team: aiuta-com
+      repos:
+        android: aiuta-android-sdk # macro: repo_android(), latest_android()
+        ios: aiuta-ios-sdk # macro: repo_ios(), latest_ios()
+        flutter: aiuta-flutter-sdk # macro: repo_flutter(), latest_flutter()
+        web: aiuta-web-sdk # macro: repo_web(), latest_web()
+    api:
+      base_url: https://api.aiuta.com
+      demo_key: AIUTADEMO
+      path:
+        try_on: digital-try-on/v1 # macro: api_try_on()
+        flat_lays: flat-lays/v1 # macro: api_flat_lays()
+        analytics: analytics/v1 # macro: api_analytics()
 
 theme:
   name: 'material'
   custom_dir: overrides
   include_search_page: false
   search_index_only: true
-
 
   language: en
   features:
@@ -250,3 +268,11 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+validation:
+  nav:
+    omitted_files: ignore
+  links:
+    absolute_links: relative_to_docs
+    unrecognized_links: warn
+    anchors: warn

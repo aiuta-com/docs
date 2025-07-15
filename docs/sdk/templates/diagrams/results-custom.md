@@ -31,8 +31,3 @@ sequenceDiagram
     end
 
 ```
-
-!!! doc "See details about" 
-    
-    - [<span class="md-sequence-number">6-8</span> Wishlist integration](/sdk/about/developer/configuration/#wishlist)
-    - [<span class="md-sequence-number">11</span> Share functionality](/sdk/about/developer/configuration/#share) 

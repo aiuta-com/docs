@@ -4,14 +4,14 @@ Use the following base URLs to make SDK or direct API calls:
 
 ## Try-On base URL
 ```
-{% include-markdown "team/api/templates/endpoint-try-on.md" %}
+{{ api_try_on() }}
 ```
 
 Append paths like `/uploaded_images`, `/sku_images_operations`, etc.
 
 ## Analytics URL
 ```
-{% include-markdown "team/api/templates/endpoint-analytics.md" %}
+{{ api_analytics() }}
 ```
 
 Append paths like `/ios-sdk-analytics`, `/android-sdk-analytics`, etc.

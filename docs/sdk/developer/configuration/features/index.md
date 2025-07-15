@@ -20,10 +20,10 @@ Features {
 }
 ```
 
-1. [:material-arrow-down-left:](#welcome-screen) Configures an optional welcome screen that introduces users to the SDK's functionality.
-2. [:material-arrow-down-left:](#onboarding) Sets up the onboarding process to guide users through the SDK's features and capabilities.
-3. [:material-arrow-down-left:](#consent) Manages user consent options for data processing, which can be integrated with onboarding or used independently.
-4. [:material-arrow-down-left:](#image-picker) Controls the image selection interface, allowing users to pick photos, take new ones, use predefined models, or access previous uploads.
-5. [:material-arrow-down-left:](#try-on) Configures the core virtual try-on functionality for trying products virtually.
-6. [:material-arrow-down-left:](#share) Enables sharing capabilities for generated try-on images with customizable options.
-7. [:material-arrow-down-left:](#wishlist) Integrates with the host app's wishlist functionality for product management.
+1. [:material-arrow-down-left:](welcome-screen.md) Configures an optional welcome screen that introduces users to the SDK's functionality.
+2. [:material-arrow-down-left:](onboarding.md) Sets up the onboarding process to guide users through the SDK's features and capabilities.
+3. [:material-arrow-down-left:](consent.md) Manages user consent options for data processing, which can be integrated with onboarding or used independently.
+4. [:material-arrow-down-left:](image-picker.md) Controls the image selection interface, allowing users to pick photos, take new ones, use predefined models, or access previous uploads.
+5. [:material-arrow-down-left:](try-on.md) Configures the core virtual try-on functionality for trying products virtually.
+6. [:material-arrow-down-left:](share.md) Enables sharing capabilities for generated try-on images with customizable options.
+7. [:material-arrow-down-left:](wishlist.md) Integrates with the host app's wishlist functionality for product management.

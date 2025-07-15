@@ -47,6 +47,11 @@ The following sequence diagrams illustrate the process of a virtual try-on using
 
 {% include-markdown "sdk/templates/diagrams/try-on.md" %}
 
+!!! doc "See details about" 
+    
+    - [<span class="md-sequence-number">2</span> Authenticating secured requests](/sdk/about/diagrams/authentication/)
+    - [<span class="md-sequence-number">9</span> Adding Images to the History](/sdk/about/diagrams/interaction-sequence/#addingviewing-images-in-the-history)
+
 #### Viewing Results
 
 === "Default configuration"
@@ -56,6 +61,11 @@ The following sequence diagrams illustrate the process of a virtual try-on using
 === "Custom configuration" 
 
     {% include-markdown "sdk/templates/diagrams/results-custom.md" %}
+    
+    !!! doc "See details about" 
+        
+        - [<span class="md-sequence-number">6-8</span> Wishlist integration](/sdk/about/developer/configuration/#wishlist)
+        - [<span class="md-sequence-number">11</span> Share functionality](/sdk/about/developer/configuration/#share) 
 
 ### Managing History
 
@@ -67,9 +77,16 @@ The following sequence diagram illustrates the process of managing images histor
 
     {% include-markdown "sdk/templates/diagrams/history-add-default.md" %}
 
+    !!! doc "See details about [Try-on generation process here](/sdk/about/diagrams/interaction-sequence/#making-try-on)"
+
 === "Custom configuration" 
 
     {% include-markdown "sdk/templates/diagrams/history-add-custom.md" %}
+
+    !!! doc "See details about" 
+        
+        - <span class="md-sequence-number">2 – 5</span> History images structure in the [Common Models](/sdk/about/developer/common-models/#history-images)
+        - [Try-on generation process here](/sdk/about/diagrams/interaction-sequence/#making-try-on)
 
 #### Deleting Images from the History
 

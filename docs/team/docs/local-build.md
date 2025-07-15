@@ -33,7 +33,6 @@ Open that URL in your browser to view the documentation.
     2. Click **"Generate new token (classic)"**.
     3. Fill in the following:
     - **Note**: `Docs GitHub API Access`
-    - **Expiration**: choose something short like **90 days**
     - **Scopes**:
         - ✅ `public_repo` if you're accessing only public repositories, **or**
         - ✅ `repo` if you're accessing private ones
