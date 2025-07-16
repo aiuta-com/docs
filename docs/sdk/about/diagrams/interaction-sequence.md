@@ -6,7 +6,7 @@ hide:
 
 The detailed sequence diagrams below cover all stages of interaction with the Aiuta SDK. The diagrams help visualize the flow of operations, such as initialization and the try-on process, highlighting the roles of the user, your app, backend services and Aiuta SDK. 
 
-Authentication of requests from the SDK to the Aiuta API/Backend based on the configuration provided is described [here](/sdk/about/diagrams/authentication/).
+Authentication of requests from the SDK to the Aiuta API/Backend based on the configuration provided is described [here](/sdk/about/diagrams/authentication.md).
 
 ## Configuration
 
@@ -49,8 +49,8 @@ The following sequence diagrams illustrate the process of a virtual try-on using
 
 !!! doc "See details about" 
     
-    - [<span class="md-sequence-number">2</span> Authenticating secured requests](/sdk/about/diagrams/authentication/)
-    - [<span class="md-sequence-number">9</span> Adding Images to the History](/sdk/about/diagrams/interaction-sequence/#addingviewing-images-in-the-history)
+    - [<span class="md-sequence-number">2</span> Authenticating secured requests](/sdk/about/diagrams/authentication.md)
+    - [<span class="md-sequence-number">9</span> Adding Images to the History](/sdk/about/diagrams/interaction-sequence.md#addingviewing-images-in-the-history)
 
 #### Viewing Results
 
@@ -64,8 +64,8 @@ The following sequence diagrams illustrate the process of a virtual try-on using
     
     !!! doc "See details about" 
         
-        - [<span class="md-sequence-number">6-8</span> Wishlist integration](/sdk/about/developer/configuration/#wishlist)
-        - [<span class="md-sequence-number">11</span> Share functionality](/sdk/about/developer/configuration/#share) 
+        - [<span class="md-sequence-number">6-8</span> Wishlist integration](/sdk/developer/configuration/features/wishlist.md)
+        - [<span class="md-sequence-number">11</span> Share functionality](/sdk/developer/configuration/features/share.md) 
 
 ### Managing History
 
@@ -77,7 +77,7 @@ The following sequence diagram illustrates the process of managing images histor
 
     {% include-markdown "sdk/templates/diagrams/history-add-default.md" %}
 
-    !!! doc "See details about [Try-on generation process here](/sdk/about/diagrams/interaction-sequence/#making-try-on)"
+    !!! doc "See details about [Try-on generation process here](/sdk/about/diagrams/interaction-sequence.md#making-try-on)"
 
 === "Custom configuration" 
 
@@ -85,8 +85,8 @@ The following sequence diagram illustrates the process of managing images histor
 
     !!! doc "See details about" 
         
-        - <span class="md-sequence-number">2 – 5</span> History images structure in the [Common Models](/sdk/about/developer/common-models/#history-images)
-        - [Try-on generation process here](/sdk/about/diagrams/interaction-sequence/#making-try-on)
+        - <span class="md-sequence-number">2 – 5</span> History images: [input](/sdk/developer/configuration/features/image-picker.md#input-image) and [generated](/sdk/developer/configuration/features/try-on.md#generated-image)
+        - [Try-on generation process here](/sdk/about/diagrams/interaction-sequence.md#making-try-on)
 
 #### Deleting Images from the History
 

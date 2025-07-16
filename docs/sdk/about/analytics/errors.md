@@ -4,7 +4,7 @@ This document describes all possible errors and cancelation reasons that can occ
 
 ## Try-On Errors
 
-!!! info "Sent in the `errorType` field of [`tryOn.tryOnError`](analytics.md#try-on-events)"
+!!! info "Sent in the `errorType` field of [`tryOn.tryOnError`](analytics.md#try-on)"
 
 | Error Type | Description |
 |------------|-------------|
@@ -21,9 +21,9 @@ This document describes all possible errors and cancelation reasons that can occ
 
 ## Try-On Aborts
 
-!!! info "Sent in the `abortReason` field of [`tryOn.tryOnAborted`](analytics.md#try-on-events)"
+!!! info "Sent in the `abortReason` field of [`tryOn.tryOnAborted`](analytics.md#try-on)"
 
 | Abort Type | Description |
 |------------|-------------|
-| `operationAborted` | SDK successfully made a request to the server to start the try-on process,<br>operation was started, but the server aborted the operation,<br>because of the [invalid user input photo](../pages/loading-screen.md#__tabbed_1_1). |
-| `userCancelled` | Operation was in progress, but user closes the SDK<br>and [background execution](../developer/configuration.md#try-on) was disabled |
+| `operationAborted` | SDK successfully made a request to the server to start the try-on process,<br>operation was started, but the server aborted the operation,<br>because of the [invalid user input photo](/sdk/about/pages/loading-screen.md#__tabbed_1_1). |
+| `userCancelled` | Operation was in progress, but user closes the SDK<br>and [background execution](/sdk/developer/configuration/features/try-on.md) was disabled |
