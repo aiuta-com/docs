@@ -13,6 +13,6 @@ Instantly convert model images into clean, high‑resolution flat lays
 
 ## Quick Start
 
-- [Get started with Aiuta __API Protal__](/api/getting-started/)
-- [Take a look at the __Workflow__](/api/flat-lays/workflow/)
-- [Check out the API __Reference__](/api/flat-lays/reference/)
+- [Get started with Aiuta __API Protal__](/api/getting-started.md)
+- [Take a look at the __Workflow__](/api/flat-lays/workflow.md)
+- [Check out the API __Reference__](/api/flat-lays/reference.md)
