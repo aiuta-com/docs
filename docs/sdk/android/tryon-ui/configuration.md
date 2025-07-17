@@ -49,14 +49,79 @@ val aiutaConfiguration = aiutaConfiguration {
 ```
 
 1. __Required__: Your initialized Aiuta instance that provides core functionality.  
-See [Getting started with Aiuta](/sdk/android/base/aiuta-getting-started/) guide for details.
+See [Getting started with Aiuta](/sdk/android/base/aiuta-getting-started.md) guide for details.
 2. __Required__: Controls which features are enabled in your try-on experience.  
-See [General configuration scheme](/sdk/about/developer/configuration/#features) to check list of available features and their configuration options.
+See [General configuration scheme](/sdk/developer/configuration/features/index.md) to check list of available features and their configuration options.
 3. __Required__: Customizes the look and feel of the UI components.  
-See [General configuration scheme](/sdk/about/developer/configuration/#user-interface) to check complete list of available configuration options.
+See [General configuration scheme](/sdk/developer/configuration/ui/index.md) to check complete list of available configuration options.
 4. Optional: Configures debug-related settings for development and testing purposes.
 
-{% include-markdown "sdk/templates/android/default-configuration-tip.md" %}
+
+!!! doc "Please refer to the [__configuration scheme__](/sdk/developer/configuration/index.md) for more details"
+
+## Default Configurations
+
+To use default configurations in your try-on experience, you can utilize the provided builder functions that come with pre-configured settings. These defaults are designed to provide a good starting point for your implementation.
+
+
+### Dependencies
+
+To use the default configurations, add the following dependency to your project:
+
+=== "Kotlin"
+    ```kotlin
+    dependencies {
+        // Only default icon resources
+        implementation("com.aiuta.fashionsdk:configuration-defaults-icon:{{ latest(android) }}")
+
+        // Only default image resources
+        implementation("com.aiuta.fashionsdk:configuration-defaults-images:{{ latest(android) }}")
+
+        // Both icon and images with builders
+        implementation("com.aiuta.fashionsdk:configuration-defaults:{{ latest(android) }}")
+    }
+    ```
+
+=== "Groovy"
+    ```groovy
+    dependencies {
+        // Only default icon resources
+        implementation "com.aiuta.fashionsdk:configuration-defaults-icon:{{ latest(android) }}"
+
+        // Only default image resources
+        implementation "com.aiuta.fashionsdk:configuration-defaults-images:{{ latest(android) }}"
+
+        // Both icon and images with builders
+        implementation "com.aiuta.fashionsdk:configuration-defaults:{{ latest(android) }}"
+    }
+    ```
+
+### Using Default Configurations
+
+To use default configurations, you can use the provided builder functions `defaultAiutaFeatures` and `defaultAiutaUserInterfaceConfiguration`. These functions come with sensible defaults that you can customize by passing initialization parameters.
+
+Here's how to use them:
+
+
+```kotlin
+import com.aiuta.fashionsdk.tryon.compose.aiutaConfiguration
+import com.aiuta.fashionsdk.configuration.defaults.features.defaultAiutaFeatures
+import com.aiuta.fashionsdk.configuration.defaults.theme.defaultAiutaUserInterfaceConfiguration
+
+val aiutaConfiguration = aiutaConfiguration {
+    aiuta = ... // Your initialized Aiuta instance
+    
+    // Configure default features
+    defaultAiutaFeatures(
+        // Initialization params
+    )
+    
+    // Configure default user interface
+    defaultAiutaUserInterfaceConfiguration(
+        // Initialization params
+    )
+}
+```
 
 ## Next Step
 

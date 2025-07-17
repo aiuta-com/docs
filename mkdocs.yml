@@ -90,8 +90,10 @@ nav:
       - Quick Test: sdk/android/tryon-ui/quick-test.md
     - Try-On:
       - Installation: sdk/android/tryon/installation.md
+      - Usage: sdk/android/tryon/usage.md
     - Analytics:
-      - Installation: sdk/android/analytics/overview.md
+      - Installation: sdk/android/analytics/installation.md
+      - Usage: sdk/android/analytics/usage.md
     - Migrations:
       - Migrate to v4: sdk/android/migrations/migrate-v4.md
     - FAQ: sdk/android/faq.md
@@ -148,7 +150,7 @@ extra:
 
   pub_dev:
     url: https://pub.dev/packages/{package}
-    package: aiuta_flutter # macro: pub_dev_package()
+    package: aiuta_flutter # macro: pub_package()
 
   aiuta:
     url: https://aiuta.com

@@ -16,7 +16,7 @@ The Aiuta Android SDK provides a virtual try-on solution as a [Kotlin Multiplatf
 
 ## Kotlin Multiplatform Support
 
-The following table shows the current platform support status for Aiuta SDK via Kotlin Multiplatform:
+The following table shows the current platform support status for Aiuta SDK via [Kotlin Multiplatform :octicons-link-external-24:](https://www.jetbrains.com/kotlin-multiplatform/){:target="_blank"}
 
 {% include-markdown "sdk/templates/android/kmp-support-table.md" %}
 
@@ -30,6 +30,6 @@ The following table shows the current platform support status for Aiuta SDK via 
 - :fontawesome-brands-github: [Android SDK Sources :octicons-link-external-24:]({{ repo(android) }}){:target="_blank"}
 - :fontawesome-brands-google-play: [Demo Application](/sdk/demo-apps.md)
 - :material-language-kotlin: [API Reference :octicons-link-external-24:]({{ pages(android) }}){:target="_blank"}
-- :fontawesome-brands-github: [Sample App :octicons-link-external-24:]({{ repo(android) }}/tree/main/samples/){:target="_blank"}
+- :fontawesome-brands-github: [Sample App :octicons-link-external-24:]({{ repo(android, path="/tree/main/samples/") }}){:target="_blank"}
 
 </div>
