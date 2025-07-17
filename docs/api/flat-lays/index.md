@@ -1,6 +1,6 @@
 # Flat Lays API
 
-![TryOn](/media/api/flatlay.png){ width=600 }
+![TryOn](/media/products/flat-lays.png){ width=600 }
 
 Instantly convert model images into clean, high‑resolution flat lays
 

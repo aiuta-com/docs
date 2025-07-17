@@ -2,7 +2,6 @@ import os
 import logger
 
 _INDENT = " " * 4 # Proper indent for tabs ===
-_TITLE_MAX_LENGTH = 7 # Maximum length of the tab title
 
 def gen_test_products(template_path, products, api_key, url_indent=2, images_width=100):
     logger.log(f"Generating {len(products)} test products with {template_path}")
@@ -27,10 +26,12 @@ def gen_test_products(template_path, products, api_key, url_indent=2, images_wid
         language = ''
     
     results = []
+    counter = 0
     
     # Generate code for all available products
     for product in products:
-        
+        counter += 1
+
         # Format image_urls as a proper array string for the target language
         image_urls = product['image_urls']
         if isinstance(image_urls, list):
@@ -62,12 +63,7 @@ def gen_test_products(template_path, products, api_key, url_indent=2, images_wid
         else:
             markdown_images = f'{_INDENT}![img]({product["image_urls"]}){{ width=100 }}'
         
-        # Truncate title to _TITLE_MAX_LENGTH characters and add … if needed
-        title = product['title']
-        if len(title) > _TITLE_MAX_LENGTH:
-            title = title[:_TITLE_MAX_LENGTH] + "…"
-        
-        result = f"""=== "{title}"
+        result = f"""=== "Product {counter}"
 
 {_INDENT}```{language}
 {indented_code}
