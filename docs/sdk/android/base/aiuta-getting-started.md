@@ -53,7 +53,7 @@ To configure authentication, you need to provide an implementation of the authen
 
 !!! info "General configuration"
 
-    You can find a more detailed description of API keys and JWT authentication in the SDK, as well as instructions on how to obtain them, in the [general configuration guide for developers](../../about/developer/configuration.md#auth)
+    You can find a more detailed description of API keys and JWT authentication in the SDK, as well as instructions on how to obtain them, in the [general configuration guide for developers](/sdk/developer/configuration/auth.md)
 
 
 ## Platform Context

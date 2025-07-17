@@ -86,12 +86,12 @@ This leads to the same result but is easier to maintain in the future.
 === ":material-check: Root-relative"
 
     ``` markdown
-    [About SDK](/sdk/)
+    [About SDK](/sdk/index.md)
 
     ![img](/media/about.png){ width=100 }
     ```
     <div class="result" markdown>
-    [About SDK](/sdk/)
+    [About SDK](/sdk/index.md)
 
     ![img](/media/about.png){ width=100 }
     </div>        

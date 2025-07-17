@@ -70,7 +70,7 @@ hide:
         You can override them in this configuration object
 
 !!! example
-    See [API Reference](/api/reference) page
+    See [API Reference](/api/try-on/reference.md) page
 
 !!! warning "Do not use `SwaggerUIBundle`"
     Always use custom `SwaggerUI` wrapper from the `swagger-ui.html` template as it is compartible with [instant loading :octicons-link-external-24:](https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading){:target="_blank"} and initializes `SwaggerUIBundle` internally when possible

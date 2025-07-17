@@ -8,7 +8,7 @@ hide:
 
 ![component](/media/components/snack-error.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/#theme) Error Snackbar
+## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Error Snackbar
 
 ```typescript
 ErrorSnackbarTheme {

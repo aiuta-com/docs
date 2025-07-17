@@ -8,7 +8,7 @@ hide:
 
 ![component](/media/components/power-bar.png){ width=120 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/#theme) Power Bar
+## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Power Bar
 
 ```typescript
 PowerBarTheme {

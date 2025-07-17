@@ -4,7 +4,7 @@ Sets up [:material-window-open: the onboarding](/sdk/about/pages/onboarding.md) 
 
 ![How It Works](/media/pages/how-it-works.png){ width=220 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features.md#features) Onboarding Feature
+## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Onboarding Feature
 ```typescript
 OnboardingFeature {
   howItWorksPage: OnboardingHowItWorksPageFeature // (1)!

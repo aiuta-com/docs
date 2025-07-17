@@ -8,7 +8,7 @@ Appearance and customization of loading indicators.
 
 ![Activity Indicator](/media/components/activity-indicator.png){ width=30}
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/#theme) Activity Indicator
+## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Activity Indicator
 
 ```typescript
 ActivityIndicatorTheme {

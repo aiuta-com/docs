@@ -5,7 +5,7 @@ Configures the core virtual try-on functionality for trying products virtually.
 ![Loading Screen](/media/pages/loading-screen.png){width=120}
 ![Results Screen](/media/pages/results.png){width=120}
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/#features) Try On Feature
+## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Try On Feature
 
 ```typescript
 TryOnFeature {
@@ -245,10 +245,6 @@ GeneratedImage {
 1.  A unique string identifier assigned to the image by the Aiuta API, ensuring each image can be distinctly recognized and referenced within the system.
 2.  The URL pointing to the location of the image resource, which can be accessed and retrieved by the SDK to present in the UI.
 3.  The type of the image [owner :octicons-arrow-down-24:](#owner-type).
-    
-    !!! warning ""
-        Please refer to this section in case of using custom [`dataProvider` for the generations history](configuration.md#generations-history)
-
 4.  A list of product identifiers that were utilized during the image generation process. Each identifier corresponds to a specific product involved in the try-on session, allowing for precise tracking and reference within the system.
 
 Generated images represent the results of try-on sessions. These images are generated based on either a photo uploaded by the user or a predefined model image provided by Aiuta.

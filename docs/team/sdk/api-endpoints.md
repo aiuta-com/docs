@@ -16,4 +16,4 @@ Append paths like `/uploaded_images`, `/sku_images_operations`, etc.
 
 Append paths like `/ios-sdk-analytics`, `/android-sdk-analytics`, etc.
 
-Use for [custom analytics](/team/sdk/analytics) calls from the SDK.
+Use for [custom analytics](/team/sdk/analytics.md) calls from the SDK.

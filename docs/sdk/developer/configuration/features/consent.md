@@ -9,7 +9,7 @@ Manages user [:material-window-open: consent](/sdk/about/pages/consent.md) optio
 ![Consent](/media/pages/consent-explicit.png){width=120}
 ![How It Works](/media/pages/how-it-works-1.png){ width=120 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/#features) Consent Feature
+## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Consent Feature
 
 === "Standalone Onboarding Page"
     ```typescript

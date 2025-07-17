@@ -6,7 +6,7 @@ Controls [:material-window-open: the image selection interface](/sdk/about/pages
 ![Image Picker](/media/pages/image-picker-bottom-sheet.png){width=120}
 ![Image Picker](/media/pages/image-picker-history-last.png){width=120}
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/#features) Image Picker Feature
+## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Image Picker Feature
 
 ```typescript
 ImagePickerFeature {
@@ -167,9 +167,6 @@ InputImage {
 1.  A unique string identifier assigned to the image by the Aiuta API, ensuring each image can be distinctly recognized and referenced within the system.
 2.  The URL pointing to the location of the image resource, which can be accessed and retrieved by the SDK to present in the UI.
 3.  The type of the image [owner :octicons-arrow-down-24:](#owner-type).
-    
-    !!! warning ""
-        Please refer to this section in case of using custom [`dataProvider` for the uploads history](configuration.md#uploads-history)
 
 Input images used in the Aiuta SDK for try-on sessions can either be uploaded by users, such as photos taken with their camera or selected from their gallery, or they can be predefined model images provided by Aiuta.
 

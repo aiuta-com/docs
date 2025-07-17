@@ -4,12 +4,12 @@ hide:
 ---
 # Auth Schemes
 
-Auth is used to authenticate requests from Aiuta SDK to [API](/api/try-on/workflow) with your credentials.
+Auth is used to authenticate requests from Aiuta SDK to [API](/api/try-on/workflow.md) with your credentials.
 
 !!! info ""
-    Using JSON Web Tokens (JWT) is the most flexible and secure way to access Aiuta services, while the ApiKey authentication method is best used for server-side integration. But it's up to you. :material-book-open-variant: Read more about [API Authentication](/api/getting-started/#authentication).
+    Using JSON Web Tokens (JWT) is the most flexible and secure way to access Aiuta services, while the ApiKey authentication method is best used for server-side integration. But it's up to you. :material-book-open-variant: Read more about [API Authentication](/api/getting-started.md#authentication).
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/#configuration) Auth
+## [:material-arrow-up-left:](/sdk/developer/configuration/index.md#configuration) Auth
 
 === "Jwt"
     ```typescript
@@ -21,9 +21,9 @@ Auth is used to authenticate requests from Aiuta SDK to [API](/api/try-on/workfl
 
     1. Should be provided for the SDK to make unsecured requests related to your account.
 
-        !!! doc "Please see [Obtaining credentials](/api/getting-started/#obtaining-credentials) for instructions on how to get your `subscriptionId`"
+        !!! doc "Please see [Obtaining credentials](/api/getting-started.md#obtaining-credentials) for instructions on how to get your `subscriptionId`"
 
-    2. The implementation of this method should securely generate the JWT [on the server side](/api/server-side-auth-component/) and subsequently return it to the SDK.
+    2. The implementation of this method should securely generate the JWT [on the server side](/api/server-side-auth-component.md) and subsequently return it to the SDK.
 
         !!! success "Returns"
             Non-empty string representing the generated JWT
@@ -37,8 +37,8 @@ Auth is used to authenticate requests from Aiuta SDK to [API](/api/try-on/workfl
 
     !!! doc "Please see"
 
-        - [Obtaining credentials](/api/getting-started/#obtaining-credentials)
-        - [Implementing the backend component](/api/server-side-auth-component/)
+        - [Obtaining credentials](/api/getting-started.md#obtaining-credentials)
+        - [Implementing the backend component](/api/server-side-auth-component.md)
 
     === "`getJwt`"
 
@@ -71,7 +71,7 @@ Auth is used to authenticate requests from Aiuta SDK to [API](/api/try-on/workfl
 
     ## Details
 
-    !!! doc "Please see [API documentation](/api/getting-started/#obtaining-credentials) Obtaining credentials section for instructions on how to get your `apiKey`"
+    !!! doc "Please see [API documentation](/api/getting-started.md#obtaining-credentials) Obtaining credentials section for instructions on how to get your `apiKey`"
 
     The `apiKey` is used to authenticate all outgoing requests from the Aiuta SDK to the Aiuta API. This key ensures that the requests are linked to your account, allowing the SDK to access the necessary resources and services provided by Aiuta. 
 

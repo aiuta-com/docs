@@ -14,7 +14,7 @@ SubscriptionDetails {
 }
 ```
 
-1. Controls the behavior of the [“Powered by Aiuta” label](../../sdk/about/developer/user-interface.md#powered-by) that may be present on some SDK screens (e.g. the progress animation screen).
+1. Controls the behavior of the [“Powered by Aiuta” label](/sdk/developer/configuration/ui/theme/powered-by.md) that may be present on some SDK screens (e.g. the progress animation screen).
 
     !!! example "Defaults"
         ```typescript

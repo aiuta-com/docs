@@ -8,7 +8,7 @@ Defines the color scheme, brand colors, and various color states for UI elements
 
 ![component](/media/components/colors-brand.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/#theme) Color Theme
+## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Color Theme
 
 ```typescript
 ColorTheme {

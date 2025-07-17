@@ -8,7 +8,7 @@ Buttons styles, including typography and shape configurations for different butt
 
 ![component](/media/components/button-brand.png){ width=130 } ![component](/media/components/button-contrast-inverted.png){ width=150 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/#theme) Button
+## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Button
 
 ```typescript
 ButtonTheme {

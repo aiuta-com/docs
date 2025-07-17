@@ -6,7 +6,7 @@ hide:
 
 Enables sharing capabilities for generated try-on images with customizable options.
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/#features) Share Feature
+## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Share Feature
 ```typescript
 ShareFeature {
   watermark: ShareWatermarkFeature | null // (1)!

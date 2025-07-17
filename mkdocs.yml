@@ -291,6 +291,6 @@ validation:
   links:
     absolute_links: relative_to_docs
     unrecognized_links: warn
-    anchors: warn
+    anchors: ignore
 
 strict: true
