@@ -2,7 +2,6 @@
 title: Digital Try On
 template: swagger-ui.html
 hide:
-#   - navigation
   - toc
 ---
 

@@ -8,7 +8,7 @@ Shapes, sizes, and error state icon for image views.
 
 ![component](/media/components/images.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/#theme) Image
+## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Image
 
 ```typescript
 ImageTheme {

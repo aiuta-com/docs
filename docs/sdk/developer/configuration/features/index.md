@@ -6,7 +6,7 @@ hide:
 
 Describes the set of features enabled in the SDK for the users and thier interaction with the app.
     
-## [:material-arrow-up-left:](/sdk/developer/configuration/#configuration) Features
+## [:material-arrow-up-left:](/sdk/developer/configuration/index.md#configuration) Features
 
 ```typescript
 Features {

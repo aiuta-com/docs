@@ -6,7 +6,7 @@ hide:
 
 The `DebugSettings` is helping to manage and troubleshoot the SDK's behavior. It provides a set of options that control logging and validation policies, ensuring that the SDK operates smoothly and any issues can be quickly identified and resolved.
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/#configuration) Debug Settings
+## [:material-arrow-up-left:](/sdk/developer/configuration/index.md#configuration) Debug Settings
 
 ```typescript
 DebugSettings {

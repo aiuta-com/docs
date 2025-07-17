@@ -41,7 +41,7 @@ SDK v4 introduces several new packages to provide better modularity and feature 
 
 ## New SDK Configuration Approach
 
-SDK v4.1.0 [introduces](https://github.com/aiuta-com/aiuta-android-sdk/releases/tag/4.1.0) a new, unified way to configure the SDK using the `AiutaConfiguration` class. This approach provides a more flexible and modular configuration scheme for features and UI customization. See the full guide [here](/sdk/android/tryon-ui/configuration/).
+SDK v4.1.0 [introduces](https://github.com/aiuta-com/aiuta-android-sdk/releases/tag/4.1.0) a new, unified way to configure the SDK using the `AiutaConfiguration` class. This approach provides a more flexible and modular configuration scheme for features and UI customization. See the full guide [here](/sdk/android/tryon-ui/configuration.md).
 
 ## Kotlin Multiplatform (KMP) Support
 

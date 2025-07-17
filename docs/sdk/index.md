@@ -22,6 +22,6 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
 If you prefer even more control over the implementation or have specific requirements, you can use the Aiuta API directly. This approach gives you complete flexibility in building your custom virtual try-on solution.
 
-!!! doc "Learn more about [Aiuta Virtual Try-On API](/api/try-on)"
+!!! doc "Learn more about [Aiuta Virtual Try-On API](/api/try-on/index.md)"
 
     Aiuta SDK is built on top of the same API, providing a pre-built UI layer and additional convenience features while maintaining the same core functionality.

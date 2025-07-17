@@ -5,7 +5,7 @@ hide:
 
 # Installation
 
-Use [Aiuta Flutter SDK package :octicons-link-external-24:](https://pub.dev/packages/aiuta_flutter/install){:target="_blank"} as a library to integrate into your application.
+Use [Aiuta Flutter SDK package :octicons-link-external-24:]({{ pub_package("install") }}){:target="_blank"} as a library to integrate into your application.
 
 ## Depend on it
 
@@ -19,7 +19,7 @@ This will add a line like this to your package's `pubspec.yaml` (and run an impl
 
 ```yaml
 dependencies:
-  aiuta_flutter: ^{{ latest_flutter() }}
+  aiuta_flutter: ^{{ latest(flutter) }}
 ```
 
 !!! tip ""
@@ -37,6 +37,7 @@ import 'package:aiuta_flutter/aiuta_flutter.dart';
 
 <div class="grid cards" markdown>
 
-- :octicons-arrow-right-24: &nbsp; Initialize with [Configuration](configuration.md)
+- :octicons-arrow-right-24: [Quick Test](/sdk/flutter/quick-test.md) SDK Propely Integrated
+- :octicons-arrow-right-24: &nbsp; Initialize with [Configuration](/sdk/flutter/configuration.md)
 
 </div>

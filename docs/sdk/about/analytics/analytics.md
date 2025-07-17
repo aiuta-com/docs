@@ -26,7 +26,7 @@ Identifiers to track navigation pages, products, and 3rd party apps in the Aiuta
 
 | Page | Description |
 | :--- | :---------- |
-| `welcome` | Optional [Welcome Screen](../pages/welcome-screen.md) that introduces users to the SDK functionality<br>and provides an entry point to start the try-on process |
+| `welcome` | Optional [Welcome Screen](/sdk/about/pages/welcome-screen.md) that introduces users to the SDK functionality<br>and provides an entry point to start the try-on process |
 | `howItWorks` | Informational screen explaining the virtual try-on process,<br>including samples of expected outcomes |
 | `bestResults` | Guide screen showing best practices for achieving optimal<br>try-on results with example images and tips |
 | `consent` | Screen for obtaining user consent for data processing and<br>privacy policy acceptance in standalone mode |
@@ -55,7 +55,7 @@ Types, except for `page`, `exit`, `configure` and `session`, contain an `event` 
 
 | Event | Parameters | Description | 
 |-------|------------|-------------|
-| `welcomeStartClicked` | :material-minus: | Initial interaction with the [Welcome Screen](../pages/welcome-screen.md), indicating<br>user's intent to begin the try-on process |
+| `welcomeStartClicked` | :material-minus: | Initial interaction with the [Welcome Screen](/sdk/about/pages/welcome-screen.md), indicating<br>user's intent to begin the try-on process |
 | `onboardingFinished` | :material-minus: | Completion of all onboarding steps |
 | `consentsGiven` | `consentIds` | Explicit acceptance of required consents, including<br>data processing and privacy policy agreements |
 
@@ -85,8 +85,8 @@ Types, except for `page`, `exit`, `configure` and `session`, contain an `event` 
 | `photoUploaded` | :material-minus: | Successful upload of a selected or captured<br>photo for processing |
 | `tryOnStarted` | :material-minus: | Initiation of the virtual try-on process with<br>the selected image |
 | `tryOnFinished` | `uploadDuration`<br>`tryOnDuration`<br>`downloadDuration`<br>`totalDuration` [^1] | Successful completion of the virtual try-on<br>process with generated results<br>`Duration` of each step and the entire process<br>in seconds (floating-point) |
-| `tryOnAborted` | [`abortReason`](errors.md#aborts) | Cancellation of the try-on process before<br>completion |
-| `tryOnError` | [`errorType`](errors.md#errors)<br>`errorMessage` | Occurrence of an error during the try-on process,<br>requiring user attention. `errorMessage` contains<br>information for developers and is not for users |
+| `tryOnAborted` | [`abortReason`](errors.md#try-on-aborts) | Cancellation of the try-on process before<br>completion |
+| `tryOnError` | [`errorType`](errors.md#try-on-errors)<br>`errorMessage` | Occurrence of an error during the try-on process,<br>requiring user attention. `errorMessage` contains<br>information for developers and is not for users |
 
 ### Results
 
@@ -125,21 +125,21 @@ Types, except for `page`, `exit`, `configure` and `session`, contain an `event` 
 
 | Parameter |
 |-----------|
-| [`authType`](../developer/configuration.md#auth) |
-| [`welcomeScreenFeatureEnabled`](../developer/features.md#welcome-screen) |
-| [`onboardingFeatureEnabled`](../developer/features.md#onboarding) |
-| [`consentFeatureType`](../developer/features.md#consent) |
-| [`imagePickerCameraFeatureEnabled`](../developer/features.md#camera) |
-| [`imagePickerPredefinedModelFeatureEnabled`](../developer/features.md#predefined-models) |
-| [`imagePickerUploadsHistoryFeatureEnabled`](../developer/features.md#uploads-history) |
-| [`tryOnFitDisclaimerFeatureEnabled`](../developer/features.md#fit-disclaimer) |
-| [`tryOnFeedbackFeatureEnabled`](../developer/features.md#feedback) |
-| [`tryOnFeedbackOtherFeatureEnabled`](../developer/features.md#other) |
-| [`tryOnGenerationsHistoryFeatureEnabled`](../developer/features.md#generations-history) |
-| [`tryOnWithOtherPhotoFeatureEnabled`](../developer/features.md#other-photo) |
-| [`shareFeatureEnabled`](../developer/features.md#share) |
-| [`shareWatermarkFeatureEnabled`](../developer/features.md#watermark) |
-| [`wishlistFeatureEnabled`](../developer/features.md#wishlist) |
+| [`authType`](/sdk/developer/configuration/auth.md) |
+| [`welcomeScreenFeatureEnabled`](/sdk/developer/configuration/features/welcome-screen.md) |
+| [`onboardingFeatureEnabled`](/sdk/developer/configuration/features/onboarding.md) |
+| [`consentFeatureType`](/sdk/developer/configuration/features/consent.md) |
+| [`imagePickerCameraFeatureEnabled`](/sdk/developer/configuration/features/image-picker.md#camera) |
+| [`imagePickerPredefinedModelFeatureEnabled`](/sdk/developer/configuration/features/image-picker.md#predefined-models) |
+| [`imagePickerUploadsHistoryFeatureEnabled`](/sdk/developer/configuration/features/image-picker.md#uploads-history) |
+| [`tryOnFitDisclaimerFeatureEnabled`](/sdk/developer/configuration/features/try-on.md#fit-disclaimer) |
+| [`tryOnFeedbackFeatureEnabled`](/sdk/developer/configuration/features/try-on.md#feedback) |
+| [`tryOnFeedbackOtherFeatureEnabled`](/sdk/developer/configuration/features/try-on.md#other) |
+| [`tryOnGenerationsHistoryFeatureEnabled`](/sdk/developer/configuration/features/try-on.md#generations-history) |
+| [`tryOnWithOtherPhotoFeatureEnabled`](/sdk/developer/configuration/features/try-on.md#other-photo) |
+| [`shareFeatureEnabled`](/sdk/developer/configuration/features/share.md) |
+| [`shareWatermarkFeatureEnabled`](/sdk/developer/configuration/features/share.md#watermark) |
+| [`wishlistFeatureEnabled`](/sdk/developer/configuration/features/wishlist.md) |
 
 
 ### Session

@@ -10,15 +10,15 @@ The Aiuta iOS SDK provides a virtual try-on solution as a native implementation 
 
 ## Quick Start
 
-1. [Installation](installation.md)
-2. [Configuration](configuration.md)
-3. [Basic Usage](basic-usage.md)
+1. [Installation](/sdk/ios/installation.md)
+2. [Configuration](/sdk/ios/configuration.md)
+3. [Basic Usage](/sdk/ios/basic-usage.md)
 
 ## Sources and Demo
 
 <div class="grid cards" markdown>
 
-- :fontawesome-brands-github: [iOS SDK Sources :octicons-link-external-24:]({{ repo_ios() }}){:target="_blank"}
+- :fontawesome-brands-github: [iOS SDK Sources :octicons-link-external-24:]({{ repo(ios) }}){:target="_blank"}
 - :fontawesome-brands-app-store-ios: [Demo Application](/sdk/demo-apps.md)
 
 </div>

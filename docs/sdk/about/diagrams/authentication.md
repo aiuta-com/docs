@@ -4,7 +4,7 @@ hide:
 ---
 # Request Authentication
 
-Authentication is mandatory for some calls, such as starting image generation, and optional for other trivial calls, such as checking the status of an operation. Based on [the configuration provided](/sdk/about/developer/configuration/#configuration), the SDK will select the request authentication scheme according to the following table
+Authentication is mandatory for some calls, such as starting image generation, and optional for other trivial calls, such as checking the status of an operation. Based on [the configuration provided](/sdk/developer/configuration/auth.md), the SDK will select the request authentication scheme according to the following table
 
 | Auth | Mandatory | Optional |
 | ---- | --- | ------ |
@@ -14,7 +14,7 @@ Authentication is mandatory for some calls, such as starting image generation, a
 !!! info "Preferred authentication type"
     Using JSON Web Tokens (JWT) is the most flexible and secure way to access the Aiuta services, while the ApiKey authentication method is best used only for server-side integration. But it's up to you. 
     
-    :material-book-open-variant:{ .lg } Read more about [API Authentication](/api/getting-started/#authentication)
+    :material-book-open-variant:{ .lg } Read more about [API Authentication](/api/getting-started.md#authentication)
 
 
 Here are all authentication sequence options for requests sent by the SDK to the Aiuta API.
@@ -24,15 +24,15 @@ Here are all authentication sequence options for requests sent by the SDK to the
 
     !!! doc "See also" 
 
-        - [the JwtAuth configuration scheme](/sdk/about/developer/configuration/#__tabbed_1_2) in the SDK
-        - [JWT server-side auth example](/api/server-side-auth-component/) for more details on securely generating JWTs
+        - [the JwtAuth configuration scheme](/sdk/developer/configuration/auth.md#__tabbed_1_1) in the SDK
+        - [JWT server-side auth example](/api/server-side-auth-component.md) for more details on securely generating JWTs
 
 === "`JwtAuth` • `subscriptionId`"
     {% include-markdown "sdk/templates/diagrams/auth-subscription-id.md" %}
 
     !!! doc "See also"
-        - [the JwtAuth configuration scheme](/sdk/about/developer/configuration/#__tabbed_1_2) in the SDK 
-        - [API documentation obtaining credentials](/api/getting-started/#obtaining-credentials) section for instructions on how to find your `subscriptionId`
+        - [the JwtAuth configuration scheme](/sdk/developer/configuration/auth.md#__tabbed_1_1) in the SDK 
+        - [API documentation obtaining credentials](/api/getting-started.md#obtaining-credentials) section for instructions on how to find your `subscriptionId`
 
 
 === "`ApiKeyAuth` • `apiKey`"
@@ -40,5 +40,5 @@ Here are all authentication sequence options for requests sent by the SDK to the
 
     !!! doc "See also"
     
-        - [the ApiKeyAuth configuration scheme](/sdk/about/developer/configuration/#__tabbed_1_1) in the SDK
-        - [API documentation obtaining credentials](/api/getting-started/#obtaining-credentials) section for instructions on how to get your `apiKey`
+        - [the ApiKeyAuth configuration scheme](/sdk/developer/configuration/auth.md#__tabbed_1_2) in the SDK
+        - [API documentation obtaining credentials](/api/getting-started.md#obtaining-credentials) section for instructions on how to get your `apiKey`

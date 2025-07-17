@@ -201,14 +201,14 @@ The following analytics events may be tracked during results interaction:
 
 | Type | Event | Page Id | Description |
 |------|-------|---------|-------------|
-| [`page`](../analytics/analytics.md#event-categories) | :material-minus: | [`results`](../analytics/analytics.md#page-identifiers) | Results screen opened |
-| [`results`](../analytics/analytics.md#event-categories) | [`resultShared`](../analytics/analytics.md#results-events) | [`results`](../analytics/analytics.md#page-identifiers) | Try-on result was shared |
-| [`results`](../analytics/analytics.md#event-categories) | [`productAddToWishlist`](../analytics/analytics.md#results-events) | [`results`](../analytics/analytics.md#page-identifiers) | Product was added to wishlist |
-| [`results`](../analytics/analytics.md#event-categories) | [`productAddToCart`](../analytics/analytics.md#results-events) | [`results`](../analytics/analytics.md#page-identifiers) | Product was added to cart |
-| [`results`](../analytics/analytics.md#event-categories) | [`pickOtherPhoto`](../analytics/analytics.md#results-events) | [`results`](../analytics/analytics.md#page-identifiers) | User requested to try with different photo |
-| [`feedback`](../analytics/analytics.md#event-categories) | [`positive`](../analytics/analytics.md#feedback-events) | [`results`](../analytics/analytics.md#page-identifiers) | User provided positive feedback |
-| [`feedback`](../analytics/analytics.md#event-categories) | [`negative`](../analytics/analytics.md#feedback-events) | [`results`](../analytics/analytics.md#page-identifiers) | User provided negative feedback |
-| [`exit`](../analytics/analytics.md#event-categories) | :material-minus: | [`results`](../analytics/analytics.md#page-identifiers) | SDK was closed on the results screen |
+| [`page`](../analytics/analytics.md#event-types) | :material-minus: | [`results`](../analytics/analytics.md#page) | Results screen opened |
+| [`results`](../analytics/analytics.md#event-types) | [`resultShared`](../analytics/analytics.md#results) | [`results`](../analytics/analytics.md#page) | Try-on result was shared |
+| [`results`](../analytics/analytics.md#event-types) | [`productAddToWishlist`](../analytics/analytics.md#results) | [`results`](../analytics/analytics.md#page) | Product was added to wishlist |
+| [`results`](../analytics/analytics.md#event-types) | [`productAddToCart`](../analytics/analytics.md#results) | [`results`](../analytics/analytics.md#page) | Product was added to cart |
+| [`results`](../analytics/analytics.md#event-types) | [`pickOtherPhoto`](../analytics/analytics.md#results) | [`results`](../analytics/analytics.md#page) | User requested to try with different photo |
+| [`feedback`](../analytics/analytics.md#event-types) | [`positive`](../analytics/analytics.md#feedback) | [`results`](../analytics/analytics.md#page) | User provided positive feedback |
+| [`feedback`](../analytics/analytics.md#event-types) | [`negative`](../analytics/analytics.md#feedback) | [`results`](../analytics/analytics.md#page) | User provided negative feedback |
+| [`exit`](../analytics/analytics.md#event-types) | :material-minus: | [`results`](../analytics/analytics.md#page) | SDK was closed on the results screen |
 
 ---
 

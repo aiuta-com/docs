@@ -8,7 +8,7 @@ import AiutaSDK
 
 ## Setup
 
-First, make sure you've configured the SDK as described in the [Configuration](configuration.md) guide.
+First, make sure you've configured the SDK as described in the [Configuration](/sdk/ios/configuration.md) guide.
 
 ```swift
 await Aiuta.setup(configuration: Aiuta.Configuration) // (1)!
@@ -16,7 +16,7 @@ await Aiuta.setup(configuration: Aiuta.Configuration) // (1)!
 
 1. Your configuration for Aiuta
 
-    !!! doc "Please refer to the [Configuration](configuration.md) guide."
+    !!! doc "Please refer to the [Configuration](/sdk/ios/configuration.md) guide."
 
 ## Virtual Try-On
 

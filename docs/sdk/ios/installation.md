@@ -16,9 +16,9 @@ Integrate [Aiuta iOS SDK :octicons-link-external-24:](https://github.com/aiuta-c
         - File > Add Package Dependencies...
         - Enter Package URL:
         ```
-        {{ repo_ios() }}
+        {{ repo(ios, git_suffix=true) }}
         ```
-        - Select Dependency Rule `Up to Next Major` with `{{ latest_ios() }}`
+        - Select Dependency Rule `Up to Next Major` with `{{ latest(ios) }}`
         - Add Package to your project
 
         ![xcode](/media/sdk/ios-xcode.png){ width=550 }
@@ -28,7 +28,7 @@ Integrate [Aiuta iOS SDK :octicons-link-external-24:](https://github.com/aiuta-c
         Add AiutaSdk `package` to the `dependencies` value of your `package`
 
         ```swift
-        .package(url: "{{ repo_ios() }}", from: "{{ latest_ios() }}")
+        .package(url: "{{ repo(ios, git_suffix=true) }}", from: "{{ latest(ios) }}")
         ```
 
         Add AiutaSdk `product` to the `dependencies` value of your `target`
@@ -47,7 +47,7 @@ Integrate [Aiuta iOS SDK :octicons-link-external-24:](https://github.com/aiuta-c
     use_frameworks!
 
     target 'MyApp' do
-      pod 'AiutaSdk', '~> {{ latest_ios() }}'
+      pod 'AiutaSdk', '~> {{ latest(ios) }}'
     end
     ```
 

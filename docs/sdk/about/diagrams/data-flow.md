@@ -4,7 +4,7 @@ hide:
 ---
 # Data Flow
 
-Overview sequence diagram covers the handling of user data. It shows a simplified process from obtaining user consent to uploading and displaying images, highlighting the roles of the user, your app, backend services, Aiuta SDK and API. You can view also [the complete interaction sequence](/sdk/about/diagrams/interaction-sequence/) diagrams.
+Overview sequence diagram covers the handling of user data. It shows a simplified process from obtaining user consent to uploading and displaying images, highlighting the roles of the user, your app, backend services, Aiuta SDK and API. You can view also [the complete interaction sequence](/sdk/about/diagrams/interaction-sequence.md) diagrams.
 
 !!! info "Anonymous photos" 
     We do not process any user data other than photos, do not request your user IDs, and all uploaded images remain anonymous to us.
@@ -43,4 +43,4 @@ sequenceDiagram
 ```
 
 !!! info "Access tokens"
-    Depending on the storage type and access levels set, the URL in the Aiuta API response <span class="md-sequence-number">8</span> may contain a temporary access token so that the SDK has time to download <span class="md-sequence-number">9</span> the results and <span class="md-sequence-number">12</span> show them to the user before access to that URL is expired. For further use <span class="md-sequence-number">11</span> under the control of your app and to provide historical data for display in the SDK when using data providers ([uploaded](/sdk/about/developer/configuration/#uploads-history) and [generated](/sdk/about/developer/configuration/#generations-history)), your application must ensure access by refreshing the tokens in the URLs so that the image will be accessible to the SDK without additional authentication.
+    Depending on the storage type and access levels set, the URL in the Aiuta API response <span class="md-sequence-number">8</span> may contain a temporary access token so that the SDK has time to download <span class="md-sequence-number">9</span> the results and <span class="md-sequence-number">12</span> show them to the user before access to that URL is expired. For further use <span class="md-sequence-number">11</span> under the control of your app and to provide historical data for display in the SDK when using data providers ([uploaded](/sdk/developer/configuration/features/image-picker.md#uploads-history) and [generated](/sdk/developer/configuration/features/try-on.md#generations-history)), your application must ensure access by refreshing the tokens in the URLs so that the image will be accessible to the SDK without additional authentication.

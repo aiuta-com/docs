@@ -8,7 +8,7 @@ Multi-selection interface for list views, including selection controls and actio
 
 ![component](/media/components/snack-selection.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/#theme) Selection Snackbar
+## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Selection Snackbar
 
 ```typescript
 SelectionSnackbarTheme {

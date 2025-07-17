@@ -8,7 +8,7 @@ Product information display, including typography for product details and option
  
 ![component](/media/components/product-bar.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/#theme) Product Bar
+## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Product Bar
 
 ```typescript
 ProductBarTheme {

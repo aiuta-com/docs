@@ -1,3 +1,6 @@
+---
+render_macros: false
+---
 # CDN Usage
 
 The Aiuta Web SDK is highly configurable to meet your specific needs.

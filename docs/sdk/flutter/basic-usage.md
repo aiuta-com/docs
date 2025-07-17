@@ -40,7 +40,7 @@ final aiuta = Aiuta(
 1. Your configuration for Aiuta
 
     !!! note ""
-        :material-book-open-variant: Please refer to the [configuration scheme](/sdk/developer/configuration/)
+        :material-book-open-variant: Please refer to the [configuration scheme](/sdk/developer/configuration/index.md)
 
 ## Virtual Try-On
 
@@ -66,7 +66,7 @@ class ProductScreen extends StatelessWidget {
 
 1. Your product info for Aiuta
 
-    !!! doc "Please refer to the [product scheme](/sdk/developer/product)"
+    !!! doc "Please refer to the [product scheme](/sdk/developer/product.md)"
 
 ??? question "When does startTryonFlow Future completes?"
 
@@ -116,3 +116,11 @@ You can check at any time whether the SDK UI is currently displayed:
 ```dart
 final isDisplayed = await Aiuta.isForeground;
 ```
+
+## Next Step
+
+<div class="grid cards" markdown>
+
+- :octicons-arrow-right-24: [Try with test products](/sdk/flutter/quick-test.md)
+
+</div>

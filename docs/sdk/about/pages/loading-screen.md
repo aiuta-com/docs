@@ -82,13 +82,13 @@ The following analytics events may be tracked during the loading process:
 
 | Type | Event | Page Id | Description |
 |------|-------|---------|-------------|
-| [`page`](../analytics/analytics.md#event-categories) | :material-minus: | [`loading`](../analytics/analytics.md#page-identifiers) | Loading screen opened |
-| [`tryOn`](../analytics/analytics.md#event-categories) | [`photoUploaded`](../analytics/analytics.md#try-on-events) | [`loading`](../analytics/analytics.md#page-identifiers) | Successful upload of a selected or<br> captured photo for processing |
-| [`tryOn`](../analytics/analytics.md#event-categories) | [`tryOnStarted`](../analytics/analytics.md#try-on-events) | [`loading`](../analytics/analytics.md#page-identifiers) | Initiation of the virtual try-on process<br>with the selected image |
-| [`tryOn`](../analytics/analytics.md#event-categories) | [`tryOnFinished`](../analytics/analytics.md#try-on-events) | [`loading`](../analytics/analytics.md#page-identifiers) | Successful completion of the virtual try-on<br>process with generated results |
-| [`tryOn`](../analytics/analytics.md#event-categories) | [`tryOnAborted`](../analytics/analytics.md#try-on-events) | [`loading`](../analytics/analytics.md#page-identifiers) | Try-on process was aborted by the Aiuta<br>backend due to an invalid input image |
-| [`tryOn`](../analytics/analytics.md#event-categories) | [`tryOnError`](../analytics/analytics.md#try-on-events) | [`loading`](../analytics/analytics.md#page-identifiers) | Occurrence of an error during the try-on process |
-| [`exit`](../analytics/analytics.md#event-categories) | :material-minus: | [`loading`](../analytics/analytics.md#page-identifiers) | SDK was closed on the loading screen |
+| [`page`](../analytics/analytics.md#event-types) | :material-minus: | [`loading`](../analytics/analytics.md#page) | Loading screen opened |
+| [`tryOn`](../analytics/analytics.md#event-types) | [`photoUploaded`](../analytics/analytics.md#try-on) | [`loading`](../analytics/analytics.md#page) | Successful upload of a selected or<br> captured photo for processing |
+| [`tryOn`](../analytics/analytics.md#event-types) | [`tryOnStarted`](../analytics/analytics.md#try-on) | [`loading`](../analytics/analytics.md#page) | Initiation of the virtual try-on process<br>with the selected image |
+| [`tryOn`](../analytics/analytics.md#event-types) | [`tryOnFinished`](../analytics/analytics.md#try-on) | [`loading`](../analytics/analytics.md#page) | Successful completion of the virtual try-on<br>process with generated results |
+| [`tryOn`](../analytics/analytics.md#event-types) | [`tryOnAborted`](../analytics/analytics.md#try-on) | [`loading`](../analytics/analytics.md#page) | Try-on process was aborted by the Aiuta<br>backend due to an invalid input image |
+| [`tryOn`](../analytics/analytics.md#event-types) | [`tryOnError`](../analytics/analytics.md#try-on) | [`loading`](../analytics/analytics.md#page) | Occurrence of an error during the try-on process |
+| [`exit`](../analytics/analytics.md#event-types) | :material-minus: | [`loading`](../analytics/analytics.md#page) | SDK was closed on the loading screen |
 
 ---
 

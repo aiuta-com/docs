@@ -8,7 +8,7 @@ Navigation bar appearance, including title styling and navigation button icons.
 
 ![component](/media/components/pagebar-std.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/#theme) Page Bar
+## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Page Bar
 
 ```typescript
 PageBarTheme {
@@ -37,8 +37,8 @@ PageBarTheme {
 
         === "Default &nbsp; `false`"
 
-            ![PageBar](../../../../media/components/pagebar-std.png){ width=450 }
+            ![PageBar](/media/components/pagebar-std.png){ width=450 }
 
         === "`true`"
 
-            ![PageBar](../../../../media/components/pagebar-rev.png){ width=450 } 
+            ![PageBar](/media/components/pagebar-rev.png){ width=450 } 

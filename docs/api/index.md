@@ -10,7 +10,7 @@ Use Aiuta APIs to give yourself a competitive advantage by embedding the power o
 
 <div class="grid cards" markdown>
 
--   ## [![TryOn](/media/api/tryon.png) __Virtual Try-On__](/api/try-on/)
+-   ## [![TryOn](/media/api/tryon.png) __Virtual Try-On__](/api/try-on/index.md)
 
     ---
 
@@ -20,10 +20,10 @@ Use Aiuta APIs to give yourself a competitive advantage by embedding the power o
 
     :material-book-open-variant:
     <span class="md-cards-links">
-    [Workflow](/api/try-on/workflow/) :octicons-dot-fill-16:{ .xs } [Reference](/api/try-on/reference/)
+    [Workflow](/api/try-on/workflow.md) :octicons-dot-fill-16:{ .xs } [Reference](/api/try-on/reference.md)
     </span>
 
--   ## [![FlatLays](/media/api/flatlay.png) __Flat Lays__](/api/flat-lays/)
+-   ## [![FlatLays](/media/api/flatlay.png) __Flat Lays__](/api/flat-lays/index.md)
 
     ---
 
@@ -33,7 +33,7 @@ Use Aiuta APIs to give yourself a competitive advantage by embedding the power o
 
     :material-book-open-variant:
     <span class="md-cards-links">
-    [Workflow](/api/flat-lays/workflow/) :octicons-dot-fill-16:{ .xs } [Reference](/api/flat-lays/reference/)
+    [Workflow](/api/flat-lays/workflow.md) :octicons-dot-fill-16:{ .xs } [Reference](/api/flat-lays/reference.md)
     </span>
 
 </div>
@@ -48,7 +48,7 @@ Create an account to access the API and obtain your credentials.
 
     ---
 
-    :material-book-open-variant: [Getting started guide](/api/getting-started/)
+    :material-book-open-variant: [Getting started guide](/api/getting-started.md)
     
 -   :simple-statuspage: [View status and incidents](https://aiuta.statuspage.io){:target="_blank"}
 

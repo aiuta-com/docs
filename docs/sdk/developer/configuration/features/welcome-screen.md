@@ -8,7 +8,7 @@ Configures an optional [:material-window-open: welcome screen](/sdk/about/pages/
 
 ![Welcome Screen](/media/pages/welcome.png){width=120}
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features.md#features) Welcome Screen Feature
+## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Welcome Screen Feature
 ```typescript
 WelcomeScreenFeature {
   images {

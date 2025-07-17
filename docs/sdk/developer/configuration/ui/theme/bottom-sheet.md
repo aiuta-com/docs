@@ -8,7 +8,7 @@ Bottom sheet presentation, including grabber appearance and sheet shape for both
 
 ![component](/media/components/bottom-sheet-std.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/#theme) Bottom Sheet
+## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Bottom Sheet
 
 ```typescript
 BottomSheetTheme {

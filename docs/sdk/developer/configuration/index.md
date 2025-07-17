@@ -6,12 +6,6 @@ hide:
 
 The configuration is structured as a hierarchical object that controls various aspects of the SDK's behavior, appearance, and functionality. The configuration is designed to be flexible and extensible, allowing for customization of features, UI elements, and behavior.
 
-??? abstract "Type Definitions & Naming Convention"
-    {% include-markdown "sdk/templates/developer/type-definitions.md" %}
-
-!!! tip "Annotations"
-    Don't miss them - click :material-information-outline: for more details
-
 ## Configuration
 
 ```typescript
@@ -34,8 +28,14 @@ Configuration {
 
 5. [:material-arrow-down-left:](/sdk/developer/configuration/debug-settings.md) Controls the logging settings and validation policies for various parameters.
 
-!!! example "Customization depth"
+!!! example "Default configuration"
     The configuration itself, as well as all themes and most features, have __built-in defaults__ on each platform. You decide how much detail you want to customize the behavior and appearance of the SDK. Starting with a few necessary parameters, ending with every aspect that is provided in the described schemes.
+
+    The __minimum__ configuration for the fastest integration with the standard set of features and default UI requires only the following:
+    
+    - [Authentication](/sdk/developer/configuration/auth.md) credentials
+    - Your Terms of Service URL
+    - Add to [Cart](/sdk/developer/configuration/features/try-on.md#cart) handler
 
 ## Platform specifics
 

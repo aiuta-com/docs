@@ -1,16 +1,22 @@
 # Documentation Convention
 
-In public documentation, we strive to adhere to consistent principles to maintain a coherent structure for describing our products. Work on the convention is still ongoing.
+Our team uses this public documentation to build our products. It serves as a single source of truth to ensure consistent implementation across different platforms.
+We strive to adhere to consistent principles to maintain a coherent structure. Work on the convention is still ongoing.
 
 ## Check before publishing
 
-Documentation is published automatically when merged into the `main` branch. Therefore, before merging a pull request, please check locally that
+Documentation is published automatically when merged into the `main` branch. Therefore, before merging a pull request, please check locally
 
-- all links work
-- all images/icons are displayed
+<div class="annotate" markdown>
+- __ZERO Warning policy__&nbsp; (1)
 - the documentation is easy to read
 - it adheres to accepted conventions
 - you like it
+</div>
+
+1.  !!! danger "Strict mode"
+      MKDocs configuration has `strict` parameter set to `true`. This will cause MkDocs to abort the build on any warnings.
+
 
 ??? question "How to set up a local preview?"
     {% include-markdown "team/docs/local-build.md" %}
@@ -19,9 +25,11 @@ Documentation is published automatically when merged into the `main` branch. The
 
 ### External
 
-#### New tab/window
-
-!!! warning "Always add `{:target="_blank"}`"
+!!! warning "New tab/window"
+    Always add 
+    ```
+    {:target="_blank"}
+    ```
     for an external link to open it in a new tab or window
 
 #### Visual mark    
@@ -78,12 +86,12 @@ This leads to the same result but is easier to maintain in the future.
 === ":material-check: Root-relative"
 
     ``` markdown
-    [About SDK](/sdk/)
+    [About SDK](/sdk/index.md)
 
     ![img](/media/about.png){ width=100 }
     ```
     <div class="result" markdown>
-    [About SDK](/sdk/)
+    [About SDK](/sdk/index.md)
 
     ![img](/media/about.png){ width=100 }
     </div>        

@@ -80,6 +80,6 @@ Authentication is mandatory for some calls such as starting the image generation
 ## Making an API Request
 <div class="grid cards" markdown>
 
-- :material-book-open-variant:{ .lg } [Try out requests in the API reference](/api/try-on/reference/)
+- :material-book-open-variant:{ .lg } [Try out requests in the API reference](/api/try-on/reference.md)
 
 </div>

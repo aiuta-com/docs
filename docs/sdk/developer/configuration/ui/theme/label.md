@@ -8,7 +8,7 @@ Typography and text styling for different label types across the interface.
 
 ![component](/media/components/labels.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/#theme) Label
+## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Label
 
 ```typescript
 LabelTheme {

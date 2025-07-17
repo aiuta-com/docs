@@ -6,7 +6,7 @@ hide:
 
 Enables sharing capabilities for generated try-on images with customizable options.
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/#features) Share Feature
+## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Share Feature
 ```typescript
 ShareFeature {
   watermark: ShareWatermarkFeature | null // (1)!
@@ -32,7 +32,7 @@ ShareFeature {
 4.  Optional `dataProvider` callback function that generates additional text to be shared along with the image.
 
 
-### [:material-arrow-up-left:](#share) Watermark
+### [:material-arrow-up-left:](#share-feature) Watermark
 ```typescript
 ShareWatermarkFeature {
   images {

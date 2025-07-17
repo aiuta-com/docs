@@ -6,7 +6,7 @@ hide:
 
 Integrates with the host app's wishlist functionality for product management.
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/#features) Wishlist Feature
+## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Wishlist Feature
 ```typescript
 WishlistFeature {
   icons {

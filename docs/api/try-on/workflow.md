@@ -42,19 +42,19 @@
     You will receive an object with image `id` and `url` as a result. Use image `id` on the next step to specify the `uploaded_image_id` for generation.
     
     <div class="grid" markdown>
-    [Try uploading an image](/api/try-on/reference/#/default/upload_user_image_uploaded_images_post){ .card }
+    [Try uploading an image](/api/try-on/reference.md#/default/upload_user_image_uploaded_images_post){ .card }
     </div>
 
 
 === "Use predefined model"
-    Use the [list of predefined models](/api/try-on/reference/#/default/get_predefined_try_on_models_predefined_try_on_models_get) API endpoint to retrieve the available models. Each predefined model’s image has an `id`, which is used in the next step to specify the `uploaded_image_id` for generation.
+    Use the [list of predefined models](/api/try-on/reference.md#/default/get_predefined_try_on_models_predefined_try_on_models_get) API endpoint to retrieve the available models. Each predefined model’s image has an `id`, which is used in the next step to specify the `uploaded_image_id` for generation.
 
 ## 2. Create a generation operation request
 Provide `uploaded_image_id` received on the previous step as well as SKU identifiers: `sku_id` and optional `sku_catalog_name` (`"main"` by default).
 You will receive an object with `operation_id` of created image generation operation in case of successful request or an error message otherwise.
 
 <div class="grid cards" markdown>
-- [Try creating a generation operation request](/api/try-on/reference/#/default/generate_sku_images_operations_sku_images_operations_post)
+- [Try creating a generation operation request](/api/try-on/reference.md#/default/generate_sku_images_operations_sku_images_operations_post)
 </div>
 
 ## 3. Get the operation results
@@ -62,5 +62,5 @@ Use an `operation_id` from the previous step to retrieve the operation status. O
 In case of successfully completed operation you will receive `generated_images` with `url` in resulting object. If an error occurred you can check error message in the `error` field.
 
 <div class="grid cards" markdown>
-- [Try getting the operation results](/api/try-on/reference/#/default/get_generate_sku_images_operation_sku_images_operations__operation_id__get)
+- [Try getting the operation results](/api/try-on/reference.md#/default/get_generate_sku_images_operation_sku_images_operations__operation_id__get)
 </div>

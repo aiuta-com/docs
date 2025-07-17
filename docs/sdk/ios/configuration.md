@@ -69,7 +69,7 @@ These presets contain the default appearance, feature set, and behavior.
 
 The Aiuta SDK for iOS employs a standardized configuration scheme for `custom` configuration consistent with our other SDKs. Just as the `Aiuta.Configuration` and its `custom` associated values have been modified to adhere to the naming conventions, all other internal classes will be updated similarly.
 
-!!! doc "Please refer to the [__configuration scheme__](/sdk/developer/configuration/)"
+!!! doc "Please refer to the [__configuration scheme__](/sdk/developer/configuration/index.md)"
 
     !!! example ""
         Example compliance with [User Interface Scheme](/sdk/developer/configuration/ui/index.md)
@@ -89,7 +89,7 @@ The Aiuta SDK for iOS employs a standardized configuration scheme for `custom` c
 
 <div class="grid cards" markdown>
 
-- :octicons-arrow-right-24: Learn how to [initialize and use](basic-usage.md) the SDK
+- :octicons-arrow-right-24: Learn how to [initialize and use](/sdk/ios/basic-usage.md) the SDK
 - :octicons-arrow-right-24: [Try with test configuration](/sdk/ios/quick-test.md)
 
 </div>

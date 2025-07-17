@@ -146,16 +146,16 @@ The Consent feature allows you to collect user permissions for data processing o
 
     | Type | Event | Page Id | Description |
     |------|-------|---------|-------------|
-    | [`page`](../analytics/analytics.md#event-categories) | :material-minus: | [`consent`](../analytics/analytics.md#page-identifiers) | Consent page opened |
-    | [`onboarding`](../analytics/analytics.md#event-categories) | [`consentsGiven`](../analytics/analytics.md#onboarding-events) | [`consent`](../analytics/analytics.md#page-identifiers) | User has given all required consents |
-    | [`exit`](../analytics/analytics.md#event-categories) | :material-minus: | [`consent`](../analytics/analytics.md#page-identifiers) | SDK was closed on the consent page |
+    | [`page`](../analytics/analytics.md#event-types) | :material-minus: | [`consent`](../analytics/analytics.md#page) | Consent page opened |
+    | [`onboarding`](../analytics/analytics.md#event-types) | [`consentsGiven`](../analytics/analytics.md#onboarding) | [`consent`](../analytics/analytics.md#page) | User has given all required consents |
+    | [`exit`](../analytics/analytics.md#event-types) | :material-minus: | [`consent`](../analytics/analytics.md#page) | SDK was closed on the consent page |
 
 
 === "Embedded legal info (default)"
 
     ## Embedded
 
-    ![How It Works](../../../media/pages/how-it-works-1.png){ width=300 }
+    ![How It Works](/media/pages/how-it-works-1.png){ width=300 }
 
     The legal information is displayed at the bottom of the onboarding screen. Users are not required to explicitly accept the terms to proceed.
 

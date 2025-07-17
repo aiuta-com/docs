@@ -1,16 +1,22 @@
-## Import
+# Quick Test
+
+This guide describes how to test the Aiuta SDK in your iOS application after installation.
+It includes steps for setting up the configuration with a demo API key and using example products to start the TryOn.
 
 ```swift
-import AiutaSDK
+import AiutaSdk
 ```
 
 ## Setup
 
-For quick test purposes you can use demo `apiKey`
+For quick test purposes you can use demo `apiKey` auth
 
 ```swift
-await Aiuta.setup(configuration: .debug(auth: .apiKey("{{ aiuta.api.demo_key }}")))
+await Aiuta.setup(configuration: .debug(auth: .apiKey("{{ aiuta.api_key }}")))
 ```
+
+!!! note ""
+    A good place to initialize third-party libraries is usually your application delegate's `application(_:didFinishLaunchingWithOptions:)` - you can setup Aiuta there or right before calling the try-on.
 
 ## Start TryOn
 

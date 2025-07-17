@@ -6,7 +6,7 @@ hide:
 
 The User Interface Scheme defines the configuration options for the presentation style, swipe-to-dismiss policy, and theme settings of the SDK's UI components.
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/#configuration) User Interface
+## [:material-arrow-up-left:](/sdk/developer/configuration/index.md#configuration) User Interface
 
 ```typescript
 UserInterface {
@@ -16,7 +16,7 @@ UserInterface {
 }
 ```
 
-1.  [:material-arrow-down-left:](/sdk/developer/configuration/ui/theme/) Specifies the theme configuration settings that determine the appearance and style of the UI components within the SDK. This includes defining color schemes, typography, and other visual elements to ensure a cohesive and customizable user interface experience.
+1.  [:material-arrow-down-left:](/sdk/developer/configuration/ui/theme/index.md) Specifies the theme configuration settings that determine the appearance and style of the UI components within the SDK. This includes defining color schemes, typography, and other visual elements to ensure a cohesive and customizable user interface experience.
 
 
 ## PresentationStyle
