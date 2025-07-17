@@ -288,9 +288,12 @@ markdown_extensions:
 validation:
   nav:
     omitted_files: ignore
+    not_found: warn
+    absolute_links: warn
   links:
+    not_found: warn
     absolute_links: relative_to_docs
     unrecognized_links: warn
-    anchors: ignore
+    anchors: info
 
 strict: true

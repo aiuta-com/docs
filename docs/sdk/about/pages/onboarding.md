@@ -167,10 +167,10 @@ The following analytics events may be tracked during onboarding:
 
 | Type | Event | Page Id | Description |
 |------|-------|---------|-------------|
-| [`page`](../analytics/analytics.md#event-categories) | :material-minus: | [`howItWorks`](../analytics/analytics.md#page-identifiers)<br>[`bestResults`](../analytics/analytics.md#page-identifiers)<br>[`consent`](../analytics/analytics.md#page-identifiers) | How It Works slide opened<br>Best Results slide opened<br>Consent slide opened |
-| [`onboarding`](../analytics/analytics.md#event-categories) | [`onboardingFinished`](../analytics/analytics.md#onboarding-events) | [`howItWorks`](../analytics/analytics.md#page-identifiers)<br>[`bestResults`](../analytics/analytics.md#page-identifiers)<br>[`consent`](../analytics/analytics.md#page-identifiers) | Completion of all onboarding steps on<br>the last slide according to the configuration |
-| [`onboarding`](../analytics/analytics.md#event-categories) | [`consentsGiven`](../analytics/analytics.md#onboarding-events) | [`consent`](../analytics/analytics.md#page-identifiers) | Refer to the [:octicons-arrow-right-24: Consent](consent.md) page |
-| [`exit`](../analytics/analytics.md#event-categories) | :material-minus: | [`howItWorks`](../analytics/analytics.md#page-identifiers)<br>[`bestResults`](../analytics/analytics.md#page-identifiers)<br>[`consent`](../analytics/analytics.md#page-identifiers) | SDK was closed on one of the onboarding slides |
+| [`page`](../analytics/analytics.md#event-types) | :material-minus: | [`howItWorks`](../analytics/analytics.md#page)<br>[`bestResults`](../analytics/analytics.md#page)<br>[`consent`](../analytics/analytics.md#page) | How It Works slide opened<br>Best Results slide opened<br>Consent slide opened |
+| [`onboarding`](../analytics/analytics.md#event-types) | [`onboardingFinished`](../analytics/analytics.md#onboarding) | [`howItWorks`](../analytics/analytics.md#page)<br>[`bestResults`](../analytics/analytics.md#page)<br>[`consent`](../analytics/analytics.md#page) | Completion of all onboarding steps on<br>the last slide according to the configuration |
+| [`onboarding`](../analytics/analytics.md#event-types) | [`consentsGiven`](../analytics/analytics.md#onboarding) | [`consent`](../analytics/analytics.md#page) | Refer to the [:octicons-arrow-right-24: Consent](consent.md) page |
+| [`exit`](../analytics/analytics.md#event-types) | :material-minus: | [`howItWorks`](../analytics/analytics.md#page)<br>[`bestResults`](../analytics/analytics.md#page)<br>[`consent`](../analytics/analytics.md#page) | SDK was closed on one of the onboarding slides |
 
 ---
 

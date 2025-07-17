@@ -183,17 +183,17 @@ The following analytics events are tracked during image selection:
 
 | Type | Event | Page Id | Description |
 |------|-------|---------|-------------|
-| [`page`](../analytics/analytics.md#event-categories) | :material-minus: | [`imagePicker`](../analytics/analytics.md#page-identifiers) | Image picker page opened |
-| [`picker`](../analytics/analytics.md#event-categories) | [`cameraOpened`](../analytics/analytics.md#picker-events) | [`imagePicker`](../analytics/analytics.md#page-identifiers) | Camera interface opened |
-| [`picker`](../analytics/analytics.md#event-categories) | [`newPhotoTaken`](../analytics/analytics.md#picker-events) | [`imagePicker`](../analytics/analytics.md#page-identifiers) | New photo taken with camera |
-| [`picker`](../analytics/analytics.md#event-categories) | [`photoGalleryOpened`](../analytics/analytics.md#picker-events) | [`imagePicker`](../analytics/analytics.md#page-identifiers) | Photo gallery opened |
-| [`picker`](../analytics/analytics.md#event-categories) | [`galleryPhotoSelected`](../analytics/analytics.md#picker-events) | [`imagePicker`](../analytics/analytics.md#page-identifiers) | Photo selected from gallery |
-| [`picker`](../analytics/analytics.md#event-categories) | [`uploadsHistoryOpened`](../analytics/analytics.md#picker-events) | [`imagePicker`](../analytics/analytics.md#page-identifiers) | Uploads history opened |
-| [`picker`](../analytics/analytics.md#event-categories) | [`uploadedPhotoSelected`](../analytics/analytics.md#picker-events) | [`imagePicker`](../analytics/analytics.md#page-identifiers) | Previously used photo selected |
-| [`picker`](../analytics/analytics.md#event-categories) | [`uploadedPhotoDeleted`](../analytics/analytics.md#picker-events) | [`imagePicker`](../analytics/analytics.md#page-identifiers) | Previously used photo deleted |
-| [`picker`](../analytics/analytics.md#event-categories) | [`predefinedModelsOpened`](../analytics/analytics.md#picker-events) | [`imagePicker`](../analytics/analytics.md#page-identifiers) | Predefined models list opened |
-| [`picker`](../analytics/analytics.md#event-categories) | [`predefinedModelSelected`](../analytics/analytics.md#picker-events) | [`imagePicker`](../analytics/analytics.md#page-identifiers) | Predefined model selected |
-| [`exit`](../analytics/analytics.md#event-categories) | :material-minus: | [`imagePicker`](../analytics/analytics.md#page-identifiers) | SDK was closed on the image picker page |
+| [`page`](../analytics/analytics.md#event-types) | :material-minus: | [`imagePicker`](../analytics/analytics.md#page) | Image picker page opened |
+| [`picker`](../analytics/analytics.md#event-types) | [`cameraOpened`](../analytics/analytics.md#picker) | [`imagePicker`](../analytics/analytics.md#page) | Camera interface opened |
+| [`picker`](../analytics/analytics.md#event-types) | [`newPhotoTaken`](../analytics/analytics.md#picker) | [`imagePicker`](../analytics/analytics.md#page) | New photo taken with camera |
+| [`picker`](../analytics/analytics.md#event-types) | [`photoGalleryOpened`](../analytics/analytics.md#picker) | [`imagePicker`](../analytics/analytics.md#page) | Photo gallery opened |
+| [`picker`](../analytics/analytics.md#event-types) | [`galleryPhotoSelected`](../analytics/analytics.md#picker) | [`imagePicker`](../analytics/analytics.md#page) | Photo selected from gallery |
+| [`picker`](../analytics/analytics.md#event-types) | [`uploadsHistoryOpened`](../analytics/analytics.md#picker) | [`imagePicker`](../analytics/analytics.md#page) | Uploads history opened |
+| [`picker`](../analytics/analytics.md#event-types) | [`uploadedPhotoSelected`](../analytics/analytics.md#picker) | [`imagePicker`](../analytics/analytics.md#page) | Previously used photo selected |
+| [`picker`](../analytics/analytics.md#event-types) | [`uploadedPhotoDeleted`](../analytics/analytics.md#picker) | [`imagePicker`](../analytics/analytics.md#page) | Previously used photo deleted |
+| [`picker`](../analytics/analytics.md#event-types) | [`predefinedModelsOpened`](../analytics/analytics.md#picker) | [`imagePicker`](../analytics/analytics.md#page) | Predefined models list opened |
+| [`picker`](../analytics/analytics.md#event-types) | [`predefinedModelSelected`](../analytics/analytics.md#picker) | [`imagePicker`](../analytics/analytics.md#page) | Predefined model selected |
+| [`exit`](../analytics/analytics.md#event-types) | :material-minus: | [`imagePicker`](../analytics/analytics.md#page) | SDK was closed on the image picker page |
 
 ---
 

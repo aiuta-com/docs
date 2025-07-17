@@ -15,7 +15,7 @@ The table below contains all the colors used in the SDK:
 | Key | Description | Default &nbsp; `#ARGB` |
 | :-- | :---------- | :------ |
 | `scheme` | Specifies whether the theme uses a light or dark color scheme.<br>The provided colors should match the selected scheme | :material-invert-colors: `light` |
-| [**General**](#general) | |  
+| [**General**](/sdk/developer/configuration/ui/theme/color.md) | |  
 | `brand` | The main accent color of your application | :material-square-rounded:{ .cl-brand } `#FF4000FF` |
 | `primary` | Primary text elements | :material-format-color-text:{ .cl-primary } `#FF000000` |
 | `secondary` | Secondary text elements | :material-format-color-text:{ .cl-secondary } `#FF9F9F9F` |
@@ -26,12 +26,12 @@ The table below contains all the colors used in the SDK:
 | `neutral` | A neutral background color used for components | :material-square-rounded:{ .cl-neutral } `#FFF2F2F7` |
 | `border` | The color used for component borders | :material-square-rounded:{ .cl-border } `#FFE5E5EA` |
 | `outline` | Blur outlines and checkmark borders | :material-square-rounded:{ .cl-outline } `#FFC7C7CC` |
-| [**Selection**](#selection) | |
+| [**Selection**](/sdk/developer/configuration/ui/theme/selection.md) | |
 | `selectionBackground` | Background color for selection snackbar | :material-square-rounded:{ .cl-selection-background } `#FF000000` |
-| [**Error**](#error) | |
+| [**Error**](/sdk/developer/configuration/ui/theme/error.md) | |
 | `errorBackground` | Background color for error snackbar | :material-square-rounded:{ .cl-error-background } `#FFEF5754` |
 | `errorPrimary` | Primary color for error text in the snackbar | :material-format-color-text:{ .cl-error-primary } `#FFFFFFFF` |
-| [**ProductBar :octicons-arrow-right-24: Price**](#productbarprice) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| [**ProductBar :octicons-arrow-right-24: Price**](/sdk/developer/configuration/ui/theme/product-bar.md#prices) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `discountedPrice` | Color for discounted price text | :material-format-color-text:{ .cl-discounted-price } `#FFFB1010` |
-| [**PowerBar**](#powerbar) | |
+| [**PowerBar**](/sdk/developer/configuration/ui/theme/powered-by.md) | |
 | `aiuta` | Color for Aiuta branding<br><br>:material-information:{ .cl-hint } This is not a fully customizable color,<br>you can choose between:<br>- `standard` to use the Aiuta brand color and<br>- `primary` to not highlight the Aiuta label. | :material-format-color-text:{ .cl-aiuta } `standard`{ title="#FF4000FF" } |

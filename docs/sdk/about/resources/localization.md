@@ -53,19 +53,19 @@ The table below contains all the strings that may be localized or changed for th
 | `imagePickerTitle` | :material-check:{ title="Deafult value" } | Upload a photo of you |
 | `imagePickerDescription` | :material-check:{ title="Deafult value" } | Select a photo where you are standing straight and clearly visible |
 | `imagePickerButtonUploadPhoto` | :material-check:{ title="Deafult value" } | Upload a photo |
-| [**ImagePicker :octicons-arrow-right-24: Camera**](/sdk/about/pages/image-picker.md#camera) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| [**ImagePicker :octicons-arrow-right-24: Camera**](/sdk/about/pages/image-picker.md#__tabbed_1_1) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `cameraButtonTakePhoto` | :material-check:{ title="Deafult value" } | Take a photo |
 | `cameraPermissionTitle` | :material-check:{ title="Deafult value" } | Camera permission |
 | `cameraPermissionDescription` | :material-check:{ title="Deafult value" } | Please allow access to the camera in the application settings |
 | `cameraPermissionButtonOpenSettings` | :material-check:{ title="Deafult value" } | Settings |
-| [**ImagePicker :octicons-arrow-right-24: Gallery**](/sdk/about/pages/image-picker.md#gallery) | |
+| [**ImagePicker :octicons-arrow-right-24: Gallery**](/sdk/about/pages/image-picker.md#__tabbed_1_2) | |
 | `galleryButtonSelectPhoto` | :material-check:{ title="Deafult value" } | Choose from library |
-| [**ImagePicker :octicons-arrow-right-24: PredefinedModel**](/sdk/about/pages/image-picker.md#predefined-model) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| [**ImagePicker :octicons-arrow-right-24: PredefinedModel**](/sdk/about/pages/image-picker.md#__tabbed_1_3) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `predefinedModelsTitle` | :material-check:{ title="Deafult value" } | Select your model |
 | `predefinedModelsOr` | :material-check:{ title="Deafult value" } | Or |
 | `predefinedModelsEmptyListError` | :material-check:{ title="Deafult value" } | The models list is empty |
 | `predefinedModelsCategories` | :material-check:{ title="Deafult value" } [^4] | `{"man": "Men", "woman": "Women"}` |
-| [**ImagePicker :octicons-arrow-right-24: UploadsHistory**](/sdk/about/pages/image-picker.md#uploads-history) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| [**ImagePicker :octicons-arrow-right-24: UploadsHistory**](/sdk/about/pages/image-picker.md#__tabbed_1_4) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `uploadsHistoryButtonNewPhoto` | :material-check:{ title="Deafult value" }<br><br>:material-apple-keyboard-option:{ title="Alternative variant" } [^2] | + New photo or model<br><br>+ Upload new photo |
 | `uploadsHistoryTitle` | :material-check:{ title="Deafult value" } | Previously used |
 | `uploadsHistoryButtonChangePhoto` | :material-check:{ title="Deafult value" } | Change photo |
