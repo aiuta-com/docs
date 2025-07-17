@@ -11,14 +11,14 @@ To use Aiuta Try On with UI components, you need to add the following dependenci
 === "Kotlin"
     ```kotlin
     dependencies {
-        implementation("com.aiuta:fashionsdk-tryon-compose:<version>")
+        implementation("com.aiuta:fashionsdk-tryon-compose:{{ latest(android) }}")
     }
     ```
 
 === "Groovy"
     ```groovy
     dependencies {
-        implementation "com.aiuta:fashionsdk-tryon-compose:<version>"
+        implementation "com.aiuta:fashionsdk-tryon-compose:{{ latest(android) }}"
     }
     ```
 
@@ -26,48 +26,11 @@ To use Aiuta Try On with UI components, you need to add the following dependenci
 
 {% include-markdown "sdk/templates/android/using-bom.md" %}
 
+## Next Step
 
-## Configuration
+<div class="grid cards" markdown>
 
-Before using the UI components, you need to configure `AiutaConfiguration`. For detailed information about configuration options and setup, see [Configuration of Try-On with UI](/sdk/android/tryon-ui/configuration/).
+- :octicons-arrow-right-24: [Quick Test](/sdk/android/tryon-ui/quick-test.md) SDK Propely Integrated
+- :octicons-arrow-right-24: Create [Configuration](/sdk/android/tryon-ui/configuration.md)
 
-The configuration allows you to customize various aspects of the try-on experience through:
-
-- **Features Configuration**: Control which features are enabled in your try-on experience
-- **User Interface Configuration**: Customize the look and feel of the UI components
-
-{% include-markdown "sdk/templates/android/default-configuration-tip.md" %}
-
-
-## UI Entry Points
-
-Aiuta Try On provides two main UI entry points for implementing virtual try-on functionality:
-
-=== "AiutaTryOnFlow"
-    `AiutaTryOnFlow` is the main entry point for creating new try-ons. It provides a complete flow for:
-    
-    - Selecting a product to try on
-    - Taking or uploading a photo
-    - Generating and viewing the try-on result
-        
-    ```kotlin
-    AiutaTryOnFlow(
-        modifier = ...,
-        aiutaConfiguration = ...,
-        productForGeneration = ...,
-    )
-    ```
-
-=== "HistoryFlow"
-    `HistoryFlow` allows users to view their try-on history and previous results. It provides:
-    
-    - Ability to view and share past results
-    
-    ```kotlin
-    HistoryFlow(
-        modifier = ...,
-        aiutaConfiguration = ...,
-    )
-    ```
-
-Both flows are composable functions that can be integrated into your existing Compose UI. They handle all the necessary UI states and user interactions internally, providing a seamless try-on experience.
+</div>

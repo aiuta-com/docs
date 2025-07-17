@@ -10,14 +10,14 @@ To use Aiuta Analytics functionality, you need to add the following dependency t
 === "Kotlin"
     ```kotlin
     dependencies {
-        implementation("com.aiuta:fashionsdk-analytics:<version>")
+        implementation("com.aiuta:fashionsdk-analytics:{{ latest(android) }}")
     }
     ```
 
 === "Groovy"
     ```groovy
     dependencies {
-        implementation "com.aiuta:fashionsdk-analytics:<version>"
+        implementation "com.aiuta:fashionsdk-analytics:{{ latest(android) }}"
     }
     ```
 

@@ -2,7 +2,6 @@
 title: Flay Lays
 template: swagger-ui.html
 hide:
-#   - navigation
   - toc
 ---
 

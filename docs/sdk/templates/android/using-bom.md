@@ -6,7 +6,7 @@
         ```kotlin
         dependencies {
             // 1. Add BOM 
-            implementation(platform("com.aiuta:fashionsdk-bom:<version>"))
+            implementation(platform("com.aiuta:fashionsdk-bom:{{ latest(android) }}"))
 
             // 2. Add all required for you dependencies
             implementation("com.aiuta:fashionsdk")
@@ -19,7 +19,7 @@
         ```groovy
         dependencies {
             // 1. Add BOM
-            implementation platform("com.aiuta:fashionsdk-bom:<version>")
+            implementation platform("com.aiuta:fashionsdk-bom:{{ latest(android) }}")
 
             // 2. Add all required for you dependencies
             implementation "com.aiuta:fashionsdk"

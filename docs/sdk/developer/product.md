@@ -22,10 +22,11 @@ Product {
 2.  The name or title of the product, displayed prominently in the user interface.
 3.  The brand associated with the product, identifying the manufacturer or provider.
 4.  Collection of URLs pointing to product images. Should contain at least one URL.
-5.  Optional pricing details for the product, including current and old prices.
 
-!!! warning "`imageUrls` and `applyProductFirstImageExtraPadding`"
-    The flat lay image without paddings should be the first in the list of `imageUrls` if `applyProductFirstImageExtraPadding` is set in [`ProductBarTheme`](/sdk/developer/configuration/ui/theme/product-bar.md)
+    !!! warning "Extra padding for the flat lay image"
+        The flat lay image in case of cropping without margins should be the __first__ in the `imageUrls` list if [`ProductBarTheme`](/sdk/developer/configuration/ui/theme/product-bar.md) `applyProductFirstImageExtraPadding` set to `true`
+
+5.  Optional pricing details for the product, including current and old prices.
 
 ### Price
 

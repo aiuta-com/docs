@@ -4,14 +4,14 @@ Use the following base URLs to make SDK or direct API calls:
 
 ## Try-On base URL
 ```
-{{ api_try_on() }}
+{{ api(try_on) }}
 ```
 
 Append paths like `/uploaded_images`, `/sku_images_operations`, etc.
 
 ## Analytics URL
 ```
-{{ api_analytics() }}
+{{ api(analytics) }}
 ```
 
 Append paths like `/ios-sdk-analytics`, `/android-sdk-analytics`, etc.

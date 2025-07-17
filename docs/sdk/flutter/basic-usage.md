@@ -116,3 +116,11 @@ You can check at any time whether the SDK UI is currently displayed:
 ```dart
 final isDisplayed = await Aiuta.isForeground;
 ```
+
+## Next Step
+
+<div class="grid cards" markdown>
+
+- :octicons-arrow-right-24: [Try with test products](/sdk/flutter/quick-test.md)
+
+</div>

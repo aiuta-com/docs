@@ -3,7 +3,7 @@
 ## API Endpoint
 
 ```
-{{ api_analytics() }}
+{{ api(analytics) }}
 ```
 Append paths `/ios-sdk-analytics`, `/android-sdk-analytics`, etc.
 

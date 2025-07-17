@@ -7,7 +7,7 @@ Instantly convert model images into clean, high‑resolution flat lays
 
 <div class="grid cards" markdown>
 
-- :aiuta-favicon:{ .lg .cl-aiuta } [Discover __Aiuta Studio__ :octicons-link-external-24:](https://aiuta.com/aiuta-studio){:target="_blank"}
+- [:aiuta-logo:{ .lg } Discover __Aiuta Studio__ :octicons-link-external-24:](https://aiuta.com/aiuta-studio){:target="_blank"}
 
 </div>
 

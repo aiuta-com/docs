@@ -16,6 +16,10 @@ Once everything is installed, navigate to the root of your `docs` repository clo
 mkdocs serve
 ```
 
+!!! danger "Strict mode"
+    MKDocs configuration has `strict` parameter set to `true`. This will cause MkDocs to abort the build on any warnings.
+    If you need to __temporarily__ bypass this, run `mkdocs serve --no-strict`
+
 You should see output like
 
 ```

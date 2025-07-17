@@ -31,12 +31,13 @@ final aiuta = Aiuta(configuration: configuration);
 
 The Aiuta SDK for Flutter employs a standardized configuration scheme consistent with our other SDKs. Just as the primary `AiutaConfiguration` and its associated property class names have been modified to adhere to the naming conventions, all other internal classes will be updated similarly.
 
-!!! doc "Please refer to the [configuration scheme](/sdk/developer/configuration/)"
+!!! doc "Please refer to the [configuration scheme](/sdk/developer/configuration/index.md)"
 
 ## Next Step
 
 <div class="grid cards" markdown>
 
-- :octicons-arrow-right-24: Learn how to [initialize and use](basic-usage.md) the SDK
+- :octicons-arrow-right-24: Learn how to [initialize and use](/sdk/flutter/basic-usage.md) the SDK
+- :octicons-arrow-right-24: [Try with test configuration](/sdk/flutter/quick-test.md)
 
 </div>

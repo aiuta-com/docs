@@ -10,7 +10,7 @@ Enable shoppers to see how clothes look on them in real-time
 
 <div class="grid cards" markdown>
 
-- :aiuta-favicon:{ .lg .cl-aiuta } [Find more about Virtual Try-On on __aiuta.com__ :octicons-link-external-24:](https://aiuta.com/virtual-try-on){:target="_blank"}
+- [:aiuta-logo:{ .lg } Find more about Virtual Try-On on __aiuta.com__ :octicons-link-external-24:](https://aiuta.com/virtual-try-on){:target="_blank"}
 
 </div>
 

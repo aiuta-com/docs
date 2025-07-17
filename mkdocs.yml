@@ -8,6 +8,19 @@ copyright: Copyright &copy; 2024 - 2025 Aiuta USA, Inc
 
 nav:
   - About: index.md
+
+  - API:
+    - api/index.md
+    - Getting Started: api/getting-started.md
+    - Server-side Auth: api/server-side-auth-component.md
+    - Try-On:
+      - api/try-on/index.md
+      - Workflow: api/try-on/workflow.md
+      - Reference: api/try-on/reference.md
+    - Flat Lays:
+      - api/flat-lays/index.md
+      - Workflow: api/flat-lays/workflow.md
+      - Reference: api/flat-lays/reference.md
     
   - SDK:
     - sdk/index.md
@@ -69,20 +82,19 @@ nav:
 
   - Android:
     - sdk/android/index.md
+    - Getting started: sdk/android/base/aiuta-getting-started.md
     - Try-On with UI:
       - Installation: sdk/android/tryon-ui/installation.md
       - Configuration: sdk/android/tryon-ui/configuration.md
-      - Default Configuration: sdk/android/tryon-ui/default-configuration.md
+      - Basic Usage: sdk/android/tryon-ui/basic-usage.md
+      - Quick Test: sdk/android/tryon-ui/quick-test.md
     - Try-On:
       - Installation: sdk/android/tryon/installation.md
-    - Base:
-      - Getting started with Aiuta: sdk/android/base/aiuta-getting-started.md
     - Analytics:
       - Installation: sdk/android/analytics/overview.md
     - Migrations:
       - Migrate to v4: sdk/android/migrations/migrate-v4.md
     - FAQ: sdk/android/faq.md
-    - API Reference: https://aiuta-com.github.io/aiuta-android-sdk/
 
   - iOS:
     - sdk/ios/index.md
@@ -96,6 +108,7 @@ nav:
     - Installation: sdk/flutter/installation.md
     - Configuration: sdk/flutter/configuration.md
     - Basic Usage: sdk/flutter/basic-usage.md
+    - Quick Test: sdk/flutter/quick-test.md
     - Migration: 
       - Migrate to v4: sdk/flutter/migration/v4.md
 
@@ -106,37 +119,54 @@ nav:
   - Shopify:
     - shopify/index.md
 
-  - API:
-    - api/index.md
-    - Getting Started: api/getting-started.md
-    - Server-side Auth: api/server-side-auth-component.md
-    - Try-On:
-      - api/try-on/index.md
-      - Workflow: api/try-on/workflow.md
-      - Reference: api/try-on/reference.md
-    - Flat Lays:
-      - api/flat-lays/index.md
-      - Workflow: api/flat-lays/workflow.md
-      - Reference: api/flat-lays/reference.md
-
   - Insights:
-    - team/index.md
-    - Docs:
-      - Convention: team/docs/convention.md
-      - Local Build: team/docs/local-build.md
-      - Swagger UI: team/docs/swagger-ui.md
+    - Convention: team/docs/convention.md
+    - Local Build: team/docs/local-build.md
+    - Swagger UI: team/docs/swagger-ui.md
     - SDK:
       - API Endpoints: team/sdk/api-endpoints.md
       - Subscription Details: team/sdk/subscription-details.md
       - Internal Analytics: team/sdk/analytics.md
       
 extra:
+  # SDKs
+  android: aiuta-android-sdk # macro: repo(android), latest(android), pages(android)
+  ios: aiuta-ios-sdk # macro: repo(ios), latest(ios), pages(ios)
+  flutter: aiuta-flutter-sdk # macro: repo(flutter), latest(flutter), pages(flutter)
+  web: aiuta-web-sdk # macro: repo(web), latest(web), pages(web)
+
+  # APIs
+  try_on: digital-try-on/v1 # macro: api(try_on)
+  flat_lays: flat-lays/v1 # macro: api(flat_lays)
+  analytics: analytics/v1 # macro: api(analytics)
+  
+  github:
+    url: https://github.com/{team}/{repo}
+    api: https://api.github.com/repos/{team}/{repo}
+    pages: https://{team}.github.io/{repo}
+    team: aiuta-com
+
+  pub_dev:
+    url: https://pub.dev/packages/{package}
+    package: aiuta_flutter # macro: pub_dev_package()
+
+  aiuta:
+    url: https://aiuta.com
+    api: https://api.aiuta.com/{path}
+    api_key: AIUTADEMO
+
   nav:
+    highlight:
+      - API
+      - SDK
+      - Shopify
+    mute:
+      - Insights
     divider_after:
       - About
-      - Web
     divider_before:
       - Insights
+
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/aiuta-com
@@ -150,23 +180,6 @@ extra:
       link: https://x.com/AiutaCom
     - icon: aiuta/logo-sq
       link: https://aiuta.com
-  aiuta:
-    github:
-      url: https://github.com
-      api: https://api.github.com/repos
-      team: aiuta-com
-      repos:
-        android: aiuta-android-sdk # macro: repo_android(), latest_android()
-        ios: aiuta-ios-sdk # macro: repo_ios(), latest_ios()
-        flutter: aiuta-flutter-sdk # macro: repo_flutter(), latest_flutter()
-        web: aiuta-web-sdk # macro: repo_web(), latest_web()
-    api:
-      base_url: https://api.aiuta.com
-      demo_key: AIUTADEMO
-      path:
-        try_on: digital-try-on/v1 # macro: api_try_on()
-        flat_lays: flat-lays/v1 # macro: api_flat_lays()
-        analytics: analytics/v1 # macro: api_analytics()
 
 theme:
   name: 'material'
@@ -222,7 +235,8 @@ plugins:
   - minify:
       minify_html: true
   - include-markdown
-  - macros
+  - macros:
+      module_name: macros
 
 markdown_extensions:
   - admonition
@@ -276,3 +290,5 @@ validation:
     absolute_links: relative_to_docs
     unrecognized_links: warn
     anchors: warn
+
+strict: true

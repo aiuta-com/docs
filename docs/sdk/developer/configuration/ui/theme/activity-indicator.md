@@ -19,6 +19,7 @@ ActivityIndicatorTheme {
   colors {
     overlay: Color // (4)!
   }
+  
   settings {
     indicationDelay: Number // (2)!
     spinDuration: Number // (3)!

@@ -1,4 +1,4 @@
-# Configuration of Try-On with UI
+# Try-On with UI Configuration
 
 To start using Aiuta Try On with UI components, you need to create an instance of the `AiutaConfiguration` class. This class serves as the main configuration point for the UI components and requires configuration of essential components.
 
@@ -57,3 +57,12 @@ See [General configuration scheme](/sdk/about/developer/configuration/#user-inte
 4. Optional: Configures debug-related settings for development and testing purposes.
 
 {% include-markdown "sdk/templates/android/default-configuration-tip.md" %}
+
+## Next Step
+
+<div class="grid cards" markdown>
+
+- :octicons-arrow-right-24: Learn how to [use Try-On with UI](/sdk/android/tryon-ui/basic-usage.md)
+- :octicons-arrow-right-24: [Try with test products](/sdk/android/tryon-ui/quick-test.md)
+
+</div>
