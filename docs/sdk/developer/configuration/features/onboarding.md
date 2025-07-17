@@ -41,7 +41,7 @@ OnboardingFeature {
 
 ---
 
-### [:material-arrow-up-left:](#onboarding) How It Works
+### [:material-arrow-up-left:](#onboarding-feature) How It Works
 
 ![How It Works](/media/pages/how-it-works-1.png){ width=120 }
 
@@ -70,7 +70,7 @@ OnboardingHowItWorksPageFeature {
 5. Configures the descriptive text explaining how the virtual try-on feature works.
 6. List of exactly 3 objects, each containing images for the interactive onboarding.
 
-### [:material-arrow-up-left:](#onboarding) Best Results
+### [:material-arrow-up-left:](#onboarding-feature) Best Results
 
 ![Best Results](/media/pages/best-results.png){ width=120 }
 

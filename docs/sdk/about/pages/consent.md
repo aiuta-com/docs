@@ -155,7 +155,7 @@ The Consent feature allows you to collect user permissions for data processing o
 
     ## Embedded
 
-    ![How It Works](../../../media/pages/how-it-works-1.png){ width=300 }
+    ![How It Works](/media/pages/how-it-works-1.png){ width=300 }
 
     The legal information is displayed at the bottom of the onboarding screen. Users are not required to explicitly accept the terms to proceed.
 

@@ -33,8 +33,8 @@ Append paths `/ios-sdk-analytics`, `/android-sdk-analytics`, etc.
 
 1. Primary event type
 2. Some events of [public type](/sdk/about/analytics/analytics.md#event-types) may contain a detailed field, indicating which specific `event` of this `type` occurred
-3. Events of [public type](/sdk/about/analytics/analytics.md#event-types) are always linked to some [page](/sdk/about/analytics/analytics.md#page-identifiers)
-4. Current active [priduct/sku ids](/sdk/about/analytics/analytics.md#products-identifiers)
+3. Events of [public type](/sdk/about/analytics/analytics.md#event-types) are always linked to some [page](/sdk/about/analytics/analytics.md#page)
+4. Current active [priduct/sku ids](/sdk/about/analytics/analytics.md#products)
 5. Any other additional event parameter in the flattened structure
 6. Host Android application id / iOS bundle id
 7. Host application version if possible

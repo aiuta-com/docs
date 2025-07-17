@@ -32,7 +32,7 @@ Theme {
 
     ![component](/media/components/labels.png){ width=400 }
 
-3. [:material-arrow-down-left:](image) Shapes, sizes, and error state icon for image views.
+3. [:material-arrow-down-left:](image.md) Shapes, sizes, and error state icon for image views.
 
     ![component](/media/components/images.png){ width=400 }
 
