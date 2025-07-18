@@ -29,3 +29,11 @@ You can use one of the following product examples that will work with the demo `
 ```swift
 await Aiuta.showHistory()
 ```
+
+## Next Step
+
+<div class="grid cards" markdown>
+
+- :octicons-arrow-right-24: Create your custom [Configuration](/sdk/ios/configuration.md)
+
+</div>

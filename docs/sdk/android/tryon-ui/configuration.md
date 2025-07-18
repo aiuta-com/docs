@@ -128,6 +128,6 @@ val aiutaConfiguration = aiutaConfiguration {
 <div class="grid cards" markdown>
 
 - :octicons-arrow-right-24: Learn how to [use Try-On with UI](/sdk/android/tryon-ui/basic-usage.md)
-- :octicons-arrow-right-24: [Try with test products](/sdk/android/tryon-ui/quick-test.md)
+- :octicons-arrow-right-24: [Try with test configuration](/sdk/android/tryon-ui/quick-test.md)
 
 </div>
