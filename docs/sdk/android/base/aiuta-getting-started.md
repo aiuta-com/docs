@@ -2,7 +2,27 @@
 
 To start using Aiuta SDK, you need to create an instance of the `Aiuta` class. This class serves as the main entry point to the SDK and requires configuration of essential components.
 
-Here's how to set up the Aiuta class:
+## Installation
+
+Install it along with one of the options that suits you:
+
+<div class="grid cards" markdown>
+
+-   [:material-window-open: __Try-On with UI__](/sdk/android/tryon-ui/installation.md)
+
+    ---
+
+    Quickly implement try-on functionality with minimal custom code while maintaining a consistent look and feel with other Aiuta features.
+
+-   [:material-code-tags: __Try-On__](/sdk/android/tryon/installation.md)
+
+    ---
+
+    Direct access to try-on generation capabilities without any pre-built UI components, allowing you to build custom experiences.
+
+</div>
+
+Next set up the Aiuta class:
 
 ```kotlin
 import com.aiuta.fashionsdk.Aiuta
@@ -118,3 +138,12 @@ The logger supports different log levels and can handle both messages and throwa
 - Integrate SDK logs with your application's logging system
 - Filter or transform log messages
 - Add additional context to log messages
+
+## Next Step
+
+<div class="grid cards" markdown>
+
+- :octicons-arrow-right-24: Create [__Try-On with UI__ Configuration](/sdk/android/tryon-ui/configuration.md)
+- :octicons-arrow-right-24: Using [__Try-Ons__](/sdk/android/tryon/usage.md)
+
+</div>

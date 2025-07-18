@@ -10,7 +10,7 @@ Use Aiuta APIs to give yourself a competitive advantage by embedding the power o
 
 <div class="grid cards" markdown>
 
--   ## [![TryOn](/media/api/tryon.png) __Virtual Try-On__](/api/try-on/index.md)
+-   ## [![TryOn](/media/products/try-on.png) __Virtual Try-On__](/api/try-on/index.md)
 
     ---
 
@@ -23,7 +23,7 @@ Use Aiuta APIs to give yourself a competitive advantage by embedding the power o
     [Workflow](/api/try-on/workflow.md) :octicons-dot-fill-16:{ .xs } [Reference](/api/try-on/reference.md)
     </span>
 
--   ## [![FlatLays](/media/api/flatlay.png) __Flat Lays__](/api/flat-lays/index.md)
+-   ## [![FlatLays](/media/products/flat-lays.png) __Flat Lays__](/api/flat-lays/index.md)
 
     ---
 

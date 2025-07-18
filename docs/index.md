@@ -14,7 +14,7 @@ hide:
 
 === "Virtual Try-On"
 
-    ![TryOn](/media/api/tryon.png){ width=600 }
+    ![TryOn](/media/products/try-on.png){ width=600 }
 
     Let your customers visualize how clothes look on them — instantly and accurately
 
@@ -26,43 +26,43 @@ hide:
 
     <div class="grid cards" markdown>
 
-    -   :fontawesome-brands-android:{ .lg } __Android__ <span class="md-platfroms">SDK</span>
+    -   [:fontawesome-brands-android:{ .lg } __Android__](/sdk/android/index.md) <span class="md-platfroms">SDK</span>
 
         ---
 
         {% include-markdown "sdk/templates/android/requirements-base.md" %}
         :material-book-open-variant: 
         <span class="md-cards-links">
-        [Overview](/sdk/index.md) :octicons-dot-fill-16:{ .xs } [Quick Start](/sdk/android/index.md)
+        [Overview](/sdk/index.md) :octicons-dot-fill-16:{ .xs } [Developer](/sdk/developer/index.md)
         </span>
 
-    -   :fontawesome-brands-apple:{ .lg } __iOS__ <span class="md-platfroms">SDK</span>
+    -   [:fontawesome-brands-apple:{ .lg } __iOS__](/sdk/ios/index.md) <span class="md-platfroms">SDK</span>
 
         ---
 
         {% include-markdown "sdk/templates/ios/requirements.md" %}
         :material-book-open-variant:
         <span class="md-cards-links">
-        [Overview](/sdk/index.md) :octicons-dot-fill-16:{ .xs } [Quick Start](/sdk/ios/index.md)
+        [Overview](/sdk/index.md) :octicons-dot-fill-16:{ .xs } [Developer](/sdk/developer/index.md)
         </span>
 
-    -   :fontawesome-brands-flutter:{ .lg } __Flutter__ <span class="md-platfroms">SDK :fontawesome-brands-android: Android :fontawesome-brands-apple: iOS</span>
+    -   [:fontawesome-brands-flutter:{ .lg } __Flutter__](/sdk/flutter/index.md) <span class="md-platfroms">SDK :fontawesome-brands-android: Android :fontawesome-brands-apple: iOS</span>
 
         ---
 
         {% include-markdown "sdk/templates/flutter/requirements.md" %}
         :material-book-open-variant:
         <span class="md-cards-links">
-        [Overview](/sdk/index.md) :octicons-dot-fill-16:{ .xs } [Quick Start](/sdk/flutter/index.md)
+        [Overview](/sdk/index.md) :octicons-dot-fill-16:{ .xs } [Developer](/sdk/developer/index.md)
         </span>
 
-    -   :fontawesome-brands-js:{ .lg } __Web__ <span class="md-platfroms">SDK</span>
+    -   [:fontawesome-brands-js:{ .lg } __Web__](/sdk/web/index.md) <span class="md-platfroms">SDK</span>
 
         ---
 
         Coming soon
 
-    -   :fontawesome-brands-shopify:{ .lg } __Shopify__ <span class="md-platfroms">APP</span>
+    -   [:fontawesome-brands-shopify:{ .lg } __Shopify__](/shopify/index.md) <span class="md-platfroms">APP</span>
 
         ---
 
@@ -71,20 +71,20 @@ hide:
         [Overview](/shopify/index.md)
         </span>
 
-    -   :aiuta-favicon:{ .lg } __API__
+    -   [:aiuta-favicon:{ .lg } __API__](/api/try-on/index.md)
 
         ---
 
         :material-book-open-variant:
         <span class="md-cards-links">
-        [Overview](/api/try-on/index.md) :octicons-dot-fill-16:{ .xs } [Getting Started](/api/getting-started.md)
+        [Getting Started](/api/getting-started.md)
         </span>
 
     </div>
 
 === "Flat Lays"
 
-    ![FlatLays](/media/api/flatlay.png){ width=600 }
+    ![FlatLays](/media/products/flat-lays.png){ width=600 }
 
     AIUTA Studio transforms how fashion teams produce content
     
@@ -96,13 +96,13 @@ hide:
 
     <div class="grid cards" markdown>
 
-    -   :aiuta-favicon:{ .lg } __API__
+    -   [:aiuta-favicon:{ .lg } __API__](/api/try-on/index.md)
 
         ---
 
         :material-book-open-variant:
         <span class="md-cards-links">
-        [Overview](/api/flat-lays/index.md) :octicons-dot-fill-16:{ .xs } [Getting Started](/api/getting-started.md)
+        [Getting Started](/api/getting-started.md)
         </span>
 
     </div>

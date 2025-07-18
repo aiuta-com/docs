@@ -2,7 +2,7 @@
 hide:
   - toc
 ---
-# Developer Section
+# SDK Developer Section
 
 The Developer Section provides an overview of the configuration and model schemes that are common to all SDK implementations. By understanding these core concepts, developers can ensure a uniform approach to implementing the SDK, which helps maintain consistency and reduces redundancy in documentation.
 
