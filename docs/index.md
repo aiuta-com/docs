@@ -86,11 +86,10 @@ hide:
 
     ![FlatLays](/media/products/flat-lays.png){ width=600 }
 
-    AIUTA Studio transforms how fashion teams produce content
-    
-    - reducing costs
-    - speeding up timelines
-    - unlocking creative flexibility at scale
+    Instantly convert model images into clean, high‑resolution flat lays
+
+    - Reduce costs
+    - Speed up timelines
 
     ## Available as
 
