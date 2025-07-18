@@ -4,6 +4,8 @@
 
 Instantly convert model images into clean, high‑resolution flat lays
 
+- Reduce costs
+- Speed up timelines
 
 <div class="grid cards" markdown>
 

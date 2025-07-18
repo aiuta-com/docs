@@ -13,9 +13,9 @@ To complete the sign-up process, simply follow the on-screen instructions, and y
 
 === "Just registered"
 
-    To obtain credentials for accessing an API product, you must first subscribe to at least one of [its plans :octicons-link-external-24:](https://developer.aiuta.com/products/digital-try-on/plans){:target="_blank"}. Subscribing to a plan is straightforward: simply select the desired product and click "Subscribe," following the prompts on the page.
+    To obtain credentials for accessing an [API product](#api-products), you must first subscribe to at least one of [its plans :octicons-link-external-24:](https://developer.aiuta.com/products/digital-try-on/plans){:target="_blank"}. Subscribing to a plan is straightforward: simply select the desired product and click "Subscribe," following the prompts on the page.
 
-    After subscribing to the API product of your choice, you will be able to obtain your credentials from the subscription details. Upon completing the subscription process, you will be immediately redirected to a page displaying all the necessary details of the product, including the required credentials.
+    After subscribing to the [API product](#api-products) of your choice, you will be able to obtain your credentials from the subscription details. Upon completing the subscription process, you will be immediately redirected to a page displaying all the necessary details of the product, including the required credentials.
 
 === "Already subscribed"
     
@@ -77,9 +77,8 @@ Authentication is mandatory for some calls such as starting the image generation
     Authorization: Bearer <token>
     ```
 
-## Making an API Request
-<div class="grid cards" markdown>
+## API Products
 
-- :material-book-open-variant:{ .lg } [Try out requests in the API reference](/api/try-on/reference.md)
+Continue with out API Products
 
-</div>
+{% include-markdown "api/templates/api-products.md" %}

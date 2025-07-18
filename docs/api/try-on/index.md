@@ -2,7 +2,7 @@
 
 ![TryOn](/media/products/try-on.png){ width=600 }
 
-Enable shoppers to see how clothes look on them in real-time
+Let your customers visualize how clothes look on them — instantly and accurately
 
 - High quality visualisation
 - Up to __7x faster__ than the average competitor

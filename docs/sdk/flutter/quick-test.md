@@ -49,3 +49,11 @@ You can use one of the following product examples that will work with the demo `
 ```dart
 aiuta.startHistoryFlow();
 ```
+
+## Next Step
+
+<div class="grid cards" markdown>
+
+- :octicons-arrow-right-24: Create your custom [Configuration](/sdk/flutter/configuration.md)
+
+</div>
