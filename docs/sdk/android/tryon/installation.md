@@ -31,6 +31,6 @@ To use Aiuta Try On, you need to add the following dependencies to your project:
 
 <div class="grid cards" markdown>
 
-- :octicons-arrow-right-24: Using [Aiuta Analytics](/sdk/android/tryon/usage.md)
+- :octicons-arrow-right-24: Using [Try-Ons](/sdk/android/tryon/usage.md)
 
 </div>

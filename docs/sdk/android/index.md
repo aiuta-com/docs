@@ -8,11 +8,19 @@ The Aiuta Android SDK provides a virtual try-on solution as a [Kotlin Multiplatf
 
 {% include-markdown "sdk/templates/android/requirements-base.md" %}
 
-## Quick Start with Try-On UI
+## Quick Start
 
-1. [Installation](/sdk/android/tryon-ui/installation.md)
-2. [Configuration](/sdk/android/tryon-ui/configuration.md)
-3. [Basic Usage](/sdk/android/tryon-ui/basic-usage.md)
+=== "Try-On with UI"
+
+    1. [Installation](/sdk/android/tryon-ui/installation.md)
+    2. [Configuration](/sdk/android/tryon-ui/configuration.md)
+    3. [Basic Usage](/sdk/android/tryon-ui/basic-usage.md)
+
+=== "Try-On"
+
+    1. [Installation](/sdk/android/tryon/installation.md)
+    2. [Setup](/sdk/android/base/aiuta-getting-started.md)
+    3. [Usage](/sdk/android/tryon-ui/basic-usage.md)
 
 ## Kotlin Multiplatform Support
 
