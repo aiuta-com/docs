@@ -220,7 +220,7 @@ body {
 }
 
 /* Make all tabs more visible on hover */
-.md-tabs__item:hover .md-tabs__link {
+.md-tabs__item .md-tabs__link:hover {
   opacity: 1;
 }
 
