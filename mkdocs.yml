@@ -234,6 +234,7 @@ plugins:
         - sdk/templates/*  
         - api/templates/*
         - team/sdk/templates/*
+        - team/api/*
   - minify:
       minify_html: true
   - include-markdown
