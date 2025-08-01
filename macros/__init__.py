@@ -4,6 +4,7 @@ import github
 import aiuta
 import generator
 import pub_dev
+import json
 
 def define_env(env):
     yml = env.conf
@@ -41,3 +42,13 @@ def define_env(env):
     @env.macro
     def gen_test_products(template_path, url_indent=2, images_width=100):
         return generator.gen_test_products(template_path, aiuta.get_test_products(), aiuta.get_api_key(), url_indent, images_width)
+
+    # Returns the test products
+    @env.macro
+    def test_products():
+        return aiuta.get_test_products()
+
+    # Dumps the given value as a pretty JSON string
+    @env.filter
+    def dumps(value):
+        return json.dumps(value, indent=2)
