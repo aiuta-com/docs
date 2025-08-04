@@ -1376,7 +1376,7 @@
               }
             ],
             "title": "Image Urls",
-            "description": "List of 1 to 20 image URLs representing the product. Must not be used together with `uploaded_image_ids` â€” only one of the two fields may be provided. If specified in an input request, the images will be downloaded and stored internally. In operation status or result responses, this field is always present and contains internal image URLs, regardless of whether the original input used uploaded IDs or external URLs."
+            "description": "List of 1 to 20 image URLs representing the product. Must not be used together with `uploaded_image_ids` - only one of the two fields may be provided. If specified in an input request, the images will be downloaded and stored internally. In operation status or result responses, this field is always present and contains internal image URLs, regardless of whether the original input used uploaded IDs or external URLs."
           },
           "uploaded_image_ids": {
             "anyOf": [
@@ -1392,7 +1392,7 @@
               }
             ],
             "title": "Uploaded Image Ids",
-            "description": "List of 1 to 20 IDs of previously uploaded product images. Must not be used together with `image_urls` â€” only one of the two fields may be provided. This field is accepted in input requests only and will never appear in operation status or result responses. In such responses, internally stored image URLs corresponding to these IDs will be returned via the `image_urls` field of the `ProductInfo` object."
+            "description": "List of 1 to 20 IDs of previously uploaded product images. Must not be used together with `image_urls` - only one of the two fields may be provided. This field is accepted in input requests only and will never appear in operation status or result responses. In such responses, internally stored image URLs corresponding to these IDs will be returned via the `image_urls` field of the `ProductInfo` object."
           },
           "category": {
             "anyOf": [
