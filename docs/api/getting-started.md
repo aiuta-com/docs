@@ -79,6 +79,6 @@ Authentication is mandatory for some calls such as starting the image generation
 
 ## API Products
 
-Continue with out API Products
+Continue with our API Products
 
 {% include-markdown "api/templates/api-products.md" %}

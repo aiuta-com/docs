@@ -1,5 +1,18 @@
 <div class="grid cards" markdown>
 
+-   ### [![Studio](/media/products/studio.png) __Studio__](/api/studio/index.md)
+
+    ---
+
+    Produce and enhance studio-grade product visuals for online stores and marketing
+
+    ---
+
+    :material-book-open-variant:
+    <span class="md-cards-links">
+    [Workflow](/api/studio/workflow.md) :octicons-dot-fill-16:{ .xs } [Reference](/api/studio/reference.md)
+    </span>
+
 -   ### [![TryOn](/media/products/try-on.png) __Virtual Try-On__](/api/try-on/index.md)
 
     ---
@@ -11,19 +24,6 @@
     :material-book-open-variant:
     <span class="md-cards-links">
     [Workflow](/api/try-on/workflow.md) :octicons-dot-fill-16:{ .xs } [Reference](/api/try-on/reference.md)
-    </span>
-
--   ### [![FlatLays](/media/products/flat-lays.png) __Flat Lays__](/api/flat-lays/index.md)
-
-    ---
-
-    Instantly convert model images into clean, high‑resolution flat lays
-
-    ---
-
-    :material-book-open-variant:
-    <span class="md-cards-links">
-    [Workflow](/api/flat-lays/workflow.md) :octicons-dot-fill-16:{ .xs } [Reference](/api/flat-lays/reference.md)
     </span>
 
 </div>

@@ -12,6 +12,31 @@ hide:
 
 ## Our Products Documentation
 
+=== "Studio"
+
+    ![Studio](/media/products/studio.png){ width=600 }
+
+    Produce and enhance studio-grade product visuals for online stores and marketing
+
+    - Cut costs
+    - Shorten production cycles
+    - Keep your product visuals consistent
+
+    ## Available as
+
+    <div class="grid cards" markdown>
+
+    -   [:aiuta-favicon:{ .lg } __API__](/api/studio/index.md)
+
+        ---
+
+        :material-book-open-variant:
+        <span class="md-cards-links">
+        [Getting Started](/api/getting-started.md)
+        </span>
+
+    </div>
+
 === "Virtual Try-On"
 
     ![TryOn](/media/products/try-on.png){ width=600 }
@@ -70,30 +95,6 @@ hide:
         <span class="md-cards-links">
         [Overview](/shopify/index.md)
         </span>
-
-    -   [:aiuta-favicon:{ .lg } __API__](/api/try-on/index.md)
-
-        ---
-
-        :material-book-open-variant:
-        <span class="md-cards-links">
-        [Getting Started](/api/getting-started.md)
-        </span>
-
-    </div>
-
-=== "Flat Lays"
-
-    ![FlatLays](/media/products/flat-lays.png){ width=600 }
-
-    Instantly convert model images into clean, high‑resolution flat lays
-
-    - Reduce costs
-    - Speed up timelines
-
-    ## Available as
-
-    <div class="grid cards" markdown>
 
     -   [:aiuta-favicon:{ .lg } __API__](/api/try-on/index.md)
 

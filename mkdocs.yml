@@ -13,14 +13,14 @@ nav:
     - api/index.md
     - Getting Started: api/getting-started.md
     - Server-side Auth: api/server-side-auth-component.md
+    - Studio:
+        - api/studio/index.md
+        - Workflow: api/studio/workflow.md
+        - Reference: api/studio/reference.md
     - Try-On:
-      - api/try-on/index.md
-      - Workflow: api/try-on/workflow.md
-      - Reference: api/try-on/reference.md
-    - Flat Lays:
-      - api/flat-lays/index.md
-      - Workflow: api/flat-lays/workflow.md
-      - Reference: api/flat-lays/reference.md
+        - api/try-on/index.md
+        - Workflow: api/try-on/workflow.md
+        - Reference: api/try-on/reference.md
     
   - SDK:
     - sdk/index.md
@@ -139,8 +139,8 @@ extra:
   web: aiuta-web-sdk # macro: repo(web), latest(web), pages(web)
 
   # APIs
+  studio: studio/v1 # macro: api(studio)
   try_on: digital-try-on/v1 # macro: api(try_on)
-  flat_lays: flat-lays/v1 # macro: api(flat_lays)
   analytics: analytics/v1 # macro: api(analytics)
   
   github:
@@ -241,6 +241,11 @@ plugins:
   - include-markdown
   - macros:
       module_name: macros
+  - redirects:
+      redirect_maps:
+        'api/flat-lays/index.md': 'api/studio/index.md'
+        'api/flat-lays/reference.md': 'api/studio/reference.md'
+        'api/flat-lays/workflow.md': 'api/studio/workflow.md'
 
 markdown_extensions:
   - admonition

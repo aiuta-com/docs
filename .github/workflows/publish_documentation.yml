@@ -31,6 +31,7 @@ jobs:
       - run: pip install mkdocs-include-markdown-plugin
       - run: pip install mkdocs-exclude-search
       - run: pip install mkdocs-macros-plugin
+      - run: pip install mkdocs-redirects
       - run: pip install requests
 
       - name: Deploy to GitHub Pages
