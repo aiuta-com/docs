@@ -116,6 +116,7 @@ nav:
 
   - Web:
     - sdk/web/index.md
+    - Demo: sdk/web/demo.md
     - Configuration: sdk/web/configuration.md
 
   - Shopify:
