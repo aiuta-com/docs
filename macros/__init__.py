@@ -45,8 +45,11 @@ def define_env(env):
 
     # Returns the test products
     @env.macro
-    def test_products():
-        return aiuta.get_test_products()
+    def test_products(index=None):
+        products = aiuta.get_test_products()
+        if index is not None:
+            return products[index]
+        return products
 
     # Dumps the given value as a pretty JSON string
     @env.filter
