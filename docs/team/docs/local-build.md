@@ -7,6 +7,7 @@ pip install \
   mkdocs-include-markdown-plugin \
   mkdocs-exclude-search \
   mkdocs-macros-plugin \
+  mkdocs-redirects \
   requests
 ```
 
