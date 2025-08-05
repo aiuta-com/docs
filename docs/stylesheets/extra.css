@@ -73,6 +73,11 @@ body {
   margin-top: 0.27rem;
 }
 
+.md-button .twemoji {
+  margin-left: 0.15rem;
+  margin-right: 0.15rem !important;
+}
+
 /* Divider between tab groups */
 .md-tabs__item--divider {
   width: 2px;
