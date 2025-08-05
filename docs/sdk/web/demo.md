@@ -4,6 +4,35 @@ This page showcases how AIUTA's Web SDK can be integrated into your fashion e-co
 
 <script src="https://web-sdk.aiuta.com/api/sdk" async id="aiuta-web-sdk-base" api-key="{{ aiuta.api_key }}"></script>
 
+<script>
+    function openWebSdk() {
+        if (typeof MySDK === 'undefined') {
+            setTimeout(openWebSdk, 100);
+            return;
+        }
+        
+        MySDK.openModal();
+    }
+
+    function initWebSdkButton() {
+        if (typeof MySDK === 'undefined') {
+            setTimeout(initWebSdkButton, 100);
+            return;
+        }
+
+        const aiutaTryOn = new AiutaWebSdkButtonStyles();
+        aiutaTryOn.configs = {
+            bt_bg_color: "#4000FF",
+            bt_tx_color: "#FFFFFF",
+            bt_fontFamily: "Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, sans-serif",
+            bt_borderRadius: "2px",
+        };
+
+    }
+
+    initWebSdkButton();
+</script>
+
 ## Sample product page
 
 !!! example "{{ test_products(0).category_google_name }}"
@@ -17,22 +46,22 @@ This page showcases how AIUTA's Web SDK can be integrated into your fashion e-co
 
     {{ test_products(0).description }}
 
-    ---
+    <div class="grid cards" markdown>
 
-    [Try on :aiuta-favicon:](javascript:openWebSdk()){ .md-button }
 
-<div class="aiuta-web-sdk" data-sku-id="{{ test_products(0).sku_id }}" data-sku-catalog-name=""></div>
+      -   Default Web SDK button
+      
+          ---
 
-<script>
-    function openWebSdk() {
-        if (typeof MySDK === 'undefined') {
-            setTimeout(openWebSdk, 100);
-            return;
-        }
-        
-        MySDK.openModal();
-    }
-</script>
+          <div class="aiuta-web-sdk" data-sku-id="{{ test_products(0).sku_id }}" data-sku-catalog-name="{{ test_products(0).sku_catalog_name }}"></div>
+
+      -   Custom Try on button
+      
+          ---
+
+          [Try on :aiuta-favicon:](javascript:openWebSdk()){ .md-button }
+
+    </div>
 
 ## How to implement
 
