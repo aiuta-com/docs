@@ -14,7 +14,7 @@ hide:
 
 === "Studio"
 
-    ![Studio](/media/products/studio.png){ width=600 }
+    ![Studio](/media/products/aiuta-studio.png){ width=600 }
 
     Produce and enhance studio-grade product visuals for online stores and marketing
 
@@ -35,11 +35,17 @@ hide:
         [Getting Started](/api/getting-started.md)
         </span>
 
+    -   :aiuta-app:{ .lg } __Web__ <span class="md-platfroms">APP</span>
+
+        ---
+
+        Coming soon    
+
     </div>
 
 === "Virtual Try-On"
 
-    ![TryOn](/media/products/try-on.png){ width=600 }
+    ![TryOn](/media/products/virtual-tryon.png){ width=600 }
 
     Let your customers visualize how clothes look on them — instantly and accurately
 
