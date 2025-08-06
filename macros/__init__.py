@@ -40,16 +40,25 @@ def define_env(env):
 
     # Generates test products for the given code template path
     @env.macro
-    def gen_test_products(template_path, url_indent=2, images_width=100):
-        return generator.gen_test_products(template_path, aiuta.get_test_products(), aiuta.get_api_key(), url_indent, images_width)
+    def gen_test_products(template_path, limit=7, url_indent=2, images_width=100):
+        return generator.gen_test_products(template_path, aiuta.get_test_products(), aiuta.get_api_key(), limit, url_indent, images_width)
+
+    # Generates web demo catalog
+    @env.macro
+    def gen_web_catalog():
+        return generator.gen_web_catalog(aiuta.get_test_products(), aiuta.get_api_key())
+
+    # Generates web demo pages
+    @env.macro
+    def gen_web_pages(limit=2, images_width=100):
+        return generator.gen_web_pages(aiuta.get_test_products(), aiuta.get_api_key(), limit, images_width)
 
     # Returns the test products
     @env.macro
     def test_products(index=None):
-        products = aiuta.get_test_products()
         if index is not None:
-            return products[index]
-        return products
+            return aiuta.get_test_product(index)
+        return aiuta.get_test_products()
 
     # Dumps the given value as a pretty JSON string
     @env.filter

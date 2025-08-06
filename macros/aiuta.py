@@ -12,7 +12,7 @@ _DUMMY_PRODUCT = {
     ]
 }
 
-_product_load_count = 7
+_product_load_count = 24
 _product_cache = None
 _product_count = 1
 _api_url = None
