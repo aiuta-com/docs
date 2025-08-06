@@ -43,15 +43,3 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
     </div>
 
 {{ gen_web_pages(6) }}
-
----
-
-## How to implement
-
-This sample uses simple integration via `script` tag.
-
-<div class="grid cards" markdown>
-
-- :octicons-arrow-right-24: Learn how to [use the SDK with `<script>`](/sdk/web/configuration.md)
-
-</div>
