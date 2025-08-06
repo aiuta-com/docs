@@ -1,6 +1,6 @@
 # Studio API
 
-![TryOn](/media/products/studio.png){ width=600 }
+![TryOn](/media/products/aiuta-studio.png){ width=600 }
 
 Produce and enhance studio-grade product visuals for online stores and marketing
 

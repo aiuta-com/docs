@@ -1,6 +1,6 @@
 # Virtual Try-On API
 
-![TryOn](/media/products/try-on.png){ width=600 }
+![TryOn](/media/products/virtual-tryon.png){ width=600 }
 
 Let your customers visualize how clothes look on them — instantly and accurately
 

@@ -1,6 +1,6 @@
 <div class="grid cards" markdown>
 
--   ### [![Studio](/media/products/studio.png) __Studio__](/api/studio/index.md)
+-   ### [![Studio](/media/products/aiuta-studio.png) __Studio__](/api/studio/index.md)
 
     ---
 
@@ -13,7 +13,7 @@
     [Workflow](/api/studio/workflow.md) :octicons-dot-fill-16:{ .xs } [Reference](/api/studio/reference.md)
     </span>
 
--   ### [![TryOn](/media/products/try-on.png) __Virtual Try-On__](/api/try-on/index.md)
+-   ### [![TryOn](/media/products/virtual-tryon.png) __Virtual Try-On__](/api/try-on/index.md)
 
     ---
 
