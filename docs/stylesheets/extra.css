@@ -16,6 +16,10 @@ body {
   --md-default-bg-color: #272727;
 }
 
+.md-typeset .md-button {
+  color: #4d6ee6;
+}
+
 /* Doc reference admonition */
 
 :root {
@@ -157,6 +161,33 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(15%, 1fr)) !important;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Catalog grid cards */
+
+.grid.cards.catalog {
+  grid-template-columns: repeat(auto-fit, minmax(22%, 1fr)) !important;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.625rem;
+}
+
+.grid.cards.catalog .md-button {
+  padding: 0.4em 0.2em;
+  border: .05rem solid;
+  font-size: 0.625rem;
+  width: 100% !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid.cards.catalog img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 0.8;
+  object-fit: cover;
+  border-radius: 0.1rem;
 }
 
 /* Hide unlisted items in mobile */

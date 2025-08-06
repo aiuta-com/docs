@@ -1,71 +1,54 @@
-# Web SDK Demo Page
+# Web SDK Demo
 
-This page showcases how AIUTA's Web SDK can be integrated into your fashion e-commerce platform. Below, you'll find a sample product page demonstrating the SDK's capabilities. Click the "Try on" button to see the virtual try-on feature in action.
+This page shows how Aiuta Web SDK can be used in your fashion e-commerce platform. Click the “Try on” button in the sample catalog or on the product pages to see the virtual try-on feature.
 
-<script src="https://web-sdk.aiuta.com/api/sdk" async id="aiuta-web-sdk-base" api-key="{{ aiuta.api_key }}"></script>
+<script src="https://static.dev.aiuta.com/sdk/v0.0.14/index.umd.js"></script>
 
 <script>
-    function openWebSdk() {
-        if (typeof MySDK === 'undefined') {
-            setTimeout(openWebSdk, 100);
+    let aiuta = null;
+
+    function initWebSdk() {
+        if (typeof Aiuta === 'undefined') {
+            setTimeout(initWebSdk, 100);
+            return;
+        }
+
+        aiuta = new Aiuta("{{ aiuta.api_key }}");
+        console.log('Aiuta SDK initialized successfully');
+    }
+
+    function startTryOn(productId) {
+        if (!aiuta) {
+            initWebSdk();
+            setTimeout(() => startTryOn(productId), 100);
             return;
         }
         
-        MySDK.openModal();
+        console.log(`Starting try-on for product ID: ${productId}`);
+        aiuta.startGeneration(productId);
     }
 
-    function initWebSdkButton() {
-        if (typeof MySDK === 'undefined') {
-            setTimeout(initWebSdkButton, 100);
-            return;
-        }
+    document.addEventListener('DOMContentLoaded', initWebSdk);
 
-        const aiutaTryOn = new AiutaWebSdkButtonStyles();
-        aiutaTryOn.configs = {
-            bt_bg_color: "#4000FF",
-            bt_tx_color: "#FFFFFF",
-            bt_fontFamily: "Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, sans-serif",
-            bt_borderRadius: "2px",
-        };
-
-    }
-
-    initWebSdkButton();
 </script>
 
-## Sample product page
+## Sample integration
 
-!!! example "{{ test_products(0).category_google_name }}"
+=== "Catalog"
 
-    ![Product]({{ test_products(0).image_urls[0] }}){ width=100 }
-    ![Product]({{ test_products(0).image_urls[1] }}){ width=100 }
-    ![Product]({{ test_products(0).image_urls[2] }}){ width=100 }
-    ![Product]({{ test_products(0).image_urls[3] }}){ width=100 }
-    
-    <h2> {{ test_products(0).title }}</h2>
+    <div class="grid cards catalog" markdown>
 
-    {{ test_products(0).description }}
-
-    <div class="grid cards" markdown>
-
-
-      -   Default Web SDK button
-      
-          ---
-
-          <div class="aiuta-web-sdk" data-sku-id="{{ test_products(0).sku_id }}" data-sku-catalog-name="{{ test_products(0).sku_catalog_name }}"></div>
-
-      -   Custom Try on button
-      
-          ---
-
-          [Try on :aiuta-favicon:](javascript:openWebSdk()){ .md-button }
+{{ gen_web_catalog() }}
 
     </div>
 
+{{ gen_web_pages(6) }}
+
+---
+
 ## How to implement
 
-This sample uses integration via Script Tag.
+This sample uses simple integration via `script` tag.
 
 <div class="grid cards" markdown>
 
