@@ -4,7 +4,7 @@ import logger
 _INDENT = " " * 4 # Proper indent for tabs ===
 
 def gen_test_products(template_path, products, api_key, limit=7, url_indent=2, images_width=100):
-    logger.log(f"Generating {len(products)} test products with {template_path}")
+    logger.log(f"Generating up to {limit} of {len(products)} test products with {template_path}")
 
     url_indent = " " * url_indent
     
@@ -97,7 +97,7 @@ def gen_web_catalog(products, api_key):
     return '\n\n'.join(results)
 
 def gen_web_pages(products, api_key, limit, images_width=100):
-    logger.log(f"Generating {limit} web pages with {len(products)} products")
+    logger.log(f"Generating up to {limit} web pages of {len(products)} products")
 
     results = []
     counter = 0
