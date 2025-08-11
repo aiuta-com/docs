@@ -32,8 +32,6 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
 
 </script>
 
-## Sample integration
-
 === "Catalog"
 
     <div class="grid cards catalog" markdown>
