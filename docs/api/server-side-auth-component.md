@@ -6,68 +6,70 @@ Using this scheme, you can issue an authentication token for your client using y
 
 !!! doc "See the sequence diagram showing how [Aiuta SDK uses the JWT](/sdk/about/diagrams/authentication.md#__tabbed_1_1) to authenticate requests"
 
-You need to install the following dependencies:
+=== "Python"
 
-```sh
-pip install PyJWT
-```
+    You need to install the following dependencies:
 
-And then implement API handle like this:
+    ```sh
+    pip install PyJWT
+    ```
 
-```python
-import datetime
-import json
+    And then implement API handle like this:
 
-import jwt
-from flask import Flask
-from flask import request
-from flask import Response
+    ```python
+    import datetime
+    import json
 
-jwt_issuer = "<ISSUER_ID>" # (1)!
-jwt_secret = "<JWT_SECRET>" # (2)!
+    import jwt
+    from flask import Flask
+    from flask import request
+    from flask import Response
 
-token_valid_time = datetime.timedelta(seconds=60)
+    jwt_issuer = "<ISSUER_ID>" # (1)!
+    jwt_secret = "<JWT_SECRET>" # (2)!
 
-app = Flask(__name__)
+    token_valid_time = datetime.timedelta(seconds=60)
 
-
-@app.route("/aiuta_jwt", methods=["GET", "POST"])
-def get_jwt_token():
-    issued_at = datetime.datetime.utcnow()
-    expires_at = issued_at + token_valid_time
-    meta = {
-        "iss": jwt_issuer,
-        "iat": issued_at,
-        "exp": expires_at,
-    }
-
-    payload = {}
-    if request.args:
-        payload.update(request.args)
-    if request.is_json:
-        payload.update(request.json)
-    payload.update(meta)
-
-    token = jwt.encode(
-        payload,
-        jwt_secret,
-        algorithm="HS256",
-    )
-    return Response(
-        json.dumps({"type": "jwt", "token": token}),
-    )
+    app = Flask(__name__)
 
 
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=8080)
-```
+    @app.route("/aiuta_jwt", methods=["GET", "POST"])
+    def get_jwt_token():
+        issued_at = datetime.datetime.utcnow()
+        expires_at = issued_at + token_valid_time
+        meta = {
+            "iss": jwt_issuer,
+            "iat": issued_at,
+            "exp": expires_at,
+        }
 
-1.  Find the value in your [API plan subscription :octicons-link-external-24:](https://developer.aiuta.com/subscriptions){:target="_blank"}
+        payload = {}
+        if request.args:
+            payload.update(request.args)
+        if request.is_json:
+            payload.update(request.json)
+        payload.update(meta)
 
-    !!! abstract "Field in the UI"
-        JWT key (iss)
+        token = jwt.encode(
+            payload,
+            jwt_secret,
+            algorithm="HS256",
+        )
+        return Response(
+            json.dumps({"type": "jwt", "token": token}),
+        )
 
-2.  Find the value in your [API plan subscription :octicons-link-external-24:](https://developer.aiuta.com/subscriptions){:target="_blank"}
-    
-    !!! abstract "Field in the UI"
-        JWT secret (to generate HS256 signature)
+
+    if __name__ == "__main__":
+        app.run(debug=True, host="0.0.0.0", port=8080)
+    ```
+
+    1.  Find the value in your [API plan subscription :octicons-link-external-24:](https://developer.aiuta.com/subscriptions){:target="_blank"}
+
+        !!! abstract "Field in the UI"
+            JWT key (iss)
+
+    2.  Find the value in your [API plan subscription :octicons-link-external-24:](https://developer.aiuta.com/subscriptions){:target="_blank"}
+        
+        !!! abstract "Field in the UI"
+            JWT secret (to generate HS256 signature)
