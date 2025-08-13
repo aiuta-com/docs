@@ -2,7 +2,7 @@
 
 This page shows how Aiuta Web SDK can be used in your fashion e-commerce platform. Click the “Try on” button in the sample catalog or on the product pages to see the virtual try-on feature.
 
-<script src="https://static.aiuta.com/sdk/v0.0.55/index.umd.js"></script>
+<script src="https://static.aiuta.com/sdk/v0/index.umd.js"></script>
 
 <script>
     let aiuta = null;
