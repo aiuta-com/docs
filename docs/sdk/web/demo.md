@@ -8,13 +8,15 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
     let aiuta = null;
 
     window.onload = () => {
-        aiuta = new Aiuta("{{ aiuta.api_key }}");
+        aiuta = new Aiuta();
+        aiuta.initWithApiKey("{{ aiuta.api_key }}");
         console.log('Aiuta SDK initialized on load');
     };
 
     function startTryOn(productId) {
         if (!aiuta)  {
-            aiuta = new Aiuta("{{ aiuta.api_key }}");
+            aiuta = new Aiuta();
+            aiuta.initWithApiKey("{{ aiuta.api_key }}");
             console.log('Aiuta SDK initialized on demand');
         }
         console.log(`Starting try-on for product ID: ${productId}`);
