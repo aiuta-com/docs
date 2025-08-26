@@ -23,9 +23,6 @@ The table below contains all the text styles used in the SDK:
 | `buttonS` | Small buttons |  `13` | `Semibold` | `18` | `-1%` |
 | [**PageBar**](/sdk/developer/configuration/ui/theme/page-bar.md) | |
 | `pageTitle` | Page titles |  `17` | `Medium` | `22` | `-3%` |
-| [**BottomSheet**](/sdk/developer/configuration/ui/theme/bottom-sheet.md) |
-| `iconButton` | Icon buttons |  `17` | `Medium` | `100%` | `-1%` |
-| `chipsButton` | Chip buttons |  `14` | `Medium` | `18` | `0%` |
 | [**ProductBar**](/sdk/developer/configuration/ui/theme/product-bar.md) |
 | `product` | Product names |  `13` | `Regular` | `100%` | `0%` |
 | `brand` | Brand names |  `12` | `Medium` | `100%` | `-1%` |

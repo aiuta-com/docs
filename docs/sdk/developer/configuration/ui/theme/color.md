@@ -13,16 +13,18 @@ Defines the color scheme, brand colors, and various color states for UI elements
 ```typescript
 ColorTheme {
   scheme: ColorScheme // (1)!
+
   brand: Color // (2)!
   primary: Color // (3)!
   secondary: Color // (4)!
+
   onDark: Color // (5)!
   onLight: Color // (6)!
+  
   background: Color // (7)!
   screen: Color // (8)!
   neutral: Color // (9)!
   border: Color // (10)!
-  outline: Color // (11)!
 }
 ```
 
@@ -89,11 +91,6 @@ ColorTheme {
 
     !!! example ""
         Default ARGB :material-square-rounded:{ .cl-border } `#FFE5E5EA`
-
-11. Color used for blur outlines and checkmark borders.
-
-    !!! example ""
-        Default ARGB :material-square-rounded:{ .cl-outline } `#FFC7C7CC`
 
 
 ### [:material-arrow-up-left:](#color-theme) Color Scheme
