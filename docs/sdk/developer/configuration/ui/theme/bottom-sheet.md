@@ -12,36 +12,29 @@ Bottom sheet presentation, including grabber appearance and sheet shape for both
 
 ```typescript
 BottomSheetTheme {
-  typography {
-    iconButton: TextStyle // (1)!
-    chipsButton: TextStyle // (2)!
-  }
-
   shapes {
-    bottomSheet: Shape // (3)!
-    chipsButton: Shape // (4)!
+    bottomSheet: Shape // (1)!
+    chipsButton: Shape // (2)!
   }
 
   grabber {
-    width: Number // (5)!
-    height: Number // (6)!
-    topPadding: Number // (7)!
+    width: Number // (3)!
+    height: Number // (4)!
+    topPadding: Number // (5)!
   }
 
   settings {
-    extendDelimitersToTheRight: Bool // (8)!
-    extendDelimitersToTheLeft: Bool // (9)!
+    extendDelimitersToTheRight: Bool // (6)!
+    extendDelimitersToTheLeft: Bool // (7)!
   }
 }
 
 ```
 
-1. Defines the text style for icon buttons within the bottom sheet.
-2. Specifies the text style for chips-style buttons in the bottom sheet interface.
-3. Sets the shape configuration for the bottom sheet container, controlling its visual appearance.
-4. Configures the shape for chips-style buttons, determining their visual style.
-5. Controls the width of the grabber handle used for dragging the bottom sheet.
-6. Determines the height of the grabber handle for bottom sheet interaction.
-7. Sets the vertical padding between the grabber and the top of the bottom sheet.
-8. Controls whether the bottom sheet delimiters extend to the right edge.
-9. Determines whether the bottom sheet delimiters extend to the left edge. 
+1. Sets the shape configuration for the bottom sheet container, controlling its visual appearance.
+2. Configures the shape for chips-style buttons, determining their visual style.
+3. Controls the width of the grabber handle used for dragging the bottom sheet.
+4. Determines the height of the grabber handle for bottom sheet interaction.
+5. Sets the vertical padding between the grabber and the top of the bottom sheet.
+6. Controls whether the bottom sheet delimiters extend to the right edge.
+7. Determines whether the bottom sheet delimiters extend to the left edge. 
