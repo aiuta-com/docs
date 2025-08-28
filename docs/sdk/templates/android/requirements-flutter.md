@@ -1,9 +1,9 @@
 ```yaml
 minSdk: 23
-targetSdk: 35
-ndkVersion: 26.1.10909125
+targetSdk: 36
+ndkVersion: 27.0.12077973
 
-kotlin: 2.2.0
+kotlin: 2.2.10
 
-com.android.application: 8.6.0
+com.android.application: 8.9.1
 ```
