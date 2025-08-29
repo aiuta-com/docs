@@ -7,21 +7,44 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
 <script>
     let aiuta = null;
 
-    window.onload = () => {
+    function initWebSdk() {
         aiuta = new Aiuta();
-        aiuta.initWithApiKey({ apiKey: "{{ aiuta.api_key }}" });
-        console.log('Aiuta SDK initialized on load');
-    };
+
+        aiuta.initWithJwt({
+            subscriptionId: "{{ aiuta.demo.subscription_id }}",
+            getJwt: async (params) => {
+                console.log('getJwt() called with params:', params);
+                const response = await fetch("{{ aiuta.demo.get_jwt_url }}", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(params)
+                });
+                const data = await response.json();
+                const token = data.token;
+                console.log('JWT resolved');
+                return token;
+            },
+            analytics: (eventName, data) => {
+                console.log('Aiuta Analytics Event:', eventName, data);
+            }
+        });
+
+        console.log('Aiuta SDK initialized');
+    }
 
     function startTryOn(productId) {
         if (!aiuta)  {
-            aiuta = new Aiuta();
-            aiuta.initWithApiKey({ apiKey: "{{ aiuta.api_key }}" });
-            console.log('Aiuta SDK initialized on demand');
+            initWebSdk();
         }
         console.log(`Starting try-on for product ID: ${productId}`);
         aiuta.startGeneration(productId);
     }
+
+    window.onload = () => {
+        initWebSdk();
+    };
 </script>
 
 === "Catalog"

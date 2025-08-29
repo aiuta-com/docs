@@ -16,7 +16,7 @@ Experience Aiuta SDK in action through our demo applications. These applications
 ## Using the Demo
 
 1. Download the appropriate demo app for your platform [^1]
-2. Use __`{{ aiuta.api_key }}`__ or your own code [^2]&nbsp; to access the demo catalog
+2. Use __`{{ aiuta.demo.api_key }}`__ or your own code [^2]&nbsp; to access the demo catalog
 3. Select an item from the catalog and tap "Try on" 
 4. Experience the SDK and virtual try-on in action
 5. Explore various SDK pages and features

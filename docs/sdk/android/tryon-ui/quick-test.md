@@ -8,7 +8,7 @@ It includes steps for setting up the configuration with a demo API key and using
 For quick test purposes you can use demo `apiKey`
 
 ```
-{{ aiuta.api_key }}
+{{ aiuta.demo.api_key }}
 ```
 <!-- TODO: Replace with Configuration sample -->
 

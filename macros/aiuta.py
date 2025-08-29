@@ -24,7 +24,7 @@ def init(extra):
 
     aiuta = extra['aiuta']
     _api_url = aiuta['api']
-    _api_key = aiuta['api_key']
+    _api_key = aiuta['demo']['api_key']
     _try_on_path = extra['try_on']
 
 def get_api_url(path):

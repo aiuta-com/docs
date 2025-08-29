@@ -20,7 +20,7 @@ For quick test purposes you can use demo `apiKey` auth
 ```dart
 final aiuta = Aiuta(
   configuration: AiutaConfiguration.builtIn(
-    auth: AiutaApiKeyAuth(apiKey: "{{ aiuta.api_key }}"),
+    auth: AiutaApiKeyAuth(apiKey: "{{ aiuta.demo.api_key }}"),
     termsOfServiceUrl: "https://aiuta.com/legal/terms-of-service.html",
     cartHandler: AiutaTryOnCartHandler(
       addToCart: (productId) {
