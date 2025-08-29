@@ -155,7 +155,10 @@ extra:
   aiuta:
     url: https://aiuta.com
     api: https://api.aiuta.com/{path}
-    api_key: AIUTADEMO
+    demo:
+      api_key: AIUTADEMO
+      subscription_id: 67dd38b436010676956bde8f
+      get_jwt_url: https://jwt-auth-backend-demo.aiuta.com/
 
   nav:
     highlight:

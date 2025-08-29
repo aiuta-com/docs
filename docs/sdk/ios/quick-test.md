@@ -12,7 +12,7 @@ import AiutaSdk
 For quick test purposes you can use demo `apiKey` auth
 
 ```swift
-await Aiuta.setup(configuration: .debug(auth: .apiKey("{{ aiuta.api_key }}")))
+await Aiuta.setup(configuration: .debug(auth: .apiKey("{{ aiuta.demo.api_key }}")))
 ```
 
 !!! note ""
