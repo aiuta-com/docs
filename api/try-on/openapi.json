@@ -1,0 +1,1342 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Digital Try On",
+    "description": "Check out the <a href='/api/try-on/workflow/'>workflow description</a> for more details",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aiuta.com/digital-try-on/v1"
+    }
+  ],
+  "paths": {
+    "/uploaded_images": {
+      "post": {
+        "summary": "Upload an image as bytes",
+        "description": "Upload an image and save it with unique ID. By default mime-type is 'image/png' and extension is '.png'.",
+        "operationId": "upload_user_image_uploaded_images_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "properties": {
+                  "image_data": {
+                    "type": "string",
+                    "format": "binary",
+                    "title": "Image Data"
+                  }
+                },
+                "type": "object",
+                "required": [
+                  "image_data"
+                ],
+                "title": "Body_upload_user_image_uploaded_images_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "title": "Id",
+                      "description": "Image ID"
+                    },
+                    "owner_type": {
+                      "allOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "user",
+                            "aiuta"
+                          ],
+                          "title": "OwnerType",
+                          "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                        }
+                      ],
+                      "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                    },
+                    "url": {
+                      "type": "string",
+                      "title": "Url",
+                      "description": "Image URL"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "owner_type",
+                    "url"
+                  ],
+                  "title": "AiutaImage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "detail": {
+                      "items": {
+                        "properties": {
+                          "loc": {
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "integer"
+                                }
+                              ]
+                            },
+                            "type": "array",
+                            "title": "Location"
+                          },
+                          "msg": {
+                            "type": "string",
+                            "title": "Message"
+                          },
+                          "type": {
+                            "type": "string",
+                            "title": "Error Type"
+                          }
+                        },
+                        "type": "object",
+                        "required": [
+                          "loc",
+                          "msg",
+                          "type"
+                        ],
+                        "title": "ValidationError"
+                      },
+                      "type": "array",
+                      "title": "Detail"
+                    }
+                  },
+                  "type": "object",
+                  "title": "HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/uploaded_images/{image_id}": {
+      "get": {
+        "summary": "Get an uploaded image",
+        "description": "Get user's uploaded image",
+        "operationId": "get_user_uploaded_image_uploaded_images__image_id__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Image Id"
+            },
+            "name": "image_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "title": "Id",
+                      "description": "Image ID"
+                    },
+                    "owner_type": {
+                      "allOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "user",
+                            "aiuta"
+                          ],
+                          "title": "OwnerType",
+                          "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                        }
+                      ],
+                      "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                    },
+                    "url": {
+                      "type": "string",
+                      "title": "Url",
+                      "description": "Image URL"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "owner_type",
+                    "url"
+                  ],
+                  "title": "AiutaImage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "detail": {
+                      "items": {
+                        "properties": {
+                          "loc": {
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "integer"
+                                }
+                              ]
+                            },
+                            "type": "array",
+                            "title": "Location"
+                          },
+                          "msg": {
+                            "type": "string",
+                            "title": "Message"
+                          },
+                          "type": {
+                            "type": "string",
+                            "title": "Error Type"
+                          }
+                        },
+                        "type": "object",
+                        "required": [
+                          "loc",
+                          "msg",
+                          "type"
+                        ],
+                        "title": "ValidationError"
+                      },
+                      "type": "array",
+                      "title": "Detail"
+                    }
+                  },
+                  "type": "object",
+                  "title": "HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete an uploaded image",
+        "description": "You can delete images uploaded by the same API user. It is not possible to delete images with the 'aiuta' owner (such as try-on model images).",
+        "operationId": "delete_uploaded_image_uploaded_images__image_id__delete",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Image Id"
+            },
+            "name": "image_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "detail": {
+                      "items": {
+                        "properties": {
+                          "loc": {
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "integer"
+                                }
+                              ]
+                            },
+                            "type": "array",
+                            "title": "Location"
+                          },
+                          "msg": {
+                            "type": "string",
+                            "title": "Message"
+                          },
+                          "type": {
+                            "type": "string",
+                            "title": "Error Type"
+                          }
+                        },
+                        "type": "object",
+                        "required": [
+                          "loc",
+                          "msg",
+                          "type"
+                        ],
+                        "title": "ValidationError"
+                      },
+                      "type": "array",
+                      "title": "Detail"
+                    }
+                  },
+                  "type": "object",
+                  "title": "HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/generated_images/{image_id}": {
+      "delete": {
+        "summary": "Delete a generated image",
+        "description": "This method deletes a generated image. Only images of type 'user' (derived from user-uploaded images) can be deleted.",
+        "operationId": "delete_generated_image_generated_images__image_id__delete",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Image Id"
+            },
+            "name": "image_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "detail": {
+                      "items": {
+                        "properties": {
+                          "loc": {
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "integer"
+                                }
+                              ]
+                            },
+                            "type": "array",
+                            "title": "Location"
+                          },
+                          "msg": {
+                            "type": "string",
+                            "title": "Message"
+                          },
+                          "type": {
+                            "type": "string",
+                            "title": "Error Type"
+                          }
+                        },
+                        "type": "object",
+                        "required": [
+                          "loc",
+                          "msg",
+                          "type"
+                        ],
+                        "title": "ValidationError"
+                      },
+                      "type": "array",
+                      "title": "Detail"
+                    }
+                  },
+                  "type": "object",
+                  "title": "HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/sku_images_operations": {
+      "post": {
+        "summary": "Make operations for generation image with particular SKU item (SKU try on).",
+        "description": "Async handler for SKU try on. Return the generation operation ID.",
+        "operationId": "generate_sku_images_operations_sku_images_operations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "uploaded_image_id": {
+                    "type": "string",
+                    "title": "Uploaded Image Id",
+                    "description": "ID of uploaded user image"
+                  },
+                  "sku_id": {
+                    "type": "string",
+                    "title": "Sku Id",
+                    "description": "SKU item ID"
+                  },
+                  "sku_catalog_name": {
+                    "type": "string",
+                    "title": "Sku Catalog Name",
+                    "description": "SKU item catalog name.",
+                    "default": "main"
+                  }
+                },
+                "type": "object",
+                "required": [
+                  "uploaded_image_id",
+                  "sku_id"
+                ],
+                "title": "SkuImagesRequest",
+                "description": "Create SKU images generation parameters"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "operation_id": {
+                      "type": "string",
+                      "title": "Operation Id",
+                      "description": "ID of the created SKU images generation operation."
+                    },
+                    "details": {
+                      "type": "string",
+                      "title": "Details",
+                      "description": "Additional information about the operation creation process."
+                    },
+                    "errors": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array",
+                      "title": "Errors",
+                      "description": "Errors list happened during the operation processing."
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "operation_id",
+                    "errors"
+                  ],
+                  "title": "SkuImagesResponse",
+                  "description": "Sku images generation call results"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "detail": {
+                      "items": {
+                        "properties": {
+                          "loc": {
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "integer"
+                                }
+                              ]
+                            },
+                            "type": "array",
+                            "title": "Location"
+                          },
+                          "msg": {
+                            "type": "string",
+                            "title": "Message"
+                          },
+                          "type": {
+                            "type": "string",
+                            "title": "Error Type"
+                          }
+                        },
+                        "type": "object",
+                        "required": [
+                          "loc",
+                          "msg",
+                          "type"
+                        ],
+                        "title": "ValidationError"
+                      },
+                      "type": "array",
+                      "title": "Detail"
+                    }
+                  },
+                  "type": "object",
+                  "title": "HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/sku_images_operations/{operation_id}": {
+      "get": {
+        "summary": "Get generate SKU images operation.",
+        "description": "Handler for getting generation SKU images operation details.",
+        "operationId": "get_generate_sku_images_operation_sku_images_operations__operation_id__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Operation Id"
+            },
+            "name": "operation_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "title": "Id",
+                      "description": "Operation's ID"
+                    },
+                    "status": {
+                      "allOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "CREATED",
+                            "IN_PROGRESS",
+                            "PAUSED",
+                            "SUCCESS",
+                            "FAILED",
+                            "CANCELLED",
+                            "ABORTED"
+                          ],
+                          "title": "OperationStatus",
+                          "description": "Status for an operation"
+                        }
+                      ],
+                      "description": "Current status of the operation"
+                    },
+                    "error": {
+                      "type": "string",
+                      "title": "Error",
+                      "description": "Error details if the operation was failed. None means that there were no errors."
+                    },
+                    "generated_images": {
+                      "items": {
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "title": "Id",
+                            "description": "Image ID"
+                          },
+                          "owner_type": {
+                            "allOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "user",
+                                  "aiuta"
+                                ],
+                                "title": "OwnerType",
+                                "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                              }
+                            ],
+                            "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                          },
+                          "url": {
+                            "type": "string",
+                            "title": "Url",
+                            "description": "Image URL"
+                          }
+                        },
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "owner_type",
+                          "url"
+                        ],
+                        "title": "GeneratedSkuImage",
+                        "description": "External model for generated SKU image result"
+                      },
+                      "type": "array",
+                      "title": "Generated Images",
+                      "description": "List of generated images. None means that the image is not ready yet or there was an error during generation"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "status",
+                    "generated_images"
+                  ],
+                  "title": "SkuImagesOperation",
+                  "description": "Model for SKU images generation operations"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "detail": {
+                      "items": {
+                        "properties": {
+                          "loc": {
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "integer"
+                                }
+                              ]
+                            },
+                            "type": "array",
+                            "title": "Location"
+                          },
+                          "msg": {
+                            "type": "string",
+                            "title": "Message"
+                          },
+                          "type": {
+                            "type": "string",
+                            "title": "Error Type"
+                          }
+                        },
+                        "type": "object",
+                        "required": [
+                          "loc",
+                          "msg",
+                          "type"
+                        ],
+                        "title": "ValidationError"
+                      },
+                      "type": "array",
+                      "title": "Detail"
+                    }
+                  },
+                  "type": "object",
+                  "title": "HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/predefined_try_on_models": {
+      "get": {
+        "summary": "List of predefined models for try-on operations.",
+        "description": "Returns the list of predefined models, broken down into categories. Returns an empty list if no models are set up. Please provide If-None-Match header with a value of ETag from the previous response. It contains the revision of the predefined try-on models configuration. If revision is the same, empty response with NOT_MODIFIED (304) status is returned. The full list of predefined models is returned otherwise.",
+        "operationId": "get_predefined_try_on_models_predefined_try_on_models_get",
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "title": "If-None-Match"
+            },
+            "name": "if-none-match",
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Actual list of predefined try-on models",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "category": {
+                        "type": "string",
+                        "enum": [
+                          "man",
+                          "woman"
+                        ],
+                        "title": "Category",
+                        "description": "Category name of the try-on models"
+                      },
+                      "models": {
+                        "items": {
+                          "properties": {
+                            "id": {
+                              "type": "string",
+                              "title": "Id",
+                              "description": "Image ID"
+                            },
+                            "owner_type": {
+                              "allOf": [
+                                {
+                                  "type": "string",
+                                  "enum": [
+                                    "user",
+                                    "aiuta"
+                                  ],
+                                  "title": "OwnerType",
+                                  "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                                }
+                              ],
+                              "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                            },
+                            "url": {
+                              "type": "string",
+                              "title": "Url",
+                              "description": "Image URL"
+                            }
+                          },
+                          "type": "object",
+                          "required": [
+                            "id",
+                            "owner_type",
+                            "url"
+                          ],
+                          "title": "AiutaImage"
+                        },
+                        "type": "array",
+                        "title": "Models",
+                        "description": "List of try-on models"
+                      }
+                    },
+                    "type": "object",
+                    "required": [
+                      "category",
+                      "models"
+                    ],
+                    "title": "TryOnModels"
+                  },
+                  "type": "array",
+                  "title": "TryOnModelCategories"
+                },
+                "example": [
+                  {
+                    "category": "woman",
+                    "models": [
+                      {
+                        "id": "model_woman_00",
+                        "owner_type": "aiuta",
+                        "url": "https://storage.googleapis.com/aiuta_prod_external_api_images/models/woman_00.png"
+                      }
+                    ]
+                  },
+                  {
+                    "category": "man",
+                    "models": [
+                      {
+                        "id": "model_man_00",
+                        "owner_type": "aiuta",
+                        "url": "https://storage.googleapis.com/aiuta_prod_external_api_images/models/man_00.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "304": {
+            "description": "List of predefined try-on models is up to date, empty response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "detail": {
+                      "items": {
+                        "properties": {
+                          "loc": {
+                            "items": {
+                              "anyOf": [
+                                {
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "integer"
+                                }
+                              ]
+                            },
+                            "type": "array",
+                            "title": "Location"
+                          },
+                          "msg": {
+                            "type": "string",
+                            "title": "Message"
+                          },
+                          "type": {
+                            "type": "string",
+                            "title": "Error Type"
+                          }
+                        },
+                        "type": "object",
+                        "required": [
+                          "loc",
+                          "msg",
+                          "type"
+                        ],
+                        "title": "ValidationError"
+                      },
+                      "type": "array",
+                      "title": "Detail"
+                    }
+                  },
+                  "type": "object",
+                  "title": "HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AiutaImage": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Image ID"
+          },
+          "owner_type": {
+            "allOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "user",
+                  "aiuta"
+                ],
+                "title": "OwnerType",
+                "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+              }
+            ],
+            "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+          },
+          "url": {
+            "type": "string",
+            "title": "Url",
+            "description": "Image URL"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "owner_type",
+          "url"
+        ],
+        "title": "AiutaImage"
+      },
+      "Body_upload_user_image_uploaded_images_post": {
+        "properties": {
+          "image_data": {
+            "type": "string",
+            "format": "binary",
+            "title": "Image Data"
+          }
+        },
+        "type": "object",
+        "required": [
+          "image_data"
+        ],
+        "title": "Body_upload_user_image_uploaded_images_post"
+      },
+      "GeneratedSkuImage": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Image ID"
+          },
+          "owner_type": {
+            "allOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "user",
+                  "aiuta"
+                ],
+                "title": "OwnerType",
+                "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+              }
+            ],
+            "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+          },
+          "url": {
+            "type": "string",
+            "title": "Url",
+            "description": "Image URL"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "owner_type",
+          "url"
+        ],
+        "title": "GeneratedSkuImage",
+        "description": "External model for generated SKU image result"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "properties": {
+                "loc": {
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      }
+                    ]
+                  },
+                  "type": "array",
+                  "title": "Location"
+                },
+                "msg": {
+                  "type": "string",
+                  "title": "Message"
+                },
+                "type": {
+                  "type": "string",
+                  "title": "Error Type"
+                }
+              },
+              "type": "object",
+              "required": [
+                "loc",
+                "msg",
+                "type"
+              ],
+              "title": "ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "OperationStatus": {
+        "type": "string",
+        "enum": [
+          "CREATED",
+          "IN_PROGRESS",
+          "PAUSED",
+          "SUCCESS",
+          "FAILED",
+          "CANCELLED",
+          "ABORTED"
+        ],
+        "title": "OperationStatus",
+        "description": "Status for an operation"
+      },
+      "OwnerType": {
+        "type": "string",
+        "enum": [
+          "user",
+          "aiuta"
+        ],
+        "title": "OwnerType",
+        "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+      },
+      "SkuImagesOperation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Operation's ID"
+          },
+          "status": {
+            "allOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "CREATED",
+                  "IN_PROGRESS",
+                  "PAUSED",
+                  "SUCCESS",
+                  "FAILED",
+                  "CANCELLED",
+                  "ABORTED"
+                ],
+                "title": "OperationStatus",
+                "description": "Status for an operation"
+              }
+            ],
+            "description": "Current status of the operation"
+          },
+          "error": {
+            "type": "string",
+            "title": "Error",
+            "description": "Error details if the operation was failed. None means that there were no errors."
+          },
+          "generated_images": {
+            "items": {
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "title": "Id",
+                  "description": "Image ID"
+                },
+                "owner_type": {
+                  "allOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "user",
+                        "aiuta"
+                      ],
+                      "title": "OwnerType",
+                      "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                    }
+                  ],
+                  "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                },
+                "url": {
+                  "type": "string",
+                  "title": "Url",
+                  "description": "Image URL"
+                }
+              },
+              "type": "object",
+              "required": [
+                "id",
+                "owner_type",
+                "url"
+              ],
+              "title": "GeneratedSkuImage",
+              "description": "External model for generated SKU image result"
+            },
+            "type": "array",
+            "title": "Generated Images",
+            "description": "List of generated images. None means that the image is not ready yet or there was an error during generation"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "generated_images"
+        ],
+        "title": "SkuImagesOperation",
+        "description": "Model for SKU images generation operations"
+      },
+      "SkuImagesRequest": {
+        "properties": {
+          "uploaded_image_id": {
+            "type": "string",
+            "title": "Uploaded Image Id",
+            "description": "ID of uploaded user image"
+          },
+          "sku_id": {
+            "type": "string",
+            "title": "Sku Id",
+            "description": "SKU item ID"
+          },
+          "sku_catalog_name": {
+            "type": "string",
+            "title": "Sku Catalog Name",
+            "description": "SKU item catalog name.",
+            "default": "main"
+          }
+        },
+        "type": "object",
+        "required": [
+          "uploaded_image_id",
+          "sku_id"
+        ],
+        "title": "SkuImagesRequest",
+        "description": "Create SKU images generation parameters"
+      },
+      "SkuImagesResponse": {
+        "properties": {
+          "operation_id": {
+            "type": "string",
+            "title": "Operation Id",
+            "description": "ID of the created SKU images generation operation."
+          },
+          "details": {
+            "type": "string",
+            "title": "Details",
+            "description": "Additional information about the operation creation process."
+          },
+          "errors": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Errors",
+            "description": "Errors list happened during the operation processing."
+          }
+        },
+        "type": "object",
+        "required": [
+          "operation_id",
+          "errors"
+        ],
+        "title": "SkuImagesResponse",
+        "description": "Sku images generation call results"
+      },
+      "TryOnModelCategories": {
+        "items": {
+          "properties": {
+            "category": {
+              "type": "string",
+              "enum": [
+                "man",
+                "woman"
+              ],
+              "title": "Category",
+              "description": "Category name of the try-on models"
+            },
+            "models": {
+              "items": {
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "title": "Id",
+                    "description": "Image ID"
+                  },
+                  "owner_type": {
+                    "allOf": [
+                      {
+                        "type": "string",
+                        "enum": [
+                          "user",
+                          "aiuta"
+                        ],
+                        "title": "OwnerType",
+                        "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                      }
+                    ],
+                    "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                  },
+                  "url": {
+                    "type": "string",
+                    "title": "Url",
+                    "description": "Image URL"
+                  }
+                },
+                "type": "object",
+                "required": [
+                  "id",
+                  "owner_type",
+                  "url"
+                ],
+                "title": "AiutaImage"
+              },
+              "type": "array",
+              "title": "Models",
+              "description": "List of try-on models"
+            }
+          },
+          "type": "object",
+          "required": [
+            "category",
+            "models"
+          ],
+          "title": "TryOnModels"
+        },
+        "type": "array",
+        "title": "TryOnModelCategories"
+      },
+      "TryOnModels": {
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "man",
+              "woman"
+            ],
+            "title": "Category",
+            "description": "Category name of the try-on models"
+          },
+          "models": {
+            "items": {
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "title": "Id",
+                  "description": "Image ID"
+                },
+                "owner_type": {
+                  "allOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "user",
+                        "aiuta"
+                      ],
+                      "title": "OwnerType",
+                      "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                    }
+                  ],
+                  "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+                },
+                "url": {
+                  "type": "string",
+                  "title": "Url",
+                  "description": "Image URL"
+                }
+              },
+              "type": "object",
+              "required": [
+                "id",
+                "owner_type",
+                "url"
+              ],
+              "title": "AiutaImage"
+            },
+            "type": "array",
+            "title": "Models",
+            "description": "List of try-on models"
+          }
+        },
+        "type": "object",
+        "required": [
+          "category",
+          "models"
+        ],
+        "title": "TryOnModels"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    },
+    "securitySchemes": {
+      "x-api-key": {
+        "type": "apiKey",
+        "description": "Static API key",
+        "in": "header",
+        "name": "x-api-key"
+      },
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Json Web Token",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
