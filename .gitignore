@@ -3,3 +3,5 @@
 site/
 macros/__pycache__/
 node_modules
+docs/iframe/
+docs/js/index.umd.js
