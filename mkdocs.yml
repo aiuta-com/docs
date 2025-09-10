@@ -117,6 +117,9 @@ nav:
   - Web:
     - sdk/web/index.md
     - Demo: sdk/web/demo.md
+    - Configuration: 
+      - Limited Support: sdk/web/configuration/limited-support.md
+      - Custom CSS: sdk/web/configuration/custom-css.md
 
   - Shopify:
     - shopify/index.md
