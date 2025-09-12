@@ -158,6 +158,7 @@ extra:
   aiuta:
     url: https://aiuta.com
     api: https://api.aiuta.com/{path}
+    web_sdk: https://static.aiuta.com/sdk
     demo:
       api_key: AIUTADEMO
       subscription_id: 67dd38b436010676956bde8f
