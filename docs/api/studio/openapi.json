@@ -530,7 +530,7 @@
                 "$ref": "#/components/schemas/BackgroundType"
               }
             ],
-            "description": "Type of background to apply in the generated image (e.g., arbitrary, transparent, prompt-based)."
+            "description": "Type of background to apply in the generated image (e.g., arbitrary, transparent or reference-colored)."
           },
           "reference_color": {
             "anyOf": [
@@ -543,19 +543,6 @@
             ],
             "title": "Reference Color",
             "description": "Optional reference color for background generation. Used only if `background_type` is set to 'reference_color'. The resulting background will not be a flat solid fill, but rather a blend of gradients and tones inspired by the specified color. The chosen color serves as the visual base or anchor. Must be a valid RGB hex code (e.g., '#80ff00')."
-          },
-          "prompt": {
-            "anyOf": [
-              {
-                "type": "string",
-                "maxLength": 1024
-              },
-              {
-                "type": "null"
-              }
-            ],
-            "title": "Prompt",
-            "description": "Optional descriptive text prompt used to generate a background, required if background_type is 'prompt'."
           }
         },
         "type": "object",
@@ -563,18 +550,17 @@
           "background_type"
         ],
         "title": "BackgroundSettings",
-        "description": "Configuration for generating the background of an image.\n\nThe background may be one of several types: arbitrary (default), transparent, reference-based, or prompt-based.\nDepending on the selected `background_type`, additional fields may be required:\n\n- If `background_type` is 'reference_color', a valid RGB hex color must be provided via `reference_color`.\n  The background will be generated based on this color as a visual base, but not as a solid fill.\n\n- If `background_type` is 'prompt', a natural language `prompt` must be provided to describe the desired background.\n\nThe model enforces consistency between the selected type and the presence or absence of these additional fields."
+        "description": "Configuration for generating the background of an image.\n\nThe background may be one of several types: arbitrary (default), transparent or reference-based.\nDepending on the selected `background_type`, additional fields may be required:\n\n- If `background_type` is 'reference_color', a valid RGB hex color must be provided via `reference_color`.\n  The background will be generated based on this color as a visual base, but not as a solid fill.\n\nThe model enforces consistency between the selected type and the presence or absence of these additional fields."
       },
       "BackgroundType": {
         "type": "string",
         "enum": [
           "arbitrary",
           "transparent",
-          "reference_color",
-          "prompt"
+          "reference_color"
         ],
         "title": "BackgroundType",
-        "description": "Defines how the background will be generated\n(e.g., solid, transparent, reference-colored, or AI-generated from prompt)."
+        "description": "Defines how the background will be generated (e.g., solid, transparent or reference-colored)."
       },
       "BodyShapeType": {
         "type": "string",
@@ -737,14 +723,13 @@
             "description": "Specifies whether the operation should be processed online (real-time) or offline (batch). ",
             "default": "offline"
           },
-          "output_resolution": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ImageResolution"
-              }
-            ],
-            "description": "The standard option produces images with 960 pixels on the longest side. The high option produces larger images but may incur higher cost. Only standard resolution is currently supported. If set to high, the image will still be generated in standard resolution.",
-            "default": "standard"
+          "number_of_generations": {
+            "type": "integer",
+            "maximum": 4.0,
+            "minimum": 1.0,
+            "title": "Number Of Generations",
+            "description": "Number of output generated images of each type.",
+            "default": 1
           },
           "background_settings": {
             "allOf": [
@@ -753,14 +738,6 @@
               }
             ],
             "description": "Configuration for background generation. See `BackgroundSettings` for details on supported types and related fields."
-          },
-          "number_of_generations": {
-            "type": "integer",
-            "maximum": 4.0,
-            "minimum": 1.0,
-            "title": "Number Of Generations",
-            "description": "Number of output generated images of each type.",
-            "default": 1
           },
           "image_types": {
             "items": {
@@ -852,7 +829,6 @@
             ],
             "number_of_generations": 1,
             "operation_priority": "online",
-            "output_resolution": "standard",
             "product_info": {
               "category": "Apparel & Accessories > Clothing > Dresses",
               "description": "Red dress with floral print",
@@ -884,14 +860,13 @@
             "description": "Specifies whether the operation should be processed online (real-time) or offline (batch). ",
             "default": "offline"
           },
-          "output_resolution": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ImageResolution"
-              }
-            ],
-            "description": "The standard option produces images with 960 pixels on the longest side. The high option produces larger images but may incur higher cost. Only standard resolution is currently supported. If set to high, the image will still be generated in standard resolution.",
-            "default": "standard"
+          "number_of_generations": {
+            "type": "integer",
+            "maximum": 4.0,
+            "minimum": 1.0,
+            "title": "Number Of Generations",
+            "description": "Number of output generated images of each type.",
+            "default": 1
           },
           "background_settings": {
             "allOf": [
@@ -900,14 +875,6 @@
               }
             ],
             "description": "Configuration for background generation. See `BackgroundSettings` for details on supported types and related fields."
-          },
-          "number_of_generations": {
-            "type": "integer",
-            "maximum": 4.0,
-            "minimum": 1.0,
-            "title": "Number Of Generations",
-            "description": "Number of output generated images of each type.",
-            "default": 1
           },
           "image_types": {
             "items": {
@@ -946,23 +913,6 @@
             ],
             "description": "Specifies whether the operation should be processed online (real-time) or offline (batch). ",
             "default": "offline"
-          },
-          "output_resolution": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ImageResolution"
-              }
-            ],
-            "description": "The standard option produces images with 960 pixels on the longest side. The high option produces larger images but may incur higher cost. Only standard resolution is currently supported. If set to high, the image will still be generated in standard resolution.",
-            "default": "standard"
-          },
-          "background_settings": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/BackgroundSettings"
-              }
-            ],
-            "description": "Configuration for background generation. See `BackgroundSettings` for details on supported types and related fields."
           },
           "number_of_generations": {
             "type": "integer",
@@ -1076,23 +1026,6 @@
             "description": "Specifies whether the operation should be processed online (real-time) or offline (batch). ",
             "default": "offline"
           },
-          "output_resolution": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ImageResolution"
-              }
-            ],
-            "description": "The standard option produces images with 960 pixels on the longest side. The high option produces larger images but may incur higher cost. Only standard resolution is currently supported. If set to high, the image will still be generated in standard resolution.",
-            "default": "standard"
-          },
-          "background_settings": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/BackgroundSettings"
-              }
-            ],
-            "description": "Configuration for background generation. See `BackgroundSettings` for details on supported types and related fields."
-          },
           "number_of_generations": {
             "type": "integer",
             "maximum": 4.0,
@@ -1202,15 +1135,6 @@
         ],
         "title": "HeightType",
         "description": "Categorical height classification used for rendering model proportions."
-      },
-      "ImageResolution": {
-        "type": "string",
-        "enum": [
-          "standard",
-          "high"
-        ],
-        "title": "ImageResolution",
-        "description": "Defines the intended resolution of the generated images.\nSpecific resolution values are determined per operation."
       },
       "OnFigureGenerationResultItem": {
         "properties": {
