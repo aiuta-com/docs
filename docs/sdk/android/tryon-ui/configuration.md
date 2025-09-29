@@ -72,13 +72,13 @@ To use the default configurations, add the following dependency to your project:
     ```kotlin
     dependencies {
         // Only default icon resources
-        implementation("com.aiuta.fashionsdk:configuration-defaults-icon:{{ latest(android) }}")
+        implementation("com.aiuta:fashionsdk-configuration-defaults-icon:{{ latest(android) }}")
 
         // Only default image resources
-        implementation("com.aiuta.fashionsdk:configuration-defaults-images:{{ latest(android) }}")
+        implementation("com.aiuta:fashionsdk-configuration-defaults-images:{{ latest(android) }}")
 
         // Both icon and images with builders
-        implementation("com.aiuta.fashionsdk:configuration-defaults:{{ latest(android) }}")
+        implementation("com.aiuta:fashionsdk-configuration-defaults:{{ latest(android) }}")
     }
     ```
 
@@ -86,13 +86,13 @@ To use the default configurations, add the following dependency to your project:
     ```groovy
     dependencies {
         // Only default icon resources
-        implementation "com.aiuta.fashionsdk:configuration-defaults-icon:{{ latest(android) }}"
+        implementation "com.aiuta:fashionsdk-configuration-defaults-icon:{{ latest(android) }}"
 
         // Only default image resources
-        implementation "com.aiuta.fashionsdk:configuration-defaults-images:{{ latest(android) }}"
+        implementation "com.aiuta:fashionsdk-configuration-defaults-images:{{ latest(android) }}"
 
         // Both icon and images with builders
-        implementation "com.aiuta.fashionsdk:configuration-defaults:{{ latest(android) }}"
+        implementation "com.aiuta:fashionsdk-configuration-defaults:{{ latest(android) }}"
     }
     ```
 
