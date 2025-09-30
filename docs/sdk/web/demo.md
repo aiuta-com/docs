@@ -20,13 +20,13 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
         return new Promise((resolve, reject) => {
             const isLocalhost = window.location.hostname === 'localhost' || 
                                window.location.hostname === '127.0.0.1' || 
+                               window.location.hostname.startsWith('192.168.') ||
+                               window.location.hostname.endsWith('.local') ||
                                window.location.hostname === '';
             
             if (isLocalhost) {
-                console.log('Loading local Aiuta SDK');
                 tryLoadLocal();
             } else {
-                console.log('Loading Aiuta SDK from CDN');
                 loadFromCDN();
             }
 
@@ -34,11 +34,10 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
                 const localScript = document.createElement('script');
                 localScript.src = window.aiuta.config.webSdkPath;
                 localScript.onload = () => {
-                    console.log('Loaded local Aiuta SDK');
+                    console.debug('Aiuta Web SDK loaded from local', window.aiuta.config.webSdkPath);
                     resolve();
                 };
                 localScript.onerror = () => {
-                    console.log('Local SDK not found, loading from CDN');
                     document.head.removeChild(localScript);
                     loadFromCDN();
                 };
@@ -49,11 +48,13 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
                 const cdnScript = document.createElement('script');
                 cdnScript.src = window.aiuta.config.webSdkUrl;
                 cdnScript.onload = () => {
-                    console.log('Loaded Aiuta SDK from CDN');
+                    console.debug('Aiuta Web SDK loaded from CDN', window.aiuta.config.webSdkUrl);
                     resolve();
                 };
                 cdnScript.onerror = () => {
-                    reject(new Error('Failed to load Aiuta SDK from CDN'));
+                    reject(new Error('Failed to load Aiuta Web SDK from CDN', {
+                        cause: { url: window.aiuta.config.webSdkUrl }
+                    }));
                 };
                 document.head.appendChild(cdnScript);
             }
@@ -62,7 +63,7 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
 
     async function initWebSdk() {
         if (window.aiuta.sdk) {
-            console.log('Aiuta SDK already initialized');
+            console.warn('Aiuta SDK already initialized');
             return;
         }
         
@@ -82,7 +83,7 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
                     });
                     const data = await response.json();
                     const token = data.token;
-                    console.log('JWT resolved');
+                    console.log('getJwt() did resolve token');
                     return token;
                 }
             },
@@ -90,20 +91,22 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
                 customCssUrl: window.aiuta.config.customCssUrl,
                 iframeStyles: {
                     borderRadius: "12px",
-                    top: "12px",
+                    top: "120px",
                     right: "18px"
                 }
             },
             analytics: {
                 handler: {
                     onAnalyticsEvent: (event) => {
-                        console.log('Aiuta Analytics Event:', event);
+                        console.log(event);
                     }
                 }
-            }
+            },
+            debugSettings: {
+                isLoggingEnabled: true
+            },
+            testTitle: "Test"
         });
-
-        console.log('Aiuta SDK initialized');
     }
 
     async function startTryOn(productId) {
@@ -111,12 +114,10 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
             await initWebSdk();
         }
         
-        console.log(`Starting try-on for product ID: ${productId}`);
         window.aiuta.sdk.tryOn(productId);
     }
 
     window.onload = async () => {
-        // Only initialize if not already done
         if (!window.aiuta.sdk) {
             await initWebSdk();
         }
