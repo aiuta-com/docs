@@ -1,8 +1,13 @@
 :root {
-    /* Brand Colors */
-    --aiuta-color-brand: #000000;
-    --aiuta-color-primary: #000000;
-    
-    /* Global Typeface */
-    --aiuta-typeface: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+/*    --aiuta-color-brand: #4000ff;
+    --aiuta-color-primary: brown;
+    --aiuta-color-secondary: green;
+    --aiuta-color-background: #e5e5ea;
+    --aiuta-color-neutral: lightgray;
+    --aiuta-color-border: black;*/
+}
+
+.aiuta-app--desktop {
+    top: 124px;
+    border-radius: 8px;
 }

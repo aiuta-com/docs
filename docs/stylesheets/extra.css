@@ -166,7 +166,7 @@ body {
 /* Catalog grid cards */
 
 .grid.cards.catalog {
-  grid-template-columns: repeat(auto-fit, minmax(22%, 1fr)) !important;
+  grid-template-columns: repeat(auto-fit, minmax(max(22%, 132px), 1fr)) !important;
   margin-left: auto;
   margin-right: auto;
   font-size: 0.625rem;
