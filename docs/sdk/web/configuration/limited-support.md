@@ -4,31 +4,44 @@ The Web SDK currently has limited configuration support compared to the [general
 
 ## Configuration Support Status
 
-| Configuration | Support Status | Description |
-|---------------------|----------------|-------------|
-| [`auth`](/sdk/developer/configuration/auth.md) | ✅ **Full** | Auth support with both API key and JWT methods |
-| [`analytics`](/sdk/developer/configuration/analytics.md) | ✅ **Full** | Analytics event handling |
-| [`userInterface`](/sdk/developer/configuration/ui/index.md) | ⚠️ **Partial** | Only styling configuration is available wia [custom CSS](/sdk/web/configuration/custom-css.md) |
-| [`features`](/sdk/developer/configuration/features/index.md) | ❌ **Not Supported** | Feature toggles and advanced functionality not available |
-| [`debugSettings`](/sdk/developer/configuration/debug-settings.md) | ❌ **Not Supported** | Debug logging and validation settings not available |
+| Configuration                                                     | Support Status | Description                                                   |
+| ----------------------------------------------------------------- | -------------- | ------------------------------------------------------------- |
+| [`auth`](/sdk/developer/configuration/auth.md)                    | ✅ **Full**    | Complete auth support with both API key and JWT methods       |
+| [`analytics`](/sdk/developer/configuration/analytics.md)          | ✅ **Full**    | Analytics event handling with custom callbacks                |
+| [`userInterface`](/sdk/developer/configuration/ui/index.md)       | ⚠️ **Partial** | Custom CSS styling + localization strings for UI components   |
+| [`features`](/sdk/developer/configuration/features/index.md)      | ⚠️ **Partial** | Localization strings and image customization for key features |
+| [`debugSettings`](/sdk/developer/configuration/debug-settings.md) | ⚠️ **Basic**   | Simple logging enable/disable setting                         |
 
 ## What's Available
 
-The Web SDK supports the core functionality needed for virtual try-on experiences:
+The Web SDK supports comprehensive functionality for virtual try-on experiences:
 
-- **Authentication**: Both API key and JWT-based authentication
-- **Analytics**: Complete analytics event tracking and custom handlers
-- **Basic UI**: Custom CSS styling and theme configuration
-- **Core Features**: Virtual try-on functionality with standard UI components
+### ✅ **Full Support**
 
-## What's Not Available
+- **Authentication**: Both API key and JWT-based authentication with callback support
+- **Analytics**: Complete analytics event tracking with custom event handlers
 
-Advanced configuration options that are available on mobile platforms:
+### ⚠️ **Partial Support**
 
-- **Feature Toggles**: Individual feature enable/disable controls
-- **Debug Settings**: Logging levels and validation policies
-- **Advanced UI Configuration**: Detailed component customization beyond CSS
+- **User Interface**:
+  - Custom CSS styling and theme configuration
+  - Localization strings for UI components (SelectionSnackbar, ErrorSnackbar, PoweredBy)
+- **Features**:
+  - Localization strings for key features (Onboarding, ImagePicker, TryOn, Share, Consent)
+  - Image customization for onboarding screens
+  - Consent management with multiple consent types
+- **Debug Settings**: Basic logging enable/disable functionality
+
+### Features Configuration
+
+- ✅ **Onboarding**: Complete localization and image customization
+- ✅ **Image Picker**: Localization for upload flows and QR functionality
+- ✅ **Try-On**: Localization for try-on process and validation messages
+- ✅ **Share**: Localization for sharing functionality
+- ✅ **Consent**: Multi-consent management with required/optional types
+- ❌ **Feature Toggles**: Individual feature enable/disable not supported
+- ❌ **Advanced Workflows**: Custom try-on flows not configurable
 
 ## Future Roadmap
 
-We're continuously working to expand Web SDK configuration support.
+We're continuously working to expand Web SDK configuration support to match the full feature set available on mobile platforms.

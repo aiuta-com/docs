@@ -9,10 +9,28 @@ Custom CSS is configured in the `userInterface` section of the SDK configuration
 ```javascript
 const aiuta = new Aiuta({
   userInterface: {
-    customCssUrl: "https://your-domain.com/path/to/aiuta-custom.css"
-  }
-});
+    theme: {
+      customCssUrl: 'https://your-domain.com/path/to/aiuta-custom.css',
+    },
+  },
+})
 ```
+
+!!! warn "Cross-Origin Access Required"
+
+    Your custom CSS file must be accessible for loading from the Aiuta SDK iframe hosted on `static.aiuta.com`. Make sure to configure proper CORS headers on your server:
+
+    ```
+    Access-Control-Allow-Origin: https://static.aiuta.com
+    Access-Control-Allow-Methods: GET
+    Access-Control-Allow-Headers: Content-Type
+    ```
+
+    Alternatively, you can allow all origins during development (not recommended for production):
+
+    ```
+    Access-Control-Allow-Origin: *
+    ```
 
 ## CSS Variables
 
@@ -22,86 +40,146 @@ The Web SDK uses CSS custom properties (variables) that you can override in your
 
 ```css
 :root {
-  /* Brand Colors */
-  --aiuta-color-brand: #4000FF;
+  /* Brand & Primary Colors */
+  --aiuta-color-brand: #000000;
+  --aiuta-color-try-on: #4000ff;
   --aiuta-color-primary: #000000;
-  --aiuta-color-secondary: #9F9F9F;
-  
-  /* Text Colors */
-  --aiuta-color-on-dark: #FFFFFF;
-  --aiuta-color-on-light: #000000;
-  
+  --aiuta-color-secondary: #9f9f9f;
+
+  /* Contextual Colors (FOR USE ON SPECIFIC BACKGROUNDS ONLY) */
+  --aiuta-color-on-dark: #ffffff; /* White text for use ON dark/brand backgrounds */
+  --aiuta-color-on-light: #000000; /* Dark text for use ON light backgrounds (use sparingly) */
+
   /* Background Colors */
-  --aiuta-color-background: #FFFFFF;
-  --aiuta-color-screen: #000000;
-  --aiuta-color-neutral: #F2F2F7;
-  --aiuta-color-border: #E5E5EA;
+  --aiuta-color-background: #ffffff;
+  --aiuta-color-neutral: #f2f2f7;
+  --aiuta-color-border: #e5e5ea;
+
+  /* Selection */
+  --aiuta-color-selection-background: #000000;
+
+  /* Error */
+  --aiuta-color-error-background: #ef5754;
+
+  /* Screen dim for modals */
+  --aiuta-color-screen-dim: rgba(0, 0, 0, 0.7);
 }
 ```
 
 ### Typography
 
+The Web SDK uses CSS classes for typography styling. You can override these classes in your custom CSS:
+
 ```css
+/* Global font family */
 :root {
-  /* Global Typeface */
-  --aiuta-typeface: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  
-  /* Label Typography */
-  --aiuta-label-title-l-font-size: 24px;
-  --aiuta-label-title-l-font-weight: 600;
-  
-  --aiuta-label-title-m-font-size: 20px;
-  --aiuta-label-title-m-font-weight: 600;
-  
-  --aiuta-label-regular-font-size: 16px;
-  --aiuta-label-regular-font-weight: 400;
-  
-  --aiuta-label-subtle-font-size: 14px;
-  --aiuta-label-subtle-font-weight: 400;
-  
-  /* Button Typography */
-  --aiuta-button-m-font-size: 16px;
-  --aiuta-button-m-font-weight: 500;
-  
-  --aiuta-button-s-font-size: 14px;
-  --aiuta-button-s-font-weight: 500;
-  
-  /* Page Bar Typography */
-  --aiuta-page-title-font-size: 18px;
-  --aiuta-page-title-font-weight: 600;
+  --aiuta-typeface:
+    'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Page Title */
+.aiuta-page-title {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+/* Titles */
+.aiuta-title-l {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.aiuta-title-m {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Labels */
+.aiuta-label-regular {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.aiuta-label-subtle {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.aiuta-label-disclaimer {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.22px;
+}
+
+/* Buttons */
+.aiuta-button-m {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.aiuta-button-s {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.14px;
 }
 ```
 
 ### Component Shapes
 
+The Web SDK uses CSS classes for component shapes. You can override these classes in your custom CSS:
+
 ```css
-:root {
-  /* Button Shapes */
-  --aiuta-button-m-border-radius: 8px;
-  --aiuta-button-s-border-radius: 6px;
-  
-  /* Image Shapes */
-  --aiuta-image-l-border-radius: 12px;
-  --aiuta-image-s-border-radius: 8px;
-  
-  /* Bottom Sheet Shapes */
-  --aiuta-bottom-sheet-border-radius: 16px;
+/* Button Medium Shape */
+.aiuta-button-m {
+  border: none;
+  border-radius: 12px;
+}
+
+/* Button Small Shape */
+.aiuta-button-s {
+  border: none;
+  border-radius: 8px;
+}
+
+/* Image Large Shape */
+.aiuta-image-l {
+  border-radius: 24px;
+}
+
+/* Image Medium Shape */
+.aiuta-image-m {
+  border-radius: 16px;
+}
+
+/* Image Small Shape */
+.aiuta-image-s {
+  border-radius: 8px;
 }
 ```
 
-### Component Colors
+### Component-Specific Colors
+
+These colors are already included in the main color scheme above, but are highlighted here for component-specific customization:
 
 ```css
 :root {
-  /* Selection Snackbar */
-  --aiuta-selection-background: #F2F2F7;
-  
-  /* Error Snackbar */
-  --aiuta-error-background: #FFEBEE;
-  --aiuta-error-primary: #D32F2F;
-  
-  /* Activity Indicator */
-  --aiuta-activity-overlay: rgba(0, 0, 0, 0.3);
+  /* Selection components */
+  --aiuta-color-selection-background: #000000;
+
+  /* Error components */
+  --aiuta-color-error-background: #ef5754;
+
+  /* Modal overlays */
+  --aiuta-color-screen-dim: rgba(0, 0, 0, 0.7);
 }
 ```
 
@@ -112,40 +190,62 @@ Here's an example of a custom CSS file that overrides the brand color, typeface,
 ```css
 :root {
   /* Override brand color to match your brand */
-  --aiuta-color-brand: #000000;
-  
+  --aiuta-color-brand: #ff6b35;
+  --aiuta-color-try-on: #ff6b35;
+
   /* Set custom typeface for all text */
   --aiuta-typeface: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  
+
   /* Customize primary text color */
-  --aiuta-color-primary: #1A1A1A;
-  
-  /* Override button styling */
-  --aiuta-button-m-border-radius: 12px;
-  --aiuta-button-m-font-weight: 600;
-  
-  /* Customize bottom sheet appearance */
-  --aiuta-bottom-sheet-border-radius: 20px;
-  --aiuta-grabber-background-color: #000000;
+  --aiuta-color-primary: #1a1a1a;
+
+  /* Customize background colors */
+  --aiuta-color-background: #fafafa;
+  --aiuta-color-neutral: #f0f0f0;
+}
+
+/* Override button styling */
+.aiuta-button-m {
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+.aiuta-button-s {
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* Customize image shapes */
+.aiuta-image-l {
+  border-radius: 20px;
+}
+
+/* Override typography */
+.aiuta-title-l {
+  font-weight: 800;
+  font-size: 28px;
 }
 ```
 
 ## Typography System
 
-The Web SDK uses a unified typography system where all text elements inherit from the `--aiuta-typeface` variable. This means:
+The Web SDK uses a unified typography system with both CSS variables and classes:
 
-- **Single font control**: Change `--aiuta-typeface` to update all text across the SDK
-- **Consistent appearance**: All components use the same font family by default
-- **Easy customization**: Override individual font properties (size, weight) as needed
-- **Fallback support**: The default typeface includes system fonts for optimal cross-platform compatibility
+- **CSS Variable Control**: Change `--aiuta-typeface` to update the font family across all SDK components
+- **CSS Class Customization**: Override individual typography classes (`.aiuta-title-l`, `.aiuta-button-m`, etc.) for specific styling
+- **Consistent Appearance**: All components use the same base font family by default
+- **Flexible Customization**: Mix CSS variables for global changes with class overrides for specific elements
+- **Fallback Support**: The default typeface includes Roboto and system fonts for optimal cross-platform compatibility
 
 ## Notes
 
-- All CSS variables are optional - only override the ones you need to customize
-- The SDK will fall back to default values for any variables not defined in your custom CSS
-- The `--aiuta-typeface` variable applies to all text elements automatically
-- Make sure your custom CSS file is accessible via HTTPS when using the SDK in production
-- Test your customizations across different devices and screen sizes to ensure compatibility
+- **CSS Variables**: All CSS variables are optional - only override the ones you need to customize
+- **CSS Classes**: You can override any of the typography and shape classes to customize specific components
+- **Fallback Behavior**: The SDK will fall back to default values for any variables or classes not defined in your custom CSS
+- **Global Font Control**: The `--aiuta-typeface` variable applies to all text elements automatically
+- **HTTPS Requirement**: Make sure your custom CSS file is accessible via HTTPS when using the SDK in production
+- **Cross-Device Testing**: Test your customizations across different devices and screen sizes to ensure compatibility
+- **Import Order**: Your custom CSS should be loaded after the SDK's default styles to ensure proper override behavior
 
 ## Roadmap
 
