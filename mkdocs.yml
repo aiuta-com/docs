@@ -120,6 +120,7 @@ nav:
     - Configuration: 
       - Limited Support: sdk/web/configuration/limited-support.md
       - Custom CSS: sdk/web/configuration/custom-css.md
+      - Localization: sdk/web/configuration/localization.md
 
   - Shopify:
     - shopify/index.md

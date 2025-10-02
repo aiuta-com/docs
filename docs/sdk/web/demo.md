@@ -88,11 +88,8 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
                 }
             },
             userInterface: {
-                customCssUrl: window.aiuta.config.customCssUrl,
-                iframeStyles: {
-                    borderRadius: "12px",
-                    top: "120px",
-                    right: "18px"
+                theme: {
+                    customCssUrl: window.aiuta.config.customCssUrl,
                 }
             },
             analytics: {
