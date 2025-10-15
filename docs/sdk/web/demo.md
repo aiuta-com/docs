@@ -94,20 +94,11 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
                             --aiuta-color-primary: black;
                         }
                         .aiuta-app--desktop {
-                            top: 124px;
+                            top: 134px;
                             right: 24px;
                         }
                     `,
                     customCssUrl: window.aiuta.config.customCssUrl,
-                }
-            },
-            features: {
-                onboarding: {
-                    howItWorksPage: {
-                        images: {
-                            onboardingHowItWorksDesktop: 'https://bananarepublic.gap.com/webcontent/0060/134/797/cn60134797.jpg',
-                        }
-                    }
                 }
             },
             analytics: {
