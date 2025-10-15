@@ -9,6 +9,8 @@ body {
   --md-typeset-a-color--dark: #5e82ff;
   --md-footer-bg-color: var(--md-primary-fg-color);
   --md-footer-bg-color--dark: var(--md-primary-fg-color);
+  --md-text-font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 [data-md-color-scheme="slate"] {
@@ -166,7 +168,7 @@ body {
 /* Catalog grid cards */
 
 .grid.cards.catalog {
-  grid-template-columns: repeat(auto-fit, minmax(max(22%, 132px), 1fr)) !important;
+  grid-template-columns: repeat(auto-fit, minmax(max(22%, 140px), 1fr)) !important;
   margin-left: auto;
   margin-right: auto;
   font-size: 0.625rem;

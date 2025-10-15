@@ -87,11 +87,11 @@ def gen_web_catalog(products, api_key):
     for product in products:
         counter += 1
         
-        result = f"""{_INDENT}-   ![Product]({product['image_urls'][0]}){{ width=100 }}
+        result = f"""-   ![Product]({product['image_urls'][0]}){{ width=100 }}
 
-{_INDENT}{_INDENT}<button class="md-button" onclick="startTryOn('{product['sku_id']}')">Try on</button>
+{_INDENT}<button class="md-button" onclick="startTryOn('{product['sku_id']}')">Try on</button>
 
-{_INDENT}{_INDENT}{product['title']}"""
+{_INDENT}{product['title']}"""
         results.append(result)
     
     return '\n\n'.join(results)

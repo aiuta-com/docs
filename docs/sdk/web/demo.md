@@ -1,6 +1,6 @@
 # Web SDK Demo
 
-This page shows how Aiuta Web SDK can be used in your fashion e-commerce platform. Click the “Try on” button in the sample catalog or on the product pages to see the virtual try-on feature.
+This page shows how Aiuta Web SDK can be used in your fashion e-commerce platform. Click the “Try on” button in the sample catalog to see the virtual try-on feature in action.
 
 <script>
     window.aiuta = window.aiuta || {};
@@ -89,7 +89,7 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
             },
             userInterface: {
                 theme: {
-                    customCssUrl: window.aiuta.config.customCssUrl,
+                    customCssUrl: "https://bananarepublic.gap.com/static_content/onesitecategory/components/mfe/_next/static/css/0984395762ef9512.css",
                 }
             },
             analytics: {
@@ -121,12 +121,10 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
     }
 </script>
 
-=== "Catalog"
+<br/>
 
-    <div class="grid cards catalog" markdown>
+<div class="grid cards catalog" markdown>
 
 {{ gen_web_catalog() }}
 
-    </div>
-
-{{ gen_web_pages(6) }}
+</div>
