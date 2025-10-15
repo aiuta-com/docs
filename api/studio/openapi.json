@@ -1,0 +1,1579 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Studio",
+    "description": "Check out the <a href='/api/studio/workflow/'>workflow description</a> for more details",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aiuta.com/studio/v1"
+    }
+  ],
+  "paths": {
+    "/uploaded_images": {
+      "post": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Upload an image as bytes",
+        "description": "Upload an image and save it with unique ID. By default mime-type is 'image/png' and extension is '.png'.",
+        "operationId": "upload_user_image_uploaded_images_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_user_image_uploaded_images_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AiutaImage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/uploaded_images/{image_id}": {
+      "get": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Get an uploaded image",
+        "description": "Get user's uploaded image",
+        "operationId": "get_user_uploaded_image_uploaded_images__image_id__get",
+        "parameters": [
+          {
+            "name": "image_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Image Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AiutaImage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Delete an uploaded image",
+        "description": "You can delete images uploaded by the same API user. It is not possible to delete images with the 'aiuta' owner (such as try-on model images).",
+        "operationId": "delete_uploaded_image_uploaded_images__image_id__delete",
+        "parameters": [
+          {
+            "name": "image_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Image Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/generated_images/{image_id}": {
+      "delete": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Delete a generated image",
+        "description": "This method deletes a generated image. Only images of type 'user' (derived from user-uploaded images) can be deleted.",
+        "operationId": "delete_generated_image_generated_images__image_id__delete",
+        "parameters": [
+          {
+            "name": "image_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Image Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/flat_lay_operations": {
+      "post": {
+        "tags": [
+          "flat_lay"
+        ],
+        "summary": "Run a flat lay generation operation.",
+        "operationId": "create_flat_lay_operation_flat_lay_operations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateFlatLayImagesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOperationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/flat_lay_operations/{operation_id}": {
+      "get": {
+        "tags": [
+          "flat_lay"
+        ],
+        "summary": "Get generate flat lay operation.",
+        "description": "Handler for getting generation of flat lay operation details.",
+        "operationId": "get_flat_lay_operation_flat_lay_operations__operation_id__get",
+        "parameters": [
+          {
+            "name": "operation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Operation Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/GenerateFlatLayImagesOperation"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Response Get Flat Lay Operation Flat Lay Operations  Operation Id  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/on_figure_model_presets": {
+      "get": {
+        "tags": [
+          "on_figure"
+        ],
+        "summary": "List available on-figure model presets.",
+        "description": "Returns a list of predefined on-figure model presets that simplify model configuration by providing commonly used appearance settings. See `OnFigureModelPresetDescription` for structure details.",
+        "operationId": "get_on_figure_model_presets_on_figure_model_presets_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/OnFigureModelPresetDescription"
+                  },
+                  "type": "array",
+                  "title": "Response Get On Figure Model Presets On Figure Model Presets Get"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/on_figure_operations": {
+      "post": {
+        "tags": [
+          "on_figure"
+        ],
+        "summary": "Start on-figure image generation operation.",
+        "description": "Submits a request to generate product images featuring an on-figure model, based on the provided product data, model configuration, and desired image types. The operation may take time to complete depending on workload and priority. Returns an object containing `operation_id`, which can be used to track progress and retrieve results (see `/on_figure_operations/{operation_id}`).",
+        "operationId": "create_on_figure_operation_on_figure_operations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateOnFigureImagesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOperationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/on_figure_operations/regenerate": {
+      "post": {
+        "tags": [
+          "on_figure"
+        ],
+        "summary": "Regenerate specific on-figure product image types.",
+        "description": "Submits a request to regenerate specific image types from a previous on-figure image generation. This is useful for refining selected views or adding new ones while preserving the original model appearance and product configuration. You must specify the `original_operation_id` and the list of `image_types` to regenerate. Optionally, you can override the number of image variants per type. Returns an object containing `operation_id`, which can be used to track progress and retrieve results (see `/on_figure_operations/{operation_id}`).",
+        "operationId": "create_on_figure_regenerate_operation_on_figure_operations_regenerate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegenerateOnFigureImagesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOperationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/on_figure_operations/{operation_id}": {
+      "get": {
+        "tags": [
+          "on_figure"
+        ],
+        "summary": "Retrieve on-figure image generation operation result.",
+        "description": "Returns the details and result of a previously submitted on-figure image generation operation.",
+        "operationId": "get_on_figure_operation_on_figure_operations__operation_id__get",
+        "parameters": [
+          {
+            "name": "operation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Operation Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/GenerateOnFigureImagesOperation"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Response Get On Figure Operation On Figure Operations  Operation Id  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AgeGroupType": {
+        "type": "string",
+        "enum": [
+          "infant",
+          "toddler",
+          "child",
+          "teen",
+          "young_adult",
+          "middle_aged_adult",
+          "senior_adult"
+        ],
+        "title": "AgeGroupType",
+        "description": "Age group of the on-figure model used for image generation."
+      },
+      "AiutaImage": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Image ID"
+          },
+          "owner_type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OwnerType"
+              }
+            ],
+            "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+          },
+          "url": {
+            "type": "string",
+            "title": "Url",
+            "description": "Image URL"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "owner_type",
+          "url"
+        ],
+        "title": "AiutaImage",
+        "examples": [
+          {
+            "id": "user_image-06f5948c-c031-4662-a7c4-4d999b445c86",
+            "owner_type": "user",
+            "url": "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/examples/uploaded_images/user_image-06f5948c-c031-4662-a7c4-4d999b445c86.jpg"
+          }
+        ]
+      },
+      "BackgroundSettings": {
+        "properties": {
+          "background_type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BackgroundType"
+              }
+            ],
+            "description": "Type of background to apply in the generated image (e.g., arbitrary, transparent or reference-colored)."
+          },
+          "reference_color": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reference Color",
+            "description": "Optional reference color for background generation. Used only if `background_type` is set to 'reference_color'. The resulting background will not be a flat solid fill, but rather a blend of gradients and tones inspired by the specified color. The chosen color serves as the visual base or anchor. Must be a valid RGB hex code (e.g., '#80ff00')."
+          }
+        },
+        "type": "object",
+        "required": [
+          "background_type"
+        ],
+        "title": "BackgroundSettings",
+        "description": "Configuration for generating the background of an image.\n\nThe background may be one of several types: arbitrary (default), transparent or reference-based.\nDepending on the selected `background_type`, additional fields may be required:\n\n- If `background_type` is 'reference_color', a valid RGB hex color must be provided via `reference_color`.\n  The background will be generated based on this color as a visual base, but not as a solid fill.\n\nThe model enforces consistency between the selected type and the presence or absence of these additional fields."
+      },
+      "BackgroundType": {
+        "type": "string",
+        "enum": [
+          "arbitrary",
+          "transparent",
+          "reference_color"
+        ],
+        "title": "BackgroundType",
+        "description": "Defines how the background will be generated (e.g., solid, transparent or reference-colored)."
+      },
+      "BodyShapeType": {
+        "type": "string",
+        "enum": [
+          "regular",
+          "thin",
+          "muscular",
+          "plus_sized"
+        ],
+        "title": "BodyShapeType",
+        "description": "Body shape category of the on-figure model, used to reflect realistic garment fit."
+      },
+      "Body_upload_user_image_uploaded_images_post": {
+        "properties": {
+          "image_data": {
+            "type": "string",
+            "format": "binary",
+            "title": "Image Data"
+          }
+        },
+        "type": "object",
+        "required": [
+          "image_data"
+        ],
+        "title": "Body_upload_user_image_uploaded_images_post"
+      },
+      "CreateOperationResponse": {
+        "properties": {
+          "operation_id": {
+            "type": "string",
+            "title": "Operation Id",
+            "description": "ID of the created operation."
+          }
+        },
+        "type": "object",
+        "required": [
+          "operation_id"
+        ],
+        "title": "CreateOperationResponse",
+        "description": "Response returned after successfully creating an operation.",
+        "examples": [
+          {
+            "operation_id": "flatlay_op-2d77fc78-06ef-434a-a016-03d819249605"
+          }
+        ]
+      },
+      "EthnicityType": {
+        "type": "string",
+        "enum": [
+          "european",
+          "middle_eastern",
+          "indian",
+          "asian",
+          "pacific_islander",
+          "african",
+          "latino",
+          "native_american"
+        ],
+        "title": "EthnicityType",
+        "description": "Represents the ethnic or regional background of the on-figure model.\n\nThis attribute helps guide the generation of culturally representative facial features and appearance."
+      },
+      "FlatLayGenerationResultItem": {
+        "properties": {
+          "image_type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FlatLayImageType"
+              }
+            ],
+            "description": "Image type (flat-lay type and viewpoint) this result corresponds to."
+          },
+          "generated_images": {
+            "items": {
+              "$ref": "#/components/schemas/AiutaImage"
+            },
+            "type": "array",
+            "title": "Generated Images",
+            "description": "List of generated image variants for the specified image type."
+          }
+        },
+        "type": "object",
+        "required": [
+          "image_type",
+          "generated_images"
+        ],
+        "title": "FlatLayGenerationResultItem",
+        "description": "Represents the generated output for a specific image type in a flat-lay product images generation operation.\n\nEach item corresponds to a single combination of flat-lay type and viewpoint (i.e., an `ImageType`)\nand includes the number of generated image variants as specified by the `number_of_generations` parameter\nin the generation request."
+      },
+      "FlatLayImageType": {
+        "properties": {
+          "flat_lay_type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FlatLayType"
+              }
+            ],
+            "description": "Layout style of the flat-lay image (e.g., flat, ghost mannequin, detail view)."
+          },
+          "viewpoint": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/FlatLayViewpointType"
+              }
+            ],
+            "description": "View direction for the image (e.g., front or back)."
+          }
+        },
+        "type": "object",
+        "required": [
+          "flat_lay_type",
+          "viewpoint"
+        ],
+        "title": "FlatLayImageType",
+        "description": "Specifies a flat-lay product image style, defined by layout type and viewpoint."
+      },
+      "FlatLayType": {
+        "type": "string",
+        "enum": [
+          "flat",
+          "ghost_mannequin",
+          "detail"
+        ],
+        "title": "FlatLayType",
+        "description": "Specifies the style of flat-lay product image."
+      },
+      "FlatLayViewpointType": {
+        "type": "string",
+        "enum": [
+          "front",
+          "back"
+        ],
+        "title": "FlatLayViewpointType",
+        "description": "Direction from which the flat-lay image should be rendered."
+      },
+      "Gender": {
+        "type": "string",
+        "enum": [
+          "male",
+          "female"
+        ],
+        "title": "Gender",
+        "description": "Gender of the on-figure model."
+      },
+      "GenerateFlatLayImagesOperation": {
+        "properties": {
+          "product_info": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProductInfo"
+              }
+            ],
+            "description": "Structured product data. See `ProductInfo` for details."
+          },
+          "operation_priority": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationPriority"
+              }
+            ],
+            "description": "Specifies whether the operation should be processed online (real-time) or offline (batch). ",
+            "default": "offline"
+          },
+          "number_of_generations": {
+            "type": "integer",
+            "maximum": 4.0,
+            "minimum": 1.0,
+            "title": "Number Of Generations",
+            "description": "Number of output generated images of each type.",
+            "default": 1
+          },
+          "background_settings": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BackgroundSettings"
+              }
+            ],
+            "description": "Configuration for background generation. See `BackgroundSettings` for details on supported types and related fields."
+          },
+          "image_types": {
+            "items": {
+              "$ref": "#/components/schemas/FlatLayImageType"
+            },
+            "type": "array",
+            "maxItems": 6,
+            "minItems": 1,
+            "title": "Image Types",
+            "description": "List of desired flat-lay product image types to generate. Refer to `ImageType`. `ImageType` values must be unique and at least one type must be specified."
+          },
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Operation's ID"
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationStatus"
+              }
+            ],
+            "description": "Current status of the operation"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error",
+            "description": "Error details if the operation was failed. None means that there were no errors."
+          },
+          "generation_result": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/FlatLayGenerationResultItem"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Generation Result",
+            "description": "Generation result for a flat-lay product images generation operation. Each list item corresponds to an `ImageType` in the same order as specified in the request. May be absent if the operation is still in progress or encountered an error."
+          }
+        },
+        "type": "object",
+        "required": [
+          "product_info",
+          "image_types",
+          "id",
+          "status",
+          "error"
+        ],
+        "title": "GenerateFlatLayImagesOperation",
+        "description": "Represents a completed or in-progress operation for generating flat-lay product images.\n\nThis object combines the original generation request parameters with the result of the operation.\nIt allows tracking the output and progress of an image generation process using the same model configuration\nand requested image types.\n\nThe operation may be incomplete or errored, in which case the `generation_result` may be missing.",
+        "examples": [
+          {
+            "background_settings": {
+              "background_type": "arbitrary"
+            },
+            "generation_result": [
+              {
+                "generated_images": [
+                  {
+                    "id": "gen_image-9305f69e-a236-4efc-a81b-16eb2969d402",
+                    "owner_type": "user",
+                    "url": "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/examples/flat_lays/flat_lay_candidate-94dd418b-28c7-4874-82c6-8ca8009f1d0a.png"
+                  }
+                ],
+                "image_type": {
+                  "flat_lay_type": "flat",
+                  "viewpoint": "front"
+                }
+              }
+            ],
+            "id": "flatlay_op-fa32973b-c9b8-4c8a-9cc2-45a7158736fe",
+            "image_types": [
+              {
+                "flat_lay_type": "flat",
+                "viewpoint": "front"
+              }
+            ],
+            "number_of_generations": 1,
+            "operation_priority": "online",
+            "product_info": {
+              "category": "Apparel & Accessories > Clothing > Dresses",
+              "description": "Red dress with floral print",
+              "image_urls": [
+                "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/examples/uploaded_images/user_image-06f5948c-c031-4662-a7c4-4d999b445c86.jpg"
+              ],
+              "title": "Red floral dress"
+            },
+            "status": "SUCCESS"
+          }
+        ]
+      },
+      "GenerateFlatLayImagesRequest": {
+        "properties": {
+          "product_info": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProductInfo"
+              }
+            ],
+            "description": "Structured product data. See `ProductInfo` for details."
+          },
+          "operation_priority": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationPriority"
+              }
+            ],
+            "description": "Specifies whether the operation should be processed online (real-time) or offline (batch). ",
+            "default": "offline"
+          },
+          "number_of_generations": {
+            "type": "integer",
+            "maximum": 4.0,
+            "minimum": 1.0,
+            "title": "Number Of Generations",
+            "description": "Number of output generated images of each type.",
+            "default": 1
+          },
+          "background_settings": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BackgroundSettings"
+              }
+            ],
+            "description": "Configuration for background generation. See `BackgroundSettings` for details on supported types and related fields."
+          },
+          "image_types": {
+            "items": {
+              "$ref": "#/components/schemas/FlatLayImageType"
+            },
+            "type": "array",
+            "maxItems": 6,
+            "minItems": 1,
+            "title": "Image Types",
+            "description": "List of desired flat-lay product image types to generate. Refer to `ImageType`. `ImageType` values must be unique and at least one type must be specified."
+          }
+        },
+        "type": "object",
+        "required": [
+          "product_info",
+          "image_types"
+        ],
+        "title": "GenerateFlatLayImagesRequest",
+        "description": "Request to generate flat-lay product images for a given clothing item.\n\nThis request allows clients to specify desired flat-lay presentation styles\n(e.g., ghost mannequin, detail shot, or classic flat-lay) and viewpoints (e.g., front, back).\nIt is intended for generating clean, studio-style visuals of products laid flat,\ncommonly used in e-commerce product galleries and catalogs."
+      },
+      "GenerateOnFigureImagesOperation": {
+        "properties": {
+          "product_info": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProductInfo"
+              }
+            ],
+            "description": "Structured product data. See `ProductInfo` for details."
+          },
+          "operation_priority": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationPriority"
+              }
+            ],
+            "description": "Specifies whether the operation should be processed online (real-time) or offline (batch). ",
+            "default": "offline"
+          },
+          "number_of_generations": {
+            "type": "integer",
+            "maximum": 4.0,
+            "minimum": 1.0,
+            "title": "Number Of Generations",
+            "description": "Number of output generated images of each type.",
+            "default": 1
+          },
+          "image_types": {
+            "items": {
+              "$ref": "#/components/schemas/OnFigureImageType"
+            },
+            "type": "array",
+            "maxItems": 35,
+            "minItems": 1,
+            "title": "Image Types",
+            "description": "List of desired on-figure product image types to generate. Refer to `ImageType`. `ImageType` values must be unique and at least one type must be specified."
+          },
+          "on_figure_model_preset_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "On Figure Model Preset Id",
+            "description": "ID of a predefined model preset. Either on_figure_model_preset_id or on_figure_model_settings (but not both) must be specified."
+          },
+          "on_figure_model_settings": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/OnFigureModelSettings"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Manually set on-figure model settings. Either on_figure_model_preset_id or on_figure_model_settings (but not both) must be specified."
+          },
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Operation's ID"
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationStatus"
+              }
+            ],
+            "description": "Current status of the operation"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error",
+            "description": "Error details if the operation was failed. None means that there were no errors."
+          },
+          "generation_result": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/OnFigureGenerationResultItem"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Generation Result",
+            "description": "Generation result for an on-figure product images generation operation. Each list item corresponds to an `ImageType` in the same order as specified in the request. May be absent if the operation is still in progress or encountered an error."
+          }
+        },
+        "type": "object",
+        "required": [
+          "product_info",
+          "image_types",
+          "id",
+          "status",
+          "error"
+        ],
+        "title": "GenerateOnFigureImagesOperation",
+        "description": "Represents a completed or in-progress operation for generating on-figure product images.\n\nThis object combines the original generation request parameters with the result of the operation.\nIt allows tracking the output and progress of an image generation process using the same model configuration\nand requested image types.\n\nThe operation may be incomplete or errored, in which case the `generation_result` may be missing."
+      },
+      "GenerateOnFigureImagesRequest": {
+        "properties": {
+          "product_info": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProductInfo"
+              }
+            ],
+            "description": "Structured product data. See `ProductInfo` for details."
+          },
+          "operation_priority": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationPriority"
+              }
+            ],
+            "description": "Specifies whether the operation should be processed online (real-time) or offline (batch). ",
+            "default": "offline"
+          },
+          "number_of_generations": {
+            "type": "integer",
+            "maximum": 4.0,
+            "minimum": 1.0,
+            "title": "Number Of Generations",
+            "description": "Number of output generated images of each type.",
+            "default": 1
+          },
+          "image_types": {
+            "items": {
+              "$ref": "#/components/schemas/OnFigureImageType"
+            },
+            "type": "array",
+            "maxItems": 35,
+            "minItems": 1,
+            "title": "Image Types",
+            "description": "List of desired on-figure product image types to generate. Refer to `ImageType`. `ImageType` values must be unique and at least one type must be specified."
+          },
+          "on_figure_model_preset_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "On Figure Model Preset Id",
+            "description": "ID of a predefined model preset. Either on_figure_model_preset_id or on_figure_model_settings (but not both) must be specified."
+          },
+          "on_figure_model_settings": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/OnFigureModelSettings"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Manually set on-figure model settings. Either on_figure_model_preset_id or on_figure_model_settings (but not both) must be specified."
+          }
+        },
+        "type": "object",
+        "required": [
+          "product_info",
+          "image_types"
+        ],
+        "title": "GenerateOnFigureImagesRequest",
+        "description": "Request to generate product images featuring on-figure models for a given clothing item.\n\nThis request supports detailed customization of the model's appearance\n(e.g., gender, age group, body shape, skin tone)\nand allows specifying the desired types of images to generate (e.g., front, angled, close-up).\nIt is intended for generating photorealistic visuals of products worn by human models,\ntypically for use on product detail pages."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HairColorType": {
+        "type": "string",
+        "enum": [
+          "blond",
+          "dark_blond",
+          "medium_brown",
+          "dark_brown",
+          "black",
+          "auburn",
+          "red",
+          "gray",
+          "white"
+        ],
+        "title": "HairColorType",
+        "description": "Color of the model's hair, used for visual customization."
+      },
+      "HairLengthType": {
+        "type": "string",
+        "enum": [
+          "bald",
+          "short",
+          "medium",
+          "long"
+        ],
+        "title": "HairLengthType",
+        "description": "Length category of the model's hair for appearance customization."
+      },
+      "HairStyleType": {
+        "type": "string",
+        "enum": [
+          "straight",
+          "wavy",
+          "curly"
+        ],
+        "title": "HairStyleType",
+        "description": "Style or texture of the model's hair."
+      },
+      "HeightType": {
+        "type": "string",
+        "enum": [
+          "short",
+          "medium",
+          "tall"
+        ],
+        "title": "HeightType",
+        "description": "Categorical height classification used for rendering model proportions."
+      },
+      "OnFigureGenerationResultItem": {
+        "properties": {
+          "image_type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OnFigureImageType"
+              }
+            ],
+            "description": "Image type (viewpoint and pose) this result corresponds to."
+          },
+          "generated_images": {
+            "items": {
+              "$ref": "#/components/schemas/AiutaImage"
+            },
+            "type": "array",
+            "title": "Generated Images",
+            "description": "List of generated image variants for the specified image type."
+          }
+        },
+        "type": "object",
+        "required": [
+          "image_type",
+          "generated_images"
+        ],
+        "title": "OnFigureGenerationResultItem",
+        "description": "Represents the generated output for a specific image type in an on-figure product images generation operation.\n\nEach item corresponds to a single combination of viewpoint and pose (i.e., an `ImageType`)\nand includes the number of generated image variants as specified by the `number_of_generations` parameter\nin the generation request."
+      },
+      "OnFigureImageType": {
+        "properties": {
+          "viewpoint": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OnFigureViewpointType"
+              }
+            ],
+            "description": "Camera angle or viewpoint of the image."
+          },
+          "pose": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OnFigurePoseType"
+              }
+            ],
+            "description": "Model pose to be shown in the image."
+          }
+        },
+        "type": "object",
+        "required": [
+          "viewpoint",
+          "pose"
+        ],
+        "title": "OnFigureImageType",
+        "description": "Specifies a on-figure product image style, defined by viewpoint and model pose.\n\nThis object is used to specify the desired composition and perspective of a product image."
+      },
+      "OnFigureModelPresetDescription": {
+        "properties": {
+          "preset_id": {
+            "type": "string",
+            "title": "Preset Id",
+            "description": "ID of a predefined model preset."
+          },
+          "sample_image": {
+            "type": "string",
+            "maxLength": 2083,
+            "minLength": 1,
+            "format": "uri",
+            "title": "Sample Image",
+            "description": "URL of a sample image showing how the generated model will look."
+          },
+          "settings": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OnFigureModelSettings"
+              }
+            ],
+            "description": "Detailed model settings used in this on-figure model preset."
+          }
+        },
+        "type": "object",
+        "required": [
+          "preset_id",
+          "sample_image",
+          "settings"
+        ],
+        "title": "OnFigureModelPresetDescription",
+        "description": "Describes a predefined on-figure model preset for product image generation.\n\nEach preset includes a unique identifier, a sample image demonstrating the model's general appearance,\nand a full set of configuration settings (e.g., gender, body shape, skin tone).\n\nPresets allow users to apply common predefined configurations without manually specifying all parameters.\nNote that the exact visual appearance (e.g., specific facial features) may differ from the sample image,\nas presets define parameter templates rather than fixed model identities."
+      },
+      "OnFigureModelSettings": {
+        "properties": {
+          "gender": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Gender"
+              }
+            ],
+            "description": "Gender of the model. This is the only required setting."
+          },
+          "ethnicity": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EthnicityType"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Ethnic or regional background of the model (e.g., 'european', 'asian', 'latino'). Used to influence visual traits such as facial structure and hair type."
+          },
+          "skin_tone": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SkinToneType"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Approximate skin tone of the model, ranging from pale white to black. Used to guide realistic and inclusive visual representation."
+          },
+          "body_shape": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BodyShapeType"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Overall body shape of the model (e.g., 'thin', 'muscular', 'plus_sized', 'regular'), used to reflect garment fit and silhouette."
+          },
+          "age_group": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AgeGroupType"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Life stage of the model (e.g., 'child', 'teen', 'young_adult', 'senior_adult'), influencing facial features and body proportions."
+          },
+          "height": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HeightType"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Height category of the model (e.g., 'short', 'medium', 'tall')."
+          },
+          "hair_length": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HairLengthType"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Length of the model's hair (e.g., 'short', 'medium', 'long')."
+          },
+          "hair_style": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HairStyleType"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Style of the model's hair (e.g., 'straight', 'wavy', 'curly')."
+          },
+          "hair_color": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/HairColorType"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Color of the model's hair (e.g., 'blond', 'dark_brown', 'red')."
+          }
+        },
+        "type": "object",
+        "required": [
+          "gender"
+        ],
+        "title": "OnFigureModelSettings",
+        "description": "Detailed configuration for an on-figure model used to define the appearance of a model in product image generation.\nThese settings influence how the model will be rendered in the generated images."
+      },
+      "OnFigurePoseType": {
+        "type": "string",
+        "enum": [
+          "standing",
+          "walking",
+          "sitting",
+          "leaning",
+          "crouching_or_kneeling",
+          "in_action",
+          "close_up"
+        ],
+        "title": "OnFigurePoseType",
+        "description": "Describes the posture or pose of the model in the image."
+      },
+      "OnFigureViewpointType": {
+        "type": "string",
+        "enum": [
+          "front",
+          "front_angled",
+          "back",
+          "back_angled",
+          "side"
+        ],
+        "title": "OnFigureViewpointType",
+        "description": "Camera angle or view direction for the image (e.g., front, side, back)."
+      },
+      "OperationPriority": {
+        "type": "string",
+        "enum": [
+          "online",
+          "offline"
+        ],
+        "title": "OperationPriority",
+        "description": "Defines the priority of the operation.\n- ONLINE operations are performed as quickly as possible and are intended for end-user requests where a human is waiting for the result.\n- OFFLINE operations are suited for batch processing where cost-efficiency is more important than immediate response."
+      },
+      "OperationStatus": {
+        "type": "string",
+        "enum": [
+          "CREATED",
+          "IN_PROGRESS",
+          "PAUSED",
+          "SUCCESS",
+          "FAILED",
+          "CANCELLED",
+          "ABORTED"
+        ],
+        "title": "OperationStatus",
+        "description": "Status for an operation"
+      },
+      "OwnerType": {
+        "type": "string",
+        "enum": [
+          "user",
+          "aiuta"
+        ],
+        "title": "OwnerType",
+        "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or\nderived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'.\nIn this case the image is not associated with users' personal data and does not belong to them."
+      },
+      "ProductInfo": {
+        "properties": {
+          "image_urls": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string",
+                  "maxLength": 2083,
+                  "minLength": 1,
+                  "format": "uri"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Image Urls",
+            "description": "List of up to 20 image URLs representing the product. Must not be used together with `uploaded_image_ids` - only one of the two fields may be provided. If specified in an input request, the images will be downloaded and stored internally. In operation status or result responses, this field is always present and contains internal image URLs, regardless of whether the original input used uploaded IDs or external URLs. If the images have not yet been downloaded - or if the download failed - this list may be empty."
+          },
+          "uploaded_image_ids": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Uploaded Image Ids",
+            "description": "List of 1 to 20 IDs of previously uploaded product images. Must not be used together with `image_urls` - only one of the two fields may be provided. This field is accepted in input requests only and will never appear in operation status or result responses. In such responses, internally stored image URLs corresponding to these IDs will be returned via the `image_urls` field of the `ProductInfo` object."
+          },
+          "category": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Category",
+            "description": "Category of the item. Preferably use a structured taxonomy such as 'Apparel & Accessories > Clothing > Dresses' or 'Home > Women > Dresses > Maxi Dresses'. Refer to the Google product category list as a good example of clear, structured categorization: https://support.google.com/merchants/answer/6324436",
+            "examples": [
+              "Apparel & Accessories > Clothing > Dresses"
+            ]
+          },
+          "title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Title",
+            "description": "Title of the item (if available)."
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description",
+            "description": "Description of the item (if available)."
+          }
+        },
+        "type": "object",
+        "title": "ProductInfo",
+        "description": "Describes the product for which images will be generated.\n\nThis includes the product images along with optional metadata such as category, title, and description.\nProviding structured and accurate product information helps improve the relevance and realism\nof the generated visuals."
+      },
+      "RegenerateOnFigureImagesRequest": {
+        "properties": {
+          "original_operation_id": {
+            "type": "string",
+            "title": "Original Operation Id",
+            "description": "ID of the original image generation operation whose configuration and model appearance will be reused. This can also be the ID of a previous regeneration operation, as it internally stores the required parameters."
+          },
+          "number_of_generations": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 4.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Number Of Generations",
+            "description": "Number of output images to generate for each specified type. If provided, this overrides the `number_of_generations` value from the original generation request. If omitted, the number of images will match the original request's setting."
+          },
+          "image_types": {
+            "items": {
+              "$ref": "#/components/schemas/OnFigureImageType"
+            },
+            "type": "array",
+            "maxItems": 35,
+            "minItems": 1,
+            "title": "Image Types",
+            "description": "List of on-figure product image types to regenerate. `ImageType` values must be unique and at least one type must be specified. It can also be used to generate images of the types which were not specified initially. The same model appearance will be used to maintain consistency of the whole product images set."
+          }
+        },
+        "type": "object",
+        "required": [
+          "original_operation_id",
+          "image_types"
+        ],
+        "title": "RegenerateOnFigureImagesRequest",
+        "description": "Request to regenerate specific product image types from a previously submitted generation operation.\n\nThis request allows clients to regenerate selected image types (e.g., only the on-model front view)\nusing the same configuration (e.g., product details and model settings) as a previous operation.\nIt is particularly useful for refining or correcting specific outputs (or even add images of new types to the set)\nwithout rerunning the entire generation pipeline, while preserving the on-figure model's appearance."
+      },
+      "SkinToneType": {
+        "type": "string",
+        "enum": [
+          "pale_white",
+          "white",
+          "light_brown",
+          "brown",
+          "dark_brown",
+          "black"
+        ],
+        "title": "SkinToneType",
+        "description": "Represents the skin tone of the on-figure model for image generation.\n\nThese values help guide realistic rendering of the model's appearance across a diverse range of skin tones.\nThe classification aims to be inclusive while maintaining practical distinctions for visual generation tasks."
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    },
+    "securitySchemes": {
+      "x-api-key": {
+        "type": "apiKey",
+        "description": "Static API key",
+        "in": "header",
+        "name": "x-api-key"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "data",
+      "description": "Input and generated images management - upload, retrieval and deletion"
+    },
+    {
+      "name": "flat_lay",
+      "description": "Flat lay product images generation"
+    },
+    {
+      "name": "on_figure",
+      "description": "On-figure product images generation"
+    }
+  ]
+}

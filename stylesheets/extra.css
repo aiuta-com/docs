@@ -1,0 +1,268 @@
+/* Disable ligatures */
+body {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0;
+}
+
+/* Make footer color same as header */
+:root > * {
+  --md-typeset-a-color--dark: #5e82ff;
+  --md-footer-bg-color: var(--md-primary-fg-color);
+  --md-footer-bg-color--dark: var(--md-primary-fg-color);
+  --md-text-font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #2a2a2a;
+  --md-default-bg-color: #272727;
+}
+
+.md-typeset .md-button {
+  color: #4d6ee6;
+}
+
+/* Doc reference admonition */
+
+:root {
+  --md-admonition-icon--doc: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"></path></svg>');
+}
+.md-typeset .admonition.doc,
+.md-typeset details.doc {
+  border-color: color-mix(in srgb, var(--md-admonition-fg-color) 70%, transparent);
+}
+.md-typeset .doc > .admonition-title,
+.md-typeset .doc > summary {
+  background-color: transparent;
+}
+.md-typeset .doc > .admonition-title::before,
+.md-typeset .doc > summary::before {
+  background-color: var(--md-admonition-fg-color);
+  -webkit-mask-image: var(--md-admonition-icon--doc);
+          mask-image: var(--md-admonition-icon--doc);
+}
+
+.md-typeset .doc > .admonition-title:not([title]),
+.md-typeset .doc > summary:not([title]) {
+  font-weight: normal;
+  padding-top: 0.5rem;
+  /* padding-bottom: 0; */
+}
+
+/* Fix background color, to fix ugly footer white line */
+body {
+  background: var(--md-primary-fg-color) !important;
+}
+
+.md-main {
+  background: var(--md-default-bg-color) !important;
+}
+
+/* Reduce header shadow */
+.md-header--shadow {
+  box-shadow: 0 .6rem .6rem -0.6rem #0003 !important;
+}
+
+/* Icon and emoji spacing */
+.md-nav__link .md-icon.lg,
+.md-content__inner .md-icon.lg,
+.md-content__inner .twemoji.lg,
+.grid.cards .twemoji,
+.grid.cards .md-icon {
+  margin-right: 0.4rem;
+}
+
+/* Add icons xs size */
+.twemoji.xs,
+.md-icon.xs {
+  font-size: 0.3rem;
+  margin-top: 0.27rem;
+}
+
+.md-button .twemoji {
+  margin-left: 0.15rem;
+  margin-right: 0.15rem !important;
+}
+
+/* Divider between tab groups */
+.md-tabs__item--divider {
+  width: 2px;
+  height: 2px;
+  margin: 0.15rem 0.75rem 0;
+  background-color: var(--md-primary-bg-color);
+  cursor: default;
+  pointer-events: none;
+  align-self: center;
+  padding: 0;
+  opacity: 0.35;
+  border-radius: 1px;
+}
+
+/* Make divider not clickable */
+.md-tabs__item--divider .md-tabs__link {
+  display: none;
+}
+
+/* Annotation styles */
+.md-annotation {
+  margin-left: -0.5em !important;
+}
+
+.md-annotation__index:after {
+  transform: scale(0.5) !important;
+  -webkit-transform: scale(0.5) !important;
+  transition: all 0.2s ease !important;
+  -webkit-transition: all 0.2s ease !important;
+  position: absolute !important;
+  top: -0.25em !important;
+  left: -0.25em !important;
+}
+
+.md-tooltip--active + .md-annotation__index:after,
+.md-annotation:hover .md-annotation__index:after {
+  transform: scale(1) translate(0.275em, 0.2em) !important;
+  -webkit-transform: scale(1) translate(0.275em, 0.2em) !important;
+}
+
+.md-annotation__index:before {
+  opacity: 0;
+  transition: opacity 0.2s ease !important;
+  -webkit-transition: opacity 0.2s ease !important;
+}
+
+.md-tooltip--active + .md-annotation__index:before,
+.md-annotation:hover .md-annotation__index:before {
+  opacity: 1;
+  transition: opacity 0.2s ease !important;
+  -webkit-transition: opacity 0.2s ease !important;
+}
+
+/* Decoration for platform cards */
+.md-platfroms {
+  font-size: 0.62rem;
+  width: 100%;
+  padding: 0.2rem 0rem;
+  border-radius: 0.1rem !important;
+  margin-left: 0rem !important;
+  color: color-mix(in srgb, var(--md-code-fg-color) 60%, transparent);
+}
+
+.md-platfroms .twemoji,
+.md-platfroms .md-icon {
+  margin-left: 0.6rem;
+  margin-right: 0.05rem !important;
+}
+
+.md-cards-links .twemoji,
+.md-cards-links .md-icon {
+  margin-left: 0.4rem;
+}
+
+/* Force grid cards to be 3-4 columns */
+.grid.cards.small {
+  grid-template-columns: repeat(auto-fit, minmax(15%, 1fr)) !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Catalog grid cards */
+
+.grid.cards.catalog {
+  grid-template-columns: repeat(auto-fit, minmax(max(22%, 140px), 1fr)) !important;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.625rem;
+}
+
+.grid.cards.catalog .md-button {
+  padding: 0.4em 0.2em;
+  border: .05rem solid;
+  font-size: 0.625rem;
+  width: 100% !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid.cards.catalog img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 0.8;
+  object-fit: cover;
+  border-radius: 0.1rem;
+}
+
+/* Hide unlisted items in mobile */
+@media screen and (max-width: 1219px) {
+  .md-nav__unlisted {
+    display: none !important;
+  }
+}
+
+/* Code block result container */
+.result {
+  padding: 0.6rem 0.8rem;
+  margin-top: calc(-1em - 2px);
+  overflow: visible;
+  border: 1px solid var(--md-code-bg-color);
+  border-top-width: px2rem(2px);
+  border-bottom-right-radius: px2rem(2px);
+  border-bottom-left-radius: px2rem(2px);
+
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+/* Joint headers */
+.md-joint-h2 {
+  margin-top: -0.8rem !important;
+  font-weight: 400 !important;
+}
+
+.md-joint-h1 {
+  margin-top: -1.9rem !important;
+  font-weight: 400 !important;
+  max-width: 85% !important;
+}
+
+/* Reference to the sequence diagram step */
+.md-sequence-number {
+  background-color: var(--md-mermaid-sequence-actorman-line-color);
+  padding: 0.15em 0.4em 0.05em 0.45em;
+  border-radius: 32px;
+  color: white;
+  font-size: 0.5rem !important;
+}
+
+/* Box used for error messages */
+.mermaid {
+  --md-mermaid-sequence-box-bg-color: #ff000011;
+}
+
+/* Make muted tabs less visible */
+.md-tabs__item--mute .md-tabs__link {
+  opacity: 0.25;
+}
+
+/* Make all tabs less visible */
+.md-tabs__link {
+  opacity: 0.5;
+}
+
+/* Make highlighted tabs more visible */
+.md-tabs__item--highlight .md-tabs__link {
+  opacity: 0.75;
+}
+
+/* Make all tabs more visible on hover */
+.md-tabs__item .md-tabs__link:hover {
+  opacity: 1;
+}
+
+/* Make active tabs more visible */
+.md-tabs__item--active .md-tabs__link {
+  opacity: 1;
+}
