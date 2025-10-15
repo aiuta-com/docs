@@ -53,7 +53,7 @@ The Aiuta Web SDK provides a virtual try-on solution for your fashion e-commerce
 5.  **Optional** URL to the CSS file with styles configuration for the Web SDK App.
 
     !!! warning "CORS"
-    The CSS file provided by `customCssUrl` must be accessible for loading by a cross-origin iframe hosted on `static.aiuta.com`
+        The CSS file provided by `customCssUrl` must be accessible for loading by a cross-origin iframe hosted on `static.aiuta.com`
 
         This means the server hosting your CSS must send appropriate [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) headers (e.g., `Access-Control-Allow-Origin: https://static.aiuta.com`) to allow the SDK iframe to fetch and apply your custom styles.
 
