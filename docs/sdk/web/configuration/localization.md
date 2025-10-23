@@ -120,6 +120,9 @@ const aiuta = new Aiuta({
         strings: {
           invalidInputImageDescription: "We couldn't detect anyone in this photo",
           invalidInputImageChangePhotoButton: 'Change photo',
+          noPeopleDetectedDescription: "We couldn't detect anyone in this photo. For best results, please upload a well-lit photo of an adult standing straight in front of a pale background.",
+          tooManyPeopleDetectedDescription: "We detected multiple people in this photo. For best results, please upload a well-lit photo of an adult standing straight in front of a pale background.",
+          childDetectedDescription: "It looks like this photo might be of a child. For best results, please upload a well-lit photo of an adult standing straight in front of a pale background."
         },
       },
       fitDisclaimer: {
