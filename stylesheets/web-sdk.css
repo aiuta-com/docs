@@ -1,0 +1,12 @@
+:root {
+/*    --aiuta-color-brand: #4000ff;
+    --aiuta-color-primary: brown;
+    --aiuta-color-secondary: green;
+    --aiuta-color-background: #e5e5ea;
+    --aiuta-color-neutral: lightgray;
+    --aiuta-color-border: black;*/
+}
+
+.aiuta-app--desktop {
+    top: 124px;
+}
