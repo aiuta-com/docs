@@ -138,6 +138,14 @@ The Web SDK uses CSS classes for typography styling. You can override these clas
 The Web SDK uses CSS classes for component shapes. You can override these classes in your custom CSS:
 
 ```css
+/* Shape for desktop app container and modal popups */
+.aiuta-modal {
+  border-radius: 24px;
+  box-shadow:
+    0 8px 28px -6px rgba(0, 0, 0, 0.12),
+    0 18px 88px -4px rgba(0, 0, 0, 0.14);
+}
+
 /* Button Medium Shape */
 .aiuta-button-m {
   border: none;
