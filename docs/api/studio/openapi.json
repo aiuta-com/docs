@@ -475,8 +475,6 @@
       "AgeGroupType": {
         "type": "string",
         "enum": [
-          "infant",
-          "toddler",
           "child",
           "teen",
           "young_adult",
@@ -1320,6 +1318,42 @@
               }
             ],
             "description": "Color of the model's hair (e.g., 'blond', 'dark_brown', 'red')."
+          },
+          "is_pregnant": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Is Pregnant",
+            "description": "Whether the model is pregnant."
+          },
+          "has_beard": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Has Beard",
+            "description": "Whether the model has a beard."
+          },
+          "has_tattoo": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Has Tattoo",
+            "description": "Whether the model has visible tattoos."
           }
         },
         "type": "object",
