@@ -130,6 +130,11 @@ const aiuta = new Aiuta({
           fitDisclaimerTitle: 'Results may vary from real-life fit',
         },
       },
+      feedback: {
+        strings: {
+          feedbackGratitudeText: 'Thank you for\nyour feedback',
+        }
+      },
       generationsHistory: {
         strings: {
           generationsHistoryPageTitle: 'History',
