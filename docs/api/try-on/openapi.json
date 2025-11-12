@@ -610,9 +610,33 @@
             "description": "ID of uploaded user image"
           },
           "sku_id": {
-            "type": "string",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "title": "Sku Id",
-            "description": "SKU item ID"
+            "description": "SKU item ID. Either 'sku_id' or 'sku_ids' must be specified. If you want to make a try-on with multiple SKU items (outfit's try-on), use 'sku_ids' instead"
+          },
+          "sku_ids": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array",
+                "maxItems": 2,
+                "minItems": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sku Ids",
+            "description": "List of SKU IDs. Either 'sku_id' or 'sku_ids' must be specified. This field must be used for outfit's try-on with multiple SKU items. It also can be used for a single-item try-on (you can specified just one item here). 1 or 2 items are allowed at the moment"
           },
           "sku_catalog_name": {
             "anyOf": [
@@ -629,8 +653,7 @@
         },
         "type": "object",
         "required": [
-          "uploaded_image_id",
-          "sku_id"
+          "uploaded_image_id"
         ],
         "title": "SkuImagesRequest",
         "description": "Create SKU images generation parameters"
