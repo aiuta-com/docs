@@ -272,6 +272,22 @@
               "type": "string",
               "title": "Operation Id"
             }
+          },
+          {
+            "name": "target_override",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Target Override"
+            }
           }
         ],
         "responses": {
@@ -345,7 +361,8 @@
                     {
                       "type": "null"
                     }
-                  ]
+                  ],
+                  "title": "Response Get Predefined Try On Models Predefined Try On Models Get"
                 },
                 "example": [
                   {
@@ -649,6 +666,42 @@
             ],
             "title": "Sku Catalog Name",
             "description": "SKU item catalog name (optional)"
+          },
+          "enhanced_quality": {
+            "type": "boolean",
+            "title": "Enhanced Quality",
+            "description": "Experimental flag for enhanced quality image generation (for internal use only)",
+            "default": false
+          },
+          "hijab_protection": {
+            "type": "boolean",
+            "title": "Hijab Protection",
+            "description": "Experimental flag to protect hijab from regeneration",
+            "default": false
+          },
+          "model_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model Type",
+            "description": "Model type override (for internal use only)"
+          },
+          "operation_target": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Operation Target",
+            "description": "Operation target override (for internal use only)"
           }
         },
         "type": "object",

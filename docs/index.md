@@ -12,6 +12,33 @@ hide:
 
 ## Our Products Documentation
 
+=== "Unified"
+
+    ![Unified](/media/products/aiuta-studio.png){ width=600 }
+
+    The unified Aiuta API consolidating all existing and new capabilities into one product
+
+    ## Available as
+
+    <div class="grid cards" markdown>
+
+    -   [:aiuta-favicon:{ .lg } __API__](/api/unified/index.md)
+
+        ---
+
+        :material-book-open-variant:
+        <span class="md-cards-links">
+        [Getting Started](/api/getting-started.md)
+        </span>
+
+    -   :aiuta-app:{ .lg } __Web__ <span class="md-platfroms">APP</span>
+
+        ---
+
+        Coming soon    
+
+    </div>
+
 === "Studio"
 
     ![Studio](/media/products/aiuta-studio.png){ width=600 }
