@@ -13,6 +13,9 @@ nav:
     - api/index.md
     - Getting Started: api/getting-started.md
     - Server-side Auth: api/server-side-auth-component.md
+    - Unified:
+        - api/unified/index.md
+        - Reference: api/unified/reference.md
     - Studio:
         - api/studio/index.md
         - Workflow: api/studio/workflow.md
@@ -142,6 +145,7 @@ extra:
   web: aiuta-web-sdk # macro: repo(web), latest(web), pages(web)
 
   # APIs
+  unified: v1 # macro: api(unified)
   studio: studio/v1 # macro: api(studio)
   try_on: digital-try-on/v1 # macro: api(try_on)
   analytics: analytics/v1 # macro: api(analytics)

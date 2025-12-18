@@ -1,5 +1,18 @@
 <div class="grid cards" markdown>
 
+-   ### [![Unified](/media/products/aiuta-studio.png) __Unified__](/api/studio/index.md)
+
+    ---
+
+    A unified API that brings together all Aiuta features in a single product
+
+    ---
+
+    :material-book-open-variant:
+    <span class="md-cards-links">
+    [Reference](/api/unified/reference.md)
+    </span>
+
 -   ### [![Studio](/media/products/aiuta-studio.png) __Studio__](/api/studio/index.md)
 
     ---

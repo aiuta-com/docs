@@ -682,7 +682,7 @@
           "detail"
         ],
         "title": "FlatLayType",
-        "description": "Specifies the style of flat-lay product image."
+        "description": "Specifies the style of a flat-lay product image.\n- `flat`: a traditional top-down flat-lay presentation of the item.\n- `ghost_mannequin`: a simulated 3D look by removing the mannequin, preserving garment shape.\n- `detail`: a close-up view highlighting textures, materials, or stitching."
       },
       "FlatLayViewpointType": {
         "type": "string",
@@ -736,6 +736,28 @@
               }
             ],
             "description": "Configuration for background generation. See `BackgroundSettings` for details on supported types and related fields."
+          },
+          "output_image_size": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ImageSize"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Desired final dimensions of the output images. If not provided, a default internal size is used. This parameter guides the image normalization logic to produce outputs that match the requested width and height."
+          },
+          "output_image_paddings": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ImagePaddings"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Desired padding around the generated object in the final images. Used by the image normalization logic to ensure consistent spacing around each output image. If omitted, padding will not be enforced and will simply reflect the naturally generated result."
           },
           "image_types": {
             "items": {
@@ -874,6 +896,28 @@
             ],
             "description": "Configuration for background generation. See `BackgroundSettings` for details on supported types and related fields."
           },
+          "output_image_size": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ImageSize"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Desired final dimensions of the output images. If not provided, a default internal size is used. This parameter guides the image normalization logic to produce outputs that match the requested width and height."
+          },
+          "output_image_paddings": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ImagePaddings"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Desired padding around the generated object in the final images. Used by the image normalization logic to ensure consistent spacing around each output image. If omitted, padding will not be enforced and will simply reflect the naturally generated result."
+          },
           "image_types": {
             "items": {
               "$ref": "#/components/schemas/FlatLayImageType"
@@ -919,6 +963,36 @@
             "title": "Number Of Generations",
             "description": "Number of output generated images of each type.",
             "default": 1
+          },
+          "background_settings": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BackgroundSettings"
+              }
+            ],
+            "description": "Configuration for background generation. See `BackgroundSettings` for details on supported types and related fields."
+          },
+          "output_image_size": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ImageSize"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Desired final dimensions of the output images. If not provided, a default internal size is used. This parameter guides the image normalization logic to produce outputs that match the requested width and height."
+          },
+          "output_image_paddings": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ImagePaddings"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Desired padding around the generated object in the final images. Used by the image normalization logic to ensure consistent spacing around each output image. If omitted, padding will not be enforced and will simply reflect the naturally generated result."
           },
           "image_types": {
             "items": {
@@ -1032,6 +1106,36 @@
             "description": "Number of output generated images of each type.",
             "default": 1
           },
+          "background_settings": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BackgroundSettings"
+              }
+            ],
+            "description": "Configuration for background generation. See `BackgroundSettings` for details on supported types and related fields."
+          },
+          "output_image_size": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ImageSize"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Desired final dimensions of the output images. If not provided, a default internal size is used. This parameter guides the image normalization logic to produce outputs that match the requested width and height."
+          },
+          "output_image_paddings": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ImagePaddings"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Desired padding around the generated object in the final images. Used by the image normalization logic to ensure consistent spacing around each output image. If omitted, padding will not be enforced and will simply reflect the naturally generated result."
+          },
           "image_types": {
             "items": {
               "$ref": "#/components/schemas/OnFigureImageType"
@@ -1134,6 +1238,60 @@
         "title": "HeightType",
         "description": "Categorical height classification used for rendering model proportions."
       },
+      "ImagePaddings": {
+        "properties": {
+          "top": {
+            "type": "integer",
+            "title": "Top",
+            "description": "Padding above the image content, in pixels"
+          },
+          "bottom": {
+            "type": "integer",
+            "title": "Bottom",
+            "description": "Padding below the image content, in pixels"
+          },
+          "left": {
+            "type": "integer",
+            "title": "Left",
+            "description": "Padding to the left of the image content, in pixels"
+          },
+          "right": {
+            "type": "integer",
+            "title": "Right",
+            "description": "Padding to the right of the image content, in pixels"
+          }
+        },
+        "type": "object",
+        "required": [
+          "top",
+          "bottom",
+          "left",
+          "right"
+        ],
+        "title": "ImagePaddings",
+        "description": "Padding around the image content, specified in pixels for each side"
+      },
+      "ImageSize": {
+        "properties": {
+          "width": {
+            "type": "integer",
+            "title": "Width",
+            "description": "Width of the image in pixels"
+          },
+          "height": {
+            "type": "integer",
+            "title": "Height",
+            "description": "Height of the image in pixels"
+          }
+        },
+        "type": "object",
+        "required": [
+          "width",
+          "height"
+        ],
+        "title": "ImageSize",
+        "description": "Pixel dimensions of the image"
+      },
       "OnFigureGenerationResultItem": {
         "properties": {
           "image_type": {
@@ -1186,7 +1344,7 @@
           "pose"
         ],
         "title": "OnFigureImageType",
-        "description": "Specifies a on-figure product image style, defined by viewpoint and model pose.\n\nThis object is used to specify the desired composition and perspective of a product image."
+        "description": "Specifies an on-figure product image style, defined by viewpoint and model pose.\n\nThis object is used to specify the desired composition and perspective of a product image."
       },
       "OnFigureModelPresetDescription": {
         "properties": {
@@ -1396,7 +1554,7 @@
           "offline"
         ],
         "title": "OperationPriority",
-        "description": "Defines the priority of the operation.\n- ONLINE operations are performed as quickly as possible and are intended for end-user requests where a human is waiting for the result.\n- OFFLINE operations are suited for batch processing where cost-efficiency is more important than immediate response."
+        "description": "Defines the operation priority.\n\n- `online`: processed as quickly as possible for real-time, user-facing requests.\n  Typically uses automatic AI-based quality assurance (QA).\n- `offline`: suited for batch processing where manual QA may be used to achieve higher quality."
       },
       "OperationStatus": {
         "type": "string",
@@ -1423,6 +1581,18 @@
       },
       "ProductInfo": {
         "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id",
+            "description": "Optional client-defined identifier for the product. Not used internally by the system, but can be included in requests to help clients correlate operation results with their own product records."
+          },
           "image_urls": {
             "anyOf": [
               {
