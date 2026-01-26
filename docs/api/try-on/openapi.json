@@ -405,10 +405,11 @@
         "enum": [
           "NO_PEOPLE_DETECTED",
           "TOO_MANY_PEOPLE_DETECTED",
-          "CHILD_DETECTED"
+          "CHILD_DETECTED",
+          "INTERNAL_RESTRICTION"
         ],
         "title": "AbortReason",
-        "description": "Reasons for operation abortion"
+        "description": "Reasons why an operation may be aborted.\n\nSome checks can be configured per client. Please contact the Aiuta team for details.\n\n- `NO_PEOPLE_DETECTED`: No person was found in the input image.\n- `TOO_MANY_PEOPLE_DETECTED`: Too many people were found in the input image.\n- `CHILD_DETECTED`: A minor was detected in the input image.\n- `INTERNAL_RESTRICTION`: The generated result cannot be returned due to internal restrictions."
       },
       "AiutaImage": {
         "properties": {
