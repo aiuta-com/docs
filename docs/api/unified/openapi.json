@@ -1038,6 +1038,19 @@
             "type": "string",
             "title": "Url",
             "description": "Image URL"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At",
+            "description": "Expiration time of the image. The image may not be available after this time."
           }
         },
         "type": "object",
@@ -2164,11 +2177,11 @@
     },
     {
       "name": "sku_items",
-      "description": "Manage SKU items in the platform.\n\nCreating or updating a SKU may trigger asynchronous internal preparation (e.g., processing product assets or preparing enabled capabilities).\n\nPreparation progress is exposed via `SkuItem.capabilities_readiness`.\nReadiness may transition over time (e.g., `preparing -> ready`), and may return to `preparing` after updates if affected assets/capabilities need re-processing.\n\nClients should poll `GET /sku_items/{item_id}` until the required capability (or image variant) is `ready` before calling endpoints that depend on it. A capability (or image variant) is usable only when its readiness status is ready."
+      "description": "Manage SKU items in the platform.\n\n## Asynchronous preparation\nCreating or updating a SKU may trigger asynchronous internal preparation (e.g., processing product assets or preparing enabled capabilities).\n\nPreparation progress is exposed via `SkuItem.capabilities_readiness`.\nReadiness may transition over time (e.g., `preparing -> ready`), and may return to `preparing` after updates if affected assets/capabilities need re-processing.\n\nClients should poll `GET /sku_items/{item_id}` until the required capability (or image variant) is `ready` before calling endpoints that depend on it. A capability (or image variant) is usable only when its readiness status is ready."
     },
     {
       "name": "recommendations",
-      "description": "Recommendation endpoints.\n\nSome recommendation endpoints require the corresponding capability to be enabled and ready for a SKU item.\n\nOutfit recommendations require:\n- `SkuItem.capabilities.outfit_recommendations == true`\n- `SkuItem.capabilities_readiness.outfit_recommendations.status == \"ready\"`\n\nClients should poll `GET /sku_items/{item_id}` until readiness is `ready` before requesting recommendations."
+      "description": "Recommendation endpoints.\n\n## Capability and readiness\nSome recommendation endpoints require the corresponding capability to be enabled and ready for a SKU item.\n\nOutfit recommendations require:\n- `SkuItem.capabilities.outfit_recommendations == true`\n- `SkuItem.capabilities_readiness.outfit_recommendations.status == \"ready\"`\n\nClients should poll `GET /sku_items/{item_id}` until readiness is `ready` before requesting recommendations."
     }
   ]
 }

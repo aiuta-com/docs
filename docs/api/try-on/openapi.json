@@ -430,6 +430,19 @@
             "type": "string",
             "title": "Url",
             "description": "Image URL"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At",
+            "description": "Expiration time of the image. The image may not be available after this time."
           }
         },
         "type": "object",
@@ -480,6 +493,19 @@
             "type": "string",
             "title": "Url",
             "description": "Image URL"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At",
+            "description": "Expiration time of the image. The image may not be available after this time."
           },
           "image_url": {
             "type": "string",
@@ -591,7 +617,7 @@
             },
             "type": "array",
             "title": "Generated Images",
-            "description": "List of generated images. None means that the image is not ready yet or there was an error during generation"
+            "description": "List of generated images. The list can be empty if images are not yet ready, there was an error during generation or image(s) already expired and were deleted"
           }
         },
         "type": "object",
@@ -697,6 +723,68 @@
         "title": "SkuImagesResponse",
         "description": "Sku images generation call results"
       },
+      "TryOnModel": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Image ID"
+          },
+          "owner_type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OwnerType"
+              }
+            ],
+            "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+          },
+          "url": {
+            "type": "string",
+            "title": "Url",
+            "description": "Image URL"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At",
+            "description": "Expiration time of the image. The image may not be available after this time."
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Metadata",
+            "description": "Additional metadata for the try-on model image"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "owner_type",
+          "url",
+          "metadata"
+        ],
+        "title": "TryOnModel",
+        "examples": [
+          {
+            "id": "user_image-06f5948c-c031-4662-a7c4-4d999b445c86",
+            "owner_type": "user",
+            "url": "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/examples/uploaded_images/user_image-06f5948c-c031-4662-a7c4-4d999b445c86.jpg"
+          }
+        ]
+      },
       "TryOnModelCategories": {
         "items": {
           "$ref": "#/components/schemas/TryOnModels"
@@ -717,7 +805,7 @@
           },
           "models": {
             "items": {
-              "$ref": "#/components/schemas/AiutaImage"
+              "$ref": "#/components/schemas/TryOnModel"
             },
             "type": "array",
             "title": "Models",

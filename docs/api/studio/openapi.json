@@ -503,6 +503,19 @@
             "type": "string",
             "title": "Url",
             "description": "Image URL"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At",
+            "description": "Expiration time of the image. The image may not be available after this time."
           }
         },
         "type": "object",
