@@ -1,6 +1,19 @@
 ---
+template: code-links.html
 hide:
   - toc
+code_links:
+  ColorTheme: color/
+  LabelTheme: label/
+  ImageTheme: image/
+  ButtonTheme: button/
+  PageBarTheme: page-bar/
+  BottomSheetTheme: bottom-sheet/
+  ActivityIndicatorTheme: activity-indicator/
+  SelectionSnackbarTheme: selection/
+  ErrorSnackbarTheme: error/
+  ProductBarTheme: product-bar/
+  PowerBarTheme: powered-by/
 ---
 # Theme Scheme
 
@@ -57,7 +70,7 @@ Theme {
     ![component](/media/components/snack-error.png){ width=400 }
 
 9. [:material-arrow-down-left:](product-bar.md) Product information display, including typography for product details and optional price styling.
- 
+
     ![component](/media/components/product-bar.png){ width=400 }
 
 10. [:material-arrow-down-left:](powered-by.md) "Powered By Aiuta" branding element appearance.

@@ -199,6 +199,16 @@ body {
   }
 }
 
+/* Links inside code blocks */
+.highlight pre code a {
+  color: var(--md-typeset-a-color);
+  text-decoration: none;
+}
+
+.highlight pre code a:hover {
+  text-decoration: underline;
+}
+
 /* Code block result container */
 .result {
   padding: 0.6rem 0.8rem;

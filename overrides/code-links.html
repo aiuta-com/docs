@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block scripts %}
+  {{ super() }}
+  {% if page.meta.code_links %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var defined = {{ page.meta.code_links | tojson }}
+      document.querySelectorAll('.highlight code').forEach(function(code) {
+        var walker = document.createTreeWalker(code, NodeFilter.SHOW_TEXT)
+        var replacements = []
+        while (walker.nextNode()) {
+          var node = walker.currentNode
+          for (var name in defined) {
+            if (node.textContent.includes(name)) {
+              replacements.push({ node: node, name: name, url: defined[name] })
+            }
+          }
+        }
+        replacements.forEach(function(r) {
+          var idx = r.node.textContent.indexOf(r.name)
+          if (idx < 0) return
+          var before = r.node.textContent.substring(0, idx)
+          var after = r.node.textContent.substring(idx + r.name.length)
+          var frag = document.createDocumentFragment()
+          if (before) frag.appendChild(document.createTextNode(before))
+          var a = document.createElement('a')
+          a.href = r.url
+          a.textContent = r.name
+          frag.appendChild(a)
+          if (after) frag.appendChild(document.createTextNode(after))
+          r.node.parentNode.replaceChild(frag, r.node)
+        })
+      })
+    })
+  </script>
+  {% endif %}
+{% endblock %}
