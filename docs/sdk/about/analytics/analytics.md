@@ -57,7 +57,7 @@ Types, except for `page`, `exit`, `configure` and `session`, contain an `event` 
 |-------|------------|-------------|
 | `welcomeStartClicked` | :material-minus: | Initial interaction with the [Welcome Screen](/sdk/about/pages/welcome-screen.md), indicating<br>user's intent to begin the try-on process |
 | `onboardingFinished` | :material-minus: | Completion of all onboarding steps |
-| `consentsGiven` | `consentIds` | Explicit acceptance of required consents, including<br>data processing and privacy policy agreements |
+| `consentGiven` | `consentIds` | Explicit acceptance of required consents, including<br>data processing and privacy policy agreements |
 
 ### Picker
 

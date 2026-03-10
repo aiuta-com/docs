@@ -10,6 +10,7 @@ Experience Aiuta SDK in action through our demo applications. These applications
 
 - :fontawesome-brands-app-store-ios: [Download on the __App Store__](https://apps.apple.com/app/id6477541220){:target="_blank"}
 - :fontawesome-brands-google-play: [Get it on __Google Play__](https://play.google.com/store/apps/details?id=com.aiuta.fashionsdk.demo&hl=en){:target="_blank"}
+- :material-web: [Visit __Aiuta Demo__ web page]({{aiuta.demo.url}}){:target="_blank"}
 
 </div>
 

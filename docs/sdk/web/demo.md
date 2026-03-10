@@ -10,19 +10,22 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
         window.aiuta.config = {
             webSdkPath: "{{ aiuta.demo.web_sdk.path }}",
             webSdkUrl: "{{ aiuta.demo.web_sdk.url }}",
+            webSdkDbg: "{{ aiuta.demo.web_sdk.dbg }}",
+            apiKey: "{{ aiuta.demo.api_key }}",
             subscriptionId: "{{ aiuta.demo.subscription_id }}",
             getJwtUrl: "{{ aiuta.demo.get_jwt_url }}",
             customCssUrl: "{{ aiuta.demo.web_sdk.css }}"
         };
     }
 
+    const isLocalhost = window.location.hostname === 'localhost' || 
+                       window.location.hostname === '127.0.0.1' || 
+                       window.location.hostname.startsWith('192.168.') ||
+                       window.location.hostname.endsWith('.local') ||
+                       window.location.hostname === '';
+
     function loadWebSdk() {
         return new Promise((resolve, reject) => {
-            const isLocalhost = window.location.hostname === 'localhost' || 
-                               window.location.hostname === '127.0.0.1' || 
-                               window.location.hostname.startsWith('192.168.') ||
-                               window.location.hostname.endsWith('.local') ||
-                               window.location.hostname === '';
             
             if (isLocalhost) {
                 tryLoadLocal();
@@ -71,9 +74,10 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
         
         window.aiuta.sdk = new Aiuta({
             auth: {
+                // apiKey: window.aiuta.config.apiKey,
                 subscriptionId: window.aiuta.config.subscriptionId,
                 getJwt: async (params) => {
-                    console.log('getJwt() called with params:', params);
+                    console.log('JWT get params', params);
                     const response = await fetch(window.aiuta.config.getJwtUrl, {
                         method: 'POST',
                         headers: {
@@ -83,7 +87,7 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
                     });
                     const data = await response.json();
                     const token = data.token;
-                    console.log('getJwt() did resolve token');
+                    console.log('JWT did resolve', token.slice(0, 5) + '...');
                     return token;
                 }
             },
@@ -104,14 +108,33 @@ This page shows how Aiuta Web SDK can be used in your fashion e-commerce platfor
             analytics: {
                 handler: {
                     onAnalyticsEvent: (event) => {
-                        console.log(event);
+                        console.log('Analytics', event);
                     }
                 }
             },
             debugSettings: {
-                isLoggingEnabled: true
+                isLoggingEnabled: true,
+                iframeAppUrl: isLocalhost ? window.aiuta.config.webSdkDbg : undefined
+            }
+        });
+    }
+
+    async function reinitWebSdk() {
+        window.aiuta.sdk = new Aiuta({
+            auth: {
+                apiKey: window.aiuta.config.apiKey
             },
-            testTitle: "Test"
+            analytics: {
+                handler: {
+                    onAnalyticsEvent: (event) => {
+                        console.log('Analytics', event);
+                    }
+                }
+            },
+            debugSettings: {
+                isLoggingEnabled: true,
+                forceLocalStorage: false
+            }
         });
     }
 
