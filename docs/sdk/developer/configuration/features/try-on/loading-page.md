@@ -4,6 +4,7 @@ hide:
   - toc
 code_links:
   Color: /sdk/developer/definitions/#color
+  ComponentStyle: /sdk/developer/definitions/#componentstyle
   List: /sdk/developer/definitions/#list
   String: /sdk/developer/definitions/#string
 ---
@@ -22,7 +23,7 @@ TryOnLoadingPageFeature {
 
   styles {
     loadingStatusBackgroundGradient: List<Color> | null // (4)!
-    loadingStatusStyle: primary | blurred | blurredWithOutline // (5)!
+    loadingStatusStyle: ComponentStyle // (5)!
   }
 }
 ```

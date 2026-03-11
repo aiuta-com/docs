@@ -4,6 +4,7 @@ hide:
   - toc
 code_links:
   Callback: /sdk/developer/definitions/#callback
+  ComponentStyle: /sdk/developer/definitions/#componentstyle
   List: /sdk/developer/definitions/#list
   Observable: /sdk/developer/definitions/#observable
   String: /sdk/developer/definitions/#string
@@ -24,7 +25,7 @@ ImagePickerUploadsHistoryFeature {
   }
 
   styles {
-    changePhotoButtonStyle: primary | blurred // (4)!
+    changePhotoButtonStyle: ComponentStyle // (4)!
   }
 
   dataProvider: BuiltIn | Custom {

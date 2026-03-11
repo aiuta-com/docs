@@ -236,7 +236,6 @@ theme:
   features:
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.expand
     - navigation.sections
     - navigation.indexes
     - navigation.instant

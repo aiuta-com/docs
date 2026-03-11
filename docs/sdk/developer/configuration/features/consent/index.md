@@ -44,8 +44,8 @@ Manages user [:material-window-open: consent](/sdk/about/pages/consent.md) optio
       }
 
       dataProvider: BuiltIn | Custom {
-        obtainedConsentIds: Observable<List<string>> // (9)!
-        obtainConsentIds: Callback(List<string>) // (10)!
+        obtainedConsentIds: Observable<List<String>> // (9)!
+        obtainConsentIds: Callback(List<String>) // (10)!
       }
     }
     ```
@@ -88,8 +88,8 @@ Manages user [:material-window-open: consent](/sdk/about/pages/consent.md) optio
       }
 
       dataProvider: BuiltIn | Custom {
-        obtainedConsentIds: Observable<List<string>> // (9)!
-        obtainConsentIds: Callback(List<string>) // (10)!
+        obtainedConsentIds: Observable<List<String>> // (9)!
+        obtainConsentIds: Callback(List<String>) // (10)!
       }
     }
     ```
