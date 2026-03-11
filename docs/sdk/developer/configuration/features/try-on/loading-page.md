@@ -8,11 +8,11 @@ code_links:
   List: /sdk/developer/definitions/#list
   String: /sdk/developer/definitions/#string
 ---
-# Loading Page
+# [:material-arrow-up-left:](index.md#try-on-feature) Loading Page
+
+![Loading Page](/media/pages/loading-screen.png){ width=220 }
 
 Configuration for the loading page displayed during the TryOn process.
-
-## [:material-arrow-up-left:](index.md#try-on-feature) TryOnLoadingPageFeature
 ```typescript
 TryOnLoadingPageFeature {
   strings {

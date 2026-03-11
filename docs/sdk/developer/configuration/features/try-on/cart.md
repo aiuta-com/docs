@@ -8,11 +8,11 @@ code_links:
   List: /sdk/developer/definitions/#list
   String: /sdk/developer/definitions/#string
 ---
-# Cart
+# [:material-arrow-up-left:](index.md#try-on-feature) Cart
+
+![Cart](/media/pages/results-cart.png){ width=220 }
 
 Configuration for adding products to the cart from the TryOn results screen.
-
-## [:material-arrow-up-left:](index.md#try-on-feature) TryOnCartFeature
 ```typescript
 TryOnCartFeature {
   outfit: TryOnCartOutfitFeature | null // (1)!

@@ -6,11 +6,11 @@ code_links:
   Icon: /sdk/developer/definitions/#icon
   String: /sdk/developer/definitions/#string
 ---
-# Fit Disclaimer
+# [:material-arrow-up-left:](index.md#try-on-feature) Fit Disclaimer
+
+![Fit Disclaimer](/media/pages/results-fit.png){ width=220 }
 
 Optional configuration for displaying fit disclaimers to users.
-
-## [:material-arrow-up-left:](index.md#try-on-feature) TryOnFitDisclaimerFeature
 ```typescript
 TryOnFitDisclaimerFeature {
   icons {

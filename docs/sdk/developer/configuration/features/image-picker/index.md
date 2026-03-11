@@ -16,9 +16,9 @@ code_links:
 
 Controls [:material-window-open: the image selection interface](/sdk/about/pages/image-picker.md), allowing users to pick photos, take new ones, use predefined models, or access previous uploads.
 
-![Image Picker](/media/pages/image-picker-w-models.png){width=120}
-![Image Picker](/media/pages/image-picker-bottom-sheet.png){width=120}
-![Image Picker](/media/pages/image-picker-history-last.png){width=120}
+![Image Picker](/media/pages/image-picker-w-models.png){ width=220 }
+![Image Picker](/media/pages/image-picker-bottom-sheet.png){ width=220 }
+![Image Picker](/media/pages/image-picker-history-last.png){ width=220 }
 
 ## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Image Picker Feature
 

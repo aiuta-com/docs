@@ -7,11 +7,11 @@ code_links:
   Map: /sdk/developer/definitions/#map
   String: /sdk/developer/definitions/#string
 ---
-# Predefined Models
+# [:material-arrow-up-left:](index.md#image-picker-feature) Predefined Models
+
+![Predefined Models](/media/pages/image-picker-models.png){ width=220 }
 
 Configuration for using predefined model images as an alternative to user photos.
-
-## [:material-arrow-up-left:](index.md#image-picker-feature) ImagePickerPredefinedModelFeature
 ```typescript
 ImagePickerPredefinedModelFeature {
   icons {

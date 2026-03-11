@@ -6,11 +6,11 @@ code_links:
   ConsentType: /sdk/developer/configuration/features/consent/data/#type
   String: /sdk/developer/definitions/#string
 ---
-# Consent Data
+# [:material-arrow-up-left:](index.md#consent-feature) Consent Data
+
+![Consent](/media/pages/consent-explicit.png){ width=220 }
 
 The Consent type defines how user consent is managed within the SDK, specifying the interaction required from the user and the conditions under which consent is considered given.
-
-## [:material-arrow-up-left:](index.md#consent-feature) Consent
 
 ```typescript
 Consent {

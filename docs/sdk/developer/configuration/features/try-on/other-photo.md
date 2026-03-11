@@ -5,11 +5,11 @@ hide:
 code_links:
   Icon: /sdk/developer/definitions/#icon
 ---
-# Other Photo
+# [:material-arrow-up-left:](index.md#try-on-feature) Other Photo
+
+![Other Photo](/media/pages/results-continue.png){ width=220 }
 
 Optional configuration for allowing users to continue with a different photo.
-
-## [:material-arrow-up-left:](index.md#try-on-feature) TryOnWithOtherPhotoFeature
 ```typescript
 TryOnWithOtherPhotoFeature {
   icons {

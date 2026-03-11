@@ -6,11 +6,9 @@ code_links:
   Icon: /sdk/developer/definitions/#icon
   String: /sdk/developer/definitions/#string
 ---
-# Photo Gallery
+# [:material-arrow-up-left:](index.md#image-picker-feature) Photo Gallery
 
 Configuration for accessing and selecting images from the device's photo library.
-
-## [:material-arrow-up-left:](index.md#image-picker-feature) ImagePickerPhotoGalleryFeature
 ```typescript
 ImagePickerPhotoGalleryFeature {
   icons {

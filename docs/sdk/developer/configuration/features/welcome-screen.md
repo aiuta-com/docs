@@ -12,7 +12,7 @@ code_links:
 
 Configures an optional [:material-window-open: welcome screen](/sdk/about/pages/welcome-screen.md) that introduces users to the SDK's functionality.
 
-![Welcome Screen](/media/pages/welcome.png){width=120}
+![Welcome Screen](/media/pages/welcome.png){ width=220 }
 
 ## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Welcome Screen Feature
 ```typescript

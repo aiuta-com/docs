@@ -11,11 +11,11 @@ code_links:
   InputImage: "#input-image"
   OwnerType: "#owner-type"
 ---
-# Uploads History
+# [:material-arrow-up-left:](index.md#image-picker-feature) Uploads History
+
+![Uploads History](/media/pages/image-picker-history.png){ width=220 }
 
 Configuration for managing and reusing previously uploaded images.
-
-## [:material-arrow-up-left:](index.md#image-picker-feature) ImagePickerUploadsHistoryFeature
 ```typescript
 ImagePickerUploadsHistoryFeature {
   strings {

@@ -46,7 +46,6 @@ nav:
       - Shapes: sdk/about/resources/shapes.md
       - Typography: sdk/about/resources/typography.md
       - Localization: sdk/about/resources/localization.md
-      - Other: sdk/about/resources/other.md
     - Analytics: 
       - Events: sdk/about/analytics/analytics.md
       - Errors: sdk/about/analytics/errors.md

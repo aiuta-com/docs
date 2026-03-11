@@ -5,11 +5,11 @@ hide:
 code_links:
   String: /sdk/developer/definitions/#string
 ---
-# Input Image Validation
+# [:material-arrow-up-left:](index.md#try-on-feature) Input Image Validation
+
+![Input Image Validation](/media/pages/loading-invalid.png){ width=220 }
 
 Configuration for validating input images before processing.
-
-## [:material-arrow-up-left:](index.md#try-on-feature) TryOnInputImageValidationFeature
 ```typescript
 TryOnInputImageValidationFeature {
   strings {

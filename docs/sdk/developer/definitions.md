@@ -11,19 +11,32 @@ A platform-specific color type or `#ARGB` `string` representation, e.g. :materia
 
 === "Android"
 
-    `String` in hex format (`#AARRGGBB` or `#RRGGBB`), converted internally to `androidx.compose.ui.graphics.Color`.
+    ```kotlin
+    // Compose Color from hex value
+    val brand: Color = Color(0xFF4000FF)
+    ```
 
 === "iOS"
 
-    `Aiuta.Color` — custom wrapper around `UIColor`. Supports hex string literals (`#AARRGGBB`, `#RRGGBB`) and integer literals.
+    ```swift
+    // Custom wrapper around UIColor
+    // Supports hex string literals and integer literals
+    let brand: Aiuta.Color = "#FF4000FF"
+    ```
 
 === "Flutter"
 
-    `String` in hex format (`#AARRGGBB` or `#RRGGBB`), e.g. `"#FF4000FF"`.
+    ```dart
+    // String in hex format (#AARRGGBB or #RRGGBB)
+    final String brand = "#FF4000FF";
+    ```
 
 === "Web"
 
-    `string` in hex format (`#RRGGBB` or `#AARRGGBB`) or CSS color values.
+    ```typescript
+    // Hex format (#RRGGBB or #AARRGGBB) or CSS color values
+    brand: "#4000FF"
+    ```
 
 ### `ComponentStyle`
 
@@ -31,19 +44,45 @@ A style that defines the visual appearance of specific UI components like button
 
 === "Android"
 
-    `AiutaComponentStyle` — enum with values `brand`, `contrast`, `contrastInverted`, `blurred`, `blurredWithOutline`.
+    ```kotlin
+    enum class AiutaComponentStyle {
+        BRAND,
+        CONTRAST,
+        CONTRAST_INVERTED,
+        BLURRED,
+        BLURRED_WITH_OUTLINE
+    }
+    ```
 
 === "iOS"
 
-    `Aiuta.ComponentStyle` — enum with cases `.brand`, `.contrast`, `.contrastInverted`, `.blurred(hasOutline:)`.
+    ```swift
+    enum ComponentStyle {
+        case brand
+        case contrast
+        case contrastInverted
+        case blurred(hasOutline: Bool)
+    }
+    ```
 
 === "Flutter"
 
-    `AiutaComponentStyle` — enum with values `brand`, `contrast`, `contrastInverted`, `blurred`, `blurredWithOutline`.
+    ```dart
+    enum AiutaComponentStyle {
+        brand,
+        contrast,
+        contrastInverted,
+        blurred,
+        blurredWithOutline
+    }
+    ```
 
 === "Web"
 
-    `string` — one of `"brand"`, `"contrast"`, `"contrastInverted"`, `"blurred"`, `"blurredWithOutline"`.
+    ```typescript
+    type ComponentStyle = "brand" | "contrast" | "contrastInverted"
+                        | "blurred" | "blurredWithOutline"
+    ```
 
 !!! info ""
     Shapes are independent and are not affected by component styles.
@@ -93,19 +132,46 @@ Type used for various UI icons throughout the SDK. Icons can be used in two ways
 
 === "Android"
 
-    `AiutaIcon` — data class with `path: String` and `renderMode: AiutaRenderMode`.
+    ```kotlin
+    class AiutaIcon(
+        val iconResource: AiutaDrawableResource,
+        val shouldDrawAsIs: Boolean = false
+    )
+    ```
 
 === "iOS"
 
-    `Aiuta.Icon` — enum with cases `.url(URL, renderingMode:)` and `.image(UIImage)`.
+    ```swift
+    enum Icon {
+        case url(URL, renderingMode: RenderingMode)
+        case image(UIImage) // UIImage has its own renderingMode, SDK uses it
+    }
+    ```
 
 === "Flutter"
 
-    `AiutaIcon` — class with `path: String` and `renderMode: AiutaRenderMode`.
+    ```dart
+    class AiutaIcon {
+        final String path;
+        final AiutaRenderMode renderMode;
+    }
+    ```
 
 === "Web"
 
-    `string` — SVG path, external URL, or inline SVG content.
+    ```typescript
+    // SVG path data
+    icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 ..."
+
+    // External URL
+    icon: "https://example.com/icon.svg"
+
+    // Inline SVG elements
+    icon: '<path d="M12 2..." fill="currentColor"/>'
+
+    // Full SVG
+    icon: '<svg viewBox="0 0 24 24">...</svg>'
+    ```
 
 ### `Image`
 
@@ -113,19 +179,42 @@ A platform-specific type or `string` representing path to the image resource.
 
 === "Android"
 
-    URL string or asset path.
+    ```kotlin
+    // Platform-agnostic drawable resource interface
+    interface AiutaDrawableResource
+
+    // Compose Multiplatform resource
+    AiutaComposeDrawableResource(Res.drawable.my_image)
+
+    // Android drawable resource ID
+    AiutaAndroidDrawableRes(R.drawable.my_image)
+
+    // Android Drawable instance
+    AiutaAndroidDrawable(drawable)
+    ```
 
 === "iOS"
 
-    `Aiuta.Image` — enum with cases `.url(URL)` and `.image(UIImage)`.
+    ```swift
+    enum Image {
+        case url(URL)
+        case image(UIImage)
+    }
+    ```
 
 === "Flutter"
 
-    URL string or Flutter asset path.
+    ```dart
+    // URL string or Flutter asset path
+    final String image = "https://example.com/image.png";
+    ```
 
 === "Web"
 
-    `string` — image URL.
+    ```typescript
+    // Image URL
+    image: string
+    ```
 
 ### `Observable`
 
@@ -133,19 +222,31 @@ A type that can be watched by the SDK for changes.
 
 === "Android"
 
-    `Flow<T>` or `StateFlow<T>` — Kotlin coroutine Flows.
+    ```kotlin
+    // Kotlin coroutine StateFlow
+    val state: StateFlow<T>
+    ```
 
 === "iOS"
 
-    `Aiuta.Observable<T>` — custom wrapper class provided by the SDK.
+    ```swift
+    // Custom wrapper class provided by the SDK
+    let value: Aiuta.Observable<T>
+    ```
 
 === "Flutter"
 
-    `Stream<T>` or event callbacks — native Dart streams.
+    ```dart
+    // Flutter ValueListenable for reactive state
+    ValueListenable<T> value;
+    ```
 
 === "Web"
 
-    Callback-based event handling via RPC methods.
+    ```typescript
+    // Callback-based event handling via RPC methods
+    onChanged: (value: T) => void
+    ```
 
 ### `Shape`
 
@@ -153,19 +254,35 @@ A type that specifies the visual appearance of UI elements, such as corner radiu
 
 === "Android"
 
-    `Double` — corner radius value in pixels.
+    ```kotlin
+    // Corner radius in density-independent pixels
+    val imageL: Dp = 24.dp
+    ```
 
 === "iOS"
 
-    `Aiuta.Shape` — enum with cases `.continuous(radius:)`, `.circular(radius:)`, `.capsule`, and `.rectangular`.
+    ```swift
+    enum Shape {
+        case continuous(radius: CGFloat)
+        case circular(radius: CGFloat)
+        case capsule
+        case rectangular
+    }
+    ```
 
 === "Flutter"
 
-    `double` — corner radius value.
+    ```dart
+    // Corner radius value
+    final double imageL = 24.0;
+    ```
 
 === "Web"
 
-    `number` — border radius in pixels.
+    ```typescript
+    // Border radius in pixels
+    imageL: number
+    ```
 
 ### `TextStyle`
 
@@ -173,19 +290,47 @@ A type used to define text styling properties for various UI elements.
 
 === "Android"
 
-    `AiutaTextStyle` — data class with properties: `fontFamily`, `fontSize`, `fontWeight`, `letterSpacing`, `lineHeight`.
+    ```kotlin
+    // Compose TextStyle
+    val titleL: TextStyle = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontSize = 24.sp,
+        fontWeight = FontWeight.Bold,
+        letterSpacing = (-0.01).sp,
+        lineHeight = 28.sp
+    )
+    ```
 
 === "iOS"
 
-    `Aiuta.TextStyle` — struct with properties: `font: UIFont`, `size: CGFloat`, `weight: UIFont.Weight`, `kern: CGFloat?`, `lineHeightMultiple: CGFloat?`.
+    ```swift
+    struct TextStyle {
+        let font: UIFont
+        let size: CGFloat
+        let weight: UIFont.Weight
+        let kern: CGFloat?
+        let lineHeightMultiple: CGFloat?
+    }
+    ```
 
 === "Flutter"
 
-    `AiutaTextStyle` — class with properties: `fontFamily`, `fontSize`, `fontWeight`, `letterSpacing`, `lineHeight`.
+    ```dart
+    class AiutaTextStyle {
+        final String fontFamily;
+        final double fontSize;
+        final FontWeight fontWeight;
+        final double letterSpacing;
+        final double lineHeight;
+    }
+    ```
 
 === "Web"
 
-    CSS styles via theme configuration or inline `style` properties.
+    ```typescript
+    // CSS styles via theme configuration
+    // or inline style properties
+    ```
 
 ## Basic Types
 
@@ -195,19 +340,27 @@ A boolean value (`true` or `false`).
 
 === "Android"
 
-    `Boolean` — native Kotlin type.
+    ```kotlin
+    val value: Boolean = true
+    ```
 
 === "iOS"
 
-    `Bool` — native Swift type.
+    ```swift
+    let value: Bool = true
+    ```
 
 === "Flutter"
 
-    `bool` — native Dart type.
+    ```dart
+    final bool value = true;
+    ```
 
 === "Web"
 
-    `boolean` — native TypeScript type.
+    ```typescript
+    value: boolean
+    ```
 
 ### `Callback`
 
@@ -215,19 +368,27 @@ A function type that can accept parameters and return a value.
 
 === "Android"
 
-    Function type such as `(T) -> Unit` or a SAM interface with a similar method.
+    ```kotlin
+    val callback: (T) -> Unit
+    ```
 
 === "iOS"
 
-    Closure type such as `(T) -> Void`.
+    ```swift
+    let callback: (T) -> Void
+    ```
 
 === "Flutter"
 
-    Function type such as `void Function(T)` or `VoidCallback`.
+    ```dart
+    void Function(T) callback;
+    ```
 
 === "Web"
 
-    Function type such as `(params: Record<string, any>) => void`.
+    ```typescript
+    callback: (value: T) => void
+    ```
 
 ### `List`
 
@@ -235,19 +396,27 @@ A collection type that holds an ordered sequence of elements.
 
 === "Android"
 
-    `List<T>` — Kotlin List interface.
+    ```kotlin
+    val items: List<T>
+    ```
 
 === "iOS"
 
-    `[T]` — native Swift Array type.
+    ```swift
+    let items: [T]
+    ```
 
 === "Flutter"
 
-    `List<T>` — native Dart List type.
+    ```dart
+    final List<T> items;
+    ```
 
 === "Web"
 
-    `T[]` or `Array<T>` — native TypeScript array.
+    ```typescript
+    items: T[]
+    ```
 
 ### `Map`
 
@@ -255,19 +424,27 @@ A collection type that associates keys with values, where each key is unique.
 
 === "Android"
 
-    `Map<String, T>` — Kotlin Map interface.
+    ```kotlin
+    val map: Map<String, T>
+    ```
 
 === "iOS"
 
-    `[String: T]` — native Swift Dictionary type.
+    ```swift
+    let map: [String: T]
+    ```
 
 === "Flutter"
 
-    `Map<String, dynamic>` — native Dart Map type.
+    ```dart
+    final Map<String, dynamic> map;
+    ```
 
 === "Web"
 
-    `Record<string, T>` — TypeScript record type.
+    ```typescript
+    map: Record<string, T>
+    ```
 
 ### `Number`
 
@@ -275,19 +452,28 @@ A numeric value (integer or floating-point).
 
 === "Android"
 
-    `Double` — Kotlin Double type.
+    ```kotlin
+    val size: Dp = 24.dp       // dimensions
+    val delay: Int = 1000      // milliseconds
+    ```
 
 === "iOS"
 
-    `CGFloat` — CoreGraphics floating-point type.
+    ```swift
+    let value: CGFloat = 24.0
+    ```
 
 === "Flutter"
 
-    `double` — native Dart type.
+    ```dart
+    final double value = 24.0;
+    ```
 
 === "Web"
 
-    `number` — native TypeScript type.
+    ```typescript
+    value: number
+    ```
 
 ### `String`
 
@@ -295,19 +481,27 @@ A text value.
 
 === "Android"
 
-    `String` — native Kotlin type.
+    ```kotlin
+    val text: String = "Hello"
+    ```
 
 === "iOS"
 
-    `String` — native Swift type.
+    ```swift
+    let text: String = "Hello"
+    ```
 
 === "Flutter"
 
-    `String` — native Dart type.
+    ```dart
+    final String text = "Hello";
+    ```
 
 === "Web"
 
-    `string` — native TypeScript type.
+    ```typescript
+    text: string
+    ```
 
 
 

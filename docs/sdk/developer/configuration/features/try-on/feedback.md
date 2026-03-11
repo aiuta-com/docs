@@ -8,11 +8,11 @@ code_links:
   List: /sdk/developer/definitions/#list
   String: /sdk/developer/definitions/#string
 ---
-# Feedback
+# [:material-arrow-up-left:](index.md#try-on-feature) Feedback
+
+![Feedback](/media/pages/results-feedback.png){ width=220 }
 
 Optional configuration for collecting user feedback on TryOn results.
-
-## [:material-arrow-up-left:](index.md#try-on-feature) TryOnFeedbackFeature
 ```typescript
 TryOnFeedbackFeature {
   otherFeedback: TryOnFeedbackOtherFeature | null // (1)!

@@ -56,7 +56,7 @@ The SDK provides two options for managing the onboarding completion status:
     - General `brand` color for Next/Start button background
     - General `onDark` color for button label
     
-    ##### [Styles](../resources/other.md)
+    ##### Styles
     - Toogle `preferCloseButtonOnTheRight` to reverse pageBar
 
 ---
@@ -148,7 +148,7 @@ The SDK provides two options for managing the onboarding completion status:
         ##### [Shapes](../resources/shapes.md)
         - `onboardingImageS` shape for example image views
 
-        ##### [Styles](../resources/other.md)
+        ##### Styles
         - Toggle to `reduceOnboardingBestResultsShadows` on the page
 
 === "Consent (Optional)"

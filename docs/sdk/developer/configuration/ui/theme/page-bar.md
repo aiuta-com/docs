@@ -38,12 +38,14 @@ PageBarTheme {
 3. Sets the icon for the close button.
 4.  Controls the position of the close button, determining whether it appears on the right side of the navigation bar.
 
-    !!! example ""
+---
 
-        === "Default &nbsp; `false`"
+### Close button position
 
-            ![PageBar](/media/components/pagebar-std.png){ width=450 }
+=== "Default &nbsp; `false`"
 
-        === "`true`"
+    ![PageBar](/media/components/pagebar-std.png){ width=450 }
 
-            ![PageBar](/media/components/pagebar-rev.png){ width=450 } 
+=== "`preferCloseButtonOnTheRight`"
+
+    ![PageBar](/media/components/pagebar-rev.png){ width=450 } 

@@ -127,7 +127,7 @@ The Consent feature allows you to collect user permissions for data processing o
         - Optional `consentFooterHtml` below the consents list
         - Text for the `consentButtonAccept`
 
-        ##### [Styles](../resources/other.md)
+        ##### Styles
         - Optional `drawBordersAroundConsents`
 
         === "Without borders"

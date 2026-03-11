@@ -20,8 +20,8 @@ code_links:
 
 Configures the core virtual try-on functionality for trying products virtually.
 
-![Loading Screen](/media/pages/loading-screen.png){width=120}
-![Results Screen](/media/pages/results.png){width=120}
+![Loading Screen](/media/pages/loading-screen.png){ width=220 }
+![Results Screen](/media/pages/results.png){ width=220 }
 
 ## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Try On Feature
 

@@ -9,13 +9,11 @@ code_links:
   List: /sdk/developer/definitions/#list
   String: /sdk/developer/definitions/#string
 ---
-# Best Results
+# [:material-arrow-up-left:](index.md#onboarding-feature) Best Results Page
 
 Sets up an optional page showing examples of photos that yield the best try-on results.
 
-![Best Results](/media/pages/best-results.png){ width=120 }
-
-## [:material-arrow-up-left:](index.md#onboarding-feature) OnboardingBestResultsPageFeature
+![Best Results](/media/pages/best-results.png){ width=220 }
 
 ```typescript
 OnboardingBestResultsPageFeature {

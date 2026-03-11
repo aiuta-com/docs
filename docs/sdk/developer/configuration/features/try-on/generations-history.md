@@ -11,11 +11,9 @@ code_links:
   GeneratedImage: "#generated-image"
   OwnerType: "#owner-type"
 ---
-# Generations History
+# [:material-arrow-up-left:](index.md#try-on-feature) Generations History
 
 Optional configuration for managing the history of generated TryOn results.
-
-## [:material-arrow-up-left:](index.md#try-on-feature) TryOnGenerationsHistoryFeature
 ```typescript
 TryOnGenerationsHistoryFeature {
   icons {

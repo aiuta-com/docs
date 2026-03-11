@@ -7,13 +7,11 @@ code_links:
   List: /sdk/developer/definitions/#list
   String: /sdk/developer/definitions/#string
 ---
-# How It Works
+# [:material-arrow-up-left:](index.md#onboarding-feature) How It Works Page
 
 Configures the first page of onboarding that demonstrates how virtual try-on works through interactive examples.
 
-![How It Works](/media/pages/how-it-works-1.png){ width=120 }
-
-## [:material-arrow-up-left:](index.md#onboarding-feature) OnboardingHowItWorksPageFeature
+![How It Works](/media/pages/how-it-works-1.png){ width=220 }
 
 ```typescript
 OnboardingHowItWorksPageFeature {
