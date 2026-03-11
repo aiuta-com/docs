@@ -9,6 +9,7 @@
       document.querySelectorAll('.highlight code').forEach(function(code) {
         if (code.dataset.linked) return
         code.dataset.linked = '1'
+        // Replace type names with links
         var walker = document.createTreeWalker(code, NodeFilter.SHOW_TEXT)
         var replacements = []
         while (walker.nextNode()) {
@@ -40,6 +41,31 @@
           frag.appendChild(a)
           if (after) frag.appendChild(document.createTextNode(after))
           r.node.parentNode.replaceChild(frag, r.node)
+        })
+        // Show annotation tooltip on hover over type links
+        code.addEventListener('mouseover', function(e) {
+          var link = e.target.closest('a[href]:not(.md-annotation__index)')
+          if (!link || link.dataset.annBound) return
+          // Walk forward from link to find .md-annotation on the same line
+          var ann = null
+          var tw = document.createTreeWalker(code, NodeFilter.SHOW_ALL)
+          var found = false
+          while (tw.nextNode()) {
+            var n = tw.currentNode
+            if (n === link || link.contains(n)) { found = true; continue }
+            if (!found) continue
+            if (n.nodeType === 3 && n.textContent.indexOf('\n') >= 0) break
+            if (n.nodeType === 1 && n.classList.contains('md-annotation')) { ann = n; break }
+          }
+          if (!ann) return
+          link.dataset.annBound = '1'
+          link.addEventListener('mouseenter', function() {
+            ann.focus({ preventScroll: true })
+          })
+          link.addEventListener('mouseleave', function() {
+            ann.blur()
+          })
+          ann.focus({ preventScroll: true })
         })
       })
     }

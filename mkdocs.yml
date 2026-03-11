@@ -64,19 +64,19 @@ nav:
       - sdk/developer/configuration/ui/index.md
       - Presentation Style: sdk/developer/configuration/ui/presentation-style.md
       - Swipe To Dismiss: sdk/developer/configuration/ui/swipe-to-dismiss.md
-    - Theme: 
-      - sdk/developer/configuration/ui/theme/index.md
-      - Color: sdk/developer/configuration/ui/theme/color.md
-      - Label: sdk/developer/configuration/ui/theme/label.md
-      - Image: sdk/developer/configuration/ui/theme/image.md
-      - Button: sdk/developer/configuration/ui/theme/button.md
-      - Page Bar: sdk/developer/configuration/ui/theme/page-bar.md
-      - Bottom Sheet: sdk/developer/configuration/ui/theme/bottom-sheet.md
-      - Activity Indicator: sdk/developer/configuration/ui/theme/activity-indicator.md
-      - Selection: sdk/developer/configuration/ui/theme/selection.md
-      - Error: sdk/developer/configuration/ui/theme/error.md
-      - Product Bar: sdk/developer/configuration/ui/theme/product-bar.md
-      - Powered By: sdk/developer/configuration/ui/theme/powered-by.md
+      - Theme: 
+        - sdk/developer/configuration/ui/theme/index.md
+        - Color: sdk/developer/configuration/ui/theme/color.md
+        - Label: sdk/developer/configuration/ui/theme/label.md
+        - Image: sdk/developer/configuration/ui/theme/image.md
+        - Button: sdk/developer/configuration/ui/theme/button.md
+        - Page Bar: sdk/developer/configuration/ui/theme/page-bar.md
+        - Bottom Sheet: sdk/developer/configuration/ui/theme/bottom-sheet.md
+        - Activity Indicator: sdk/developer/configuration/ui/theme/activity-indicator.md
+        - Selection: sdk/developer/configuration/ui/theme/selection.md
+        - Error: sdk/developer/configuration/ui/theme/error.md
+        - Product Bar: sdk/developer/configuration/ui/theme/product-bar.md
+        - Powered By: sdk/developer/configuration/ui/theme/powered-by.md
     - Features:
       - sdk/developer/configuration/features/index.md
       - Welcome Screen: sdk/developer/configuration/features/welcome-screen.md
