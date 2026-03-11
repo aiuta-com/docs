@@ -1,4 +1,5 @@
 ---
+template: scheme.html
 hide:
   - toc
 ---
