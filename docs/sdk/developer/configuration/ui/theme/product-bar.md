@@ -10,13 +10,10 @@ code_links:
   ProductBarPricesTheme: "#prices"
   "null": /sdk/developer/definitions/#optional
 ---
-# Product Bar Scheme
-
-Product information display, including typography for product details and optional price styling.
- 
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Product Bar
 ![component](/media/components/product-bar.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Product Bar
+Product information display, including typography for product details and optional price styling.
 
 ```typescript
 ProductBarTheme {

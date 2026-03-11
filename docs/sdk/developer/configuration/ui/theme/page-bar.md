@@ -7,13 +7,10 @@ code_links:
   TextStyle: /sdk/developer/definitions/#textstyle
   Bool: /sdk/developer/definitions/#bool
 ---
-# Page Bar Scheme
-
-Navigation bar appearance, including title styling and navigation button icons.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Page Bar
 ![component](/media/components/pagebar-std.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Page Bar
+Navigation bar appearance, including title styling and navigation button icons.
 
 ```typescript
 PageBarTheme {

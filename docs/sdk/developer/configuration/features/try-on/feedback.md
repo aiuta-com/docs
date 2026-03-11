@@ -9,7 +9,7 @@ code_links:
   String: /sdk/developer/definitions/#string
   "null": /sdk/developer/definitions/#optional
 ---
-# [:material-arrow-up-left:](index.md#try-on-feature) Feedback
+# [:material-arrow-up-left:](index.md#try-on) Feedback
 
 ![Feedback](/media/pages/results-feedback.png){ width=220 }
 

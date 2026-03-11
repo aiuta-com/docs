@@ -8,11 +8,11 @@ code_links:
   String: /sdk/developer/definitions/#string
   "null": /sdk/developer/definitions/#optional
 ---
-# [:material-arrow-up-left:](index.md#onboarding-feature) How It Works Page
-
-Configures the first page of onboarding that demonstrates how virtual try-on works through interactive examples.
+# [:material-arrow-up-left:](index.md#onboarding) How It Works Page
 
 ![How It Works](/media/pages/how-it-works-1.png){ width=220 }
+
+Configures the first page of onboarding that demonstrates how virtual try-on works through interactive examples.
 
 ```typescript
 OnboardingHowItWorksPageFeature {

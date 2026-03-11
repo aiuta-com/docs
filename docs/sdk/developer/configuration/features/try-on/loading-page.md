@@ -9,7 +9,7 @@ code_links:
   String: /sdk/developer/definitions/#string
   "null": /sdk/developer/definitions/#optional
 ---
-# [:material-arrow-up-left:](index.md#try-on-feature) Loading Page
+# [:material-arrow-up-left:](index.md#try-on) Loading Page
 
 ![Loading Page](/media/pages/loading-screen.png){ width=220 }
 

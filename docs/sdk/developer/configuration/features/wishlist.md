@@ -10,11 +10,9 @@ code_links:
   Bool: /sdk/developer/definitions/#bool
   String: /sdk/developer/definitions/#string
 ---
-# Wishlist Scheme
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Wishlist
 Integrates with the host app's wishlist functionality for product management.
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Wishlist Feature
 ```typescript
 WishlistFeature {
   icons {

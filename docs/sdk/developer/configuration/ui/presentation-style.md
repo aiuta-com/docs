@@ -3,11 +3,9 @@ template: scheme.html
 hide:
   - toc
 ---
-# Presentation Style
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/index.md#user-interface) Presentation Style
 
 Specifies the manner in which the SDK's UI overlays the application's existing UI, such as whether the SDK UI appears as a full-screen overlay, or covers the application with a bottom sheet.
-
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/index.md#user-interface) PresentationStyle
 
 ```typescript
 enum PresentationStyle {

@@ -7,13 +7,10 @@ code_links:
   Icon: /sdk/developer/definitions/#icon
   String: /sdk/developer/definitions/#string
 ---
-# Selection Snackbar Scheme
-
-Multi-selection interface for list views, including selection controls and action buttons.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Selection Snackbar
 ![component](/media/components/snack-selection.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Selection Snackbar
+Multi-selection interface for list views, including selection controls and action buttons.
 
 ```typescript
 SelectionSnackbarTheme {

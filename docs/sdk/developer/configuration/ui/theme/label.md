@@ -5,13 +5,10 @@ hide:
 code_links:
   TextStyle: /sdk/developer/definitions/#textstyle
 ---
-# Label Scheme
-
-Typography and text styling for different label types across the interface.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Label
 ![component](/media/components/labels.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Label
+Typography and text styling for different label types across the interface.
 
 ```typescript
 LabelTheme {

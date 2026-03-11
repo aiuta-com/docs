@@ -13,15 +13,12 @@ code_links:
   String: /sdk/developer/definitions/#string
   "null": /sdk/developer/definitions/#optional
 ---
-# Image Picker Scheme
-
-Controls [:material-window-open: the image selection interface](/sdk/about/pages/image-picker.md), allowing users to pick photos, take new ones, use predefined models, or access previous uploads.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Image Picker
 ![Image Picker](/media/pages/image-picker-w-models.png){ width=220 }
 ![Image Picker](/media/pages/image-picker-bottom-sheet.png){ width=220 }
 ![Image Picker](/media/pages/image-picker-history-last.png){ width=220 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Image Picker Feature
+Controls [:material-window-open: the image selection interface](/sdk/about/pages/image-picker.md), allowing users to pick photos, take new ones, use predefined models, or access previous uploads.
 
 ```typescript
 ImagePickerFeature {

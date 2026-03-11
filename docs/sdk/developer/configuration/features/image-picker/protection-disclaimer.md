@@ -6,7 +6,7 @@ code_links:
   Icon: /sdk/developer/definitions/#icon
   String: /sdk/developer/definitions/#string
 ---
-# [:material-arrow-up-left:](index.md#image-picker-feature) Protection Disclaimer
+# [:material-arrow-up-left:](index.md#image-picker) Protection Disclaimer
 
 Displays an optional disclaimer message informing users about photo privacy and protection.
 

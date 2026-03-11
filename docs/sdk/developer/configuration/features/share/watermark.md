@@ -5,7 +5,7 @@ hide:
 code_links:
   Image: /sdk/developer/definitions/#image
 ---
-# [:material-arrow-up-left:](index.md#share-feature) Watermark
+# [:material-arrow-up-left:](index.md#share) Watermark
 
 Optional configuration for adding a watermark to shared content.
 ```typescript

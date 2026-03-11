@@ -112,14 +112,14 @@ A style that defines the visual appearance of specific UI components like button
 
     ![Button](/media/components/button-blurred.png){ width=164 }
 
-    - apply a blurred background that matches the color [`scheme`](/sdk/developer/configuration/ui/theme/color.md#color-scheme) (`light` or `dark`)
+    - apply a blurred background that matches the color [`scheme`](/sdk/developer/configuration/ui/theme/color.md#color) (`light` or `dark`)
     - [`primary`](/sdk/developer/configuration/ui/theme/color.md#color-theme) foreground color for labels and icons
 
 === "`blurredWithOutline`"
 
     ![Button](/media/components/button-blurred-outline.png){ width=164 }
 
-    - apply a blurred background that matches the color [`scheme`](/sdk/developer/configuration/ui/theme/color.md#color-scheme) (`light` or `dark`)
+    - apply a blurred background that matches the color [`scheme`](/sdk/developer/configuration/ui/theme/color.md#color) (`light` or `dark`)
     - [`primary`](/sdk/developer/configuration/ui/theme/color.md#color-theme) foreground color for labels and icons
     - [`border`](/sdk/developer/configuration/ui/theme/color.md#color-theme) color for the outline
 

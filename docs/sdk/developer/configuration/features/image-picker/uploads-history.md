@@ -13,7 +13,7 @@ code_links:
   InputImage: "#input-image"
   OwnerType: "#owner-type"
 ---
-# [:material-arrow-up-left:](index.md#image-picker-feature) Uploads History
+# [:material-arrow-up-left:](index.md#image-picker) Uploads History
 
 ![Uploads History](/media/pages/image-picker-history.png){ width=220 }
 

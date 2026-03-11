@@ -13,7 +13,7 @@ code_links:
   GeneratedImage: "#generated-image"
   OwnerType: "#owner-type"
 ---
-# [:material-arrow-up-left:](index.md#try-on-feature) Generations History
+# [:material-arrow-up-left:](index.md#try-on) Generations History
 
 Optional configuration for managing the history of generated TryOn results.
 ```typescript

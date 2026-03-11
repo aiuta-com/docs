@@ -6,7 +6,7 @@ code_links:
   Icon: /sdk/developer/definitions/#icon
   String: /sdk/developer/definitions/#string
 ---
-# [:material-arrow-up-left:](index.md#image-picker-feature) Camera
+# [:material-arrow-up-left:](index.md#image-picker) Camera
 
 Configuration for camera functionality, allowing users to take new photos directly within the SDK.
 

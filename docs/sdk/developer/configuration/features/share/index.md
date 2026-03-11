@@ -10,11 +10,9 @@ code_links:
   String: /sdk/developer/definitions/#string
   "null": /sdk/developer/definitions/#optional
 ---
-# Share Scheme
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Share
 Enables sharing capabilities for generated try-on images with customizable options.
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Share Feature
 ```typescript
 ShareFeature {
   watermark: ShareWatermarkFeature | null // (1)!

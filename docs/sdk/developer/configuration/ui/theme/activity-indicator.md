@@ -8,13 +8,10 @@ code_links:
   Number: /sdk/developer/definitions/#number
   "null": /sdk/developer/definitions/#optional
 ---
-# Activity Indicator Scheme
-
-Appearance and customization of loading indicators.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Activity Indicator
 ![Activity Indicator](/media/components/activity-indicator.png){ width=30}
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Activity Indicator
+Appearance and customization of loading indicators.
 
 ```typescript
 ActivityIndicatorTheme {

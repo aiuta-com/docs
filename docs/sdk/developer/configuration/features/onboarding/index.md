@@ -14,13 +14,11 @@ code_links:
   String: /sdk/developer/definitions/#string
   "null": /sdk/developer/definitions/#optional
 ---
-# Onboarding Scheme
+# [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Onboarding
+![How It Works](/media/pages/how-it-works.png){ width=320 }
 
 Sets up [:material-window-open: the onboarding](/sdk/about/pages/onboarding.md) process to guide users through the SDK's features and capabilities.
 
-![How It Works](/media/pages/how-it-works.png){ width=320 }
-
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Onboarding Feature
 ```typescript
 OnboardingFeature {
   howItWorksPage: OnboardingHowItWorksPageFeature // (1)!

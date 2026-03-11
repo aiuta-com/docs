@@ -5,7 +5,7 @@ hide:
 code_links:
   Icon: /sdk/developer/definitions/#icon
 ---
-# [:material-arrow-up-left:](index.md#try-on-feature) Other Photo
+# [:material-arrow-up-left:](index.md#try-on) Other Photo
 
 ![Other Photo](/media/pages/results-continue.png){ width=220 }
 

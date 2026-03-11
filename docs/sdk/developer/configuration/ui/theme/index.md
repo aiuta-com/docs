@@ -15,11 +15,8 @@ code_links:
   ProductBarTheme: product-bar/
   PowerBarTheme: powered-by/
 ---
-# Theme Scheme
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/index.md#user-interface) Theme
 Specifies the theme configuration settings that determine the appearance and style of the UI components within the SDK. This includes defining color schemes, typography, and other visual elements to ensure a cohesive and customizable user interface experience.
-
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/index.md#user-interface) Theme
 
 ```typescript
 Theme {

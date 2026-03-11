@@ -7,13 +7,10 @@ code_links:
   Icon: /sdk/developer/definitions/#icon
   String: /sdk/developer/definitions/#string
 ---
-# Error Snackbar Scheme
-
- Error message presentation, including error icons and retry button styling.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Error Snackbar
 ![component](/media/components/snack-error.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Error Snackbar
+Error message presentation, including error icons and retry button styling.
 
 ```typescript
 ErrorSnackbarTheme {

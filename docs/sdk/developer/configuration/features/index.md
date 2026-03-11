@@ -12,11 +12,8 @@ code_links:
   WishlistFeature: wishlist/
   "null": /sdk/developer/definitions/#optional
 ---
-# Features Scheme
-
-Describes the set of features enabled in the SDK for the users and thier interaction with the app.
-    
-## [:material-arrow-up-left:](/sdk/developer/configuration/index.md#configuration) Features
+# [:material-arrow-up-left:](/sdk/developer/configuration/index.md#configuration) Features
+Describes the set of features enabled in the SDK for the users and their interaction with the app.
 
 ```typescript
 Features {

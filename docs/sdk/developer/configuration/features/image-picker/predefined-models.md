@@ -7,7 +7,7 @@ code_links:
   Map: /sdk/developer/definitions/#map
   String: /sdk/developer/definitions/#string
 ---
-# [:material-arrow-up-left:](index.md#image-picker-feature) Predefined Models
+# [:material-arrow-up-left:](index.md#image-picker) Predefined Models
 
 ![Predefined Models](/media/pages/image-picker-models.png){ width=220 }
 

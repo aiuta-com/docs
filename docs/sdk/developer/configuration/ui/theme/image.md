@@ -6,13 +6,10 @@ code_links:
   Icon: /sdk/developer/definitions/#icon
   Shape: /sdk/developer/definitions/#shape
 ---
-# Image Scheme
-
-Shapes, sizes, and error state icon for image views.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Image
 ![component](/media/components/images.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Image
+Shapes, sizes, and error state icon for image views.
 
 ```typescript
 ImageTheme {

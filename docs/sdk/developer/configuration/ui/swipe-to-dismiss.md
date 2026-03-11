@@ -3,11 +3,9 @@ template: scheme.html
 hide:
   - toc
 ---
-# Swipe To Dismiss
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/index.md#user-interface) Swipe To Dismiss
 
 Specifies the policy for dismissing the SDK's user interface through a swipe gesture. It determines how and when the swipe-to-dismiss action can be performed by the user.
-
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/index.md#user-interface) SwipeToDismissPolicy
 
 ```typescript
 enum SwipeToDismissPolicy {

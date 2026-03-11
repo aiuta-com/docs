@@ -9,7 +9,7 @@ code_links:
   String: /sdk/developer/definitions/#string
   "null": /sdk/developer/definitions/#optional
 ---
-# [:material-arrow-up-left:](index.md#try-on-feature) Cart
+# [:material-arrow-up-left:](index.md#try-on) Cart
 
 ![Cart](/media/pages/results-cart.png){ width=220 }
 

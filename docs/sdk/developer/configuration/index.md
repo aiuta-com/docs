@@ -10,11 +10,9 @@ code_links:
   DebugSettings: debug-settings/
   "null": /sdk/developer/definitions/#optional
 ---
-# Configuration Scheme
+# Configuration
 
 The configuration is structured as a hierarchical object that controls various aspects of the SDK's behavior, appearance, and functionality. The configuration is designed to be flexible and extensible, allowing for customization of features, UI elements, and behavior.
-
-## Configuration
 
 ```typescript
 Configuration {

@@ -7,13 +7,10 @@ code_links:
   Bool: /sdk/developer/definitions/#bool
   Number: /sdk/developer/definitions/#number
 ---
-# Bottom Sheet Scheme
-
-Bottom sheet presentation, including grabber appearance and sheet shape for both main SDK and internal sheets.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Bottom Sheet
 ![component](/media/components/bottom-sheet-std.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Bottom Sheet
+Bottom sheet presentation, including grabber appearance and sheet shape for both main SDK and internal sheets.
 
 ```typescript
 BottomSheetTheme {

@@ -7,11 +7,8 @@ code_links:
   PresentationStyle: presentation-style/
   SwipeToDismissPolicy: swipe-to-dismiss/
 ---
-# User Interface Scheme
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/index.md#configuration) User Interface
 The User Interface Scheme defines the configuration options for the presentation style, swipe-to-dismiss policy, and theme settings of the SDK's UI components.
-
-## [:material-arrow-up-left:](/sdk/developer/configuration/index.md#configuration) User Interface
 
 ```typescript
 UserInterface {

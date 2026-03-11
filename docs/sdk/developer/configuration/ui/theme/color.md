@@ -6,13 +6,10 @@ code_links:
   Color: /sdk/developer/definitions/#color
   ColorScheme: "#color-scheme"
 ---
-# Color Scheme
-
-Defines the color scheme, brand colors, and various color states for UI elements.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Color
 ![component](/media/components/colors-brand.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Color Theme
+Defines the color scheme, brand colors, and various color states for UI elements.
 
 ```typescript
 ColorTheme {
@@ -97,8 +94,7 @@ ColorTheme {
         Default ARGB :material-square-rounded:{ .cl-border } `#FFE5E5EA`
 
 
-### [:material-arrow-up-left:](#color-theme) Color Scheme
-
+### [:material-arrow-up-left:](#color-theme) Color
 ```typescript
 enum ColorScheme {
   light // (1)!

@@ -6,7 +6,7 @@ code_links:
   ConsentType: /sdk/developer/configuration/features/consent/data/#type
   String: /sdk/developer/definitions/#string
 ---
-# [:material-arrow-up-left:](index.md#consent-feature) Consent Data
+# [:material-arrow-up-left:](index.md#consent) Consent Data
 
 ![Consent](/media/pages/consent-explicit.png){ width=220 }
 

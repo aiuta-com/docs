@@ -17,14 +17,11 @@ code_links:
   String: /sdk/developer/definitions/#string
   "null": /sdk/developer/definitions/#optional
 ---
-# Try On Scheme
-
-Configures the core virtual try-on functionality for trying products virtually.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Try On
 ![Loading Screen](/media/pages/loading-screen.png){ width=220 }
 ![Results Screen](/media/pages/results.png){ width=220 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Try On Feature
+Configures the core virtual try-on functionality for trying products virtually.
 
 ```typescript
 TryOnFeature {

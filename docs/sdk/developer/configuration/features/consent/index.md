@@ -14,8 +14,7 @@ code_links:
   String: /sdk/developer/definitions/#string
   "null": /sdk/developer/definitions/#optional
 ---
-# [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Consent Scheme
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Consent
 Manages user [:material-window-open: consent](/sdk/about/pages/consent.md) options for data processing, which can be integrated with onboarding or used independently.
 
 === "Standalone Onboarding Page"
