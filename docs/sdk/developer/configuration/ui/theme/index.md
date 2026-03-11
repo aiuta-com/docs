@@ -1,5 +1,5 @@
 ---
-template: code-links.html
+template: scheme.html
 hide:
   - toc
 code_links:

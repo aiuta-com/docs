@@ -1,6 +1,9 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  String: /sdk/developer/definitions/#string
 ---
 # Power Bar Scheme
 

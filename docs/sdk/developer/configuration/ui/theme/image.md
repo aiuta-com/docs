@@ -1,6 +1,10 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Icon: /sdk/developer/definitions/#icon
+  Shape: /sdk/developer/definitions/#shape
 ---
 # Image Scheme
 

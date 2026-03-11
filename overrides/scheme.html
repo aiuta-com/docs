@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block scripts %}
+  {{ super() }}
+  {% if page.meta.code_links %}
+  <script>
+    function applyCodeLinks() {
+      var defined = {{ page.meta.code_links | tojson }}
+      var names = Object.keys(defined).sort(function(a, b) { return b.length - a.length })
+      document.querySelectorAll('.highlight code').forEach(function(code) {
+        if (code.dataset.linked) return
+        code.dataset.linked = '1'
+        var walker = document.createTreeWalker(code, NodeFilter.SHOW_TEXT)
+        var replacements = []
+        while (walker.nextNode()) {
+          var node = walker.currentNode
+          for (var i = 0; i < names.length; i++) {
+            var name = names[i]
+            var idx = node.textContent.indexOf(name)
+            if (idx < 0) continue
+            var chBefore = idx > 0 ? node.textContent[idx - 1] : ' '
+            var chAfter = idx + name.length < node.textContent.length ? node.textContent[idx + name.length] : ' '
+            if (/\w/.test(chBefore) || /\w/.test(chAfter)) continue
+            replacements.push({ node: node, name: name, url: defined[name] })
+          }
+        }
+        replacements.forEach(function(r) {
+          var text = r.node.textContent
+          var idx = text.indexOf(r.name)
+          if (idx < 0) return
+          var chBefore = idx > 0 ? text[idx - 1] : ' '
+          var chAfter = idx + r.name.length < text.length ? text[idx + r.name.length] : ' '
+          if (/\w/.test(chBefore) || /\w/.test(chAfter)) return
+          var before = text.substring(0, idx)
+          var after = text.substring(idx + r.name.length)
+          var frag = document.createDocumentFragment()
+          if (before) frag.appendChild(document.createTextNode(before))
+          var a = document.createElement('a')
+          a.href = r.url
+          a.textContent = r.name
+          frag.appendChild(a)
+          if (after) frag.appendChild(document.createTextNode(after))
+          r.node.parentNode.replaceChild(frag, r.node)
+        })
+      })
+    }
+    if (typeof document$ !== 'undefined') {
+      document$.subscribe(applyCodeLinks)
+    } else {
+      document.addEventListener('DOMContentLoaded', applyCodeLinks)
+    }
+  </script>
+  {% endif %}
+{% endblock %}

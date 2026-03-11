@@ -1,6 +1,10 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Bool: /sdk/developer/definitions/#bool
+  ValidationPolicy: "#validation-policy"
 ---
 # Debug Settings Scheme
 

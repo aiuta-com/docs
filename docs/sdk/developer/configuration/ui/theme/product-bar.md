@@ -1,6 +1,13 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Color: /sdk/developer/definitions/#color
+  Icon: /sdk/developer/definitions/#icon
+  TextStyle: /sdk/developer/definitions/#textstyle
+  Bool: /sdk/developer/definitions/#bool
+  ProductBarPricesTheme: "#prices"
 ---
 # Product Bar Scheme
 

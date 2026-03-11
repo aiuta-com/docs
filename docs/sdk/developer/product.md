@@ -1,6 +1,11 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  List: /sdk/developer/definitions/#list
+  String: /sdk/developer/definitions/#string
+  Price: "#price"
 ---
 # Product Scheme
 

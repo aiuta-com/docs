@@ -1,6 +1,11 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Color: /sdk/developer/definitions/#color
+  Icon: /sdk/developer/definitions/#icon
+  Number: /sdk/developer/definitions/#number
 ---
 # Activity Indicator Scheme
 

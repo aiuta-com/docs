@@ -1,6 +1,11 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Icon: /sdk/developer/definitions/#icon
+  TextStyle: /sdk/developer/definitions/#textstyle
+  Bool: /sdk/developer/definitions/#bool
 ---
 # Page Bar Scheme
 

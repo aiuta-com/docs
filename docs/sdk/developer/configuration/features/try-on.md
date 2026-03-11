@@ -1,3 +1,24 @@
+---
+template: scheme.html
+code_links:
+  TryOnLoadingPageFeature: "#loading-page"
+  TryOnInputImageValidationFeature: "#input-image-validation"
+  TryOnCartFeature: "#cart"
+  TryOnFitDisclaimerFeature: "#fit-disclaimer"
+  TryOnFeedbackFeature: "#feedback"
+  TryOnGenerationsHistoryFeature: "#generations-history"
+  TryOnWithOtherPhotoFeature: "#other-photo"
+  Callback: /sdk/developer/definitions/#callback
+  Color: /sdk/developer/definitions/#color
+  Icon: /sdk/developer/definitions/#icon
+  List: /sdk/developer/definitions/#list
+  TextStyle: /sdk/developer/definitions/#textstyle
+  Bool: /sdk/developer/definitions/#bool
+  String: /sdk/developer/definitions/#string
+  TryOnFeedbackOtherFeature: "#other-feedback"
+  GeneratedImage: "#generated-image"
+  OwnerType: "#owner-type"
+---
 # Try On Scheme
 
 Configures the core virtual try-on functionality for trying products virtually.

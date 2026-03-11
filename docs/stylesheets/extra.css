@@ -202,7 +202,7 @@ body {
 /* Links inside code blocks */
 .highlight pre code a {
   color: var(--md-typeset-a-color);
-  text-decoration: none;
+  text-decoration: underline dotted;
 }
 
 .highlight pre code a:hover {

@@ -53,6 +53,7 @@ nav:
 
   - Developer:
     - sdk/developer/index.md
+    - Definitions: sdk/developer/definitions.md
     - Product: sdk/developer/product.md
     - Configuration:
       - sdk/developer/configuration/index.md
@@ -61,7 +62,10 @@ nav:
       - Debug Settings: sdk/developer/configuration/debug-settings.md
     - User Interface:
       - sdk/developer/configuration/ui/index.md
-      - Theme: sdk/developer/configuration/ui/theme/index.md
+      - Presentation Style: sdk/developer/configuration/ui/presentation-style.md
+      - Swipe To Dismiss: sdk/developer/configuration/ui/swipe-to-dismiss.md
+    - Theme: 
+      - sdk/developer/configuration/ui/theme/index.md
       - Color: sdk/developer/configuration/ui/theme/color.md
       - Label: sdk/developer/configuration/ui/theme/label.md
       - Image: sdk/developer/configuration/ui/theme/image.md

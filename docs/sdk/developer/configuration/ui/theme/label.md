@@ -1,6 +1,9 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  TextStyle: /sdk/developer/definitions/#textstyle
 ---
 # Label Scheme
 

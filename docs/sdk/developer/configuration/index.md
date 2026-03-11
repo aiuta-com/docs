@@ -1,6 +1,13 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Auth: auth/
+  UserInterface: ui/
+  Features: features/
+  Analytics: analytics/
+  DebugSettings: debug-settings/
 ---
 # Configuration Scheme
 

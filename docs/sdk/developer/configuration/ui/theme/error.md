@@ -1,6 +1,11 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Color: /sdk/developer/definitions/#color
+  Icon: /sdk/developer/definitions/#icon
+  String: /sdk/developer/definitions/#string
 ---
 # Error Snackbar Scheme
 

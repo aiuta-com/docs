@@ -1,6 +1,10 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Color: /sdk/developer/definitions/#color
+  ColorScheme: "#color-scheme"
 ---
 # Color Scheme
 

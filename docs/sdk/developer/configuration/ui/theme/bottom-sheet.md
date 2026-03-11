@@ -1,6 +1,11 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Shape: /sdk/developer/definitions/#shape
+  Bool: /sdk/developer/definitions/#bool
+  Number: /sdk/developer/definitions/#number
 ---
 # Bottom Sheet Scheme
 

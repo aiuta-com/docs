@@ -1,6 +1,14 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Callback: /sdk/developer/definitions/#callback
+  Icon: /sdk/developer/definitions/#icon
+  List: /sdk/developer/definitions/#list
+  Observable: /sdk/developer/definitions/#observable
+  Bool: /sdk/developer/definitions/#bool
+  String: /sdk/developer/definitions/#string
 ---
 # Wishlist Scheme
 

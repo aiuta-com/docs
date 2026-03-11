@@ -1,6 +1,15 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  WelcomeScreenFeature: welcome-screen/
+  OnboardingFeature: onboarding/
+  ConsentFeature: consent/
+  ImagePickerFeature: image-picker/
+  TryOnFeature: try-on/
+  ShareFeature: share/
+  WishlistFeature: wishlist/
 ---
 # Features Scheme
 

@@ -1,6 +1,10 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Shape: /sdk/developer/definitions/#shape
+  TextStyle: /sdk/developer/definitions/#textstyle
 ---
 # Button Scheme
 

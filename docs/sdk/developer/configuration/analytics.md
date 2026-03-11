@@ -1,6 +1,9 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Callback: /sdk/developer/definitions/#callback
 ---
 # Analytics Scheme
 

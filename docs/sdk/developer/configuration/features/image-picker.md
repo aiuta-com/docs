@@ -1,3 +1,20 @@
+---
+template: scheme.html
+code_links:
+  ImagePickerCameraFeature: "#camera"
+  ImagePickerPhotoGalleryFeature: "#photo-gallery"
+  ImagePickerPredefinedModelFeature: "#predefined-models"
+  ImagePickerUploadsHistoryFeature: "#uploads-history"
+  Callback: /sdk/developer/definitions/#callback
+  Icon: /sdk/developer/definitions/#icon
+  Image: /sdk/developer/definitions/#image
+  List: /sdk/developer/definitions/#list
+  Map: /sdk/developer/definitions/#map
+  Observable: /sdk/developer/definitions/#observable
+  String: /sdk/developer/definitions/#string
+  InputImage: "#input-image"
+  OwnerType: "#owner-type"
+---
 # Image Picker Scheme
 
 Controls [:material-window-open: the image selection interface](/sdk/about/pages/image-picker.md), allowing users to pick photos, take new ones, use predefined models, or access previous uploads.

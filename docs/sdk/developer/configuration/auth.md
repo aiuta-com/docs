@@ -1,6 +1,11 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Callback: /sdk/developer/definitions/#callback
+  Map: /sdk/developer/definitions/#map
+  String: /sdk/developer/definitions/#string
 ---
 # Auth Schemes
 

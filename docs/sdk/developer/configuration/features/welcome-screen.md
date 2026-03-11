@@ -1,6 +1,12 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Icon: /sdk/developer/definitions/#icon
+  Image: /sdk/developer/definitions/#image
+  TextStyle: /sdk/developer/definitions/#textstyle
+  String: /sdk/developer/definitions/#string
 ---
 # Welcome Screen Scheme
 

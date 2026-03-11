@@ -1,6 +1,14 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  ShareWatermarkFeature: "#watermark"
+  Callback: /sdk/developer/definitions/#callback
+  Icon: /sdk/developer/definitions/#icon
+  Image: /sdk/developer/definitions/#image
+  List: /sdk/developer/definitions/#list
+  String: /sdk/developer/definitions/#string
 ---
 # Share Scheme
 

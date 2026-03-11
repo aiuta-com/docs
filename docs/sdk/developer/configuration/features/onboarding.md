@@ -1,3 +1,17 @@
+---
+template: scheme.html
+code_links:
+  OnboardingHowItWorksPageFeature: "#how-it-works"
+  OnboardingBestResultsPageFeature: "#best-results"
+  Callback: /sdk/developer/definitions/#callback
+  Icon: /sdk/developer/definitions/#icon
+  Image: /sdk/developer/definitions/#image
+  List: /sdk/developer/definitions/#list
+  Observable: /sdk/developer/definitions/#observable
+  Shape: /sdk/developer/definitions/#shape
+  Bool: /sdk/developer/definitions/#bool
+  String: /sdk/developer/definitions/#string
+---
 # Onboarding Scheme
 
 Sets up [:material-window-open: the onboarding](/sdk/about/pages/onboarding.md) process to guide users through the SDK's features and capabilities.
