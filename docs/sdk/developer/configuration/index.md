@@ -25,7 +25,7 @@ Configuration {
 }
 ```
 
-1.  [:material-arrow-down-left:](/sdk/developer/configuration/auth.md) Required to authenticate Aiuta SDK to use [API](/api/try-on/index.md) with your credentials. Supported authentication methods are `ApiKey` or `Jwt` + `subscriptionId`.
+1. [:material-arrow-down-left:](/sdk/developer/configuration/auth.md) Required to authenticate Aiuta SDK to use [API](/api/try-on/index.md) with your credentials. Supported authentication methods are `ApiKey` or `Jwt` + `subscriptionId`.
 
 2. [:material-arrow-down-left:](/sdk/developer/configuration/ui/index.md) Configuration of the user interface presentation style, swipe-to-dismiss policy, and UI components themes for the Aiuta SDK.
 

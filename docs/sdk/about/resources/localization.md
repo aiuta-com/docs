@@ -69,6 +69,8 @@ The table below contains all the strings that may be localized or changed for th
 | `uploadsHistoryButtonNewPhoto` | :material-check:{ title="Deafult value" }<br><br>:material-apple-keyboard-option:{ title="Alternative variant" } [^2] | + New photo or model<br><br>+ Upload new photo |
 | `uploadsHistoryTitle` | :material-check:{ title="Deafult value" } | Previously used |
 | `uploadsHistoryButtonChangePhoto` | :material-check:{ title="Deafult value" } | Change photo |
+| [**ImagePicker :octicons-arrow-right-24: ProtectionDisclaimer**](/sdk/developer/configuration/features/image-picker/protection-disclaimer.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `protectionDisclaimer` | :material-minus:{ title="No default value" } | |
 | [**TryOn**](/sdk/about/pages/image-picker.md) | |
 | `tryOnPageTitle` | :material-check:{ title="Deafult value" } | Virtual Try-on |
 | `tryOn` | :material-check:{ title="Deafult value" } | Try on |

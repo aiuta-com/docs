@@ -57,13 +57,13 @@ TryOnFeature {
 }
 ```
 
-1.  [:material-subdirectory-arrow-right:](loading-page.md) Configuration for the loading page displayed during the TryOn process.
-2.  [:material-subdirectory-arrow-right:](input-image-validation.md) Configuration for validating input images before processing.
-3.  [:material-subdirectory-arrow-right:](cart.md) Configuration for cart-related functionality in the TryOn interface.
-4.  [:material-subdirectory-arrow-right:](fit-disclaimer.md) Optional configuration for displaying fit disclaimers to users.
-5.  [:material-subdirectory-arrow-right:](feedback.md) Optional configuration for collecting user feedback on TryOn results.
-6.  [:material-subdirectory-arrow-right:](generations-history.md) Optional configuration for managing the history of generated TryOn results.
-7.  [:material-subdirectory-arrow-right:](other-photo.md) Optional configuration for allowing users to continue with a different photo.
+1.  [:material-arrow-down-left:](loading-page.md) Configuration for the loading page displayed during the TryOn process.
+2.  [:material-arrow-down-left:](input-image-validation.md) Configuration for validating input images before processing.
+3.  [:material-arrow-down-left:](cart.md) Configuration for cart-related functionality in the TryOn interface.
+4.  [:material-arrow-down-left:](fit-disclaimer.md) Optional configuration for displaying fit disclaimers to users.
+5.  [:material-arrow-down-left:](feedback.md) Optional configuration for collecting user feedback on TryOn results.
+6.  [:material-arrow-down-left:](generations-history.md) Optional configuration for managing the history of generated TryOn results.
+7.  [:material-arrow-down-left:](other-photo.md) Optional configuration for allowing users to continue with a different photo.
 8.  Determines whether the SDK should wait for the generation results in the background when closed.
 9.  Enables local person segmentation highlighting during loading on iOS 15+.
 10.  Icon displayed for the TryOn magic button in the interface.

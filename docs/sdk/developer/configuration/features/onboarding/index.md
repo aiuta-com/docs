@@ -41,8 +41,8 @@ OnboardingFeature {
 
 ```
 
-1. [:material-subdirectory-arrow-right:](how-it-works.md) Configures the first page of onboarding that demonstrates how virtual try-on works through interactive examples.
-2. [:material-subdirectory-arrow-right:](best-results.md) Sets up an optional page showing examples of photos that yield the best try-on results.
+1. [:material-arrow-down-left:](how-it-works.md) Configures the first page of onboarding that demonstrates how virtual try-on works through interactive examples.
+2. [:material-arrow-down-left:](best-results.md) Sets up an optional page showing examples of photos that yield the best try-on results.
 3. Defines the text label for the navigation button to proceed to the next onboarding page.
 4. Specifies the text label for the button that completes onboarding and starts the main interface.
 5. Controls the shape configuration for large images displayed in the onboarding process.

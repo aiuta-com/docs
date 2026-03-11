@@ -33,7 +33,7 @@ ShareFeature {
 
 ```
 
-1.  [:material-subdirectory-arrow-right:](watermark.md) Optional configuration for adding a watermark to shared content.
+1.  [:material-arrow-down-left:](watermark.md) Optional configuration for adding a watermark to shared content.
 2.  Icon displayed for the share button in the interface.
 3.  Label text for the share button in the fullscreen gallery.
 4.  Optional `dataProvider` callback function that generates additional text to be shared along with the image.

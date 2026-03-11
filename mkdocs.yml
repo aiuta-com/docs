@@ -92,6 +92,7 @@ nav:
         - Camera: sdk/developer/configuration/features/image-picker/camera.md
         - Photo Gallery: sdk/developer/configuration/features/image-picker/photo-gallery.md
         - Predefined Models: sdk/developer/configuration/features/image-picker/predefined-models.md
+        - Protection Disclaimer: sdk/developer/configuration/features/image-picker/protection-disclaimer.md
         - Uploads History: sdk/developer/configuration/features/image-picker/uploads-history.md
       - Try On:
         - sdk/developer/configuration/features/try-on/index.md

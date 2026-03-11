@@ -41,6 +41,8 @@ The table below contains all the icons used in the SDK:
 | `gallery24` | Gallery access button | ![gallery24](/media/icons/gallery24.png#only-light){ width=24 } ![gallery24](/media/icons/on-dark/gallery24.png#only-dark){ width=24 } |
 | [**ImagePicker :octicons-arrow-right-24: PredefinedModel**](/sdk/developer/configuration/features/image-picker/predefined-models.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `selectModels24` | Model selection button | ![selectModels24](/media/icons/selectModels24.png#only-light){ width=24 } ![selectModels24](/media/icons/on-dark/selectModels24.png#only-dark){ width=24 } |
+| [**ImagePicker :octicons-arrow-right-24: ProtectionDisclaimer**](/sdk/developer/configuration/features/image-picker/protection-disclaimer.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `protection16` | Protection disclaimer icon | :material-minus:{ title="Not included" } |
 | [**TryOn**](/sdk/developer/configuration/features/try-on/index.md) | |
 | `magic20` | Try-on button | ![magic20](/media/icons/magic20.png#only-light){ width=20 } ![magic20](/media/icons/on-dark/magic20.png#only-dark){ width=20 } |
 | [**TryOn :octicons-arrow-right-24: Loading**](/sdk/developer/configuration/features/try-on/loading-page.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
