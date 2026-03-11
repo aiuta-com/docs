@@ -11,7 +11,34 @@
         {% if page.meta.code_links %}
         if (!code.dataset.linked) {
           code.dataset.linked = '1'
-          // Replace type names with links
+          // Replace type names with links (skip declarations like "Foo {" or "enum Foo {")
+          function nextNonWsSibling(el) {
+            var s = el.nextSibling
+            while (s && /^\s*$/.test(s.textContent)) s = s.nextSibling
+            return s
+          }
+          function prevNonWsSibling(el) {
+            var s = el.previousSibling
+            while (s && /^\s*$/.test(s.textContent)) s = s.previousSibling
+            return s
+          }
+          function isDeclaration(node, name, idx) {
+            // Check if "{" follows (in same text or next non-ws sibling of parent span)
+            var afterInNode = node.textContent.substring(idx + name.length)
+            if (/^\s*\{/.test(afterInNode)) return true
+            if (/^\s*$/.test(afterInNode)) {
+              var sib = nextNonWsSibling(node.parentNode)
+              if (sib && sib.textContent.trim()[0] === '{') return true
+            }
+            // Check if preceded by keyword (in same text or prev non-ws sibling of parent span)
+            var beforeInNode = node.textContent.substring(0, idx)
+            if (/\b(enum|class|interface)\s*$/.test(beforeInNode)) return true
+            if (/^\s*$/.test(beforeInNode)) {
+              var sib = prevNonWsSibling(node.parentNode)
+              if (sib && /\b(enum|class|interface)\s*$/.test(sib.textContent)) return true
+            }
+            return false
+          }
           var walker = document.createTreeWalker(code, NodeFilter.SHOW_TEXT)
           var replacements = []
           while (walker.nextNode()) {
@@ -23,6 +50,7 @@
               var chBefore = idx > 0 ? node.textContent[idx - 1] : ' '
               var chAfter = idx + name.length < node.textContent.length ? node.textContent[idx + name.length] : ' '
               if (/\w/.test(chBefore) || /\w/.test(chAfter)) continue
+              if (isDeclaration(node, name, idx)) continue
               replacements.push({ node: node, name: name, url: defined[name] })
             }
           }
@@ -33,6 +61,7 @@
             var chBefore = idx > 0 ? text[idx - 1] : ' '
             var chAfter = idx + r.name.length < text.length ? text[idx + r.name.length] : ' '
             if (/\w/.test(chBefore) || /\w/.test(chAfter)) return
+            if (isDeclaration(r.node, r.name, idx)) return
             var before = text.substring(0, idx)
             var after = text.substring(idx + r.name.length)
             var frag = document.createDocumentFragment()
