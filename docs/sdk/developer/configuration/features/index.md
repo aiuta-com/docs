@@ -10,6 +10,7 @@ code_links:
   TryOnFeature: try-on/
   ShareFeature: share/
   WishlistFeature: wishlist/
+  "null": /sdk/developer/definitions/#optional
 ---
 # Features Scheme
 

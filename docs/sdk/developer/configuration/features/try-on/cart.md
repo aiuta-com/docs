@@ -7,6 +7,7 @@ code_links:
   Callback: /sdk/developer/definitions/#callback
   List: /sdk/developer/definitions/#list
   String: /sdk/developer/definitions/#string
+  "null": /sdk/developer/definitions/#optional
 ---
 # [:material-arrow-up-left:](index.md#try-on-feature) Cart
 

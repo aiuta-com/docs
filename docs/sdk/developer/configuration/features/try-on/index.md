@@ -15,6 +15,7 @@ code_links:
   List: /sdk/developer/definitions/#list
   Bool: /sdk/developer/definitions/#bool
   String: /sdk/developer/definitions/#string
+  "null": /sdk/developer/definitions/#optional
 ---
 # Try On Scheme
 

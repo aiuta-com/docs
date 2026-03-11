@@ -5,11 +5,14 @@ hide:
 code_links:
   OnboardingHowItWorksPageFeature: how-it-works/
   OnboardingBestResultsPageFeature: best-results/
+  BuiltIn: /sdk/developer/definitions/#dataprovider
+  Custom: /sdk/developer/definitions/#dataprovider
   Callback: /sdk/developer/definitions/#callback
   Observable: /sdk/developer/definitions/#observable
   Shape: /sdk/developer/definitions/#shape
   Bool: /sdk/developer/definitions/#bool
   String: /sdk/developer/definitions/#string
+  "null": /sdk/developer/definitions/#optional
 ---
 # Onboarding Scheme
 

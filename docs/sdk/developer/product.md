@@ -6,6 +6,7 @@ code_links:
   List: /sdk/developer/definitions/#list
   String: /sdk/developer/definitions/#string
   Price: "#price"
+  "null": /sdk/developer/definitions/#optional
 ---
 # Product Scheme
 

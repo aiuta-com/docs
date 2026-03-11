@@ -8,6 +8,7 @@ code_links:
   TextStyle: /sdk/developer/definitions/#textstyle
   Bool: /sdk/developer/definitions/#bool
   ProductBarPricesTheme: "#prices"
+  "null": /sdk/developer/definitions/#optional
 ---
 # Product Bar Scheme
 

@@ -23,6 +23,13 @@
             return s
           }
           function isDeclaration(node, name, idx) {
+            // If preceded by "|" it's a union type variant, never a declaration
+            var beforeInNode = node.textContent.substring(0, idx)
+            if (/\|\s*$/.test(beforeInNode)) return false
+            if (/^\s*$/.test(beforeInNode)) {
+              var prevSib = prevNonWsSibling(node.parentNode)
+              if (prevSib && /\|\s*$/.test(prevSib.textContent)) return false
+            }
             // Check if "{" follows (in same text or next non-ws sibling of parent span)
             var afterInNode = node.textContent.substring(idx + name.length)
             if (/^\s*\{/.test(afterInNode)) return true
@@ -31,7 +38,6 @@
               if (sib && sib.textContent.trim()[0] === '{') return true
             }
             // Check if preceded by keyword (in same text or prev non-ws sibling of parent span)
-            var beforeInNode = node.textContent.substring(0, idx)
             if (/\b(enum|class|interface)\s*$/.test(beforeInNode)) return true
             if (/^\s*$/.test(beforeInNode)) {
               var sib = prevNonWsSibling(node.parentNode)

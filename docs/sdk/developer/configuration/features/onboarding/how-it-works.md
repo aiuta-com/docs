@@ -6,6 +6,7 @@ code_links:
   Image: /sdk/developer/definitions/#image
   List: /sdk/developer/definitions/#list
   String: /sdk/developer/definitions/#string
+  "null": /sdk/developer/definitions/#optional
 ---
 # [:material-arrow-up-left:](index.md#onboarding-feature) How It Works Page
 

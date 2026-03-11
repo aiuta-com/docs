@@ -8,6 +8,7 @@ code_links:
   Features: features/
   Analytics: analytics/
   DebugSettings: debug-settings/
+  "null": /sdk/developer/definitions/#optional
 ---
 # Configuration Scheme
 

@@ -123,6 +123,73 @@ A style that defines the visual appearance of specific UI components like button
     - [`primary`](/sdk/developer/configuration/ui/theme/color.md#color-theme) foreground color for labels and icons
     - [`border`](/sdk/developer/configuration/ui/theme/color.md#color-theme) color for the outline
 
+### `DataProvider`
+
+Some SDK features need to persist data (e.g. upload history, generation history, onboarding completion, consent state). A `DataProvider` controls where and how this data is stored.
+
+- **`BuiltIn`** — the SDK handles storage internally. No extra code is needed.
+- **`Custom`** — you provide your own storage by implementing the required observable properties and callbacks. This lets you sync SDK state with your backend or use a custom persistence layer.
+
+Each feature that supports a data provider declares its own specific properties and callbacks in its scheme page. The type is always `BuiltIn | Custom { ... }`.
+
+=== "Android"
+
+    ```kotlin
+    // Sealed interface with two implementations
+    sealed interface DataProvider
+
+    // BuiltIn — singleton, SDK stores data internally
+    object DataProviderBuiltIn : DataProvider
+
+    // Custom — implement the interface
+    interface DataProviderCustom : DataProvider {
+        val items: StateFlow<List<T>>
+        suspend fun addItems(items: List<T>)
+        suspend fun deleteItems(items: List<T>)
+    }
+    ```
+
+=== "iOS"
+
+    ```swift
+    // Enum with associated protocol for custom
+    enum HistoryProvider {
+        case userDefaults   // SDK stores in UserDefaults
+        case dataProvider(DataProvider)
+    }
+
+    // Custom — implement the protocol
+    protocol DataProvider {
+        var items: Aiuta.Observable<[T]> { get async }
+        func add(items: [T]) async
+        func delete(items: [T]) async
+    }
+    ```
+
+=== "Flutter"
+
+    ```dart
+    // Sealed class with two implementations
+    sealed class DataProvider {}
+
+    // BuiltIn — SDK stores data internally
+    class DataProviderBuiltIn extends DataProvider {}
+
+    // Custom — provide ValueListenable and callbacks
+    class DataProviderCustom extends DataProvider {
+        final ValueListenable<List<T>> items;
+        final Future<void> Function(List<T>) addItems;
+        final Future<void> Function(List<T>) deleteItems;
+    }
+    ```
+
+=== "Web"
+
+    ```typescript
+    // BuiltIn uses IndexedDB (localStorage fallback)
+    // Custom — provide callbacks in SDK configuration
+    ```
+
 ### `Icon`
 
 Type used for various UI icons throughout the SDK. Icons can be used in two ways:
@@ -473,6 +540,42 @@ A numeric value (integer or floating-point).
 
     ```typescript
     value: number
+    ```
+
+### `Optional`
+
+Indicates that a value can be omitted. When a feature or sub-feature is Optional, not providing it disables that functionality. When a property is Optional, the SDK uses a platform-specific default.
+
+=== "Android"
+
+    ```kotlin
+    // Nullable type — omit or pass null to use default / disable
+    val feature: Feature? = null
+    val icon: AiutaIcon? = null
+    ```
+
+=== "iOS"
+
+    ```swift
+    // Optional type — nil to use default / disable
+    let feature: Feature? = nil
+    let icon: Icon? = nil
+    ```
+
+=== "Flutter"
+
+    ```dart
+    // Nullable type — null to use default / disable
+    final Feature? feature;
+    final AiutaIcon? icon;
+    ```
+
+=== "Web"
+
+    ```typescript
+    // Optional property — omit or set undefined to use default / disable
+    feature?: Feature
+    icon?: string
     ```
 
 ### `String`

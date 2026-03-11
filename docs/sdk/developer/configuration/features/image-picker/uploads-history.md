@@ -3,6 +3,8 @@ template: scheme.html
 hide:
   - toc
 code_links:
+  BuiltIn: /sdk/developer/definitions/#dataprovider
+  Custom: /sdk/developer/definitions/#dataprovider
   Callback: /sdk/developer/definitions/#callback
   ComponentStyle: /sdk/developer/definitions/#componentstyle
   List: /sdk/developer/definitions/#list

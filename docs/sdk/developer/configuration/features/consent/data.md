@@ -38,6 +38,8 @@ enum ConsentType {
 
 1. Consent has no checkbox and it is assumed to be given by pressing the accept button.
 
+    ![Implicit without checkbox](/media/pages/consent-implicit-wo-check.png){ width=220 }
+
     !!! info "GDPR Compliance"
         It can be just an accept button, but only if it's very clear exactly what the user is consenting to at that moment. You can't bundle multiple consents into one accept unless they're strictly necessary. For example, GDPR says marketing consent should always be separate if possible.
 
@@ -48,6 +50,8 @@ enum ConsentType {
 
 2. Consent has disabled pre-ticked checkbox and it is assumed to be given by pressing the accept button.
 
+    ![Implicit with checkbox](/media/pages/consent-implicit-w-check.png){ width=220 }
+
     !!! warning "GDPR Compliance"
         This can be used only for the consent that is necessary for the service, as it's not really "consent" under GDPR — it's processing based on contract necessity (Article 6(1)(b)) or legal obligation, not based on "freely given consent" (Article 6(1)(a)). So, it is just informing the user, not asking them for an additional permission.
 
@@ -57,6 +61,12 @@ enum ConsentType {
             Consult with a legal department if in doubt.
 
 3. Consent has a checkbox and the user must check it in order to continue.
+
+    ![Explicit required](/media/pages/consent-explicit.png){ width=220 }
+
+    !!! info "GDPR Compliance"
+        The checkbox must be explicitly selected by the user — pre-selected checkboxes are not valid under GDPR, even if the user presses an "Accept" button.
+
 4. Consent has a checkbox and the user may proceed without checking it.
 
 Defines the methods for obtaining consent to process user photos.

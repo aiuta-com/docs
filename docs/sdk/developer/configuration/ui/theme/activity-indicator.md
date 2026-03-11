@@ -6,6 +6,7 @@ code_links:
   Color: /sdk/developer/definitions/#color
   Icon: /sdk/developer/definitions/#icon
   Number: /sdk/developer/definitions/#number
+  "null": /sdk/developer/definitions/#optional
 ---
 # Activity Indicator Scheme
 

@@ -5,6 +5,7 @@ hide:
 code_links:
   Icon: /sdk/developer/definitions/#icon
   String: /sdk/developer/definitions/#string
+  "null": /sdk/developer/definitions/#optional
 ---
 # [:material-arrow-up-left:](index.md#try-on-feature) Fit Disclaimer
 
