@@ -251,7 +251,7 @@ A text value.
 
     `string` — native TypeScript type.
 
----
+
 
 !!! info "Naming Convention"
     Implementation and naming details may vary depending on the specific platform, but the core concepts and overall structure remain consistent across all platforms.

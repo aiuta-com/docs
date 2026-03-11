@@ -83,6 +83,7 @@ The table below contains all the strings that may be localized or changed for th
 | `invalidInputImageChangePhotoButton` | :material-check:{ title="Deafult value" } | Change photo |
 | [**TryOn :octicons-arrow-right-24: Cart**](/sdk/about/pages/results-screen.md) | |
 | `addToCart` | :material-check:{ title="Deafult value" } | Add to cart |
+| `addToCartOutfit` | :material-check:{ title="Deafult value" } | Shop the look |
 | [**TryOn :octicons-arrow-right-24: FitDisclaimer**](/sdk/about/pages/results-screen.md#__tabbed_1_6) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `fitDisclaimerTitle` | :material-check:{ title="Deafult value" } | Results may vary from real-life fit |
 | `fitDisclaimerDescription` | :material-check:{ title="Deafult value" } | Virtual try-on is a visualization tool that shows how items might look<br>and may not perfectly represent how the item will fit in reality |

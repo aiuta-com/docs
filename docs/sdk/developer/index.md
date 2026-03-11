@@ -14,9 +14,6 @@ In general, all SDK implementations are integrated in three steps:
 2. Initialize with [Configuration](/sdk/developer/configuration/index.md)
 3. Call SDK UI by passing the [Product](/sdk/developer/product.md)
 
-!!! tip "Annotations in schemes"
-    Don't miss them - click :material-information-outline: for more details
-
 ## Quick Start
 
 Check out the quick start guide to get started with the platform

@@ -27,32 +27,30 @@ Configures the core virtual try-on functionality for trying products virtually.
 
 ```typescript
 TryOnFeature {
-  tryOn {
-    loadingPage: TryOnLoadingPageFeature // (1)!
-    inputImageValidation: TryOnInputImageValidationFeature // (2)!
-    cart: TryOnCartFeature // (3)!
-    fitDisclaimer: TryOnFitDisclaimerFeature | null // (4)!
-    feedback: TryOnFeedbackFeature | null // (5)!
-    generationsHistory: TryOnGenerationsHistoryFeature | null // (6)!
-    otherPhoto: TryOnWithOtherPhotoFeature | null // (7)!
+  loadingPage: TryOnLoadingPageFeature // (1)!
+  inputImageValidation: TryOnInputImageValidationFeature // (2)!
+  cart: TryOnCartFeature // (3)!
+  fitDisclaimer: TryOnFitDisclaimerFeature | null // (4)!
+  feedback: TryOnFeedbackFeature | null // (5)!
+  generationsHistory: TryOnGenerationsHistoryFeature | null // (6)!
+  otherPhoto: TryOnWithOtherPhotoFeature | null // (7)!
 
-    settings {
-      isBackgroundExecutionAllowed: Bool // (8)!
-      tryGeneratePersonSegmentation: Bool // (9)!
-    }
+  icons {
+    tryOn20: Icon // (8)!
+  }
 
-    icons {
-      tryOn20: Icon // (10)!
-    }
+  styles {
+    tryOnButtonGradient: List<Color> | null // (9)!
+  }
 
-    strings {
-      tryOnPageTitle: String // (11)!
-      tryOn: String // (12)!
-    }
+  strings {
+    tryOnPageTitle: String // (10)!
+    tryOn: String // (11)!
+  }
 
-    styles {
-      tryOnButtonGradient: List<Color> | null // (13)!
-    }
+  settings {
+    isBackgroundExecutionAllowed: Bool // (12)!
+    tryGeneratePersonSegmentation: Bool // (13)!
   }
 }
 ```
@@ -64,12 +62,12 @@ TryOnFeature {
 5.  [:material-arrow-down-left:](feedback.md) Optional configuration for collecting user feedback on TryOn results.
 6.  [:material-arrow-down-left:](generations-history.md) Optional configuration for managing the history of generated TryOn results.
 7.  [:material-arrow-down-left:](other-photo.md) Optional configuration for allowing users to continue with a different photo.
-8.  Determines whether the SDK should wait for the generation results in the background when closed.
-9.  Enables local person segmentation highlighting during loading on iOS 15+.
-10.  Icon displayed for the TryOn magic button in the interface.
-11.  Title text displayed at the top of the TryOn page.
-12.  Label text used for the "Try On" buttons throughout the interface.
-13.  Optional gradient colors for styling the TryOn button.
+8.  Icon displayed for the TryOn magic button in the interface.
+9.  Optional gradient colors for styling the TryOn button.
+10.  Title text displayed at the top of the TryOn page.
+11.  Label text used for the "Try On" buttons throughout the interface.
+12.  Determines whether the SDK should wait for the generation results in the background when closed.
+13.  Enables local person segmentation highlighting during loading on iOS 15+.
 
 ## Sequence diagram
 

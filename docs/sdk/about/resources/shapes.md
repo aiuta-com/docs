@@ -15,6 +15,7 @@ The table below contains all the shapes used in the SDK:
 | [**Image**](/sdk/developer/configuration/ui/theme/image.md) | | |
 | `imageL` | Large image corner radius | :material-rounded-corner: `24` |
 | `imageM` | Medium image corner radius | :material-rounded-corner: `16` |
+| `imageS` | Small image corner radius | :material-rounded-corner: `8` |
 | [**Button**](/sdk/developer/configuration/ui/theme/button.md) | | |
 | `buttonM` | Medium button corner radius | :material-rounded-corner: `8` |
 | `buttonS` | Small button corner radius | :material-rounded-corner: `8` |
@@ -27,5 +28,5 @@ The table below contains all the shapes used in the SDK:
 | [**Onboarding**](/sdk/developer/configuration/features/onboarding/index.md) :fontawesome-regular-eye-slash:{ title="Optional" } | | |
 | `onboardingImageL` | Large onboarding image corner radius | :material-rounded-corner: `16` |
 | `onboardingImageS` | Small onboarding image corner radius | :material-rounded-corner: `16` |
-| [**TryOn.Feedback**](/sdk/developer/configuration/features/try-on/feedback.md) :fontawesome-regular-eye-slash:{ title="Optional" } | | |
-| `feedbackButton` | Feedback button corner radius | :material-rounded-corner: `infinity`{ title="For half the height" }  |
+| [**BottomSheet :octicons-arrow-right-24: ChipsButton**](/sdk/developer/configuration/ui/theme/bottom-sheet.md) | | |
+| `chipsButton` | Chips button corner radius inside bottom sheets | :material-rounded-corner: `8` |

@@ -18,16 +18,18 @@ Shapes, sizes, and error state icon for image views.
 ImageTheme {
   shapes {
     imageL: Shape // (1)!
-    imageS: Shape // (2)!
+    imageM: Shape // (2)!
+    imageS: Shape // (3)!
   }
 
   icons {
-    imageError36: Icon // (3)!
+    imageError36: Icon // (4)!
   }
 }
 
 ```
 
 1. Defines the shape configuration for large image views, allowing customization of the visual appearance for prominent images.
-2. Specifies the shape configuration for small image views, enabling consistent styling for secondary or thumbnail images.
-3. Sets the icon to be displayed when an image fails to load, providing visual feedback for error states. 
+2. Sets the shape configuration for medium image views, used for standard content images.
+3. Specifies the shape configuration for small image views, enabling consistent styling for secondary or thumbnail images.
+4. Sets the icon to be displayed when an image fails to load, providing visual feedback for error states.

@@ -18,6 +18,7 @@ The table below contains all the text styles used in the SDK:
 | `titleM` | Medium titles | `20` | `Bold` | `100%` | `-2%` |
 | `regular` | Regular text | `17` | `Medium` | `22` | `-3%` |
 | `subtle` | Subtle text | `15` | `Regular` | `18` | `-1%` |
+| `footnote` | Footnotes | `12` | `Regular` | `100%` | `-1%` |
 | [**Button**](/sdk/developer/configuration/ui/theme/button.md) |
 | `buttonM` | Medium buttons |  `17` | `Semibold` | `18` | `-1%` |
 | `buttonS` | Small buttons |  `13` | `Semibold` | `18` | `-1%` |
@@ -31,5 +32,3 @@ The table below contains all the text styles used in the SDK:
 | [**Welcome Screen**](/sdk/developer/configuration/features/welcome-screen.md) :fontawesome-regular-eye-slash:{ title="Optional" } |
 | `welcomeTitle` | Welcome screen title |  `40` | `Heavy` | `44` | `0%` |
 | `welcomeDescription` | Welcome screen description |  `16` | `Medium` | `18` | `0%` |
-| [**TryOn :octicons-arrow-right-24: FitDisclaimer**](/sdk/developer/configuration/features/try-on/fit-disclaimer.md) :fontawesome-regular-eye-slash:{ title="Optional" } |
-| `disclaimer` | Fit disclaimer label |  `12` | `Regular` | `100%` | `-1%` |
