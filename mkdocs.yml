@@ -80,11 +80,31 @@ nav:
     - Features:
       - sdk/developer/configuration/features/index.md
       - Welcome Screen: sdk/developer/configuration/features/welcome-screen.md
-      - Onboarding: sdk/developer/configuration/features/onboarding.md
-      - Consent: sdk/developer/configuration/features/consent.md
-      - Image Picker: sdk/developer/configuration/features/image-picker.md
-      - Try On: sdk/developer/configuration/features/try-on.md
-      - Share: sdk/developer/configuration/features/share.md
+      - Onboarding:
+        - sdk/developer/configuration/features/onboarding/index.md
+        - How It Works: sdk/developer/configuration/features/onboarding/how-it-works.md
+        - Best Results: sdk/developer/configuration/features/onboarding/best-results.md
+      - Consent:
+        - sdk/developer/configuration/features/consent/index.md
+        - Data: sdk/developer/configuration/features/consent/data.md
+      - Image Picker:
+        - sdk/developer/configuration/features/image-picker/index.md
+        - Camera: sdk/developer/configuration/features/image-picker/camera.md
+        - Photo Gallery: sdk/developer/configuration/features/image-picker/photo-gallery.md
+        - Predefined Models: sdk/developer/configuration/features/image-picker/predefined-models.md
+        - Uploads History: sdk/developer/configuration/features/image-picker/uploads-history.md
+      - Try On:
+        - sdk/developer/configuration/features/try-on/index.md
+        - Loading Page: sdk/developer/configuration/features/try-on/loading-page.md
+        - Input Image Validation: sdk/developer/configuration/features/try-on/input-image-validation.md
+        - Cart: sdk/developer/configuration/features/try-on/cart.md
+        - Fit Disclaimer: sdk/developer/configuration/features/try-on/fit-disclaimer.md
+        - Feedback: sdk/developer/configuration/features/try-on/feedback.md
+        - Other Photo: sdk/developer/configuration/features/try-on/other-photo.md
+        - Generations History: sdk/developer/configuration/features/try-on/generations-history.md
+      - Share:
+        - sdk/developer/configuration/features/share/index.md
+        - Watermark: sdk/developer/configuration/features/share/watermark.md
       - Wishlist: sdk/developer/configuration/features/wishlist.md
 
   - Android:

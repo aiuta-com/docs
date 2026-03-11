@@ -4,6 +4,7 @@ hide:
   - toc
 code_links:
   Callback: /sdk/developer/definitions/#callback
+  Consent: /sdk/developer/configuration/features/consent/data/#consent
   Icon: /sdk/developer/definitions/#icon
   List: /sdk/developer/definitions/#list
   Observable: /sdk/developer/definitions/#observable
@@ -57,17 +58,11 @@ Manages user [:material-window-open: consent](/sdk/about/pages/consent.md) optio
     6. Icon displayed next to the consent title in the standalone page.
     7. Controls whether to display borders around consent sections.
     8. List of consent options that users must and may accept.
-
-        !!! info ""
-            See [consent :octicons-arrow-right-24:](consent.md) scheme for more deatils
-
     9. Observable property tracking which consent options have been already accepted.
     10. Callback function triggered when user accepts consents.
 
         !!! info ""
             You should save the consent IDs that are passed and  provide them in the `obtainedConsentsIds` property for future use. If not stored, the SDK will show the consent screen again during the next Try-On session.
-
-    {% include-markdown "sdk/templates/developer/consent-data.md" %}
 
 === "Standalone Image Picker Page"
     ```typescript
@@ -107,17 +102,11 @@ Manages user [:material-window-open: consent](/sdk/about/pages/consent.md) optio
     6. Icon displayed next to the consent title in the standalone page.
     7. Controls whether to display borders around consent sections.
     8. List of consent options that users must and may accept.
-
-        !!! info ""
-            See [consent :octicons-arrow-right-24:](consent.md) scheme for more deatils
-
     9. Observable property tracking which consent options have been already accepted.
     10. Callback function triggered when user accepts consents.
 
         !!! info ""
-            You should save the consent IDs that are passed and  provide them in the `obtainedConsentsIds` property for future use. If not stored, the SDK will show the consent screen again during the next Try-On session. 
-
-    {% include-markdown "sdk/templates/developer/consent-data.md" %}
+            You should save the consent IDs that are passed and  provide them in the `obtainedConsentsIds` property for future use. If not stored, the SDK will show the consent screen again during the next Try-On session.
 
 === "Embedded Into Onboarding"
     ```typescript
@@ -127,5 +116,5 @@ Manages user [:material-window-open: consent](/sdk/about/pages/consent.md) optio
       }
     }
     ```
-    
+
     1. HTML content displayed at the bottom of the onboarding screen for embedded consent.

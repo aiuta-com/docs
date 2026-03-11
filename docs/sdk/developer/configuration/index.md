@@ -42,7 +42,7 @@ Configuration {
     
     - [Authentication](/sdk/developer/configuration/auth.md) credentials
     - Your Terms of Service URL
-    - Add to [Cart](/sdk/developer/configuration/features/try-on.md#cart) handler
+    - Add to [Cart](/sdk/developer/configuration/features/try-on/cart.md) handler
 
 ## Platform specifics
 

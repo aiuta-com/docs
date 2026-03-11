@@ -1,0 +1,23 @@
+---
+template: scheme.html
+hide:
+  - toc
+code_links:
+  String: /sdk/developer/definitions/#string
+---
+# Input Image Validation
+
+Configuration for validating input images before processing.
+
+## [:material-arrow-up-left:](index.md#try-on-feature) TryOnInputImageValidationFeature
+```typescript
+TryOnInputImageValidationFeature {
+  strings {
+    invalidInputImageDescription: String // (1)!
+    invalidInputImageChangePhotoButton: String // (2)!
+  }
+}
+```
+
+1.  Message displayed to users when their uploaded image fails validation.
+2.  Label text for the button that allows users to select a different photo.

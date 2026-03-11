@@ -31,5 +31,5 @@ The table below contains all the text styles used in the SDK:
 | [**Welcome Screen**](/sdk/developer/configuration/features/welcome-screen.md) :fontawesome-regular-eye-slash:{ title="Optional" } |
 | `welcomeTitle` | Welcome screen title |  `40` | `Heavy` | `44` | `0%` |
 | `welcomeDescription` | Welcome screen description |  `16` | `Medium` | `18` | `0%` |
-| [**TryOn :octicons-arrow-right-24: FitDisclaimer**](/sdk/developer/configuration/features/try-on.md#fit-disclaimer) :fontawesome-regular-eye-slash:{ title="Optional" } |
+| [**TryOn :octicons-arrow-right-24: FitDisclaimer**](/sdk/developer/configuration/features/try-on/fit-disclaimer.md) :fontawesome-regular-eye-slash:{ title="Optional" } |
 | `disclaimer` | Fit disclaimer label |  `12` | `Regular` | `100%` | `-1%` |

@@ -65,7 +65,7 @@ The following sequence diagrams illustrate the process of a virtual try-on using
     !!! doc "See details about" 
         
         - [<span class="md-sequence-number">6-8</span> Wishlist integration](/sdk/developer/configuration/features/wishlist.md)
-        - [<span class="md-sequence-number">11</span> Share functionality](/sdk/developer/configuration/features/share.md) 
+        - [<span class="md-sequence-number">11</span> Share functionality](/sdk/developer/configuration/features/share/index.md) 
 
 ### Managing History
 
@@ -85,7 +85,7 @@ The following sequence diagram illustrates the process of managing images histor
 
     !!! doc "See details about" 
         
-        - <span class="md-sequence-number">2 – 5</span> History images: [input](/sdk/developer/configuration/features/image-picker.md#input-image) and [generated](/sdk/developer/configuration/features/try-on.md#generated-image)
+        - <span class="md-sequence-number">2 – 5</span> History images: [input](/sdk/developer/configuration/features/image-picker/uploads-history.md#input-image) and [generated](/sdk/developer/configuration/features/try-on/generations-history.md#generated-image)
         - [Try-on generation process here](/sdk/about/diagrams/interaction-sequence.md#making-try-on)
 
 #### Deleting Images from the History
