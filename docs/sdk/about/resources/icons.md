@@ -44,7 +44,7 @@ The table below contains all the icons used in the SDK:
 | [**ImagePicker :octicons-arrow-right-24: ProtectionDisclaimer**](/sdk/developer/configuration/features/image-picker/protection-disclaimer.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `protection16` | Protection disclaimer icon | :material-minus:{ title="Not included" } |
 | [**TryOn**](/sdk/developer/configuration/features/try-on/index.md) | |
-| `magic20` | Try-on button | ![magic20](/media/icons/magic20.png#only-light){ width=20 } ![magic20](/media/icons/on-dark/magic20.png#only-dark){ width=20 } |
+| `tryOn20` | Try-on button | ![tryOn20](/media/icons/magic20.png#only-light){ width=20 } ![tryOn20](/media/icons/on-dark/magic20.png#only-dark){ width=20 } |
 | [**TryOn :octicons-arrow-right-24: Loading**](/sdk/developer/configuration/features/try-on/loading-page.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `loading14` | Loading indicator | :material-minus:{ title="Not included" } [^2] |
 | [**TryOn :octicons-arrow-right-24: FitDisclaimer**](/sdk/developer/configuration/features/try-on/fit-disclaimer.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
@@ -67,5 +67,5 @@ The table below contains all the icons used in the SDK:
 [^2]: The system activity indicator will be used if no icon is provided.
 [^3]: 🧡 emoji will be used if no icon is provided.
 
-<!-- | [**Consent**](#consent) :fontawesome-regular-eye-slash:{ title="Optional" } | |
-| `consentTitle24` | Consent screen title icon |  | -->
+| [**Consent**](/sdk/developer/configuration/features/consent/index.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `consentTitle24` | Consent screen title icon | :material-minus:{ title="Not included" } |

@@ -25,11 +25,9 @@ The Loading Screen is displayed during the virtual try-on process to keep users 
     !!! info "If no custom icon is provided"
         SDK will draw system default activity indicator
 
-    ##### [Styles](#)
-    - `backgroundGradient` for the loading animation
-    - `statusStyle` appearance:
-        - `blurred` - Default blurred style with optional outline
-        - `primary` - Solid button with primary background color
+    ##### [Styles](/sdk/developer/definitions.md#componentstyle)
+    - `loadingStatusBackgroundGradient` for the loading animation
+    - `loadingStatusStyle` [`ComponentStyle`](/sdk/developer/definitions.md#componentstyle) appearance
 
 ---
 
@@ -70,7 +68,7 @@ The Loading Screen is displayed during the virtual try-on process to keep users 
         ##### [Icons](../resources/icons.md)
         - `error36` icon in the snackbar
 
-        ##### [Colors](#)
+        ##### [Colors](../resources/colors.md)
         - `errorBackground` color for the snackbar
         - `errorPrimary` color for text and interactive elements
 

@@ -23,10 +23,10 @@ ImagePickerPredefinedModelFeature {
   }
 
   strings {
-    predefinedModelPageTitle: String // (3)!
-    predefinedModelOr: String // (4)!
-    predefinedModelErrorEmptyModelsList: String // (5)!
-    predefinedModelCategories: Map<String, String> // (6)!
+    predefinedModelsPageTitle: String // (3)!
+    predefinedModelsOr: String // (4)!
+    predefinedModelsErrorEmptyModelsList: String // (5)!
+    predefinedModelsCategories: Map<String, String> // (6)!
   }
 }
 ```

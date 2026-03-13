@@ -127,6 +127,9 @@ The Consent feature allows you to collect user permissions for data processing o
         - Optional `consentFooterHtml` below the consents list
         - Text for the `consentButtonAccept`
 
+        ##### [Icons](../resources/icons.md)
+        - `consentTitle24` - Optional icon displayed next to the consent title
+
         ##### Styles
         - Optional `drawBordersAroundConsents`
 

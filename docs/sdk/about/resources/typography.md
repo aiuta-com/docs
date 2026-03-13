@@ -18,7 +18,7 @@ The table below contains all the text styles used in the SDK:
 | `titleM` | Medium titles | `20` | `Bold` | `100%` | `-2%` |
 | `regular` | Regular text | `17` | `Medium` | `22` | `-3%` |
 | `subtle` | Subtle text | `15` | `Regular` | `18` | `-1%` |
-| `footnote` | Footnotes | `12` | `Regular` | `100%` | `-1%` |
+| `footnote` | Footnotes / Disclaimers | `12` | `Regular` | `100%` | `-1%` |
 | [**Button**](/sdk/developer/configuration/ui/theme/button.md) |
 | `buttonM` | Medium buttons |  `17` | `Semibold` | `18` | `-1%` |
 | `buttonS` | Small buttons |  `13` | `Semibold` | `18` | `-1%` |

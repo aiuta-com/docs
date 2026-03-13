@@ -138,7 +138,7 @@ nav:
     - Configuration: sdk/flutter/configuration.md
     - Basic Usage: sdk/flutter/basic-usage.md
     - Quick Test: sdk/flutter/quick-test.md
-    - Migration: 
+    - Migration:
       - Migrate to v4: sdk/flutter/migration/v4.md
 
   - Web:
