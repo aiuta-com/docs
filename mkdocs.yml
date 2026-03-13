@@ -46,13 +46,13 @@ nav:
       - Shapes: sdk/about/resources/shapes.md
       - Typography: sdk/about/resources/typography.md
       - Localization: sdk/about/resources/localization.md
-      - Other: sdk/about/resources/other.md
     - Analytics: 
       - Events: sdk/about/analytics/analytics.md
       - Errors: sdk/about/analytics/errors.md
 
   - Developer:
     - sdk/developer/index.md
+    - Definitions: sdk/developer/definitions.md
     - Product: sdk/developer/product.md
     - Configuration:
       - sdk/developer/configuration/index.md
@@ -61,26 +61,50 @@ nav:
       - Debug Settings: sdk/developer/configuration/debug-settings.md
     - User Interface:
       - sdk/developer/configuration/ui/index.md
-      - Theme: sdk/developer/configuration/ui/theme/index.md
-      - Color: sdk/developer/configuration/ui/theme/color.md
-      - Label: sdk/developer/configuration/ui/theme/label.md
-      - Image: sdk/developer/configuration/ui/theme/image.md
-      - Button: sdk/developer/configuration/ui/theme/button.md
-      - Page Bar: sdk/developer/configuration/ui/theme/page-bar.md
-      - Bottom Sheet: sdk/developer/configuration/ui/theme/bottom-sheet.md
-      - Activity Indicator: sdk/developer/configuration/ui/theme/activity-indicator.md
-      - Selection: sdk/developer/configuration/ui/theme/selection.md
-      - Error: sdk/developer/configuration/ui/theme/error.md
-      - Product Bar: sdk/developer/configuration/ui/theme/product-bar.md
-      - Powered By: sdk/developer/configuration/ui/theme/powered-by.md
+      - Presentation Style: sdk/developer/configuration/ui/presentation-style.md
+      - Swipe To Dismiss: sdk/developer/configuration/ui/swipe-to-dismiss.md
+      - Theme: 
+        - sdk/developer/configuration/ui/theme/index.md
+        - Color: sdk/developer/configuration/ui/theme/color.md
+        - Label: sdk/developer/configuration/ui/theme/label.md
+        - Image: sdk/developer/configuration/ui/theme/image.md
+        - Button: sdk/developer/configuration/ui/theme/button.md
+        - Page Bar: sdk/developer/configuration/ui/theme/page-bar.md
+        - Bottom Sheet: sdk/developer/configuration/ui/theme/bottom-sheet.md
+        - Activity Indicator: sdk/developer/configuration/ui/theme/activity-indicator.md
+        - Selection: sdk/developer/configuration/ui/theme/selection.md
+        - Error: sdk/developer/configuration/ui/theme/error.md
+        - Product Bar: sdk/developer/configuration/ui/theme/product-bar.md
+        - Powered By: sdk/developer/configuration/ui/theme/powered-by.md
     - Features:
       - sdk/developer/configuration/features/index.md
       - Welcome Screen: sdk/developer/configuration/features/welcome-screen.md
-      - Onboarding: sdk/developer/configuration/features/onboarding.md
-      - Consent: sdk/developer/configuration/features/consent.md
-      - Image Picker: sdk/developer/configuration/features/image-picker.md
-      - Try On: sdk/developer/configuration/features/try-on.md
-      - Share: sdk/developer/configuration/features/share.md
+      - Onboarding:
+        - sdk/developer/configuration/features/onboarding/index.md
+        - How It Works: sdk/developer/configuration/features/onboarding/how-it-works.md
+        - Best Results: sdk/developer/configuration/features/onboarding/best-results.md
+      - Consent:
+        - sdk/developer/configuration/features/consent/index.md
+        - Data: sdk/developer/configuration/features/consent/data.md
+      - Image Picker:
+        - sdk/developer/configuration/features/image-picker/index.md
+        - Camera: sdk/developer/configuration/features/image-picker/camera.md
+        - Photo Gallery: sdk/developer/configuration/features/image-picker/photo-gallery.md
+        - Predefined Models: sdk/developer/configuration/features/image-picker/predefined-models.md
+        - Protection Disclaimer: sdk/developer/configuration/features/image-picker/protection-disclaimer.md
+        - Uploads History: sdk/developer/configuration/features/image-picker/uploads-history.md
+      - Try On:
+        - sdk/developer/configuration/features/try-on/index.md
+        - Loading Page: sdk/developer/configuration/features/try-on/loading-page.md
+        - Input Image Validation: sdk/developer/configuration/features/try-on/input-image-validation.md
+        - Cart: sdk/developer/configuration/features/try-on/cart.md
+        - Fit Disclaimer: sdk/developer/configuration/features/try-on/fit-disclaimer.md
+        - Feedback: sdk/developer/configuration/features/try-on/feedback.md
+        - Other Photo: sdk/developer/configuration/features/try-on/other-photo.md
+        - Generations History: sdk/developer/configuration/features/try-on/generations-history.md
+      - Share:
+        - sdk/developer/configuration/features/share/index.md
+        - Watermark: sdk/developer/configuration/features/share/watermark.md
       - Wishlist: sdk/developer/configuration/features/wishlist.md
 
   - Android:
@@ -114,7 +138,7 @@ nav:
     - Configuration: sdk/flutter/configuration.md
     - Basic Usage: sdk/flutter/basic-usage.md
     - Quick Test: sdk/flutter/quick-test.md
-    - Migration: 
+    - Migration:
       - Migrate to v4: sdk/flutter/migration/v4.md
 
   - Web:
@@ -165,11 +189,13 @@ extra:
     api: https://api.aiuta.com/{path}
     web_sdk: https://static.aiuta.com/sdk
     demo:
+      url: https://demo.aiuta.com
       api_key: AIUTADEMO
       subscription_id: 67dd38b436010676956bde8f
       get_jwt_url: https://jwt-auth-backend-demo.aiuta.com/
       web_sdk:
         url: https://static.aiuta.com/sdk/main/index.umd.js
+        dbg: https://nmac.local/vite
         path: /js/index.umd.js
         css: /stylesheets/web-sdk.css
 
@@ -209,7 +235,6 @@ theme:
   features:
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.expand
     - navigation.sections
     - navigation.indexes
     - navigation.instant

@@ -127,7 +127,10 @@ The Consent feature allows you to collect user permissions for data processing o
         - Optional `consentFooterHtml` below the consents list
         - Text for the `consentButtonAccept`
 
-        ##### [Styles](../resources/other.md)
+        ##### [Icons](../resources/icons.md)
+        - `consentTitle24` - Optional icon displayed next to the consent title
+
+        ##### Styles
         - Optional `drawBordersAroundConsents`
 
         === "Without borders"
@@ -147,7 +150,7 @@ The Consent feature allows you to collect user permissions for data processing o
     | Type | Event | Page Id | Description |
     |------|-------|---------|-------------|
     | [`page`](../analytics/analytics.md#event-types) | :material-minus: | [`consent`](../analytics/analytics.md#page) | Consent page opened |
-    | [`onboarding`](../analytics/analytics.md#event-types) | [`consentsGiven`](../analytics/analytics.md#onboarding) | [`consent`](../analytics/analytics.md#page) | User has given all required consents |
+    | [`onboarding`](../analytics/analytics.md#event-types) | [`consentGiven`](../analytics/analytics.md#onboarding) | [`consent`](../analytics/analytics.md#page) | User has given all required consents |
     | [`exit`](../analytics/analytics.md#event-types) | :material-minus: | [`consent`](../analytics/analytics.md#page) | SDK was closed on the consent page |
 
 

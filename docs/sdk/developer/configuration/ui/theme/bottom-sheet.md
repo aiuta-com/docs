@@ -1,14 +1,16 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Shape: /sdk/developer/definitions/#shape
+  Bool: /sdk/developer/definitions/#bool
+  Number: /sdk/developer/definitions/#number
 ---
-# Bottom Sheet Scheme
-
-Bottom sheet presentation, including grabber appearance and sheet shape for both main SDK and internal sheets.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Bottom Sheet
 ![component](/media/components/bottom-sheet-std.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Bottom Sheet
+Bottom sheet presentation, including grabber appearance and sheet shape for both main SDK and internal sheets.
 
 ```typescript
 BottomSheetTheme {
@@ -37,4 +39,20 @@ BottomSheetTheme {
 4. Determines the height of the grabber handle for bottom sheet interaction.
 5. Sets the vertical padding between the grabber and the top of the bottom sheet.
 6. Controls whether the bottom sheet delimiters extend to the right edge.
-7. Determines whether the bottom sheet delimiters extend to the left edge. 
+7. Determines whether the bottom sheet delimiters extend to the left edge.
+
+---
+
+### Delimiter settings
+
+=== "Default"
+
+    ![BottomSheet](/media/components/bottom-sheet-std.png){ width=450 }
+
+=== "`extendDelimitersToTheRight`"
+
+    ![BottomSheet](/media/components/bottom-sheet-re.png){ width=450 }
+
+=== "`extendDelimitersToTheLeft` and `Right`"
+
+    ![BottomSheet](/media/components/bottom-sheet-lre.png){ width=450 }

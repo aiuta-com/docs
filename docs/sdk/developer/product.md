@@ -1,8 +1,14 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  List: /sdk/developer/definitions/#list
+  String: /sdk/developer/definitions/#string
+  Price: "#price"
+  "null": /sdk/developer/definitions/#optional
 ---
-# Product Scheme
+# Product
 
 The product scheme defines the structure and properties of products within the Aiuta platform. This scheme is essential for displaying product information in the SDK's user interface and managing product-related functionality.
 

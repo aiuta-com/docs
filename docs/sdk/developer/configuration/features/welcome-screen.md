@@ -1,14 +1,18 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Icon: /sdk/developer/definitions/#icon
+  Image: /sdk/developer/definitions/#image
+  TextStyle: /sdk/developer/definitions/#textstyle
+  String: /sdk/developer/definitions/#string
 ---
-# Welcome Screen Scheme
+# [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Welcome Screen
+![Welcome Screen](/media/pages/welcome.png){ width=220 }
 
 Configures an optional [:material-window-open: welcome screen](/sdk/about/pages/welcome-screen.md) that introduces users to the SDK's functionality.
 
-![Welcome Screen](/media/pages/welcome.png){width=120}
-
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Welcome Screen Feature
 ```typescript
 WelcomeScreenFeature {
   images {

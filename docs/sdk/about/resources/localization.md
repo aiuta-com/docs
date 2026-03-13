@@ -50,9 +50,9 @@ The table below contains all the strings that may be localized or changed for th
 | `consentFooterHtml` | :material-code-tags:{ title="Supports html tags" } :material-link:{ title="Supports links" } :material-close:{ title="Sample value" } | Consent footer |
 | `consentButtonAccept` | :material-close:{ title="Sample value" } | Accept |
 | [**ImagePicker**](/sdk/about/pages/image-picker.md) | |
-| `imagePickerTitle` | :material-check:{ title="Deafult value" } | Upload a photo of you |
-| `imagePickerDescription` | :material-check:{ title="Deafult value" } | Select a photo where you are standing straight and clearly visible |
-| `imagePickerButtonUploadPhoto` | :material-check:{ title="Deafult value" } | Upload a photo |
+| `imagePickerTitleEmpty` | :material-check:{ title="Deafult value" } | Upload a photo of you |
+| `imagePickerDescriptionEmpty` | :material-check:{ title="Deafult value" } | Select a photo where you are standing straight and clearly visible |
+| `imagePickerButtonUploadImage` | :material-check:{ title="Deafult value" } | Upload a photo |
 | [**ImagePicker :octicons-arrow-right-24: Camera**](/sdk/about/pages/image-picker.md#__tabbed_1_1) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `cameraButtonTakePhoto` | :material-check:{ title="Deafult value" } | Take a photo |
 | `cameraPermissionTitle` | :material-check:{ title="Deafult value" } | Camera permission |
@@ -61,14 +61,16 @@ The table below contains all the strings that may be localized or changed for th
 | [**ImagePicker :octicons-arrow-right-24: Gallery**](/sdk/about/pages/image-picker.md#__tabbed_1_2) | |
 | `galleryButtonSelectPhoto` | :material-check:{ title="Deafult value" } | Choose from library |
 | [**ImagePicker :octicons-arrow-right-24: PredefinedModel**](/sdk/about/pages/image-picker.md#__tabbed_1_3) :fontawesome-regular-eye-slash:{ title="Optional" } | |
-| `predefinedModelsTitle` | :material-check:{ title="Deafult value" } | Select your model |
+| `predefinedModelsPageTitle` | :material-check:{ title="Deafult value" } | Select your model |
 | `predefinedModelsOr` | :material-check:{ title="Deafult value" } | Or |
-| `predefinedModelsEmptyListError` | :material-check:{ title="Deafult value" } | The models list is empty |
+| `predefinedModelsErrorEmptyModelsList` | :material-check:{ title="Deafult value" } | The models list is empty |
 | `predefinedModelsCategories` | :material-check:{ title="Deafult value" } [^4] | `{"man": "Men", "woman": "Women"}` |
 | [**ImagePicker :octicons-arrow-right-24: UploadsHistory**](/sdk/about/pages/image-picker.md#__tabbed_1_4) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `uploadsHistoryButtonNewPhoto` | :material-check:{ title="Deafult value" }<br><br>:material-apple-keyboard-option:{ title="Alternative variant" } [^2] | + New photo or model<br><br>+ Upload new photo |
 | `uploadsHistoryTitle` | :material-check:{ title="Deafult value" } | Previously used |
 | `uploadsHistoryButtonChangePhoto` | :material-check:{ title="Deafult value" } | Change photo |
+| [**ImagePicker :octicons-arrow-right-24: ProtectionDisclaimer**](/sdk/developer/configuration/features/image-picker/protection-disclaimer.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| `protectionDisclaimer` | :material-minus:{ title="No default value" } | |
 | [**TryOn**](/sdk/about/pages/image-picker.md) | |
 | `tryOnPageTitle` | :material-check:{ title="Deafult value" } | Virtual Try-on |
 | `tryOn` | :material-check:{ title="Deafult value" } | Try on |
@@ -81,10 +83,11 @@ The table below contains all the strings that may be localized or changed for th
 | `invalidInputImageChangePhotoButton` | :material-check:{ title="Deafult value" } | Change photo |
 | [**TryOn :octicons-arrow-right-24: Cart**](/sdk/about/pages/results-screen.md) | |
 | `addToCart` | :material-check:{ title="Deafult value" } | Add to cart |
+| `addToCartOutfit` | :material-check:{ title="Deafult value" } | Shop the look |
 | [**TryOn :octicons-arrow-right-24: FitDisclaimer**](/sdk/about/pages/results-screen.md#__tabbed_1_6) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `fitDisclaimerTitle` | :material-check:{ title="Deafult value" } | Results may vary from real-life fit |
 | `fitDisclaimerDescription` | :material-check:{ title="Deafult value" } | Virtual try-on is a visualization tool that shows how items might look<br>and may not perfectly represent how the item will fit in reality |
-| `fitDisclaimerCloseButton` | :material-check:{ title="Deafult value" } | Close |
+| `fitDisclaimerButtonClose` | :material-check:{ title="Deafult value" } | Close |
 | [**TryOn :octicons-arrow-right-24: Feedback**](/sdk/about/pages/results-screen.md#__tabbed_1_3) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `feedbackTitle` | :material-check:{ title="Deafult value" } | Can you tell us more? |
 | `feedbackOptions` | :material-check:{ title="Deafult value" } | `["This style isn't for me",`<br>`"The item looks off",`<br>`"I look different"]` |
@@ -117,7 +120,7 @@ The table below contains all the strings that may be localized or changed for th
 [^1]: `<b><a href='https://aiuta.com/legal/terms-of-service.html'>Terms of Use</a>`
 [^4]: 
     This is a map from models category identifiers to their names. 
-    The `predefinedModelCategories` are usually should cover 2 categories 
+    The `predefinedModelsCategories` are usually should cover 2 categories 
     with ids `man` and `woman`, but can be extended in the future or by
     your agreement with Aiuta.
 [^2]: Use this variant if the try-on with models feature is disabled

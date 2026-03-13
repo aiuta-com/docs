@@ -1,14 +1,14 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  String: /sdk/developer/definitions/#string
 ---
-# Power Bar Scheme
-
-"Powered By Aiuta" branding element appearance.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Power Bar
 ![component](/media/components/power-bar.png){ width=120 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Power Bar
+"Powered By Aiuta" branding element appearance.
 
 ```typescript
 PowerBarTheme {

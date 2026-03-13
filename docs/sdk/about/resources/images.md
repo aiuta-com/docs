@@ -23,5 +23,5 @@ The table below contains all the images used in the SDK:
 | `onboardingBestResultsBad[]` | Collection of bad input examples |  | :material-minus:{ title="Not included" } |
 | [**ImagePicker :octicons-arrow-right-24: Examples**](/sdk/about/pages/image-picker.md) | |
 | `imagePickerExamples[]` | Examples of a good input | ![preview](/media/images/imagePickerSample1.png){ width=80 } |![preview](/media/images/imagePickerSample2.png){ width=80 } |
-| [**Share**](/sdk/developer/configuration/features/share.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
+| [**Share**](/sdk/developer/configuration/features/share/index.md) :fontawesome-regular-eye-slash:{ title="Optional" } | |
 | `shareWatermark` | Watermark for shared images |  | :material-minus:{ title="Not included" } |

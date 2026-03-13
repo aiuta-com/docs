@@ -1,14 +1,16 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Icon: /sdk/developer/definitions/#icon
+  TextStyle: /sdk/developer/definitions/#textstyle
+  Bool: /sdk/developer/definitions/#bool
 ---
-# Page Bar Scheme
-
-Navigation bar appearance, including title styling and navigation button icons.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Page Bar
 ![component](/media/components/pagebar-std.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Page Bar
+Navigation bar appearance, including title styling and navigation button icons.
 
 ```typescript
 PageBarTheme {
@@ -33,12 +35,14 @@ PageBarTheme {
 3. Sets the icon for the close button.
 4.  Controls the position of the close button, determining whether it appears on the right side of the navigation bar.
 
-    !!! example ""
+---
 
-        === "Default &nbsp; `false`"
+### Close button position
 
-            ![PageBar](/media/components/pagebar-std.png){ width=450 }
+=== "Default &nbsp; `false`"
 
-        === "`true`"
+    ![PageBar](/media/components/pagebar-std.png){ width=450 }
 
-            ![PageBar](/media/components/pagebar-rev.png){ width=450 } 
+=== "`preferCloseButtonOnTheRight`"
+
+    ![PageBar](/media/components/pagebar-rev.png){ width=450 } 

@@ -1,15 +1,17 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Callback: /sdk/developer/definitions/#callback
+  Map: /sdk/developer/definitions/#map
+  String: /sdk/developer/definitions/#string
 ---
-# Auth Schemes
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/index.md#configuration) Auth
 Auth is used to authenticate requests from Aiuta SDK to [API](/api/try-on/workflow.md) with your credentials.
 
 !!! info ""
     Using JSON Web Tokens (JWT) is the most flexible and secure way to access Aiuta services, while the ApiKey authentication method is best used for server-side integration. But it's up to you. :material-book-open-variant: Read more about [API Authentication](/api/getting-started.md#authentication).
-
-## [:material-arrow-up-left:](/sdk/developer/configuration/index.md#configuration) Auth
 
 === "Jwt"
     ```typescript

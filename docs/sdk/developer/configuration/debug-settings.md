@@ -1,12 +1,13 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Bool: /sdk/developer/definitions/#bool
+  ValidationPolicy: "#validation-policy"
 ---
-# Debug Settings Scheme
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/index.md#configuration) Debug Settings
 The `DebugSettings` is helping to manage and troubleshoot the SDK's behavior. It provides a set of options that control logging and validation policies, ensuring that the SDK operates smoothly and any issues can be quickly identified and resolved.
-
-## [:material-arrow-up-left:](/sdk/developer/configuration/index.md#configuration) Debug Settings
 
 ```typescript
 DebugSettings {

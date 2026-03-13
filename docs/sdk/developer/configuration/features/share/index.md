@@ -1,12 +1,18 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  ShareWatermarkFeature: watermark/
+  Callback: /sdk/developer/definitions/#callback
+  Icon: /sdk/developer/definitions/#icon
+  List: /sdk/developer/definitions/#list
+  String: /sdk/developer/definitions/#string
+  "null": /sdk/developer/definitions/#optional
 ---
-# Share Scheme
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Share
 Enables sharing capabilities for generated try-on images with customizable options.
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Share Feature
 ```typescript
 ShareFeature {
   watermark: ShareWatermarkFeature | null // (1)!
@@ -26,23 +32,10 @@ ShareFeature {
 
 ```
 
-1.  [:material-arrow-down-left:](#watermark) Optional configuration for adding a watermark to shared content.
+1.  [:material-arrow-down-left:](watermark.md) Optional configuration for adding a watermark to shared content.
 2.  Icon displayed for the share button in the interface.
 3.  Label text for the share button in the fullscreen gallery.
 4.  Optional `dataProvider` callback function that generates additional text to be shared along with the image.
-
-
-### [:material-arrow-up-left:](#share-feature) Watermark
-```typescript
-ShareWatermarkFeature {
-  images {
-    logo: Image // (1)!
-  }
-}
-```
-
-1.  Logo image to be used as a watermark on shared content. 
-
 
 ### Sequence Diagram
 

@@ -1,14 +1,19 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Color: /sdk/developer/definitions/#color
+  Icon: /sdk/developer/definitions/#icon
+  TextStyle: /sdk/developer/definitions/#textstyle
+  Bool: /sdk/developer/definitions/#bool
+  ProductBarPricesTheme: "#prices"
+  "null": /sdk/developer/definitions/#optional
 ---
-# Product Bar Scheme
-
-Product information display, including typography for product details and optional price styling.
- 
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Product Bar
 ![component](/media/components/product-bar.png){ width=300 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Product Bar
+Product information display, including typography for product details and optional price styling.
 
 ```typescript
 ProductBarTheme {

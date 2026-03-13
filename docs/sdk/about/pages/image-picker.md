@@ -12,6 +12,20 @@ The Image Picker feature represents the main page and allows users to select ima
 - :material-new-box:{ .cl-aiuta } Provide predefined models images for try-on
 - Enable users to reuse and manage previous images
 
+---
+
+??? tip "Customization"
+
+    ## Customization
+
+    ##### [Images](../resources/images.md)
+    - List of 2 `imagePickerExamples` showing examples of good input photos
+
+    ##### [Text Elements](../resources/localization.md)
+    - `imagePickerTitleEmpty` - Title displayed when the image picker is empty
+    - `imagePickerDescriptionEmpty` - Description shown when the image picker is empty
+    - `imagePickerButtonUploadImage` - Label for the button used to upload new photos
+
 ## Sources
 
 === "Camera"
@@ -94,9 +108,9 @@ The Image Picker feature represents the main page and allows users to select ima
             - `selectModels24` - Icon for the predefined models button
 
             ##### [Text Elements](../resources/localization.md)
-            - `predefinedModelsTitle` - Title of the predefined models page and button
+            - `predefinedModelsPageTitle` - Title of the predefined models page and button
             - `predefinedModelsOr` - Label displayed before the predefined models button
-            - `predefinedModelsEmptyListError` - Error message for empty model list
+            - `predefinedModelsErrorEmptyModelsList` - Error message for empty model list
             - `predefinedModelsCategories` - Mapping of category IDs to titles (e.g., "man", "woman")
 
     === "Disabled"
@@ -171,10 +185,8 @@ The Image Picker feature represents the main page and allows users to select ima
         - `uploadsHistoryTitle` - Title for the uploads history screen
         - `uploadsHistoryButtonChangePhoto` - Text for the change photo button
 
-        ##### [Styles](#)
-        - `changePhotoButtonStyle` - Style for the "Change Photo" button:
-            - `blurred` - Default blurred style with optional outline
-            - `primary` - Solid button with primary background color
+        ##### [Styles](/sdk/developer/definitions.md#componentstyle)
+        - `changePhotoButtonStyle` - [`ComponentStyle`](/sdk/developer/definitions.md#componentstyle) for the "Change Photo" button
 ---
 
 ## [Analytics](../analytics/analytics.md)

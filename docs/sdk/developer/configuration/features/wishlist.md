@@ -1,12 +1,18 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Callback: /sdk/developer/definitions/#callback
+  Icon: /sdk/developer/definitions/#icon
+  List: /sdk/developer/definitions/#list
+  Observable: /sdk/developer/definitions/#observable
+  Bool: /sdk/developer/definitions/#bool
+  String: /sdk/developer/definitions/#string
 ---
-# Wishlist Scheme
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Wishlist
 Integrates with the host app's wishlist functionality for product management.
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/features/index.md#features) Wishlist Feature
 ```typescript
 WishlistFeature {
   icons {

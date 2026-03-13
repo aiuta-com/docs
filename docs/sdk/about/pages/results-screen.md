@@ -20,9 +20,15 @@ The Results Screen displays the generated virtual try-on results and provides va
     Allows users to add products from the try-on results directly to their shopping cart.
 
     #### Handling
-    
+
     - You need to handle the `addToCart` action that the SDK will trigger when a user wants to add a product to their cart; SDK will close right after that, allowing you to present your own UI for product customization, such as size selection or other options needed for cart addition
     - The SDK will provide the product ID of the item the user wants to add
+
+    #### Shop the Look (Outfit)
+
+    Optionally, a "Shop the Look" button can be displayed alongside the main "Add to Cart" button, allowing users to add multiple items from the try-on outfit at once.
+
+    - You need to handle the `addToCartOutfit` action that provides a list of product IDs
 
     ??? tip "Customization"
 
@@ -30,6 +36,7 @@ The Results Screen displays the generated virtual try-on results and provides va
 
         ##### [Text Elements](../resources/localization.md)
         - `addToCart` - Label for the "Add to Cart" button
+        - `addToCartOutfit` - Label for the "Shop the Look" button
 
 === "Wishlist"
 
@@ -91,7 +98,7 @@ The Results Screen displays the generated virtual try-on results and provides va
             - `gratitude40` - Icon displayed after feedback is sent
 
             ##### [Shapes](../resources/shapes.md)
-            - `feedbackButton` - Shape for feedback buttons
+            - `chipsButton` - Shape for feedback buttons
 
     
     === "Other (custom user comment)"
@@ -185,10 +192,10 @@ The Results Screen displays the generated virtual try-on results and provides va
         ##### [Text Elements](../resources/localization.md)
         - `fitDisclaimerTitle` - Title displayed in the fit disclaimer
         - `fitDisclaimerDescription` - Description text in the fit disclaimer
-        - `fitDisclaimerCloseButton` - Label for the close button
+        - `fitDisclaimerButtonClose` - Label for the close button
 
         ##### [Typography](../resources/typography.md)
-        - `disclaimer` - Text style for the disclaimer
+        - `footnote` - Text style for the disclaimer
 
         ##### [Icons](../resources/icons.md)
         - `info20` - Icon displayed in the fit disclaimer

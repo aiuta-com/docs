@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% block scripts %}
+  {{ super() }}
+  <script>
+    function applyScheme() {
+      {% if page.meta.code_links %}
+      var defined = {{ page.meta.code_links | tojson }}
+      var names = Object.keys(defined).sort(function(a, b) { return b.length - a.length })
+      {% endif %}
+      document.querySelectorAll('.highlight code').forEach(function(code) {
+        {% if page.meta.code_links %}
+        if (!code.dataset.linked) {
+          code.dataset.linked = '1'
+          // Replace type names with links (skip declarations like "Foo {" or "enum Foo {")
+          function nextNonWsSibling(el) {
+            var s = el.nextSibling
+            while (s && /^\s*$/.test(s.textContent)) s = s.nextSibling
+            return s
+          }
+          function prevNonWsSibling(el) {
+            var s = el.previousSibling
+            while (s && /^\s*$/.test(s.textContent)) s = s.previousSibling
+            return s
+          }
+          function isDeclaration(node, name, idx) {
+            // If preceded by "|" it's a union type variant, never a declaration
+            var beforeInNode = node.textContent.substring(0, idx)
+            if (/\|\s*$/.test(beforeInNode)) return false
+            if (/^\s*$/.test(beforeInNode)) {
+              var prevSib = prevNonWsSibling(node.parentNode)
+              if (prevSib && /\|\s*$/.test(prevSib.textContent)) return false
+            }
+            // Check if "{" follows (in same text or next non-ws sibling of parent span)
+            var afterInNode = node.textContent.substring(idx + name.length)
+            if (/^\s*\{/.test(afterInNode)) return true
+            if (/^\s*$/.test(afterInNode)) {
+              var sib = nextNonWsSibling(node.parentNode)
+              if (sib && sib.textContent.trim()[0] === '{') return true
+            }
+            // Check if preceded by keyword (in same text or prev non-ws sibling of parent span)
+            if (/\b(enum|class|interface)\s*$/.test(beforeInNode)) return true
+            if (/^\s*$/.test(beforeInNode)) {
+              var sib = prevNonWsSibling(node.parentNode)
+              if (sib && /\b(enum|class|interface)\s*$/.test(sib.textContent)) return true
+            }
+            return false
+          }
+          var walker = document.createTreeWalker(code, NodeFilter.SHOW_TEXT)
+          var replacements = []
+          while (walker.nextNode()) {
+            var node = walker.currentNode
+            for (var i = 0; i < names.length; i++) {
+              var name = names[i]
+              var idx = node.textContent.indexOf(name)
+              if (idx < 0) continue
+              var chBefore = idx > 0 ? node.textContent[idx - 1] : ' '
+              var chAfter = idx + name.length < node.textContent.length ? node.textContent[idx + name.length] : ' '
+              if (/\w/.test(chBefore) || /\w/.test(chAfter)) continue
+              if (isDeclaration(node, name, idx)) continue
+              replacements.push({ node: node, name: name, url: defined[name] })
+            }
+          }
+          replacements.forEach(function(r) {
+            var text = r.node.textContent
+            var idx = text.indexOf(r.name)
+            if (idx < 0) return
+            var chBefore = idx > 0 ? text[idx - 1] : ' '
+            var chAfter = idx + r.name.length < text.length ? text[idx + r.name.length] : ' '
+            if (/\w/.test(chBefore) || /\w/.test(chAfter)) return
+            if (isDeclaration(r.node, r.name, idx)) return
+            var before = text.substring(0, idx)
+            var after = text.substring(idx + r.name.length)
+            var frag = document.createDocumentFragment()
+            if (before) frag.appendChild(document.createTextNode(before))
+            var a = document.createElement('a')
+            a.href = r.url
+            a.textContent = r.name
+            frag.appendChild(a)
+            if (after) frag.appendChild(document.createTextNode(after))
+            r.node.parentNode.replaceChild(frag, r.node)
+          })
+        }
+        {% endif %}
+        // Show annotation tooltip on hover/tap over any part of a line
+        if (code.dataset.annHover) return
+        code.dataset.annHover = '1'
+        var activeAnn = null
+        function findAnn(target) {
+          if (!code.contains(target) || target === code) return null
+          var ann = target.closest('.md-annotation')
+          if (ann && code.contains(ann)) return ann
+          var tw = document.createTreeWalker(code, NodeFilter.SHOW_ALL)
+          var passed = false
+          while (tw.nextNode()) {
+            var n = tw.currentNode
+            if (!passed) {
+              if (n === target || (n.nodeType === 1 && n.contains(target)) || target.contains(n)) passed = true
+              continue
+            }
+            if (target.contains(n)) continue
+            if (n.nodeType === 3 && n.textContent.indexOf('\n') >= 0) break
+            if (n.nodeType === 1 && n.classList.contains('md-annotation')) return n
+          }
+          return null
+        }
+        code.addEventListener('mouseover', function(e) {
+          if (e.buttons || isTouch) return
+          var ann = findAnn(e.target)
+          if (ann === activeAnn) return
+          if (activeAnn) { activeAnn.blur(); activeAnn = null }
+          if (ann) { activeAnn = ann; ann.focus({ preventScroll: true }) }
+        })
+        code.addEventListener('mouseleave', function() {
+          if (activeAnn) { activeAnn.blur(); activeAnn = null }
+        })
+        // Mobile: tap on line toggles annotation (touch only, skip links)
+        var isTouch = false
+        code.addEventListener('touchstart', function() { isTouch = true }, { passive: true })
+        code.addEventListener('click', function(e) {
+          if (!isTouch) return
+          isTouch = false
+          if (e.target.closest('a:not(.md-annotation__index)')) return
+          var ann = findAnn(e.target)
+          if (!ann) return
+          if (activeAnn === ann) { activeAnn.blur(); activeAnn = null }
+          else { if (activeAnn) activeAnn.blur(); activeAnn = ann; ann.focus({ preventScroll: true }) }
+        })
+      })
+    }
+    if (typeof document$ !== 'undefined') {
+      document$.subscribe(applyScheme)
+    } else {
+      document.addEventListener('DOMContentLoaded', applyScheme)
+    }
+  </script>
+{% endblock %}

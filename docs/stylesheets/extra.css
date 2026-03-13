@@ -114,14 +114,15 @@ body {
   transition: all 0.2s ease !important;
   -webkit-transition: all 0.2s ease !important;
   position: absolute !important;
-  top: -0.25em !important;
   left: -0.25em !important;
+  opacity: 0 !important;
 }
 
 .md-tooltip--active + .md-annotation__index:after,
 .md-annotation:hover .md-annotation__index:after {
-  transform: scale(1) translate(0.275em, 0.2em) !important;
-  -webkit-transform: scale(1) translate(0.275em, 0.2em) !important;
+  transform: scale(1) translate(0.275em, 0) !important;
+  -webkit-transform: scale(1) translate(0.275em, 0) !important;
+  opacity: 1 !important;
 }
 
 .md-annotation__index:before {
@@ -197,6 +198,16 @@ body {
   .md-nav__unlisted {
     display: none !important;
   }
+}
+
+/* Links inside code blocks */
+.highlight pre code a {
+  color: var(--md-typeset-a-color);
+  text-decoration: underline dotted;
+}
+
+.highlight pre code a:hover {
+  text-decoration: underline;
 }
 
 /* Code block result container */

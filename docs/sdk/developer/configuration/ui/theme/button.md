@@ -1,14 +1,15 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Shape: /sdk/developer/definitions/#shape
+  TextStyle: /sdk/developer/definitions/#textstyle
 ---
-# Button Scheme
-
-Buttons styles, including typography and shape configurations for different button sizes.
-
+# [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Button
 ![component](/media/components/button-brand.png){ width=130 } ![component](/media/components/button-contrast-inverted.png){ width=150 }
 
-## [:material-arrow-up-left:](/sdk/developer/configuration/ui/theme/index.md#theme) Button
+Buttons styles, including typography and shape configurations for different button sizes.
 
 ```typescript
 ButtonTheme {

@@ -1,12 +1,18 @@
 ---
+template: scheme.html
 hide:
   - toc
+code_links:
+  Auth: auth/
+  UserInterface: ui/
+  Features: features/
+  Analytics: analytics/
+  DebugSettings: debug-settings/
+  "null": /sdk/developer/definitions/#optional
 ---
-# Configuration Scheme
+# Configuration
 
 The configuration is structured as a hierarchical object that controls various aspects of the SDK's behavior, appearance, and functionality. The configuration is designed to be flexible and extensible, allowing for customization of features, UI elements, and behavior.
-
-## Configuration
 
 ```typescript
 Configuration {
@@ -18,7 +24,7 @@ Configuration {
 }
 ```
 
-1.  [:material-arrow-down-left:](/sdk/developer/configuration/auth.md) Required to authenticate Aiuta SDK to use [API](/api/try-on/index.md) with your credentials. Supported authentication methods are `ApiKey` or `Jwt` + `subscriptionId`.
+1. [:material-arrow-down-left:](/sdk/developer/configuration/auth.md) Required to authenticate Aiuta SDK to use [API](/api/try-on/index.md) with your credentials. Supported authentication methods are `ApiKey` or `Jwt` + `subscriptionId`.
 
 2. [:material-arrow-down-left:](/sdk/developer/configuration/ui/index.md) Configuration of the user interface presentation style, swipe-to-dismiss policy, and UI components themes for the Aiuta SDK.
 
@@ -35,7 +41,7 @@ Configuration {
     
     - [Authentication](/sdk/developer/configuration/auth.md) credentials
     - Your Terms of Service URL
-    - Add to [Cart](/sdk/developer/configuration/features/try-on.md#cart) handler
+    - Add to [Cart](/sdk/developer/configuration/features/try-on/cart.md) handler
 
 ## Platform specifics
 

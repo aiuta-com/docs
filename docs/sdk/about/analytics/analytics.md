@@ -57,7 +57,7 @@ Types, except for `page`, `exit`, `configure` and `session`, contain an `event` 
 |-------|------------|-------------|
 | `welcomeStartClicked` | :material-minus: | Initial interaction with the [Welcome Screen](/sdk/about/pages/welcome-screen.md), indicating<br>user's intent to begin the try-on process |
 | `onboardingFinished` | :material-minus: | Completion of all onboarding steps |
-| `consentsGiven` | `consentIds` | Explicit acceptance of required consents, including<br>data processing and privacy policy agreements |
+| `consentGiven` | `consentIds` | Explicit acceptance of required consents, including<br>data processing and privacy policy agreements |
 
 ### Picker
 
@@ -127,18 +127,18 @@ Types, except for `page`, `exit`, `configure` and `session`, contain an `event` 
 |-----------|
 | [`authType`](/sdk/developer/configuration/auth.md) |
 | [`welcomeScreenFeatureEnabled`](/sdk/developer/configuration/features/welcome-screen.md) |
-| [`onboardingFeatureEnabled`](/sdk/developer/configuration/features/onboarding.md) |
-| [`consentFeatureType`](/sdk/developer/configuration/features/consent.md) |
-| [`imagePickerCameraFeatureEnabled`](/sdk/developer/configuration/features/image-picker.md#camera) |
-| [`imagePickerPredefinedModelFeatureEnabled`](/sdk/developer/configuration/features/image-picker.md#predefined-models) |
-| [`imagePickerUploadsHistoryFeatureEnabled`](/sdk/developer/configuration/features/image-picker.md#uploads-history) |
-| [`tryOnFitDisclaimerFeatureEnabled`](/sdk/developer/configuration/features/try-on.md#fit-disclaimer) |
-| [`tryOnFeedbackFeatureEnabled`](/sdk/developer/configuration/features/try-on.md#feedback) |
-| [`tryOnFeedbackOtherFeatureEnabled`](/sdk/developer/configuration/features/try-on.md#other) |
-| [`tryOnGenerationsHistoryFeatureEnabled`](/sdk/developer/configuration/features/try-on.md#generations-history) |
-| [`tryOnWithOtherPhotoFeatureEnabled`](/sdk/developer/configuration/features/try-on.md#other-photo) |
-| [`shareFeatureEnabled`](/sdk/developer/configuration/features/share.md) |
-| [`shareWatermarkFeatureEnabled`](/sdk/developer/configuration/features/share.md#watermark) |
+| [`onboardingFeatureEnabled`](/sdk/developer/configuration/features/onboarding/index.md) |
+| [`consentFeatureType`](/sdk/developer/configuration/features/consent/index.md) |
+| [`imagePickerCameraFeatureEnabled`](/sdk/developer/configuration/features/image-picker/camera.md) |
+| [`imagePickerPredefinedModelFeatureEnabled`](/sdk/developer/configuration/features/image-picker/predefined-models.md) |
+| [`imagePickerUploadsHistoryFeatureEnabled`](/sdk/developer/configuration/features/image-picker/uploads-history.md) |
+| [`tryOnFitDisclaimerFeatureEnabled`](/sdk/developer/configuration/features/try-on/fit-disclaimer.md) |
+| [`tryOnFeedbackFeatureEnabled`](/sdk/developer/configuration/features/try-on/feedback.md) |
+| [`tryOnFeedbackOtherFeatureEnabled`](/sdk/developer/configuration/features/try-on/feedback.md) |
+| [`tryOnGenerationsHistoryFeatureEnabled`](/sdk/developer/configuration/features/try-on/generations-history.md) |
+| [`tryOnWithOtherPhotoFeatureEnabled`](/sdk/developer/configuration/features/try-on/other-photo.md) |
+| [`shareFeatureEnabled`](/sdk/developer/configuration/features/share/index.md) |
+| [`shareWatermarkFeatureEnabled`](/sdk/developer/configuration/features/share/watermark.md) |
 | [`wishlistFeatureEnabled`](/sdk/developer/configuration/features/wishlist.md) |
 
 
