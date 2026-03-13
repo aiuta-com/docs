@@ -264,6 +264,9 @@ theme:
     logo: aiuta/logo
     annotation: material/information-outline
 
+extra_javascript:
+  - js/code-links.js
+
 extra_css:
   - stylesheets/extra.css
   - stylesheets/aiuta.css

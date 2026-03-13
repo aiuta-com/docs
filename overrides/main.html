@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+  {{ super() }}
+  {% if page.meta.code_links %}
+  <div id="code-links-data" hidden>{{ page.meta.code_links | tojson }}</div>
+  {% endif %}
+{% endblock %}
