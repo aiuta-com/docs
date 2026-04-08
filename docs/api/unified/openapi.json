@@ -1016,6 +1016,109 @@
         ]
       }
     },
+    "/sku_try_on_operations": {
+      "post": {
+        "tags": [
+          "try_on"
+        ],
+        "summary": "Make operations for try-on with particular SKU item(s) (SKU try-on).",
+        "description": "Async handler for SKU try-on. Return the generation operation ID.",
+        "operationId": "create_sku_try_on_operation_unified_api_sku_try_on_operations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SkuTryOnRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOperationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/sku_try_on_operations/{operation_id}": {
+      "get": {
+        "tags": [
+          "try_on"
+        ],
+        "summary": "Get generate SKU images operation.",
+        "description": "Handler for getting generation SKU images operation details.",
+        "operationId": "get_sku_try_on_operation_unified_api_sku_try_on_operations__operation_id__get",
+        "parameters": [
+          {
+            "name": "operation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Operation Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/SkuTryOnOperation"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Response Get Sku Try On Operation Unified Api Sku Try On Operations  Operation Id  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
     "/predefined_try_on_models": {
       "get": {
         "tags": [
@@ -1107,6 +1210,18 @@
   },
   "components": {
     "schemas": {
+      "AbortReason": {
+        "type": "string",
+        "enum": [
+          "NO_PEOPLE_DETECTED",
+          "TOO_MANY_PEOPLE_DETECTED",
+          "CHILD_DETECTED",
+          "INSUFFICIENT_TARGET_AREA",
+          "INTERNAL_RESTRICTION"
+        ],
+        "title": "AbortReason",
+        "description": "Reasons why an operation may be aborted.\n\nSome checks can be configured per client. Please contact the Aiuta team for details.\n\n- `NO_PEOPLE_DETECTED`: No person was found in the input image.\n- `TOO_MANY_PEOPLE_DETECTED`: Too many people were found in the input image.\n- `CHILD_DETECTED`: A minor was detected in the input image.\n- `INSUFFICIENT_TARGET_AREA`: The body area required for this garment is not visible enough in the input image.\n- `INTERNAL_RESTRICTION`: The generated result cannot be returned due to internal restrictions."
+      },
       "AiutaImage": {
         "properties": {
           "id": {
@@ -2074,6 +2189,114 @@
         "type": "object",
         "title": "SkuProductInfo",
         "description": "Describes the product represented by this SKU item.\n\nThis includes the product images along with optional metadata such as category, title, and description.\n\nMost fields are aligned with Google Merchant Center product data specification\n(https://support.google.com/merchants/answer/7052112) and use the same semantics where applicable.\n\nProviding structured and accurate product information helps improve the relevance and realism\nof the generated visuals."
+      },
+      "SkuTryOnOperation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Operation's ID"
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationStatus"
+              }
+            ],
+            "description": "Current status of the operation"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error",
+            "description": "Error details if the operation was failed. None means that there were no errors."
+          },
+          "abort_reason": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AbortReason"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Abort reason for operation aborted"
+          },
+          "generated_images": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/AiutaImage"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Generated Images",
+            "description": "List of generated images. The list can be empty if images are not yet ready, there was an error during generation or image(s) already expired and were deleted"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "error",
+          "generated_images"
+        ],
+        "title": "SkuTryOnOperation",
+        "description": "Model for SKU try-on generation operations"
+      },
+      "SkuTryOnRequest": {
+        "properties": {
+          "uploaded_image_id": {
+            "type": "string",
+            "title": "Uploaded Image Id",
+            "description": "ID of uploaded user image"
+          },
+          "sku_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sku Id",
+            "description": "SKU item ID. Either 'sku_id' or 'sku_ids' must be specified. If you want to make a try-on with multiple SKU items (outfit's try-on), use 'sku_ids' instead."
+          },
+          "sku_ids": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array",
+                "maxItems": 2,
+                "minItems": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sku Ids",
+            "description": "List of SKU IDs. Either 'sku_id' or 'sku_ids' must be specified. This field must be used for outfit's try-on with multiple SKU items. It also can be used for a single-item try-on (you can specified just one item here). 1 or 2 items are allowed at the moment."
+          }
+        },
+        "type": "object",
+        "required": [
+          "uploaded_image_id"
+        ],
+        "title": "SkuTryOnRequest",
+        "description": "Create SKU try-on generation parameters"
       },
       "TryOnModel": {
         "properties": {
