@@ -1,0 +1,934 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Digital Try On",
+    "description": "Check out the <a href='/api/try-on/workflow/'>workflow description</a> for more details",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.aiuta.com/digital-try-on/v1"
+    }
+  ],
+  "paths": {
+    "/uploaded_images": {
+      "post": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Upload an image as bytes",
+        "description": "Upload an image and save it with unique ID. By default mime-type is 'image/png' and extension is '.png'.",
+        "operationId": "upload_user_image_uploaded_images_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_user_image_uploaded_images_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AiutaImage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/uploaded_images/{image_id}": {
+      "get": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Get an uploaded image",
+        "description": "Get user's uploaded image",
+        "operationId": "get_user_uploaded_image_uploaded_images__image_id__get",
+        "parameters": [
+          {
+            "name": "image_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Image Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AiutaImage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Delete an uploaded image",
+        "description": "You can delete images uploaded by the same API user. It is not possible to delete images with the 'aiuta' owner (such as try-on model images).",
+        "operationId": "delete_uploaded_image_uploaded_images__image_id__delete",
+        "parameters": [
+          {
+            "name": "image_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Image Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/generated_images/{image_id}": {
+      "delete": {
+        "tags": [
+          "data"
+        ],
+        "summary": "Delete a generated image",
+        "description": "This method deletes a generated image. Only images of type 'user' (derived from user-uploaded images) can be deleted.",
+        "operationId": "delete_generated_image_generated_images__image_id__delete",
+        "parameters": [
+          {
+            "name": "image_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Image Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/sku_images_operations": {
+      "post": {
+        "tags": [
+          "try_on"
+        ],
+        "summary": "Make operations for generation image with particular SKU item (SKU try on).",
+        "description": "Async handler for SKU try on. Return the generation operation ID.",
+        "operationId": "generate_sku_images_operations_sku_images_operations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/SkuImagesRequest"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Generation Request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SkuImagesResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/sku_images_operations/{operation_id}": {
+      "get": {
+        "tags": [
+          "try_on"
+        ],
+        "summary": "Get generate SKU images operation.",
+        "description": "Handler for getting generation SKU images operation details.",
+        "operationId": "get_generate_sku_images_operation_sku_images_operations__operation_id__get",
+        "parameters": [
+          {
+            "name": "operation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Operation Id"
+            }
+          },
+          {
+            "name": "target_override",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Target Override"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SkuImagesOperation"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/predefined_try_on_models": {
+      "get": {
+        "tags": [
+          "try_on"
+        ],
+        "summary": "List of predefined models for try-on operations.",
+        "description": "Returns the list of predefined models, broken down into categories.",
+        "operationId": "get_predefined_try_on_models_predefined_try_on_models_get",
+        "parameters": [
+          {
+            "name": "if-none-match",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-None-Match"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Actual list of predefined try-on models",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/TryOnModelCategories"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Response Get Predefined Try On Models Predefined Try On Models Get"
+                },
+                "example": [
+                  {
+                    "category": "woman",
+                    "models": [
+                      {
+                        "id": "model_woman_00",
+                        "owner_type": "aiuta",
+                        "url": "https://storage.googleapis.com/aiuta_prod_external_api_images/models/woman_00.png"
+                      }
+                    ]
+                  },
+                  {
+                    "category": "man",
+                    "models": [
+                      {
+                        "id": "model_man_00",
+                        "owner_type": "aiuta",
+                        "url": "https://storage.googleapis.com/aiuta_prod_external_api_images/models/man_00.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "304": {
+            "description": "List of predefined try-on models is up to date, empty response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          },
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AbortReason": {
+        "type": "string",
+        "enum": [
+          "NO_PEOPLE_DETECTED",
+          "TOO_MANY_PEOPLE_DETECTED",
+          "CHILD_DETECTED",
+          "INSUFFICIENT_TARGET_AREA",
+          "INTERNAL_RESTRICTION"
+        ],
+        "title": "AbortReason",
+        "description": "Reasons why an operation may be aborted.\n\nSome checks can be configured per client. Please contact the Aiuta team for details.\n\n- `NO_PEOPLE_DETECTED`: No person was found in the input image.\n- `TOO_MANY_PEOPLE_DETECTED`: Too many people were found in the input image.\n- `CHILD_DETECTED`: A minor was detected in the input image.\n- `INSUFFICIENT_TARGET_AREA`: The body area required for this garment is not visible enough in the input image.\n- `INTERNAL_RESTRICTION`: The generated result cannot be returned due to internal restrictions."
+      },
+      "AiutaImage": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Image ID"
+          },
+          "owner_type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OwnerType"
+              }
+            ],
+            "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+          },
+          "url": {
+            "type": "string",
+            "title": "Url",
+            "description": "Image URL"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At",
+            "description": "Expiration time of the image. The image may not be available after this time."
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "owner_type",
+          "url"
+        ],
+        "title": "AiutaImage",
+        "examples": [
+          {
+            "id": "user_image-06f5948c-c031-4662-a7c4-4d999b445c86",
+            "owner_type": "user",
+            "url": "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/examples/uploaded_images/user_image-06f5948c-c031-4662-a7c4-4d999b445c86.jpg"
+          }
+        ]
+      },
+      "Body_upload_user_image_uploaded_images_post": {
+        "properties": {
+          "image_data": {
+            "type": "string",
+            "format": "binary",
+            "title": "Image Data"
+          }
+        },
+        "type": "object",
+        "required": [
+          "image_data"
+        ],
+        "title": "Body_upload_user_image_uploaded_images_post"
+      },
+      "GeneratedSkuImage": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Image ID"
+          },
+          "owner_type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OwnerType"
+              }
+            ],
+            "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+          },
+          "url": {
+            "type": "string",
+            "title": "Url",
+            "description": "Image URL"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At",
+            "description": "Expiration time of the image. The image may not be available after this time."
+          },
+          "image_url": {
+            "type": "string",
+            "title": "Image Url",
+            "description": "Generated image's URL (alias for 'url')"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "owner_type",
+          "url",
+          "image_url"
+        ],
+        "title": "GeneratedSkuImage",
+        "description": "External model for generated SKU image result",
+        "examples": [
+          {
+            "id": "user_image-06f5948c-c031-4662-a7c4-4d999b445c86",
+            "owner_type": "user",
+            "url": "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/examples/uploaded_images/user_image-06f5948c-c031-4662-a7c4-4d999b445c86.jpg"
+          }
+        ]
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "OperationStatus": {
+        "type": "string",
+        "enum": [
+          "CREATED",
+          "IN_PROGRESS",
+          "PAUSED",
+          "SUCCESS",
+          "FAILED",
+          "CANCELLED",
+          "ABORTED"
+        ],
+        "title": "OperationStatus",
+        "description": "Status for an operation"
+      },
+      "OwnerType": {
+        "type": "string",
+        "enum": [
+          "user",
+          "aiuta"
+        ],
+        "title": "OwnerType",
+        "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or\nderived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'.\nIn this case the image is not associated with users' personal data and does not belong to them."
+      },
+      "SkuImagesOperation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Operation's ID"
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationStatus"
+              }
+            ],
+            "description": "Current status of the operation"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error",
+            "description": "Error details if the operation was failed. None means that there were no errors."
+          },
+          "abort_reason": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AbortReason"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Abort reason for operation aborted"
+          },
+          "generated_images": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/GeneratedSkuImage"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Generated Images",
+            "description": "List of generated images. The list can be empty if images are not yet ready, there was an error during generation or image(s) already expired and were deleted"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "error",
+          "generated_images"
+        ],
+        "title": "SkuImagesOperation",
+        "description": "Model for SKU images generation operations"
+      },
+      "SkuImagesRequest": {
+        "properties": {
+          "uploaded_image_id": {
+            "type": "string",
+            "title": "Uploaded Image Id",
+            "description": "ID of uploaded user image"
+          },
+          "sku_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sku Id",
+            "description": "SKU item ID. Either 'sku_id' or 'sku_ids' must be specified. If you want to make a try-on with multiple SKU items (outfit's try-on), use 'sku_ids' instead"
+          },
+          "sku_ids": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array",
+                "maxItems": 2,
+                "minItems": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sku Ids",
+            "description": "List of SKU IDs. Either 'sku_id' or 'sku_ids' must be specified. This field must be used for outfit's try-on with multiple SKU items. It also can be used for a single-item try-on (you can specified just one item here). 1 or 2 items are allowed at the moment"
+          },
+          "sku_catalog_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sku Catalog Name",
+            "description": "SKU item catalog name (optional)"
+          },
+          "enhanced_quality": {
+            "type": "boolean",
+            "title": "Enhanced Quality",
+            "description": "Experimental flag for enhanced quality image generation (for internal use only)",
+            "default": false
+          },
+          "hijab_protection": {
+            "type": "boolean",
+            "title": "Hijab Protection",
+            "description": "Experimental flag to protect hijab from regeneration",
+            "default": false
+          },
+          "model_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model Type",
+            "description": "Model type override (for internal use only)"
+          },
+          "operation_target": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Operation Target",
+            "description": "Operation target override (for internal use only)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "uploaded_image_id"
+        ],
+        "title": "SkuImagesRequest",
+        "description": "Create SKU images generation parameters"
+      },
+      "SkuImagesResponse": {
+        "properties": {
+          "operation_id": {
+            "type": "string",
+            "title": "Operation Id",
+            "description": "ID of the created SKU images generation operation."
+          },
+          "details": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Details",
+            "description": "Additional information about the operation creation process."
+          },
+          "errors": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Errors",
+            "description": "Errors list happened during the operation processing."
+          }
+        },
+        "type": "object",
+        "required": [
+          "operation_id",
+          "details",
+          "errors"
+        ],
+        "title": "SkuImagesResponse",
+        "description": "Sku images generation call results"
+      },
+      "TryOnModel": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Image ID"
+          },
+          "owner_type": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OwnerType"
+              }
+            ],
+            "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or derived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'. In this case the image is not associated with users' personal data and does not belong to them."
+          },
+          "url": {
+            "type": "string",
+            "title": "Url",
+            "description": "Image URL"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At",
+            "description": "Expiration time of the image. The image may not be available after this time."
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Metadata",
+            "description": "Additional metadata for the try-on model image"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "owner_type",
+          "url",
+          "metadata"
+        ],
+        "title": "TryOnModel",
+        "examples": [
+          {
+            "id": "user_image-06f5948c-c031-4662-a7c4-4d999b445c86",
+            "owner_type": "user",
+            "url": "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/examples/uploaded_images/user_image-06f5948c-c031-4662-a7c4-4d999b445c86.jpg"
+          }
+        ]
+      },
+      "TryOnModelCategories": {
+        "items": {
+          "$ref": "#/components/schemas/TryOnModels"
+        },
+        "type": "array",
+        "title": "TryOnModelCategories"
+      },
+      "TryOnModels": {
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "man",
+              "woman"
+            ],
+            "title": "Category",
+            "description": "Category name of the try-on models"
+          },
+          "models": {
+            "items": {
+              "$ref": "#/components/schemas/TryOnModel"
+            },
+            "type": "array",
+            "title": "Models",
+            "description": "List of try-on models"
+          }
+        },
+        "type": "object",
+        "required": [
+          "category",
+          "models"
+        ],
+        "title": "TryOnModels"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    },
+    "securitySchemes": {
+      "x-api-key": {
+        "type": "apiKey",
+        "description": "Static API key",
+        "in": "header",
+        "name": "x-api-key"
+      },
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Json Web Token",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "data",
+      "description": "Input and generated images management - upload, retrieval and deletion"
+    },
+    {
+      "name": "try_on",
+      "description": "Digital try-on operations"
+    }
+  ]
+}
