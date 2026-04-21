@@ -149,9 +149,6 @@ nav:
       - Custom CSS: sdk/web/configuration/custom-css.md
       - Localization: sdk/web/configuration/localization.md
 
-  - Shopify:
-    - shopify/index.md
-
   - Insights:
     - Convention: team/docs/convention.md
     - Local Build: team/docs/local-build.md

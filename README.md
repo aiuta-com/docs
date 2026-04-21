@@ -10,7 +10,7 @@ This repository contains the official documentation for the Aiuta Virtual Try-On
 - __7x faster__ than the average competitor
 - Preserve pose and body shape
 
-[Explore Documentation, Demo apps, SDK pages & customizations, Shopify App, API and more...](https://docs.aiuta.com)
+[Explore Documentation, Demo apps, SDK pages & customizations, API and more...](https://docs.aiuta.com)
 
 ## License
 
