@@ -120,14 +120,6 @@ hide:
 
         Coming soon
 
-    -   [:fontawesome-brands-shopify:{ .lg } __Shopify__](/shopify/index.md) <span class="md-platfroms">APP</span>
-
-        ---
-
-        :material-book-open-variant:
-        <span class="md-cards-links">
-        [Overview](/shopify/index.md)
-        </span>
 
     -   [:aiuta-favicon:{ .lg } __API__](/api/try-on/index.md)
 

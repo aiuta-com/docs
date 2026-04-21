@@ -62,7 +62,6 @@ Always visually mark links that lead outside the documentation site. There are t
         <div class="grid cards" markdown>
 
         - :fontawesome-brands-google-play: [Get it on __Google Play__](https://play.google.com/store/apps/details?id=com.aiuta.fashionsdk.demo){:target="_blank"}
-        - :fontawesome-brands-shopify: [View in the __Shopify__ app store](https://shopify.aiuta.com){:target="_blank"}
 
         </div>
         ```
@@ -70,7 +69,6 @@ Always visually mark links that lead outside the documentation site. There are t
         <div class="grid cards" markdown>
 
         - :fontawesome-brands-google-play: [Get it on __Google Play__](https://play.google.com/store/apps/details?id=com.aiuta.fashionsdk.demo){:target="_blank"}
-        - :fontawesome-brands-shopify: [View in the __Shopify__ app store](https://shopify.aiuta.com){:target="_blank"}
         
         </div>
 
