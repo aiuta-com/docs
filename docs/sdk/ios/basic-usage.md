@@ -3,7 +3,7 @@
 This guide covers the fundamental usage of the Aiuta iOS SDK in your application.
 
 ```swift
-import AiutaSDK
+import AiutaSdk
 ```
 
 ## Setup
@@ -11,7 +11,7 @@ import AiutaSDK
 First, make sure you've configured the SDK as described in the [Configuration](/sdk/ios/configuration.md) guide.
 
 ```swift
-await Aiuta.setup(configuration: Aiuta.Configuration) // (1)!
+Aiuta.setup(configuration: Aiuta.Configuration) // (1)!
 ```
 
 1. Your configuration for Aiuta
