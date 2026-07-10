@@ -187,6 +187,109 @@
       }
     },
     "/sku_items": {
+      "get": {
+        "tags": [
+          "sku_items"
+        ],
+        "summary": "List SKU items",
+        "description": "Returns a paginated list of SKU items belonging to the authenticated client account.",
+        "operationId": "list_sku_items_unified_api_sku_items_get",
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Pagination offset.",
+              "default": 0,
+              "title": "Offset"
+            },
+            "description": "Pagination offset."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 500,
+              "minimum": 1,
+              "description": "Number of items to return.",
+              "default": 10,
+              "title": "Limit"
+            },
+            "description": "Number of items to return."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SkuItemsListResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request is syntactically valid but cannot be processed (business validation failed).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected server error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service temporary unavailable.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Returned by API Gateway when API key or token is missing or invalid."
+          },
+          "403": {
+            "description": "Returned by API Gateway when access is not allowed."
+          },
+          "429": {
+            "description": "Returned by API Gateway when rate limits are exceeded."
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      },
       "post": {
         "tags": [
           "sku_items"
@@ -195,14 +298,14 @@
         "description": "Creates a new SKU item under the client account.\n\n- `sku_id` is client-defined and becomes the primary identifier in the API.\n- Enabling capabilities may trigger internal preparation; readiness is returned in `capabilities_readiness`.\n- Returns the created SKU item.",
         "operationId": "create_sku_item_unified_api_sku_items_post",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateSkuItemRequest"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "201": {
@@ -265,7 +368,7 @@
             }
           },
           "422": {
-            "description": "Returned when the request payload is structurally invalid or contains invalid field values. The response format follows FastAPI / Pydantic defaults."
+            "description": "Returned when the request payload is structurally invalid or contains invalid field values. The response format follows FastAPI / Pydantic defaults for scheme validation errors but may contain specific details for custom fails like not yet supported functionality."
           }
         },
         "security": [
@@ -565,7 +668,7 @@
             }
           },
           "422": {
-            "description": "Returned when the request payload is structurally invalid or contains invalid field values. The response format follows FastAPI / Pydantic defaults."
+            "description": "Returned when the request payload is structurally invalid or contains invalid field values. The response format follows FastAPI / Pydantic defaults for scheme validation errors but may contain specific details for custom fails like not yet supported functionality."
           }
         },
         "security": [
@@ -670,7 +773,7 @@
             }
           },
           "422": {
-            "description": "Returned when the request payload is structurally invalid or contains invalid field values. The response format follows FastAPI / Pydantic defaults."
+            "description": "Returned when the request payload is structurally invalid or contains invalid field values. The response format follows FastAPI / Pydantic defaults for scheme validation errors but may contain specific details for custom fails like not yet supported functionality."
           }
         },
         "security": [
@@ -808,7 +911,7 @@
             }
           },
           "422": {
-            "description": "Returned when the request payload is structurally invalid or contains invalid field values. The response format follows FastAPI / Pydantic defaults."
+            "description": "Returned when the request payload is structurally invalid or contains invalid field values. The response format follows FastAPI / Pydantic defaults for scheme validation errors but may contain specific details for custom fails like not yet supported functionality."
           }
         },
         "security": [
@@ -907,7 +1010,7 @@
             }
           },
           "422": {
-            "description": "Returned when the request payload is structurally invalid or contains invalid field values. The response format follows FastAPI / Pydantic defaults."
+            "description": "Returned when the request payload is structurally invalid or contains invalid field values. The response format follows FastAPI / Pydantic defaults for scheme validation errors but may contain specific details for custom fails like not yet supported functionality."
           }
         },
         "security": [
@@ -1125,7 +1228,7 @@
           "try_on"
         ],
         "summary": "List of predefined models for try-on operations.",
-        "description": "Returns the list of predefined models, broken down into categories.",
+        "description": "Returns the list of predefined models, broken down into categories. Returns an empty list if no models are set up.",
         "operationId": "get_predefined_try_on_models_unified_api_predefined_try_on_models_get",
         "parameters": [
           {
@@ -1315,7 +1418,7 @@
                 "$ref": "#/components/schemas/BackgroundType"
               }
             ],
-            "description": "Type of background to apply in the generated image (e.g., arbitrary, transparent or reference-colored)."
+            "description": "Type of background to apply in the generated image (e.g., arbitrary, transparent, reference-colored, or reference-image)."
           },
           "reference_color": {
             "anyOf": [
@@ -1328,6 +1431,18 @@
             ],
             "title": "Reference Color",
             "description": "Optional reference color for background generation. Used only if `background_type` is set to 'reference_color'. The resulting background will not be a flat solid fill, but rather a blend of gradients and tones inspired by the specified color. The chosen color serves as the visual base or anchor. Must be a valid RGB hex code (e.g., '#80ff00')."
+          },
+          "reference_image_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reference Image Id",
+            "description": "ID of the uploaded image to use as a reference background. Used only if `background_type` is set to 'reference_image'."
           }
         },
         "type": "object",
@@ -1335,14 +1450,15 @@
           "background_type"
         ],
         "title": "BackgroundSettings",
-        "description": "Configuration for generating the background of an image.\n\nThe background may be one of several types: arbitrary (default), transparent or reference-based.\nDepending on the selected `background_type`, additional fields may be required:\n\n- If `background_type` is 'reference_color', a valid RGB hex color must be provided via `reference_color`.\n  The background will be generated based on this color as a visual base, but not as a solid fill.\n\nThe model enforces consistency between the selected type and the presence or absence of these additional fields."
+        "description": "Configuration for generating the background of an image.\n\nThe background may be one of several types: arbitrary (default), transparent, reference-colored,\nor reference-image-based. Depending on the selected `background_type`, additional fields may be required:\n\n- If `background_type` is 'reference_color', a valid RGB hex color must be provided via `reference_color`.\n  The background will be generated based on this color as a visual base, but not as a solid fill.\n- If `background_type` is 'reference_image', an uploaded image ID must be provided via `reference_image_id`.\n  The background will be generated based on this image. The `reference_image` field is resolved internally.\n\nThe model enforces consistency between the selected type and the presence or absence of these additional fields."
       },
       "BackgroundType": {
         "type": "string",
         "enum": [
           "arbitrary",
           "transparent",
-          "reference_color"
+          "reference_color",
+          "reference_image"
         ],
         "title": "BackgroundType",
         "description": "Defines how the background will be generated (e.g., solid, transparent or reference-colored)."
@@ -1460,6 +1576,15 @@
             ],
             "description": "Specifies whether the operation should be processed online (real-time with automatic QA) or offline (batch with manual QA).",
             "default": "online"
+          },
+          "qa_mode": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QaMode"
+              }
+            ],
+            "description": "Defines how the best result is produced. With `none`, a single image is generated and returned as is. With `auto`, several candidates are generated and the best one is selected automatically. With `human`, candidates are reviewed and the best one is selected by a human reviewer; requires `offline` operation priority.",
+            "default": "auto"
           },
           "background_settings": {
             "allOf": [
@@ -1600,6 +1725,15 @@
             "description": "Specifies whether the operation should be processed online (real-time with automatic QA) or offline (batch with manual QA).",
             "default": "online"
           },
+          "qa_mode": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QaMode"
+              }
+            ],
+            "description": "Defines how the best result is produced. With `none`, a single image is generated and returned as is. With `auto`, several candidates are generated and the best one is selected automatically. With `human`, candidates are reviewed and the best one is selected by a human reviewer; requires `offline` operation priority.",
+            "default": "auto"
+          },
           "background_settings": {
             "allOf": [
               {
@@ -1714,6 +1848,34 @@
         "description": "Pixel dimensions of the image"
       },
       "JsonValue": {},
+      "LegacyTryOnModels": {
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "man",
+              "woman",
+              ""
+            ],
+            "title": "Category",
+            "description": "Category name of the try-on models"
+          },
+          "models": {
+            "items": {
+              "$ref": "#/components/schemas/TryOnModel"
+            },
+            "type": "array",
+            "title": "Models",
+            "description": "List of try-on models"
+          }
+        },
+        "type": "object",
+        "required": [
+          "category",
+          "models"
+        ],
+        "title": "LegacyTryOnModels"
+      },
       "OffFigureProductImagesCapabilityReadinessItem": {
         "properties": {
           "image_type": {
@@ -1828,7 +1990,7 @@
           "offline"
         ],
         "title": "OperationPriority",
-        "description": "Defines the operation priority.\n\n- `online`: processed as quickly as possible for real-time, user-facing requests.\n  Typically uses automatic AI-based quality assurance (QA).\n- `offline`: suited for batch processing where manual QA may be used to achieve higher quality."
+        "description": "Defines the operation scheduling priority.\n\nPriority controls how the operation is scheduled and how fast it is processed.\n\n- `online`: processed as quickly as possible for real-time, user-facing requests.\n- `offline`: processed with lower priority, suited for batch and background\n  processing where latency is not critical.\n\nNote: `QaMode.human` requires `offline` priority, since human review takes\nsignificantly longer than automatic processing. Requests combining `online`\npriority with human QA are rejected."
       },
       "OperationStatus": {
         "type": "string",
@@ -1844,6 +2006,37 @@
         "title": "OperationStatus",
         "description": "Status for an operation"
       },
+      "Outfit": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "sku_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Sku Ids",
+            "description": "Ordered list of external SKU IDs in the outfit."
+          },
+          "metadata": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/JsonValue"
+            },
+            "type": "object",
+            "title": "Metadata",
+            "description": "Additional metadata associated with the outfit. May include system-generated or client-specific attributes agreed as part of the integration. Values must be JSON-serializable. No schema is enforced by the API."
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "sku_ids"
+        ],
+        "title": "Outfit"
+      },
       "OwnerType": {
         "type": "string",
         "enum": [
@@ -1852,6 +2045,16 @@
         ],
         "title": "OwnerType",
         "description": "Type of the image owner. It will be 'user' if the image was directly uploaded by the user or\nderived from a user upload (e.g., through a generation operation). Otherwise, it will be 'aiuta'.\nIn this case the image is not associated with users' personal data and does not belong to them."
+      },
+      "QaMode": {
+        "type": "string",
+        "enum": [
+          "none",
+          "auto",
+          "human"
+        ],
+        "title": "QaMode",
+        "description": "Defines how quality assurance (QA) is performed during generation.\n\nThe exact QA procedure depends on the feature. Refer to the documentation\nof the specific field where this mode is used for details.\n\nNot all modes are supported by every operation: the set of accepted values\ndepends on the specific request. Requests specifying an unsupported mode\nare rejected.\n\n- `none`: no QA step is performed. Generation is done in a single pass and\n  the result is returned as is. The fastest and cheapest option.\n- `auto`: the QA step is performed automatically by an AI-based mechanism.\n- `human`: the QA step is performed by a human reviewer. Provides the\n  highest quality, but takes significantly longer (hours rather than\n  seconds) and requires `OperationPriority.offline`. Availability may\n  depend on your plan; please contact the Aiuta team for details."
       },
       "SkuAvailability": {
         "type": "string",
@@ -1876,6 +2079,12 @@
             "type": "boolean",
             "title": "Outfit Recommendations",
             "description": "Enables or disables Outfit Recommendations for this SKU. When enabled, the SKU may be used in recommendation flows (subject to SKU availability in `SkuItem.merchandising`). Preparation progress is exposed via `SkuCapabilitiesReadiness.outfit_recommendations`.",
+            "default": false
+          },
+          "size_and_fit": {
+            "type": "boolean",
+            "title": "Size And Fit",
+            "description": "Enables or disables Size&Fit capability for this SKU. Preparation progress is exposed via `SkuCapabilitiesReadiness.size_and_fit`.",
             "default": false
           },
           "off_figure_product_images": {
@@ -1911,6 +2120,12 @@
             "type": "boolean",
             "title": "Outfit Recommendations",
             "description": "Enables or disables Outfit Recommendations for this SKU. When enabled, the SKU may be used in recommendation flows (subject to SKU availability in `SkuItem.merchandising`). Preparation progress is exposed via `SkuCapabilitiesReadiness.outfit_recommendations`.",
+            "default": false
+          },
+          "size_and_fit": {
+            "type": "boolean",
+            "title": "Size And Fit",
+            "description": "Enables or disables Size&Fit capability for this SKU. Preparation progress is exposed via `SkuCapabilitiesReadiness.size_and_fit`.",
             "default": false
           },
           "off_figure_product_images": {
@@ -1952,6 +2167,14 @@
             ],
             "description": "Preparation status of Outfit Recommendations for this SKU."
           },
+          "size_and_fit": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SkuCapabilityReadiness"
+              }
+            ],
+            "description": "Preparation status of Size&Fit for this SKU."
+          },
           "off_figure_product_images": {
             "items": {
               "$ref": "#/components/schemas/OffFigureProductImagesCapabilityReadinessItem"
@@ -1972,7 +2195,8 @@
         "type": "object",
         "required": [
           "try_on",
-          "outfit_recommendations"
+          "outfit_recommendations",
+          "size_and_fit"
         ],
         "title": "SkuCapabilitiesReadiness",
         "description": "Current preparation status for each capability of the SKU.\n\nFor product image capabilities, readiness is reported per requested image variant.\nThe readiness lists are expected to correspond 1:1 to the requested variants in `SkuCapabilities`.\nEach readiness list contains at most one entry per requested variant."
@@ -2025,6 +2249,38 @@
         ],
         "title": "SkuCapabilityReadinessStatus",
         "description": "Indicates the current preparation status of a capability for the SKU.\n\nTypical semantics:\n- `absent`: the capability is not enabled or not requested.\n- `preparing`: preparation is currently in progress.\n- `ready`: preparation completed successfully and the capability can be used.\n- `rejected`: preparation was completed but the result cannot be used due to quality checks or policy constraints.\n- `failed`: preparation failed; see `error_message` for details."
+      },
+      "SkuItemsListResponse": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/SkuItem"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "next_offset": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Offset"
+          }
+        },
+        "type": "object",
+        "required": [
+          "items",
+          "total"
+        ],
+        "title": "SkuItemsListResponse"
       },
       "SkuMerchandising": {
         "properties": {
@@ -2280,7 +2536,7 @@
                   "type": "string"
                 },
                 "type": "array",
-                "maxItems": 2,
+                "maxItems": 5,
                 "minItems": 1
               },
               {
@@ -2288,7 +2544,7 @@
               }
             ],
             "title": "Sku Ids",
-            "description": "List of SKU IDs. Either 'sku_id' or 'sku_ids' must be specified. This field must be used for outfit's try-on with multiple SKU items. It also can be used for a single-item try-on (you can specified just one item here). 1 or 2 items are allowed at the moment."
+            "description": "List of SKU IDs. Either 'sku_id' or 'sku_ids' must be specified. This field must be used for outfit's try-on with multiple SKU items. It also can be used for a single-item try-on (you can specified just one item here). From 1 to 5 items are allowed at the moment."
           }
         },
         "type": "object",
@@ -2331,17 +2587,20 @@
             "title": "Expires At",
             "description": "Expiration time of the image. The image may not be available after this time."
           },
-          "metadata": {
+          "tags": {
             "anyOf": [
               {
+                "additionalProperties": {
+                  "type": "string"
+                },
                 "type": "object"
               },
               {
                 "type": "null"
               }
             ],
-            "title": "Metadata",
-            "description": "Additional metadata for the try-on model image"
+            "title": "Tags",
+            "description": "Tags for the try-on model image"
           }
         },
         "type": "object",
@@ -2349,7 +2608,7 @@
           "id",
           "owner_type",
           "url",
-          "metadata"
+          "tags"
         ],
         "title": "TryOnModel",
         "examples": [
@@ -2362,37 +2621,10 @@
       },
       "TryOnModelCategories": {
         "items": {
-          "$ref": "#/components/schemas/TryOnModels"
+          "$ref": "#/components/schemas/LegacyTryOnModels"
         },
         "type": "array",
         "title": "TryOnModelCategories"
-      },
-      "TryOnModels": {
-        "properties": {
-          "category": {
-            "type": "string",
-            "enum": [
-              "man",
-              "woman"
-            ],
-            "title": "Category",
-            "description": "Category name of the try-on models"
-          },
-          "models": {
-            "items": {
-              "$ref": "#/components/schemas/TryOnModel"
-            },
-            "type": "array",
-            "title": "Models",
-            "description": "List of try-on models"
-          }
-        },
-        "type": "object",
-        "required": [
-          "category",
-          "models"
-        ],
-        "title": "TryOnModels"
       },
       "ValidationError": {
         "properties": {
@@ -2427,32 +2659,6 @@
         ],
         "title": "ValidationError"
       },
-      "Outfit": {
-        "properties": {
-          "sku_ids": {
-            "items": {
-              "type": "string"
-            },
-            "type": "array",
-            "minItems": 1,
-            "title": "Sku Ids",
-            "description": "Ordered list of external SKU IDs in the outfit."
-          },
-          "metadata": {
-            "additionalProperties": {
-              "$ref": "#/components/schemas/JsonValue"
-            },
-            "type": "object",
-            "title": "Metadata",
-            "description": "Additional metadata associated with the outfit. May include system-generated or client-specific attributes agreed as part of the integration. Values must be JSON-serializable. No schema is enforced by the API."
-          }
-        },
-        "type": "object",
-        "required": [
-          "sku_ids"
-        ],
-        "title": "Outfit"
-      },
       "CreateSkuItemRequest": {
         "properties": {
           "sku_id": {
@@ -2483,6 +2689,14 @@
               }
             ],
             "description": "Merchandising attributes such as stock availability that affect business logic."
+          },
+          "metadata": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/JsonValue"
+            },
+            "type": "object",
+            "title": "Metadata",
+            "description": "Arbitrary client-owned key-value data attached to the SKU item. Useful for storing additional information about the item in client systems (e.g., references, flags, or notes). Values must be JSON-serializable. No schema is enforced by the API. The platform stores and returns this data as-is and never interprets it: it has no effect on SKU item processing, capabilities, or their readiness. Can be updated at any time; updates never trigger re-processing of the SKU item. For product attributes that may participate in client-specific platform logic, use `product_info.extra` instead."
           }
         },
         "type": "object",
@@ -2564,6 +2778,14 @@
               }
             ],
             "description": "Merchandising attributes such as stock availability that affect business logic."
+          },
+          "metadata": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/JsonValue"
+            },
+            "type": "object",
+            "title": "Metadata",
+            "description": "Arbitrary client-owned key-value data attached to the SKU item. Useful for storing additional information about the item in client systems (e.g., references, flags, or notes). Values must be JSON-serializable. No schema is enforced by the API. The platform stores and returns this data as-is and never interprets it: it has no effect on SKU item processing, capabilities, or their readiness. Can be updated at any time; updates never trigger re-processing of the SKU item. For product attributes that may participate in client-specific platform logic, use `product_info.extra` instead."
           }
         },
         "type": "object",
