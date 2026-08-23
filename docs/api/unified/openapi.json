@@ -358,7 +358,7 @@
             "description": "Returned by API Gateway when rate limits are exceeded."
           },
           "409": {
-            "description": "SKU item with this sku_id already exists.",
+            "description": "SKU item with this sku_id already exists or capability can't be enabled due to the preparation of another capability.",
             "content": {
               "application/json": {
                 "schema": {
@@ -659,6 +659,16 @@
           },
           "404": {
             "description": "SKU item does not exist.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "SKU item with this sku_id already exists or capability can't be enabled due to the preparation of another capability.",
             "content": {
               "application/json": {
                 "schema": {
@@ -1191,15 +1201,102 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/SkuTryOnOperation"
-                    },
-                    {
-                      "type": "null"
-                    }
-                  ],
-                  "title": "Response Get Sku Try On Operation Unified Api Sku Try On Operations  Operation Id  Get"
+                  "$ref": "#/components/schemas/SkuTryOnOperation"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/ad_hoc_try_on_operations": {
+      "post": {
+        "tags": [
+          "try_on"
+        ],
+        "summary": "Make an operation for try-on with ad-hoc product(s).",
+        "description": "Async handler for ad-hoc try-on: the products are described inline and do not have to be registered as SKU items beforehand. Returns an object containing `operation_id`, which can be used to track progress and retrieve results (see `/ad_hoc_try_on_operations/{operation_id}`).",
+        "operationId": "create_ad_hoc_try_on_operation_unified_api_ad_hoc_try_on_operations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdHocTryOnRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOperationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "x-api-key": []
+          }
+        ]
+      }
+    },
+    "/ad_hoc_try_on_operations/{operation_id}": {
+      "get": {
+        "tags": [
+          "try_on"
+        ],
+        "summary": "Retrieve ad-hoc try-on operation result.",
+        "description": "Returns the details and result of a previously submitted ad-hoc try-on operation.",
+        "operationId": "get_ad_hoc_try_on_operation_unified_api_ad_hoc_try_on_operations__operation_id__get",
+        "parameters": [
+          {
+            "name": "operation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Operation Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdHocTryOnOperation"
                 }
               }
             }
@@ -1325,6 +1422,98 @@
         "title": "AbortReason",
         "description": "Reasons why an operation may be aborted.\n\nSome checks can be configured per client. Please contact the Aiuta team for details.\n\n- `NO_PEOPLE_DETECTED`: No person was found in the input image.\n- `TOO_MANY_PEOPLE_DETECTED`: Too many people were found in the input image.\n- `CHILD_DETECTED`: A minor was detected in the input image.\n- `INSUFFICIENT_TARGET_AREA`: The body area required for this garment is not visible enough in the input image.\n- `INTERNAL_RESTRICTION`: The generated result cannot be returned due to internal restrictions."
       },
+      "AdHocTryOnOperation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Operation's ID"
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationStatus"
+              }
+            ],
+            "description": "Current status of the operation"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error",
+            "description": "Error details if the operation was failed. None means that there were no errors."
+          },
+          "abort_reason": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AbortReason"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Abort reason for operation aborted"
+          },
+          "generated_images": {
+            "items": {
+              "$ref": "#/components/schemas/AiutaImage"
+            },
+            "type": "array",
+            "title": "Generated Images",
+            "description": "List of generated images. The list can be empty if images are not yet ready, there was an error during generation or image(s) already expired and were deleted"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "error",
+          "generated_images"
+        ],
+        "title": "AdHocTryOnOperation",
+        "description": "Result of an ad-hoc try-on operation."
+      },
+      "AdHocTryOnRequest": {
+        "properties": {
+          "uploaded_image_id": {
+            "type": "string",
+            "title": "Uploaded Image Id",
+            "description": "ID of uploaded user image"
+          },
+          "products_info": {
+            "items": {
+              "$ref": "#/components/schemas/SkuProductInfo"
+            },
+            "type": "array",
+            "maxItems": 5,
+            "minItems": 1,
+            "title": "Products Info",
+            "description": "Structured product data for each item comprising the outfit to try on. See `SkuProductInfo` for details. From 1 to 5 items are allowed at the moment."
+          },
+          "operation_priority": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OperationPriority"
+              }
+            ],
+            "description": "Specifies whether the operation should be processed online (real-time) or offline (batch).",
+            "default": "online"
+          }
+        },
+        "type": "object",
+        "required": [
+          "uploaded_image_id",
+          "products_info"
+        ],
+        "title": "AdHocTryOnRequest",
+        "description": "Request to try an outfit on a previously uploaded user image.\n\nUnlike `/sku_try_on_operations`, this operation does not require the products to be\nregistered as SKU items beforehand: the product data is passed inline and prepared on the fly."
+      },
       "AiutaImage": {
         "properties": {
           "id": {
@@ -1443,6 +1632,18 @@
             ],
             "title": "Reference Image Id",
             "description": "ID of the uploaded image to use as a reference background. Used only if `background_type` is set to 'reference_image'."
+          },
+          "reference_image_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reference Image Url",
+            "description": "Public URL of a reference background image. Used only if `background_type` is set to 'reference_image'. Alternative to `reference_image_id` for images not uploaded via upload session."
           }
         },
         "type": "object",
@@ -1450,7 +1651,7 @@
           "background_type"
         ],
         "title": "BackgroundSettings",
-        "description": "Configuration for generating the background of an image.\n\nThe background may be one of several types: arbitrary (default), transparent, reference-colored,\nor reference-image-based. Depending on the selected `background_type`, additional fields may be required:\n\n- If `background_type` is 'reference_color', a valid RGB hex color must be provided via `reference_color`.\n  The background will be generated based on this color as a visual base, but not as a solid fill.\n- If `background_type` is 'reference_image', an uploaded image ID must be provided via `reference_image_id`.\n  The background will be generated based on this image. The `reference_image` field is resolved internally.\n\nThe model enforces consistency between the selected type and the presence or absence of these additional fields."
+        "description": "Configuration for generating the background of an image.\n\nThe background may be one of several types: arbitrary (default), transparent, reference-colored,\nor reference-image-based. Depending on the selected `background_type`, additional fields may be required:\n\n- If `background_type` is 'reference_color', a valid RGB hex color must be provided via `reference_color`.\n  The background will be generated based on this color as a visual base, but not as a solid fill.\n- If `background_type` is 'reference_image', an uploaded image ID must be provided via `reference_image_id`.\n  The background will be generated based on this image.\n\nThe model enforces consistency between the selected type and the presence or absence of these additional fields."
       },
       "BackgroundType": {
         "type": "string",
@@ -1538,6 +1739,7 @@
         "type": "string",
         "enum": [
           "front",
+          "side",
           "back"
         ],
         "title": "FlatLayViewpointType",
