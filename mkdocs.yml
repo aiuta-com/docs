@@ -186,7 +186,7 @@ extra:
     web_sdk: https://static.aiuta.com/sdk
     demo:
       url: https://demo.aiuta.com
-      api_key: AIUTADEMO
+      api_key: DEMO
 
   nav:
     highlight:

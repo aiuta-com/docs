@@ -12,7 +12,8 @@ _DUMMY_PRODUCT = {
     ]
 }
 
-# A fixed snapshot of the demo products, so the build does not depend on the live API
+# A fixed snapshot of the demo products, so the build does not depend on the live API: the SKU items
+# of the demo API key whose try-on capability is ready (`GET /sku_items` with `x-api-key: DEMO`)
 _DEMO_PRODUCTS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'demo_products.json')
 
 _product_cache = None
