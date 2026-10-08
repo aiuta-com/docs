@@ -1,0 +1,1025 @@
+[
+  {
+    "id": "sku-df1fdac0-525b-4b1b-9488-0e181f063e56",
+    "sku_id": "10000024661",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "Nefertiti Maxi Dress - Lemon",
+    "category_google_id": "2271",
+    "category_google_name": "Apparel & Accessories > Clothing > Dresses",
+    "color": "Lemon",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8b0f86a3-85e6-41a0-8893-920991b0fa9d.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-7c8fc54f-527d-45e0-a690-999659f308ac.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8a26ad58-01bb-402d-a395-6737333279b6.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-dce79219-09c7-4305-9bc2-46d23ee369d8.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-0487c8fc-3a68-4d86-b73b-76f58b4fa6a7.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-44fd5aa6-295e-4187-8cac-f5cff48de34a.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-21b1e2ee-7c0a-4234-aa7d-b0777e1d4dcd.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-584aaee9-6c53-41f4-aed9-049278e390e4.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8d42dca8-292f-43cb-9f85-457704bbe226.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-c355d603-f69a-4dc2-ad45-30082422e26e.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8b0f86a3-85e6-41a0-8893-920991b0fa9d.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-7c8fc54f-527d-45e0-a690-999659f308ac.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8a26ad58-01bb-402d-a395-6737333279b6.jpeg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.babyboofashion.com/products/nefertiti-maxi-dress-lemon",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-61be81ba-3c7e-4fbe-9453-3bd438e7cd6d",
+    "sku_id": "10000027340",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "Vespera Maxi Dress - Ivory",
+    "category_google_id": "2271",
+    "category_google_name": "Apparel & Accessories > Clothing > Dresses",
+    "color": "Ivory",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-af9753e5-76a5-4746-ad27-f533dc02a94b.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-3de5a8a4-2ee8-429c-8af3-454c944cda99.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-555d2c87-d089-4362-ad1d-9eacc2c060eb.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-4ea7dc7c-3431-46d3-91cc-6c413e1f41af.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-fd057a82-02d6-4e16-b8c1-7bfd7bc5d090.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-af9753e5-76a5-4746-ad27-f533dc02a94b.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-3de5a8a4-2ee8-429c-8af3-454c944cda99.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-555d2c87-d089-4362-ad1d-9eacc2c060eb.jpeg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.babyboofashion.com/collections/new-arrivals/products/vespera-maxi-dress-ivory",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-cace519a-9d10-4c13-80e9-06787045e609",
+    "sku_id": "amur-leighton-pencil-gown",
+    "sku_catalog_name": "main",
+    "description": "The AMUR Leighton Pencil Gown is a striking evening dress featuring a streamlined silhouette and a beautifully textured or patterned fabric. Accessorize this sophisticated gown with minimalist jewelry and elegant stiletto heels for a black-tie event.. Black lace (92% Recycled Polyester, 8% Spandex). Gowns. Square Neck. Sleeveless. Side Zipper Closure. See fit notes for more information. Imported.. .",
+    "title": "Leighton Pencil Gown",
+    "category_google_id": "2271",
+    "category_google_name": "Apparel & Accessories > Clothing > Dresses",
+    "color": "Black lace",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-24841b00-b4ef-4090-8777-7e4088a56558.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-84a8df20-2106-4833-9bad-3f495bf995c7.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-c05749cb-a99c-41fc-8aa0-147755a953b5.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-9538be55-5bf9-4540-9fc6-0061e2bfd2da.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-3bc320ff-5b99-4d14-b10f-38d68b94147f.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-412a87b4-ac51-4ac7-9665-354a1c9f4f22.jpg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-8a85a0fd-57ef-4314-a4be-4b5b6bd7ee33.jpg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.renttherunway.com/shop/designers/amur/leighton_pencil_gown",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-cd89202b-787f-4e97-b7e9-1a271c8e7b65",
+    "sku_id": "yumi-kim-gigi-romper",
+    "sku_catalog_name": "main",
+    "description": "Yumi Kim\u2019s Gigi Romper offers a playful twist on a classic silhouette, featuring a bold floral print and a flattering fit. Pair it with nude sandals and a woven clutch for a chic daytime ensemble.. Blue (100% Linen). Rompers. Square Neck. Short Sleeves. Back zipper closure. Shoulder to hemline length: 31'. Inseam: 4'. Imported.. .",
+    "title": "Gigi Romper",
+    "category_google_id": "2271",
+    "category_google_name": "Apparel & Accessories > Clothing > Dresses",
+    "color": "Blue",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-11bb55ef-f85f-4eb9-b6d4-680a33b25bf9.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-05a9af8f-5eb0-4510-a500-ed6fdf849c54.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8ac9bfc0-9096-4dca-8e3d-744eb4b49c47.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-ce5d99b6-d7b5-4e72-aaa3-7c76e141e13d.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-27bf508c-f35b-432c-82f3-013973b2783c.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-af0d21ec-99d4-4025-8c91-d240c6aa99f6.jpg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-88c3021d-dbeb-4b12-9a9f-8e0633b75806.jpg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.renttherunway.com/shop/designers/yumi_kim/gigi_romper",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-acfc675c-5c88-418b-86d6-410c2f2ce095",
+    "sku_id": "peter-som-x-rtr-long-sleeve-mini-polo-dress",
+    "sku_catalog_name": "main",
+    "description": "The Peter Som x RTR Long Sleeve Mini Polo Dress is a casual yet polished dress featuring a smart polo collar, long sleeves, and a flattering mini length. Pair this versatile piece with black tights and loafers for a preppy, put-together aesthetic, or wear it with sneakers for a casual daytime look.. Black Knit (40% Polyester, 20% Acrylic, 20% Nylon, 20% Wool). Casual Dresses. Collared. Long Sleeve. Front Button Closure. Shoulder To Hemline Length: 33.5'. Imported.. .",
+    "title": "Long Sleeve Mini Polo Dress",
+    "category_google_id": "2271",
+    "category_google_name": "Apparel & Accessories > Clothing > Dresses",
+    "color": "Black Knit",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-32868418-a326-4ba6-a8e6-661fde6e54b3.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-00d88840-8359-4f6c-b0d9-d345b27b533b.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8ed6512f-6802-4fa6-8363-b5964427a9f4.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-55ff433c-16dd-4d74-b904-6fbb52ce5f0f.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-0ba61f11-1ed1-465e-85bf-c5cd2e7b1383.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-760ac2c8-a4c0-492f-81fa-68612f6f7201.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-325064c6-ac34-4f9f-878c-c0493902d26e.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-75b241c3-c9dd-4a12-ad3a-5c860e6cfa0b.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-ac465ff0-15dd-418a-a665-6abbc2244573.jpg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-0061befb-dde0-4ba1-a500-a35bdd996c48.jpg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-6fd71f92-db53-4de8-9886-aaccd2abf91b.jpg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.renttherunway.com/shop/designers/peter_som_x_rtr/long_sleeve_mini_polo_dress",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-eda67665-e49e-4387-a67b-6311116c85a7",
+    "sku_id": "824836012",
+    "sku_catalog_name": "main",
+    "description": "Wrinkle-resistant fabric in a relaxed fit.",
+    "title": "Presidio Traveler Maxi Dress",
+    "category_google_id": "2271",
+    "category_google_name": "Apparel & Accessories > Clothing > Dresses",
+    "color": "Navy",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-185f25a7-65fa-408e-ad03-ee4995fd3375.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-54e2359c-32cf-4c13-9213-fdddea93d7db.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-92733171-2dcd-4364-ba0f-5d06a628ad0a.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-68bbfeda-ec3c-402b-be24-2f1791dd99fe.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-3fb0c3bc-3d76-4c8b-9d38-afecf282da25.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-2d3d07bd-3547-4e1b-9771-54898baf63bc.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-185f25a7-65fa-408e-ad03-ee4995fd3375.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-54e2359c-32cf-4c13-9213-fdddea93d7db.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-92733171-2dcd-4364-ba0f-5d06a628ad0a.jpeg"
+    ],
+    "is_ready": true,
+    "store_url": "https://athleta.gap.com/browse/product.do?pid=824836012",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-88cd4700-6f67-4c8e-a05a-61fb80cde605",
+    "sku_id": "27401295",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "broderie-anglaise shirt",
+    "category_google_id": "212",
+    "category_google_name": "Apparel & Accessories > Clothing > Shirts & Tops",
+    "color": "Purple",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-c8220488-36b9-4de9-a8ea-157bbd8bcbc0.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-5471983d-319b-4ee1-9578-f7f8cc315113.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-4c0b7b16-01a0-4b66-addf-bafc1b66482d.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-99905740-1f3a-4536-b754-6df72c0a3ad3.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-2d17b96e-e205-423b-922e-5f2bb051b528.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/women/twinset-camisa-com-bordado-ingles-item-27401295.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-f53dd580-030f-44a0-9fd3-7b4e82e452b8",
+    "sku_id": "31082778",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "smocked ruffled top",
+    "category_google_id": "212",
+    "category_google_name": "Apparel & Accessories > Clothing > Shirts & Tops",
+    "color": "Brown",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-dc31505f-ba86-4744-ae6a-06300d5943d9.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-c2b78c1e-62e5-4c3b-aa1f-6fd57b110c09.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-2a94cc6d-1ba1-4bfa-a7d0-e902d435578f.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-aee6e6cd-9acc-4662-9ec6-4ad1a22bcb57.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-107736a3-7b7c-48d7-aa78-7017af504321.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-b560902b-f431-45b5-8bab-52f7a5531bee.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/women/cecilie-bahnsen-blusa-franzida-com-babados-item-31082778.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-b6bba28d-86a2-4c99-844f-a2795b78b73e",
+    "sku_id": "michael-kors-camel-easy-sweater",
+    "sku_catalog_name": "main",
+    "description": "The Michael Kors Camel Easy Sweater offers a cozy yet polished look with its relaxed fit and turtleneck design. Pair it with tailored trousers or a sleek midi skirt for a versatile ensemble.. Brown (100% Wool). Knits. Turtleneck. Long Sleeve. Pull On. Shoulder To Hemline Length 22.5'. Imported.. .",
+    "title": "Camel Easy Sweater",
+    "category_google_id": "212",
+    "category_google_name": "Apparel & Accessories > Clothing > Shirts & Tops",
+    "color": "Brown",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-84bfb2d6-2f97-4d43-af03-5b8edf242ce7.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-762621ec-aba9-4ac5-b60f-c315c054d799.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-0bd753fd-9f69-41b7-8496-639a41c0ff9d.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-41fcf2f8-11a9-439c-8c6e-f74244e63d8d.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-70c9f58a-3d06-4936-bfb1-4e6f313f527d.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-04bf63c0-8140-40d8-a127-9faa049b64bf.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-e8e566a9-c40f-4585-a6b7-364ddd224cb5.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-9f64629a-59d4-44f3-a457-c296af2f39e2.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-1ae234fb-9191-4400-a386-9e92d55e20cd.jpg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-17f888c4-2dd8-4007-a93f-1b1b9bf28b24.jpg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.renttherunway.com/shop/designers/michael_kors/camel_easy_sweater",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-d12f8a07-2677-4966-9cbc-ab49d850b455",
+    "sku_id": "30447204",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "Hardy ruffled blouse",
+    "category_google_id": "212",
+    "category_google_name": "Apparel & Accessories > Clothing > Shirts & Tops",
+    "color": "Red",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-83a4237c-cb68-49ad-9dc2-c893f2e72567.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-7724c74f-b41e-4401-84a5-511601772a9a.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-72ec9bc6-abf6-4d72-8aa0-17e1196250a9.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-7a9a7109-edee-499f-bf01-848ea32c589e.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-5a4698f4-9819-4ffd-abe0-a220da19f98c.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-5ea060d2-8e8b-484f-b5ed-4d1f40c3b087.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/women/doen-blusa-hardy-com-babados-item-30447204.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-57d4cbbc-d764-4b64-93d3-867f2bcbaf08",
+    "sku_id": "31549269",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "lace-trimmed camisole",
+    "category_google_id": "212",
+    "category_google_name": "Apparel & Accessories > Clothing > Shirts & Tops",
+    "color": "White",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-1efc34b4-98a3-496e-b172-ff6d38c5556f.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-ca1a89f8-17c4-447a-b4c3-c4ea904a9a9c.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-40027fdb-96a1-4ed3-9775-a75df1d813ed.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8be065dc-3885-4aac-8b1d-5e65949fed07.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-2f6d2144-f771-4c8f-9a83-012f558f8a10.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/women/twinset-blusa-alcas-finas-com-acabamento-de-renda-item-31549269.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-82bbdf6e-9d1f-4db5-bb2e-49af0df3f0c4",
+    "sku_id": "dl1961-black-racer-tank-top",
+    "sku_catalog_name": "main",
+    "description": "DL1961\u2019s Racer Tank is crafted in a sculpting ribbed knit that contours the body, with a high crew neckline and fully fashioned armholes for a streamlined feel. Style it for summer by pairing it with light-wash denim skirt and leather sandals for a easy, sunshine-ready look.. Black (66% Polyester, 34% Spandex). Top. Scoop Neck. Sleeveless. Pull on. Shoulder to hemline length: 22'. Imported.. .",
+    "title": "Black Racer Tank Top",
+    "category_google_id": "212",
+    "category_google_name": "Apparel & Accessories > Clothing > Shirts & Tops",
+    "color": "Black",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-bf9f5963-2212-496c-ae3a-4a291f92f6a7.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-7b9f1749-6f65-4040-8f39-39cd139ade8e.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-f2d5422b-888b-438f-95ac-8cc1a98b2ace.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-6b9cf801-e8c0-4a6d-aca0-2e52415b60e9.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-0243c59a-809b-4e13-8f5a-e0a4000cd89f.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-8fdbabeb-1acc-4a7a-9c70-0f4a32752b0c.jpg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-dc045f80-776b-41fb-b00a-cd9be9c3d824.jpg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.renttherunway.com/shop/designers/dl1961/black_racer_tank_top",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-3ffacc80-79b8-4e27-97f6-04bb2994bb62",
+    "sku_id": "fifteen-twenty-bliss-scallop-edge-cardigan",
+    "sku_catalog_name": "main",
+    "description": "The Fifteen Twenty Bliss Scallop Edge Cardigan is a delicate knit sweater featuring charming scallop trim along the edges for a feminine, soft finish. Wear this cardigan buttoned up with wide-leg jeans and flats for an elevated casual look.. Off-white (70% Rayon, 30% Nylon). Knits. V-Neck. Long Sleeve. Front Button Closure. Shoulder To Hemline Length: 21'. Imported.. .",
+    "title": "Bliss Scallop Edge Cardigan",
+    "category_google_id": "212",
+    "category_google_name": "Apparel & Accessories > Clothing > Shirts & Tops",
+    "color": "Off-white",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-b607c893-abdf-456d-adbd-20983218baf8.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-ba9a4abc-b64d-48d7-b32b-85e9912f8dfc.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-e42efed2-d1ad-4504-af8b-6b52a8a5a107.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-f0ae05f2-919d-443d-bbc7-8b767d561471.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-995001ca-de1b-44f2-9eac-006cfff1450e.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-4dbda2a6-1404-4593-a986-a031ebca9794.jpg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-a73072a6-60e9-4852-8b64-01708a027aeb.jpg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-36e161dd-7803-43f0-b468-3fe344acda1a.jpg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.renttherunway.com/shop/designers/fifteen_twenty/bliss_scallop_edge_cardigan",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-670ed018-2a24-4614-8bd8-8a4ab3b972e5",
+    "sku_id": "841559502",
+    "sku_catalog_name": "main",
+    "description": "Ultra-lightweight stretch for low-impact support.",
+    "title": "Transcend V-Neck Crop Sports Bra A-C",
+    "category_google_id": "212",
+    "category_google_name": "Apparel & Accessories > Clothing > Shirts & Tops",
+    "color": "Current",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-73f937c4-d8cc-4d67-b436-cabb7adc9d06.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-de61e0b6-3505-4ef6-8cce-363c44d23bd8.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-6ebfa491-6200-4dff-bf24-47fc8eea1fa5.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-466a16fc-060a-40b8-ac88-f06cbbe9f3fc.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-73f937c4-d8cc-4d67-b436-cabb7adc9d06.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-de61e0b6-3505-4ef6-8cce-363c44d23bd8.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-6ebfa491-6200-4dff-bf24-47fc8eea1fa5.jpeg"
+    ],
+    "is_ready": true,
+    "store_url": "https://athleta.gap.com/browse/product.do?pid=841559502",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-bc2a9d09-3031-4559-8ff2-eafb51efba8c",
+    "sku_id": "784678202",
+    "sku_catalog_name": "main",
+    "description": "Now with extra front length and a refined back seam",
+    "title": "Move With Ease Top",
+    "category_google_id": "212",
+    "category_google_name": "Apparel & Accessories > Clothing > Shirts & Tops",
+    "color": "Breeze",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-aafba175-652f-4981-85e8-02bbb78fc72c.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-9ee9200d-4378-48d8-bd6b-42e063ca0017.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-66298277-26e5-4418-adbf-c066e71d5b8b.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-056f18e2-545b-4440-9249-8aedd7f18ad1.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-305e5044-7472-4e69-b064-70cec4c99808.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-16cb553a-9d30-42e5-b0b6-80fad77c4d82.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-aafba175-652f-4981-85e8-02bbb78fc72c.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-9ee9200d-4378-48d8-bd6b-42e063ca0017.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-66298277-26e5-4418-adbf-c066e71d5b8b.jpeg"
+    ],
+    "is_ready": true,
+    "store_url": "https://athleta.gap.com/browse/product.do?pid=784678202",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-4ab0b899-2149-4d9f-8147-4034bcb29107",
+    "sku_id": "sandro-rennes-pleated-mini-skirt",
+    "sku_catalog_name": "main",
+    "description": "The Sandro Rennes Pleated Mini Skirt delivers polished prep energy with its tailored check pattern, sparkling rhinestone accents, and side-tab details. Style it with a crisp blouse and sleek loafers for a sharp, effortless look all year long.. Grey plaid & check (Main Material 64% Polyester, 33% Viscose, 3% Elastane. Lining 100% Polyester). Skirts. Side Zipper Closure. Shoulder To Hemline Length 15'. Imported.. .",
+    "title": "Rennes Pleated Mini Skirt",
+    "category_google_id": "1581",
+    "category_google_name": "Apparel & Accessories > Clothing > Skirts",
+    "color": "Grey plaid & check",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-bc6ba638-b09b-48b6-9913-b34114747d63.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-6dcb9f1f-b495-4bc0-996e-9e8cb86f5632.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-4f956ff0-c2b0-4949-b43b-611cc89a3cc0.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-06827f38-1857-48c1-a475-20dad3aff671.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-85d43e5f-c718-423f-984e-f36d39e8b668.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-6f7d8e5f-7b17-4a97-a17b-4de2b8492235.jpg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-fb5be4c3-edce-4a2e-bbc2-f9ba674c576e.jpg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-f822362c-9cf5-4e9c-aa12-9a1ada497f4f.jpg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.renttherunway.com/shop/designers/sandro/rennes_pleated_mini_skirt",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-289843d0-bea7-4372-96ea-bf3b59506195",
+    "sku_id": "toccin-faux-leather-midi-column-skirt",
+    "sku_catalog_name": "main",
+    "description": "The Toccin Faux Leather Midi Column Skirt is a versatile piece with a ruched side and a flattering pencil silhouette. For a timeless look, pair it with a simple blouse for a day at the office or a knit top for a casual outing.. Black (100% Polyester). Skirts. Front button closure. Shoulder to hemline length: 37.5'. Slit length: 14.5'. Imported.. .",
+    "title": "Faux Leather Midi Column Skirt",
+    "category_google_id": "1581",
+    "category_google_name": "Apparel & Accessories > Clothing > Skirts",
+    "color": "Black",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-a7864542-7ab4-4a26-88fe-ee03359e5994.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-aa4296b5-4533-409a-92a3-0aff2d6365d9.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-67c3eb02-b5ee-4aa5-b2ad-ff144ac055eb.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-2ca27ce6-d9bb-4871-8e2c-62043bd37570.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-fc567e03-b95f-452f-b00b-d6340b8142a2.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-3f6e4416-698a-45e5-91db-efa33493fc75.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-5ce4cfa8-06b4-457c-9cae-72af6194c7a2.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-7b707562-f4a4-41c1-9d4a-d8c311327177.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-868f44dc-93fd-4b69-a842-a176a705d029.jpg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-0830ec15-1ec6-4ed3-a48f-f672ee6fdb96.jpg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-f073951a-23bb-4004-b024-114cce97c2ac.jpg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.renttherunway.com/shop/designers/toccin/faux_leather_midi_column_skirt",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-d3998dac-bd67-4a4c-ab55-726ec5792c78",
+    "sku_id": "23719820",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "wrap denim midi skirt",
+    "category_google_id": "1581",
+    "category_google_name": "Apparel & Accessories > Clothing > Skirts",
+    "color": "Blue",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-7fec3168-a371-4002-b613-770514845706.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-dc5ed716-272c-4f76-a5cd-81b704a05b5a.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-f5ccbdcb-5181-431a-aa00-44877b12d69b.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-53043108-695d-4872-96fe-635b5f843fbd.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-919d8ac4-aef8-4a4c-a1b6-0d467ae12192.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-53a7882c-388a-4558-8884-d0915151e1c9.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/women/forte-forte-saia-jeans-midi-envelope-item-23719820.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-3599b936-e3d3-4286-9189-f98875aea3d4",
+    "sku_id": "15304927",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "Bea pleated trousers",
+    "category_google_id": "204",
+    "category_google_name": "Apparel & Accessories > Clothing > Pants",
+    "color": "Brown",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-b6d89573-9164-4b39-a760-7ae460380490.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-36811de4-7904-481c-80e2-7a6fe8627a8e.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-afeab926-96c0-4448-a071-911f2b1a8cc1.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-48695e43-d652-4b50-8a10-4314997c4251.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/women/the-frankie-shop-calca-bea-com-pregas-item-15304927.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-8caf05d8-088c-4072-8f82-bc7cb007b607",
+    "sku_id": "28957003",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "Indra shorts",
+    "category_google_id": "207",
+    "category_google_name": "Apparel & Accessories > Clothing > Shorts",
+    "color": "Black",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-3c689845-e1c9-461a-bb05-b0fadbaee272.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-21293976-5274-4805-b290-5aedf182d7d5.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-1087ed79-1063-4eac-8809-22818e971e61.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8c35a744-da47-4f2f-8158-2076342deaff.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-606a329d-866e-4a8d-b337-12faeff86b2b.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-0feb0739-f297-4233-bc6b-09136af124aa.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/women/agolde-short-indra-item-28957003.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-5141bf50-f201-4068-8cf7-214d474db14f",
+    "sku_id": "31045625",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "Serenity leather midi skirt",
+    "category_google_id": "1581",
+    "category_google_name": "Apparel & Accessories > Clothing > Skirts",
+    "color": "Brown",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-bf9fc877-442c-49a1-818e-7526ba699c49.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-743c0a0f-d67b-4606-9c32-f4871401d77a.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-140ecf6e-9585-49bb-8dab-f625803a60f0.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-18133e76-29dc-4c38-9973-d00dd3db2a1f.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-e013af28-0588-4303-9073-3ac47a837cf8.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-40a7c518-74fb-43a7-8be2-8c3edc0a19ee.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/women/haikure-saia-midi-serenity-de-couro-item-31045625.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-382bf0ec-4afb-4786-8e20-f6fa9eac5095",
+    "sku_id": "31548342",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "lace-trimmed midi skirt",
+    "category_google_id": "1581",
+    "category_google_name": "Apparel & Accessories > Clothing > Skirts",
+    "color": "White",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-dfbfd9f2-ec7d-4424-bf51-22c7ba854730.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-273045ae-d563-4a4c-9465-5e966266ff73.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-5c956660-ed57-422d-a332-a4429b33c4d3.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-627fe0b7-4956-4178-86cb-67949b0b6135.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-837fb0e3-9135-4c11-b67a-d67a806e5290.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/women/twinset-saia-midi-com-acabamento-de-renda-item-31548342.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-8393dc88-5019-4ffc-a2d1-f83bd6c66a94",
+    "sku_id": "hudson-james-highrise-wide-leg-jean",
+    "sku_catalog_name": "main",
+    "description": "The Hudson James High-Rise Wide Leg Jean is a flattering, modern denim silhouette defined by its long wide leg and elevated high waist. Create a balanced, relaxed look by pairing these jeans with a fitted tank or a tucked-in graphic tee.. Blue (61% Cotton, 38% Lyocell, 1% Elastane Lining, 65% Polyester, 35% Cotton). Jeans & Denim. Button Fly Front Closure. Inseam: 32'. Rise: 12'. Leg Opening: 25'. Imported.. .",
+    "title": "James High-Rise Wide Leg Jean",
+    "category_google_id": "204",
+    "category_google_name": "Apparel & Accessories > Clothing > Pants",
+    "color": "Blue",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-ff3f0f75-bd30-4000-82f8-30106234c728.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-272ec00e-904e-4099-895b-c25404ac82e3.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-bb0e95f6-72a2-4e2d-8c33-eda6a0a1361f.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-07ce6016-9d62-42cf-be40-e578dfbe5af1.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-3bd7c292-4372-44bf-8189-ff63751c4910.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-51f8c76a-60f1-43a1-883a-03d0305ee597.jpg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/ip_adapter/category_crop-747452b0-2b11-4b25-b6bc-be8da2e34f12.jpg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.renttherunway.com/shop/designers/hudson/james_highrise_wide_leg_jean",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-d4df117e-c9f3-4c7a-b6a9-598ad9f6ac3e",
+    "sku_id": "587839022",
+    "sku_catalog_name": "main",
+    "description": "FOR: Serving on the court and teeing up on the course",
+    "title": "Crosscourt High Rise 14'' Skort",
+    "category_google_id": "5344",
+    "category_google_name": "Apparel & Accessories > Clothing > Skorts",
+    "color": "Bright White",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-07465e76-390d-4f5b-b3d0-d89a0b326437.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-afcc1efe-c850-47dc-9a84-5df8b62315b8.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-63b718c5-1bc6-4ad0-8276-8f759bbec458.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-e9c4a9a8-a497-434c-9763-384d2424ac61.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-a734bf34-f39b-4a25-99fe-e2874fadaaa9.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-65486480-8df3-4cad-885c-e8d8cc69ea99.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-a68631d6-3bad-4848-b832-c0c0872e43c3.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-07465e76-390d-4f5b-b3d0-d89a0b326437.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-afcc1efe-c850-47dc-9a84-5df8b62315b8.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-63b718c5-1bc6-4ad0-8276-8f759bbec458.jpeg"
+    ],
+    "is_ready": true,
+    "store_url": "https://athleta.gap.com/browse/product.do?pid=587839022",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-9adb6c44-b344-4a00-9ac9-b96c42009f41",
+    "sku_id": "531907002",
+    "sku_catalog_name": "main",
+    "description": "Buttery-soft stretch with medium compression.",
+    "title": "Salutation Stash High Rise 7'' Short",
+    "category_google_id": "207",
+    "category_google_name": "Apparel & Accessories > Clothing > Shorts",
+    "color": "Black",
+    "gender": "female",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8f2b2855-f52a-4dcc-971c-8c801dd51b65.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-5c837939-9554-4a24-83e8-a5cad4d4cca4.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-46eb6d41-ad0b-4a9c-81b4-3fca38277347.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-a7c8113a-44f2-4f78-b355-af7ccf4ff699.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-d894708d-b07d-4f62-9a8e-617d5c274db5.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-81915755-1232-4670-a9c2-84b2f23c706f.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-92de4cee-3d82-4c90-898f-4d776dde016b.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8f2b2855-f52a-4dcc-971c-8c801dd51b65.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-5c837939-9554-4a24-83e8-a5cad4d4cca4.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-46eb6d41-ad0b-4a9c-81b4-3fca38277347.jpeg"
+    ],
+    "is_ready": true,
+    "store_url": "https://athleta.gap.com/browse/product.do?pid=531907002",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-ff284e8d-b74f-4320-8f93-7bf82377575d",
+    "sku_id": "25WMSK122000",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "Moletom com capuz bordado",
+    "category_google_id": "5598",
+    "category_google_name": "Apparel & Accessories > Clothing > Outerwear > Coats & Jackets",
+    "color": "Lisa",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-5fc846d0-72fb-4923-a2cc-b83a35d6b604.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-d2953131-9357-4c01-b03d-fb8e14d5f92a.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-311ff62b-5e76-4b94-81ee-45938f51cc5d.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-a8b15b58-2928-4641-8737-ec18cb0d4fa8.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-78f1203d-b8fb-46ff-8c92-4bf8abb7fa08.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-3fcdaeb6-840f-4f61-90a1-6766346c665b.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-066acdd0-f7f7-43d5-b3f3-38cc9b67a57c.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-5fc846d0-72fb-4923-a2cc-b83a35d6b604.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-d2953131-9357-4c01-b03d-fb8e14d5f92a.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-311ff62b-5e76-4b94-81ee-45938f51cc5d.jpeg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.desigual.com/pt_BR/25WMSK122000.html",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-7af37fdb-bbb8-4c12-8c99-789c373d79b6",
+    "sku_id": "hbeu50468262_131",
+    "sku_catalog_name": "main",
+    "description": "Offering natural temperature control, this BOSS Menswear sweater is knitted in extra-fine merino wool. Cut to a defined fit with a rollneck profile. This product contains at least 80% better raw materials. This product is made with responsibly sourced wool. For us, responsibly sourced means mulesing free, and meeting the standards of the Five Freedoms of animal welfare. ",
+    "title": "Slim-fit rollneck sweater in extra-fine merino wool",
+    "category_google_id": "212",
+    "category_google_name": "Apparel & Accessories > Clothing > Shirts & Tops",
+    "color": "White",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8d0752ba-ed88-43b2-8a2c-992a64a56498.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-d2ddd2af-8e97-4798-bbcd-2c59c9957531.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-c67d7afe-0ab5-4751-8068-8ff3975d5a51.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-33eebc68-a38b-4e35-8ebf-e4a8ff35d3d9.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-de2e3b8c-0e76-4693-9d59-90fc5a419933.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-34e7a20a-7a20-40b4-a787-fd57589651fa.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.hugoboss.com/uk/slim-fit-rollneck-sweater-in-extra-fine-merino-wool/hbeu50468262_131.html",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-76784883-1f40-4a1f-ac81-867217d65756",
+    "sku_id": "A55162598",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "Camisa de vestir de hombre pu\u00f1o doble coolmax",
+    "category_google_id": "212",
+    "category_google_name": "Apparel & Accessories > Clothing > Shirts & Tops",
+    "color": "410 Azul claro",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-e27817f0-599f-4cb1-a6ca-419138d72902.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-100f0918-1915-4514-91f3-ac653ce9571d.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-26e152e7-f8d4-4207-adf3-efc5a4c3eec7.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-0abd0ab8-e0a8-4967-b561-7bdc9dfa3df6.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8d0a0d92-913c-4f06-b5fe-4615fdad1f76.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-1590859d-62a7-4234-b954-915efd3fb933.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-e27817f0-599f-4cb1-a6ca-419138d72902.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-100f0918-1915-4514-91f3-ac653ce9571d.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-26e152e7-f8d4-4207-adf3-efc5a4c3eec7.jpeg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.elcorteingles.es/moda-hombre/A55162598-camisa-de-vestir-de-hombre-puno-doble-coolmax/?parentCategoryId=999.39072568013&color=410+Azul+claro",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-524b352a-64d7-43e3-8777-0e80c3ba589a",
+    "sku_id": "32077445",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "zip knitwear",
+    "category_google_id": "212",
+    "category_google_name": "Apparel & Accessories > Clothing > Shirts & Tops",
+    "color": "Neutrals",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8c8d733f-7b5d-420b-8d52-cecb495e34a3.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-96e74649-423f-4a26-aa25-ecca4207c4ce.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-6e57a25d-ddc8-43d3-97f9-6ac6d6a39e5e.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-0a390bc9-851b-4ee7-b497-5ab8c8fdae0f.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/men/studio-nicholson-sueter-com-ziper-item-32077445.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-2d31428c-bd08-41ca-92fd-6c50a9507b26",
+    "sku_id": "30919280",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "Pierre textured pleated tailored trousers",
+    "category_google_id": "204",
+    "category_google_name": "Apparel & Accessories > Clothing > Pants",
+    "color": "Grey",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-3827eedc-be88-4c9b-8c95-3e9a47c0daae.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-d694ada8-d63f-4a3b-ac3e-50b531b655df.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-635560e4-4b11-4a44-9559-b0cadc434162.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-2c4e5159-acdb-4b92-be90-9e33b4b4b811.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-e82198b0-af22-4be9-b940-d518cdcde1d7.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/men/maniere-de-voir-calca-de-alfaiataria-pierre-texturizada-item-30919280.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-232fc4e3-f4fd-458b-99d7-9b660e9065a5",
+    "sku_id": "hbeu50543945_404",
+    "sku_catalog_name": "main",
+    "description": "With a secure zipped pocket and slim fit, these BOSS Menswear trousers are a versatile foundation. Soft cotton blend with added stretch for comfort. ",
+    "title": "Slim-fit trousers in a stretch-cotton blend",
+    "category_google_id": "204",
+    "category_google_name": "Apparel & Accessories > Clothing > Pants",
+    "color": "Dark Blue",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-391f5789-4356-40c4-b08f-fc83f5131333.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-2a7feae5-726c-4ced-8e90-968388bb5dc4.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-eb96e2dc-7d9a-420e-a70e-091cb22a95f2.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-dddef1b8-1883-4135-b2c3-e5f45c38bc6d.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-bfcbd751-6d5b-4155-a988-6c3516e13381.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-cd1d968a-a363-44b8-a0f3-e2e34ba0c511.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-8d1a6b5a-44c7-4fe9-8dbd-40f7b191d9d9.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.hugoboss.com/uk/slim-fit-trousers-in-a-stretch-cotton-blend/hbeu50543945_404.html",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-02871b3e-ccfd-48f3-b57d-423a4c22571b",
+    "sku_id": "24WMPW041001",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "Plain shorts with pockets",
+    "category_google_id": "207",
+    "category_google_name": "Apparel & Accessories > Clothing > Shorts",
+    "color": "",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-b67b10c6-bbbe-42ec-b2b2-b321c8a3fbbc.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-19411e8d-6a26-4c52-8340-c9d7d60f937c.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-c4d0cf2f-e0b6-4998-a38e-9372ac3a796d.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-9aae874d-2305-48ba-b71d-b8d3abb6f9b5.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-b67b10c6-bbbe-42ec-b2b2-b321c8a3fbbc.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-19411e8d-6a26-4c52-8340-c9d7d60f937c.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-c4d0cf2f-e0b6-4998-a38e-9372ac3a796d.jpeg"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.desigual.com/pt_BR/24WMPW041001.html",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-e020cc0a-ead0-4216-830a-686bcbb189da",
+    "sku_id": "29884247",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "Summer chino shorts",
+    "category_google_id": "207",
+    "category_google_name": "Apparel & Accessories > Clothing > Shorts",
+    "color": "Brown",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-74817698-c85b-4e9c-852c-67f17f154d7a.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-1516fc83-8979-4121-a833-69a090b3b639.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-acfad0c7-f67e-4e0a-9b33-02975c7c7dbc.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-6ab7a485-39b4-4509-bbe1-bee14cbfc85a.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-ab8d8130-186b-4075-ab5b-024fb1d9aaf0.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-80ccefde-eead-469e-9fe2-caa14b463404.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/men/zegna-bermuda-chino-summer-item-29884247.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-3142b06f-f990-4af0-a095-976bfbf99f0c",
+    "sku_id": "31335951",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "501 jeans",
+    "category_google_id": "204",
+    "category_google_name": "Apparel & Accessories > Clothing > Pants",
+    "color": "Black",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-f53495cb-dffb-4db5-a1dc-a790177ca6c0.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-04ffbff8-6d27-4897-99cc-e95487d11c10.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-f18317ff-3c50-4f75-b906-413fab641ff3.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-afe9b615-756b-485f-843a-a6bcefb81d49.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/men/levis-calca-jeans-501-item-31335951.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-96b95830-dfef-4175-aab9-f8ed984440b5",
+    "sku_id": "31761351",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "Ross jeans",
+    "category_google_id": "204",
+    "category_google_name": "Apparel & Accessories > Clothing > Pants",
+    "color": "Blue",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-6e576fcd-f7c3-46d5-bcec-8c0f87bbf5b2.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-b8bf0f98-d9a6-4210-bc26-1dde9992d521.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-3de75bca-ab69-4234-b572-2e923818be9c.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-12815f35-dffd-482f-902a-8dbf90f3ba9d.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-ff2ade27-d0d8-4ba8-84e6-4f6848c142e2.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-c3ca07d8-76a8-4936-8cc1-b44fe0c7caea.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/men/the-row-calca-jeans-ross-item-31761351.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-3c8394ae-207e-47f3-bbe2-fb3cc99e385e",
+    "sku_id": "30920739",
+    "sku_catalog_name": "main",
+    "description": "",
+    "title": "Levitha quilted jacket",
+    "category_google_id": "5598",
+    "category_google_name": "Apparel & Accessories > Clothing > Outerwear > Coats & Jackets",
+    "color": "",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-06613994-df63-4289-ad0e-0a77018d66f0.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-0629afb3-5398-474e-bc5c-b551b0c9cf78.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-8961c31b-b3d0-42be-b10a-65ee8609eb3f.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-debde3d2-dab2-4d7b-b57b-bb92e26d331c.webp",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-9e1706a0-044a-4210-8eee-5b70b49c87ac.webp"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-5b7ef14c-5164-4eef-b1d8-d999f9e51a31.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.farfetch.com/br/shopping/men/moncler-jaqueta-levita-matelasse-item-30920739.aspx",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-af635335-dcc4-4404-b337-0dfb366e0c0c",
+    "sku_id": "hbeu50545891_001",
+    "sku_catalog_name": "main",
+    "description": "A fresh spin on a classic, this BOSS Menswear blazer has a check motif. Cut to a slim fit in virgin wool with notch lapels. This product contains at least 60% better raw materials. This product is made with responsibly sourced wool. For us, responsibly sourced means mulesing free, and meeting the standards of the Five Freedoms of animal welfare. ",
+    "title": "Slim-fit blazer in checked virgin wool",
+    "category_google_id": "5598",
+    "category_google_name": "Apparel & Accessories > Clothing > Outerwear > Coats & Jackets",
+    "color": "Black Patterned",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-82acb895-8c18-47b5-b348-b7675284cebb.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-1c57ebd0-d73c-44eb-b1fd-38990d4f6cfc.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-2d17a0d7-0223-4439-908a-9207fc49a312.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-fd0ddfd6-e5c9-4e7b-a8f2-9d3332b1de41.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-5830207c-fd55-4fbd-9ea0-9311cc163e27.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-369f0f81-2de4-459a-b7d4-e9c1288e6412.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-9619d4cf-15f0-4ddf-8b83-b38434ce56d1.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.hugoboss.com/uk/slim-fit-blazer-in-checked-virgin-wool/hbeu50545891_001.html",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-1e06f90e-874f-4e39-8cd0-04ba8de54fd3",
+    "sku_id": "hbeu50540917_001",
+    "sku_catalog_name": "main",
+    "description": "Trimmed with rich shearling at the collar, this BOSS Menswear leather jacket is an all-time classic. Cut to a straight fit. Buckled collar straps. This product contains at least 60% better raw materials. We continuously look for more responsible ways to produce and finish our products. A minimum of 60% of the leather used to make this product has been sourced from certified tanneries. ",
+    "title": "Leather jacket with shearling collar",
+    "category_google_id": "5598",
+    "category_google_name": "Apparel & Accessories > Clothing > Outerwear > Coats & Jackets",
+    "color": "Black",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-83b82aa9-129f-4628-8b5d-56513ead799f.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-55477dad-9199-4d1c-9d84-5d226c1d1c9e.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-d6e418f9-e9af-4b5d-b103-e54ba62269e2.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-2f1afcd1-9588-4672-807c-4c83b548455c.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-dea992c8-d825-4558-8c5f-ae70143142d0.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-135690de-d849-4ceb-8616-15aa615e3ac1.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-66c05740-4b99-4fc5-9817-b19a9dc7ce46.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.hugoboss.com/uk/leather-jacket-with-shearling-collar/hbeu50540917_001.html",
+    "generation_quality": 1.0
+  },
+  {
+    "id": "sku-d2c7d0df-566f-4495-9c0f-843ccacbcfd5",
+    "sku_id": "hbeu50547262_001",
+    "sku_catalog_name": "main",
+    "description": "In durable ripstop with a water-repellent finish, this BOSS Menswear parka is filled with cosy certified duck down and feather. Adjustable, detachable hood. ",
+    "title": "Water-repellent parka jacket with down filling",
+    "category_google_id": "5598",
+    "category_google_name": "Apparel & Accessories > Clothing > Outerwear > Coats & Jackets",
+    "color": "Black",
+    "gender": "male",
+    "age_group": "adult",
+    "image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-e89bb06e-7280-4109-88f6-2181ee44b440.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-da36c618-c591-44c5-8ed1-03f47fccf6a8.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-79889ffe-43cf-4b2a-85f5-a5d523ce4b94.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-f29dbde6-9740-4ef1-8f74-d473c3d2f685.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-7d6b4108-ce94-47f3-aef5-83ca65da1b09.jpeg",
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/web_tools/uploaded_images/user_image-4d1f924f-700d-4329-8079-78b23d4bce0e.jpeg"
+    ],
+    "descriptive_image_urls": [
+      "https://storage.googleapis.com/aiuta_prod_external_api_images/external_api/user/67dd38b436010676956bde8f/flat_lays/normalized-27be86b0-ef70-48f7-a6d2-b71e66440dee.png"
+    ],
+    "is_ready": true,
+    "store_url": "https://www.hugoboss.com/uk/water-repellent-parka-jacket-with-down-filling/hbeu50547262_001.html",
+    "generation_quality": 1.0
+  }
+]

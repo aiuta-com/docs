@@ -143,7 +143,6 @@ nav:
 
   - Web:
     - sdk/web/index.md
-    - Demo: sdk/web/demo.md
     - Configuration: 
       - Limited Support: sdk/web/configuration/limited-support.md
       - Custom CSS: sdk/web/configuration/custom-css.md
@@ -188,13 +187,6 @@ extra:
     demo:
       url: https://demo.aiuta.com
       api_key: AIUTADEMO
-      subscription_id: 67dd38b436010676956bde8f
-      get_jwt_url: https://jwt-auth-backend-demo.aiuta.com/
-      web_sdk:
-        url: https://static.aiuta.com/sdk/main/index.umd.js
-        dbg: https://nmac.local/vite
-        path: /js/index.umd.js
-        css: /stylesheets/web-sdk.css
 
   nav:
     highlight:
