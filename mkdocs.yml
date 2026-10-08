@@ -27,7 +27,7 @@ nav:
     
   - SDK:
     - sdk/index.md
-    - Demo Apps: sdk/demo-apps.md
+    - Demo: sdk/demo-apps.md
     - Pages:
       - Welcome: sdk/about/pages/welcome-screen.md
       - Onboarding: sdk/about/pages/onboarding.md
