@@ -36,7 +36,6 @@ The following table shows the current platform support status for Aiuta SDK via 
 <div class="grid cards" markdown>
 
 - :fontawesome-brands-github: [Android SDK Sources :octicons-link-external-24:]({{ repo(android) }}){:target="_blank"}
-- :fontawesome-brands-google-play: [Demo Application](/sdk/demo-apps.md)
 - :material-language-kotlin: [API Reference :octicons-link-external-24:]({{ pages(android) }}){:target="_blank"}
 - :fontawesome-brands-github: [Sample App :octicons-link-external-24:]({{ repo(android, path="/tree/main/samples/") }}){:target="_blank"}
 

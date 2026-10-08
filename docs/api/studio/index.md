@@ -16,6 +16,6 @@ Produce and enhance studio-grade product visuals for online stores and marketing
 
 ## Quick Start
 
-- [Get started with Aiuta __API Protal__](/api/getting-started.md)
+- [Get started with Aiuta __API Portal__](/api/getting-started.md)
 - [Take a look at the __Workflow__](/api/studio/workflow.md)
 - [Check out the API __Reference__](/api/studio/reference.md)

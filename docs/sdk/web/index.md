@@ -69,11 +69,10 @@ The Aiuta Web SDK provides a virtual try-on solution for your fashion e-commerce
     Please note that you should obtain information about the availability of the virtual try-on feature for each of your products from your backend, as the SDK does not receive information about product availability and will attempt to launch a virtual try-on with any product you provide, which may result in an error if that product has not been trained by Aiuta.
 
 
-## Sources and Demo
+## Sources
 
 <div class="grid cards" markdown>
 
 - :fontawesome-brands-github: [Sources :octicons-link-external-24:]({{ repo(web) }}){:target="\_blank"}
-- :aiuta-app: [Demo](/sdk/web/demo.md)
 
 </div>

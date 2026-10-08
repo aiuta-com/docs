@@ -61,14 +61,14 @@ Always visually mark links that lead outside the documentation site. There are t
         ``` html
         <div class="grid cards" markdown>
 
-        - :fontawesome-brands-google-play: [Get it on __Google Play__](https://play.google.com/store/apps/details?id=com.aiuta.fashionsdk.demo){:target="_blank"}
+        - :material-web: [Visit __Aiuta Demo__ web page](https://demo.aiuta.com){:target="_blank"}
 
         </div>
         ```
         
         <div class="grid cards" markdown>
 
-        - :fontawesome-brands-google-play: [Get it on __Google Play__](https://play.google.com/store/apps/details?id=com.aiuta.fashionsdk.demo){:target="_blank"}
+        - :material-web: [Visit __Aiuta Demo__ web page](https://demo.aiuta.com){:target="_blank"}
         
         </div>
 

@@ -16,7 +16,7 @@ Let your customers visualize how clothes look on them — instantly and accurate
 
 ## Quick Start
 
-- [Get started with Aiuta __API Protal__](/api/getting-started.md)
+- [Get started with Aiuta __API Portal__](/api/getting-started.md)
 - [Take a look at the __Workflow__](/api/try-on/workflow.md)
 - [Check out the API __Reference__](/api/try-on/reference.md)
 

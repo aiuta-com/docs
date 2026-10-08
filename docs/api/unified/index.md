@@ -6,5 +6,5 @@ The unified Aiuta API consolidating all existing and new capabilities into one p
 
 ## Quick Start
 
-- [Get started with Aiuta __API Protal__](/api/getting-started.md)
+- [Get started with Aiuta __API Portal__](/api/getting-started.md)
 - [Check out the API __Reference__](/api/unified/reference.md)
