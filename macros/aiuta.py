@@ -2,18 +2,8 @@ import json
 import os
 import logger
 
-_DUMMY_PRODUCT = {
-    "sku_id": "<product_id>",
-    "title": "<product_title>",
-    "image_urls": [
-        "<image_url_1>",
-        "<image_url_2>",
-        "<image_url_3>"
-    ]
-}
-
-# A fixed snapshot of the demo products, so the build does not depend on the live API: the SKU items
-# of the demo API key whose try-on capability is ready (`GET /sku_items` with `x-api-key: DEMO`)
+# The sample products of the SDK quick-test pages, kept as a file so the build does not depend on the live API.
+# They are SKU items of the demo API key with a ready try-on capability (`GET /sku_items` with `x-api-key: DEMO`)
 _DEMO_PRODUCTS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'demo_products.json')
 
 _product_cache = None
@@ -40,13 +30,6 @@ def _load_product_cache():
         _product_cache = json.load(products_file)
 
     logger.log(f"Loaded {len(_product_cache)} demo products")
-
-def get_test_product(index):
-    try:
-        return get_test_products()[index]
-    except IndexError:
-        return _DUMMY_PRODUCT
-
 
 def get_test_products():
     if _product_cache is None:
