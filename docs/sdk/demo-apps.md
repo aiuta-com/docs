@@ -10,11 +10,10 @@ Experience Aiuta SDK in action through our demo web page. It showcases the virtu
 
 ## Using the Demo
 
-1. Open the [Aiuta Demo]({{aiuta.demo.url}}){:target="_blank"} web page
-2. Use __`{{ aiuta.demo.api_key }}`__ or your own code [^1]&nbsp; to access the demo catalog
-3. Select an item from the catalog and tap "Try on" 
-4. Experience the SDK and virtual try-on in action
-5. Explore various SDK pages and features
+1. Open the [Aiuta Demo]({{aiuta.demo.url}}){:target="_blank"} web page with the demo catalog [^1]
+2. Select an item from the catalog and tap "Try on" 
+3. Experience the SDK and virtual try-on in action
+4. Explore various SDK pages and features
 
 
 ## Features Available
@@ -28,4 +27,4 @@ The demo helps you to:
 - Demonstrate the technology to stakeholders
 - Plan your implementation
 
-[^1]: You can arrange with Aiuta to create a test catalog with your own products, and we will provide you with a personal access code. 
+[^1]: You can arrange with Aiuta to create a test catalog with your own products, and we will provide you with a personal link to it.
