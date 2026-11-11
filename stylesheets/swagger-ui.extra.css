@@ -1,0 +1,143 @@
+.md-content__inner-swagger-spacer {
+    padding: 1rem;
+}
+
+.swagger-ui {
+    font-family: var(--md-text-font-family) !important;
+    color: var(--md-typeset-color) !important;
+}
+
+.swagger-ui .info {
+    margin: -1.2rem 0.35em 0.5rem !important;
+}
+
+.swagger-ui .info .title {
+    font-family: var(--md-text-font-family) !important;
+    color: var(--md-default-fg-color--light) !important;
+    font-size: 2em !important;
+    line-height: 1.3 !important;
+}
+
+.swagger-ui .info h2 {
+    font-family: var(--md-text-font-family) !important;
+    font-size: 1.5625em !important;
+    line-height: 1.4 !important;
+    margin: 0.6em 0 0 0 !important;
+    color: var(--md-typeset-color) !important;
+}
+
+.swagger-ui .info hgroup.main a {
+    font-family: var(--md-text-font-family) !important;
+    font-size: .6rem !important;
+}
+
+.swagger-ui .info a {
+    font-family: var(--md-text-font-family) !important;
+    font-size: .8rem !important;
+    line-height: 1.6 !important;
+    overflow-wrap: break-word !important;
+}
+
+.swagger-ui .info li,
+.swagger-ui b, .swagger-ui strong,
+.swagger-ui .info p {
+    font-family: var(--md-text-font-family) !important;
+    font-size: .8rem !important;
+    line-height: 1.6 !important;
+    overflow-wrap: break-word !important;
+    color: var(--md-typeset-color) !important;
+}
+
+.swagger-ui .dialog-ux .modal-ux,
+.swagger-ui .scheme-container { 
+    padding-top: 0 !important;
+    background: var(--md-default-bg-color) !important;
+}
+
+.swagger-ui label,
+.swagger-ui select,
+.swagger-ui textarea,
+.swagger-ui .tab li,
+.swagger-ui .model-title,
+.swagger-ui .model,
+.swagger-ui .parameter__name,
+.swagger-ui .parameter__type,
+.swagger-ui table thead tr td, 
+.swagger-ui table thead tr th,
+.swagger-ui .response-col_status,
+.swagger-ui .response-col_links,
+.swagger-ui .renderedMarkdown p,
+.swagger-ui .opblock-description-wrapper p, 
+.swagger-ui .opblock-external-docs-wrapper p, 
+.swagger-ui .opblock-title_normal p,
+.swagger-ui .opblock .opblock-section-header h4,
+.swagger-ui .opblock .opblock-summary-operation-id, 
+.swagger-ui .opblock .opblock-summary-path, 
+.swagger-ui .opblock .opblock-summary-path__deprecated,
+.swagger-ui .opblock .opblock-summary-description,
+.swagger-ui .dialog-ux .modal-ux-content p,
+.swagger-ui .dialog-ux .modal-ux-content h4,
+.swagger-ui .dialog-ux .modal-ux-header h3 {
+    color: color-mix(in srgb, var(--md-typeset-color) 80%, transparent) !important;
+}
+
+.swagger-ui .opblock-tag {
+    color: color-mix(in srgb, var(--md-typeset-color) 60%, transparent) !important;
+}
+
+.swagger-ui .btn {
+    color: var(--md-typeset-color) !important;
+}
+
+.swagger-ui input[type=email], .swagger-ui input[type=file], .swagger-ui input[type=password], .swagger-ui input[type=search], .swagger-ui input[type=text], .swagger-ui textarea,
+.swagger-ui input[disabled], .swagger-ui select[disabled], .swagger-ui textarea[disabled],
+.swagger-ui .opblock .opblock-section-header {
+    background: color-mix(in srgb, var(--md-default-bg-color) 80%, transparent) !important;
+}
+
+.swagger-ui .btn.execute {
+    background-color: color-mix(in srgb, var(--md-default-bg-color) 80%, transparent) !important;
+}
+
+.swagger-ui select {
+    background: color-mix(in srgb, var(--md-default-bg-color) 80%, transparent) !important;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><path fill=\"%23888\" d=\"M13.418 7.859a.695.695 0 0 1 .978 0 .68.68 0 0 1 0 .969l-3.908 3.83a.697.697 0 0 1-.979 0l-3.908-3.83a.68.68 0 0 1 0-.969.695.695 0 0 1 .978 0L10 11z\"/></svg>") !important;
+    background-position: right 10px center !important;
+    background-repeat: no-repeat !important;
+    background-size: 20px !important;
+}
+
+.swagger-ui .opblock-body pre.microlight {
+    background: rgba(30, 33, 41, 0.88) !important;
+}
+
+.md-typeset code {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: inherit !important;
+    opacity: 0.9 !important;
+}
+
+.swagger-ui .dialog-ux .modal-ux-header .close-modal svg,
+.swagger-ui .models-control svg,
+.swagger-ui .expand-operation svg,
+.swagger-ui .authorization__btn svg,
+.swagger-ui .opblock-control-arrow svg {
+    fill: var(--md-typeset-color);
+}
+
+.swagger-ui .model-toggle:after { 
+    background: none;
+    -webkit-mask: url("data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>") 50% no-repeat;
+    mask: url("data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>") 50% no-repeat;
+    background-color: var(--md-typeset-color);
+}
+
+.swagger-ui .markdown code, 
+.swagger-ui .renderedMarkdown code {
+    background-color: var(--md-code-bg-color) !important;
+    padding: 0 .3em !important;
+    font-size: .85em !important;
+    font-weight: 500 !important;
+    border-radius: .1rem !important;
+}
