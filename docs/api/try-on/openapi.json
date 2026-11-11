@@ -312,7 +312,7 @@
           "try_on"
         ],
         "summary": "List of predefined models for try-on operations.",
-        "description": "Returns the list of predefined models, broken down into categories.",
+        "description": "Returns the list of predefined models, broken down into categories. Returns an empty list if no models are set up.",
         "operationId": "get_predefined_try_on_models_predefined_try_on_models_get",
         "parameters": [
           {
@@ -407,10 +407,11 @@
           "TOO_MANY_PEOPLE_DETECTED",
           "CHILD_DETECTED",
           "INSUFFICIENT_TARGET_AREA",
-          "INTERNAL_RESTRICTION"
+          "INTERNAL_RESTRICTION",
+          "REJECTED_ON_QA"
         ],
         "title": "AbortReason",
-        "description": "Reasons why an operation may be aborted.\n\nSome checks can be configured per client. Please contact the Aiuta team for details.\n\n- `NO_PEOPLE_DETECTED`: No person was found in the input image.\n- `TOO_MANY_PEOPLE_DETECTED`: Too many people were found in the input image.\n- `CHILD_DETECTED`: A minor was detected in the input image.\n- `INSUFFICIENT_TARGET_AREA`: The body area required for this garment is not visible enough in the input image.\n- `INTERNAL_RESTRICTION`: The generated result cannot be returned due to internal restrictions."
+        "description": "Reasons why an operation may be aborted.\n\nSome checks can be configured per client. Please contact the Aiuta team for details.\n\n- `NO_PEOPLE_DETECTED`: No person was found in the input image.\n- `TOO_MANY_PEOPLE_DETECTED`: Too many people were found in the input image.\n- `CHILD_DETECTED`: A minor was detected in the input image.\n- `INSUFFICIENT_TARGET_AREA`: The body area required for this garment is not visible enough in the input image.\n- `INTERNAL_RESTRICTION`: The generated result cannot be returned due to internal restrictions.\n- `REJECTED_ON_QA`: The generated result was rejected during quality assurance."
       },
       "AiutaImage": {
         "properties": {
@@ -544,6 +545,34 @@
         "type": "object",
         "title": "HTTPValidationError"
       },
+      "LegacyTryOnModels": {
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "man",
+              "woman",
+              ""
+            ],
+            "title": "Category",
+            "description": "Category name of the try-on models"
+          },
+          "models": {
+            "items": {
+              "$ref": "#/components/schemas/TryOnModel"
+            },
+            "type": "array",
+            "title": "Models",
+            "description": "List of try-on models"
+          }
+        },
+        "type": "object",
+        "required": [
+          "category",
+          "models"
+        ],
+        "title": "LegacyTryOnModels"
+      },
       "OperationStatus": {
         "type": "string",
         "enum": [
@@ -657,7 +686,7 @@
                   "type": "string"
                 },
                 "type": "array",
-                "maxItems": 5,
+                "maxItems": 6,
                 "minItems": 1
               },
               {
@@ -665,7 +694,7 @@
               }
             ],
             "title": "Sku Ids",
-            "description": "List of SKU IDs. Either 'sku_id' or 'sku_ids' must be specified. This field must be used for outfit's try-on with multiple SKU items. It also can be used for a single-item try-on (you can specified just one item here). From 1 to 5 items are allowed at the moment"
+            "description": "List of SKU IDs. Either 'sku_id' or 'sku_ids' must be specified. This field must be used for outfit's try-on with multiple SKU items. It also can be used for a single-item try-on (you can specified just one item here). From 1 to 6 items are allowed at the moment"
           },
           "sku_catalog_name": {
             "anyOf": [
@@ -771,17 +800,20 @@
             "title": "Expires At",
             "description": "Expiration time of the image. The image may not be available after this time."
           },
-          "metadata": {
+          "tags": {
             "anyOf": [
               {
+                "additionalProperties": {
+                  "type": "string"
+                },
                 "type": "object"
               },
               {
                 "type": "null"
               }
             ],
-            "title": "Metadata",
-            "description": "Additional metadata for the try-on model image"
+            "title": "Tags",
+            "description": "Tags for the try-on model image"
           }
         },
         "type": "object",
@@ -789,7 +821,7 @@
           "id",
           "owner_type",
           "url",
-          "metadata"
+          "tags"
         ],
         "title": "TryOnModel",
         "examples": [
@@ -802,37 +834,10 @@
       },
       "TryOnModelCategories": {
         "items": {
-          "$ref": "#/components/schemas/TryOnModels"
+          "$ref": "#/components/schemas/LegacyTryOnModels"
         },
         "type": "array",
         "title": "TryOnModelCategories"
-      },
-      "TryOnModels": {
-        "properties": {
-          "category": {
-            "type": "string",
-            "enum": [
-              "man",
-              "woman"
-            ],
-            "title": "Category",
-            "description": "Category name of the try-on models"
-          },
-          "models": {
-            "items": {
-              "$ref": "#/components/schemas/TryOnModel"
-            },
-            "type": "array",
-            "title": "Models",
-            "description": "List of try-on models"
-          }
-        },
-        "type": "object",
-        "required": [
-          "category",
-          "models"
-        ],
-        "title": "TryOnModels"
       },
       "ValidationError": {
         "properties": {
