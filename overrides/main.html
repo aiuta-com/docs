@@ -1,4 +1,13 @@
 {% extends "base.html" %}
+{#- Page front matter `seo_title` sets the full <title> verbatim, without
+    changing the nav label (which `title` would) or adding the site suffix. -#}
+{% block htmltitle %}
+  {% if page.meta and page.meta.seo_title %}
+    <title>{{ page.meta.seo_title }}</title>
+  {% else %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
 {% block content %}
   {{ super() }}
   {% if page.meta.code_links %}
