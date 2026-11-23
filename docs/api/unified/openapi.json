@@ -19,15 +19,29 @@
         "summary": "Upload an image as bytes",
         "description": "Upload an image and save it with unique ID. By default mime-type is 'image/png' and extension is '.png'.",
         "operationId": "upload_user_image_uploaded_images_post",
+        "parameters": [
+          {
+            "name": "aiuta_storage",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "description": "Store the image in Aiuta's storage even if your account keeps uploaded images in its own storage; has no effect otherwise. Required for product images and reference backgrounds, and in some setups for the input images of try-on operations.",
+              "default": false,
+              "title": "Aiuta Storage"
+            },
+            "description": "Store the image in Aiuta's storage even if your account keeps uploaded images in its own storage; has no effect otherwise. Required for product images and reference backgrounds, and in some setups for the input images of try-on operations."
+          }
+        ],
         "requestBody": {
+          "required": true,
           "content": {
             "multipart/form-data": {
               "schema": {
                 "$ref": "#/components/schemas/Body_upload_user_image_uploaded_images_post"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -1135,7 +1149,7 @@
           "on_figure"
         ],
         "summary": "Create an on-figure generation operation",
-        "description": "Starts an asynchronous operation to generate an on-figure image: the given products worn together by a model.\n\nPass the products in `products_info`, each with exactly one of `image_urls` or `uploaded_image_ids`. The model, pose, background and styling are defined by your project settings.\n\nThe response contains an operation ID. Poll `GET /on_figure_operations/{operation_id}` until the operation completes. Depending on your project settings, the result may be reviewed by a human before delivery, so the operation may take a while to complete.",
+        "description": "Starts an asynchronous operation to generate an on-figure image: the given products worn together by a model.\n\nPass the products in `products_info`, each with exactly one of `image_urls` or `uploaded_image_ids`. To dress a particular model, pass its ID in `uploaded_image_id`: one of your project's on-figure models or an uploaded image. Otherwise the model's gender follows the products: the first product whose `gender` is `male` or `female` decides it, and a female model is used when no product has one. The models to choose from, as well as the pose, background and styling, are defined by your project settings.\n\nThe response contains an operation ID. Poll `GET /on_figure_operations/{operation_id}` until the operation completes. Depending on your project settings, the result may be reviewed by a human before delivery, so the operation may take a while to complete.",
         "operationId": "create_on_figure_operation_on_figure_operations_post",
         "requestBody": {
           "content": {
@@ -1912,7 +1926,7 @@
               }
             ],
             "title": "Reference Image Id",
-            "description": "ID of the uploaded image to use as a reference background. Used only if `background_type` is set to 'reference_image'."
+            "description": "ID of the uploaded image to use as a reference background. Used only if `background_type` is set to 'reference_image'. If your account keeps uploaded images in its own storage, upload it with `aiuta_storage=true`."
           },
           "reference_image_url": {
             "anyOf": [
@@ -2324,6 +2338,18 @@
       },
       "GenerateOnFigureImageOperation": {
         "properties": {
+          "uploaded_image_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Uploaded Image Id",
+            "description": "ID of the model to dress: one of the on-figure models agreed for your project during onboarding, or an uploaded image. If omitted, a model is chosen as described above. If your account keeps uploaded images in its own storage, upload the image with `aiuta_storage=true`. This field is accepted in input requests only and will never appear in operation responses."
+          },
           "products_info": {
             "items": {
               "$ref": "#/components/schemas/SkuProductInfo"
@@ -2394,6 +2420,18 @@
       },
       "GenerateOnFigureImageRequest": {
         "properties": {
+          "uploaded_image_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Uploaded Image Id",
+            "description": "ID of the model to dress: one of the on-figure models agreed for your project during onboarding, or an uploaded image. If omitted, a model is chosen as described above. If your account keeps uploaded images in its own storage, upload the image with `aiuta_storage=true`. This field is accepted in input requests only and will never appear in operation responses."
+          },
           "products_info": {
             "items": {
               "$ref": "#/components/schemas/SkuProductInfo"
@@ -2410,7 +2448,7 @@
           "products_info"
         ],
         "title": "GenerateOnFigureImageRequest",
-        "description": "Request to generate an on-figure image: the given products worn together by a model.\n\nThe request carries only the products. The model, pose, background and styling are defined\nby the settings of your on-figure project, agreed during onboarding. When fewer products than\na full outfit are passed, the rest of the look follows the project's setup."
+        "description": "Request to generate an on-figure image: the given products worn together by a model.\n\nThe request carries the products and, optionally, the model to dress in `uploaded_image_id`: one of\nthe on-figure models of your project or an uploaded image. Without it, a model of your project is\nchosen for you and its gender follows the products: the first product\nwhose `gender` is `male` or `female` decides it, and a female model is used when no product has one.\nThe models to choose from, as well as the pose, background and styling, are defined by the settings\nof your on-figure project, agreed during onboarding. When fewer products than a full outfit are\npassed, the rest of the look follows the project's setup."
       },
       "HTTPValidationError": {
         "properties": {
@@ -3056,7 +3094,7 @@
               }
             ],
             "title": "Uploaded Image Ids",
-            "description": "List of 1 to 20 IDs of previously uploaded product images. Must not be used together with `image_urls` - only one of the two fields may be provided. This field is accepted in input requests only and will never appear in operation status or result responses. In such responses, internally stored image URLs corresponding to these IDs will be returned via the `image_urls` field of the `SkuProductInfo` object."
+            "description": "List of 1 to 20 IDs of previously uploaded product images. Must not be used together with `image_urls` - only one of the two fields may be provided. If your account keeps uploaded images in its own storage, upload these with `aiuta_storage=true`. For SKU items the images must not expire. This field is accepted in input requests only and will never appear in operation status or result responses. In such responses, internally stored image URLs corresponding to these IDs will be returned via the `image_urls` field of the `SkuProductInfo` object."
           },
           "category": {
             "anyOf": [
